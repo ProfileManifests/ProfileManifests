@@ -13,7 +13,57 @@
 	<key>pfm_format_version</key>
 	<integer>1</integer>
 	<key>pfm_icon</key>
-	<data>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</data>
+	<data>
+	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
+	</data>
 	<key>pfm_last_modified</key>
 	<date>2024-12-26T02:38:09Z</date>
 	<key>pfm_platforms</key>
@@ -117,17 +167,17 @@
 			<string>By default (when no values are set), all device health checks are displayed in Okta Verify on user devices. 
 If the value contains 'Disabled', the Device Health page isn't displayed in Okta Verify</string>
 			<key>pfm_subkeys</key>
-				<array>
-					<dict>
-						<key>pfm_range_list</key>
-				<array>
-					<string>Disabled</string>
-					<string>HideOSUpdate</string>
-					<string>HideDiskEncryption</string>
-					<string>HideBiometrics</string>
-					<string>HidePassword</string>
-				</array>
-				<key>pfm_range_list_titles</key>
+			<array>
+				<dict>
+					<key>pfm_range_list</key>
+					<array>
+						<string>Disabled</string>
+						<string>HideOSUpdate</string>
+						<string>HideDiskEncryption</string>
+						<string>HideBiometrics</string>
+						<string>HidePassword</string>
+					</array>
+					<key>pfm_range_list_titles</key>
 					<array>
 						<string>Disabled</string>
 						<string>Hide OS Update</string>
@@ -141,8 +191,8 @@ If the value contains 'Disabled', the Device Health page isn't displayed in Okta
 					<string>string</string>
 					<key>pfm_value_unique</key>
 					<true/>
-					</dict>
-				</array>
+				</dict>
+			</array>
 			<key>pfm_title</key>
 			<string>Device Health Options</string>
 			<key>pfm_type</key>
@@ -152,7 +202,7 @@ If the value contains 'Disabled', the Device Health page isn't displayed in Okta
 		</dict>
 		<dict>
 			<key>pfm_default</key>
-    		<string>SilentEnrollmentDisabled</string>
+			<string>SilentEnrollmentDisabled</string>
 			<key>pfm_description</key>
 			<string>Configure whether users are prompted to enroll in Okta Verify</string>
 			<key>pfm_documentation_url</key>
@@ -197,12 +247,12 @@ If the value contains 'Disabled', the Device Health page isn't displayed in Okta
 			<false/>
 			<key>pfm_description</key>
 			<string>Configure whether Okta Verify diagnostic and crash information is shared with Okta</string>
-			<key>pfm_note</key>
-			<string> If not configured, end users can set this value on their app</string>
 			<key>pfm_documentation_url</key>
 			<string>https://help.okta.com/oie/en-us/content/topics/identity-engine/devices/managed-app-configs-macos.htm#OktaVeri5</string>
 			<key>pfm_name</key>
 			<string>OktaVerify.ReportDiagnostics</string>
+			<key>pfm_note</key>
+			<string> If not configured, end users can set this value on their app</string>
 			<key>pfm_title</key>
 			<string>Report Diagnostics</string>
 			<key>pfm_type</key>
