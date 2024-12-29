@@ -11,7 +11,7 @@
 	<key>pfm_format_version</key>
 	<integer>1</integer>
 	<key>pfm_last_modified</key>
-	<date>2024-11-05T13:35:00Z</date>
+	<date>2024-12-29T05:57:05Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -109,7 +109,7 @@
 			<string>https://community.sentinelone.com/s/article/000004904</string>
 			<key>pfm_name</key>
 			<string>S1InstallRegistrationToken</string>
-            <key>pfm_require</key>
+			<key>pfm_require</key>
 			<string>always</string>
 			<key>pfm_title</key>
 			<string>Your Site or Group Token</string>

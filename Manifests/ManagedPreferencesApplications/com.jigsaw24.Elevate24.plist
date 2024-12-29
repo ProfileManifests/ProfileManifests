@@ -113,7 +113,7 @@
 	RK5CYII=
 	</data>
 	<key>pfm_last_modified</key>
-	<date>2024-12-05T11:00:00Z</date>
+	<date>2024-12-29T05:56:33Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -448,7 +448,7 @@
 		</dict>
 		<dict>
 			<key>pfm_default</key>
-			<array>			
+			<array>
 				<string>1800</string>
 				<string>3600</string>
 				<string>7200</string>

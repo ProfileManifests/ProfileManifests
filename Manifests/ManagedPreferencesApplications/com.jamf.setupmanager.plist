@@ -4,30 +4,20 @@
 <dict>
 	<key>pfm_app_url</key>
 	<string>https://github.com/Jamf-Concepts/Setup-Manager</string>
-	<key>pfm_documentation_url</key>
-	<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md</string>
-	<key>pfm_targets</key>
-	<array>
-		<string>system</string>
-	</array>
-	<key>pfm_platforms</key>
-	<array>
-		<string>macOS</string>
-	</array>
 	<key>pfm_description</key>
 	<string>Jamf Setup Manager settings</string>
+	<key>pfm_documentation_url</key>
+	<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md</string>
 	<key>pfm_domain</key>
 	<string>com.jamf.setupmanager</string>
 	<key>pfm_format_version</key>
 	<integer>1</integer>
 	<key>pfm_last_modified</key>
-	<date>2024-11-05T02:11:00Z</date>
-	<key>pfm_title</key>
-	<string>Jamf Setup Manager</string>
-	<key>pfm_unique</key>
-	<true/>
-	<key>pfm_version</key>
-	<integer>1</integer>
+	<date>2024-12-29T05:55:49Z</date>
+	<key>pfm_platforms</key>
+	<array>
+		<string>macOS</string>
+	</array>
 	<key>pfm_subkeys</key>
 	<array>
 		<dict>
@@ -151,6 +141,17 @@ A profile can consist of payloads with different version numbers. For example, c
 			<string>always</string>
 			<key>pfm_segments</key>
 			<dict>
+				<key>Debugging</key>
+				<array>
+					<string>DEBUG</string>
+					<string>overrideSerialNumber</string>
+					<string>hideDebugLabel</string>
+					<string>simulateMDM</string>
+				</array>
+				<key>Enrollment Actions</key>
+				<array>
+					<string>enrollmentActions</string>
+				</array>
 				<key>General</key>
 				<array>
 					<string>title</string>
@@ -165,14 +166,6 @@ A profile can consist of payloads with different version numbers. For example, c
 					<string>computerNameTemplate</string>
 					<string>hideActionLabels</string>
 				</array>
-				<key>Enrollment Actions</key>
-				<array>
-					<string>enrollmentActions</string>
-				</array>
-				<key>User Entry</key>
-				<array>
-					<string>userEntry</string>
-				</array>
 				<key>Help</key>
 				<array>
 					<string>help</string>
@@ -182,92 +175,91 @@ A profile can consist of payloads with different version numbers. For example, c
 					<string>jssID</string>
 					<string>userID</string>
 				</array>
-				<key>Debugging</key>
+				<key>User Entry</key>
 				<array>
-					<string>DEBUG</string>
-					<string>overrideSerialNumber</string>
-					<string>hideDebugLabel</string>
-					<string>simulateMDM</string>
+					<string>userEntry</string>
 				</array>
 			</dict>
 			<key>pfm_type</key>
 			<string>string</string>
 		</dict>
 		<dict>
-			<key>pfm_name</key>
-			<string>DEBUG</string>
-			<key>pfm_type</key>
-			<string>boolean</string>
-			<key>pfm_title</key>
-			<string>Debug Mode</string>
 			<key>pfm_description</key>
 			<string>Enables debug mode. See documentation for behavior changes.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#debug</string>
+			<key>pfm_name</key>
+			<string>DEBUG</string>
+			<key>pfm_title</key>
+			<string>Debug Mode</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
 		</dict>
 		<dict>
-			<key>pfm_name</key>
-			<string>title</string>
-			<key>pfm_type</key>
-			<string>string</string>
-			<key>pfm_title</key>
-			<string>Title</string>
 			<key>pfm_default</key>
 			<string>Welcome to Setup Manager</string>
 			<key>pfm_description</key>
 			<string>The main title over the window.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#title</string>
-		</dict>
-		<dict>
 			<key>pfm_name</key>
-			<string>icon</string>
+			<string>title</string>
+			<key>pfm_title</key>
+			<string>Title</string>
 			<key>pfm_type</key>
 			<string>string</string>
-			<key>pfm_title</key>
-			<string>Icon</string>
+		</dict>
+		<dict>
 			<key>pfm_default</key>
 			<string>name:AppIcon</string>
 			<key>pfm_description</key>
 			<string>The icon shown at the top center of the window. There are many options to define icons, as described in the documentation.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#icon</string>
-		</dict>
-		<dict>
 			<key>pfm_name</key>
-			<string>message</string>
+			<string>icon</string>
+			<key>pfm_title</key>
+			<string>Icon</string>
 			<key>pfm_type</key>
 			<string>string</string>
-			<key>pfm_title</key>
-			<string>Message</string>
+		</dict>
+		<dict>
 			<key>pfm_default</key>
 			<string>Setup Manager is configuring your Mac…</string>
 			<key>pfm_description</key>
 			<string>The message shown below the title.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#message</string>
-		</dict>
-		<dict>
 			<key>pfm_name</key>
-			<string>background</string>
+			<string>message</string>
+			<key>pfm_title</key>
+			<string>Message</string>
 			<key>pfm_type</key>
 			<string>string</string>
-			<key>pfm_title</key>
-			<string>Background Image</string>
+		</dict>
+		<dict>
 			<key>pfm_description</key>
 			<string>When set, Setup Manager displays the image full screen as a background behind the main window. Supports the same sources as Icon.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#background</string>
-		</dict>
-		<dict>
 			<key>pfm_name</key>
-			<string>runAt</string>
+			<string>background</string>
+			<key>pfm_title</key>
+			<string>Background Image</string>
 			<key>pfm_type</key>
 			<string>string</string>
-			<key>pfm_title</key>
-			<string>Run At</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.1</string>
+			<key>pfm_default</key>
+			<string>enrollment</string>
 			<key>pfm_description</key>
 			<string>This value determines when Setup Manager should launch.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#runat</string>
+			<key>pfm_name</key>
+			<string>runAt</string>
 			<key>pfm_range_list</key>
 			<array>
 				<string>enrollment</string>
@@ -278,48 +270,46 @@ A profile can consist of payloads with different version numbers. For example, c
 				<string>Enrollment</string>
 				<string>Login Window</string>
 			</array>
-			<key>pfm_default</key>
-			<string>enrollment</string>
-			<key>pfm_documentation_url</key>
-			<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#runat</string>
-			<key>pfm_app_min</key>
-			<string>1.1</string>
-		</dict>
-		<dict>
-			<key>pfm_name</key>
-			<string>accentColor</string>
+			<key>pfm_title</key>
+			<string>Run At</string>
 			<key>pfm_type</key>
 			<string>string</string>
-			<key>pfm_title</key>
-			<string>Accent Color</string>
+		</dict>
+		<dict>
 			<key>pfm_description</key>
 			<string>Sets the accent color for buttons, progress bar, SF Symbol icons, and other UI elements. Use this to match branding. Color is encoded as a six digit hex code, e.g. #FF0088.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#accentcolor</string>
+			<key>pfm_name</key>
+			<string>accentColor</string>
+			<key>pfm_title</key>
+			<string>Accent Color</string>
+			<key>pfm_type</key>
+			<string>string</string>
 		</dict>
 		<dict>
-			<key>pfm_name</key>
-			<string>finalCountdown</string>
-			<key>pfm_type</key>
-			<string>integer</string>
-			<key>pfm_title</key>
-			<string>Final Countdown</string>
 			<key>pfm_default</key>
 			<integer>60</integer>
 			<key>pfm_description</key>
-			<string>Changes the duration (in seconds) of the &quot;final countdown&quot; before the app automatically performs the finalAction. Set to -1 (or any negative number) to disable automated execution.</string>
+			<string>Changes the duration (in seconds) of the "final countdown" before the app automatically performs the finalAction. Set to -1 (or any negative number) to disable automated execution.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#finalcountdown</string>
+			<key>pfm_name</key>
+			<string>finalCountdown</string>
+			<key>pfm_title</key>
+			<string>Final Countdown</string>
+			<key>pfm_type</key>
+			<string>integer</string>
 		</dict>
 		<dict>
-			<key>pfm_name</key>
-			<string>finalAction</string>
-			<key>pfm_type</key>
-			<string>string</string>
-			<key>pfm_title</key>
-			<string>Final Action</string>
+			<key>pfm_default</key>
+			<string>continue</string>
 			<key>pfm_description</key>
 			<string>Sets the action and label for the button shown when Setup Manger has completed.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#finalaction</string>
+			<key>pfm_name</key>
+			<string>finalAction</string>
 			<key>pfm_range_list</key>
 			<array>
 				<string>continue</string>
@@ -330,227 +320,217 @@ A profile can consist of payloads with different version numbers. For example, c
 				<string>Continue</string>
 				<string>Shut Down</string>
 			</array>
-			<key>pfm_default</key>
-			<string>continue</string>
-			<key>pfm_documentation_url</key>
-			<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#finalaction</string>
+			<key>pfm_title</key>
+			<string>Final Action</string>
+			<key>pfm_type</key>
+			<string>string</string>
 		</dict>
 		<dict>
-			<key>pfm_name</key>
-			<string>totalDownloadBytes</string>
-			<key>pfm_type</key>
-			<string>integer</string>
-			<key>pfm_title</key>
-			<string>Total Download Bytes</string>
 			<key>pfm_description</key>
 			<string>Use this value to provide an estimate for the total size of all items that will be downloaded.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#totaldownloadbytes</string>
+			<key>pfm_name</key>
+			<string>totalDownloadBytes</string>
+			<key>pfm_title</key>
+			<string>Total Download Bytes</string>
+			<key>pfm_type</key>
+			<string>integer</string>
 		</dict>
 		<dict>
+			<key>pfm_description</key>
+			<string>When using JSM with Jamf Pro, set this to $JSSID in a Jamf Pro configuration profile and Setup Manager will be aware of its computer's id in Jamf Pro.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#jssid</string>
 			<key>pfm_name</key>
 			<string>jssID</string>
-			<key>pfm_type</key>
-			<string>string</string>
-			<key>pfm_title</key>
-			<string>Jamf Pro ID</string>
-			<key>pfm_description</key>
-			<string>When using JSM with Jamf Pro, set this to $JSSID in a Jamf Pro configuration profile and Setup Manager will be aware of its computer&apos;s id in Jamf Pro.</string>
 			<key>pfm_range_list</key>
 			<array>
 				<string>$JSSID</string>
 			</array>
-			<key>pfm_documentation_url</key>
-			<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#jssid</string>
-		</dict>
-		<dict>
-			<key>pfm_name</key>
-			<string>userID</string>
+			<key>pfm_title</key>
+			<string>Jamf Pro ID</string>
 			<key>pfm_type</key>
 			<string>string</string>
-			<key>pfm_title</key>
-			<string>Jamf Pro User ID</string>
+		</dict>
+		<dict>
 			<key>pfm_description</key>
 			<string>Set this to $EMAIL in the configuration profile. This communicates the user who logged in to customized enrollment to Setup Manager. This can be used together with the userEntry.showForUserIDs key to control which users see the user entry UI.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#userid</string>
+			<key>pfm_name</key>
+			<string>userID</string>
 			<key>pfm_range_list</key>
 			<array>
 				<string>$EMAIL</string>
 				<string>$USERNAME</string>
 			</array>
-			<key>pfm_documentation_url</key>
-			<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#userid</string>
-		</dict>
-		<dict>
-			<key>pfm_name</key>
-			<string>computerNameTemplate</string>
+			<key>pfm_title</key>
+			<string>Jamf Pro User ID</string>
 			<key>pfm_type</key>
 			<string>string</string>
-			<key>pfm_title</key>
-			<string>Computer Name Template</string>
+		</dict>
+		<dict>
 			<key>pfm_description</key>
 			<string>Setup Manager will generate the computer name from this template and set it automatically. See the documentation for substitutions that can used in the template. (Setting this overrides the Computer Name field in user entry.)</string>
 			<key>pfm_documentation_url</key>
 			<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#computernametemplate</string>
-		</dict>
-		<dict>
 			<key>pfm_name</key>
-			<string>overrideSerialNumber</string>
+			<string>computerNameTemplate</string>
+			<key>pfm_title</key>
+			<string>Computer Name Template</string>
 			<key>pfm_type</key>
 			<string>string</string>
-			<key>pfm_title</key>
-			<string>Demonstration Serial Number</string>
+		</dict>
+		<dict>
 			<key>pfm_description</key>
-			<string>When set, the &quot;About this Mac&quot; info window will show this value instead of the real serial number.</string>
+			<string>When set, the "About this Mac" info window will show this value instead of the real serial number.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#overrideserialnumber</string>
-		</dict>
-		<dict>
 			<key>pfm_name</key>
-			<string>hideActionLabels</string>
-			<key>pfm_type</key>
-			<string>boolean</string>
+			<string>overrideSerialNumber</string>
 			<key>pfm_title</key>
-			<string>Hide Action Labels</string>
-			<key>pfm_description</key>
-			<string>Hides the individual labels under each action&apos;s icon.</string>
-			<key>pfm_documentation_url</key>
-			<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#hideactionlabels</string>
-		</dict>
-		<dict>
-			<key>pfm_name</key>
-			<string>hideDebugLabel</string>
-			<key>pfm_type</key>
-			<string>boolean</string>
-			<key>pfm_title</key>
-			<string>Hide Debug Label</string>
-			<key>pfm_description</key>
-			<string>Suppresses display of the red &apos;DEBUG&apos; label in debug mode.</string>
-			<key>pfm_documentation_url</key>
-			<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#hidedebuglabel</string>
-		</dict>
-		<dict>
-			<key>pfm_name</key>
-			<string>simulateMDM</string>
+			<string>Demonstration Serial Number</string>
 			<key>pfm_type</key>
 			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Hides the individual labels under each action's icon.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#hideactionlabels</string>
+			<key>pfm_name</key>
+			<string>hideActionLabels</string>
 			<key>pfm_title</key>
-			<string>Simulate an MDM</string>
+			<string>Hide Action Labels</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Suppresses display of the red 'DEBUG' label in debug mode.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#hidedebuglabel</string>
+			<key>pfm_name</key>
+			<string>hideDebugLabel</string>
+			<key>pfm_title</key>
+			<string>Hide Debug Label</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
 			<key>pfm_description</key>
 			<string>When debug mode is enabled, you can set this to Jamf Pro or Jamf School. This allows you to do test runs on un-enrolled Macs.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#simulatemdm</string>
+			<key>pfm_name</key>
+			<string>simulateMDM</string>
 			<key>pfm_range_list</key>
 			<array>
 				<string>Jamf Pro</string>
 				<string>Jamf School</string>
 			</array>
-			<key>pfm_documentation_url</key>
-			<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#simulatemdm</string>
+			<key>pfm_title</key>
+			<string>Simulate an MDM</string>
+			<key>pfm_type</key>
+			<string>string</string>
 		</dict>
 		<dict>
-			<key>pfm_type</key>
-			<string>dictionary</string>
-			<key>pfm_name</key>
-			<string>help</string>
-			<key>pfm_title</key>
-			<string>Help</string>
 			<key>pfm_description</key>
 			<string>When you provide help, a help button (with a circled question mark) will be shown in the lower right corner (for left-to-right localizations). When you click on the help button a window with information will be shown.</string>
+			<key>pfm_name</key>
+			<string>help</string>
 			<key>pfm_subkeys</key>
 			<array>
 				<dict>
-					<key>pfm_name</key>
-					<string>title</string>
-					<key>pfm_type</key>
-					<string>string</string>
-					<key>pfm_title</key>
-					<string>Help Title</string>
 					<key>pfm_description</key>
 					<string>The title for the help message.</string>
 					<key>pfm_documentation_url</key>
 					<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#title-1</string>
-				</dict>
-				<dict>
 					<key>pfm_name</key>
-					<string>message</string>
+					<string>title</string>
+					<key>pfm_title</key>
+					<string>Help Title</string>
 					<key>pfm_type</key>
 					<string>string</string>
-					<key>pfm_title</key>
-					<string>Help Message</string>
+				</dict>
+				<dict>
 					<key>pfm_description</key>
 					<string>The help message.</string>
 					<key>pfm_documentation_url</key>
 					<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#message-1</string>
-				</dict>
-				<dict>
 					<key>pfm_name</key>
-					<string>url</string>
+					<string>message</string>
+					<key>pfm_title</key>
+					<string>Help Message</string>
 					<key>pfm_type</key>
 					<string>string</string>
-					<key>pfm_title</key>
-					<string>Help URL</string>
+				</dict>
+				<dict>
 					<key>pfm_description</key>
 					<string>The URL will be translated into a QR code and displayed next to the help message.</string>
 					<key>pfm_documentation_url</key>
 					<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#url</string>
+					<key>pfm_name</key>
+					<string>url</string>
+					<key>pfm_title</key>
+					<string>Help URL</string>
+					<key>pfm_type</key>
+					<string>string</string>
 				</dict>
 			</array>
-		</dict>
-		<dict>
+			<key>pfm_title</key>
+			<string>Help</string>
 			<key>pfm_type</key>
 			<string>dictionary</string>
-			<key>pfm_name</key>
-			<string>userEntry</string>
-			<key>pfm_title</key>
-			<string>User Entry</string>
+		</dict>
+		<dict>
 			<key>pfm_description</key>
 			<string>When any of these are defined, Setup Manager will prompt for user data while the enrollment actions are running.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#user-entry</string>
+			<key>pfm_name</key>
+			<string>userEntry</string>
 			<key>pfm_subkeys</key>
 			<array>
 				<dict>
-					<key>pfm_name</key>
-					<string>userID</string>
-					<key>pfm_type</key>
-					<string>dictionary</string>
-					<key>pfm_title</key>
-					<string>User ID</string>
 					<key>pfm_description</key>
 					<string></string>
+					<key>pfm_name</key>
+					<string>userID</string>
 					<key>pfm_subkeys</key>
 					<array>
 						<dict>
-							<key>pfm_name</key>
-							<string>default</string>
-							<key>pfm_type</key>
-							<string>string</string>
-							<key>pfm_title</key>
-							<string>User ID Default</string>
 							<key>pfm_description</key>
 							<string>A pre-populated value for the User ID field.</string>
 							<key>pfm_documentation_url</key>
 							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#default</string>
-						</dict>
-						<dict>
 							<key>pfm_name</key>
-							<string>placeholder</string>
+							<string>default</string>
+							<key>pfm_title</key>
+							<string>User ID Default</string>
 							<key>pfm_type</key>
 							<string>string</string>
-							<key>pfm_title</key>
-							<string>User ID Placeholder</string>
+						</dict>
+						<dict>
 							<key>pfm_description</key>
 							<string>A placeholder value for User ID. This is displayed in gray when no value has been entered.</string>
 							<key>pfm_documentation_url</key>
 							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#placeholder</string>
+							<key>pfm_name</key>
+							<string>placeholder</string>
+							<key>pfm_title</key>
+							<string>User ID Placeholder</string>
+							<key>pfm_type</key>
+							<string>string</string>
 						</dict>
 						<dict>
-							<key>pfm_name</key>
-							<string>options</string>
-							<key>pfm_title</key>
-							<string>User ID Options</string>
 							<key>pfm_description</key>
 							<string>Options displayed in a dropdown menu for User ID.</string>
-							<key>pfm_type</key>
-							<string>array</string>
+							<key>pfm_documentation_url</key>
+							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#options</string>
+							<key>pfm_name</key>
+							<string>options</string>
 							<key>pfm_subkeys</key>
 							<array>
 								<dict>
@@ -560,79 +540,79 @@ A profile can consist of payloads with different version numbers. For example, c
 									<string>string</string>
 								</dict>
 							</array>
-							<key>pfm_documentation_url</key>
-							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#options</string>
+							<key>pfm_title</key>
+							<string>User ID Options</string>
+							<key>pfm_type</key>
+							<string>array</string>
 						</dict>
 						<dict>
-							<key>pfm_name</key>
-							<string>validation</string>
-							<key>pfm_type</key>
-							<string>string</string>
-							<key>pfm_title</key>
-							<string>User ID Validation</string>
 							<key>pfm_description</key>
 							<string>A regular expression used to validate the value of User ID.</string>
 							<key>pfm_documentation_url</key>
 							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#validation</string>
-						</dict>
-						<dict>
 							<key>pfm_name</key>
-							<string>validationMessage</string>
+							<string>validation</string>
+							<key>pfm_title</key>
+							<string>User ID Validation</string>
 							<key>pfm_type</key>
 							<string>string</string>
-							<key>pfm_title</key>
-							<string>User ID Validation Message</string>
+						</dict>
+						<dict>
 							<key>pfm_description</key>
 							<string>A message displayed to the user when User ID fails to match the regular expression.</string>
 							<key>pfm_documentation_url</key>
 							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#validationmessage</string>
+							<key>pfm_name</key>
+							<string>validationMessage</string>
+							<key>pfm_title</key>
+							<string>User ID Validation Message</string>
+							<key>pfm_type</key>
+							<string>string</string>
 						</dict>
 					</array>
-				</dict>
-				<dict>
-					<key>pfm_name</key>
-					<string>department</string>
+					<key>pfm_title</key>
+					<string>User ID</string>
 					<key>pfm_type</key>
 					<string>dictionary</string>
-					<key>pfm_title</key>
-					<string>Department</string>
+				</dict>
+				<dict>
 					<key>pfm_description</key>
 					<string></string>
+					<key>pfm_name</key>
+					<string>department</string>
 					<key>pfm_subkeys</key>
 					<array>
 						<dict>
-							<key>pfm_name</key>
-							<string>default</string>
-							<key>pfm_type</key>
-							<string>string</string>
-							<key>pfm_title</key>
-							<string>Department Default</string>
 							<key>pfm_description</key>
 							<string>A pre-populated value for the Department field.</string>
 							<key>pfm_documentation_url</key>
 							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#default</string>
-						</dict>
-						<dict>
 							<key>pfm_name</key>
-							<string>placeholder</string>
+							<string>default</string>
+							<key>pfm_title</key>
+							<string>Department Default</string>
 							<key>pfm_type</key>
 							<string>string</string>
-							<key>pfm_title</key>
-							<string>Department Placeholder</string>
+						</dict>
+						<dict>
 							<key>pfm_description</key>
 							<string>A placeholder value for Department. This is displayed in gray when no value has been entered.</string>
 							<key>pfm_documentation_url</key>
 							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#placeholder</string>
+							<key>pfm_name</key>
+							<string>placeholder</string>
+							<key>pfm_title</key>
+							<string>Department Placeholder</string>
+							<key>pfm_type</key>
+							<string>string</string>
 						</dict>
 						<dict>
-							<key>pfm_name</key>
-							<string>options</string>
-							<key>pfm_title</key>
-							<string>Department Options</string>
 							<key>pfm_description</key>
 							<string>Options displayed in a dropdown menu for Department.</string>
-							<key>pfm_type</key>
-							<string>array</string>
+							<key>pfm_documentation_url</key>
+							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#options</string>
+							<key>pfm_name</key>
+							<string>options</string>
 							<key>pfm_subkeys</key>
 							<array>
 								<dict>
@@ -642,79 +622,79 @@ A profile can consist of payloads with different version numbers. For example, c
 									<string>string</string>
 								</dict>
 							</array>
-							<key>pfm_documentation_url</key>
-							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#options</string>
+							<key>pfm_title</key>
+							<string>Department Options</string>
+							<key>pfm_type</key>
+							<string>array</string>
 						</dict>
 						<dict>
-							<key>pfm_name</key>
-							<string>validation</string>
-							<key>pfm_type</key>
-							<string>string</string>
-							<key>pfm_title</key>
-							<string>Department Validation</string>
 							<key>pfm_description</key>
 							<string>A regular expression used to validate the value of Department.</string>
 							<key>pfm_documentation_url</key>
 							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#validation</string>
-						</dict>
-						<dict>
 							<key>pfm_name</key>
-							<string>validationMessage</string>
+							<string>validation</string>
+							<key>pfm_title</key>
+							<string>Department Validation</string>
 							<key>pfm_type</key>
 							<string>string</string>
-							<key>pfm_title</key>
-							<string>Department Validation Message</string>
+						</dict>
+						<dict>
 							<key>pfm_description</key>
 							<string>A message displayed to the user when Department fails to match the regular expression.</string>
 							<key>pfm_documentation_url</key>
 							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#validationmessage</string>
+							<key>pfm_name</key>
+							<string>validationMessage</string>
+							<key>pfm_title</key>
+							<string>Department Validation Message</string>
+							<key>pfm_type</key>
+							<string>string</string>
 						</dict>
 					</array>
-				</dict>
-				<dict>
-					<key>pfm_name</key>
-					<string>building</string>
+					<key>pfm_title</key>
+					<string>Department</string>
 					<key>pfm_type</key>
 					<string>dictionary</string>
-					<key>pfm_title</key>
-					<string>Building</string>
+				</dict>
+				<dict>
 					<key>pfm_description</key>
 					<string></string>
+					<key>pfm_name</key>
+					<string>building</string>
 					<key>pfm_subkeys</key>
 					<array>
 						<dict>
-							<key>pfm_name</key>
-							<string>default</string>
-							<key>pfm_type</key>
-							<string>string</string>
-							<key>pfm_title</key>
-							<string>Building Default</string>
 							<key>pfm_description</key>
 							<string>A pre-populated value for the Building field.</string>
 							<key>pfm_documentation_url</key>
 							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#default</string>
-						</dict>
-						<dict>
 							<key>pfm_name</key>
-							<string>placeholder</string>
+							<string>default</string>
+							<key>pfm_title</key>
+							<string>Building Default</string>
 							<key>pfm_type</key>
 							<string>string</string>
-							<key>pfm_title</key>
-							<string>Building Placeholder</string>
+						</dict>
+						<dict>
 							<key>pfm_description</key>
 							<string>A placeholder value for Building. This is displayed in gray when no value has been entered.</string>
 							<key>pfm_documentation_url</key>
 							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#placeholder</string>
+							<key>pfm_name</key>
+							<string>placeholder</string>
+							<key>pfm_title</key>
+							<string>Building Placeholder</string>
+							<key>pfm_type</key>
+							<string>string</string>
 						</dict>
 						<dict>
-							<key>pfm_name</key>
-							<string>options</string>
-							<key>pfm_title</key>
-							<string>Building Options</string>
 							<key>pfm_description</key>
 							<string>Options displayed in a dropdown menu for Building.</string>
-							<key>pfm_type</key>
-							<string>array</string>
+							<key>pfm_documentation_url</key>
+							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#options</string>
+							<key>pfm_name</key>
+							<string>options</string>
 							<key>pfm_subkeys</key>
 							<array>
 								<dict>
@@ -724,79 +704,79 @@ A profile can consist of payloads with different version numbers. For example, c
 									<string>string</string>
 								</dict>
 							</array>
-							<key>pfm_documentation_url</key>
-							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#options</string>
+							<key>pfm_title</key>
+							<string>Building Options</string>
+							<key>pfm_type</key>
+							<string>array</string>
 						</dict>
 						<dict>
-							<key>pfm_name</key>
-							<string>validation</string>
-							<key>pfm_type</key>
-							<string>string</string>
-							<key>pfm_title</key>
-							<string>Building Validation</string>
 							<key>pfm_description</key>
 							<string>A regular expression used to validate the value of Building.</string>
 							<key>pfm_documentation_url</key>
 							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#validation</string>
-						</dict>
-						<dict>
 							<key>pfm_name</key>
-							<string>validationMessage</string>
+							<string>validation</string>
+							<key>pfm_title</key>
+							<string>Building Validation</string>
 							<key>pfm_type</key>
 							<string>string</string>
-							<key>pfm_title</key>
-							<string>Building Validation Message</string>
+						</dict>
+						<dict>
 							<key>pfm_description</key>
 							<string>A message displayed to the user when Building fails to match the regular expression.</string>
 							<key>pfm_documentation_url</key>
 							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#validationmessage</string>
+							<key>pfm_name</key>
+							<string>validationMessage</string>
+							<key>pfm_title</key>
+							<string>Building Validation Message</string>
+							<key>pfm_type</key>
+							<string>string</string>
 						</dict>
 					</array>
-				</dict>
-				<dict>
-					<key>pfm_name</key>
-					<string>room</string>
+					<key>pfm_title</key>
+					<string>Building</string>
 					<key>pfm_type</key>
 					<string>dictionary</string>
-					<key>pfm_title</key>
-					<string>Room</string>
+				</dict>
+				<dict>
 					<key>pfm_description</key>
 					<string></string>
+					<key>pfm_name</key>
+					<string>room</string>
 					<key>pfm_subkeys</key>
 					<array>
 						<dict>
-							<key>pfm_name</key>
-							<string>default</string>
-							<key>pfm_type</key>
-							<string>string</string>
-							<key>pfm_title</key>
-							<string>Room Default</string>
 							<key>pfm_description</key>
 							<string>A pre-populated value for the Room field.</string>
 							<key>pfm_documentation_url</key>
 							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#default</string>
-						</dict>
-						<dict>
 							<key>pfm_name</key>
-							<string>placeholder</string>
+							<string>default</string>
+							<key>pfm_title</key>
+							<string>Room Default</string>
 							<key>pfm_type</key>
 							<string>string</string>
-							<key>pfm_title</key>
-							<string>Room Placeholder</string>
+						</dict>
+						<dict>
 							<key>pfm_description</key>
 							<string>A placeholder value for Room. This is displayed in gray when no value has been entered.</string>
 							<key>pfm_documentation_url</key>
 							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#placeholder</string>
+							<key>pfm_name</key>
+							<string>placeholder</string>
+							<key>pfm_title</key>
+							<string>Room Placeholder</string>
+							<key>pfm_type</key>
+							<string>string</string>
 						</dict>
 						<dict>
-							<key>pfm_name</key>
-							<string>options</string>
-							<key>pfm_title</key>
-							<string>Room Options</string>
 							<key>pfm_description</key>
 							<string>Options displayed in a dropdown menu for Room.</string>
-							<key>pfm_type</key>
-							<string>array</string>
+							<key>pfm_documentation_url</key>
+							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#options</string>
+							<key>pfm_name</key>
+							<string>options</string>
 							<key>pfm_subkeys</key>
 							<array>
 								<dict>
@@ -806,79 +786,79 @@ A profile can consist of payloads with different version numbers. For example, c
 									<string>string</string>
 								</dict>
 							</array>
-							<key>pfm_documentation_url</key>
-							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#options</string>
+							<key>pfm_title</key>
+							<string>Room Options</string>
+							<key>pfm_type</key>
+							<string>array</string>
 						</dict>
 						<dict>
-							<key>pfm_name</key>
-							<string>validation</string>
-							<key>pfm_type</key>
-							<string>string</string>
-							<key>pfm_title</key>
-							<string>Room Validation</string>
 							<key>pfm_description</key>
 							<string>A regular expression used to validate the value of Room.</string>
 							<key>pfm_documentation_url</key>
 							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#validation</string>
-						</dict>
-						<dict>
 							<key>pfm_name</key>
-							<string>validationMessage</string>
+							<string>validation</string>
+							<key>pfm_title</key>
+							<string>Room Validation</string>
 							<key>pfm_type</key>
 							<string>string</string>
-							<key>pfm_title</key>
-							<string>Room Validation Message</string>
+						</dict>
+						<dict>
 							<key>pfm_description</key>
 							<string>A message displayed to the user when Room fails to match the regular expression.</string>
 							<key>pfm_documentation_url</key>
 							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#validationmessage</string>
+							<key>pfm_name</key>
+							<string>validationMessage</string>
+							<key>pfm_title</key>
+							<string>Room Validation Message</string>
+							<key>pfm_type</key>
+							<string>string</string>
 						</dict>
 					</array>
-				</dict>
-				<dict>
-					<key>pfm_name</key>
-					<string>assetTag</string>
+					<key>pfm_title</key>
+					<string>Room</string>
 					<key>pfm_type</key>
 					<string>dictionary</string>
-					<key>pfm_title</key>
-					<string>Asset Tag</string>
+				</dict>
+				<dict>
 					<key>pfm_description</key>
 					<string></string>
+					<key>pfm_name</key>
+					<string>assetTag</string>
 					<key>pfm_subkeys</key>
 					<array>
 						<dict>
-							<key>pfm_name</key>
-							<string>default</string>
-							<key>pfm_type</key>
-							<string>string</string>
-							<key>pfm_title</key>
-							<string>Asset Tag Default</string>
 							<key>pfm_description</key>
 							<string>A pre-populated value for the Asset Tag field.</string>
 							<key>pfm_documentation_url</key>
 							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#default</string>
-						</dict>
-						<dict>
 							<key>pfm_name</key>
-							<string>placeholder</string>
+							<string>default</string>
+							<key>pfm_title</key>
+							<string>Asset Tag Default</string>
 							<key>pfm_type</key>
 							<string>string</string>
-							<key>pfm_title</key>
-							<string>Asset Tag Placeholder</string>
+						</dict>
+						<dict>
 							<key>pfm_description</key>
 							<string>A placeholder value for Asset Tag. This is displayed in gray when no value has been entered.</string>
 							<key>pfm_documentation_url</key>
 							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#placeholder</string>
+							<key>pfm_name</key>
+							<string>placeholder</string>
+							<key>pfm_title</key>
+							<string>Asset Tag Placeholder</string>
+							<key>pfm_type</key>
+							<string>string</string>
 						</dict>
 						<dict>
-							<key>pfm_name</key>
-							<string>options</string>
-							<key>pfm_title</key>
-							<string>Asset Tag Options</string>
 							<key>pfm_description</key>
 							<string>Options displayed in a dropdown menu for Asset Tag.</string>
-							<key>pfm_type</key>
-							<string>array</string>
+							<key>pfm_documentation_url</key>
+							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#options</string>
+							<key>pfm_name</key>
+							<string>options</string>
 							<key>pfm_subkeys</key>
 							<array>
 								<dict>
@@ -888,79 +868,79 @@ A profile can consist of payloads with different version numbers. For example, c
 									<string>string</string>
 								</dict>
 							</array>
-							<key>pfm_documentation_url</key>
-							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#options</string>
+							<key>pfm_title</key>
+							<string>Asset Tag Options</string>
+							<key>pfm_type</key>
+							<string>array</string>
 						</dict>
 						<dict>
-							<key>pfm_name</key>
-							<string>validation</string>
-							<key>pfm_type</key>
-							<string>string</string>
-							<key>pfm_title</key>
-							<string>Asset Tag Validation</string>
 							<key>pfm_description</key>
 							<string>A regular expression used to validate the value of Asset Tag.</string>
 							<key>pfm_documentation_url</key>
 							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#validation</string>
-						</dict>
-						<dict>
 							<key>pfm_name</key>
-							<string>validationMessage</string>
+							<string>validation</string>
+							<key>pfm_title</key>
+							<string>Asset Tag Validation</string>
 							<key>pfm_type</key>
 							<string>string</string>
-							<key>pfm_title</key>
-							<string>Asset Tag Validation Message</string>
+						</dict>
+						<dict>
 							<key>pfm_description</key>
 							<string>A message displayed to the user when Asset Tag fails to match the regular expression.</string>
 							<key>pfm_documentation_url</key>
 							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#validationmessage</string>
+							<key>pfm_name</key>
+							<string>validationMessage</string>
+							<key>pfm_title</key>
+							<string>Asset Tag Validation Message</string>
+							<key>pfm_type</key>
+							<string>string</string>
 						</dict>
 					</array>
-				</dict>
-				<dict>
-					<key>pfm_name</key>
-					<string>computerName</string>
+					<key>pfm_title</key>
+					<string>Asset Tag</string>
 					<key>pfm_type</key>
 					<string>dictionary</string>
-					<key>pfm_title</key>
-					<string>Computer Name</string>
+				</dict>
+				<dict>
 					<key>pfm_description</key>
 					<string>If computerNameTemplate is set, any data entry for computer name is ignored.</string>
+					<key>pfm_name</key>
+					<string>computerName</string>
 					<key>pfm_subkeys</key>
 					<array>
 						<dict>
-							<key>pfm_name</key>
-							<string>default</string>
-							<key>pfm_type</key>
-							<string>string</string>
-							<key>pfm_title</key>
-							<string>Computer Name Default</string>
 							<key>pfm_description</key>
 							<string>A pre-populated value for the Computer Name field.</string>
 							<key>pfm_documentation_url</key>
 							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#default</string>
-						</dict>
-						<dict>
 							<key>pfm_name</key>
-							<string>placeholder</string>
+							<string>default</string>
+							<key>pfm_title</key>
+							<string>Computer Name Default</string>
 							<key>pfm_type</key>
 							<string>string</string>
-							<key>pfm_title</key>
-							<string>Computer Name Placeholder</string>
+						</dict>
+						<dict>
 							<key>pfm_description</key>
 							<string>A placeholder value for Computer Name. This is displayed in gray when no value has been entered.</string>
 							<key>pfm_documentation_url</key>
 							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#placeholder</string>
+							<key>pfm_name</key>
+							<string>placeholder</string>
+							<key>pfm_title</key>
+							<string>Computer Name Placeholder</string>
+							<key>pfm_type</key>
+							<string>string</string>
 						</dict>
 						<dict>
-							<key>pfm_name</key>
-							<string>options</string>
-							<key>pfm_title</key>
-							<string>Computer Name Options</string>
 							<key>pfm_description</key>
 							<string>Options displayed in a dropdown menu for Computer Name.</string>
-							<key>pfm_type</key>
-							<string>array</string>
+							<key>pfm_documentation_url</key>
+							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#options</string>
+							<key>pfm_name</key>
+							<string>options</string>
 							<key>pfm_subkeys</key>
 							<array>
 								<dict>
@@ -970,44 +950,48 @@ A profile can consist of payloads with different version numbers. For example, c
 									<string>string</string>
 								</dict>
 							</array>
-							<key>pfm_documentation_url</key>
-							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#options</string>
+							<key>pfm_title</key>
+							<string>Computer Name Options</string>
+							<key>pfm_type</key>
+							<string>array</string>
 						</dict>
 						<dict>
-							<key>pfm_name</key>
-							<string>validation</string>
-							<key>pfm_type</key>
-							<string>string</string>
-							<key>pfm_title</key>
-							<string>Computer Name Validation</string>
 							<key>pfm_description</key>
 							<string>A regular expression used to validate the value of Computer Name.</string>
 							<key>pfm_documentation_url</key>
 							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#validation</string>
-						</dict>
-						<dict>
 							<key>pfm_name</key>
-							<string>validationMessage</string>
+							<string>validation</string>
+							<key>pfm_title</key>
+							<string>Computer Name Validation</string>
 							<key>pfm_type</key>
 							<string>string</string>
-							<key>pfm_title</key>
-							<string>Computer Name Validation Message</string>
+						</dict>
+						<dict>
 							<key>pfm_description</key>
 							<string>A message displayed to the user when Computer Name fails to match the regular expression.</string>
 							<key>pfm_documentation_url</key>
 							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#validationmessage</string>
+							<key>pfm_name</key>
+							<string>validationMessage</string>
+							<key>pfm_title</key>
+							<string>Computer Name Validation Message</string>
+							<key>pfm_type</key>
+							<string>string</string>
 						</dict>
 					</array>
+					<key>pfm_title</key>
+					<string>Computer Name</string>
+					<key>pfm_type</key>
+					<string>dictionary</string>
 				</dict>
 				<dict>
-					<key>pfm_name</key>
-					<string>showForUserIDs</string>
-					<key>pfm_title</key>
-					<string>Show User Entry for User IDs</string>
-					<key>pfm_type</key>
-					<string>array</string>
 					<key>pfm_description</key>
 					<string>You can configure Setup Manager to only show the user entry section when specified users have authenticated in enrollment customization.</string>
+					<key>pfm_documentation_url</key>
+					<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#conditionally-show-the-user-entry-for-certain-users</string>
+					<key>pfm_name</key>
+					<string>showForUserIDs</string>
 					<key>pfm_subkeys</key>
 					<array>
 						<dict>
@@ -1017,22 +1001,24 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>string</string>
 						</dict>
 					</array>
-					<key>pfm_documentation_url</key>
-					<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#conditionally-show-the-user-entry-for-certain-users</string>
+					<key>pfm_title</key>
+					<string>Show User Entry for User IDs</string>
+					<key>pfm_type</key>
+					<string>array</string>
 				</dict>
 			</array>
+			<key>pfm_title</key>
+			<string>User Entry</string>
+			<key>pfm_type</key>
+			<string>dictionary</string>
 		</dict>
 		<dict>
-			<key>pfm_name</key>
-			<string>enrollmentActions</string>
-			<key>pfm_type</key>
-			<string>array</string>
-			<key>pfm_title</key>
-			<string>Enrollment Actions</string>
 			<key>pfm_description</key>
 			<string>Describes the individual actions to be performed by Setup Manager. For each row, complete the Label, Icon, and then one of the following: Shell command, Jamf Pro Policy Trigger, Watch Path, Wait, Wait For User Entry, Jamf Pro Recon, or Installomator Label.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#actions</string>
+			<key>pfm_name</key>
+			<string>enrollmentActions</string>
 			<key>pfm_note</key>
 			<string>Known issues:
 * Using a watch path with whileExists is not supported.
@@ -1042,176 +1028,151 @@ A profile can consist of payloads with different version numbers. For example, c
 				<dict>
 					<key>pfm_hidden</key>
 					<string>container</string>
-					<key>pfm_type</key>
-					<string>dictionary</string>
 					<key>pfm_subkeys</key>
 					<array>
 						<dict>
+							<key>pfm_description</key>
+							<string>The label is used as the name of the action in display.</string>
 							<key>pfm_name</key>
 							<string>label</string>
-							<key>pfm_type</key>
-							<string>string</string>
-							<key>pfm_title</key>
-							<string>Label</string>
-							<key>pfm_description</key>
-							<string>The label is used as the name of the action in display.</string>
 							<key>pfm_required</key>
 							<true/>
-						</dict>
-						<dict>
-							<key>pfm_name</key>
-							<string>icon</string>
+							<key>pfm_title</key>
+							<string>Label</string>
 							<key>pfm_type</key>
 							<string>string</string>
-							<key>pfm_title</key>
-							<string>Icon</string>
+						</dict>
+						<dict>
 							<key>pfm_description</key>
 							<string>The label is used as the name of the action in display.</string>
-						</dict>
-						<dict>
 							<key>pfm_name</key>
-							<string>shell</string>
+							<string>icon</string>
+							<key>pfm_title</key>
+							<string>Icon</string>
 							<key>pfm_type</key>
 							<string>string</string>
-							<key>pfm_title</key>
-							<string>Shell: command</string>
+						</dict>
+						<dict>
 							<key>pfm_description</key>
 							<string>The absolute path to the command or script that should be run for this action.</string>
+							<key>pfm_name</key>
+							<string>shell</string>
+							<key>pfm_title</key>
+							<string>Shell: command</string>
+							<key>pfm_type</key>
+							<string>string</string>
 						</dict>
 						<dict>
 							<key>pfm_name</key>
 							<string>requiresRoot</string>
-							<key>pfm_type</key>
-							<string>boolean</string>
-							<key>pfm_title</key>
-							<string>Shell: run as root</string>
-							<key>pfm_range_list_titles</key>
-							<array>
-								<string>Yes</string>
-							</array>
 							<key>pfm_range_list</key>
 							<array>
 								<true/>
 							</array>
+							<key>pfm_range_list_titles</key>
+							<array>
+								<string>Yes</string>
+							</array>
+							<key>pfm_title</key>
+							<string>Shell: run as root</string>
+							<key>pfm_type</key>
+							<string>boolean</string>
 						</dict>
 						<dict>
-							<key>pfm_name</key>
-							<string>policy</string>
-							<key>pfm_type</key>
-							<string>string</string>
-							<key>pfm_title</key>
-							<string>Jamf Pro Policy Trigger</string>
 							<key>pfm_description</key>
 							<string>The absolute path to the command or script that should be run for this action.</string>
-						</dict>
-						<dict>
 							<key>pfm_name</key>
-							<string>watchPath</string>
+							<string>policy</string>
+							<key>pfm_title</key>
+							<string>Jamf Pro Policy Trigger</string>
 							<key>pfm_type</key>
 							<string>string</string>
-							<key>pfm_title</key>
-							<string>Watch Path</string>
+						</dict>
+						<dict>
 							<key>pfm_description</key>
 							<string>This action will wait until a file at the given path exists or is removed.</string>
-						</dict>
-<!-- 
-						<dict>
 							<key>pfm_name</key>
-							<string>wait</string>
+							<string>watchPath</string>
+							<key>pfm_title</key>
+							<string>Watch Path</string>
 							<key>pfm_type</key>
 							<string>string</string>
-							<key>pfm_title</key>
-							<string>Watch Path: Wait</string>
-							<key>pfm_range_list</key>
-							<array>
-								<string>untilExists</string>
-								<string>whileExists</string>
-							</array>
-							<key>pfm_description</key>
-							<string>Determines if the action waits until the file exists or until the file is removed.</string>
 						</dict>
- -->
 						<dict>
-							<key>pfm_name</key>
-							<string>timeout</string>
-							<key>pfm_type</key>
-							<string>integer</string>
-							<key>pfm_title</key>
-							<string>Watch Path: Timeout</string>
 							<key>pfm_default</key>
 							<integer>600</integer>
 							<key>pfm_description</key>
 							<string>The watchPath action will fail after this timeout.</string>
-						</dict>
-						<dict>
 							<key>pfm_name</key>
-							<string>wait</string>
+							<string>timeout</string>
+							<key>pfm_title</key>
+							<string>Watch Path: Timeout</string>
 							<key>pfm_type</key>
 							<string>integer</string>
-							<key>pfm_title</key>
-							<string>Wait (in seconds)</string>
-							<key>pfm_description</key>
-							<string>Wait for a given time.</string>
 						</dict>
 						<dict>
+							<key>pfm_description</key>
+							<string>Wait for a given time.</string>
+							<key>pfm_name</key>
+							<string>wait</string>
+							<key>pfm_title</key>
+							<string>Wait (in seconds)</string>
+							<key>pfm_type</key>
+							<string>integer</string>
+						</dict>
+						<dict>
+							<key>pfm_description</key>
+							<string>If Setup Manager reaches this action before the user entry has been completed, it will wait until the user entry is completed and the user has clicked 'Save.'</string>
 							<key>pfm_name</key>
 							<string>waitForUserEntry</string>
-							<key>pfm_type</key>
-							<string>string</string>
-							<key>pfm_title</key>
-							<string>Wait For User Entry</string>
-							<key>pfm_description</key>
-							<string>If Setup Manager reaches this action before the user entry has been completed, it will wait until the user entry is completed and the user has clicked &apos;Save.&apos;</string>
+							<key>pfm_range_list</key>
+							<array>
+								<string></string>
+							</array>
 							<key>pfm_range_list_titles</key>
 							<array>
 								<string>Wait For User Entry</string>
 							</array>
+							<key>pfm_title</key>
+							<string>Wait For User Entry</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+						<dict>
+							<key>pfm_description</key>
+							<string>This will run a Jamf Inventory update.</string>
+							<key>pfm_name</key>
+							<string>recon</string>
 							<key>pfm_range_list</key>
 							<array>
 								<string></string>
 							</array>
-						</dict>
-						<dict>
-							<key>pfm_name</key>
-							<string>recon</string>
-							<key>pfm_type</key>
-							<string>string</string>
-							<key>pfm_title</key>
-							<string>Jamf Pro Recon</string>
-							<key>pfm_description</key>
-							<string>This will run a Jamf Inventory update.</string>
 							<key>pfm_range_list_titles</key>
 							<array>
 								<string>Jamf Pro Recon</string>
 							</array>
-							<key>pfm_range_list</key>
-							<array>
-								<string></string>
-							</array>
-						</dict>
-						<dict>
-							<key>pfm_name</key>
-							<string>installomator</string>
+							<key>pfm_title</key>
+							<string>Jamf Pro Recon</string>
 							<key>pfm_type</key>
 							<string>string</string>
-							<key>pfm_title</key>
-							<string>Installomator Label</string>
-							<key>pfm_description</key>
-							<string>The installomator label to run. Can also use Arguments.</string>
 						</dict>
 						<dict>
+							<key>pfm_description</key>
+							<string>The installomator label to run. Can also use Arguments.</string>
 							<key>pfm_name</key>
-							<string>arguments</string>
+							<string>installomator</string>
 							<key>pfm_title</key>
-							<string>Arguments</string>
+							<string>Installomator Label</string>
 							<key>pfm_type</key>
-							<string>array</string>
-							<key>pfm_value_placeholder</key>
-							<string>arg1, arg2</string>
+							<string>string</string>
+						</dict>
+						<dict>
 							<key>pfm_imazing_control_type</key>
 							<string>string</string>
 							<key>pfm_imazing_type_adapter</key>
 							<string>strings-array-to-comma-delimited-string</string>
+							<key>pfm_name</key>
+							<string>arguments</string>
 							<key>pfm_subkeys</key>
 							<array>
 								<dict>
@@ -1221,11 +1182,33 @@ A profile can consist of payloads with different version numbers. For example, c
 									<string>string</string>
 								</dict>
 							</array>
+							<key>pfm_title</key>
+							<string>Arguments</string>
+							<key>pfm_type</key>
+							<string>array</string>
+							<key>pfm_value_placeholder</key>
+							<string>arg1, arg2</string>
 						</dict>
 					</array>
+					<key>pfm_type</key>
+					<string>dictionary</string>
 				</dict>
 			</array>
+			<key>pfm_title</key>
+			<string>Enrollment Actions</string>
+			<key>pfm_type</key>
+			<string>array</string>
 		</dict>
 	</array>
+	<key>pfm_targets</key>
+	<array>
+		<string>system</string>
+	</array>
+	<key>pfm_title</key>
+	<string>Jamf Setup Manager</string>
+	<key>pfm_unique</key>
+	<true/>
+	<key>pfm_version</key>
+	<integer>1</integer>
 </dict>
 </plist>
