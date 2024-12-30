@@ -13,7 +13,7 @@
 	<key>pfm_format_version</key>
 	<integer>1</integer>
 	<key>pfm_last_modified</key>
-	<date>2024-09-13T12:29:35Z</date>
+	<date>2024-12-30T08:03:00Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -161,20 +161,6 @@ A profile can consist of payloads with different version numbers. For example, c
 		</dict>
 		<dict>
 			<key>pfm_default</key>
-			<false/>
-			<key>pfm_description</key>
-			<string>With version 3 the old default mount path (~/Netzlaufwerke/) is deprecated. New default is (/Volumes). This key allows administrators to adopt this default value ahead of the official release. This option is provided to ease the transition for administrators.</string>
-			<key>pfm_name</key>
-			<string>useNewDefaultLocation</string>
-			<key>pfm_title</key>
-			<string>Use the new default mount location</string>
-			<key>pfm_type</key>
-			<string>boolean</string>
-			<key>pfm_app_min</key>
-			<string>2</string>
-		</dict>
-		<dict>
-			<key>pfm_default</key>
 			<string></string>
 			<key>pfm_description</key>
 			<string>Path where network shares will be mounted. Leave blank for the default value (highly recommended).</string>
@@ -218,6 +204,155 @@ A profile can consist of payloads with different version numbers. For example, c
 			<string>boolean</string>
 			<key>pfm_app_min</key>
 			<string>2</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string></string>
+			<key>pfm_description</key>
+			<string>List mounted/unmounted shares directly in menu bar and open the mounted directories when they are clicked. If the value is set to false, the previously known menu will be displayed.</string>
+			<key>pfm_name</key>
+			<string>showMountsInMenu</string>
+			<key>pfm_title</key>
+			<string>Show Mounts In Menu</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_app_min</key>
+			<string>3.1.0</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string></string>
+			<key>pfm_description</key>
+			<string>If the value is set to hidden, the corresponding menu item is hidden, while disabled makes it grayed out. If no values will be set, the menu item will be displayed normally.</string>
+			<key>pfm_name</key>
+			<string>menuAbout</string>
+			<key>pfm_title</key>
+			<string>Menu About</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>disable</string>
+				<string>hidden</string>  
+			</array>
+			<key>pfm_app_min</key>
+			<string>3.1.0</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string></string>
+			<key>pfm_description</key>
+			<string>If the value is set to hidden, the corresponding menu item is hidden, while disabled makes it grayed out. If no values will be set, the menu item will be displayed normally.</string>
+			<key>pfm_name</key>
+			<string>menuConnectShares</string>
+			<key>pfm_title</key>
+			<string>Menu Connect Shares</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>disable</string>
+				<string>hidden</string>  
+			</array>
+			<key>pfm_app_min</key>
+			<string>3.1.0</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string></string>
+			<key>pfm_description</key>
+			<string>If the value is set to hidden, the corresponding menu item is hidden, while disabled makes it grayed out. If no values will be set, the menu item will be displayed normally.</string>
+			<key>pfm_name</key>
+			<string>menuDisconnectShares</string>
+			<key>pfm_title</key>
+			<string>Menu Disconnect Shares</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>disable</string>
+				<string>hidden</string>  
+			</array>
+			<key>pfm_app_min</key>
+			<string>3.1.0</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string></string>
+			<key>pfm_description</key>
+			<string>If the value is set to hidden, the corresponding menu item is hidden, while disabled makes it grayed out. If no values will be set, the menu item will be displayed normally.</string>
+			<key>pfm_name</key>
+			<string>menuCheckUpdates</string>
+			<key>pfm_title</key>
+			<string>Menu Check Updates</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>disable</string>
+				<string>hidden</string>  
+			</array>
+			<key>pfm_app_min</key>
+			<string>3.1.0</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string></string>
+			<key>pfm_description</key>
+			<string>If the value is set to hidden, the corresponding menu item is hidden, while disabled makes it grayed out. If no values will be set, the menu item will be displayed normally.</string>
+			<key>pfm_name</key>
+			<string>menuShowSharesMountDir</string>
+			<key>pfm_title</key>
+			<string>Menu Show Mount Share Directory</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>disable</string>
+				<string>hidden</string>  
+			</array>
+			<key>pfm_app_min</key>
+			<string>3.1.0</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string></string>
+			<key>pfm_description</key>
+			<string>If the value is set to hidden, the corresponding menu item is hidden, while disabled makes it grayed out. If no values will be set, the menu item will be displayed normally.</string>
+			<key>pfm_name</key>
+			<string>menuShowShares</string>
+			<key>pfm_title</key>
+			<string>Menu Show Shares</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>disable</string>
+				<string>hidden</string>  
+			</array>
+			<key>pfm_app_min</key>
+			<string>3.1.0</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string></string>
+			<key>pfm_description</key>
+			<string>If the value is set to hidden, the corresponding menu item is hidden, while disabled makes it grayed out. If no values will be set, the menu item will be displayed normally.</string>
+			<key>pfm_name</key>
+			<string>menuSettings</string>
+			<key>pfm_title</key>
+			<string>Menu Settings</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>disable</string>
+				<string>hidden</string>  
+			</array>
+			<key>pfm_app_min</key>
+			<string>3.1.0</string>
 		</dict>
 		<dict>
 			<key>pfm_default</key>
