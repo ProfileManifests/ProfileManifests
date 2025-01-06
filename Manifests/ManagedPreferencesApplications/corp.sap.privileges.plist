@@ -7,13 +7,13 @@
 	<key>pfm_description</key>
 	<string>Use this section to define settings for the SAP Privileges app</string>
 	<key>pfm_documentation_url</key>
-	<string>https://github.com/SAP/macOS-enterprise-privileges/tree/master/application_management</string>
+	<string>https://github.com/SAP/macOS-enterprise-privileges/wiki/Managing-Privileges</string>
 	<key>pfm_domain</key>
 	<string>corp.sap.privileges</string>
 	<key>pfm_format_version</key>
 	<integer>1</integer>
 	<key>pfm_last_modified</key>
-	<date>2024-06-11T14:52:01Z</date>
+	<date>2024-12-28T07:28:59Z</date>
 	<key>pfm_macos_min</key>
 	<string>10.12</string>
 	<key>pfm_platforms</key>
@@ -133,13 +133,171 @@ A profile can consist of payloads with different version numbers. For example, c
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
+			<string>2.0.0</string>
+			<key>pfm_description</key>
+			<string>Set a fixed time interval after which administrator privileges expire and revert to standard user rights</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/SAP/macOS-enterprise-privileges/wiki/Managing-Privileges</string>
+			<key>pfm_name</key>
+			<string>ExpirationInterval</string>
+			<key>pfm_note</key>
+			<string>A value of 0 disables the timeout and allows the user to request permanent administrator privileges.</string>
+			<key>pfm_range_min</key>
+			<integer>0</integer>
+			<key>pfm_title</key>
+			<string>Expiration Interval</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+			<key>pfm_value_placeholder</key>
+			<string>0</string>
+			<key>pfm_value_unit</key>
+			<string>minutes</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2.0.0</string>
+			<key>pfm_description</key>
+			<string>Set a maximum time interval for a user to request administrative privileges</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/SAP/macOS-enterprise-privileges/wiki/Managing-Privileges</string>
+			<key>pfm_name</key>
+			<string>ExpirationIntervalMax</string>
+			<key>pfm_note</key>
+			<string>Setting ExpirationIntervalMax to 20 minutes lets users choose a timeout up to 20 minutes, rather than forcing a 20-minute timeout. For better usability, we recommend using ExpirationIntervalMax</string>
+			<key>pfm_range_min</key>
+			<integer>0</integer>
+			<key>pfm_title</key>
+			<string>Expiration Interval Max</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+			<key>pfm_value_placeholder</key>
+			<string>0</string>
+			<key>pfm_value_unit</key>
+			<string>minutes</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2.0.0</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>Specifies whether to allow biometric authentication in the PrivilegesCLI to obtain administrator privileges</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/SAP/macOS-enterprise-privileges/wiki/Managing-Privileges</string>
+			<key>pfm_name</key>
+			<string>AllowCLIBiometricAuthentication</string>
+			<key>pfm_note</key>
+			<string>When set to true, the Privileges agent prompts the user for the account password (or Touch ID, if available).</string>
+			<key>pfm_title</key>
+			<string>Allow CLI Biometric Authenication</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2.0.0</string>
+			<key>pfm_description</key>
+			<string>If set, the PrivilegesAgent executes the given application or script and provides the current user's user name ($1) and its privileges (admin or user, $2) as launch arguments</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/SAP/macOS-enterprise-privileges/wiki/Managing-Privileges</string>
+			<key>pfm_name</key>
+			<string>PostChangeExecutablePath</string>
+			<key>pfm_note</key>
+			<string>If the application or script does not exist or is not executable, the launch operation fails silently.</string>
+			<key>pfm_title</key>
+			<string>Post Change Executable Path</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2.0.0</string>
+			<key>pfm_conditionals</key>
+			<array>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_present</key>
+							<true/>
+							<key>pfm_target</key>
+							<string>PostChangeExecutablePath</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>If set to true, the application or script, specified in PostChangeExecutablePath, will only be executed if administrator privileges are granted to a user, but not the privileges are revoked.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/SAP/macOS-enterprise-privileges/wiki/Managing-Privileges</string>
+			<key>pfm_exclude</key>
+			<array>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_present</key>
+							<false/>
+							<key>pfm_target</key>
+							<string>PostChangeExecutablePath</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+			<key>pfm_name</key>
+			<string>PostChangeActionOnGrantOnly</string>
+			<key>pfm_title</key>
+			<string>Post Change Action On Grant Only</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2.0.0</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>If set to true, the user's administrator privileges are revoked at login</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/SAP/macOS-enterprise-privileges/wiki/Managing-Privileges</string>
+			<key>pfm_name</key>
+			<string>RevokePrivilegesAtLogin</string>
+			<key>pfm_title</key>
+			<string>Revoke Privileges at Login</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2.0.0</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>By default, Privileges hides open windows to show the desktop and ensure that only the Privileges window is visible on the screen</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/SAP/macOS-enterprise-privileges/wiki/Managing-Privileges</string>
+			<key>pfm_name</key>
+			<string>HideOtherWindows</string>
+			<key>pfm_note</key>
+			<string>Set HideOtherWindows to false to disable this function</string>
+			<key>pfm_title</key>
+			<string>Hide Other Windows</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+			<key>pfm_value_inverted</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
 			<string>1.5.0</string>
 			<key>pfm_default</key>
 			<string>admin</string>
 			<key>pfm_description</key>
 			<string>Enforces certain privileges. Whenever Privileges.app or the PrivilegesCLI command line tool are launched, the corresponding privileges are set.</string>
-			<key>pfm_description_reference</key>
-			<string>https://github.com/SAP/macOS-enterprise-privileges/tree/master/application_management</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/SAP/macOS-enterprise-privileges/wiki/Managing-Privileges</string>
 			<key>pfm_name</key>
 			<string>EnforcePrivileges</string>
 			<key>pfm_range_list</key>
@@ -164,8 +322,8 @@ A profile can consist of payloads with different version numbers. For example, c
 			<string>1.5.0</string>
 			<key>pfm_description</key>
 			<string>Sets a fixed timeout for the Dock tile's Toggle Privileges command. After this time, the admin rights are removed and set back to standard user rights. A value of 0 disables the timeout and allows the user to permanently toggle privileges.</string>
-			<key>pfm_description_reference</key>
-			<string>https://github.com/SAP/macOS-enterprise-privileges/tree/master/application_management</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/SAP/macOS-enterprise-privileges/wiki/Managing-Privileges</string>
 			<key>pfm_name</key>
 			<string>DockToggleTimeout</string>
 			<key>pfm_note</key>
@@ -184,8 +342,8 @@ A profile can consist of payloads with different version numbers. For example, c
 			<string>1.5.2</string>
 			<key>pfm_description</key>
 			<string>Set a maximum timeout for the Dock tile's Toggle Privileges command. This generally works the same way as the DockToggleTimeout but allows the user to choose every timeout value up to the one specified. If set to 20 min. for example, the user may decide to set it to a value below 20 instead of being forced to use the 20 minute timeout.</string>
-			<key>pfm_description_reference</key>
-			<string>https://github.com/SAP/macOS-enterprise-privileges/tree/master/application_management</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/SAP/macOS-enterprise-privileges/wiki/Managing-Privileges</string>
 			<key>pfm_name</key>
 			<string>DockToggleMaxTimeout</string>
 			<key>pfm_note</key>
@@ -204,8 +362,8 @@ A profile can consist of payloads with different version numbers. For example, c
 			<string>1.5.0</string>
 			<key>pfm_description</key>
 			<string>Limits the usage of Privileges.app to the given user group.</string>
-			<key>pfm_description_reference</key>
-			<string>https://github.com/SAP/macOS-enterprise-privileges/tree/master/application_management</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/SAP/macOS-enterprise-privileges/wiki/Managing-Privileges</string>
 			<key>pfm_name</key>
 			<string>LimitToGroup</string>
 			<key>pfm_title</key>
@@ -218,8 +376,8 @@ A profile can consist of payloads with different version numbers. For example, c
 			<string>1.5.0</string>
 			<key>pfm_description</key>
 			<string>Limits the usage of Privileges.app to the given user account.</string>
-			<key>pfm_description_reference</key>
-			<string>https://github.com/SAP/macOS-enterprise-privileges/tree/master/application_management</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/SAP/macOS-enterprise-privileges/wiki/Managing-Privileges</string>
 			<key>pfm_name</key>
 			<string>LimitToUser</string>
 			<key>pfm_title</key>
@@ -246,8 +404,8 @@ A profile can consist of payloads with different version numbers. For example, c
 			</array>
 			<key>pfm_description</key>
 			<string>If ReasonRequired is set to true, the user must provide a reason for needing admin rights.</string>
-			<key>pfm_description_reference</key>
-			<string>https://github.com/SAP/macOS-enterprise-privileges/tree/master/application_management</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/SAP/macOS-enterprise-privileges/wiki/Managing-Privileges</string>
 			<key>pfm_name</key>
 			<string>ReasonRequired</string>
 			<key>pfm_note</key>
@@ -256,6 +414,60 @@ A profile can consist of payloads with different version numbers. For example, c
 			<string>Reason Required</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2.0.0</string>
+			<key>pfm_conditionals</key>
+			<array>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_contains_any</key>
+							<array>
+								<true/>
+							</array>
+							<key>pfm_target</key>
+							<string>ReasonRequired</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+			<key>pfm_default</key>
+			<integer>250</integer>
+			<key>pfm_description</key>
+			<string>Specifies the maximum number of characters the user can enter as the reason for becoming an admin</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/SAP/macOS-enterprise-privileges/wiki/Managing-Privileges</string>
+			<key>pfm_exclude</key>
+			<array>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_present</key>
+							<false/>
+							<key>pfm_target</key>
+							<string>ReasonRequired</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+			<key>pfm_name</key>
+			<string>ReasonMaxLength</string>
+			<key>pfm_note</key>
+			<string>If a value &gt;= 250 is specified or if ReasonMaxLength is &lt;= ReasonMinLength, the value is set to default.</string>
+			<key>pfm_range_max</key>
+			<integer>250</integer>
+			<key>pfm_range_min</key>
+			<integer>1</integer>
+			<key>pfm_title</key>
+			<string>Reason Maximum Length</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+			<key>pfm_value_unit</key>
+			<string>characters</string>
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
@@ -280,8 +492,8 @@ A profile can consist of payloads with different version numbers. For example, c
 			<integer>10</integer>
 			<key>pfm_description</key>
 			<string>Specifies the minimum number of characters the user has to enter as the reason for becoming an admin.</string>
-			<key>pfm_description_reference</key>
-			<string>https://github.com/SAP/macOS-enterprise-privileges/tree/master/application_management</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/SAP/macOS-enterprise-privileges/wiki/Managing-Privileges</string>
 			<key>pfm_exclude</key>
 			<array>
 				<dict>
@@ -311,11 +523,209 @@ A profile can consist of payloads with different version numbers. For example, c
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
+			<string>2.0.0</string>
+			<key>pfm_conditionals</key>
+			<array>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_contains_any</key>
+							<array>
+								<true/>
+							</array>
+							<key>pfm_target</key>
+							<string>ReasonRequired</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+			<key>pfm_description</key>
+			<string>If ReasonRequired is set to true, this key allows to pre-define a list of possible reasons (for becoming an admin) the user can choose from</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/SAP/macOS-enterprise-privileges/wiki/Managing-Privileges</string>
+			<key>pfm_exclude</key>
+			<array>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_present</key>
+							<false/>
+							<key>pfm_target</key>
+							<string>ReasonRequired</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+			<key>pfm_name</key>
+			<string>ReasonPresetList</string>
+			<key>pfm_note</key>
+			<string>If no exact match is found, the default localization is used. If there is no default localization, the en localization is used. If there is no en localization, the dictionary is skipped</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_hidden</key>
+					<string>container</string>
+					<key>pfm_subkeys</key>
+					<array>
+						<dict>
+							<key>pfm_description</key>
+							<string>Localization (de)</string>
+							<key>pfm_name</key>
+							<string>de</string>
+							<key>pfm_title</key>
+							<string>Localization</string>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_value_placeholder</key>
+							<string>Deutsch</string>
+						</dict>
+						<dict>
+							<key>pfm_description</key>
+							<string>Localization (en)</string>
+							<key>pfm_name</key>
+							<string>en</string>
+							<key>pfm_title</key>
+							<string>Localization</string>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_value_placeholder</key>
+							<string>English</string>
+						</dict>
+						<dict>
+							<key>pfm_description</key>
+							<string>Localization (es)</string>
+							<key>pfm_name</key>
+							<string>es</string>
+							<key>pfm_title</key>
+							<string>Localization</string>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_value_placeholder</key>
+							<string>Spanish</string>
+						</dict>
+						<dict>
+							<key>pfm_description</key>
+							<string>Localization (it)</string>
+							<key>pfm_name</key>
+							<string>it</string>
+							<key>pfm_title</key>
+							<string>Localization</string>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_value_placeholder</key>
+							<string>Italian</string>
+						</dict>
+						<dict>
+							<key>pfm_description</key>
+							<string>Unlocalization</string>
+							<key>pfm_name</key>
+							<string>default</string>
+							<key>pfm_title</key>
+							<string>Unlocalized</string>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_value_placeholder</key>
+							<string>Unlocalized</string>
+						</dict>
+					</array>
+					<key>pfm_type</key>
+					<string>dictionary</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>Reason Preset List</string>
+			<key>pfm_type</key>
+			<string>array</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2.0.0</string>
+			<key>pfm_conditionals</key>
+			<array>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_contains_any</key>
+							<array>
+								<true/>
+							</array>
+							<key>pfm_target</key>
+							<string>ReasonRequired</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>If set to true, the text the user enters for a reason is roughly parsed for valid words</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/SAP/macOS-enterprise-privileges/wiki/Managing-Privileges</string>
+			<key>pfm_exclude</key>
+			<array>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_present</key>
+							<false/>
+							<key>pfm_target</key>
+							<string>ReasonRequired</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+			<key>pfm_name</key>
+			<string>ReasonCheckingEnabled</string>
+			<key>pfm_note</key>
+			<string>This feature is experimental and disabled by default. If you enable it, please check carefully that it works as expected in your environment</string>
+			<key>pfm_title</key>
+			<string>Reason Checking</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2.0.0</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>If set to true, the Settings button is no longer displayed in the app</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/SAP/macOS-enterprise-privileges/wiki/Managing-Privileges</string>
+			<key>pfm_name</key>
+			<string>HideSettingsButton</string>
+			<key>pfm_title</key>
+			<string>Hide Settings Button</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2.0.0</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>If set to true, the Settings menu item is no longer displayed in the Dock tile's menu</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/SAP/macOS-enterprise-privileges/wiki/Managing-Privileges</string>
+			<key>pfm_name</key>
+			<string>HideSettingsFromDockMenu</string>
+			<key>pfm_title</key>
+			<string>Hide Settings From Dock Menu</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
 			<string>1.5.0</string>
 			<key>pfm_description</key>
 			<string>Requires authentication before using Privileges.app. If set to true, the logged-in user is prompted to authenticate via Touch ID or by entering their account password.</string>
-			<key>pfm_description_reference</key>
-			<string>https://github.com/SAP/macOS-enterprise-privileges/tree/master/application_management</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/SAP/macOS-enterprise-privileges/wiki/Managing-Privileges</string>
 			<key>pfm_name</key>
 			<string>RequireAuthentication</string>
 			<key>pfm_title</key>
@@ -328,6 +738,8 @@ A profile can consist of payloads with different version numbers. For example, c
 			<string>1.5.0</string>
 			<key>pfm_description</key>
 			<string>Remote logging settings</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/SAP/macOS-enterprise-privileges/wiki/Managing-Privileges</string>
 			<key>pfm_name</key>
 			<string>RemoteLogging</string>
 			<key>pfm_subkeys</key>
@@ -571,6 +983,6 @@ A profile can consist of payloads with different version numbers. For example, c
 	<key>pfm_unique</key>
 	<true/>
 	<key>pfm_version</key>
-	<integer>3</integer>
+	<integer>4</integer>
 </dict>
 </plist>
