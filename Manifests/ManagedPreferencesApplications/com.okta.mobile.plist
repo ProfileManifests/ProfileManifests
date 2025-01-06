@@ -166,39 +166,12 @@
 			<key>pfm_note</key>
 			<string>By default (when no values are set), all device health checks are displayed in Okta Verify on user devices. 
 If the value contains 'Disabled', the Device Health page isn't displayed in Okta Verify</string>
-			<key>pfm_subkeys</key>
-			<array>
-				<dict>
-					<key>pfm_range_list</key>
-					<array>
-						<string>Disabled</string>
-						<string>HideOSUpdate</string>
-						<string>HideDiskEncryption</string>
-						<string>HideBiometrics</string>
-						<string>HidePassword</string>
-					</array>
-					<key>pfm_range_list_titles</key>
-					<array>
-						<string>Disabled</string>
-						<string>Hide OS Update</string>
-						<string>Hide Disk Encryption</string>
-						<string>Hide Biometrics </string>
-						<string>Hide Password</string>
-					</array>
-					<key>pfm_title</key>
-					<string>Device Health Options</string>
-					<key>pfm_type</key>
-					<string>string</string>
-					<key>pfm_value_unique</key>
-					<true/>
-				</dict>
-			</array>
 			<key>pfm_title</key>
 			<string>Device Health Options</string>
 			<key>pfm_type</key>
-			<string>array</string>
-			<key>pfm_type_input</key>
-			<string>boolean</string>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>HideDiskEncryption;HideBiometrics</string>
 		</dict>
 		<dict>
 			<key>pfm_default</key>
