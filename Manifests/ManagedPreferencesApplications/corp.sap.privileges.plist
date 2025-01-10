@@ -13,7 +13,7 @@
 	<key>pfm_format_version</key>
 	<integer>1</integer>
 	<key>pfm_last_modified</key>
-	<date>2024-12-28T07:28:59Z</date>
+	<date>2025-01-10T12:42:17Z</date>
 	<key>pfm_macos_min</key>
 	<string>10.12</string>
 	<key>pfm_platforms</key>
@@ -754,10 +754,12 @@ A profile can consist of payloads with different version numbers. For example, c
 					<key>pfm_range_list</key>
 					<array>
 						<string>syslog</string>
+						<string>webhook</string>
 					</array>
 					<key>pfm_range_list_titles</key>
 					<array>
 						<string>Syslog</string>
+						<string>Webhook</string>
 					</array>
 					<key>pfm_title</key>
 					<string>Server Type</string>
