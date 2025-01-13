@@ -12,8 +12,6 @@
 	<string>com.parallels.desktop.managedprefs</string>
 	<key>pfm_format_version</key>
 	<integer>1</integer>
-	<key>pfm_last_modified</key>
-	<date>2025-01-08T13:34:39Z</date>
 	<key>pfm_icon</key>
 	<data>
 	iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAERl
@@ -122,6 +120,8 @@
 	</data>
 	<key>pfm_interaction</key>
 	<string>exclusive</string>
+	<key>pfm_last_modified</key>
+	<date>2025-01-08T13:34:39Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -238,7 +238,7 @@
 			<key>pfm_description</key>
 			<string>Select a method for activating Parallels Desktop for Mac</string>
 			<key>pfm_documentation_url</key>
-            <string>https://docs.parallels.com/parallels-desktop-enterprise-administrators-guide/mass-deployment-of-parallels-desktop-and-virtual-machines/deploying-parallels-desktop-via-mdm-app-catalogs-using-configuration-profiles</string>
+			<string>https://docs.parallels.com/parallels-desktop-enterprise-administrators-guide/mass-deployment-of-parallels-desktop-and-virtual-machines/deploying-parallels-desktop-via-mdm-app-catalogs-using-configuration-profiles</string>
 			<key>pfm_name</key>
 			<string>ActivationExperience</string>
 			<key>pfm_range_list</key>
@@ -274,6 +274,8 @@
 			</array>
 			<key>pfm_description</key>
 			<string>Enter your 30-character license key:</string>
+			<key>pfm_documentation_url</key>
+			<string>https://docs.parallels.com/parallels-desktop-licensing-guide/managing-subscriptions-licences-and-seats/viewing-subscriptions-and-subscription-details</string>
 			<key>pfm_exclude</key>
 			<array>
 				<dict>
@@ -290,20 +292,18 @@
 					</array>
 				</dict>
 			</array>
+			<key>pfm_format</key>
+			<string>^[0-9A-Za-z]{6}-[0-9A-Za-z]{6}-[0-9A-Za-z]{6}-[0-9A-Za-z]{6}-[0-9A-Za-z]{6}$</string>
 			<key>pfm_name</key>
 			<string>LicenseKey</string>
-			<key>pfm_documentation_url</key>
-			<string>https://docs.parallels.com/parallels-desktop-licensing-guide/managing-subscriptions-licences-and-seats/viewing-subscriptions-and-subscription-details</string>
-			<key>pfm_format</key>
-            <string>^[0-9A-Za-z]{6}-[0-9A-Za-z]{6}-[0-9A-Za-z]{6}-[0-9A-Za-z]{6}-[0-9A-Za-z]{6}$</string>
-			<key>pfm_value_placeholder</key>
-			<string>XXXXXX-XXXXXX-XXXXXX-XXXXXX-XXXXXX</string>
 			<key>pfm_require</key>
 			<string>always</string>
 			<key>pfm_title</key>
 			<string>License Key</string>
 			<key>pfm_type</key>
 			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>XXXXXX-XXXXXX-XXXXXX-XXXXXX-XXXXXX</string>
 		</dict>
 	</array>
 	<key>pfm_targets</key>
@@ -313,7 +313,7 @@
 	<key>pfm_title</key>
 	<string>Parallels Desktop for Mac</string>
 	<key>pfm_unique</key>
-	<true />
+	<true/>
 	<key>pfm_version</key>
 	<integer>1</integer>
 </dict>
