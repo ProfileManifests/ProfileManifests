@@ -844,7 +844,7 @@
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
-		<key>com.parallels.dektop.managedprefs</key>
+		<key>com.parallels.desktop.managedprefs</key>
 		<dict>
 			<key>modified</key>
 			<date>2025-01-08T13:34:39Z</date>
@@ -2319,6 +2319,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2025-01-10T12:45:50Z</date>
+	<date>2025-01-13T09:58:28Z</date>
 </dict>
 </plist>
