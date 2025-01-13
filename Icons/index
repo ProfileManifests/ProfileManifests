@@ -273,6 +273,13 @@
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.crowdstrike.falcon.png</string>
 		</dict>
+		<key>com.docker.config</key>
+		<dict>
+			<key>hash</key>
+			<string>616f5b55d742801f43522d96d79470a3</string>
+			<key>path</key>
+			<string>Icons/ManagedPreferencesApplications/com.docker.config.png</string>
+		</dict>
 		<key>com.fxfactory.FxFactory</key>
 		<dict>
 			<key>hash</key>
@@ -328,6 +335,13 @@
 			<string>229c06fecc8127d74d3607ad7c70ef5f</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.google.santa.png</string>
+		</dict>
+		<key>com.grammarly.ProjectLlama</key>
+		<dict>
+			<key>hash</key>
+			<string>dd00051f20031d2287fbea0fe691ecff</string>
+			<key>path</key>
+			<string>Icons/ManagedPreferencesApplications/com.grammarly.ProjectLlama.png</string>
 		</dict>
 		<key>com.hjuutilainen.MunkiAdmin</key>
 		<dict>
@@ -1489,6 +1503,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2025-01-08T11:07:39Z</date>
+	<date>2025-01-11T20:10:00Z</date>
 </dict>
 </plist>

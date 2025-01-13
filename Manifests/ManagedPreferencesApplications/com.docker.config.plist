@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>pfm_app_url</key>
+	<string>https://www.docker.com/products/docker-desktop/</string>
+	<key>pfm_description</key>
+	<string>Use this section to define settings for Docker Desktop</string>
+	<key>pfm_documentation_url</key>
+	<string>https://docs.docker.com/security/for-admins/enforce-sign-in/methods/#configuration-profiles-method-mac-only</string>
+	<key>pfm_domain</key>
+	<string>com.docker.config</string>
+	<key>pfm_format_version</key>
+	<integer>1</integer>
+	<key>pfm_icon</key>
+	<data>
+	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
+	</data>
+	<key>pfm_last_modified</key>
+	<date>2025-01-08T19:38:23Z</date>
+	<key>pfm_platforms</key>
+	<array>
+		<string>macOS</string>
+	</array>
+	<key>pfm_subkeys</key>
+	<array>
+		<dict>
+			<key>pfm_default</key>
+			<string>Configures Docker Desktop settings</string>
+			<key>pfm_description</key>
+			<string>Description of the payload.</string>
+			<key>pfm_description_reference</key>
+			<string>Optional. A human-readable description of this payload. This description is shown on the Detail screen.</string>
+			<key>pfm_name</key>
+			<string>PayloadDescription</string>
+			<key>pfm_title</key>
+			<string>Payload Description</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Docker Desktop</string>
+			<key>pfm_description</key>
+			<string>Name of the payload.</string>
+			<key>pfm_description_reference</key>
+			<string>A human-readable name for the profile payload. This name is displayed on the Detail screen. It does not have to be unique.</string>
+			<key>pfm_name</key>
+			<string>PayloadDisplayName</string>
+			<key>pfm_require</key>
+			<string>always</string>
+			<key>pfm_title</key>
+			<string>Payload Display Name</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>com.docker.config</string>
+			<key>pfm_description</key>
+			<string>A unique identifier for the payload, dot-delimited. Usually root PayloadIdentifier+subidentifier</string>
+			<key>pfm_description_reference</key>
+			<string>A reverse-DNS-style identifier for the specific payload. It is usually the same identifier as the root-level PayloadIdentifier value with an additional component appended.</string>
+			<key>pfm_name</key>
+			<string>PayloadIdentifier</string>
+			<key>pfm_require</key>
+			<string>always</string>
+			<key>pfm_title</key>
+			<string>Payload Identifier</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>com.docker.config</string>
+			<key>pfm_description</key>
+			<string>The type of the payload, a reverse dns string.</string>
+			<key>pfm_description_reference</key>
+			<string>The payload type.</string>
+			<key>pfm_name</key>
+			<string>PayloadType</string>
+			<key>pfm_require</key>
+			<string>always</string>
+			<key>pfm_title</key>
+			<string>Payload Type</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Unique identifier for the payload (format 01234567-89AB-CDEF-0123-456789ABCDEF)</string>
+			<key>pfm_description_reference</key>
+			<string>A globally unique identifier for the payload. The actual content is unimportant, but it must be globally unique. In macOS, you can use uuidgen to generate reasonable UUIDs.</string>
+			<key>pfm_format</key>
+			<string>^[0-9A-Za-z]{8}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{12}$</string>
+			<key>pfm_name</key>
+			<string>PayloadUUID</string>
+			<key>pfm_require</key>
+			<string>always</string>
+			<key>pfm_title</key>
+			<string>Payload UUID</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<integer>1</integer>
+			<key>pfm_description</key>
+			<string>The version of the whole configuration profile.</string>
+			<key>pfm_description_reference</key>
+			<string>The version number of the individual payload.
+A profile can consist of payloads with different version numbers. For example, changes to the VPN software in iOS might introduce a new payload version to support additional features, but Mail payload versions would not necessarily change in the same release.</string>
+			<key>pfm_name</key>
+			<string>PayloadVersion</string>
+			<key>pfm_require</key>
+			<string>always</string>
+			<key>pfm_title</key>
+			<string>Payload Version</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>4.36</string>
+			<key>pfm_description</key>
+			<string>Add your organization(s) name</string>
+			<key>pfm_documentation_url</key>
+			<string>https://docs.docker.com/security/for-admins/enforce-sign-in/methods/#configuration-profiles-method-mac-only</string>
+			<key>pfm_name</key>
+			<string>allowedOrgs</string>
+			<key>pfm_note</key>
+			<string>It can contain either the name of a single organization or a list of organization names, separated by a semicolon</string>
+			<key>pfm_title</key>
+			<string>Allowed Organizations</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>first_org;second_org</string>
+		</dict>
+	</array>
+	<key>pfm_targets</key>
+	<array>
+		<string>system</string>
+	</array>
+	<key>pfm_title</key>
+	<string>Docker Desktop</string>
+	<key>pfm_unique</key>
+	<true/>
+	<key>pfm_version</key>
+	<integer>1</integer>
+</dict>
+</plist>
