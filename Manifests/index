@@ -844,6 +844,15 @@
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
+		<key>com.parallels.dektop.managedprefs</key>
+		<dict>
+			<key>modified</key>
+			<date>2025-01-08T13:34:39Z</date>
+			<key>path</key>
+			<string>Manifests/ManagedPreferencesApplications/com.parallels.dektop.managedprefs.plist</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 		<key>com.pratikkumar.airserver-mac</key>
 		<dict>
 			<key>modified</key>

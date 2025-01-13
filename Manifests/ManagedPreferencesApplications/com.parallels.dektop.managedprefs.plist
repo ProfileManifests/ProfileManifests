@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>pfm_app_url</key>
+	<string>https://www.parallels.com/</string>
+	<key>pfm_description</key>
+	<string>Parallels Desktop Settings</string>
+	<key>pfm_documentation_url</key>
+	<string>https://docs.parallels.com/parallels-desktop-enterprise-administrators-guide/mass-deployment-of-parallels-desktop-and-virtual-machines/deploying-parallels-desktop-via-mdm-app-catalogs-using-configuration-profiles</string>
+	<key>pfm_domain</key>
+	<string>com.parallels.desktop.managedprefs</string>
+	<key>pfm_format_version</key>
+	<integer>1</integer>
+	<key>pfm_icon</key>
+	<data>
+	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
+	</data>
+	<key>pfm_interaction</key>
+	<string>exclusive</string>
+	<key>pfm_last_modified</key>
+	<date>2025-01-08T13:34:39Z</date>
+	<key>pfm_platforms</key>
+	<array>
+		<string>macOS</string>
+	</array>
+	<key>pfm_subkeys</key>
+	<array>
+		<dict>
+			<key>pfm_default</key>
+			<string>Parallels Desktop Managed Preferences </string>
+			<key>pfm_description</key>
+			<string>The human-readable description of this payload. This description appears on
+				the Detail screen.</string>
+			<key>pfm_name</key>
+			<string>PayloadDescription</string>
+			<key>pfm_title</key>
+			<string>Payload Description</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Parallels Desktop for Mac</string>
+			<key>pfm_description</key>
+			<string>The human-readable name for the profile payload. The name appears on the
+				Detail screen and doesn't need to be unique.</string>
+			<key>pfm_name</key>
+			<string>PayloadDisplayName</string>
+			<key>pfm_require</key>
+			<string>always</string>
+			<key>pfm_title</key>
+			<string>Payload Display Name</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>com.parallels.desktop.managedprefs</string>
+			<key>pfm_description</key>
+			<string>The reverse-DNS-style identifier for the payload. This identifier is usually
+				the same as the TopLevel value, with an additional appended component. This
+				string must be unique within the profile. During a profile replacement, the
+				system updates payloads with the same 'PayloadIdentifier' and 'PayloadUUID' in
+				the old and new profiles.</string>
+			<key>pfm_name</key>
+			<string>PayloadIdentifier</string>
+			<key>pfm_require</key>
+			<string>always</string>
+			<key>pfm_title</key>
+			<string>Payload Identifier</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>com.parallels.desktop.managedprefs</string>
+			<key>pfm_description</key>
+			<string>The payload type, which each payload domain's reference page specifies.</string>
+			<key>pfm_name</key>
+			<string>PayloadType</string>
+			<key>pfm_require</key>
+			<string>always</string>
+			<key>pfm_title</key>
+			<string>Payload Type</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string></string>
+			<key>pfm_description</key>
+			<string>The globally unique identifier for the payload. The actual content is
+				unimportant, but must be globally unique. In macOS, use 'uuidgen' to generate
+				UUIDs. During a profile replacement, the system updates payloads with the same
+				'PayloadIdentifier' and 'PayloadUUID' in the old and new profiles.</string>
+			<key>pfm_format</key>
+			<string>
+				^[0-9A-Za-z]{8}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{12}$</string>
+			<key>pfm_name</key>
+			<string>PayloadUUID</string>
+			<key>pfm_require</key>
+			<string>always</string>
+			<key>pfm_title</key>
+			<string>Payload UUID</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<integer>1</integer>
+			<key>pfm_description</key>
+			<string>The version of this specific payload.</string>
+			<key>pfm_name</key>
+			<string>PayloadVersion</string>
+			<key>pfm_require</key>
+			<string>always</string>
+			<key>pfm_title</key>
+			<string>Payload Version</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Parallels International GmBH</string>
+			<key>pfm_name</key>
+			<string>PayloadOrganization</string>
+			<key>pfm_title</key>
+			<string>Payload Organization</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>SSO</string>
+			<key>pfm_description</key>
+			<string>Select a method for activating Parallels Desktop for Mac</string>
+			<key>pfm_documentation_url</key>
+			<string>https://docs.parallels.com/parallels-desktop-enterprise-administrators-guide/mass-deployment-of-parallels-desktop-and-virtual-machines/deploying-parallels-desktop-via-mdm-app-catalogs-using-configuration-profiles</string>
+			<key>pfm_name</key>
+			<string>ActivationExperience</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>License Key</string>
+				<string>SSO</string>
+			</array>
+			<key>pfm_require</key>
+			<string>always</string>
+			<key>pfm_title</key>
+			<string>Activation Experience</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_conditionals</key>
+			<array>
+				<dict>
+					<key>pfm_require</key>
+					<string>always</string>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_range_list</key>
+							<array>
+								<string>License Key</string>
+							</array>
+							<key>pfm_target</key>
+							<string>ActivationExperience</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+			<key>pfm_description</key>
+			<string>Enter your 30-character license key:</string>
+			<key>pfm_documentation_url</key>
+			<string>https://docs.parallels.com/parallels-desktop-licensing-guide/managing-subscriptions-licences-and-seats/viewing-subscriptions-and-subscription-details</string>
+			<key>pfm_exclude</key>
+			<array>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_n_range_list</key>
+							<array>
+								<string>License Key</string>
+							</array>
+							<key>pfm_target</key>
+							<string>ActivationExperience</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+			<key>pfm_format</key>
+			<string>^[0-9A-Za-z]{6}-[0-9A-Za-z]{6}-[0-9A-Za-z]{6}-[0-9A-Za-z]{6}-[0-9A-Za-z]{6}$</string>
+			<key>pfm_name</key>
+			<string>LicenseKey</string>
+			<key>pfm_require</key>
+			<string>always</string>
+			<key>pfm_title</key>
+			<string>License Key</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>XXXXXX-XXXXXX-XXXXXX-XXXXXX-XXXXXX</string>
+		</dict>
+	</array>
+	<key>pfm_targets</key>
+	<array>
+		<string>system</string>
+	</array>
+	<key>pfm_title</key>
+	<string>Parallels Desktop for Mac</string>
+	<key>pfm_unique</key>
+	<true/>
+	<key>pfm_version</key>
+	<integer>1</integer>
+</dict>
+</plist>
