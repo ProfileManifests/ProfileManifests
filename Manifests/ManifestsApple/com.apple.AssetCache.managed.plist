@@ -11,7 +11,7 @@
 	<key>pfm_interaction</key>
 	<string>exclusive</string>
 	<key>pfm_last_modified</key>
-	<date>2024-05-16T08:07:50Z</date>
+	<date>2025-01-15T11:02:30Z</date>
 	<key>pfm_macos_min</key>
 	<string>10.13.4</string>
 	<key>pfm_platforms</key>
@@ -173,6 +173,8 @@ Availability: Available in macOS 10.13.4 and later.</string>
 			<key>pfm_conditionals</key>
 			<array>
 				<dict>
+					<key>pfm_require</key>
+					<string>always</string>
 					<key>pfm_target_conditions</key>
 					<array>
 						<dict>
@@ -555,6 +557,8 @@ Availability: Available in macOS 10.13.4 and later.</string>
 			<key>pfm_conditionals</key>
 			<array>
 				<dict>
+					<key>pfm_require</key>
+					<string>always</string>
 					<key>pfm_target_conditions</key>
 					<array>
 						<dict>
@@ -648,6 +652,8 @@ Available in macOS 10.15 and later.</string>
 			<key>pfm_conditionals</key>
 			<array>
 				<dict>
+					<key>pfm_require</key>
+					<string>always</string>
 					<key>pfm_target_conditions</key>
 					<array>
 						<dict>

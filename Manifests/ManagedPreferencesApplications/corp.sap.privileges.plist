@@ -13,7 +13,7 @@
 	<key>pfm_format_version</key>
 	<integer>1</integer>
 	<key>pfm_last_modified</key>
-	<date>2025-01-10T12:42:17Z</date>
+	<date>2025-01-15T11:02:30Z</date>
 	<key>pfm_macos_min</key>
 	<string>10.12</string>
 	<key>pfm_platforms</key>
@@ -391,6 +391,8 @@ A profile can consist of payloads with different version numbers. For example, c
 			<key>pfm_conditionals</key>
 			<array>
 				<dict>
+					<key>pfm_require</key>
+					<string>always</string>
 					<key>pfm_target_conditions</key>
 					<array>
 						<dict>
@@ -497,6 +499,8 @@ A profile can consist of payloads with different version numbers. For example, c
 			<key>pfm_exclude</key>
 			<array>
 				<dict>
+					<key>pfm_require</key>
+					<string>always</string>
 					<key>pfm_target_conditions</key>
 					<array>
 						<dict>
@@ -821,6 +825,8 @@ A profile can consist of payloads with different version numbers. For example, c
 							<key>pfm_conditionals</key>
 							<array>
 								<dict>
+									<key>pfm_require</key>
+									<string>always</string>
 									<key>pfm_target_conditions</key>
 									<array>
 										<dict>

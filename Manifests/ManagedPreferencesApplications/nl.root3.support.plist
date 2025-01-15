@@ -13,7 +13,7 @@
 	<key>pfm_format_version</key>
 	<integer>1</integer>
 	<key>pfm_last_modified</key>
-	<date>2024-07-29T11:57:57Z</date>
+	<date>2025-01-15T11:02:30Z</date>
 	<key>pfm_macos_min</key>
 	<string>11.0.1</string>
 	<key>pfm_platforms</key>
@@ -744,6 +744,8 @@
 			<key>pfm_conditionals</key>
 			<array>
 				<dict>
+					<key>pfm_require</key>
+					<string>always</string>
 					<key>pfm_target_conditions</key>
 					<array>
 						<dict>
@@ -838,6 +840,8 @@ Command: Zsh command or path to a script. Be aware that this will be executed as
 			<key>pfm_conditionals</key>
 			<array>
 				<dict>
+					<key>pfm_require</key>
+					<string>always</string>
 					<key>pfm_target_conditions</key>
 					<array>
 						<dict>
@@ -932,6 +936,8 @@ Command: Zsh command or path to a script. Be aware that this will be executed as
 			<key>pfm_conditionals</key>
 			<array>
 				<dict>
+					<key>pfm_require</key>
+					<string>always</string>
 					<key>pfm_target_conditions</key>
 					<array>
 						<dict>
@@ -1028,6 +1034,8 @@ Command: Zsh command or path to a script. Be aware that this will be executed as
 			<key>pfm_conditionals</key>
 			<array>
 				<dict>
+					<key>pfm_require</key>
+					<string>always</string>
 					<key>pfm_target_conditions</key>
 					<array>
 						<dict>
@@ -1122,6 +1130,8 @@ Command: Zsh command or path to a script. Be aware that this will be executed as
 			<key>pfm_conditionals</key>
 			<array>
 				<dict>
+					<key>pfm_require</key>
+					<string>always</string>
 					<key>pfm_target_conditions</key>
 					<array>
 						<dict>
@@ -1216,6 +1226,8 @@ Command: Zsh command or path to a script. Be aware that this will be executed as
 			<key>pfm_conditionals</key>
 			<array>
 				<dict>
+					<key>pfm_require</key>
+					<string>always</string>
 					<key>pfm_target_conditions</key>
 					<array>
 						<dict>
