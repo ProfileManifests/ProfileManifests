@@ -115,7 +115,7 @@
 		<key>com.apple.finder</key>
 		<dict>
 			<key>modified</key>
-			<date>2023-08-21T10:35:00Z</date>
+			<date>2025-01-15T11:02:30Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApple/com.apple.finder.plist</string>
 			<key>version</key>
@@ -325,7 +325,7 @@
 		<key>com.agilebits.onepassword7</key>
 		<dict>
 			<key>modified</key>
-			<date>2024-02-01T10:06:10Z</date>
+			<date>2025-01-15T11:02:30Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.agilebits.onepassword7.plist</string>
 			<key>version</key>
@@ -442,7 +442,7 @@
 		<key>com.brave.Browser</key>
 		<dict>
 			<key>modified</key>
-			<date>2024-12-18T15:25:37Z</date>
+			<date>2025-01-15T11:02:30Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.brave.Browser.plist</string>
 			<key>version</key>
@@ -541,7 +541,7 @@
 		<key>com.google.Chrome</key>
 		<dict>
 			<key>modified</key>
-			<date>2024-09-04T15:50:02Z</date>
+			<date>2025-01-15T11:02:30Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.google.Chrome.plist</string>
 			<key>version</key>
@@ -568,7 +568,7 @@
 		<key>com.google.santa</key>
 		<dict>
 			<key>modified</key>
-			<date>2023-08-21T10:35:00Z</date>
+			<date>2025-01-15T11:02:30Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.google.santa.plist</string>
 			<key>version</key>
@@ -595,7 +595,7 @@
 		<key>com.hjuutilainen.MunkiAdmin</key>
 		<dict>
 			<key>modified</key>
-			<date>2023-08-21T10:35:00Z</date>
+			<date>2025-01-15T11:02:30Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.hjuutilainen.MunkiAdmin.plist</string>
 			<key>version</key>
@@ -982,7 +982,7 @@
 		<key>corp.sap.privileges</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-01-10T12:42:17Z</date>
+			<date>2025-01-15T11:02:30Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/corp.sap.privileges.plist</string>
 			<key>version</key>
@@ -1108,7 +1108,7 @@
 		<key>nl.root3.support</key>
 		<dict>
 			<key>modified</key>
-			<date>2024-07-29T11:57:57Z</date>
+			<date>2025-01-15T11:02:30Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/nl.root3.support.plist</string>
 			<key>version</key>
@@ -1294,7 +1294,7 @@
 		<key>com.apple.AssetCache.managed</key>
 		<dict>
 			<key>modified</key>
-			<date>2024-05-16T08:07:50Z</date>
+			<date>2025-01-15T11:02:30Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.AssetCache.managed.plist</string>
 			<key>version</key>
@@ -1654,7 +1654,7 @@
 		<key>com.apple.dnsSettings.managed</key>
 		<dict>
 			<key>modified</key>
-			<date>2024-09-12T10:00:38Z</date>
+			<date>2025-01-15T11:02:30Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.dnsSettings.managed.plist</string>
 			<key>version</key>
@@ -1708,7 +1708,7 @@
 		<key>com.apple.extensiblesso</key>
 		<dict>
 			<key>modified</key>
-			<date>2024-09-12T09:07:25Z</date>
+			<date>2025-01-15T11:02:30Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.extensiblesso.plist</string>
 			<key>version</key>
@@ -2337,6 +2337,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2025-01-13T15:47:53Z</date>
+	<date>2025-01-15T11:07:58Z</date>
 </dict>
 </plist>
