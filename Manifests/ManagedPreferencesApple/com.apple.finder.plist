@@ -9,7 +9,7 @@
 	<key>pfm_format_version</key>
 	<integer>1</integer>
 	<key>pfm_last_modified</key>
-	<date>2025-01-15T11:02:30Z</date>
+	<date>2025-01-15T16:36:56Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -182,6 +182,8 @@
 			<key>pfm_conditionals</key>
 			<array>
 				<dict>
+					<key>pfm_require</key>
+					<string>always</string>
 					<key>pfm_target_conditions</key>
 					<array>
 						<dict>
@@ -202,8 +204,6 @@
 			<key>pfm_exclude</key>
 			<array>
 				<dict>
-					<key>pfm_require</key>
-					<string>always</string>
 					<key>pfm_target_conditions</key>
 					<array>
 						<dict>
