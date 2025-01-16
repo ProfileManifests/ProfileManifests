@@ -11,7 +11,7 @@
 	<key>pfm_format_version</key>
 	<integer>1</integer>
 	<key>pfm_last_modified</key>
-	<date>2025-01-16T08:17:10Z</date>
+	<date>2025-01-16T08:51:33Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -631,6 +631,8 @@ Off: your device is not protected against this type of threat and nothing is log
 					<string>integer</string>
 					<key>pfm_value_unit</key>
 					<string>days</string>
+					<key>pfmx_comment</key>
+					<string>While this property is documented as String-typed on the web, it is defined as a Number in the official JSON schema.</string>
 				</dict>
 				<dict>
 					<key>pfm_app_min</key>
@@ -653,6 +655,8 @@ Off: your device is not protected against this type of threat and nothing is log
 					<string>Scan history size</string>
 					<key>pfm_type</key>
 					<string>integer</string>
+					<key>pfmx_comment</key>
+					<string>While this property is documented as String-typed on the web, it is defined as a Number in the official JSON schema.</string>
 				</dict>
 				<dict>
 					<key>pfm_default</key>
