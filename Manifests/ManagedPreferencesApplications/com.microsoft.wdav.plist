@@ -11,7 +11,7 @@
 	<key>pfm_format_version</key>
 	<integer>1</integer>
 	<key>pfm_last_modified</key>
-	<date>2024-09-18T17:57:55Z</date>
+	<date>2025-01-16T08:17:10Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -22,7 +22,7 @@
 			<key>pfm_default</key>
 			<string>Configures Microsoft Defender for Endpoint settings</string>
 			<key>pfm_description</key>
-			<string>Description of the payload</string>
+			<string>The human-readable description of this payload. This description appears on the Detail screen.</string>
 			<key>pfm_name</key>
 			<string>PayloadDescription</string>
 			<key>pfm_title</key>
@@ -34,7 +34,7 @@
 			<key>pfm_default</key>
 			<string>Microsoft Defender for Endpoint</string>
 			<key>pfm_description</key>
-			<string>Name of the payload</string>
+			<string>The human-readable name for the profile payload. The name appears on the Detail screen and doesn't need to be unique.</string>
 			<key>pfm_name</key>
 			<string>PayloadDisplayName</string>
 			<key>pfm_require</key>
@@ -63,7 +63,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<string>com.microsoft.wdav</string>
 			<key>pfm_description</key>
-			<string>The type of the payload, a reverse dns string</string>
+			<string>The payload type, which each payload domain's reference page specifies.</string>
 			<key>pfm_name</key>
 			<string>PayloadType</string>
 			<key>pfm_require</key>
@@ -94,7 +94,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<integer>1</integer>
 			<key>pfm_description</key>
-			<string>The version of the whole configuration profile.</string>
+			<string>The version of this specific payload.</string>
 			<key>pfm_name</key>
 			<string>PayloadVersion</string>
 			<key>pfm_range_list</key>
@@ -133,7 +133,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<key>pfm_app_min</key>
 					<string>101.10.72</string>
 					<key>pfm_default</key>
-					<string>real_time</string>
+					<string>realTime</string>
 					<key>pfm_description</key>
 					<string>Enforcement level of antivirus engine. On-demand: Files are scanned only on demand; Passive: Same as on-demand, but also security intelligence updates are enabled, and the status menu icon is hidden; Real-time: Scan files as they are accessed.</string>
 					<key>pfm_description_reference</key>
@@ -174,7 +174,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<key>pfm_default</key>
 					<false/>
 					<key>pfm_description</key>
-					<string>When this feature is enabled, Defender for Endpoint will compute hashes for files it scans.</string>
+					<string>Enables or disables file hash computation feature. When this feature is enabled Defender will compute hashes for files it scans. This will help in improving the accuracy of Custom Indicator matches. However, enabling EnableFileHashComputation may impact device performance.</string>
 					<key>pfm_description_reference</key>
 					<string>Enables or disables file hash computation feature. When this feature is enabled, Defender for Endpoint will compute hashes for files it scans. Note that enabling this feature might impact device performance. For more details, please refer to https://docs.microsoft.com/en-us/microsoft-365/security/defender-endpoint/indicator-file.</string>
 					<key>pfm_documentation_url</key>
@@ -226,7 +226,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<key>pfm_default</key>
 					<integer>2</integer>
 					<key>pfm_description</key>
-					<string>The number of threads used to perform the scan.</string>
+					<string>Specifies the degree of parallelism for on-demand scans. This corresponds to the number of threads used to perform the scan and impacts the CPU usage, as well as the duration of the on-demand scan.</string>
 					<key>pfm_description_reference</key>
 					<string>Specifies the degree of parallelism for on-demand scans. This corresponds to the number of threads used to perform the scan and impacts the CPU usage, as well as the duration of the on-demand scan.</string>
 					<key>pfm_documentation_url</key>
@@ -334,6 +334,8 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									</array>
 									<key>pfm_name</key>
 									<string>path</string>
+									<key>pfm_range_min</key>
+									<integer>1</integer>
 									<key>pfm_title</key>
 									<string>Path</string>
 									<key>pfm_type</key>
@@ -394,6 +396,8 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									</array>
 									<key>pfm_name</key>
 									<string>extension</string>
+									<key>pfm_range_min</key>
+									<integer>1</integer>
 									<key>pfm_title</key>
 									<string>File extension</string>
 									<key>pfm_type</key>
@@ -422,6 +426,8 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									</array>
 									<key>pfm_name</key>
 									<string>name</string>
+									<key>pfm_range_min</key>
+									<integer>1</integer>
 									<key>pfm_title</key>
 									<string>Process name</string>
 									<key>pfm_type</key>
@@ -606,9 +612,9 @@ Off: your device is not protected against this type of threat and nothing is log
 					<key>pfm_app_min</key>
 					<string>101.07.23</string>
 					<key>pfm_default</key>
-					<string>90</string>
+					<integer>90</integer>
 					<key>pfm_description</key>
-					<string>The number of days (1-180) that results are retained in the scan history on the device.</string>
+					<string>Specify the number of days that results are retained in the scan history on the device. Old scan results are removed from the history. Old quarantined files that are also removed from the disk.</string>
 					<key>pfm_description_reference</key>
 					<string>Specify the number of days that results are retained in the scan history on the device. Old scan results are removed from the history. Old quarantined files that are also removed from the disk.</string>
 					<key>pfm_documentation_url</key>
@@ -620,9 +626,9 @@ Off: your device is not protected against this type of threat and nothing is log
 					<key>pfm_range_min</key>
 					<integer>1</integer>
 					<key>pfm_title</key>
-					<string>Antivirus scan history retention</string>
+					<string>Scan results retention</string>
 					<key>pfm_type</key>
-					<string>string</string>
+					<string>integer</string>
 					<key>pfm_value_unit</key>
 					<string>days</string>
 				</dict>
@@ -630,9 +636,9 @@ Off: your device is not protected against this type of threat and nothing is log
 					<key>pfm_app_min</key>
 					<string>101.07.23</string>
 					<key>pfm_default</key>
-					<string>10000</string>
+					<integer>10000</integer>
 					<key>pfm_description</key>
-					<string>The maximum number of entries to keep in the scan history.</string>
+					<string>Specify the maximum number of entries to keep in the scan history. Entries include all on-demand scans performed in the past and all antivirus detections.</string>
 					<key>pfm_description_reference</key>
 					<string>Specify the maximum number of entries to keep in the scan history. Entries include all on-demand scans performed in the past and all antivirus detections.</string>
 					<key>pfm_documentation_url</key>
@@ -644,9 +650,9 @@ Off: your device is not protected against this type of threat and nothing is log
 					<key>pfm_range_min</key>
 					<integer>5000</integer>
 					<key>pfm_title</key>
-					<string>Maximum number of items in the antivirus scan history</string>
+					<string>Scan history size</string>
 					<key>pfm_type</key>
-					<string>string</string>
+					<string>integer</string>
 				</dict>
 				<dict>
 					<key>pfm_default</key>
@@ -930,6 +936,8 @@ The GROUP tag, tags the device with the specified value. The tag is reflected in
 					<string>tags</string>
 					<key>pfm_note</key>
 					<string>Only one value per tag type can be set. Type of tags are unique, and should not be repeated in the same configuration profile.</string>
+					<key>pfm_range_max</key>
+					<integer>1</integer>
 					<key>pfm_subkeys</key>
 					<array>
 						<dict>
@@ -1527,6 +1535,16 @@ The execute permission only refers to execution of Mach-O binaries. It does not 
 									<key>pfm_type</key>
 									<string>string</string>
 								</dict>
+								<dict>
+									<key>pfm_description</key>
+									<string>Bit flags to control the type of exclusion(s) to apply.  EPS=0x1, AX=0x2.</string>
+									<key>pfm_name</key>
+									<string>flag</string>
+									<key>pfm_title</key>
+									<string>Flag</string>
+									<key>pfm_type</key>
+									<string>integer</string>
+								</dict>
 							</array>
 							<key>pfm_title</key>
 							<string>Exclusion</string>
@@ -1632,6 +1650,41 @@ The execute permission only refers to execution of Mach-O binaries. It does not 
 					<string>Check for definitions update before initiating a scheduled scan</string>
 					<key>pfm_name</key>
 					<string>dailyConfiguration</string>
+					<key>pfm_subkeys</key>
+					<array>
+						<dict>
+							<key>pfm_default</key>
+							<integer>0</integer>
+							<key>pfm_description</key>
+							<string>Specifies the time of day, as the number of minutes after midnight, to perform a daily quick scan.</string>
+							<key>pfm_name</key>
+							<string>timeOfDay</string>
+							<key>pfm_range_max</key>
+							<integer>1440</integer>
+							<key>pfm_range_min</key>
+							<integer>0</integer>
+							<key>pfm_title</key>
+							<string>Time of day</string>
+							<key>pfm_type</key>
+							<string>integer</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<integer>0</integer>
+							<key>pfm_description</key>
+							<string>Specify how many hours should elapse before the next hourly quick scan. 0 indicates no hourly quick scan. 1 indicates a scan every hour. 24 indicates a scan once a day.</string>
+							<key>pfm_name</key>
+							<string>interval</string>
+							<key>pfm_range_max</key>
+							<integer>24</integer>
+							<key>pfm_range_min</key>
+							<integer>0</integer>
+							<key>pfm_title</key>
+							<string>Start time</string>
+							<key>pfm_type</key>
+							<string>integer</string>
+						</dict>
+					</array>
 					<key>pfm_title</key>
 					<string>Daily and Hourly quick scan configuration</string>
 					<key>pfm_type</key>
@@ -1697,11 +1750,59 @@ The execute permission only refers to execution of Mach-O binaries. It does not 
 							<key>pfm_type</key>
 							<string>string</string>
 						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<integer>0</integer>
+							<key>pfm_description</key>
+							<string>Specifies the day of the week to perform a weekly scan. 0 indicates never. 1-7 indicates Sunday - Saturday. 8 indicates every day.</string>
+							<key>pfm_name</key>
+							<string>dayOfWeek</string>
+							<key>pfm_range_max</key>
+							<integer>8</integer>
+							<key>pfm_range_min</key>
+							<integer>0</integer>
+							<key>pfm_title</key>
+							<string>Day of week</string>
+							<key>pfm_type</key>
+							<string>integer</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<integer>0</integer>
+							<key>pfm_description</key>
+							<string>Specifies the time of day, as the number of minutes after midnight, to perform a weekly scan.</string>
+							<key>pfm_name</key>
+							<string>timeOfDay</string>
+							<key>pfm_range_max</key>
+							<integer>1440</integer>
+							<key>pfm_range_min</key>
+							<integer>0</integer>
+							<key>pfm_title</key>
+							<string>Time of day</string>
+							<key>pfm_type</key>
+							<string>integer</string>
+						</dict>
 					</array>
 					<key>pfm_title</key>
 					<string>Weekly scheduled scan configuration</string>
 					<key>pfm_type</key>
 					<string>dictionary</string>
+				</dict>
+				<dict>
+					<key>pfm_default</key>
+					<integer>0</integer>
+					<key>pfm_description</key>
+					<string>Randomize the start time of a daily and weekly scheduled scan to any interval from 0 to 23 hours.</string>
+					<key>pfm_name</key>
+					<string>randomizeScanStartTime</string>
+					<key>pfm_range_max</key>
+					<integer>23</integer>
+					<key>pfm_range_min</key>
+					<integer>0</integer>
+					<key>pfm_title</key>
+					<string>Randomize scheduled scan start time</string>
+					<key>pfm_type</key>
+					<string>integer</string>
 				</dict>
 			</array>
 			<key>pfm_title</key>
@@ -1719,6 +1820,6 @@ The execute permission only refers to execution of Mach-O binaries. It does not 
 	<key>pfm_unique</key>
 	<true/>
 	<key>pfm_version</key>
-	<integer>3</integer>
+	<integer>4</integer>
 </dict>
 </plist>
