@@ -651,6 +651,13 @@
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.vpntracker.365.png</string>
 		</dict>
+		<key>com.zscaler.installparams</key>
+		<dict>
+			<key>hash</key>
+			<string>32090e00826f74d7e0d5252ada42eb44</string>
+			<key>path</key>
+			<string>Icons/ManagedPreferencesApplications/com.zscaler.installparams.png</string>
+		</dict>
 		<key>corp.sap.privileges</key>
 		<dict>
 			<key>hash</key>
@@ -1503,6 +1510,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2025-01-15T17:10:27Z</date>
+	<date>2025-01-17T23:18:45Z</date>
 </dict>
 </plist>

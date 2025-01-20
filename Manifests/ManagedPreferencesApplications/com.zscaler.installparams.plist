@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>pfm_app_min</key>
+	<string>3.9</string>
+	<key>pfm_app_url</key>
+	<string>https://zscaler.com</string>
+	<key>pfm_description</key>
+	<string>Use this section to define settings for Zscaler Client Connector</string>
+	<key>pfm_documentation_url</key>
+	<string>https://help.zscaler.com/zscaler-client-connector</string>
+	<key>pfm_domain</key>
+	<string>com.zscaler.installparams</string>
+	<key>pfm_format_version</key>
+	<integer>1</integer>
+	<key>pfm_icon</key>
+	<data>
+	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
+	</data>
+	<key>pfm_last_modified</key>
+	<date>2025-01-02T23:21:18Z</date>
+	<key>pfm_platforms</key>
+	<array>
+		<string>macOS</string>
+	</array>
+	<key>pfm_subkeys</key>
+	<array>
+		<dict>
+			<key>pfm_default</key>
+			<string>Configure Zscaler Client Connector settings</string>
+			<key>pfm_description</key>
+			<string>Settings to configure Zscaler Client Connector using your MDM solution</string>
+			<key>pfm_name</key>
+			<string>PayloadDescription</string>
+			<key>pfm_title</key>
+			<string>Payload Description</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Zscaler Client Connector</string>
+			<key>pfm_description</key>
+			<string>Name of the payload</string>
+			<key>pfm_name</key>
+			<string>PayloadDisplayName</string>
+			<key>pfm_require</key>
+			<string>always</string>
+			<key>pfm_title</key>
+			<string>Payload Display Name</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>com.zscaler.installparams</string>
+			<key>pfm_description</key>
+			<string>A unique identifier for the payload, dot-delimited. Usually root PayloadIdentifier+subidentifier</string>
+			<key>pfm_name</key>
+			<string>PayloadIdentifier</string>
+			<key>pfm_require</key>
+			<string>always</string>
+			<key>pfm_title</key>
+			<string>Payload Identifier</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>com.zscaler.installparams</string>
+			<key>pfm_description</key>
+			<string>The type of the payload, a reverse dns string</string>
+			<key>pfm_name</key>
+			<string>PayloadType</string>
+			<key>pfm_require</key>
+			<string>always</string>
+			<key>pfm_title</key>
+			<string>Payload Type</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string></string>
+			<key>pfm_description</key>
+			<string>Unique identifier for the payload (format 01234567-89AB-CDEF-0123-456789ABCDEF)</string>
+			<key>pfm_format</key>
+			<string>^[0-9A-Za-z]{8}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{12}$</string>
+			<key>pfm_name</key>
+			<string>PayloadUUID</string>
+			<key>pfm_require</key>
+			<string>always</string>
+			<key>pfm_title</key>
+			<string>Payload UUID</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<integer>1</integer>
+			<key>pfm_description</key>
+			<string>The version of the whole configuration profile.</string>
+			<key>pfm_name</key>
+			<string>PayloadVersion</string>
+			<key>pfm_require</key>
+			<string>always</string>
+			<key>pfm_title</key>
+			<string>Payload Version</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Install Paramters</string>
+			<key>pfm_name</key>
+			<string>installation-parameters</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_description</key>
+					<string>The name of the cloud on which your organization is provisioned</string>
+					<key>pfm_documentation_url</key>
+					<string>https://help.zscaler.com/zscaler-client-connector/deploying-zscaler-client-connector-jamf-pro-macos#configure-custom-settings</string>
+					<key>pfm_name</key>
+					<string>cloudName</string>
+					<key>pfm_note</key>
+					<string>For example, if your cloud name is zscalertwo.net, you would enter "zscalertwo"</string>
+					<key>pfm_title</key>
+					<string>Cloud Name</string>
+					<key>pfm_type</key>
+					<string>string</string>
+					<key>pfm_value_placeholder</key>
+					<string>zscalerbeta</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>The appropriate device token from the Zscaler Client Connector Portal</string>
+					<key>pfm_documentation_url</key>
+					<string>https://help.zscaler.com/zscaler-client-connector/deploying-zscaler-client-connector-jamf-pro-macos#configure-custom-settings</string>
+					<key>pfm_name</key>
+					<string>deviceToken</string>
+					<key>pfm_title</key>
+					<string>Device Token</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>Forces the app window to stay hidden before users enroll</string>
+					<key>pfm_documentation_url</key>
+					<string>https://help.zscaler.com/zscaler-client-connector/deploying-zscaler-client-connector-jamf-pro-macos#configure-custom-settings</string>
+					<key>pfm_name</key>
+					<string>hideAppUIOnLaunch</string>
+					<key>pfm_note</key>
+					<string>Users can always open the window by clicking the app icon in the system tray</string>
+					<key>pfm_range_list</key>
+					<array>
+						<string>0</string>
+						<string>1</string>
+					</array>
+					<key>pfm_range_list_titles</key>
+					<array>
+						<string>Not Hidden</string>
+						<string>Hidden</string>
+					</array>
+					<key>pfm_title</key>
+					<string>Hide App UI On Launch</string>
+					<key>pfm_type</key>
+					<string>string</string>
+					<key>pfm_value_placeholder</key>
+					<string>0</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>Prevents Zscaler Client Connector from automatically starting after installation</string>
+					<key>pfm_documentation_url</key>
+					<string>https://help.zscaler.com/zscaler-client-connector/deploying-zscaler-client-connector-jamf-pro-macos#configure-custom-settings</string>
+					<key>pfm_name</key>
+					<string>launchTray</string>
+					<key>pfm_note</key>
+					<string>By default, Zscaler Client Connector starts its services and user interface after installation</string>
+					<key>pfm_range_list</key>
+					<array>
+						<string>0</string>
+						<string>1</string>
+					</array>
+					<key>pfm_range_list_titles</key>
+					<array>
+						<string>Not Starting After Installation</string>
+						<string>Starting After Installation</string>
+					</array>
+					<key>pfm_title</key>
+					<string>Launch Tray</string>
+					<key>pfm_type</key>
+					<string>string</string>
+					<key>pfm_value_placeholder</key>
+					<string>1</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>Allows you to specify which app profile policy you want to enforce for the app before the user enrolls</string>
+					<key>pfm_documentation_url</key>
+					<string>https://help.zscaler.com/zscaler-client-connector/deploying-zscaler-client-connector-jamf-pro-macos#configure-custom-settings</string>
+					<key>pfm_name</key>
+					<string>policyToken</string>
+					<key>pfm_title</key>
+					<string>Policy Token</string>
+					<key>pfm_type</key>
+					<string>string</string>
+					<key>pfm_value_placeholder</key>
+					<string>363036373A343A35646161663635372D666165332D346531642D383839652D613961303565626131313532</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>Allows you to block internet traffic before the user enrolls in Zscaler Client Connector</string>
+					<key>pfm_documentation_url</key>
+					<string>https://help.zscaler.com/zscaler-client-connector/deploying-zscaler-client-connector-jamf-pro-macos#configure-custom-settings</string>
+					<key>pfm_name</key>
+					<string>strictEnforcement</string>
+					<key>pfm_range_list</key>
+					<array>
+						<string>0</string>
+						<string>1</string>
+					</array>
+					<key>pfm_range_list_titles</key>
+					<array>
+						<string>Denies Internet Traffic before Enrollment</string>
+						<string>Allows Internet Traffic before Enrollment</string>
+					</array>
+					<key>pfm_title</key>
+					<string>Strict Enforcement</string>
+					<key>pfm_type</key>
+					<string>string</string>
+					<key>pfm_value_placeholder</key>
+					<string>1</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>Allows you to configure the user domain so that the users skip the Zscaler Client Connector enrollment page and directly go to the SSO login page</string>
+					<key>pfm_documentation_url</key>
+					<string>https://help.zscaler.com/zscaler-client-connector/deploying-zscaler-client-connector-jamf-pro-macos#configure-custom-settings</string>
+					<key>pfm_name</key>
+					<string>userDomain</string>
+					<key>pfm_title</key>
+					<string>User Domain</string>
+					<key>pfm_type</key>
+					<string>string</string>
+					<key>pfm_value_placeholder</key>
+					<string>ekampan.zscalerbeta.net</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>Allows you to redirect authentication to your organization's SAML IdP through the Safari browser</string>
+					<key>pfm_documentation_url</key>
+					<string>https://help.zscaler.com/zscaler-client-connector/deploying-zscaler-client-connector-jamf-pro-macos#configure-custom-settings</string>
+					<key>pfm_name</key>
+					<string>externalRedirect</string>
+					<key>pfm_title</key>
+					<string>External Redirect</string>
+					<key>pfm_type</key>
+					<string>string</string>
+					<key>pfm_value_placeholder</key>
+					<string>false</string>
+				</dict>
+			</array>
+			<key>pfm_type</key>
+			<string>dictionary</string>
+		</dict>
+	</array>
+	<key>pfm_targets</key>
+	<array>
+		<string>system</string>
+	</array>
+	<key>pfm_title</key>
+	<string>Zscaler Client Connector</string>
+	<key>pfm_unique</key>
+	<true/>
+	<key>pfm_version</key>
+	<integer>1</integer>
+</dict>
+</plist>

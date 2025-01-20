@@ -1,0 +1,1517 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>pfm_description</key>
+	<string>Use this section to define settings for S.U.P.E.R.M.A.N (super)</string>
+	<key>pfm_documentation_url</key>
+	<string>https://github.com/Macjutsu/super/wiki</string>
+	<key>pfm_domain</key>
+	<string>com.macjutsu.super</string>
+	<key>pfm_format_version</key>
+	<integer>1</integer>
+	<key>pfm_last_modified</key>
+	<date>2025-01-13T20:14:56Z</date>
+	<key>pfm_macos_min</key>
+	<string>11.0</string>
+	<key>pfm_platforms</key>
+	<array>
+		<string>macOS</string>
+	</array>
+	<key>pfm_subkeys</key>
+	<array>
+		<dict>
+			<key>pfm_default</key>
+			<string>com.macjutsu.super</string>
+			<key>pfm_description</key>
+			<string>Description of the payload</string>
+			<key>pfm_name</key>
+			<string>PayloadDescription</string>
+			<key>pfm_title</key>
+			<string>Payload Description</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>com.macjutsu.super</string>
+			<key>pfm_description</key>
+			<string>Name of the payload</string>
+			<key>pfm_name</key>
+			<string>PayloadDisplayName</string>
+			<key>pfm_require</key>
+			<string>always</string>
+			<key>pfm_title</key>
+			<string>Payload Display Name</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>com.macjutsu.super</string>
+			<key>pfm_description</key>
+			<string>A unique identifier for the payload, dot-delimited.  Usually root PayloadIdentifier+subidentifier</string>
+			<key>pfm_name</key>
+			<string>PayloadIdentifier</string>
+			<key>pfm_require</key>
+			<string>always</string>
+			<key>pfm_title</key>
+			<string>Payload Identifier</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>com.macjutsu.super</string>
+			<key>pfm_description</key>
+			<string>The type of the payload, a reverse dns string</string>
+			<key>pfm_name</key>
+			<string>PayloadType</string>
+			<key>pfm_require</key>
+			<string>always</string>
+			<key>pfm_title</key>
+			<string>Payload Type</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>com.macjutsu.super</string>
+			<key>pfm_description</key>
+			<string>Unique identifier for the payload (format 01234567-89AB-CDEF-0123-456789ABCDEF)</string>
+			<key>pfm_format</key>
+			<string>^[0-9A-Za-z]{8}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{12}$</string>
+			<key>pfm_name</key>
+			<string>PayloadUUID</string>
+			<key>pfm_require</key>
+			<string>always</string>
+			<key>pfm_title</key>
+			<string>Payload UUID</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<integer>1</integer>
+			<key>pfm_description</key>
+			<string>The version of the whole configuration profile.</string>
+			<key>pfm_name</key>
+			<string>PayloadVersion</string>
+			<key>pfm_require</key>
+			<string>always</string>
+			<key>pfm_title</key>
+			<string>Payload Version</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>This value describes the issuing organization of the profile, as displayed to the user</string>
+			<key>pfm_name</key>
+			<string>PayloadOrganization</string>
+			<key>pfm_title</key>
+			<string>Payload Organization</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_name</key>
+			<string>PFC_SegmentedControl_0</string>
+			<key>pfm_range_list_titles</key>
+			<array>
+				<string>Apple Silicon Authentication</string>
+				<string>Deferrals and Deadlines</string>
+				<string>Dialogs and Notifications</string>
+				<string>Installation</string>
+				<string>Scheduling</string>
+				<string>Workflow</string>
+				<string>Troubleshoot</string>
+			</array>
+			<key>pfm_require</key>
+			<string>always</string>
+			<key>pfm_segments</key>
+			<dict>
+				<key>Apple Silicon Authentication</key>
+				<array>
+					<string>AuthAskUserToSavePassword</string>
+					<string>AuthCredentialFailoverToUser</string>
+					<string>AuthJamfComputerID</string>
+					<string>AuthJamfCustomURL</string>
+					<string>AuthMDMFailoverToUser</string>
+				</array>
+				<key>Deferrals and Deadlines</key>
+				<array>
+					<string>DeadlineCountFocus</string>
+					<string>DeadlineCountHard</string>
+					<string>DeadlineCountSoft</string>
+					<string>DeadlineDateFocus</string>
+					<string>DeadlineDateHard</string>
+					<string>DeadlineDateSoft</string>
+					<string>DeadlineDaysFocus</string>
+					<string>DeadlineDaysHard</string>
+					<string>DeadlineDaysSoft</string>
+					<string>DeferralTimerDefault</string>
+					<string>DeferralTimerError</string>
+					<string>DeferralTimerFocus</string>
+					<string>DeferralTimerMenu</string>
+					<string>DeferralTimerWorkflowRelaunch</string>
+				</array>
+				<key>Dialogs and Notifications</key>
+				<array>
+					<string>DialogTimeoutDefault</string>
+					<string>DialogTimeoutInsufficientStorage</string>
+					<string>DialogTimeoutPowerRequired</string>
+					<string>DialogTimeoutRestartOrDefer</string>
+					<string>DialogTimeoutRestartOrDefer</string>
+					<string>DialogTimeoutSoftDeadline</string>
+					<string>DialogTimeoutUserAuth</string>
+					<string>DialogTimeoutUserChoice</string>
+					<string>DialogTimeoutUserSchedule</string>
+					<string>DisplayAccessoryDefaultFile</string>
+					<string>DisplayAccessoryJamfPolicyTriggersFile</string>
+					<string>DisplayAccessoryMacOSMajorUpgradeFile</string>
+					<string>DisplayAccessoryMacOSMinorUpdateFile</string>
+					<string>DisplayAccessoryNonSystemUpdatesFile</string>
+					<string>DisplayAccessoryRestartWithoutUpdatesFile</string>
+					<string>DisplayAccessoryType</string>
+					<string>DisplayAccessoryUpdateFile</string>
+					<string>DisplayAccessoryUpgradeFile</string>
+					<string>DisplayAccessoryUserAuthFile</string>
+					<string>DisplayHelpButtonString</string>
+					<string>DisplayHideBackground</string>
+					<string>DisplayHideProgressBar</string>
+					<string>DisplayIconDarkFile</string>
+					<string>DisplayIconFile</string>
+					<string>DisplayIconLightFile</string>
+					<string>DisplayIconSize</string>
+					<string>DisplayNotificationsCentered</string>
+					<string>DisplaySilently</string>
+					<string>DisplayUnmovable</string>
+					<string>DisplayWarningButtonString</string>
+				</array>
+				<key>Installation</key>
+				<array>
+					<string>InstallJamfPolicyTriggers</string>
+					<string>InstallJamfPolicyTriggersWithoutRestarting</string>
+					<string>InstallMacOSMajorUpgrades</string>
+					<string>InstallMacOSMajorVersionTarget</string>
+					<string>InstallNonSystemUpdatesWithoutRestarting</string>
+					<string>InstallRapidSecurityResponses</string>
+				</array>
+				<key>Scheduling</key>
+				<array>
+					<string>ScheduledInstallDate</string>
+					<string>ScheduledInstallDays</string>
+					<string>ScheduledInstallReminder</string>
+					<string>ScheduledInstallUserChoice</string>
+					<string>ScheduleWorkflowActive</string>
+					<string>ScheduleZeroDateManual</string>
+					<string>ScheduleZeroDateRelease</string>
+					<string>ScheduleZeroDateSOFACustomURL</string>
+				</array>
+				<key>Troubleshoot</key>
+				<array>
+					<string>TestBatteryLevel</string>
+					<string>TestMode</string>
+					<string>TestModeTimeout</string>
+					<string>TestStorageUpdate</string>
+					<string>TestStorageUpgrade</string>
+					<string>VerboseMode</string>
+				</array>
+				<key>Workflow</key>
+				<array>
+					<string>WorkflowDisableRelaunch</string>
+					<string>WorkflowDisableUpdateCheck</string>
+					<string>WorkflowInstallNow</string>
+					<string>WorkflowJamfPolicyTriggers</string>
+					<string>WorkflowOnlyDownload</string>
+					<string>WorkflowRestartWithoutUpdates</string>
+					<string>WorkflowZeroDateManual</string>
+				</array>
+			</dict>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>4.0</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>Prompt the end user to save their password which can then be used to authenticate the local softwareupdate command</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/Macjutsu/super/wiki/Apple-Silicon-Local-Credentials#authenticate-via-end-users-account</string>
+			<key>pfm_name</key>
+			<string>AuthAskUserToSavePassword</string>
+			<key>pfm_title</key>
+			<string>Auth Ask User To Save Password</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>4.0</string>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>If any managed automatic authentication method fails validation, then failover to local end user authentication</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/Macjutsu/super/wiki/Apple-Silicon-Local-Credentials#user-authentication-credential-failover</string>
+			<key>pfm_name</key>
+			<string>AuthCredentialFailoverToUser</string>
+			<key>pfm_title</key>
+			<string>Auth Credential Failover To User</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>4.0</string>
+			<key>pfm_description</key>
+			<string>Use this when using super with Jamf Pro API account</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/Macjutsu/super/wiki/Apple-Silicon-Jamf-Pro-API-Credentials#jamf-pro-id-via-mdm-configuration-profile</string>
+			<key>pfm_name</key>
+			<string>AuthJamfComputerID</string>
+			<key>pfm_title</key>
+			<string>Auth Jamf Computer ID</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>$JSSID</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>4.0</string>
+			<key>pfm_description</key>
+			<string>Allows you to override the default Jamf Pro management URL for a custom Jamf Pro API URL</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/Macjutsu/super/wiki/Apple-Silicon-Jamf-Pro-API-Credentials#custom-jamf-pro-api-url</string>
+			<key>pfm_format</key>
+			<string>^https?://.*</string>
+			<key>pfm_name</key>
+			<string>AuthJamfCustomURL</string>
+			<key>pfm_title</key>
+			<string>Jamf Custom URL Override</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>https://jamf-api.example.domain.com</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>4.0</string>
+			<key>pfm_description</key>
+			<string>The MDM workflow can be unreliable due to its complexity, and super will automatically try again upon failure, however this settings allows super to try other options</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/Macjutsu/super/wiki/Apple-Silicon-Jamf-Pro-API-Credentials#user-authentication-mdm-failover</string>
+			<key>pfm_format</key>
+			<string>^https?://.*</string>
+			<key>pfm_name</key>
+			<string>AuthMDMFailoverToUser</string>
+			<key>pfm_title</key>
+			<string>User Authentication MDM Failover</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>ALWAYS,DIALOG,DEADLINE,SCHEDULED,INSTALLNOW,ERROR</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>4.0</string>
+			<key>pfm_description</key>
+			<string>The maximum number of automatic deferrals allowed if the system is in user-enabled Focus/Do Not Disturb or when a process has requested that the display not go to sleep</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/Macjutsu/super/wiki/Count-Deadlines#focus-count-deadline</string>
+			<key>pfm_name</key>
+			<string>DeadlineCountFocus</string>
+			<key>pfm_title</key>
+			<string>Focus Count Deadline</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>5</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>4.0</string>
+			<key>pfm_description</key>
+			<string>The maximum number of user selected deferrals allowed before the computer automatically restarts for updates without asking the user for approval</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/Macjutsu/super/wiki/Count-Deadlines#hard-count-deadline</string>
+			<key>pfm_name</key>
+			<string>DeadlineCountHard</string>
+			<key>pfm_title</key>
+			<string>Hard Count Deadline</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>5</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>4.0</string>
+			<key>pfm_description</key>
+			<string>The maximum number of user selected deferrals allowed before showing a soft deadline dialog</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/Macjutsu/super/wiki/Count-Deadlines#soft-count-deadline</string>
+			<key>pfm_name</key>
+			<string>DeadlineCountSoft</string>
+			<key>pfm_title</key>
+			<string>Soft Count Deadline</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>5</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>4.0</string>
+			<key>pfm_description</key>
+			<string>This is the last date and time when automatic deferrals are allowed if the system is in user-enabled Focus/Do Not Disturb or when a process has requested that the display not go to sleep (for example, during an active meeting)</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/Macjutsu/super/wiki/Date-Deadlines#focus-date-deadline</string>
+			<key>pfm_name</key>
+			<string>DeadlineDateFocus</string>
+			<key>pfm_title</key>
+			<string>Focus Date Deadline</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>YYYY-MM-DD:hh:mm</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>4.0</string>
+			<key>pfm_description</key>
+			<string>If this date has passed, the computer restarts and udpates without asking the user for approval</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/Macjutsu/super/wiki/Date-Deadlines#hard-date-deadline</string>
+			<key>pfm_name</key>
+			<string>DeadlineDateHard</string>
+			<key>pfm_title</key>
+			<string>Hard Date Deadline</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>YYYY-MM-DD:hh:mm</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>4.0</string>
+			<key>pfm_description</key>
+			<string>If this date and time have passed, an interactive update restart dialog appears indicating that no more user deferrals are allowed</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/Macjutsu/super/wiki/Date-Deadlines#soft-date-deadline</string>
+			<key>pfm_name</key>
+			<string>DeadlineDateSoft</string>
+			<key>pfm_title</key>
+			<string>Soft Date Deadline</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>YYYY-MM-DD:hh:mm</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>4.0</string>
+			<key>pfm_description</key>
+			<string>The maximum number of days that automatic deferrals are allowed if the system is in user-enabled Focus/Do Not Disturb or when a process has requested that the display not go to sleep (for example, during an active meeting).</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/Macjutsu/super/wiki/Days-Deadlines#focus-days-deadline</string>
+			<key>pfm_name</key>
+			<string>DeadlineDaysFocus</string>
+			<key>pfm_title</key>
+			<string>Focus Days Deadline</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>3</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>4.0</string>
+			<key>pfm_description</key>
+			<string>The maximum number of days allowed before the computer automatically restarts for updates without asking the user for approval</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/Macjutsu/super/wiki/Days-Deadlines#hard-days-deadline</string>
+			<key>pfm_name</key>
+			<string>DeadlineDaysHard</string>
+			<key>pfm_title</key>
+			<string>Hard Days Deadline</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>7</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>4.0</string>
+			<key>pfm_description</key>
+			<string>The maximum number of days allowed before the soft deadline dialog. The soft deadline is an interactive update restart dialog indicating that no more deferrals are allowed</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/Macjutsu/super/wiki/Days-Deadlines#soft-days-deadline</string>
+			<key>pfm_name</key>
+			<string>DeadlineDaysSoft</string>
+			<key>pfm_title</key>
+			<string>Soft Days Deadline</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>5</string>
+		</dict>
+		<dict>
+			<key>pfm_app_max</key>
+			<string>4.0.3</string>
+			<key>pfm_description</key>
+			<string>Sets an automatic timeout for the restart or defer dialog in seconds</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/Macjutsu/super/wiki/Dialog-Timeouts/3d44b40dc47dd940f5edda8bbabedfacbb79970b#restart-or-defer-dialog-timeout</string>
+			<key>pfm_name</key>
+			<string>DialogTimeoutRestartOrDefer</string>
+			<key>pfm_note</key>
+			<string>Timeouts less than 60 seconds or more than 86400 seconds (1 day) are rounded accordingly</string>
+			<key>pfm_title</key>
+			<string>Dialog Timeout Restart Or Defer</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_max</key>
+			<string>4.0.3</string>
+			<key>pfm_description</key>
+			<string>Make the super workflow run one or more Jamf Pro Policy Triggers that are comma separated with no spaces</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/Macjutsu/super/wiki/Alternate-Workflows/3d44b40dc47dd940f5edda8bbabedfacbb79970b#run-jamf-pro-policies</string>
+			<key>pfm_name</key>
+			<string>WorkflowJamfPolicyTriggers</string>
+			<key>pfm_title</key>
+			<string>Workflow Jamf Policy Triggers</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>triggerA,triggerB,triggerC</string>
+		</dict>
+		<dict>
+			<key>pfm_app_max</key>
+			<string>4.0.3</string>
+			<key>pfm_description</key>
+			<string>Specifies a local path or web URL to a file with the content to be shown in dialogs only when showing the Apple silicon user authentication dialog</string>
+			<key>pfm_name</key>
+			<string>DisplayAccessoryUserAuthFile</string>
+			<key>pfm_title</key>
+			<string>Display Accessory User Auth File</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>/Library/Application Support/super/userauth.html</string>
+		</dict>
+		<dict>
+			<key>pfm_app_max</key>
+			<string>4.0.3</string>
+			<key>pfm_description</key>
+			<string>Specifies a local path or web URL to a file with the content to be shown in dialogs only when performing macOS updates</string>
+			<key>pfm_name</key>
+			<string>DisplayAccessoryUpdateFile</string>
+			<key>pfm_title</key>
+			<string>Display Accessory Update File</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>/Library/Application Support/super/update.html</string>
+		</dict>
+		<dict>
+			<key>pfm_app_max</key>
+			<string>4.0.3</string>
+			<key>pfm_description</key>
+			<string>Specifies a local path or web URL to a file with the content to be shown in dialogs only when performing macOS upgrades</string>
+			<key>pfm_name</key>
+			<string>DisplayAccessoryUpgradeFile</string>
+			<key>pfm_title</key>
+			<string>Display Accessory Upgrade File</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>/Library/Application Support/super/upgrade.html</string>
+		</dict>
+		<dict>
+			<key>pfm_app_max</key>
+			<string>4.0.3</string>
+			<key>pfm_description</key>
+			<string>Instead of having super automatically select the beginning date and time of the super workflow (aka. day zero), this option sets a specific date and time as day zero</string>
+			<key>pfm_name</key>
+			<string>WorkflowZeroDateManual</string>
+			<key>pfm_title</key>
+			<string>Workflow Zero Date Manual</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>YYYY-MM-DD:hh:mm</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>4.0</string>
+			<key>pfm_description</key>
+			<string>The number of minutes to defer the update restart dialog automatically if a process has prevented display sleep (for example, during an active meeting) or the user has Focus or Do Not Disturb enabled</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/Macjutsu/super/wiki/Deferral-Behavior#focus-deferral-timer</string>
+			<key>pfm_name</key>
+			<string>DeferralTimerFocus</string>
+			<key>pfm_note</key>
+			<string>Value must be between 2 and 1440</string>
+			<key>pfm_title</key>
+			<string>Focus Defer Timer</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>60</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>4.0</string>
+			<key>pfm_description</key>
+			<string>Sets the default timeout for any dialog that doesn't have a specific timeout setting</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/Macjutsu/super/wiki/Dialog-Timeouts#default-dialog-timeout</string>
+			<key>pfm_name</key>
+			<string>DialogTimeoutDefault</string>
+			<key>pfm_title</key>
+			<string>Default Dialog Timeout</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>600</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>4.0</string>
+			<key>pfm_description</key>
+			<string>Timeout for computers with not enough free space</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/Macjutsu/super/wiki/Dialog-Timeouts#insufficient-storage-dialog-timeout</string>
+			<key>pfm_name</key>
+			<string>DialogTimeoutInsufficientStorage</string>
+			<key>pfm_title</key>
+			<string>Free Space Timeout</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>600</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>4.0</string>
+			<key>pfm_description</key>
+			<string>Timeout for computers where power is required</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/Macjutsu/super/wiki/Dialog-Timeouts#power-required-dialog-timeout</string>
+			<key>pfm_name</key>
+			<string>DialogTimeoutPowerRequired</string>
+			<key>pfm_title</key>
+			<string>Battery Timeout</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>600</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>4.0</string>
+			<key>pfm_description</key>
+			<string>Sets an automatic timeout for interactive update restart dialogs in seconds</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/Macjutsu/super/wiki/Dialog-Timeouts#soft-deadline-dialog-timeout</string>
+			<key>pfm_name</key>
+			<string>DialogTimeoutSoftDeadline</string>
+			<key>pfm_note</key>
+			<string>The countdown of the timeout is displayed in the update restart dialog</string>
+			<key>pfm_title</key>
+			<string>Soft Display Timeout</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>600</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>4.0</string>
+			<key>pfm_description</key>
+			<string>On Mac computers with Apple Silicon, the number of seconds to wait for the user to successfully authenticate when presented with the user authenticated dialog</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/Macjutsu/super/wiki/Dialog-Timeouts#user-authentication-dialog-timeout</string>
+			<key>pfm_name</key>
+			<string>DialogTimeoutUserAuth</string>
+			<key>pfm_note</key>
+			<string>This dialog does not show a visual countdown of the timeout. Default time is 3600 seconds (1 hour)</string>
+			<key>pfm_title</key>
+			<string>User Authentication Timeout</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>600</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>5.0</string>
+			<key>pfm_description</key>
+			<string>Sets an automatic timeout for the user choice (restart/install or defer) dialog in seconds</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/Macjutsu/super/wiki/Dialog-Timeouts#user-choice-dialog-timeout</string>
+			<key>pfm_name</key>
+			<string>DialogTimeoutUserChoice</string>
+			<key>pfm_note</key>
+			<string>Timeouts less than 60 seconds or more than 86400 seconds (1 day) are rounded accordingly</string>
+			<key>pfm_title</key>
+			<string>User Choice Dialog Timeout</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>600</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>5.0</string>
+			<key>pfm_description</key>
+			<string>Sets an automatic timeout for the scheduled install user choice dialog in seconds</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/Macjutsu/super/wiki/Dialog-Timeouts#user-scheduled-install-user-choice-dialog-timeout</string>
+			<key>pfm_name</key>
+			<string>DialogTimeoutUserSchedule</string>
+			<key>pfm_note</key>
+			<string>Timeouts less than 60 seconds or more than 86400 seconds (1 day) are rounded accordingly</string>
+			<key>pfm_title</key>
+			<string>User Scheduled Install User Choice Dialog Timeout</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>600</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>4.0</string>
+			<key>pfm_description</key>
+			<string>Local path or http(s) URL to a file that is the default accessory</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/Macjutsu/super/wiki/Display-Customization#display-accessory-contents</string>
+			<key>pfm_name</key>
+			<string>DisplayAccessoryDefaultFile</string>
+			<key>pfm_title</key>
+			<string>Default Accessory File</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>https://example.com/sample.png</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>5.0</string>
+			<key>pfm_description</key>
+			<string>Local path or http(s) URL to a file that is the accessory to display when the InstallJamfPolicyTriggers payload option is also enabled and the workflow target is only Jamf Pro Policy Triggers</string>
+			<key>pfm_name</key>
+			<string>DisplayAccessoryJamfPolicyTriggersFile</string>
+			<key>pfm_title</key>
+			<string>Jamf Policy Accessory File</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>https://example.com/sample.png</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>5.0</string>
+			<key>pfm_description</key>
+			<string>Local path or http(s) URL to a file that is the accessory to display when performing macOS upgrades</string>
+			<key>pfm_name</key>
+			<string>DisplayAccessoryMacOSMajorUpgradeFile</string>
+			<key>pfm_title</key>
+			<string>Major Upgrades Accessory File</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>https://example.com/sample.png</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>5.0</string>
+			<key>pfm_description</key>
+			<string>Local path or http(s) URL to a file that is the accessory to display when performing macOS updates</string>
+			<key>pfm_name</key>
+			<string>DisplayAccessoryMacOSMinorUpdateFile</string>
+			<key>pfm_title</key>
+			<string>Minor Updates Updates Accessory File</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>https://example.com/sample.png</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>5.0</string>
+			<key>pfm_description</key>
+			<string>Local path or http(s) URL to a file that is the accessory to display when the InstallNonSystemUpdatesWithoutRestarting payload option is also enabled and the workflow target is only non-system updates</string>
+			<key>pfm_name</key>
+			<string>DisplayAccessoryNonSystemUpdatesFile</string>
+			<key>pfm_title</key>
+			<string>Non-System Updates Accessory File</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>https://example.com/sample.png</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>5.0</string>
+			<key>pfm_description</key>
+			<string>Local path or http(s) URL to a file that is the accessory to display when the WorkflowRestartWithoutUpdates payload option is also enabled and the workflow target is only a forced restart without any updates</string>
+			<key>pfm_name</key>
+			<string>DisplayAccessoryRestartWithoutUpdatesFile</string>
+			<key>pfm_title</key>
+			<string>Restart Without Updates Accessory File</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>https://example.com/sample.png</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>4.0</string>
+			<key>pfm_description</key>
+			<string>Interactive dialogs (but not notifications) generated by IBM Notifier can be easily customized via several display accessory options</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/Macjutsu/super/wiki/Display-Customization#display-accessory-types</string>
+			<key>pfm_name</key>
+			<string>DisplayAccessoryType</string>
+			<key>pfm_note</key>
+			<string>The display accessory content appears below any deferral or deadline text but above any interactive item like the deferral pop-up menu or user authentication field</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>TEXTBOX</string>
+				<string>HTMLBOX</string>
+				<string>HTML</string>
+				<string>IMAGE</string>
+				<string>VIDEO</string>
+				<string>VIDEOAUTO</string>
+			</array>
+			<key>pfm_range_list_titles</key>
+			<array>
+				<string>Textbox</string>
+				<string>HTML (White Bounding Box)</string>
+				<string>HTML (Blank Background)</string>
+				<string>Image</string>
+				<string>Video</string>
+				<string>Video (Auto-Play)</string>
+			</array>
+			<key>pfm_title</key>
+			<string>Custom Display Accessory</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>4.0</string>
+			<key>pfm_description</key>
+			<string>Plain text to display or http(s) URL link to follow for the Help Button</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/Macjutsu/super/wiki/Display-Customization#display-help-andor-warning-buttons</string>
+			<key>pfm_name</key>
+			<string>DisplayHelpButtonString</string>
+			<key>pfm_title</key>
+			<string>Help Button</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>https://example.com/sample.png</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>5.0</string>
+			<key>pfm_description</key>
+			<string>This option hides the animated progress bar (as opposed showing it) for notifications and alerts</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/Macjutsu/super/wiki/Display-Behavior#hide-notification-progress-bars</string>
+			<key>pfm_name</key>
+			<string>DisplayHideProgressBar</string>
+			<key>pfm_title</key>
+			<string>Display Hide Progress Bar</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>ALWAYS,DIALOG,DEADLINE,SCHEDULED,INSTALLNOW,ERROR</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>5.0</string>
+			<key>pfm_description</key>
+			<string>Local path or http(s) URL to a file that is the picture to display in notifications or dialogs when in dark mode. Failover to DisplayIconFile payload if configured</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/Macjutsu/super/wiki/Display-Customization#custom-dark-mode-display-icon</string>
+			<key>pfm_name</key>
+			<string>DisplayIconDarkFile</string>
+			<key>pfm_note</key>
+			<string>Failover to DisplayIconFile payload if configured</string>
+			<key>pfm_title</key>
+			<string>Dark Display Icon</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>/System/Library/CoreServices/CoreTypes.bundle/Contents/Resources/BurningIcon.icns</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>5.0</string>
+			<key>pfm_description</key>
+			<string>Local path or http(s) URL to a file that is the picture to display in notifications or dialogs when in light mode. Failover to DisplayIconFile payload if configured</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/Macjutsu/super/wiki/Display-Customization#custom-light-mode-display-icon</string>
+			<key>pfm_name</key>
+			<string>DisplayIconLightFile</string>
+			<key>pfm_note</key>
+			<string>Failover to DisplayIconFile payload if configured</string>
+			<key>pfm_title</key>
+			<string>Light Display Icon</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>/System/Library/CoreServices/CoreTypes.bundle/Contents/Resources/BurningIcon.icns</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>5.0</string>
+			<key>pfm_description</key>
+			<string>Local path or http(s) URL to a file that is the picture to display in notifications or dialogs</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/Macjutsu/super/wiki/Display-Customization#custom-display-icon-default</string>
+			<key>pfm_name</key>
+			<string>DisplayIconFile</string>
+			<key>pfm_note</key>
+			<string>This remains as a default icon option and as a fail-over if the user's appearance mode cannot be resolved when Light or Dark icon files are configured</string>
+			<key>pfm_title</key>
+			<string>Display Icon</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>/System/Library/CoreServices/CoreTypes.bundle/Contents/Resources/BurningIcon.icns</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>4.0</string>
+			<key>pfm_description</key>
+			<string>Number of pixels for the DisplayIcon in IBM Notifier dialogs</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/Macjutsu/super/wiki/Display-Customization#display-icon-size</string>
+			<key>pfm_name</key>
+			<string>DisplayIconSize</string>
+			<key>pfm_note</key>
+			<string>The value must be in between 96 and 150</string>
+			<key>pfm_title</key>
+			<string>Display Icon Size</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>128</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>5.0</string>
+			<key>pfm_description</key>
+			<string>If a restart is required for system updates or forced via RestartWithoutUpdates, this list of Jamf Policy Triggers runs before any available updates install and the computer restarts</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/Macjutsu/super/wiki/Install-Non-System-Items#runinstall-jamf-pro-policies</string>
+			<key>pfm_name</key>
+			<string>InstallJamfPolicyTriggers</string>
+			<key>pfm_title</key>
+			<string>Install Jamf Policy Triggers</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>triggerA,triggerB,triggerC</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>5.0</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>Allows for installation of Jamf Pro Policies even if there are no available macOS updates/upgrades</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/Macjutsu/super/wiki/Install-Non-System-Items#runinstall-jamf-pro-policies-without-restarting</string>
+			<key>pfm_name</key>
+			<string>InstallJamfPolicyTriggersWithoutRestarting</string>
+			<key>pfm_title</key>
+			<string>Install Jamf Policies Without A Restart</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>5.0</string>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>Leverages the public MacAdmin's SOFA macOS machine readable JSON feed to discover release dates for use in workflows with deadline day options</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/Macjutsu/super/wiki/Workflow-Schedule-Behavior#schedule-zero-date-macos-release</string>
+			<key>pfm_name</key>
+			<string>ScheduleZeroDateRelease</string>
+			<key>pfm_title</key>
+			<string>Apple Zero Day Workflow Date</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>5.0</string>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>Adds a Schedule button to the standard deferral dialog</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/Macjutsu/super/wiki/Scheduled-Install#scheduled-install-user-choice</string>
+			<key>pfm_name</key>
+			<string>ScheduledInstallUserChoice</string>
+			<key>pfm_note</key>
+			<string>When clicked, this button opens a scheduled installation dialog that allows the user to select a date and time for installation.If any day or date deadlines are also specified, then the user is not allowed to select an installation date later than the soonest deadline</string>
+			<key>pfm_title</key>
+			<string>Scheduled Install User Choice</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>4.0</string>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>Mode to validate parameters, credentials, notifications, dialogs, deferrals, and deadline logic</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/Macjutsu/super/wiki/Testing-And-Validation#test-mode</string>
+			<key>pfm_name</key>
+			<string>TestMode</string>
+			<key>pfm_title</key>
+			<string>Test Mode</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>5.0</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>Kicks off the super workflow immediately, prompting user that an update has begun</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/Macjutsu/super/wiki/User-Initiated-Workflows#install-now</string>
+			<key>pfm_name</key>
+			<string>WorkflowInstallNow</string>
+			<key>pfm_title</key>
+			<string>Start Workflow Immediately</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>5.0</string>
+			<key>pfm_description</key>
+			<string>Allows you to define multiple weekday time frames that specify when the super workflow is allowed to be active (aka maintenance windows)</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/Macjutsu/super/wiki/Workflow-Schedule-Behavior#schedule-workflow-active</string>
+			<key>pfm_name</key>
+			<string>ScheduleWorkflowActive</string>
+			<key>pfm_note</key>
+			<string>Each schedule workflow active time frame must be specified using the following format DAY:hh:mm-hh:mm where weekdays are defined as MON|TUE|WED|THU|FRI|SAT|SUN and times are in 24-hour format. Multiple ranges are separated by a comma with no spaces</string>
+			<key>pfm_title</key>
+			<string>Schedule Workflow Active</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>DAY:hh:mm-hh:mm,DAY:hh:mm-hh:mm</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>4.0</string>
+			<key>pfm_description</key>
+			<string>Minmum Battery Percentage</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/Macjutsu/super/wiki/Testing-And-Validation#battery-level-testing-override</string>
+			<key>pfm_name</key>
+			<string>TestBatteryLevel</string>
+			<key>pfm_title</key>
+			<string>Test Battery Level</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>50</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>4.0</string>
+			<key>pfm_description</key>
+			<string>The amount of time in seconds to leave test notifications and dialogs open before moving on in the workflow</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/Macjutsu/super/wiki/Testing-And-Validation#custom-test-mode-timeout</string>
+			<key>pfm_name</key>
+			<string>TestModeTimeout</string>
+			<key>pfm_title</key>
+			<string>Test Mode Timeout</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>60</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>4.0</string>
+			<key>pfm_description</key>
+			<string>Free space required for updates</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/Macjutsu/super/wiki/Testing-And-Validation#free-storage-space-testing-overrides</string>
+			<key>pfm_name</key>
+			<string>TestStorageUpdate</string>
+			<key>pfm_title</key>
+			<string>Free Space Update</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>15</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>4.0</string>
+			<key>pfm_description</key>
+			<string>Free space required for upgrades</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/Macjutsu/super/wiki/Testing-And-Validation#free-storage-space-testing-overrides</string>
+			<key>pfm_name</key>
+			<string>TestStorageUpgrade</string>
+			<key>pfm_title</key>
+			<string>Test Free Space Upgrade</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>35</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>5.0</string>
+			<key>pfm_description</key>
+			<string>Instead of having the days deadline counter, automatically select the day zero date</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/Macjutsu/super/wiki/Workflow-Schedule-Behavior#schedule-zero-date-manual-override</string>
+			<key>pfm_name</key>
+			<string>ScheduleZeroDateManual</string>
+			<key>pfm_title</key>
+			<string>Manual Zero Day Workflow Date</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>YYYY-MM-DD:hh:mm</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>5.0</string>
+			<key>pfm_description</key>
+			<string>Allows for a custom self-hosted MacAdmin's SOFA macOS machine readable JSON feed</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/Macjutsu/super/wiki/Workflow-Schedule-Behavior#schedule-zero-date-custom-sofa-url</string>
+			<key>pfm_name</key>
+			<string>ScheduleZeroDateSOFACustomURL</string>
+			<key>pfm_title</key>
+			<string>Apple Zero Day Custom URL</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>https://sofa.example.domain.com/v1/macos_data_feed.json</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>4.0</string>
+			<key>pfm_description</key>
+			<string>Sets an automatic timeout for the restart or defer dialog in seconds</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/Macjutsu/super/wiki/Dialog-Timeouts/3d44b40dc47dd940f5edda8bbabedfacbb79970b#restart-or-defer-dialog-timeout</string>
+			<key>pfm_name</key>
+			<string>DialogTimeoutRestartOrDefer</string>
+			<key>pfm_note</key>
+			<string>Timeouts less than 60 seconds or more than 86400 seconds (1 day) are rounded accordingly</string>
+			<key>pfm_title</key>
+			<string>Dialog Timeout Restart Or Defer</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>5.0</string>
+			<key>pfm_description</key>
+			<string>Allows you to specify a date and time that a scheduled installation takes place</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/Macjutsu/super/wiki/Scheduled-Install#scheduled-install-date</string>
+			<key>pfm_name</key>
+			<string>ScheduledInstallDate</string>
+			<key>pfm_title</key>
+			<string>Scheduled Install Date</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>YYYY-MM-DD:hh:mm</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>5.0</string>
+			<key>pfm_description</key>
+			<string>Allows you to specify the number of days after the zero date that a scheduled installation takes place</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/Macjutsu/super/wiki/Scheduled-Install#scheduled-install-days</string>
+			<key>pfm_name</key>
+			<string>ScheduledInstallDays</string>
+			<key>pfm_title</key>
+			<string>Scheduled Install Days</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>3</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>5.0</string>
+			<key>pfm_description</key>
+			<string>Allows you to specify a list of minutes separated by commas (no spaces) that define how often a scheduled installation reminder dialog appears prior to a scheduled installation</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/Macjutsu/super/wiki/Scheduled-Install#scheduled-install-reminders</string>
+			<key>pfm_name</key>
+			<string>ScheduledInstallReminder</string>
+			<key>pfm_title</key>
+			<string>Scheduled Install Reminder</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>120,60,5</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>4.0</string>
+			<key>pfm_description</key>
+			<string>The number of minutes to defer until the next update workflow attempt if a user choses not restart</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/Macjutsu/super/wiki/Deferral-Behavior#default-deferral-timer</string>
+			<key>pfm_name</key>
+			<string>DeferralTimerDefault</string>
+			<key>pfm_title</key>
+			<string>Deferral Timer Default</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>1440</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>4.0</string>
+			<key>pfm_description</key>
+			<string>The number of minutes to defer if super detects an error in the workflow (for example, network or MDM connectivity issues)</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/Macjutsu/super/wiki/Deferral-Behavior#error-deferral-timer</string>
+			<key>pfm_name</key>
+			<string>DeferralTimerError</string>
+			<key>pfm_title</key>
+			<string>Deferral Timer Error</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>1440</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>4.0</string>
+			<key>pfm_description</key>
+			<string>Display a deferral time pop-up menu in the non-deadline restart dialog that allows the user to override the Deferral Timer Default timer</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/Macjutsu/super/wiki/Deferral-Behavior#menu-deferral-timer</string>
+			<key>pfm_name</key>
+			<string>DeferralTimerMenu</string>
+			<key>pfm_title</key>
+			<string>Deferral Timer Menu</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>120,1440,10080</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>4.0</string>
+			<key>pfm_description</key>
+			<string>The number of minutes to defer if no software updates are available or allowed. Enabling this option results in super acting as a permanent agent that checks for software updates on a regular basis</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/Macjutsu/super/wiki/Deferral-Behavior#workflow-relaunch-deferral-timer</string>
+			<key>pfm_name</key>
+			<string>DeferralTimerWorkflowRelaunch</string>
+			<key>pfm_title</key>
+			<string>Deferral Timer Workflow Relaunch</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>1440</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>4.0</string>
+			<key>pfm_description</key>
+			<string>Hide the background while displaying super dialogs and notifications</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/Macjutsu/super/wiki/Display-Behavior#display-hide-background</string>
+			<key>pfm_name</key>
+			<string>DisplayHideBackground</string>
+			<key>pfm_title</key>
+			<string>Display Hide Background</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>ALWAYS,DIALOG,DEADLINE,SCHEDULED,INSTALLNOW,ERROR</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>4.0</string>
+			<key>pfm_description</key>
+			<string>Display super notifications in the center of the screen</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/Macjutsu/super/wiki/Display-Behavior#display-notifications-centered</string>
+			<key>pfm_name</key>
+			<string>DisplayNotificationsCentered</string>
+			<key>pfm_title</key>
+			<string>Display Notifications Centered</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>ALWAYS,DIALOG,DEADLINE,SCHEDULED,INSTALLNOW,ERROR</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>4.0</string>
+			<key>pfm_description</key>
+			<string>Do not play the system alert sound when opening super dialogs and notifications</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/Macjutsu/super/wiki/Display-Behavior#display-dialogs-and-notifications-silently</string>
+			<key>pfm_name</key>
+			<string>DisplaySilently</string>
+			<key>pfm_title</key>
+			<string>Display Silently</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>ALWAYS,DIALOG,DEADLINE,SCHEDULED,INSTALLNOW,ERROR</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>4.0</string>
+			<key>pfm_description</key>
+			<string>Disable the users ability to move super dialogs and notifications</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/Macjutsu/super/wiki/Display-Behavior#display-unmovable-dialogs-and-notifications</string>
+			<key>pfm_name</key>
+			<string>DisplayUnmovable</string>
+			<key>pfm_title</key>
+			<string>Display Unmovable</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>ALWAYS,DIALOG,DEADLINE,SCHEDULED,INSTALLNOW,ERROR</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>4.0</string>
+			<key>pfm_description</key>
+			<string>A plain text string or URL to open when the user clicks the warning button (exclamation mark icon) in all interactive dialogs (but not notifications)</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/Macjutsu/super/wiki/Display-Customization#display-help-andor-warning-buttons</string>
+			<key>pfm_name</key>
+			<string>DisplayWarningButtonString</string>
+			<key>pfm_title</key>
+			<string>Display Warning Button String</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>https://support.apple.com/en-us/HT201222</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>4.0</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>With this option enabled super leverages built-in commands and the mist command to find compatible macOS major upgrade versions. If a newer macOS major upgrade is available then the super workflow attempts to download and install the upgrade. The default super workflow always selects the newest compatible macOS major upgrade version</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/Macjutsu/super/wiki/macOS-Updates-and-Upgrades#install-macos-major-upgrades</string>
+			<key>pfm_name</key>
+			<string>InstallMacOSMajorUpgrades</string>
+			<key>pfm_title</key>
+			<string>Install MacOS Major Upgrades</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>4.0</string>
+			<key>pfm_conditionals</key>
+			<array>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_present</key>
+							<true/>
+							<key>pfm_target</key>
+							<string>DisplayAccessoryRestartWithoutUpdatesFile</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>Force a restart even if Apple software updates do not need it</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/Macjutsu/super/wiki/Alternate-Workflows#restart-without-updates</string>
+			<key>pfm_name</key>
+			<string>WorkflowRestartWithoutUpdates</string>
+			<key>pfm_title</key>
+			<string>Restart Without Updates</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>4.0</string>
+			<key>pfm_description</key>
+			<string>Limit the installation of macOS major upgrade versions to the major (whole number) version specified in this option. This option requires that you have also specified the InstallMacOSMajorUpgrades option</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/Macjutsu/super/wiki/macOS-Updates-and-Upgrades#target-macos-major-upgrade-version</string>
+			<key>pfm_name</key>
+			<string>InstallMacOSMajorVersionTarget</string>
+			<key>pfm_title</key>
+			<string>Install MacOS Major Version Target</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>14</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>4.0</string>
+			<key>pfm_conditionals</key>
+			<array>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_present</key>
+							<true/>
+							<key>pfm_target</key>
+							<string>DisplayAccessoryNonSystemUpdatesFile</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>If there are no pending restart-required macOS updates or upgrades, make the super workflow install non-system Apple software updates as soon as they become available</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/Macjutsu/super/wiki/Install-Non-System-Items#install-non-system-apple-software-updates-without-restarting</string>
+			<key>pfm_name</key>
+			<string>InstallNonSystemUpdatesWithoutRestarting</string>
+			<key>pfm_title</key>
+			<string>Install Non System Updates Without Restarting</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>4.0</string>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>Allow the super workflow to install macOS Rapid Security Response (RSR) updates</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/Macjutsu/super/wiki/macOS-Updates-and-Upgrades#install-macos-rapid-security-responses</string>
+			<key>pfm_name</key>
+			<string>InstallRapidSecurityResponses</string>
+			<key>pfm_title</key>
+			<string>Install Rapid Security Responses</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>4.0</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>Disable the automatic relaunch of the super workflow when no macOS updates or upgrades are available or allowed</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/Macjutsu/super/wiki/Alternate-Workflows#disable-automatic-relaunch</string>
+			<key>pfm_name</key>
+			<string>WorkflowDisableRelaunch</string>
+			<key>pfm_title</key>
+			<string>Workflow Disable Relaunch</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>4.0</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>Disable the super workflow from checking for, downloading, or installing any Apple software updates or upgrades, even if they are available</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/Macjutsu/super/wiki/Alternate-Workflows#disable-software-update-check</string>
+			<key>pfm_name</key>
+			<string>WorkflowDisableUpdateCheck</string>
+			<key>pfm_title</key>
+			<string>Workflow Disable Update Check</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>4.0</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>Download and prepare macOS updates or upgrades but do not start any installation workflow</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/Macjutsu/super/wiki/User-Initiated-Workflows#only-download</string>
+			<key>pfm_name</key>
+			<string>WorkflowOnlyDownload</string>
+			<key>pfm_title</key>
+			<string>Workflow Only Download</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>4.0</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>Mode to generate additional log output</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/Macjutsu/super/wiki/Troubleshooting#use-super-verbose-mode</string>
+			<key>pfm_name</key>
+			<string>VerboseMode</string>
+			<key>pfm_title</key>
+			<string>Verbose Mode</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+	</array>
+	<key>pfm_targets</key>
+	<array>
+		<string>system</string>
+	</array>
+	<key>pfm_title</key>
+	<string>S.U.P.E.R.M.A.N</string>
+	<key>pfm_unique</key>
+	<true/>
+	<key>pfm_version</key>
+	<integer>1</integer>
+</dict>
+</plist>
