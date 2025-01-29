@@ -1519,20 +1519,20 @@
 		<key>com.apple.applicationaccess-iOS</key>
 		<dict>
 			<key>modified</key>
-			<date>2024-12-13T08:49:11Z</date>
+			<date>2025-01-28T21:00:50Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.applicationaccess-iOS.plist</string>
 			<key>version</key>
-			<integer>16</integer>
+			<integer>17</integer>
 		</dict>
 		<key>com.apple.applicationaccess-macOS</key>
 		<dict>
 			<key>modified</key>
-			<date>2024-12-13T08:12:27Z</date>
+			<date>2025-01-28T21:00:50Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.applicationaccess-macOS.plist</string>
 			<key>version</key>
-			<integer>18</integer>
+			<integer>19</integer>
 		</dict>
 		<key>com.apple.applicationaccess-tvOS</key>
 		<dict>
@@ -2355,6 +2355,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2025-01-17T23:18:45Z</date>
+	<date>2025-01-26T23:23:47Z</date>
 </dict>
 </plist>
