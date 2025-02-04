@@ -1135,11 +1135,11 @@
 		<key>org.mozilla.firefox</key>
 		<dict>
 			<key>modified</key>
-			<date>2024-02-16T13:39:39Z</date>
+			<date>2025-02-04T16:20:00Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/org.mozilla.firefox.plist</string>
 			<key>version</key>
-			<integer>14</integer>
+			<integer>15</integer>
 		</dict>
 		<key>org.sveinbjorn.Platypus</key>
 		<dict>
@@ -2355,6 +2355,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2025-02-03T21:12:56Z</date>
+	<date>2025-02-04T16:20:55Z</date>
 </dict>
 </plist>
