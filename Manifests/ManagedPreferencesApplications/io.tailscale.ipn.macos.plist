@@ -13,7 +13,7 @@
 	<key>pfm_format_version</key>
 	<integer>1</integer>
 	<key>pfm_last_modified</key>
-	<date>2024-02-22T08:00:00Z</date>
+	<date>2025-02-07T19:22:04Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -132,6 +132,8 @@ A profile can consist of payloads with different version numbers. For example, c
 			<string>string</string>
 		</dict>
 		<dict>
+            <key>pfm_app_min</key>
+			<string>1.52</string>
 			<key>pfm_description</key>
 			<string>Specifies the name of the organization managing Tailscale, for instance “XYZ Corp, Inc.”. The value will be displayed in the Tailscale client, so that users can easily reach your internal support resources.</string>
 			<key>pfm_documentation_url</key>
@@ -146,6 +148,8 @@ A profile can consist of payloads with different version numbers. For example, c
 			<string>XYZ Corp, Inc.</string>
 		</dict>
 		<dict>
+            <key>pfm_app_min</key>
+			<string>1.52</string>
 			<key>pfm_description</key>
 			<string>Specifies a caption to be displayed in the Managed By view in the Tailscale client. Use this string value to provide your users with information on how to reach support resources for Tailscale in your organization.</string>
 			<key>pfm_documentation_url</key>
@@ -160,6 +164,8 @@ A profile can consist of payloads with different version numbers. For example, c
 			<string>Support is available on the #tailscale channel on the company Slack.</string>
 		</dict>
 		<dict>
+            <key>pfm_app_min</key>
+			<string>1.52</string>
 			<key>pfm_description</key>
 			<string>Specifies a URL pointing to a help desk webpage, or other helpful resources for users in the organization. Clicking the Support button in the Tailscale UI will open this webpage.</string>
 			<key>pfm_documentation_url</key>
@@ -174,6 +180,8 @@ A profile can consist of payloads with different version numbers. For example, c
 			<string>https://www.xyz-corp-example.com/helpdesk</string>
 		</dict>
 		<dict>
+            <key>pfm_app_min</key>
+			<string>1.46</string>
 			<key>pfm_description</key>
 			<string>The first time the application is opened on a Mac, Tailscale installs a macOS login helper. This allows Tailscale to start automatically when the user logs into their account. This boolean controls whether the login helper should start Tailscale at login time.</string>
 			<key>pfm_documentation_url</key>
@@ -186,6 +194,8 @@ A profile can consist of payloads with different version numbers. For example, c
 			<string>boolean</string>
 		</dict>
 		<dict>
+            <key>pfm_app_min</key>
+			<string>1.52</string>
 			<key>pfm_description</key>
 			<string>When set to true, this boolean instructs Tailscale to always be connected and actively monitor the tunnel state for disconnections. The Disconnect toggle will be disabled, to prevent users from disabling the VPN themselves. An attempt to disconnect will present a banner informing the user the organization’s policy prevents Tailscale from being disconnected. If the client detects the VPN tunnel is down because the Tailscale VPN process was terminated, Tailscale will automatically restart it and reconnect. You might want to use this policy together with an always-on VPN configuration profile.</string>
 			<key>pfm_documentation_url</key>
@@ -197,7 +207,23 @@ A profile can consist of payloads with different version numbers. For example, c
 			<key>pfm_type</key>
 			<string>boolean</string>
 		</dict>
+        <dict>
+            <key>pfm_app_min</key>
+            <string>1.68</string>
+            <key>pfm_description</key>
+            <string>By default, Tailscale v1.68 and later detect when DHCP Option 121 is being used, and the client will display a warning to the user in the UI when usage of this option is detected. You may set the HideDHCP121Warnings system policy to true to hide such warnings if you have a legitimate need to use Option 121.</string>
+            <key>pfm_documentation_url</key>
+            <string>https://tailscale.com/kb/1315/mdm-keys#suppress-dhcp-option-121-warnings</string>
+            <key>pfm_name</key>
+            <string>HideDHCP121Warnings</string>
+            <key>pfm_title</key>
+            <string>Suppress DHCP Option 121 warnings</string>
+            <key>pfm_type</key>
+            <string>boolean</string>
+        </dict>
 		<dict>
+            <key>pfm_app_min</key>
+			<string>1.52</string>
 			<key>pfm_description</key>
 			<string>Specify a tailnet, and its identity provider will be used on the login page. If the policy value is prefixed with "required:"", Tailscale will force that identity provider to be used and won’t allow logging in with anything else.</string>
 			<key>pfm_documentation_url</key>
@@ -212,6 +238,8 @@ A profile can consist of payloads with different version numbers. For example, c
 			<string>required:example.com</string>
 		</dict>
 		<dict>
+            <key>pfm_app_min</key>
+			<string>1.38.1</string>
 			<key>pfm_description</key>
 			<string>The LoginURL policy can be used to specify a custom control server URL. This should not be changed unless you are not using the standard Tailscale server. Use this policy if you’re deploying your own server, such as Headscale.</string>
 			<key>pfm_documentation_url</key>
@@ -310,6 +338,22 @@ A profile can consist of payloads with different version numbers. For example, c
 			<string>string</string>
 		</dict>
 		<dict>
+            <key>pfm_app_min</key>
+			<string>1.80</string>
+			<key>pfm_description</key>
+			<string>The Hostname policy allows IT administrators to override the hostname configured in the operating system and reported to the coordination server. This can be particularly useful on mobile devices, where the hostname provided by the operating system usually only contains the device's manufacturer name and model.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://tailscale.com/kb/1315/mdm-keys#set-whether-device-hostnames-can-be-modified</string>
+			<key>pfm_name</key>
+			<string>Hostname</string>
+			<key>pfm_title</key>
+			<string>Set whether device hostnames can be modified</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>users-macbook-pro</string>
+		</dict>
+		<dict>
 			<key>pfm_app_min</key>
 			<string>1.56</string>
 			<key>pfm_default</key>
@@ -367,7 +411,7 @@ A profile can consist of payloads with different version numbers. For example, c
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>1.56</string>
+			<string>1.52</string>
 			<key>pfm_default</key>
 			<string>user-decides</string>
 			<key>pfm_description</key>
@@ -394,6 +438,8 @@ A profile can consist of payloads with different version numbers. For example, c
 			<string>string</string>
 		</dict>
 		<dict>
+            <key>pfm_app_min</key>
+			<string>1.50</string>
 			<key>pfm_default</key>
 			<string>show</string>
 			<key>pfm_description</key>
@@ -418,6 +464,8 @@ A profile can consist of payloads with different version numbers. For example, c
 			<string>string</string>
 		</dict>
 		<dict>
+            <key>pfm_app_min</key>
+			<string>1.52</string>
 			<key>pfm_default</key>
 			<string>show</string>
 			<key>pfm_description</key>
@@ -442,6 +490,8 @@ A profile can consist of payloads with different version numbers. For example, c
 			<string>string</string>
 		</dict>
 		<dict>
+            <key>pfm_app_min</key>
+			<string>1.50</string>
 			<key>pfm_default</key>
 			<string>show</string>
 			<key>pfm_description</key>
@@ -466,6 +516,8 @@ A profile can consist of payloads with different version numbers. For example, c
 			<string>string</string>
 		</dict>
 		<dict>
+            <key>pfm_app_min</key>
+			<string>1.50</string>
 			<key>pfm_default</key>
 			<string>show</string>
 			<key>pfm_description</key>
@@ -490,6 +542,8 @@ A profile can consist of payloads with different version numbers. For example, c
 			<string>string</string>
 		</dict>
 		<dict>
+            <key>pfm_app_min</key>
+			<string>1.50</string>
 			<key>pfm_default</key>
 			<string>show</string>
 			<key>pfm_description</key>
@@ -514,6 +568,8 @@ A profile can consist of payloads with different version numbers. For example, c
 			<string>string</string>
 		</dict>
 		<dict>
+            <key>pfm_app_min</key>
+			<string>1.50</string>
 			<key>pfm_default</key>
 			<string>show</string>
 			<key>pfm_description</key>
@@ -564,6 +620,8 @@ A profile can consist of payloads with different version numbers. For example, c
 			<string>string</string>
 		</dict>
 		<dict>
+            <key>pfm_app_min</key>
+			<string>1.52</string>
 			<key>pfm_description</key>
 			<string>Can be used to hide one or more categories of network devices normally displayed in the Tailscale client. Administrators can choose to hide: devices owned by the current user; devices owned by other users; tagged devices. If all three options are chosen, the "Network Devices" menu item disappears entirely and users aren’t able to see any device on the tailnet.</string>
 			<key>pfm_documentation_url</key>
@@ -595,6 +653,8 @@ A profile can consist of payloads with different version numbers. For example, c
 			<string>array</string>
 		</dict>
 		<dict>
+            <key>pfm_app_min</key>
+			<string>1.50</string>
 			<key>pfm_description</key>
 			<string>When you use the Tailscale menu bar item to copy to the Clipboard the IP address of a device, a notification displaying the IP address is presented. Use this to suppress this Copied IP address to clipboard notification.</string>
 			<key>pfm_documentation_url</key>
@@ -606,7 +666,35 @@ A profile can consist of payloads with different version numbers. For example, c
 			<key>pfm_type</key>
 			<string>boolean</string>
 		</dict>
+        <dict>
+			<key>pfm_app_min</key>
+			<string>1.68</string>
+            <key>pfm_default</key>
+            <string>hide</string>
+			<key>pfm_description</key>
+			<string>When set to hide, the user will not be able to install the CLI helper, and will instead be told to container their administrator.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://tailscale.com/kb/1315/mdm-keys#hide-the-cli-integration-installer</string>
+			<key>pfm_name</key>
+			<string>CLIIntegration</string>
+			<key>pfm_title</key>
+			<string>Hide the CLI integration installer</string>
+            <key>pfm_range_list</key>
+			<array>
+				<string>show</string>
+				<string>hide</string>
+			</array>
+			<key>pfm_range_list_titles</key>
+			<array>
+				<string>Show</string>
+				<string>Hide</string>
+			</array>
+			<key>pfm_type</key>
+			<string>string</string>
+        </dict>
 		<dict>
+            <key>pfm_app_min</key>
+			<string>1.46</string>
 			<key>pfm_description</key>
 			<string>When you start Tailscale on your Mac for the first time, an onboarding flow is presented. It explains the Tailscale privacy policy, and guides the user in setting up the VPN configuration on their Mac. You might want to disable this onboarding flow if you are going to automatically set up the VPN configuration on the system by using a configuration profile. In order to do so, this boolean suppresses the onboarding flow when Tailscale launches for the first time and the value is set to true.</string>
 			<key>pfm_documentation_url</key>
@@ -617,6 +705,32 @@ A profile can consist of payloads with different version numbers. For example, c
 			<string>Suppress the first launch onboarding flow</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.52</string>
+			<key>pfm_default</key>
+			<string>show</string>
+			<key>pfm_description</key>
+			<string>The VPNOnDemandSettings policy can be used to show or hide the VPN On Demand menu item. You might want to use this setting if you're deploying your own VPN configuration profile for Tailscale, and you don't want your users to interact with the on-demand VPN configuration you set up for them.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://tailscale.com/kb/1315/mdm-keys#hide-the-vpn-on-demand-menu-item</string>
+			<key>pfm_name</key>
+			<string>VPNOnDemandSettings</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>show</string>
+				<string>hide</string>
+			</array>
+			<key>pfm_range_list_titles</key>
+			<array>
+				<string>Show</string>
+				<string>Hide</string>
+			</array>
+			<key>pfm_title</key>
+			<string>Hide the VPN On Demand menu item</string>
+			<key>pfm_type</key>
+			<string>string</string>
 		</dict>
 	</array>
 	<key>pfm_targets</key>
@@ -629,6 +743,6 @@ A profile can consist of payloads with different version numbers. For example, c
 	<key>pfm_unique</key>
 	<false/>
 	<key>pfm_version</key>
-	<integer>4</integer>
+	<integer>5</integer>
 </dict>
 </plist>
