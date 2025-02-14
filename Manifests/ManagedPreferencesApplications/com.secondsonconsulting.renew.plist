@@ -13,7 +13,7 @@
 	<key>pfm_format_version</key>
 	<integer>1</integer>
 	<key>pfm_last_modified</key>
-	<date>2023-08-21T10:35:00Z</date>
+	<date>2025-02-14T12:33:00Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -235,6 +235,20 @@ A profile can consist of payloads with different version numbers. For example, c
 			<string>OptionalArguments</string>
 			<key>pfm_subkeys</key>
 			<array>
+				<dict>
+					<key>pfm_app_min</key>
+					<string>2.2</string>
+					<key>pfm_default</key>
+					<true/>
+					<key>pfm_description</key>
+					<string>If enabled, interacting with the notification will initiate a restart. Defaults to true.</string>
+					<key>pfm_name</key>
+					<string>NotificationActionEnabled</string>
+					<key>pfm_title</key>
+					<string>Notification Action Enabled</string>
+					<key>pfm_type</key>
+					<string>boolean</string>
+				</dict>
 				<dict>
 					<key>pfm_description</key>
 					<string>The title of your dialog windows and notifications. Maps to the swiftDialog option: --title</string>
@@ -465,6 +479,27 @@ A profile can consist of payloads with different version numbers. For example, c
 				</dict>
 				<dict>
 					<key>pfm_description</key>
+					<string>The applications which Renew ignores when checking for display assertions. (You can specify one or more, EX: zoom.us firefox).</string>
+					<key>pfm_documentation_url</key>
+					<string>https://github.com/SecondSonConsulting/Renew/wiki/OptionalArguments#ignoreassertions</string>
+					<key>pfm_name</key>
+					<string>IgnoreAssertions</string>
+					<key>pfm_subkeys</key>
+					<array>
+						<dict>
+							<key>pfm_title</key>
+							<string>Applications</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+					</array>
+					<key>pfm_title</key>
+					<string>Applications to Ignore</string>
+					<key>pfm_type</key>
+					<string>array</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
 					<string>Use this option to enable "Deadline" mode. If a device's uptime exceeds the "Deadline" value in days, Renew will enter Aggressive Mode regardless of the remaining deferrals.</string>
 					<key>pfm_documentation_url</key>
 					<string>https://github.com/SecondSonConsulting/Renew/wiki/OptionalArguments#deadline</string>
@@ -505,6 +540,6 @@ A profile can consist of payloads with different version numbers. For example, c
 	<key>pfm_unique</key>
 	<true/>
 	<key>pfm_version</key>
-	<integer>1</integer>
+	<integer>2</integer>
 </dict>
 </plist>
