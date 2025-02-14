@@ -13,7 +13,7 @@
 	<key>pfm_format_version</key>
 	<integer>1</integer>
 	<key>pfm_last_modified</key>
-	<date>2025-02-12T00:00:00Z</date>
+	<date>2025-02-14T12:33:00Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -494,7 +494,7 @@ A profile can consist of payloads with different version numbers. For example, c
 						</dict>
 					</array>
 					<key>pfm_title</key>
-					<string>Applications to ignore</string>
+					<string>Applications to Ignore</string>
 					<key>pfm_type</key>
 					<string>array</string>
 				</dict>
