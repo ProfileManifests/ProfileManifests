@@ -46,6 +46,13 @@
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApple/com.apple.TimeMachine.png</string>
 		</dict>
+		<key>com.apple.dt.Xcode</key>
+		<dict>
+			<key>hash</key>
+			<string>568946afec7773f3d6c0187d83357b64</string>
+			<key>path</key>
+			<string>Icons/ManagedPreferencesApple/com.apple.dt.Xcode.png</string>
+		</dict>
 		<key>com.apple.finder</key>
 		<dict>
 			<key>hash</key>
@@ -553,6 +560,13 @@
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.microsoft.wdav.png</string>
 		</dict>
+		<key>com.northpolesec.santa</key>
+		<dict>
+			<key>hash</key>
+			<string>2121b19796cc9342602853f7d5f9f341</string>
+			<key>path</key>
+			<string>Icons/ManagedPreferencesApplications/com.northpolesec.santa.png</string>
+		</dict>
 		<key>com.papercut.printdeploy.client</key>
 		<dict>
 			<key>hash</key>
@@ -584,7 +598,7 @@
 		<key>com.secondsonconsulting.renew</key>
 		<dict>
 			<key>hash</key>
-			<string>ed5a43a14aa821fb67aeb6c1d1f03e80</string>
+			<string>d13d3cae4e07554257681e2f3ffbc9e8</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.secondsonconsulting.renew.png</string>
 		</dict>
@@ -1510,6 +1524,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2025-01-29T00:28:10Z</date>
+	<date>2025-02-14T12:34:19Z</date>
 </dict>
 </plist>
