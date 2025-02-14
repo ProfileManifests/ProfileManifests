@@ -147,7 +147,7 @@ A profile can consist of payloads with different version numbers. For example, c
 			<key>pfm_name</key>
 			<string>IDEProhibitRemoteModelInteraction</string>
 			<key>pfm_title</key>
-			<string>Disable Swift Assit in Xcode</string>
+			<string>Disable Swift Assist in Xcode</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 		</dict>
