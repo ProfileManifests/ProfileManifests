@@ -258,7 +258,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_app_min</key>
 			<string>4.0</string>
 			<key>pfm_default</key>
-			<true/>
+			<false/>
 			<key>pfm_description</key>
 			<string>If any managed automatic authentication method fails validation, then failover to local end user authentication</string>
 			<key>pfm_documentation_url</key>
@@ -952,7 +952,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_app_min</key>
 			<string>5.0</string>
 			<key>pfm_default</key>
-			<true/>
+			<false/>
 			<key>pfm_description</key>
 			<string>Leverages the public MacAdmin's SOFA macOS machine readable JSON feed to discover release dates for use in workflows with deadline day options</string>
 			<key>pfm_documentation_url</key>
@@ -968,7 +968,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_app_min</key>
 			<string>5.0</string>
 			<key>pfm_default</key>
-			<true/>
+			<false/>
 			<key>pfm_description</key>
 			<string>Adds a Schedule button to the standard deferral dialog</string>
 			<key>pfm_documentation_url</key>
