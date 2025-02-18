@@ -15,7 +15,7 @@
 	<key>pfm_last_modified</key>
 	<date>2025-02-13T00:00:00Z</date>
 	<key>pfm_macos_min</key>
-	<string>12.0</string>
+	<string>11.0</string>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -197,6 +197,8 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<string>initialRefreshCycle</string>
 					<string>maxRandomDelayInSeconds</string>
 					<string>noTimers</string>
+					<string>nudgeMajorUpgradeEventLaunchDelay</string>
+					<string>nudgeMinorUpdateEventLaunchDelay</string>
 					<string>nudgeRefreshCycle</string>
 					<string>randomDelay</string>
 					<string>userExperience</string>
