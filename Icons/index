@@ -567,6 +567,20 @@
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.northpolesec.santa.png</string>
 		</dict>
+		<key>com.okta.mobile</key>
+		<dict>
+			<key>hash</key>
+			<string>4ddf4b38aa64491a463bed5ab2081aa3</string>
+			<key>path</key>
+			<string>Icons/ManagedPreferencesApplications/com.okta.mobile.png</string>
+		</dict>
+		<key>com.okta.mobile.auth-service-extension</key>
+		<dict>
+			<key>hash</key>
+			<string>4ddf4b38aa64491a463bed5ab2081aa3</string>
+			<key>path</key>
+			<string>Icons/ManagedPreferencesApplications/com.okta.mobile.auth-service-extension.png</string>
+		</dict>
 		<key>com.papercut.printdeploy.client</key>
 		<dict>
 			<key>hash</key>
@@ -1524,6 +1538,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2025-02-18T17:09:34Z</date>
+	<date>2025-02-20T08:48:02Z</date>
 </dict>
 </plist>
