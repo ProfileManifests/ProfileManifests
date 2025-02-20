@@ -495,7 +495,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_name</key>
 			<string>WarnAboutFraudulentWebsites</string>
 			<key>pfm_title</key>
-			<string>Warn about Fraudulent Website</string>
+			<string>Warn about Fraudulent Websites</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 		</dict>
