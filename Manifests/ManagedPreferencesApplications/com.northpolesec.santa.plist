@@ -157,6 +157,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<string>BannedBlockMessage</string>
 					<string>ModeNotificationMonitor</string>
 					<string>ModeNotificationLockdown</string>
+					<string>DismissText</string>
 				</array>
 				<key>Event Logging</key>
 				<array>
@@ -167,6 +168,11 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<string>MailDirectorySizeThresholdMB</string>
 					<string>MailDirectoryEventMaxFlushTimeSec</string>
 					<string>EnableMachineIDDecoration</string>
+					<string>EnableDebugLogging</string>
+					<string>EnableSilentMode</string>
+					<string>EnableSilentTTYMode</string>
+					<string>EnableStandalonePasswordFallback</string>
+					<string>EnableTransitiveRules</string>
 				</array>
 				<key>General</key>
 				<array>
@@ -205,6 +211,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<string>MachineIDKey</string>
 					<string>EnableAllEventUpload</string>
 					<string>DisableUnknownEventUpload</string>
+					<string>BlockUSBMount</string>
 				</array>
 			</dict>
 			<key>pfm_type</key>
@@ -306,6 +313,18 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_default</key>
+			<string>Dismiss</string>
+			<key>pfm_description</key>
+			<string>The text to display on the button that dismisses the binary block dialog.</string>
+			<key>pfm_name</key>
+			<string>DismissText</string>
+			<key>pfm_title</key>
+			<string>Dismiss Text</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
 			<string>Block binaries with a bad signing chain, unless explicitly allowed.</string>
@@ -315,6 +334,84 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>EnableBadSignatureProtection</string>
 			<key>pfm_title</key>
 			<string>Bad Signature Protection</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>Blocking USB Mass storage</string>
+			<key>pfm_name</key>
+			<string>BlockUSBMount</string>
+			<key>pfm_title</key>
+			<string>Block USB Mount</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>If true, client will log additional debug messages to the Apple Unified Log</string>
+			<key>pfm_name</key>
+			<string>EnableDebugLogging</string>
+			<key>pfm_note</key>
+			<string>For example, transitive rule creation logs can be viewed with log stream --predicate 'sender=="com.northpolesec.santa.daemon"'</string>
+			<key>pfm_title</key>
+			<string>Debug Logging</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>If true, Santa will not post any GUI notifications</string>
+			<key>pfm_name</key>
+			<string>EnableSilentMode</string>
+			<key>pfm_note</key>
+			<string>This can be a very confusing experience for users, use with caution</string>
+			<key>pfm_title</key>
+			<string>Silent Mode</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>If true, Santa will not post any TTY notifications</string>
+			<key>pfm_name</key>
+			<string>EnableSilentTTYMode</string>
+			<key>pfm_note</key>
+			<string>This can be a very confusing experience for users, use with caution</string>
+			<key>pfm_title</key>
+			<string>Silent Mode TTY</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>If true, Santa will fallback to password authorization for Standalone mode</string>
+			<key>pfm_name</key>
+			<string>EnableStandalonePasswordFallback</string>
+			<key>pfm_title</key>
+			<string>Standalone Password Fallback</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>If true, Santa will respect compiler rule types and create allow rules for the executables they produce</string>
+			<key>pfm_name</key>
+			<string>EnableTransitiveRules</string>
+			<key>pfm_title</key>
+			<string>Transitive Rules</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 		</dict>
