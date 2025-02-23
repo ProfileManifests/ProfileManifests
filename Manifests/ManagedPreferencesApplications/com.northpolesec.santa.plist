@@ -870,7 +870,6 @@ For example: https://sync-server-hostname/%machine_id%/%file_sha%</string>
 				<string>syslog</string>
 				<string>filelog</string>
 				<string>protobuf</string>
-				<string></string>
 			</array>
 			<key>pfm_range_list_titles</key>
 			<array>
