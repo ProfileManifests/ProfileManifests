@@ -193,7 +193,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<string>MetricExportTimeout</string>
 					<string>MetricExtraLabels</string>
 				</array>
-				<key>SyncServer</key>
+				<key>Sync Server</key>
 				<array>
 					<string>SyncBaseURL</string>
 					<string>SyncEnableCleanSyncEventUpload</string>
