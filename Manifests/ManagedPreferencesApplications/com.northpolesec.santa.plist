@@ -173,6 +173,10 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<string>EnableSilentTTYMode</string>
 					<string>EnableStandalonePasswordFallback</string>
 					<string>EnableTransitiveRules</string>
+					<string>SpoolDirectory</string>
+					<string>SpoolDirectoryFileSizeThresholdKB</string>
+					<string>SpoolDirectoryEventMaxFlushTimeSec</string>
+					<string>SpoolDirectorySizeThresholdMB</string>
 				</array>
 				<key>General</key>
 				<array>
@@ -1209,6 +1213,136 @@ For example: https://sync-server-hostname/%machine_id%/%file_sha%</string>
 			<string>MetricExportTimeout</string>
 			<key>pfm_title</key>
 			<string>Metric Export Timeout</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+			<key>pfm_value_unit</key>
+			<string>seconds</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>/var/db/santa/spool</string>
+			<key>pfm_description</key>
+			<string>Provides the base directory used to save files according to a maildir-like format</string>
+			<key>pfm_exclude</key>
+			<array>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_n_range_list</key>
+							<array>
+								<string>protobuf</string>
+							</array>
+							<key>pfm_present</key>
+							<false/>
+							<key>pfm_target</key>
+							<string>EventLogType</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+			<key>pfm_name</key>
+			<string>SpoolDirectory</string>
+			<key>pfm_title</key>
+			<string>Spool Directory</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<integer>100</integer>
+			<key>pfm_description</key>
+			<string>Defines the per-file size limit in KB for files stored in the spool directory</string>
+			<key>pfm_exclude</key>
+			<array>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_n_range_list</key>
+							<array>
+								<string>protobuf</string>
+							</array>
+							<key>pfm_present</key>
+							<false/>
+							<key>pfm_target</key>
+							<string>EventLogType</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+			<key>pfm_name</key>
+			<string>SpoolDirectoryFileSizeThresholdKB</string>
+			<key>pfm_note</key>
+			<string>Events are buffered in memory until this threshold would be exceeded (or SpoolDirectoryEventMaxFlushTimeSec is exceeded)</string>
+			<key>pfm_title</key>
+			<string>Spool Directory File Size Threshold</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+			<key>pfm_value_unit</key>
+			<string>KB</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<integer>10</integer>
+			<key>pfm_description</key>
+			<string>Defines the maximum amount of time in seconds events will stay buffered in memory before being flushed to disk, regardless of whether or not SpoolDirectoryFileSizeThresholdKB would be exceeded</string>
+			<key>pfm_exclude</key>
+			<array>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_n_range_list</key>
+							<array>
+								<string>protobuf</string>
+							</array>
+							<key>pfm_present</key>
+							<false/>
+							<key>pfm_target</key>
+							<string>EventLogType</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+			<key>pfm_name</key>
+			<string>SpoolDirectoryEventMaxFlushTimeSec</string>
+			<key>pfm_title</key>
+			<string>Spool Directory Event Max Flush Time</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+			<key>pfm_value_unit</key>
+			<string>seconds</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<integer>100</integer>
+			<key>pfm_description</key>
+			<string>Defines the total combined size limit of all files in MB in the spool directory</string>
+			<key>pfm_exclude</key>
+			<array>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_n_range_list</key>
+							<array>
+								<string>protobuf</string>
+							</array>
+							<key>pfm_present</key>
+							<false/>
+							<key>pfm_target</key>
+							<string>EventLogType</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+			<key>pfm_name</key>
+			<string>SpoolDirectorySizeThresholdMB</string>
+			<key>pfm_note</key>
+			<string>Once the threshold is met, no more events will be saved</string>
+			<key>pfm_title</key>
+			<string>Spool Directory Size Threshold</string>
 			<key>pfm_type</key>
 			<string>integer</string>
 			<key>pfm_value_unit</key>
