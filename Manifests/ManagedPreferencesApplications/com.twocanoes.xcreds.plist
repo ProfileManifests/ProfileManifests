@@ -5,7 +5,7 @@
 	<key>pfm_app_url</key>
 	<string>https://github.com/twocanoes/xcreds</string>
 	<key>pfm_description</key>
-	<string>XCreds 5.1 (7264) OAuth Settings</string>
+	<string>XCreds 5.2 (8268) OAuth Settings</string>
 	<key>pfm_documentation_url</key>
 	<string>https://twocanoes.com/knowledge-base/xcreds-admin-guide/#preferences</string>
 	<key>pfm_domain</key>
@@ -13,7 +13,7 @@
 	<key>pfm_format_version</key>
 	<integer>1</integer>
 	<key>pfm_last_modified</key>
-	<date>2024-10-23T21:57:00Z</date>
+	<date>2025-02-04T20:37:42Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -706,6 +706,22 @@ Note that Google does not support the offline_access scope so instead use the pr
 			<string>boolean</string>
 		</dict>
 		<dict>
+			<key>pfm_app_min</key>
+			<string>5.2</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>Do not prompt for local password.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://twocanoes.com/knowledge-base/xcreds-admin-guide/#preferences</string>
+			<key>pfm_name</key>
+			<string>shouldSuppressLocalPasswordPrompt</string>
+			<key>pfm_title</key>
+			<string>Should Suppress Local Password Prompt</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
@@ -917,7 +933,7 @@ Note that Google does not support the offline_access scope so instead use the pr
 			<key>pfm_documentation_url</key>
 			<string>https://twocanoes.com/knowledge-base/xcreds-admin-guide/#preferences</string>
 			<key>pfm_name</key>
-			<string>shouldShowMenuBarSignInWithoutLoginWindowSignIn</string>
+			<string>shouldShowMenuBarSignInWithoutLoginWindowSignin</string>
 			<key>pfm_title</key>
 			<string>Should Show Menu Bar Sign In Without Login Window Sign In</string>
 			<key>pfm_type</key>
@@ -1199,7 +1215,7 @@ Note that Google does not support the offline_access scope so instead use the pr
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>Reset the keychain without prompting if the login password doesn't match the local password.</string>
+			<string>When a local user password does not match the cloud or AD password, this key will allow the user to select a Reset button to set their password to match their AD/cloud password, move their current keychain aside and create a new keychain. If XCreds does not have access to local admin credentials set from the XCreds command line tools, the user will prompted to enter local admin credentials.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://twocanoes.com/knowledge-base/xcreds-admin-guide/#preferences</string>
 			<key>pfm_name</key>
@@ -1213,7 +1229,7 @@ Note that Google does not support the offline_access scope so instead use the pr
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>Update the password silently to the new one. Used with the KeychainReset if the user has a secure token.</string>
+			<string>Update the local user password silently to match the cloud / AD password. Requires access to admin credentials. See command line help to set admin username and password.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://twocanoes.com/knowledge-base/xcreds-admin-guide/#preferences</string>
 			<key>pfm_name</key>
@@ -1353,6 +1369,57 @@ Note that Google does not support the offline_access scope so instead use the pr
 			<string>IDP Host Names</string>
 			<key>pfm_type</key>
 			<string>array</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>5.2</string>
+			<key>pfm_description</key>
+			<string>array of additional AD domains to accept</string>
+			<key>pfm_name</key>
+			<string>AdditionalADDomains</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_name</key>
+					<string>Domain</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>Additional AD Domains</string>
+			<key>pfm_type</key>
+			<string>array</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>5.2</string>
+			<key>pfm_description</key>
+			<string>Name of slot for CCID reader for reading RFID cards</string>
+			<key>pfm_documentation_url</key>
+			<string>https://twocanoes.com/knowledge-base/xcreds-admin-guide/#preferences</string>
+			<key>pfm_name</key>
+			<string>ccidSlotName</string>
+			<key>pfm_title</key>
+			<string>CCID Slot Name</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>5.2</string>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>If an unknown RFID card is tapped, show option to pair with local account.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://twocanoes.com/knowledge-base/xcreds-admin-guide/#preferences</string>
+			<key>pfm_name</key>
+			<string>shouldAllowLoginCardSetup</string>
+			<key>pfm_title</key>
+			<string>Should Allow Login Card Setup</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
@@ -1520,6 +1587,50 @@ changing “passwordID” to the correct element ID. If the value you typed into
 			<string>Override Script Path</string>
 			<key>pfm_type</key>
 			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>5.2</string>
+			<key>pfm_description</key>
+			<string>In some Active Directory environments, users do not use username@domain to login; they use a UPN suffix to make the username easier to use. This setting maps the UPN suffix to the correct AD domain name. For example, if you have an AD domain of foo.com but want users to sign in as user@bar.com, a UPN suffix of foo.com is created in AD and the user account is set to user@foo.com. This setting then would map foo.com to bar.com by setting the key upn to foo.com and the domain key to bar.com.</string>
+			<key>pfm_name</key>
+			<string>upnSuffixToDomainMappings</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_hidden</key>
+					<string>container</string>
+					<key>pfm_subkeys</key>
+					<array>
+						<dict>
+							<key>pfm_description</key>
+							<string>UPN</string>
+							<key>pfm_name</key>
+							<string>upn</string>
+							<key>pfm_title</key>
+							<string>UPN</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+						<dict>
+							<key>pfm_description</key>
+							<string>domain</string>
+							<key>pfm_name</key>
+							<string>domain</string>
+							<key>pfm_title</key>
+							<string>domain</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+					</array>
+					<key>pfm_type</key>
+					<string>dictionary</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>UPN Suffix To Domain Mappings</string>
+			<key>pfm_type</key>
+			<string>array</string>
 		</dict>
 		<dict>
 			<key>pfm_description</key>
@@ -1720,6 +1831,6 @@ changing “passwordID” to the correct element ID. If the value you typed into
 	<key>pfm_unique</key>
 	<false/>
 	<key>pfm_version</key>
-	<integer>10</integer>
+	<integer>11</integer>
 </dict>
 </plist>
