@@ -829,7 +829,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				<string>Always</string>
 				<string>Never</string>
 				<string>Third Parties except sites you visited</string>
-				<string>Thrid Parties</string>
+				<string>Third Parties</string>
 			</array>
 			<key>pfm_title</key>
 			<string>Block cookies and other website data</string>
