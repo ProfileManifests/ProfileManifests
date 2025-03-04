@@ -482,6 +482,11 @@ Available in iOS 12 and later, and macOS 10.14 and later. Requires a supervised 
 				<dict>
 					<key>pfmx_introduced</key>
 					<string>14.5</string>
+					<key>pfmx_shared_ipad</key>
+					<dict>
+						<key>pfmx_mode</key>
+						<string>forbidden</string>
+					</dict>
 					<key>pfmx_user_enrollment</key>
 					<dict>
 						<key>pfmx_mode</key>
@@ -673,6 +678,11 @@ Available in iOS 12 and later, and macOS 10.14 and later. Requires a supervised 
 				<dict>
 					<key>pfmx_introduced</key>
 					<string>14.0</string>
+					<key>pfmx_shared_ipad</key>
+					<dict>
+						<key>pfmx_mode</key>
+						<string>ignored</string>
+					</dict>
 					<key>pfmx_user_enrollment</key>
 					<dict>
 						<key>pfmx_mode</key>
@@ -2250,6 +2260,11 @@ Available in iOS 12 and later, and macOS 10.14 and later. Requires a supervised 
 				<dict>
 					<key>pfmx_introduced</key>
 					<string>6.0</string>
+					<key>pfmx_shared_ipad</key>
+					<dict>
+						<key>pfmx_mode</key>
+						<string>ignored</string>
+					</dict>
 					<key>pfmx_supervised</key>
 					<true/>
 					<key>pfmx_user_enrollment</key>
@@ -3788,6 +3803,11 @@ Available in iOS 4.0 and later, macOS 15 and later, and tvOS 11.3 and later. Req
 				<dict>
 					<key>pfmx_introduced</key>
 					<string>9.0</string>
+					<key>pfmx_shared_ipad</key>
+					<dict>
+						<key>pfmx_mode</key>
+						<string>forbidden</string>
+					</dict>
 					<key>pfmx_supervised</key>
 					<true/>
 					<key>pfmx_user_enrollment</key>
@@ -4839,6 +4859,11 @@ The system still allows third-party password managers, and apps can use AutoFill
 				<dict>
 					<key>pfmx_introduced</key>
 					<string>13.0</string>
+					<key>pfmx_shared_ipad</key>
+					<dict>
+						<key>pfmx_mode</key>
+						<string>forbidden</string>
+					</dict>
 					<key>pfmx_supervised</key>
 					<true/>
 					<key>pfmx_user_enrollment</key>
@@ -4895,6 +4920,11 @@ The system still allows third-party password managers, and apps can use AutoFill
 				<dict>
 					<key>pfmx_introduced</key>
 					<string>13.0</string>
+					<key>pfmx_shared_ipad</key>
+					<dict>
+						<key>pfmx_mode</key>
+						<string>forbidden</string>
+					</dict>
 					<key>pfmx_supervised</key>
 					<true/>
 					<key>pfmx_user_enrollment</key>
@@ -4982,7 +5012,14 @@ The system still allows third-party password managers, and apps can use AutoFill
 				<key>visionOS</key>
 				<dict>
 					<key>pfmx_introduced</key>
-					<string>n/a</string>
+					<string>2.4</string>
+					<key>pfmx_supervised</key>
+					<true/>
+					<key>pfmx_user_enrollment</key>
+					<dict>
+						<key>pfmx_mode</key>
+						<string>forbidden</string>
+					</dict>
 				</dict>
 				<key>watchOS</key>
 				<dict>
@@ -5043,7 +5080,14 @@ The system still allows third-party password managers, and apps can use AutoFill
 				<key>visionOS</key>
 				<dict>
 					<key>pfmx_introduced</key>
-					<string>n/a</string>
+					<string>2.4</string>
+					<key>pfmx_supervised</key>
+					<true/>
+					<key>pfmx_user_enrollment</key>
+					<dict>
+						<key>pfmx_mode</key>
+						<string>forbidden</string>
+					</dict>
 				</dict>
 				<key>watchOS</key>
 				<dict>
@@ -5165,7 +5209,14 @@ The system still allows third-party password managers, and apps can use AutoFill
 				<key>visionOS</key>
 				<dict>
 					<key>pfmx_introduced</key>
-					<string>n/a</string>
+					<string>2.4</string>
+					<key>pfmx_supervised</key>
+					<true/>
+					<key>pfmx_user_enrollment</key>
+					<dict>
+						<key>pfmx_mode</key>
+						<string>forbidden</string>
+					</dict>
 				</dict>
 				<key>watchOS</key>
 				<dict>
@@ -5224,7 +5275,14 @@ The system still allows third-party password managers, and apps can use AutoFill
 				<key>visionOS</key>
 				<dict>
 					<key>pfmx_introduced</key>
-					<string>n/a</string>
+					<string>2.4</string>
+					<key>pfmx_supervised</key>
+					<true/>
+					<key>pfmx_user_enrollment</key>
+					<dict>
+						<key>pfmx_mode</key>
+						<string>forbidden</string>
+					</dict>
 				</dict>
 				<key>watchOS</key>
 				<dict>
@@ -5246,6 +5304,58 @@ The system still allows third-party password managers, and apps can use AutoFill
 			<true/>
 			<key>pfm_type</key>
 			<string>boolean</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>iOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>18.4</string>
+					<key>pfmx_shared_ipad</key>
+					<dict>
+						<key>pfmx_mode</key>
+						<string>forbidden</string>
+					</dict>
+					<key>pfmx_supervised</key>
+					<true/>
+					<key>pfmx_user_enrollment</key>
+					<dict>
+						<key>pfmx_mode</key>
+						<string>forbidden</string>
+					</dict>
+				</dict>
+				<key>macOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>15.4</string>
+					<key>pfmx_user_enrollment</key>
+					<dict>
+						<key>pfmx_mode</key>
+						<string>forbidden</string>
+					</dict>
+				</dict>
+				<key>tvOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>n/a</string>
+				</dict>
+				<key>visionOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>2.4</string>
+					<key>pfmx_supervised</key>
+					<true/>
+					<key>pfmx_user_enrollment</key>
+					<dict>
+						<key>pfmx_mode</key>
+						<string>forbidden</string>
+					</dict>
+				</dict>
+				<key>watchOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>n/a</string>
+				</dict>
+			</dict>
 		</dict>
 		<dict>
 			<key>pfm_default</key>
@@ -5362,8 +5472,6 @@ The system still allows third-party password managers, and apps can use AutoFill
 						<key>pfmx_mode</key>
 						<string>forbidden</string>
 					</dict>
-					<key>pfmx_supervised</key>
-					<false/>
 					<key>pfmx_user_enrollment</key>
 					<dict>
 						<key>pfmx_mode</key>
@@ -5388,7 +5496,12 @@ The system still allows third-party password managers, and apps can use AutoFill
 				<key>visionOS</key>
 				<dict>
 					<key>pfmx_introduced</key>
-					<string>n/a</string>
+					<string>15.4</string>
+					<key>pfmx_user_enrollment</key>
+					<dict>
+						<key>pfmx_mode</key>
+						<string>allowed</string>
+					</dict>
 				</dict>
 				<key>watchOS</key>
 				<dict>
@@ -5423,12 +5536,10 @@ The system still allows third-party password managers, and apps can use AutoFill
 						<key>pfmx_mode</key>
 						<string>forbidden</string>
 					</dict>
-					<key>pfmx_supervised</key>
-					<true/>
 					<key>pfmx_user_enrollment</key>
 					<dict>
 						<key>pfmx_mode</key>
-						<string>forbidden</string>
+						<string>allowed</string>
 					</dict>
 				</dict>
 				<key>macOS</key>
@@ -5438,7 +5549,7 @@ The system still allows third-party password managers, and apps can use AutoFill
 					<key>pfmx_user_enrollment</key>
 					<dict>
 						<key>pfmx_mode</key>
-						<string>forbidden</string>
+						<string>allowed</string>
 					</dict>
 				</dict>
 				<key>tvOS</key>
@@ -5449,7 +5560,12 @@ The system still allows third-party password managers, and apps can use AutoFill
 				<key>visionOS</key>
 				<dict>
 					<key>pfmx_introduced</key>
-					<string>n/a</string>
+					<string>15.4</string>
+					<key>pfmx_user_enrollment</key>
+					<dict>
+						<key>pfmx_mode</key>
+						<string>allowed</string>
+					</dict>
 				</dict>
 				<key>watchOS</key>
 				<dict>
@@ -5524,8 +5640,17 @@ The system still allows third-party password managers, and apps can use AutoFill
 				</dict>
 				<key>visionOS</key>
 				<dict>
+					<key>pfmx_allow_manual_install</key>
+					<false/>
 					<key>pfmx_introduced</key>
-					<string>n/a</string>
+					<string>2.4</string>
+					<key>pfmx_supervised</key>
+					<true/>
+					<key>pfmx_user_enrollment</key>
+					<dict>
+						<key>pfmx_mode</key>
+						<string>forbidden</string>
+					</dict>
 				</dict>
 				<key>watchOS</key>
 				<dict>
@@ -5606,6 +5731,51 @@ The system still allows third-party password managers, and apps can use AutoFill
 			<true/>
 			<key>pfm_type</key>
 			<string>boolean</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>iOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>18.4</string>
+					<key>pfmx_shared_ipad</key>
+					<dict>
+						<key>pfmx_mode</key>
+						<string>forbidden</string>
+					</dict>
+					<key>pfmx_supervised</key>
+					<true/>
+					<key>pfmx_user_enrollment</key>
+					<dict>
+						<key>pfmx_mode</key>
+						<string>forbidden</string>
+					</dict>
+				</dict>
+				<key>macOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>15.4</string>
+					<key>pfmx_user_enrollment</key>
+					<dict>
+						<key>pfmx_mode</key>
+						<string>forbidden</string>
+					</dict>
+				</dict>
+				<key>tvOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>n/a</string>
+				</dict>
+				<key>visionOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>n/a</string>
+				</dict>
+				<key>watchOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>n/a</string>
+				</dict>
+			</dict>
 		</dict>
 		<dict>
 			<key>pfm_default</key>
@@ -5622,6 +5792,51 @@ The system still allows third-party password managers, and apps can use AutoFill
 			<string>Allow Apple Intelligence Report</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>iOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>18.4</string>
+					<key>pfmx_shared_ipad</key>
+					<dict>
+						<key>pfmx_mode</key>
+						<string>forbidden</string>
+					</dict>
+					<key>pfmx_supervised</key>
+					<true/>
+					<key>pfmx_user_enrollment</key>
+					<dict>
+						<key>pfmx_mode</key>
+						<string>forbidden</string>
+					</dict>
+				</dict>
+				<key>macOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>15.4</string>
+					<key>pfmx_user_enrollment</key>
+					<dict>
+						<key>pfmx_mode</key>
+						<string>forbidden</string>
+					</dict>
+				</dict>
+				<key>tvOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>n/a</string>
+				</dict>
+				<key>visionOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>n/a</string>
+				</dict>
+				<key>watchOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>n/a</string>
+				</dict>
+			</dict>
 		</dict>
 		<dict>
 			<key>pfm_default</key>
@@ -5636,6 +5851,58 @@ The system still allows third-party password managers, and apps can use AutoFill
 			<true/>
 			<key>pfm_type</key>
 			<string>boolean</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>iOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>18.4</string>
+					<key>pfmx_shared_ipad</key>
+					<dict>
+						<key>pfmx_mode</key>
+						<string>forbidden</string>
+					</dict>
+					<key>pfmx_supervised</key>
+					<true/>
+					<key>pfmx_user_enrollment</key>
+					<dict>
+						<key>pfmx_mode</key>
+						<string>forbidden</string>
+					</dict>
+				</dict>
+				<key>macOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>15.4</string>
+					<key>pfmx_user_enrollment</key>
+					<dict>
+						<key>pfmx_mode</key>
+						<string>forbidden</string>
+					</dict>
+				</dict>
+				<key>tvOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>n/a</string>
+				</dict>
+				<key>visionOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>2.4</string>
+					<key>pfmx_supervised</key>
+					<true/>
+					<key>pfmx_user_enrollment</key>
+					<dict>
+						<key>pfmx_mode</key>
+						<string>forbidden</string>
+					</dict>
+				</dict>
+				<key>watchOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>n/a</string>
+				</dict>
+			</dict>
 		</dict>
 	</array>
 	<key>pfm_targets</key>
