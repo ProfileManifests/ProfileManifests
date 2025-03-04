@@ -9,11 +9,11 @@
 	<key>pfm_domain</key>
 	<string>com.apple.applicationaccess</string>
 	<key>pfm_format_version</key>
-	<integer>1</integer>
+	<real>1</real>
 	<key>pfm_interaction</key>
 	<string>combined</string>
 	<key>pfm_last_modified</key>
-	<date>2024-12-13T08:12:27Z</date>
+	<date>2025-03-03T10:07:48Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>tvOS</string>

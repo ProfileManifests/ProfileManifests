@@ -9,13 +9,13 @@
 	<key>pfm_domain</key>
 	<string>com.apple.extensiblesso</string>
 	<key>pfm_format_version</key>
-	<integer>1</integer>
+	<real>1</real>
 	<key>pfm_interaction</key>
 	<string>combined</string>
 	<key>pfm_ios_min</key>
 	<string>13.0</string>
 	<key>pfm_last_modified</key>
-	<date>2025-01-15T16:36:56Z</date>
+	<date>2025-03-03T11:08:08Z</date>
 	<key>pfm_macos_min</key>
 	<string>10.15</string>
 	<key>pfm_platforms</key>
@@ -472,7 +472,7 @@ The system:
 			<key>pfm_default</key>
 			<string>Cancel</string>
 			<key>pfm_description</key>
-			<string>If set to 'Cancel', the system cancels authentication requests when the screen is locked. If set to 'DoNotHandle', the request continues without SSO instead. This doesn't apply to requests where 'userInterfaceEnabled' is 'false', or for background NSURLSession requests. Available in iOS 15 and later, and macOS 12 and later.</string>
+			<string>If set to 'Cancel', the system cancels authentication requests when the screen is locked. If set to 'DoNotHandle', the request continues without SSO instead. This doesn't apply to requests where 'userInterfaceEnabled' is 'false', or for background URLSession requests. Available in iOS 15 and later, and macOS 12 and later.</string>
 			<key>pfm_ios_min</key>
 			<string>15.0</string>
 			<key>pfm_macos_min</key>
@@ -3119,6 +3119,18 @@ kerberosDefault - The default Kerberos processes for selecting credentials is us
 						</dict>
 					</dict>
 				</dict>
+				<dict>
+					<key>pfm_default</key>
+					<false/>
+					<key>pfm_description</key>
+					<string>If set to true, the device UDID and serial number will be included in Platform SSO attestations.</string>
+					<key>pfm_macos_min</key>
+					<string>15.4</string>
+					<key>pfm_name</key>
+					<string>AllowDeviceIdentifiersInAttestation</string>
+					<key>pfm_type</key>
+					<string>boolean</string>
+				</dict>
 			</array>
 			<key>pfm_type</key>
 			<string>dictionary</string>
@@ -3208,7 +3220,7 @@ kerberosDefault - The default Kerberos processes for selecting credentials is us
 	<key>pfm_user_approved</key>
 	<true/>
 	<key>pfm_version</key>
-	<integer>7</integer>
+	<integer>8</integer>
 	<key>pfmx_supported_oses</key>
 	<dict>
 		<key>iOS</key>
