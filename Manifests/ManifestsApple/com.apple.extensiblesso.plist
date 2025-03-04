@@ -3260,6 +3260,8 @@ kerberosDefault - The default Kerberos processes for selecting credentials is us
 			<true/>
 			<key>pfmx_requires_dep</key>
 			<false/>
+			<key>pfmx_supervised</key>
+			<false/>
 			<key>pfmx_user_approved_mdm</key>
 			<true/>
 			<key>pfmx_user_channel</key>

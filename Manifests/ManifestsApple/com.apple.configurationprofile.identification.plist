@@ -318,6 +318,8 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<false/>
 			<key>pfmx_requires_dep</key>
 			<false/>
+			<key>pfmx_supervised</key>
+			<false/>
 			<key>pfmx_user_approved_mdm</key>
 			<false/>
 			<key>pfmx_user_channel</key>

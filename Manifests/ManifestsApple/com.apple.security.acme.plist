@@ -485,6 +485,8 @@ Setting this key to 'true' is supported as of macOS 14. Older macOS versions req
 			<true/>
 			<key>pfmx_requires_dep</key>
 			<false/>
+			<key>pfmx_supervised</key>
+			<false/>
 			<key>pfmx_user_approved_mdm</key>
 			<false/>
 			<key>pfmx_user_channel</key>
