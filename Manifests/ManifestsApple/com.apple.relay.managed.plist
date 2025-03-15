@@ -7,11 +7,11 @@
 	<key>pfm_domain</key>
 	<string>com.apple.relay.managed</string>
 	<key>pfm_format_version</key>
-	<real>1</real>
+	<integer>1</integer>
 	<key>pfm_ios_min</key>
 	<string>17.0</string>
 	<key>pfm_last_modified</key>
-	<date>2025-03-03T11:08:08Z</date>
+	<date>2025-03-15T16:11:44Z</date>
 	<key>pfm_macos_min</key>
 	<string>14.0</string>
 	<key>pfm_platforms</key>

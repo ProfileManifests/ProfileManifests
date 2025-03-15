@@ -11,13 +11,13 @@
 	<key>pfm_domain</key>
 	<string>com.apple.eas.account</string>
 	<key>pfm_format_version</key>
-	<real>1</real>
+	<integer>1</integer>
 	<key>pfm_interaction</key>
 	<string>combined</string>
 	<key>pfm_ios_min</key>
 	<string>4.0</string>
 	<key>pfm_last_modified</key>
-	<date>2025-03-03T11:08:08Z</date>
+	<date>2025-03-15T16:11:44Z</date>
 	<key>pfm_note</key>
 	<string>As with VPN and Wi-Fi configurations, it is possible to associate an SCEP credential with an Exchange configu- ration via the PayloadCertificateUUID key.</string>
 	<key>pfm_platforms</key>
