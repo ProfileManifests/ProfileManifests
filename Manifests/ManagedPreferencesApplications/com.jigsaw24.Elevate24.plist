@@ -113,7 +113,7 @@
 	RK5CYII=
 	</data>
 	<key>pfm_last_modified</key>
-	<date>2024-12-29T05:56:33Z</date>
+	<date>2025-03-20T14:56:33Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -246,9 +246,11 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<dict>
 				<key>Branding</key>
 				<array>
+					<string>newUI</string>
 					<string>message</string>
 					<string>iconPath</string>
 					<string>heading</string>
+					<string>subheading</string>
 					<string>mainbutton</string>
 					<string>HideLogo</string>
 				</array>
@@ -297,6 +299,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<string>Sessiontime</string>
 					<string>times</string>
 					<string>reasons</string>
+					<string>sessionExpiryReminder</string>
 				</array>
 			</dict>
 			<key>pfm_type</key>
@@ -329,6 +332,20 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>string</string>
 			<key>pfm_value_placeholder</key>
 			<string>License API Key</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>Change Elevate24 to show to the new UI. The new UI will be default in a later version of Elevate24.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/Jigsaw24/Elevate24/blob/main/Documentation/Elevate24%20-%20Configuration%20Keys.md#elevated-session-customisation</string>
+			<key>pfm_name</key>
+			<string>newUI</string>
+			<key>pfm_title</key>
+			<string>New UI</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
 		</dict>
 		<dict>
 			<key>pfm_default</key>
@@ -377,6 +394,22 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>string</string>
 			<key>pfm_value_placeholder</key>
 			<string>Elevate24</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Privilege Access Management</string>
+			<key>pfm_description</key>
+			<string>Change the standard text "Privilege Access Management" under the Elevate24 header. New UI V2.2.0+ Only.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/Jigsaw24/Elevate24/blob/main/Documentation/Elevate24%20-%20Configuration%20Keys.md#branding</string>
+			<key>pfm_name</key>
+			<string>subheading</string>
+			<key>pfm_title</key>
+			<string>Sub Header (Premium)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>Privilege Access Management</string>
 		</dict>
 		<dict>
 			<key>pfm_default</key>
@@ -495,6 +528,22 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>Reasons</string>
 			<key>pfm_type</key>
 			<string>array</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<integer>0</integer>
+			<key>pfm_description</key>
+			<string>Set the number of minutes before the application notifies the user that the session is expiring</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/Jigsaw24/Elevate24/blob/main/Documentation/Elevate24%20-%20Configuration%20Keys.md#elevated-session-customisation</string>
+			<key>pfm_name</key>
+			<string>sessionExpiryReminder</string>
+			<key>pfm_title</key>
+			<string>Set Session Expiry Notification (Premium)</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+			<key>pfm_value_placeholder</key>
+			<string>0</string>
 		</dict>
 		<dict>
 			<key>pfm_default</key>
@@ -879,6 +928,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 	<key>pfm_unique</key>
 	<true/>
 	<key>pfm_version</key>
-	<integer>1</integer>
+	<integer>2</integer>
 </dict>
 </plist>
