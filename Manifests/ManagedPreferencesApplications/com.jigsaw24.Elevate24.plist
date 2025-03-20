@@ -246,7 +246,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<dict>
 				<key>Branding</key>
 				<array>
-			     	<string>newUI</string>
+					<string>newUI</string>
 					<string>message</string>
 					<string>iconPath</string>
 					<string>heading</string>
