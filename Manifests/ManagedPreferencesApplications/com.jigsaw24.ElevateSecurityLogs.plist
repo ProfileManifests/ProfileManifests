@@ -572,7 +572,7 @@ A profile can consist of payloads with different version numbers. For example, c
 							<key>pfm_name</key>
 							<string>signingID</string>
 							<key>pfm_title</key>
-							<string>Signing ID of Process</string>
+							<string>Signing ID</string>
 							<key>pfm_type</key>
 							<string>string</string>
 						</dict>
@@ -652,15 +652,7 @@ A profile can consist of payloads with different version numbers. For example, c
 							<key>pfm_name</key>
 							<string>signingID</string>
 							<key>pfm_title</key>
-							<string>Signing Id of the Process</string>
-							<key>pfm_type</key>
-							<string>string</string>
-						</dict>
-						<dict>
-							<key>pfm_name</key>
-							<string>singingID</string>
-							<key>pfm_title</key>
-							<string>SigningID</string>
+							<string>Signing ID</string>
 							<key>pfm_type</key>
 							<string>string</string>
 						</dict>
@@ -890,7 +882,7 @@ A profile can consist of payloads with different version numbers. For example, c
 							<key>pfm_name</key>
 							<string>signingId</string>
 							<key>pfm_title</key>
-							<string>Signing Id</string>
+							<string>Signing ID</string>
 							<key>pfm_type</key>
 							<string>string</string>
 						</dict>
