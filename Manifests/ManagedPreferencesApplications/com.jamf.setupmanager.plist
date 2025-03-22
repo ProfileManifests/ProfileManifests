@@ -324,11 +324,13 @@ A profile can consist of payloads with different version numbers. For example, c
 			<key>pfm_range_list</key>
 			<array>
 				<string>continue</string>
+				<string>restart</string>
 				<string>shutdown</string>
 			</array>
 			<key>pfm_range_list_titles</key>
 			<array>
 				<string>Continue</string>
+				<string>Restart</string>
 				<string>Shut Down</string>
 			</array>
 			<key>pfm_title</key>
