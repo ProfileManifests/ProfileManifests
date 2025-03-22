@@ -582,6 +582,22 @@ A profile can consist of payloads with different version numbers. For example, c
 							<key>pfm_type</key>
 							<string>string</string>
 						</dict>
+						<dict>
+							<key>pfm_description</key>
+							<string>Override the default label for the User ID field.</string>
+							<key>pfm_documentation_url</key>
+							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#label-1</string>
+							<key>pfm_name</key>
+							<string>label</string>
+							<key>pfm_title</key>
+							<string>User ID Label</string>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_default</key>
+							<string>User ID</string>
+							<key>pfm_app_min</key>
+							<string>1.2</string>
+						</dict>
 					</array>
 					<key>pfm_title</key>
 					<string>User ID</string>
@@ -663,6 +679,22 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>Department Validation Message</string>
 							<key>pfm_type</key>
 							<string>string</string>
+						</dict>
+						<dict>
+							<key>pfm_description</key>
+							<string>Override the default label for the Department field.</string>
+							<key>pfm_documentation_url</key>
+							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#label-1</string>
+							<key>pfm_name</key>
+							<string>label</string>
+							<key>pfm_title</key>
+							<string>Department Label</string>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_default</key>
+							<string>Department</string>
+							<key>pfm_app_min</key>
+							<string>1.2</string>
 						</dict>
 					</array>
 					<key>pfm_title</key>
@@ -746,6 +778,22 @@ A profile can consist of payloads with different version numbers. For example, c
 							<key>pfm_type</key>
 							<string>string</string>
 						</dict>
+						<dict>
+							<key>pfm_description</key>
+							<string>Override the default label for the Building field.</string>
+							<key>pfm_documentation_url</key>
+							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#label-1</string>
+							<key>pfm_name</key>
+							<string>label</string>
+							<key>pfm_title</key>
+							<string>Building Label</string>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_default</key>
+							<string>Building</string>
+							<key>pfm_app_min</key>
+							<string>1.2</string>
+						</dict>
 					</array>
 					<key>pfm_title</key>
 					<string>Building</string>
@@ -827,6 +875,22 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>Room Validation Message</string>
 							<key>pfm_type</key>
 							<string>string</string>
+						</dict>
+						<dict>
+							<key>pfm_description</key>
+							<string>Override the default label for the Room field.</string>
+							<key>pfm_documentation_url</key>
+							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#label-1</string>
+							<key>pfm_name</key>
+							<string>label</string>
+							<key>pfm_title</key>
+							<string>Room Label</string>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_default</key>
+							<string>Room</string>
+							<key>pfm_app_min</key>
+							<string>1.2</string>
 						</dict>
 					</array>
 					<key>pfm_title</key>
@@ -910,6 +974,22 @@ A profile can consist of payloads with different version numbers. For example, c
 							<key>pfm_type</key>
 							<string>string</string>
 						</dict>
+						<dict>
+							<key>pfm_description</key>
+							<string>Override the default label for the Asset Tag field.</string>
+							<key>pfm_documentation_url</key>
+							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#label-1</string>
+							<key>pfm_name</key>
+							<string>label</string>
+							<key>pfm_title</key>
+							<string>Asset Tag Label</string>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_default</key>
+							<string>Asset Tag</string>
+							<key>pfm_app_min</key>
+							<string>1.2</string>
+						</dict>
 					</array>
 					<key>pfm_title</key>
 					<string>Asset Tag</string>
@@ -991,6 +1071,22 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>Computer Name Validation Message</string>
 							<key>pfm_type</key>
 							<string>string</string>
+						</dict>
+						<dict>
+							<key>pfm_description</key>
+							<string>Override the default label for the Computer Name field.</string>
+							<key>pfm_documentation_url</key>
+							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#label-1</string>
+							<key>pfm_name</key>
+							<string>label</string>
+							<key>pfm_title</key>
+							<string>Computer Name Label</string>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_default</key>
+							<string>Computer Name</string>
+							<key>pfm_app_min</key>
+							<string>1.2</string>
 						</dict>
 					</array>
 					<key>pfm_title</key>
