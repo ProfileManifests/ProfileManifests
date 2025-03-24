@@ -13,7 +13,7 @@
 	<key>pfm_format_version</key>
 	<integer>1</integer>
 	<key>pfm_last_modified</key>
-	<date>2024-12-29T05:55:49Z</date>
+	<date>2025-03-22T18:00:00Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -139,6 +139,7 @@ A profile can consist of payloads with different version numbers. For example, c
 				<string>General</string>
 				<string>Enrollment Actions</string>
 				<string>User Entry</string>
+				<string>Webhooks</string>
 				<string>Help</string>
 				<string>Jamf Pro only</string>
 				<string>Debugging</string>
@@ -184,6 +185,10 @@ A profile can consist of payloads with different version numbers. For example, c
 				<key>User Entry</key>
 				<array>
 					<string>userEntry</string>
+				</array>
+				<key>Webhooks</key>
+				<array>
+					<string>webhooks</string>
 				</array>
 			</dict>
 			<key>pfm_type</key>
@@ -319,11 +324,13 @@ A profile can consist of payloads with different version numbers. For example, c
 			<key>pfm_range_list</key>
 			<array>
 				<string>continue</string>
+				<string>restart</string>
 				<string>shutdown</string>
 			</array>
 			<key>pfm_range_list_titles</key>
 			<array>
 				<string>Continue</string>
+				<string>Restart</string>
 				<string>Shut Down</string>
 			</array>
 			<key>pfm_title</key>
@@ -575,9 +582,565 @@ A profile can consist of payloads with different version numbers. For example, c
 							<key>pfm_type</key>
 							<string>string</string>
 						</dict>
+						<dict>
+							<key>pfm_app_min</key>
+							<string>1.2</string>
+							<key>pfm_default</key>
+							<string>User ID</string>
+							<key>pfm_description</key>
+							<string>Override the default label for the User ID field.</string>
+							<key>pfm_documentation_url</key>
+							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#label-1</string>
+							<key>pfm_name</key>
+							<string>label</string>
+							<key>pfm_title</key>
+							<string>User ID Label</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
 					</array>
 					<key>pfm_title</key>
 					<string>User ID</string>
+					<key>pfm_type</key>
+					<string>dictionary</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string></string>
+					<key>pfm_name</key>
+					<string>email</string>
+					<key>pfm_subkeys</key>
+					<array>
+						<dict>
+							<key>pfm_app_min</key>
+							<string>1.2</string>
+							<key>pfm_description</key>
+							<string>A pre-populated value for the Email field.</string>
+							<key>pfm_documentation_url</key>
+							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#default</string>
+							<key>pfm_name</key>
+							<string>default</string>
+							<key>pfm_title</key>
+							<string>Email Default</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+						<dict>
+							<key>pfm_app_min</key>
+							<string>1.2</string>
+							<key>pfm_description</key>
+							<string>A placeholder value for Email. This is displayed in gray when no value has been entered.</string>
+							<key>pfm_documentation_url</key>
+							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#placeholder</string>
+							<key>pfm_name</key>
+							<string>placeholder</string>
+							<key>pfm_title</key>
+							<string>Email Placeholder</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+						<dict>
+							<key>pfm_app_min</key>
+							<string>1.2</string>
+							<key>pfm_description</key>
+							<string>Options displayed in a dropdown menu for Email.</string>
+							<key>pfm_documentation_url</key>
+							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#options</string>
+							<key>pfm_name</key>
+							<string>options</string>
+							<key>pfm_subkeys</key>
+							<array>
+								<dict>
+									<key>pfm_title</key>
+									<string>Preset Options for Email</string>
+									<key>pfm_type</key>
+									<string>string</string>
+								</dict>
+							</array>
+							<key>pfm_title</key>
+							<string>Email Options</string>
+							<key>pfm_type</key>
+							<string>array</string>
+						</dict>
+						<dict>
+							<key>pfm_app_min</key>
+							<string>1.2</string>
+							<key>pfm_description</key>
+							<string>A regular expression used to validate the value of Email.</string>
+							<key>pfm_documentation_url</key>
+							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#validation</string>
+							<key>pfm_name</key>
+							<string>validation</string>
+							<key>pfm_title</key>
+							<string>Email Validation</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+						<dict>
+							<key>pfm_app_min</key>
+							<string>1.2</string>
+							<key>pfm_description</key>
+							<string>A message displayed to the user when Email fails to match the regular expression.</string>
+							<key>pfm_documentation_url</key>
+							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#validationmessage</string>
+							<key>pfm_name</key>
+							<string>validationMessage</string>
+							<key>pfm_title</key>
+							<string>Email Validation Message</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+						<dict>
+							<key>pfm_app_min</key>
+							<string>1.2</string>
+							<key>pfm_default</key>
+							<string>Email</string>
+							<key>pfm_description</key>
+							<string>Override the default label for the Email field.</string>
+							<key>pfm_documentation_url</key>
+							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#label-1</string>
+							<key>pfm_name</key>
+							<string>label</string>
+							<key>pfm_title</key>
+							<string>Email Label</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+					</array>
+					<key>pfm_title</key>
+					<string>Email</string>
+					<key>pfm_type</key>
+					<string>dictionary</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string></string>
+					<key>pfm_name</key>
+					<string>endUsername</string>
+					<key>pfm_subkeys</key>
+					<array>
+						<dict>
+							<key>pfm_app_min</key>
+							<string>1.2</string>
+							<key>pfm_description</key>
+							<string>A pre-populated value for the Account Name field.</string>
+							<key>pfm_documentation_url</key>
+							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#default</string>
+							<key>pfm_name</key>
+							<string>default</string>
+							<key>pfm_title</key>
+							<string>Account Name Default</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+						<dict>
+							<key>pfm_app_min</key>
+							<string>1.2</string>
+							<key>pfm_description</key>
+							<string>A placeholder value for Account Name. This is displayed in gray when no value has been entered.</string>
+							<key>pfm_documentation_url</key>
+							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#placeholder</string>
+							<key>pfm_name</key>
+							<string>placeholder</string>
+							<key>pfm_title</key>
+							<string>Account Name Placeholder</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+						<dict>
+							<key>pfm_app_min</key>
+							<string>1.2</string>
+							<key>pfm_description</key>
+							<string>Options displayed in a dropdown menu for Account Name.</string>
+							<key>pfm_documentation_url</key>
+							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#options</string>
+							<key>pfm_name</key>
+							<string>options</string>
+							<key>pfm_subkeys</key>
+							<array>
+								<dict>
+									<key>pfm_title</key>
+									<string>Preset Options for Account Name</string>
+									<key>pfm_type</key>
+									<string>string</string>
+								</dict>
+							</array>
+							<key>pfm_title</key>
+							<string>Account Name Options</string>
+							<key>pfm_type</key>
+							<string>array</string>
+						</dict>
+						<dict>
+							<key>pfm_app_min</key>
+							<string>1.2</string>
+							<key>pfm_description</key>
+							<string>A regular expression used to validate the value of Account Name.</string>
+							<key>pfm_documentation_url</key>
+							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#validation</string>
+							<key>pfm_name</key>
+							<string>validation</string>
+							<key>pfm_title</key>
+							<string>Account Name Validation</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+						<dict>
+							<key>pfm_app_min</key>
+							<string>1.2</string>
+							<key>pfm_description</key>
+							<string>A message displayed to the user when Account Name fails to match the regular expression.</string>
+							<key>pfm_documentation_url</key>
+							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#validationmessage</string>
+							<key>pfm_name</key>
+							<string>validationMessage</string>
+							<key>pfm_title</key>
+							<string>Account Name Validation Message</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+						<dict>
+							<key>pfm_app_min</key>
+							<string>1.2</string>
+							<key>pfm_default</key>
+							<string>Account Name</string>
+							<key>pfm_description</key>
+							<string>Override the default label for the Account Name field.</string>
+							<key>pfm_documentation_url</key>
+							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#label-1</string>
+							<key>pfm_name</key>
+							<string>label</string>
+							<key>pfm_title</key>
+							<string>Account Name Label</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+					</array>
+					<key>pfm_title</key>
+					<string>Account Name</string>
+					<key>pfm_type</key>
+					<string>dictionary</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string></string>
+					<key>pfm_name</key>
+					<string>realname</string>
+					<key>pfm_subkeys</key>
+					<array>
+						<dict>
+							<key>pfm_app_min</key>
+							<string>1.2</string>
+							<key>pfm_description</key>
+							<string>A pre-populated value for the Full Name field.</string>
+							<key>pfm_documentation_url</key>
+							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#default</string>
+							<key>pfm_name</key>
+							<string>default</string>
+							<key>pfm_title</key>
+							<string>Full Name Default</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+						<dict>
+							<key>pfm_app_min</key>
+							<string>1.2</string>
+							<key>pfm_description</key>
+							<string>A placeholder value for Full Name. This is displayed in gray when no value has been entered.</string>
+							<key>pfm_documentation_url</key>
+							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#placeholder</string>
+							<key>pfm_name</key>
+							<string>placeholder</string>
+							<key>pfm_title</key>
+							<string>Full Name Placeholder</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+						<dict>
+							<key>pfm_app_min</key>
+							<string>1.2</string>
+							<key>pfm_description</key>
+							<string>Options displayed in a dropdown menu for Full Name.</string>
+							<key>pfm_documentation_url</key>
+							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#options</string>
+							<key>pfm_name</key>
+							<string>options</string>
+							<key>pfm_subkeys</key>
+							<array>
+								<dict>
+									<key>pfm_title</key>
+									<string>Preset Options for Full Name</string>
+									<key>pfm_type</key>
+									<string>string</string>
+								</dict>
+							</array>
+							<key>pfm_title</key>
+							<string>Full Name Options</string>
+							<key>pfm_type</key>
+							<string>array</string>
+						</dict>
+						<dict>
+							<key>pfm_app_min</key>
+							<string>1.2</string>
+							<key>pfm_description</key>
+							<string>A regular expression used to validate the value of Full Name.</string>
+							<key>pfm_documentation_url</key>
+							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#validation</string>
+							<key>pfm_name</key>
+							<string>validation</string>
+							<key>pfm_title</key>
+							<string>Full Name Validation</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+						<dict>
+							<key>pfm_app_min</key>
+							<string>1.2</string>
+							<key>pfm_description</key>
+							<string>A message displayed to the user when Full Name fails to match the regular expression.</string>
+							<key>pfm_documentation_url</key>
+							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#validationmessage</string>
+							<key>pfm_name</key>
+							<string>validationMessage</string>
+							<key>pfm_title</key>
+							<string>Full Name Validation Message</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+						<dict>
+							<key>pfm_app_min</key>
+							<string>1.2</string>
+							<key>pfm_default</key>
+							<string>Full Name</string>
+							<key>pfm_description</key>
+							<string>Override the default label for the Full Name field.</string>
+							<key>pfm_documentation_url</key>
+							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#label-1</string>
+							<key>pfm_name</key>
+							<string>label</string>
+							<key>pfm_title</key>
+							<string>Full Name Label</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+					</array>
+					<key>pfm_title</key>
+					<string>Full Name</string>
+					<key>pfm_type</key>
+					<string>dictionary</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string></string>
+					<key>pfm_name</key>
+					<string>position</string>
+					<key>pfm_subkeys</key>
+					<array>
+						<dict>
+							<key>pfm_app_min</key>
+							<string>1.2</string>
+							<key>pfm_description</key>
+							<string>A pre-populated value for the Position field.</string>
+							<key>pfm_documentation_url</key>
+							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#default</string>
+							<key>pfm_name</key>
+							<string>default</string>
+							<key>pfm_title</key>
+							<string>Position Default</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+						<dict>
+							<key>pfm_app_min</key>
+							<string>1.2</string>
+							<key>pfm_description</key>
+							<string>A placeholder value for Position. This is displayed in gray when no value has been entered.</string>
+							<key>pfm_documentation_url</key>
+							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#placeholder</string>
+							<key>pfm_name</key>
+							<string>placeholder</string>
+							<key>pfm_title</key>
+							<string>Position Placeholder</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+						<dict>
+							<key>pfm_app_min</key>
+							<string>1.2</string>
+							<key>pfm_description</key>
+							<string>Options displayed in a dropdown menu for Position.</string>
+							<key>pfm_documentation_url</key>
+							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#options</string>
+							<key>pfm_name</key>
+							<string>options</string>
+							<key>pfm_subkeys</key>
+							<array>
+								<dict>
+									<key>pfm_title</key>
+									<string>Preset Options for Position</string>
+									<key>pfm_type</key>
+									<string>string</string>
+								</dict>
+							</array>
+							<key>pfm_title</key>
+							<string>Position Options</string>
+							<key>pfm_type</key>
+							<string>array</string>
+						</dict>
+						<dict>
+							<key>pfm_app_min</key>
+							<string>1.2</string>
+							<key>pfm_description</key>
+							<string>A regular expression used to validate the value of Position.</string>
+							<key>pfm_documentation_url</key>
+							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#validation</string>
+							<key>pfm_name</key>
+							<string>validation</string>
+							<key>pfm_title</key>
+							<string>Position Validation</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+						<dict>
+							<key>pfm_app_min</key>
+							<string>1.2</string>
+							<key>pfm_description</key>
+							<string>A message displayed to the user when Position fails to match the regular expression.</string>
+							<key>pfm_documentation_url</key>
+							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#validationmessage</string>
+							<key>pfm_name</key>
+							<string>validationMessage</string>
+							<key>pfm_title</key>
+							<string>Position Validation Message</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+						<dict>
+							<key>pfm_app_min</key>
+							<string>1.2</string>
+							<key>pfm_default</key>
+							<string>Position</string>
+							<key>pfm_description</key>
+							<string>Override the default label for the Position field.</string>
+							<key>pfm_documentation_url</key>
+							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#label-1</string>
+							<key>pfm_name</key>
+							<string>label</string>
+							<key>pfm_title</key>
+							<string>Position Label</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+					</array>
+					<key>pfm_title</key>
+					<string>Position</string>
+					<key>pfm_type</key>
+					<string>dictionary</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string></string>
+					<key>pfm_name</key>
+					<string>phone</string>
+					<key>pfm_subkeys</key>
+					<array>
+						<dict>
+							<key>pfm_app_min</key>
+							<string>1.2</string>
+							<key>pfm_description</key>
+							<string>A pre-populated value for the Phone field.</string>
+							<key>pfm_documentation_url</key>
+							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#default</string>
+							<key>pfm_name</key>
+							<string>default</string>
+							<key>pfm_title</key>
+							<string>Phone Default</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+						<dict>
+							<key>pfm_app_min</key>
+							<string>1.2</string>
+							<key>pfm_description</key>
+							<string>A placeholder value for Phone. This is displayed in gray when no value has been entered.</string>
+							<key>pfm_documentation_url</key>
+							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#placeholder</string>
+							<key>pfm_name</key>
+							<string>placeholder</string>
+							<key>pfm_title</key>
+							<string>Phone Placeholder</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+						<dict>
+							<key>pfm_app_min</key>
+							<string>1.2</string>
+							<key>pfm_description</key>
+							<string>Options displayed in a dropdown menu for Phone.</string>
+							<key>pfm_documentation_url</key>
+							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#options</string>
+							<key>pfm_name</key>
+							<string>options</string>
+							<key>pfm_subkeys</key>
+							<array>
+								<dict>
+									<key>pfm_title</key>
+									<string>Preset Options for Phone</string>
+									<key>pfm_type</key>
+									<string>string</string>
+								</dict>
+							</array>
+							<key>pfm_title</key>
+							<string>Phone Options</string>
+							<key>pfm_type</key>
+							<string>array</string>
+						</dict>
+						<dict>
+							<key>pfm_app_min</key>
+							<string>1.2</string>
+							<key>pfm_description</key>
+							<string>A regular expression used to validate the value of Phone.</string>
+							<key>pfm_documentation_url</key>
+							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#validation</string>
+							<key>pfm_name</key>
+							<string>validation</string>
+							<key>pfm_title</key>
+							<string>Phone Validation</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+						<dict>
+							<key>pfm_app_min</key>
+							<string>1.2</string>
+							<key>pfm_description</key>
+							<string>A message displayed to the user when Phone fails to match the regular expression.</string>
+							<key>pfm_documentation_url</key>
+							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#validationmessage</string>
+							<key>pfm_name</key>
+							<string>validationMessage</string>
+							<key>pfm_title</key>
+							<string>Phone Validation Message</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+						<dict>
+							<key>pfm_app_min</key>
+							<string>1.2</string>
+							<key>pfm_default</key>
+							<string>Phone</string>
+							<key>pfm_description</key>
+							<string>Override the default label for the Phone field.</string>
+							<key>pfm_documentation_url</key>
+							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#label-1</string>
+							<key>pfm_name</key>
+							<string>label</string>
+							<key>pfm_title</key>
+							<string>Phone Label</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+					</array>
+					<key>pfm_title</key>
+					<string>Phone</string>
 					<key>pfm_type</key>
 					<string>dictionary</string>
 				</dict>
@@ -654,6 +1217,22 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>validationMessage</string>
 							<key>pfm_title</key>
 							<string>Department Validation Message</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+						<dict>
+							<key>pfm_app_min</key>
+							<string>1.2</string>
+							<key>pfm_default</key>
+							<string>Department</string>
+							<key>pfm_description</key>
+							<string>Override the default label for the Department field.</string>
+							<key>pfm_documentation_url</key>
+							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#label-1</string>
+							<key>pfm_name</key>
+							<string>label</string>
+							<key>pfm_title</key>
+							<string>Department Label</string>
 							<key>pfm_type</key>
 							<string>string</string>
 						</dict>
@@ -739,6 +1318,22 @@ A profile can consist of payloads with different version numbers. For example, c
 							<key>pfm_type</key>
 							<string>string</string>
 						</dict>
+						<dict>
+							<key>pfm_app_min</key>
+							<string>1.2</string>
+							<key>pfm_default</key>
+							<string>Building</string>
+							<key>pfm_description</key>
+							<string>Override the default label for the Building field.</string>
+							<key>pfm_documentation_url</key>
+							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#label-1</string>
+							<key>pfm_name</key>
+							<string>label</string>
+							<key>pfm_title</key>
+							<string>Building Label</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
 					</array>
 					<key>pfm_title</key>
 					<string>Building</string>
@@ -818,6 +1413,22 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>validationMessage</string>
 							<key>pfm_title</key>
 							<string>Room Validation Message</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+						<dict>
+							<key>pfm_app_min</key>
+							<string>1.2</string>
+							<key>pfm_default</key>
+							<string>Room</string>
+							<key>pfm_description</key>
+							<string>Override the default label for the Room field.</string>
+							<key>pfm_documentation_url</key>
+							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#label-1</string>
+							<key>pfm_name</key>
+							<string>label</string>
+							<key>pfm_title</key>
+							<string>Room Label</string>
 							<key>pfm_type</key>
 							<string>string</string>
 						</dict>
@@ -903,6 +1514,22 @@ A profile can consist of payloads with different version numbers. For example, c
 							<key>pfm_type</key>
 							<string>string</string>
 						</dict>
+						<dict>
+							<key>pfm_app_min</key>
+							<string>1.2</string>
+							<key>pfm_default</key>
+							<string>Asset Tag</string>
+							<key>pfm_description</key>
+							<string>Override the default label for the Asset Tag field.</string>
+							<key>pfm_documentation_url</key>
+							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#label-1</string>
+							<key>pfm_name</key>
+							<string>label</string>
+							<key>pfm_title</key>
+							<string>Asset Tag Label</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
 					</array>
 					<key>pfm_title</key>
 					<string>Asset Tag</string>
@@ -982,6 +1609,22 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>validationMessage</string>
 							<key>pfm_title</key>
 							<string>Computer Name Validation Message</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+						<dict>
+							<key>pfm_app_min</key>
+							<string>1.2</string>
+							<key>pfm_default</key>
+							<string>Computer Name</string>
+							<key>pfm_description</key>
+							<string>Override the default label for the Computer Name field.</string>
+							<key>pfm_documentation_url</key>
+							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#label-1</string>
+							<key>pfm_name</key>
+							<string>label</string>
+							<key>pfm_title</key>
+							<string>Computer Name Label</string>
 							<key>pfm_type</key>
 							<string>string</string>
 						</dict>
@@ -1205,6 +1848,65 @@ A profile can consist of payloads with different version numbers. For example, c
 			<key>pfm_type</key>
 			<string>array</string>
 		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.2</string>
+			<key>pfm_name</key>
+			<string>webhooks</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_description</key>
+					<string>Webhooks called when Setup Manager starts its workflow.</string>
+					<key>pfm_documentation_url</key>
+					<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/Docs/Webhooks.md</string>
+					<key>pfm_name</key>
+					<string>started</string>
+					<key>pfm_subkeys</key>
+					<array>
+						<dict>
+							<key>pfm_format</key>
+							<string>^https://.*$</string>
+							<key>pfm_title</key>
+							<string>Webhook URLs</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+					</array>
+					<key>pfm_title</key>
+					<string>Started Webhooks</string>
+					<key>pfm_type</key>
+					<string>array</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>Webhooks called when Setup Manager finishes its workflow.</string>
+					<key>pfm_documentation_url</key>
+					<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/Docs/Webhooks.md</string>
+					<key>pfm_name</key>
+					<string>finished</string>
+					<key>pfm_subkeys</key>
+					<array>
+						<dict>
+							<key>pfm_format</key>
+							<string>^https://.*$</string>
+							<key>pfm_title</key>
+							<string>Webhook URLs</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+					</array>
+					<key>pfm_title</key>
+					<string>Finished Webhooks</string>
+					<key>pfm_type</key>
+					<string>array</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>Webhooks</string>
+			<key>pfm_type</key>
+			<string>dictionary</string>
+		</dict>
 	</array>
 	<key>pfm_targets</key>
 	<array>
@@ -1215,6 +1917,6 @@ A profile can consist of payloads with different version numbers. For example, c
 	<key>pfm_unique</key>
 	<true/>
 	<key>pfm_version</key>
-	<integer>1</integer>
+	<integer>2</integer>
 </dict>
 </plist>
