@@ -173,10 +173,6 @@ A profile can consist of payloads with different version numbers. For example, c
 					<string>computerNameTemplate</string>
 					<string>hideActionLabels</string>
 				</array>
-				<key>Webhooks</key>
-				<array>
-					<string>webhooks</string>
-				</array>
 				<key>Help</key>
 				<array>
 					<string>help</string>
@@ -189,6 +185,10 @@ A profile can consist of payloads with different version numbers. For example, c
 				<key>User Entry</key>
 				<array>
 					<string>userEntry</string>
+				</array>
+				<key>Webhooks</key>
+				<array>
+					<string>webhooks</string>
 				</array>
 			</dict>
 			<key>pfm_type</key>
@@ -583,6 +583,10 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>string</string>
 						</dict>
 						<dict>
+							<key>pfm_app_min</key>
+							<string>1.2</string>
+							<key>pfm_default</key>
+							<string>User ID</string>
 							<key>pfm_description</key>
 							<string>Override the default label for the User ID field.</string>
 							<key>pfm_documentation_url</key>
@@ -593,10 +597,6 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>User ID Label</string>
 							<key>pfm_type</key>
 							<string>string</string>
-							<key>pfm_default</key>
-							<string>User ID</string>
-							<key>pfm_app_min</key>
-							<string>1.2</string>
 						</dict>
 					</array>
 					<key>pfm_title</key>
@@ -612,6 +612,8 @@ A profile can consist of payloads with different version numbers. For example, c
 					<key>pfm_subkeys</key>
 					<array>
 						<dict>
+							<key>pfm_app_min</key>
+							<string>1.2</string>
 							<key>pfm_description</key>
 							<string>A pre-populated value for the Email field.</string>
 							<key>pfm_documentation_url</key>
@@ -622,10 +624,10 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>Email Default</string>
 							<key>pfm_type</key>
 							<string>string</string>
-							<key>pfm_app_min</key>
-							<string>1.2</string>
 						</dict>
 						<dict>
+							<key>pfm_app_min</key>
+							<string>1.2</string>
 							<key>pfm_description</key>
 							<string>A placeholder value for Email. This is displayed in gray when no value has been entered.</string>
 							<key>pfm_documentation_url</key>
@@ -636,10 +638,10 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>Email Placeholder</string>
 							<key>pfm_type</key>
 							<string>string</string>
-							<key>pfm_app_min</key>
-							<string>1.2</string>
 						</dict>
 						<dict>
+							<key>pfm_app_min</key>
+							<string>1.2</string>
 							<key>pfm_description</key>
 							<string>Options displayed in a dropdown menu for Email.</string>
 							<key>pfm_documentation_url</key>
@@ -659,10 +661,10 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>Email Options</string>
 							<key>pfm_type</key>
 							<string>array</string>
-							<key>pfm_app_min</key>
-							<string>1.2</string>
 						</dict>
 						<dict>
+							<key>pfm_app_min</key>
+							<string>1.2</string>
 							<key>pfm_description</key>
 							<string>A regular expression used to validate the value of Email.</string>
 							<key>pfm_documentation_url</key>
@@ -673,10 +675,10 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>Email Validation</string>
 							<key>pfm_type</key>
 							<string>string</string>
-							<key>pfm_app_min</key>
-							<string>1.2</string>
 						</dict>
 						<dict>
+							<key>pfm_app_min</key>
+							<string>1.2</string>
 							<key>pfm_description</key>
 							<string>A message displayed to the user when Email fails to match the regular expression.</string>
 							<key>pfm_documentation_url</key>
@@ -687,10 +689,12 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>Email Validation Message</string>
 							<key>pfm_type</key>
 							<string>string</string>
-							<key>pfm_app_min</key>
-							<string>1.2</string>
 						</dict>
 						<dict>
+							<key>pfm_app_min</key>
+							<string>1.2</string>
+							<key>pfm_default</key>
+							<string>Email</string>
 							<key>pfm_description</key>
 							<string>Override the default label for the Email field.</string>
 							<key>pfm_documentation_url</key>
@@ -701,10 +705,6 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>Email Label</string>
 							<key>pfm_type</key>
 							<string>string</string>
-							<key>pfm_default</key>
-							<string>Email</string>
-							<key>pfm_app_min</key>
-							<string>1.2</string>
 						</dict>
 					</array>
 					<key>pfm_title</key>
@@ -720,6 +720,8 @@ A profile can consist of payloads with different version numbers. For example, c
 					<key>pfm_subkeys</key>
 					<array>
 						<dict>
+							<key>pfm_app_min</key>
+							<string>1.2</string>
 							<key>pfm_description</key>
 							<string>A pre-populated value for the Account Name field.</string>
 							<key>pfm_documentation_url</key>
@@ -730,10 +732,10 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>Account Name Default</string>
 							<key>pfm_type</key>
 							<string>string</string>
-							<key>pfm_app_min</key>
-							<string>1.2</string>
 						</dict>
 						<dict>
+							<key>pfm_app_min</key>
+							<string>1.2</string>
 							<key>pfm_description</key>
 							<string>A placeholder value for Account Name. This is displayed in gray when no value has been entered.</string>
 							<key>pfm_documentation_url</key>
@@ -744,10 +746,10 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>Account Name Placeholder</string>
 							<key>pfm_type</key>
 							<string>string</string>
-							<key>pfm_app_min</key>
-							<string>1.2</string>
 						</dict>
 						<dict>
+							<key>pfm_app_min</key>
+							<string>1.2</string>
 							<key>pfm_description</key>
 							<string>Options displayed in a dropdown menu for Account Name.</string>
 							<key>pfm_documentation_url</key>
@@ -767,10 +769,10 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>Account Name Options</string>
 							<key>pfm_type</key>
 							<string>array</string>
-							<key>pfm_app_min</key>
-							<string>1.2</string>
 						</dict>
 						<dict>
+							<key>pfm_app_min</key>
+							<string>1.2</string>
 							<key>pfm_description</key>
 							<string>A regular expression used to validate the value of Account Name.</string>
 							<key>pfm_documentation_url</key>
@@ -781,10 +783,10 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>Account Name Validation</string>
 							<key>pfm_type</key>
 							<string>string</string>
-							<key>pfm_app_min</key>
-							<string>1.2</string>
 						</dict>
 						<dict>
+							<key>pfm_app_min</key>
+							<string>1.2</string>
 							<key>pfm_description</key>
 							<string>A message displayed to the user when Account Name fails to match the regular expression.</string>
 							<key>pfm_documentation_url</key>
@@ -795,10 +797,12 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>Account Name Validation Message</string>
 							<key>pfm_type</key>
 							<string>string</string>
-							<key>pfm_app_min</key>
-							<string>1.2</string>
 						</dict>
 						<dict>
+							<key>pfm_app_min</key>
+							<string>1.2</string>
+							<key>pfm_default</key>
+							<string>Account Name</string>
 							<key>pfm_description</key>
 							<string>Override the default label for the Account Name field.</string>
 							<key>pfm_documentation_url</key>
@@ -809,10 +813,6 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>Account Name Label</string>
 							<key>pfm_type</key>
 							<string>string</string>
-							<key>pfm_default</key>
-							<string>Account Name</string>
-							<key>pfm_app_min</key>
-							<string>1.2</string>
 						</dict>
 					</array>
 					<key>pfm_title</key>
@@ -828,6 +828,8 @@ A profile can consist of payloads with different version numbers. For example, c
 					<key>pfm_subkeys</key>
 					<array>
 						<dict>
+							<key>pfm_app_min</key>
+							<string>1.2</string>
 							<key>pfm_description</key>
 							<string>A pre-populated value for the Full Name field.</string>
 							<key>pfm_documentation_url</key>
@@ -838,10 +840,10 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>Full Name Default</string>
 							<key>pfm_type</key>
 							<string>string</string>
-							<key>pfm_app_min</key>
-							<string>1.2</string>
 						</dict>
 						<dict>
+							<key>pfm_app_min</key>
+							<string>1.2</string>
 							<key>pfm_description</key>
 							<string>A placeholder value for Full Name. This is displayed in gray when no value has been entered.</string>
 							<key>pfm_documentation_url</key>
@@ -852,10 +854,10 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>Full Name Placeholder</string>
 							<key>pfm_type</key>
 							<string>string</string>
-							<key>pfm_app_min</key>
-							<string>1.2</string>
 						</dict>
 						<dict>
+							<key>pfm_app_min</key>
+							<string>1.2</string>
 							<key>pfm_description</key>
 							<string>Options displayed in a dropdown menu for Full Name.</string>
 							<key>pfm_documentation_url</key>
@@ -875,10 +877,10 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>Full Name Options</string>
 							<key>pfm_type</key>
 							<string>array</string>
-							<key>pfm_app_min</key>
-							<string>1.2</string>
 						</dict>
 						<dict>
+							<key>pfm_app_min</key>
+							<string>1.2</string>
 							<key>pfm_description</key>
 							<string>A regular expression used to validate the value of Full Name.</string>
 							<key>pfm_documentation_url</key>
@@ -889,10 +891,10 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>Full Name Validation</string>
 							<key>pfm_type</key>
 							<string>string</string>
-							<key>pfm_app_min</key>
-							<string>1.2</string>
 						</dict>
 						<dict>
+							<key>pfm_app_min</key>
+							<string>1.2</string>
 							<key>pfm_description</key>
 							<string>A message displayed to the user when Full Name fails to match the regular expression.</string>
 							<key>pfm_documentation_url</key>
@@ -903,10 +905,12 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>Full Name Validation Message</string>
 							<key>pfm_type</key>
 							<string>string</string>
-							<key>pfm_app_min</key>
-							<string>1.2</string>
 						</dict>
 						<dict>
+							<key>pfm_app_min</key>
+							<string>1.2</string>
+							<key>pfm_default</key>
+							<string>Full Name</string>
 							<key>pfm_description</key>
 							<string>Override the default label for the Full Name field.</string>
 							<key>pfm_documentation_url</key>
@@ -917,10 +921,6 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>Full Name Label</string>
 							<key>pfm_type</key>
 							<string>string</string>
-							<key>pfm_default</key>
-							<string>Full Name</string>
-							<key>pfm_app_min</key>
-							<string>1.2</string>
 						</dict>
 					</array>
 					<key>pfm_title</key>
@@ -936,6 +936,8 @@ A profile can consist of payloads with different version numbers. For example, c
 					<key>pfm_subkeys</key>
 					<array>
 						<dict>
+							<key>pfm_app_min</key>
+							<string>1.2</string>
 							<key>pfm_description</key>
 							<string>A pre-populated value for the Position field.</string>
 							<key>pfm_documentation_url</key>
@@ -946,10 +948,10 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>Position Default</string>
 							<key>pfm_type</key>
 							<string>string</string>
-							<key>pfm_app_min</key>
-							<string>1.2</string>
 						</dict>
 						<dict>
+							<key>pfm_app_min</key>
+							<string>1.2</string>
 							<key>pfm_description</key>
 							<string>A placeholder value for Position. This is displayed in gray when no value has been entered.</string>
 							<key>pfm_documentation_url</key>
@@ -960,10 +962,10 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>Position Placeholder</string>
 							<key>pfm_type</key>
 							<string>string</string>
-							<key>pfm_app_min</key>
-							<string>1.2</string>
 						</dict>
 						<dict>
+							<key>pfm_app_min</key>
+							<string>1.2</string>
 							<key>pfm_description</key>
 							<string>Options displayed in a dropdown menu for Position.</string>
 							<key>pfm_documentation_url</key>
@@ -983,10 +985,10 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>Position Options</string>
 							<key>pfm_type</key>
 							<string>array</string>
-							<key>pfm_app_min</key>
-							<string>1.2</string>
 						</dict>
 						<dict>
+							<key>pfm_app_min</key>
+							<string>1.2</string>
 							<key>pfm_description</key>
 							<string>A regular expression used to validate the value of Position.</string>
 							<key>pfm_documentation_url</key>
@@ -997,10 +999,10 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>Position Validation</string>
 							<key>pfm_type</key>
 							<string>string</string>
-							<key>pfm_app_min</key>
-							<string>1.2</string>
 						</dict>
 						<dict>
+							<key>pfm_app_min</key>
+							<string>1.2</string>
 							<key>pfm_description</key>
 							<string>A message displayed to the user when Position fails to match the regular expression.</string>
 							<key>pfm_documentation_url</key>
@@ -1011,10 +1013,12 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>Position Validation Message</string>
 							<key>pfm_type</key>
 							<string>string</string>
-							<key>pfm_app_min</key>
-							<string>1.2</string>
 						</dict>
 						<dict>
+							<key>pfm_app_min</key>
+							<string>1.2</string>
+							<key>pfm_default</key>
+							<string>Position</string>
 							<key>pfm_description</key>
 							<string>Override the default label for the Position field.</string>
 							<key>pfm_documentation_url</key>
@@ -1025,10 +1029,6 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>Position Label</string>
 							<key>pfm_type</key>
 							<string>string</string>
-							<key>pfm_default</key>
-							<string>Position</string>
-							<key>pfm_app_min</key>
-							<string>1.2</string>
 						</dict>
 					</array>
 					<key>pfm_title</key>
@@ -1044,6 +1044,8 @@ A profile can consist of payloads with different version numbers. For example, c
 					<key>pfm_subkeys</key>
 					<array>
 						<dict>
+							<key>pfm_app_min</key>
+							<string>1.2</string>
 							<key>pfm_description</key>
 							<string>A pre-populated value for the Phone field.</string>
 							<key>pfm_documentation_url</key>
@@ -1054,10 +1056,10 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>Phone Default</string>
 							<key>pfm_type</key>
 							<string>string</string>
-							<key>pfm_app_min</key>
-							<string>1.2</string>
 						</dict>
 						<dict>
+							<key>pfm_app_min</key>
+							<string>1.2</string>
 							<key>pfm_description</key>
 							<string>A placeholder value for Phone. This is displayed in gray when no value has been entered.</string>
 							<key>pfm_documentation_url</key>
@@ -1068,10 +1070,10 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>Phone Placeholder</string>
 							<key>pfm_type</key>
 							<string>string</string>
-							<key>pfm_app_min</key>
-							<string>1.2</string>
 						</dict>
 						<dict>
+							<key>pfm_app_min</key>
+							<string>1.2</string>
 							<key>pfm_description</key>
 							<string>Options displayed in a dropdown menu for Phone.</string>
 							<key>pfm_documentation_url</key>
@@ -1091,10 +1093,10 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>Phone Options</string>
 							<key>pfm_type</key>
 							<string>array</string>
-							<key>pfm_app_min</key>
-							<string>1.2</string>
 						</dict>
 						<dict>
+							<key>pfm_app_min</key>
+							<string>1.2</string>
 							<key>pfm_description</key>
 							<string>A regular expression used to validate the value of Phone.</string>
 							<key>pfm_documentation_url</key>
@@ -1105,10 +1107,10 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>Phone Validation</string>
 							<key>pfm_type</key>
 							<string>string</string>
-							<key>pfm_app_min</key>
-							<string>1.2</string>
 						</dict>
 						<dict>
+							<key>pfm_app_min</key>
+							<string>1.2</string>
 							<key>pfm_description</key>
 							<string>A message displayed to the user when Phone fails to match the regular expression.</string>
 							<key>pfm_documentation_url</key>
@@ -1119,10 +1121,12 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>Phone Validation Message</string>
 							<key>pfm_type</key>
 							<string>string</string>
-							<key>pfm_app_min</key>
-							<string>1.2</string>
 						</dict>
 						<dict>
+							<key>pfm_app_min</key>
+							<string>1.2</string>
+							<key>pfm_default</key>
+							<string>Phone</string>
 							<key>pfm_description</key>
 							<string>Override the default label for the Phone field.</string>
 							<key>pfm_documentation_url</key>
@@ -1133,10 +1137,6 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>Phone Label</string>
 							<key>pfm_type</key>
 							<string>string</string>
-							<key>pfm_default</key>
-							<string>Phone</string>
-							<key>pfm_app_min</key>
-							<string>1.2</string>
 						</dict>
 					</array>
 					<key>pfm_title</key>
@@ -1221,6 +1221,10 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>string</string>
 						</dict>
 						<dict>
+							<key>pfm_app_min</key>
+							<string>1.2</string>
+							<key>pfm_default</key>
+							<string>Department</string>
 							<key>pfm_description</key>
 							<string>Override the default label for the Department field.</string>
 							<key>pfm_documentation_url</key>
@@ -1231,10 +1235,6 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>Department Label</string>
 							<key>pfm_type</key>
 							<string>string</string>
-							<key>pfm_default</key>
-							<string>Department</string>
-							<key>pfm_app_min</key>
-							<string>1.2</string>
 						</dict>
 					</array>
 					<key>pfm_title</key>
@@ -1319,6 +1319,10 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>string</string>
 						</dict>
 						<dict>
+							<key>pfm_app_min</key>
+							<string>1.2</string>
+							<key>pfm_default</key>
+							<string>Building</string>
 							<key>pfm_description</key>
 							<string>Override the default label for the Building field.</string>
 							<key>pfm_documentation_url</key>
@@ -1329,10 +1333,6 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>Building Label</string>
 							<key>pfm_type</key>
 							<string>string</string>
-							<key>pfm_default</key>
-							<string>Building</string>
-							<key>pfm_app_min</key>
-							<string>1.2</string>
 						</dict>
 					</array>
 					<key>pfm_title</key>
@@ -1417,6 +1417,10 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>string</string>
 						</dict>
 						<dict>
+							<key>pfm_app_min</key>
+							<string>1.2</string>
+							<key>pfm_default</key>
+							<string>Room</string>
 							<key>pfm_description</key>
 							<string>Override the default label for the Room field.</string>
 							<key>pfm_documentation_url</key>
@@ -1427,10 +1431,6 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>Room Label</string>
 							<key>pfm_type</key>
 							<string>string</string>
-							<key>pfm_default</key>
-							<string>Room</string>
-							<key>pfm_app_min</key>
-							<string>1.2</string>
 						</dict>
 					</array>
 					<key>pfm_title</key>
@@ -1515,6 +1515,10 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>string</string>
 						</dict>
 						<dict>
+							<key>pfm_app_min</key>
+							<string>1.2</string>
+							<key>pfm_default</key>
+							<string>Asset Tag</string>
 							<key>pfm_description</key>
 							<string>Override the default label for the Asset Tag field.</string>
 							<key>pfm_documentation_url</key>
@@ -1525,10 +1529,6 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>Asset Tag Label</string>
 							<key>pfm_type</key>
 							<string>string</string>
-							<key>pfm_default</key>
-							<string>Asset Tag</string>
-							<key>pfm_app_min</key>
-							<string>1.2</string>
 						</dict>
 					</array>
 					<key>pfm_title</key>
@@ -1613,6 +1613,10 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>string</string>
 						</dict>
 						<dict>
+							<key>pfm_app_min</key>
+							<string>1.2</string>
+							<key>pfm_default</key>
+							<string>Computer Name</string>
 							<key>pfm_description</key>
 							<string>Override the default label for the Computer Name field.</string>
 							<key>pfm_documentation_url</key>
@@ -1623,10 +1627,6 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>Computer Name Label</string>
 							<key>pfm_type</key>
 							<string>string</string>
-							<key>pfm_default</key>
-							<string>Computer Name</string>
-							<key>pfm_app_min</key>
-							<string>1.2</string>
 						</dict>
 					</array>
 					<key>pfm_title</key>
@@ -1853,59 +1853,59 @@ A profile can consist of payloads with different version numbers. For example, c
 			<string>1.2</string>
 			<key>pfm_name</key>
 			<string>webhooks</string>
-			<key>pfm_type</key>
-			<string>dictionary</string>
-			<key>pfm_title</key>
-			<string>Webhooks</string>
 			<key>pfm_subkeys</key>
 			<array>
 				<dict>
-					<key>pfm_name</key>
-					<string>started</string>
-					<key>pfm_title</key>
-					<string>Started Webhooks</string>
 					<key>pfm_description</key>
 					<string>Webhooks called when Setup Manager starts its workflow.</string>
-					<key>pfm_type</key>
-					<string>array</string>
+					<key>pfm_documentation_url</key>
+					<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/Docs/Webhooks.md</string>
+					<key>pfm_name</key>
+					<string>started</string>
 					<key>pfm_subkeys</key>
 					<array>
 						<dict>
+							<key>pfm_format</key>
+							<string>^https://.*$</string>
 							<key>pfm_title</key>
 							<string>Webhook URLs</string>
 							<key>pfm_type</key>
 							<string>string</string>
-							<key>pfm_format</key>
-							<string>^https://.*$</string>
 						</dict>
 					</array>
-					<key>pfm_documentation_url</key>
-					<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/Docs/Webhooks.md</string>
+					<key>pfm_title</key>
+					<string>Started Webhooks</string>
+					<key>pfm_type</key>
+					<string>array</string>
 				</dict>
 				<dict>
-					<key>pfm_name</key>
-					<string>finished</string>
-					<key>pfm_title</key>
-					<string>Finished Webhooks</string>
 					<key>pfm_description</key>
 					<string>Webhooks called when Setup Manager finishes its workflow.</string>
-					<key>pfm_type</key>
-					<string>array</string>
+					<key>pfm_documentation_url</key>
+					<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/Docs/Webhooks.md</string>
+					<key>pfm_name</key>
+					<string>finished</string>
 					<key>pfm_subkeys</key>
 					<array>
 						<dict>
+							<key>pfm_format</key>
+							<string>^https://.*$</string>
 							<key>pfm_title</key>
 							<string>Webhook URLs</string>
 							<key>pfm_type</key>
 							<string>string</string>
-							<key>pfm_format</key>
-							<string>^https://.*$</string>
 						</dict>
 					</array>
-					<key>pfm_documentation_url</key>
-					<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/Docs/Webhooks.md</string>
+					<key>pfm_title</key>
+					<string>Finished Webhooks</string>
+					<key>pfm_type</key>
+					<string>array</string>
 				</dict>
 			</array>
+			<key>pfm_title</key>
+			<string>Webhooks</string>
+			<key>pfm_type</key>
+			<string>dictionary</string>
 		</dict>
 	</array>
 	<key>pfm_targets</key>
