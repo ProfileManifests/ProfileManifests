@@ -13,7 +13,7 @@
 	<key>pfm_interaction</key>
 	<string>combined</string>
 	<key>pfm_last_modified</key>
-	<date>2023-08-29T09:17:10Z</date>
+	<date>2025-03-31T09:04:19Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -128,9 +128,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_name</key>
 			<string>AutoLaunchedApplicationDictionary-managed</string>
 			<key>pfm_note</key>
-			<string>For each individual item, you should only supply a Path (for local apps and items) or a URL (for remote resources). The `AuthenticateAsLoginUserShortName` should only be used when supplying a URL.
-
-When exporting a profile, you will need to manually remove the extraneous keys from the profile. This is a limitation with ProfileCreator. Click the documentation link above this note for more information.</string>
+			<string>For each individual item, you should only supply a Path (for local apps and items) or a URL (for remote resources). The `AuthenticateAsLoginUserShortName` should only be used when supplying a URL.</string>
 			<key>pfm_subkeys</key>
 			<array>
 				<dict>
