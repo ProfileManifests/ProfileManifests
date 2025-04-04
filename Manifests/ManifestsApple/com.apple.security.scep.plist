@@ -1098,6 +1098,8 @@ Some certificate authorities, such as Windows CA, support only encryption or sig
 			<true/>
 			<key>pfmx_requires_dep</key>
 			<false/>
+			<key>pfmx_supervised</key>
+			<false/>
 			<key>pfmx_user_approved_mdm</key>
 			<false/>
 			<key>pfmx_user_channel</key>

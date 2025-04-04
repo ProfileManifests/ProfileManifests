@@ -15,7 +15,7 @@
 	<key>pfm_ios_min</key>
 	<string>4.0</string>
 	<key>pfm_last_modified</key>
-	<date>2025-04-04T13:24:55Z</date>
+	<date>2025-04-04T14:02:04Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>iOS</string>
@@ -7918,6 +7918,8 @@ Available in iOS 4.0 and later, macOS 15 and later, and tvOS 11.3 and later. Req
 				</dict>
 				<key>tvOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>17.4</string>
 					<key>pfmx_introduced</key>
 					<string>12.0</string>
 					<key>pfmx_supervised</key>
@@ -9247,7 +9249,7 @@ Available in iOS 4.0 and later, macOS 15 and later, and tvOS 11.3 and later. Req
 				<key>visionOS</key>
 				<dict>
 					<key>pfmx_introduced</key>
-					<string>15.4</string>
+					<string>2.4</string>
 					<key>pfmx_user_enrollment</key>
 					<dict>
 						<key>pfmx_mode</key>
@@ -9311,7 +9313,7 @@ Available in iOS 4.0 and later, macOS 15 and later, and tvOS 11.3 and later. Req
 				<key>visionOS</key>
 				<dict>
 					<key>pfmx_introduced</key>
-					<string>15.4</string>
+					<string>2.4</string>
 					<key>pfmx_user_enrollment</key>
 					<dict>
 						<key>pfmx_mode</key>
@@ -9782,6 +9784,41 @@ Available in iOS 4.0 and later, macOS 15 and later, and tvOS 11.3 and later. Req
 			<string>Allow Video Conferencing Remote Control</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>iOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>18.4</string>
+					<key>pfmx_supervised</key>
+					<true/>
+					<key>pfmx_user_enrollment</key>
+					<dict>
+						<key>pfmx_mode</key>
+						<string>forbidden</string>
+					</dict>
+				</dict>
+				<key>macOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>n/a</string>
+				</dict>
+				<key>tvOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>n/a</string>
+				</dict>
+				<key>visionOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>n/a</string>
+				</dict>
+				<key>watchOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>n/a</string>
+				</dict>
+			</dict>
 		</dict>
 	</array>
 	<key>pfm_targets</key>
