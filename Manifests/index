@@ -1564,16 +1564,16 @@
 		<key>com.apple.applicationaccess-iOS</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-03-15T16:11:44Z</date>
+			<date>2025-04-04T14:02:04Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.applicationaccess-iOS.plist</string>
 			<key>version</key>
-			<integer>18</integer>
+			<integer>19</integer>
 		</dict>
 		<key>com.apple.applicationaccess-macOS</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-03-15T16:11:44Z</date>
+			<date>2025-04-04T13:24:55Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.applicationaccess-macOS.plist</string>
 			<key>version</key>
@@ -1582,7 +1582,7 @@
 		<key>com.apple.applicationaccess-tvOS</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-03-15T16:11:44Z</date>
+			<date>2025-04-04T13:24:55Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.applicationaccess-tvOS.plist</string>
 			<key>version</key>
@@ -1645,7 +1645,7 @@
 		<key>com.apple.cellular</key>
 		<dict>
 			<key>modified</key>
-			<date>2024-03-01T15:25:39Z</date>
+			<date>2025-04-04T13:11:06Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.cellular.plist</string>
 			<key>version</key>
@@ -1717,7 +1717,7 @@
 		<key>com.apple.dnsSettings.managed</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-01-15T11:02:30Z</date>
+			<date>2025-04-04T13:00:05Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.dnsSettings.managed.plist</string>
 			<key>version</key>
@@ -1771,7 +1771,7 @@
 		<key>com.apple.extensiblesso</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-03-15T16:11:44Z</date>
+			<date>2025-04-04T13:24:55Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.extensiblesso.plist</string>
 			<key>version</key>
@@ -2095,7 +2095,7 @@
 		<key>com.apple.security.acme</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-03-15T16:11:44Z</date>
+			<date>2025-04-04T13:00:05Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.security.acme.plist</string>
 			<key>version</key>
@@ -2167,7 +2167,7 @@
 		<key>com.apple.security.scep</key>
 		<dict>
 			<key>modified</key>
-			<date>2024-09-03T15:13:17Z</date>
+			<date>2025-04-04T13:00:05Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.security.scep.plist</string>
 			<key>version</key>
@@ -2176,7 +2176,7 @@
 		<key>com.apple.security.smartcard</key>
 		<dict>
 			<key>modified</key>
-			<date>2023-08-29T09:17:10Z</date>
+			<date>2025-04-04T13:00:05Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.security.smartcard.plist</string>
 			<key>version</key>
@@ -2400,6 +2400,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2025-04-02T08:11:11Z</date>
+	<date>2025-04-04T14:11:13Z</date>
 </dict>
 </plist>
