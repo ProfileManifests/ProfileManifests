@@ -15,7 +15,7 @@
 	<key>pfm_ios_min</key>
 	<string>4.0</string>
 	<key>pfm_last_modified</key>
-	<date>2025-03-15T16:11:44Z</date>
+	<date>2025-04-04T13:24:55Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>iOS</string>
@@ -307,6 +307,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<string>allowCallRecording</string>
 					<string>allowRCSMessaging</string>
 					<string>allowSatelliteConnection</string>
+					<string>allowVideoConferencingRemoteControl</string>
 				</array>
 				<key>Media</key>
 				<array>
@@ -6814,7 +6815,6 @@ The system still allows third-party password managers, and apps can use AutoFill
 			<real>2</real>
 			<key>pfm_description</key>
 			<string>Defines the conditions under which the device accepts cookies. The user-facing settings changed in iOS 11, although the possible values remain the same. Available in iOS 4 and later. Support for this restriction on unsupervised devices is deprecated. Allowed values:
-
 * '0': Enables Prevent Cross-Site Tracking and Block All Cookies, and the user canʼt disable either setting.
 * '1' or '1.5': Enables Prevent Cross-Site Tracking, and the user canʼt disable it. Doesn't enable Block All Cookies, but the user can enable it.
 * '2': Enables Prevent Cross-Site Tracking but doesn't enable Block All Cookies. The user can toggle either setting.</string>
@@ -7385,7 +7385,6 @@ Requires a supervised device. Available in iOS 15 and later, and tvOS 15 and lat
 			<key>pfm_description</key>
 			<string>The maximum level of app content allowed on the device. Preinstalled (first party) apps ignore this restriction. Available in iOS 4.0 and later, macOS 15 and later, and tvOS 11.3 and later.  Support for this restriction on unsupervised devices is deprecated.
 Possible values, with the US description of the rating level:
-
 * '1000': All
 * '600': 17+
 * '300': 12+
@@ -7475,7 +7474,6 @@ Possible values, with the US description of the rating level:
 			<key>pfm_description</key>
 			<string>The maximum level of movie content allowed on the device. Available in iOS 4.0 and later, macOS 15 and later, and tvOS 11.3 and later.  Support for this restriction on unsupervised devices is deprecated.
 Possible values, with the US description of the rating level:
-
 * '1000': All
 * '500': NC-17
 * '400': R
@@ -7883,7 +7881,7 @@ Available in iOS 4.0 and later, macOS 15 and later, and tvOS 11.3 and later. Req
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
-			<string>If 'false', the system disables requesting passwords from nearby devices. Available in iOS 12 and later, macOS 10.14 and later, and tvOS 12 and later. Requires a supervised device in iOS and tvOS.</string>
+			<string>If 'false', the system disables requesting passwords from nearby devices. Available in iOS 12 and later, macOS 10.14 and later, and tvOS 12 and later. Requires a supervised device in iOS and tvOS. Deprecated on tvOS 17.4 or later as guest password sharing is no longer supported.</string>
 			<key>pfm_ios_min</key>
 			<string>12.0</string>
 			<key>pfm_name</key>
@@ -8928,7 +8926,7 @@ Available in iOS 4.0 and later, macOS 15 and later, and tvOS 11.3 and later. Req
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
-			<string>If false, disables smart replies in Mail.</string>
+			<string>If 'false', disables smart replies in Mail. Available in iOS 18.2 and later, and macOS 15.2 and later.</string>
 			<key>pfm_ios_min</key>
 			<string>18.4</string>
 			<key>pfm_name</key>
@@ -9101,7 +9099,7 @@ Available in iOS 4.0 and later, macOS 15 and later, and tvOS 11.3 and later. Req
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
-			<string>If false, disables default calling app preference modification.</string>
+			<string>If 'false', disables default calling app preference modification. The MDM Settings command to set the default calling app preference still works when this is applied. Available in iOS 18.4 and later.</string>
 			<key>pfm_ios_min</key>
 			<string>18.4</string>
 			<key>pfm_name</key>
@@ -9152,7 +9150,7 @@ Available in iOS 4.0 and later, macOS 15 and later, and tvOS 11.3 and later. Req
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
-			<string>If false, disables default messaging app preference modification.</string>
+			<string>If 'false', disables default messaging app preference modification. The MDM Settings command to set the default messaging app preference still works when this is applied. Available in iOS 18.4 and later.</string>
 			<key>pfm_ios_min</key>
 			<string>18.4</string>
 			<key>pfm_name</key>
@@ -9329,7 +9327,7 @@ Available in iOS 4.0 and later, macOS 15 and later, and tvOS 11.3 and later. Req
 		</dict>
 		<dict>
 			<key>pfm_description</key>
-			<string>Array of strings, but currently restricted to a single element. If present, Apple Intelligence will only allow the given external integration workspace ID to be used, and will require a sign-in in order to make requests; the user will be required to sign in to integrations that support signing in. Multiple payloads will combine using an intersect operation. This means the allowed set of workspace IDs can become the empty set if conflicting values are specified in multiple payloads.</string>
+			<string>An array of strings, but currently restricted to a single element. If present, Apple Intelligence only allows the given external integration workspace ID to be used, and requires a sign-in to make requests; the user will be required to sign in to integrations that support signing in. Multiple payloads combine using an intersect operation. This means the allowed set of workspace IDs can become the empty set if conflicting values are specified in multiple payloads.</string>
 			<key>pfm_ios_min</key>
 			<string>18.3</string>
 			<key>pfm_name</key>
@@ -9416,7 +9414,7 @@ Available in iOS 4.0 and later, macOS 15 and later, and tvOS 11.3 and later. Req
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
-			<string>If false, disables transcription summarization in Notes.</string>
+			<string>If 'false', disables transcription summarization in Notes. Available in iOS 18.3 and later, and macOS 15.3 and later.</string>
 			<key>pfm_ios_min</key>
 			<string>18.3</string>
 			<key>pfm_name</key>
@@ -9475,7 +9473,7 @@ Available in iOS 4.0 and later, macOS 15 and later, and tvOS 11.3 and later. Req
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
-			<string>If false, disables transcription in Notes.</string>
+			<string>If 'false', disables transcription in Notes. Available in iOS 18.2 and later, and macOS 15.2 and later.</string>
 			<key>pfm_ios_min</key>
 			<string>18.4</string>
 			<key>pfm_name</key>
@@ -9534,7 +9532,7 @@ Available in iOS 4.0 and later, macOS 15 and later, and tvOS 11.3 and later. Req
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
-			<string>When false, disables visual intelligence summarization.</string>
+			<string>If 'false', the system disables visual intelligence summarization. Available in iOS 18.3 and later.</string>
 			<key>pfm_ios_min</key>
 			<string>18.3</string>
 			<key>pfm_name</key>
@@ -9590,7 +9588,7 @@ Available in iOS 4.0 and later, macOS 15 and later, and tvOS 11.3 and later. Req
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
-			<string>If false, the connection to and use of satellite services is prohibited.</string>
+			<string>If 'false', the system prohibits the connection to and use of satellite services. Available in iOS 18.2 and later.</string>
 			<key>pfm_ios_min</key>
 			<string>18.2</string>
 			<key>pfm_name</key>
@@ -9646,7 +9644,7 @@ Available in iOS 4.0 and later, macOS 15 and later, and tvOS 11.3 and later. Req
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
-			<string>When false, disables Apple Intelligence reports.</string>
+			<string>If 'false', the system disables Apple Intelligence reports. Available in iOS 18.4 and later, and macOS 15.4 and later.</string>
 			<key>pfm_ios_min</key>
 			<string>18.4</string>
 			<key>pfm_name</key>
@@ -9707,7 +9705,7 @@ Available in iOS 4.0 and later, macOS 15 and later, and tvOS 11.3 and later. Req
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
-			<string>If false, disables the ability to summarize content in Safari.</string>
+			<string>If 'false', the system disables the ability to summarize content in Safari. Available in iOS 18.2 and later, and macOS 15.2 and later.</string>
 			<key>pfm_ios_min</key>
 			<string>18.4</string>
 			<key>pfm_name</key>
@@ -9769,6 +9767,22 @@ Available in iOS 4.0 and later, macOS 15 and later, and tvOS 11.3 and later. Req
 				</dict>
 			</dict>
 		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>When false, disables the ability for a remote FaceTime session to request control of the device.</string>
+			<key>pfm_ios_min</key>
+			<string>18.4</string>
+			<key>pfm_name</key>
+			<string>allowVideoConferencingRemoteControl</string>
+			<key>pfm_supervised</key>
+			<true/>
+			<key>pfm_title</key>
+			<string>Allow Video Conferencing Remote Control</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
 	</array>
 	<key>pfm_targets</key>
 	<array>
@@ -9780,7 +9794,7 @@ Available in iOS 4.0 and later, macOS 15 and later, and tvOS 11.3 and later. Req
 	<key>pfm_unique</key>
 	<false/>
 	<key>pfm_version</key>
-	<integer>18</integer>
+	<integer>19</integer>
 	<key>pfmx_supported_oses</key>
 	<dict>
 		<key>iOS</key>
