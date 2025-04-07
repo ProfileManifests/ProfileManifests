@@ -1675,8 +1675,6 @@ A profile can consist of payloads with different version numbers. For example, c
 			<key>pfm_subkeys</key>
 			<array>
 				<dict>
-					<key>pfm_hidden</key>
-					<string>container</string>
 					<key>pfm_subkeys</key>
 					<array>
 						<dict>
@@ -1865,8 +1863,6 @@ A profile can consist of payloads with different version numbers. For example, c
 					<key>pfm_subkeys</key>
 					<array>
 						<dict>
-							<key>pfm_hidden</key>
-							<string>container</string>
 							<key>pfm_subkeys</key>
 							<array>
 								<dict>
@@ -1925,8 +1921,6 @@ A profile can consist of payloads with different version numbers. For example, c
 					<key>pfm_subkeys</key>
 					<array>
 						<dict>
-							<key>pfm_hidden</key>
-							<string>container</string>
 							<key>pfm_subkeys</key>
 							<array>
 								<dict>
