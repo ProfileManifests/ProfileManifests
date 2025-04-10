@@ -1456,11 +1456,11 @@
 		<key>com.apple.ManagedClient.preferences</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-01-24T17:00:09Z</date>
+			<date>2025-04-10T12:53:12Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.ManagedClient.preferences.plist</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<key>com.apple.NSExtension</key>
 		<dict>
@@ -2400,6 +2400,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2025-04-09T08:27:02Z</date>
+	<date>2025-04-10T12:54:24Z</date>
 </dict>
 </plist>
