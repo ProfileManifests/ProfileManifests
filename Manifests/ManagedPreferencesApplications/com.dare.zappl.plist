@@ -1,0 +1,2296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>pfm_app_url</key>
+	<string>https://latestinstaller.zappl.co/ZapplInstaller-Latest.pkg</string>
+	<key>pfm_description</key>
+	<string>Zappl is a user-focused Application Patching solution, developed by DARE Technology.</string>
+	<key>pfm_documentation_url</key>
+	<string>https://daretechnology.mintlify.app/customise/preferences</string>
+	<key>pfm_domain</key>
+	<string>com.dare.zappl.preferences</string>
+	<key>pfm_format_version</key>
+	<integer>1</integer>
+	<key>pfm_last_modified</key>
+	<date>2025-04-25T15:30:48Z</date>
+	<key>pfm_platforms</key>
+	<array>
+		<string>macOS</string>
+	</array>
+	<key>pfm_subkeys</key>
+	<array>
+		<dict>
+			<key>pfm_default</key>
+			<string>Configures Zappl configuration preferences</string>
+			<key>pfm_description</key>
+			<string>Zappl is a user-focused Application Patching solution, made by DARE Technology.</string>
+			<key>pfm_description_reference</key>
+			<string>Optional. A human-readable description of this payload. This description is shown on the Detail screen.</string>
+			<key>pfm_name</key>
+			<string>PayloadDescription</string>
+			<key>pfm_title</key>
+			<string>Payload Description</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Zappl</string>
+			<key>pfm_description</key>
+			<string>Zappl is a user-focused Application Patching solution, made by DARE Technology.</string>
+			<key>pfm_description_reference</key>
+			<string>A human-readable name for the profile payload. This name is displayed on the Detail screen. It does not have to be unique.</string>
+			<key>pfm_name</key>
+			<string>PayloadDisplayName</string>
+			<key>pfm_require</key>
+			<string>always</string>
+			<key>pfm_title</key>
+			<string>Payload Display Name</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>com.dare.zappl.preferences</string>
+			<key>pfm_description</key>
+			<string>A unique identifier for the payload, dot-delimited.  Usually root PayloadIdentifier+subidentifier</string>
+			<key>pfm_description_reference</key>
+			<string>A reverse-DNS-style identifier for the specific payload. It is usually the same identifier as the root-level PayloadIdentifier value with an additional component appended.</string>
+			<key>pfm_name</key>
+			<string>PayloadIdentifier</string>
+			<key>pfm_require</key>
+			<string>always</string>
+			<key>pfm_title</key>
+			<string>Payload Identifier</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>com.dare.zappl.preferences</string>
+			<key>pfm_description</key>
+			<string>The type of the payload, a reverse dns string.</string>
+			<key>pfm_description_reference</key>
+			<string>The payload type.</string>
+			<key>pfm_name</key>
+			<string>PayloadType</string>
+			<key>pfm_require</key>
+			<string>always</string>
+			<key>pfm_title</key>
+			<string>Payload Type</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Unique identifier for the payload (format 01234567-89AB-CDEF-0123-456789ABCDEF)</string>
+			<key>pfm_description_reference</key>
+			<string>A globally unique identifier for the payload. The actual content is unimportant, but it must be globally unique. In macOS, you can use uuidgen to generate reasonable UUIDs.</string>
+			<key>pfm_format</key>
+			<string>^[0-9A-Za-z]{8}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{12}$</string>
+			<key>pfm_name</key>
+			<string>PayloadUUID</string>
+			<key>pfm_require</key>
+			<string>always</string>
+			<key>pfm_title</key>
+			<string>Payload UUID</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<integer>1</integer>
+			<key>pfm_description</key>
+			<string>The version of the whole configuration profile.</string>
+			<key>pfm_description_reference</key>
+			<string>The version number of the individual payload.
+A profile can consist of payloads with different version numbers. For example, changes to the VPN software in iOS might introduce a new payload version to support additional features, but Mail payload versions would not necessarily change in the same release.</string>
+			<key>pfm_name</key>
+			<string>PayloadVersion</string>
+			<key>pfm_require</key>
+			<string>always</string>
+			<key>pfm_title</key>
+			<string>Payload Version</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>This value describes the issuing organization of the profile, as displayed to the user</string>
+			<key>pfm_name</key>
+			<string>PayloadOrganization</string>
+			<key>pfm_title</key>
+			<string>Payload Organization</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_name</key>
+			<string>PFC_SegmentedControl_0</string>
+			<key>pfm_range_list_titles</key>
+			<array>
+				<string>General Options</string>
+				<string>Scheduled Update Options</string>
+				<string>Forced Update Options</string>
+			</array>
+			<key>pfm_require</key>
+			<string>always</string>
+			<key>pfm_segments</key>
+			<dict>
+				<key>Forced Update Options</key>
+				<array>
+					<string>ForcedUpdates</string>
+					<string>runLimitations</string>
+				</array>
+				<key>General Options</key>
+				<array>
+					<string>GeneralOptions</string>
+				</array>
+				<key>Scheduled Update Options</key>
+				<array>
+					<string>ScheduledUpdates</string>
+					<string>runFrequency</string>
+					<string>runLimitations</string>
+				</array>
+			</dict>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_name</key>
+			<string>GeneralOptions</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_description</key>
+					<string>Required. Enter your unique customer activation token. If you do not know this, please contact our Support team.</string>
+					<key>pfm_name</key>
+					<string>activationToken</string>
+					<key>pfm_require</key>
+					<string>always</string>
+					<key>pfm_title</key>
+					<string>Activation Token</string>
+					<key>pfm_type</key>
+					<string>string</string>
+					<key>pfm_value_placeholder</key>
+					<string>Your Activation Token</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>Required. Enter your unique customer public key. If you do not know this, please contact our Support team.</string>
+					<key>pfm_enabled</key>
+					<true/>
+					<key>pfm_name</key>
+					<string>publicKey</string>
+					<key>pfm_require</key>
+					<string>always</string>
+					<key>pfm_title</key>
+					<string>Public Key</string>
+					<key>pfm_type</key>
+					<string>string</string>
+					<key>pfm_value_placeholder</key>
+					<string>Your Public Key</string>
+				</dict>
+				<dict>
+					<key>pfm_default</key>
+					<true/>
+					<key>pfm_description</key>
+					<string>Determines whether Zappl should check for updates and attempt to silently install them once every hour. Uncheck this option to prevent Zappl from checking for new updates once every hour (not recommended).</string>
+					<key>pfm_enabled</key>
+					<false/>
+					<key>pfm_name</key>
+					<string>hourlyCheck</string>
+					<key>pfm_title</key>
+					<string>Allow Hourly Update Attempts</string>
+					<key>pfm_type</key>
+					<string>boolean</string>
+				</dict>
+				<dict>
+					<key>pfm_default</key>
+					<true/>
+					<key>pfm_description</key>
+					<string>Determines whether Zappl should prompt users to install pending cached updates on a recurring interval. Uncheck this option to disable all recurring update prompts (not recommended). To configure the behaviour of recurring update prompts, use the options under the Scheduled Updates section of this profile.</string>
+					<key>pfm_name</key>
+					<string>updatePrompts</string>
+					<key>pfm_title</key>
+					<string>Allow Recurring Update Prompts</string>
+					<key>pfm_type</key>
+					<string>boolean</string>
+				</dict>
+				<dict>
+					<key>pfm_default</key>
+					<true/>
+					<key>pfm_description</key>
+					<string>Determines whether Zappl automatically updates itself when new major and point releases are available. Uncheck this option if you prefer to manually update Zappl.</string>
+					<key>pfm_name</key>
+					<string>autoUpdate</string>
+					<key>pfm_title</key>
+					<string>Automatic Self Updates</string>
+					<key>pfm_type</key>
+					<string>boolean</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>By default, all Apps within the Zappl App catalog are available for installs. If you prefer to specify a list of Apps allowed for installs, specify the App identifiers below. You can specify as many unique identifiers as you wish, using the App Catalog unique identifiers for each App. zappl.co/app-catalog.</string>
+					<key>pfm_name</key>
+					<string>allowedAppInstalls</string>
+					<key>pfm_note</key>
+					<string>If you wish to allow installs for all Apps within the catalog with the exception of a select few Apps, skip configuring this setting and use the Excluded Installs setting. If you specify an App in this list which is also in the Excluded App Installs list, the exclusion will override this setting.</string>
+					<key>pfm_subkeys</key>
+					<array>
+						<dict>
+							<key>pfm_title</key>
+							<string>Allowed Install App Bundle ID</string>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_value_placeholder</key>
+							<string>com.Google.chrome</string>
+						</dict>
+					</array>
+					<key>pfm_title</key>
+					<string>Allowed Installs</string>
+					<key>pfm_type</key>
+					<string>array</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>By default, all Apps within the Zappl App catalog are available for installs. If you wish to allow installs for all Apps in the catalog with the exception of some Apps, specify the Apps you wish to exclude below. You can specify as many unique identifiers as you wish, using the App Catalog unique identifiers for each App. zappl.co/app-catalog.</string>
+					<key>pfm_name</key>
+					<string>excludedAppInstalls</string>
+					<key>pfm_note</key>
+					<string>If you wish to only allow installs for some specific Apps within our catalog, skip this setting and instead use the Allowed Installs setting to create your allowed installs list. If you specify an App exclusion which is also in the Allowed Installs list, only the exclusion will be respected</string>
+					<key>pfm_subkeys</key>
+					<array>
+						<dict>
+							<key>pfm_title</key>
+							<string>Excluded Install App Bundle ID</string>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_value_placeholder</key>
+							<string>com.Google.chrome</string>
+						</dict>
+					</array>
+					<key>pfm_title</key>
+					<string>Excluded Installs</string>
+					<key>pfm_type</key>
+					<string>array</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>By default, all Apps within the Zappl App catalog will be updated if installed. If you prefer to specify a list of Apps to allow updates for, specify the App identifiers below. You can specify as many unique identifiers as you wish, using the App Catalog unique identifiers for each App. zappl.co/app-catalog.</string>
+					<key>pfm_name</key>
+					<string>allowedAppUpdates</string>
+					<key>pfm_note</key>
+					<string>If you wish to allow updates for all Apps within the catalog with the exception of a select few Apps, skip configuring this setting and use the Excluded Updates setting. If you specify an App in this list which is also in the Excluded Updates list, the exclusion will override this setting.</string>
+					<key>pfm_subkeys</key>
+					<array>
+						<dict>
+							<key>pfm_title</key>
+							<string>Allowed Update App Bundle ID</string>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_value_placeholder</key>
+							<string>com.Google.chrome</string>
+						</dict>
+					</array>
+					<key>pfm_title</key>
+					<string>Allowed Updates</string>
+					<key>pfm_type</key>
+					<string>array</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>By default, all Apps within the Zappl App catalog will be updated if installed. If you wish to allow updates for all Apps in the catalog with the exception of some Apps, specify the Apps you wish to exclude below. You can specify as many unique identifiers as you wish, using the App Catalog unique identifiers for each App. zappl.co/app-catalog.</string>
+					<key>pfm_name</key>
+					<string>excludedAppUpdates</string>
+					<key>pfm_note</key>
+					<string>If you wish to only allow updates for some specific Apps within our catalog, skip this setting and instead use the Allowed Updates setting to create your allowed update list. If you specify an exclusion App below which is also in the Allowed App Updates list, only the exclusion will be respected.</string>
+					<key>pfm_subkeys</key>
+					<array>
+						<dict>
+							<key>pfm_title</key>
+							<string>Excluded Update App Bundle ID</string>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_value_placeholder</key>
+							<string>com.Google.chrome</string>
+						</dict>
+					</array>
+					<key>pfm_title</key>
+					<string>Excluded Updates</string>
+					<key>pfm_type</key>
+					<string>array</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>General Options</string>
+			<key>pfm_type</key>
+			<string>dictionary</string>
+		</dict>
+		<dict>
+			<key>pfm_name</key>
+			<string>ScheduledUpdates</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_name</key>
+					<string>runFrequency</string>
+					<key>pfm_subkeys</key>
+					<array>
+						<dict>
+							<key>pfm_default</key>
+							<string>specifyFrequency</string>
+							<key>pfm_description</key>
+							<string>This defines when to prompt users to install any pending updates. You can either limit user prompts to a specified weekly patch day, or alternatively select a frequency to prompt the users, e.g. once every 2 weeks.</string>
+							<key>pfm_enabled</key>
+							<true/>
+							<key>pfm_name</key>
+							<string>runType</string>
+							<key>pfm_range_list</key>
+							<array>
+								<string>specifyFrequency</string>
+								<string>specifyPatchDay</string>
+							</array>
+							<key>pfm_range_list_titles</key>
+							<array>
+								<string>Specify Patch Frequency</string>
+								<string>Specify Recurring Patch Day</string>
+							</array>
+							<key>pfm_title</key>
+							<string>Run Frequency Option</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<string>oneWeek</string>
+							<key>pfm_description</key>
+							<string>A recurring update frequency time window which determines how often users are prompted to install pending updates, e.g. Once every week.</string>
+							<key>pfm_name</key>
+							<string>frequencyOption</string>
+							<key>pfm_range_list</key>
+							<array>
+								<string>oneDay</string>
+								<string>oneWeek</string>
+								<string>twoWeeks</string>
+								<string>threeWeeks</string>
+								<string>fourWeeks</string>
+							</array>
+							<key>pfm_range_list_titles</key>
+							<array>
+								<string>Once every day</string>
+								<string>Once every week</string>
+								<string>Once every two weeks</string>
+								<string>Once every three weeks</string>
+								<string>Once every four weeks</string>
+							</array>
+							<key>pfm_title</key>
+							<string>Frequency to prompt users</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<string>singlePromptMode</string>
+							<key>pfm_description</key>
+							<string>Determines how frequently users should be prompted if they defer the update once the configured patch frequency time has elapsed. Deferring updates with Single Prompt Mode enabled causes update prompts to be postponed until the patch frequency has elapsed again. Recurring Prompt Mode ensures users are prompted to update on a regular recurring interval after deferring until they update, and the patch frequency will only be reactivated after the updates are installed.</string>
+							<key>pfm_enabled</key>
+							<true/>
+							<key>pfm_name</key>
+							<string>frequencyElapsedMode</string>
+							<key>pfm_range_list</key>
+							<array>
+								<string>singlePromptMode</string>
+								<string>recurringPromptMode</string>
+							</array>
+							<key>pfm_range_list_titles</key>
+							<array>
+								<string>Single Prompt Mode</string>
+								<string>Recurring Prompt Mode</string>
+							</array>
+							<key>pfm_title</key>
+							<string>Frequency Elapsed Behaviour</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<integer>60</integer>
+							<key>pfm_description</key>
+							<string>When using recurring prompt mode, use this setting to define the amount of time in minutes a user can defer the update.</string>
+							<key>pfm_enabled</key>
+							<true/>
+							<key>pfm_name</key>
+							<string>deferralWindow</string>
+							<key>pfm_title</key>
+							<string>Recurring Prompt Mode Deferral Window (Patch Frequency)</string>
+							<key>pfm_type</key>
+							<string>integer</string>
+							<key>pfm_value_placeholder</key>
+							<string>60</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<integer>3</integer>
+							<key>pfm_description</key>
+							<string>The day of the week to prompt users to install cached updates.</string>
+							<key>pfm_enabled</key>
+							<true/>
+							<key>pfm_name</key>
+							<string>patchDay</string>
+							<key>pfm_range_list</key>
+							<array>
+								<integer>2</integer>
+								<integer>3</integer>
+								<integer>4</integer>
+								<integer>5</integer>
+								<integer>6</integer>
+								<integer>7</integer>
+								<integer>1</integer>
+							</array>
+							<key>pfm_range_list_titles</key>
+							<array>
+								<string>Monday</string>
+								<string>Tuesday</string>
+								<string>Wednesday</string>
+								<string>Thursday</string>
+								<string>Friday</string>
+								<string>Saturday</string>
+								<string>Sunday</string>
+							</array>
+							<key>pfm_range_max</key>
+							<integer>7</integer>
+							<key>pfm_title</key>
+							<string>Patch Day</string>
+							<key>pfm_type</key>
+							<string>integer</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<string>singlePromptMode</string>
+							<key>pfm_description</key>
+							<string>Determines how often users should be prompted to update on the configured patch day if they defer the update. Use the Single Prompt Mode to carry the deferral to the following weekly patch day, or alternatively, use Recurring Prompt Mode to continue to prompt users to update on a recurring interval on the configured patch day if they defer the update.</string>
+							<key>pfm_enabled</key>
+							<true/>
+							<key>pfm_name</key>
+							<string>patchDayFrequency</string>
+							<key>pfm_range_list</key>
+							<array>
+								<string>singlePromptMode</string>
+								<string>recurringPromptMode</string>
+							</array>
+							<key>pfm_range_list_titles</key>
+							<array>
+								<string>Single Prompt Mode</string>
+								<string>Recurring Prompt Mode</string>
+							</array>
+							<key>pfm_title</key>
+							<string>Patch Day Prompt Frequency</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<integer>60</integer>
+							<key>pfm_description</key>
+							<string>When using recurring prompt mode, use this setting to define the amount of time in minutes a user can defer the update before being prompted again.</string>
+							<key>pfm_enabled</key>
+							<true/>
+							<key>pfm_name</key>
+							<string>patchDayDeferralWindow</string>
+							<key>pfm_title</key>
+							<string>Recurring Prompt Mode Deferral Window (Patch Day)</string>
+							<key>pfm_type</key>
+							<string>integer</string>
+							<key>pfm_value_placeholder</key>
+							<string>60</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<true/>
+							<key>pfm_description</key>
+							<string>When enabled, Zappl will prompt the user to update whenever the device comes back online if it was offline on the defined patch day, or if the user deferred all update prompts when using Recurring Prompt Mode. Alternatively, leave this unchecked to wait until the next patch day to prompt the user if their device was offline on the previous patch day.</string>
+							<key>pfm_enabled</key>
+							<true/>
+							<key>pfm_name</key>
+							<string>missedUpdatePrompt</string>
+							<key>pfm_title</key>
+							<string>Missed Update Prompts</string>
+							<key>pfm_type</key>
+							<string>boolean</string>
+						</dict>
+					</array>
+					<key>pfm_title</key>
+					<string>Run Frequency Options</string>
+					<key>pfm_type</key>
+					<string>dictionary</string>
+				</dict>
+				<dict>
+					<key>pfm_name</key>
+					<string>runLimitations</string>
+					<key>pfm_subkeys</key>
+					<array>
+						<dict>
+							<key>pfm_default</key>
+							<true/>
+							<key>pfm_description</key>
+							<string>If selected, update prompts will be allowed on Mondays.</string>
+							<key>pfm_enabled</key>
+							<true/>
+							<key>pfm_name</key>
+							<string>monday</string>
+							<key>pfm_title</key>
+							<string>Monday</string>
+							<key>pfm_type</key>
+							<string>boolean</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<string>00:00</string>
+							<key>pfm_description</key>
+							<string>If you allowed updates on Mondays, use to define the time on a Monday Zappl is permitted to start prompting users to install pending updates. This should be in 24 hour format, e.g., 09:00 for 9am, or 21:00 for 9pm.</string>
+							<key>pfm_format</key>
+							<string>^$|^(?:[01]\d|2[0-3]):[0-5]\d$</string>
+							<key>pfm_name</key>
+							<string>mondayStartTime</string>
+							<key>pfm_title</key>
+							<string>Monday Start Time</string>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_value_placeholder</key>
+							<string>00:00</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<string>23:59</string>
+							<key>pfm_description</key>
+							<string>If you allowed updates on Mondays, use to define the time on a Monday Zappl should stop prompting users to install pending updates. This should be in 24 hour format, e.g., 09:00 for 9am, or 21:00 for 9pm.</string>
+							<key>pfm_enabled</key>
+							<true/>
+							<key>pfm_format</key>
+							<string>^$|^(?:[01]\d|2[0-3]):[0-5]\d$</string>
+							<key>pfm_name</key>
+							<string>mondayEndTime</string>
+							<key>pfm_title</key>
+							<string>Monday End Time</string>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_value_placeholder</key>
+							<string>23:59</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<true/>
+							<key>pfm_description</key>
+							<string>If selected, update prompts will be allowed on Tuesdays.</string>
+							<key>pfm_enabled</key>
+							<true/>
+							<key>pfm_name</key>
+							<string>tuesday</string>
+							<key>pfm_title</key>
+							<string>Tuesday</string>
+							<key>pfm_type</key>
+							<string>boolean</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<string>00:00</string>
+							<key>pfm_description</key>
+							<string>If you allowed updates on Tuesdays, use to define the time on a Tuesday Zappl is permitted to start prompting users to install pending updates. This should be in 24 hour format, e.g., 09:00 for 9am, or 21:00 for 9pm.</string>
+							<key>pfm_enabled</key>
+							<true/>
+							<key>pfm_format</key>
+							<string>^$|^(?:[01]\d|2[0-3]):[0-5]\d$</string>
+							<key>pfm_name</key>
+							<string>tuesdayStartTime</string>
+							<key>pfm_title</key>
+							<string>Tuesday Start Time</string>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_value_placeholder</key>
+							<string>00:00</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<string>23:59</string>
+							<key>pfm_description</key>
+							<string>If you allowed updates on Tuesdays, use to define the time on a Tuesday Zappl should stop prompting users to install pending updates. This should be in 24 hour format, e.g., 09:00 for 9am, or 21:00 for 9pm.</string>
+							<key>pfm_enabled</key>
+							<true/>
+							<key>pfm_format</key>
+							<string>^$|^(?:[01]\d|2[0-3]):[0-5]\d$</string>
+							<key>pfm_name</key>
+							<string>tuesdayEndTime</string>
+							<key>pfm_title</key>
+							<string>Tuesday End Time</string>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_value_placeholder</key>
+							<string>23:59</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<true/>
+							<key>pfm_description</key>
+							<string>If selected, update prompts will be allowed on Wednesdays.</string>
+							<key>pfm_enabled</key>
+							<true/>
+							<key>pfm_name</key>
+							<string>wednesday</string>
+							<key>pfm_title</key>
+							<string>Wednesday</string>
+							<key>pfm_type</key>
+							<string>boolean</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<string>00:00</string>
+							<key>pfm_description</key>
+							<string>If you allowed updates on Wednesdays, use to define the time on a Wednesday Zappl is permitted to start prompting users to install pending updates. This should be in 24 hour format, e.g., 09:00 for 9am, or 21:00 for 9pm.</string>
+							<key>pfm_enabled</key>
+							<true/>
+							<key>pfm_format</key>
+							<string>^$|^(?:[01]\d|2[0-3]):[0-5]\d$</string>
+							<key>pfm_name</key>
+							<string>wednesdayStartTime</string>
+							<key>pfm_title</key>
+							<string>Wednesday Start Time</string>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_value_placeholder</key>
+							<string>00:00</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<string>23:59</string>
+							<key>pfm_description</key>
+							<string>If you allowed updates on Wednesdays, use to define the time on a Wednesday Zappl should stop prompting users to install pending updates. This should be in 24 hour format, e.g., 09:00 for 9am, or 21:00 for 9pm.</string>
+							<key>pfm_enabled</key>
+							<true/>
+							<key>pfm_format</key>
+							<string>^$|^(?:[01]\d|2[0-3]):[0-5]\d$</string>
+							<key>pfm_name</key>
+							<string>wednesdayEndTime</string>
+							<key>pfm_title</key>
+							<string>Wednesday End Time</string>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_value_placeholder</key>
+							<string>23:59</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<true/>
+							<key>pfm_description</key>
+							<string>If selected, update prompts will be allowed on Thursdays.</string>
+							<key>pfm_enabled</key>
+							<true/>
+							<key>pfm_name</key>
+							<string>thursday</string>
+							<key>pfm_title</key>
+							<string>Thursday</string>
+							<key>pfm_type</key>
+							<string>boolean</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<string>00:00</string>
+							<key>pfm_description</key>
+							<string>If you allowed updates on Thursdays, use to define the time on a Thursday Zappl is permitted to start prompting users to install pending updates. This should be in 24 hour format, e.g., 09:00 for 9am, or 21:00 for 9pm.</string>
+							<key>pfm_enabled</key>
+							<true/>
+							<key>pfm_format</key>
+							<string>^$|^(?:[01]\d|2[0-3]):[0-5]\d$</string>
+							<key>pfm_name</key>
+							<string>thursdayStartTime</string>
+							<key>pfm_title</key>
+							<string>Thursday Start Time</string>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_value_placeholder</key>
+							<string>00:00</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<string>23:59</string>
+							<key>pfm_description</key>
+							<string>If you allowed updates on Thursdays, use to define the time on a Thursday Zappl should stop prompting users to install pending updates. This should be in 24 hour format, e.g., 09:00 for 9am, or 21:00 for 9pm.</string>
+							<key>pfm_enabled</key>
+							<true/>
+							<key>pfm_format</key>
+							<string>^$|^(?:[01]\d|2[0-3]):[0-5]\d$</string>
+							<key>pfm_name</key>
+							<string>thursdayEndTime</string>
+							<key>pfm_title</key>
+							<string>Thursday End Time</string>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_value_placeholder</key>
+							<string>23:59</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<true/>
+							<key>pfm_description</key>
+							<string>If selected, update prompts will be allowed on Fridays.</string>
+							<key>pfm_enabled</key>
+							<true/>
+							<key>pfm_name</key>
+							<string>friday</string>
+							<key>pfm_title</key>
+							<string>Friday</string>
+							<key>pfm_type</key>
+							<string>boolean</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<string>00:00</string>
+							<key>pfm_description</key>
+							<string>If you allowed updates on Fridays, use to define the time on a Friday Zappl is permitted to start prompting users to install pending updates. This should be in 24 hour format, e.g., 09:00 for 9am, or 21:00 for 9pm.</string>
+							<key>pfm_enabled</key>
+							<true/>
+							<key>pfm_format</key>
+							<string>^$|^(?:[01]\d|2[0-3]):[0-5]\d$</string>
+							<key>pfm_name</key>
+							<string>fridayStartTime</string>
+							<key>pfm_title</key>
+							<string>Friday Start Time</string>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_value_placeholder</key>
+							<string>00:00</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<string>23:59</string>
+							<key>pfm_description</key>
+							<string>If you allowed updates on Fridays, use to define the time on a Friday Zappl should stop prompting users to install pending updates. This should be in 24 hour format, e.g., 09:00 for 9am, or 21:00 for 9pm.</string>
+							<key>pfm_enabled</key>
+							<true/>
+							<key>pfm_format</key>
+							<string>^$|^(?:[01]\d|2[0-3]):[0-5]\d$</string>
+							<key>pfm_name</key>
+							<string>fridayEndTime</string>
+							<key>pfm_title</key>
+							<string>Friday End Time</string>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_value_placeholder</key>
+							<string>23:59</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<true/>
+							<key>pfm_description</key>
+							<string>If selected, update prompts will be allowed on Saturdays.</string>
+							<key>pfm_enabled</key>
+							<true/>
+							<key>pfm_name</key>
+							<string>saturday</string>
+							<key>pfm_title</key>
+							<string>Saturday</string>
+							<key>pfm_type</key>
+							<string>boolean</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<string>00:00</string>
+							<key>pfm_description</key>
+							<string>If you allowed updates on Saturdays, use to define the time on a Saturday Zappl is permitted to start prompting users to install pending updates. This should be in 24 hour format, e.g., 09:00 for 9am, or 21:00 for 9pm.</string>
+							<key>pfm_enabled</key>
+							<true/>
+							<key>pfm_format</key>
+							<string>^$|^(?:[01]\d|2[0-3]):[0-5]\d$</string>
+							<key>pfm_name</key>
+							<string>saturdayStartTime</string>
+							<key>pfm_title</key>
+							<string>Saturday Start Time</string>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_value_placeholder</key>
+							<string>00:00</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<string>23:59</string>
+							<key>pfm_description</key>
+							<string>If you allowed updates on Saturdays, use to define the time on a Saturday Zappl should stop prompting users to install pending updates. This should be in 24 hour format, e.g., 09:00 for 9am, or 21:00 for 9pm.</string>
+							<key>pfm_enabled</key>
+							<true/>
+							<key>pfm_format</key>
+							<string>^$|^(?:[01]\d|2[0-3]):[0-5]\d$</string>
+							<key>pfm_name</key>
+							<string>saturdayEndTime</string>
+							<key>pfm_title</key>
+							<string>Saturday End Time</string>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_value_placeholder</key>
+							<string>23:59</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<true/>
+							<key>pfm_description</key>
+							<string>If selected, update prompts will be allowed on Sundays.</string>
+							<key>pfm_enabled</key>
+							<true/>
+							<key>pfm_name</key>
+							<string>sunday</string>
+							<key>pfm_title</key>
+							<string>Sunday</string>
+							<key>pfm_type</key>
+							<string>boolean</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<string>00:00</string>
+							<key>pfm_description</key>
+							<string>If you allowed updates on Sundays, use to define the time on a Sunday Zappl is permitted to start prompting users to install pending updates. This should be in 24 hour format, e.g., 09:00 for 9am, or 21:00 for 9pm.</string>
+							<key>pfm_enabled</key>
+							<true/>
+							<key>pfm_format</key>
+							<string>^$|^(?:[01]\d|2[0-3]):[0-5]\d$</string>
+							<key>pfm_name</key>
+							<string>sundayStartTime</string>
+							<key>pfm_title</key>
+							<string>Sunday Start Time</string>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_value_placeholder</key>
+							<string>00:00</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<string>23:59</string>
+							<key>pfm_description</key>
+							<string>If you allowed updates on Sundays, use to define the time on a Sunday Zappl should stop prompting users to install pending updates. This should be in 24 hour format, e.g., 09:00 for 9am, or 21:00 for 9pm.</string>
+							<key>pfm_enabled</key>
+							<true/>
+							<key>pfm_format</key>
+							<string>^$|^(?:[01]\d|2[0-3]):[0-5]\d$</string>
+							<key>pfm_name</key>
+							<string>sundayEndTime</string>
+							<key>pfm_title</key>
+							<string>Sunday End Time</string>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_value_placeholder</key>
+							<string>23:59</string>
+						</dict>
+					</array>
+					<key>pfm_title</key>
+					<string>Run Limitation Options</string>
+					<key>pfm_type</key>
+					<string>dictionary</string>
+				</dict>
+				<dict>
+					<key>pfm_name</key>
+					<string>deferralConfiguration</string>
+					<key>pfm_subkeys</key>
+					<array>
+						<dict>
+							<key>pfm_default</key>
+							<string>specifyDeferralLimit</string>
+							<key>pfm_description</key>
+							<string>Use to define behaviour around update deferrals. To allow the user to continue deferring with no limit and force the update on-demand, select Disable Deferral Limit. To set a limit on the amount of allowed deferrals, select Specify Deferral Limit. Alternatively, you can disable deferrals completely by selecting Disable Deferrals, which will only allow a grace period for updates.</string>
+							<key>pfm_enabled</key>
+							<true/>
+							<key>pfm_name</key>
+							<string>deferralOption</string>
+							<key>pfm_range_list</key>
+							<array>
+								<string>disableDeferralLimit</string>
+								<string>specifyDeferralLimit</string>
+								<string>disableDeferrals</string>
+							</array>
+							<key>pfm_range_list_titles</key>
+							<array>
+								<string>Disable Deferral Limit</string>
+								<string>Specify Deferral Limit</string>
+								<string>Disable Deferrals</string>
+							</array>
+							<key>pfm_title</key>
+							<string>Select a Deferral Option</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<integer>2</integer>
+							<key>pfm_description</key>
+							<string>Specify a custom deferral limit. The default deferral limit if not specified is 2.</string>
+							<key>pfm_enabled</key>
+							<true/>
+							<key>pfm_name</key>
+							<string>specifyLimit</string>
+							<key>pfm_title</key>
+							<string>Deferral Limit</string>
+							<key>pfm_type</key>
+							<string>integer</string>
+							<key>pfm_value_placeholder</key>
+							<string>2</string>
+						</dict>
+					</array>
+					<key>pfm_title</key>
+					<string>Deferral Options</string>
+					<key>pfm_type</key>
+					<string>dictionary</string>
+				</dict>
+				<dict>
+					<key>pfm_default</key>
+					<integer>15</integer>
+					<key>pfm_description</key>
+					<string>The amount of time a user is given to save work before updates are installed automatically when there are no remaining deferrals. Default is 15 minutes.</string>
+					<key>pfm_enabled</key>
+					<false/>
+					<key>pfm_name</key>
+					<string>gracePeriodMinutes</string>
+					<key>pfm_title</key>
+					<string>Grace Period in Minutes</string>
+					<key>pfm_type</key>
+					<string>integer</string>
+					<key>pfm_value_placeholder</key>
+					<string>15</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>A custom icon to be displayed on the user prompts. If no path is provided, Zappl will utilise your Self Service icon.</string>
+					<key>pfm_enabled</key>
+					<false/>
+					<key>pfm_name</key>
+					<string>customIcon</string>
+					<key>pfm_title</key>
+					<string>Icon</string>
+					<key>pfm_type</key>
+					<string>string</string>
+					<key>pfm_value_placeholder</key>
+					<string>/usr/local/images/CustomIcon.png</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>An icon overlay on the initial update prompts. The overlay is displayed on the bottom right of the main icon. Possible values are paths to a valid .png, .jpg or .icns file, or use the 'selfService' variable for the Jamf Self Service icon.</string>
+					<key>pfm_enabled</key>
+					<false/>
+					<key>pfm_name</key>
+					<string>initialPromptOverlayIcon</string>
+					<key>pfm_title</key>
+					<string>Initial Prompt Icon Overlay</string>
+					<key>pfm_type</key>
+					<string>string</string>
+					<key>pfm_value_placeholder</key>
+					<string>/usr/local/images/CustomIcon.png</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>Use to customise the size of the initial prompt displayed to users when they can either defer or update. Note: Only configure this setting if defining custom prompt messages. If you are using the default prompt messages, customising prompt size is not recommended as the default prompt size is pre-configured to correctly match the size of the default message displayed.</string>
+					<key>pfm_enabled</key>
+					<false/>
+					<key>pfm_name</key>
+					<string>customInitialPromptSize</string>
+					<key>pfm_subkeys</key>
+					<array>
+						<dict>
+							<key>pfm_default</key>
+							<integer>330</integer>
+							<key>pfm_description</key>
+							<string>Use to customise the height of the initial prompt displayed to users when they can either defer or update. Only use to define a custom height in points for the prompts shown to users, e.g. 330.</string>
+							<key>pfm_name</key>
+							<string>promptHeight</string>
+							<key>pfm_note</key>
+							<string>Only configure this setting if defining custom prompt messages. If you are using the default prompt messages, customising prompt size is not recommended as the default prompt size is pre-configured to correctly match the size of the default message displayed.</string>
+							<key>pfm_title</key>
+							<string>Custom Initial Prompt | Height</string>
+							<key>pfm_type</key>
+							<string>integer</string>
+							<key>pfm_value_placeholder</key>
+							<string>330</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<integer>640</integer>
+							<key>pfm_description</key>
+							<string>Use to customise the width of the initial prompt displayed to users when they can either defer or update. Only use to define a custom width in points for the prompts shown to users, e.g. 640.</string>
+							<key>pfm_name</key>
+							<string>promptWidth</string>
+							<key>pfm_note</key>
+							<string>Only configure this setting if defining custom prompt messages. If you are using the default prompt messages, customising prompt size is not recommended as the default prompt size is pre-configured to correctly match the size of the default message displayed.</string>
+							<key>pfm_title</key>
+							<string>Custom Initial Prompt | Width</string>
+							<key>pfm_type</key>
+							<string>integer</string>
+							<key>pfm_value_placeholder</key>
+							<string>640</string>
+						</dict>
+					</array>
+					<key>pfm_title</key>
+					<string>Initial Prompt Size</string>
+					<key>pfm_type</key>
+					<string>dictionary</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>Use to customise the size of the grace period timer prompt shown when users have no remaining deferrals. Note: Only configure this setting if defining custom prompt messages. If you are using the default prompt messages, customising prompt size is not recommended as the default prompt size is pre-configured to correctly match the size of the default message displayed.</string>
+					<key>pfm_enabled</key>
+					<false/>
+					<key>pfm_name</key>
+					<string>customGracePromptSize</string>
+					<key>pfm_subkeys</key>
+					<array>
+						<dict>
+							<key>pfm_default</key>
+							<integer>330</integer>
+							<key>pfm_description</key>
+							<string>Use to customise the height of the grace period timer prompt displayed to users when they have no remaining deferrals. Only use to define a custom height in points for the prompts shown to users, e.g. 330.</string>
+							<key>pfm_name</key>
+							<string>promptHeight</string>
+							<key>pfm_note</key>
+							<string>Only configure this setting if defining custom prompt messages. If you are using the default prompt messages, customising prompt size is not recommended as the default prompt size is pre-configured to correctly match the size of the default message displayed.</string>
+							<key>pfm_title</key>
+							<string>Custom Grace Prompt | Height</string>
+							<key>pfm_type</key>
+							<string>integer</string>
+							<key>pfm_value_placeholder</key>
+							<string>330</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<integer>640</integer>
+							<key>pfm_description</key>
+							<string>Use to customise the width of the grace period timer prompt displayed to users when they have no remaining deferrals. Only use to define a custom width in points for the prompts shown to users, e.g. 640.</string>
+							<key>pfm_name</key>
+							<string>promptWidth</string>
+							<key>pfm_note</key>
+							<string>Only configure this setting if defining custom prompt messages. If you are using the default prompt messages, customising prompt size is not recommended as the default prompt size is pre-configured to correctly match the size of the default message displayed.</string>
+							<key>pfm_title</key>
+							<string>Custom Grace Prompt | Width</string>
+							<key>pfm_type</key>
+							<string>integer</string>
+							<key>pfm_value_placeholder</key>
+							<string>640</string>
+						</dict>
+					</array>
+					<key>pfm_title</key>
+					<string>Custom Grace Prompt Size</string>
+					<key>pfm_type</key>
+					<string>dictionary</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>Use to customise the size of the prompt displayed to users when they initiate a Self Service update. Note: Only configure this setting if defining custom prompt messages. If you are using the default prompt messages, customising prompt size is not recommended as the default prompt size is pre-configured to correctly match the size of the default message displayed.</string>
+					<key>pfm_enabled</key>
+					<false/>
+					<key>pfm_name</key>
+					<string>customSelfServicePromptSize</string>
+					<key>pfm_subkeys</key>
+					<array>
+						<dict>
+							<key>pfm_default</key>
+							<integer>330</integer>
+							<key>pfm_description</key>
+							<string>Use to customise the height of the prompt displayed to users when they initiate a Self Service update. Only use to define a custom height in points for the prompts shown to users, e.g. 330.</string>
+							<key>pfm_name</key>
+							<string>promptHeight</string>
+							<key>pfm_note</key>
+							<string>Only configure this setting if defining custom prompt messages. If you are using the default prompt messages, customising prompt size is not recommended as the default prompt size is pre-configured to correctly match the size of the default message displayed.</string>
+							<key>pfm_title</key>
+							<string>Self Service Prompt | Height</string>
+							<key>pfm_type</key>
+							<string>integer</string>
+							<key>pfm_value_placeholder</key>
+							<string>330</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<integer>640</integer>
+							<key>pfm_description</key>
+							<string>Use to customise the width of the prompt displayed to users when they initiate a Self Service update. Only use to define a custom width in points for the prompts shown to users, e.g. 640.</string>
+							<key>pfm_name</key>
+							<string>promptWidth</string>
+							<key>pfm_note</key>
+							<string>Only configure this setting if defining custom prompt messages. If you are using the default prompt messages, customising prompt size is not recommended as the default prompt size is pre-configured to correctly match the size of the default message displayed.</string>
+							<key>pfm_title</key>
+							<string>Self Service Prompt | Width</string>
+							<key>pfm_type</key>
+							<string>integer</string>
+							<key>pfm_value_placeholder</key>
+							<string>640</string>
+						</dict>
+					</array>
+					<key>pfm_title</key>
+					<string>Self Service Prompt Size</string>
+					<key>pfm_type</key>
+					<string>dictionary</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>A custom title to be displayed on the user prompts when there is 1 pending App update.</string>
+					<key>pfm_enabled</key>
+					<false/>
+					<key>pfm_name</key>
+					<string>singleAppTitle</string>
+					<key>pfm_title</key>
+					<string>Single App Prompt Title</string>
+					<key>pfm_type</key>
+					<string>string</string>
+					<key>pfm_value_placeholder</key>
+					<string>appName Update Available</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>A custom title to be displayed on the user prompts when there is more than 1 pending App update.</string>
+					<key>pfm_enabled</key>
+					<false/>
+					<key>pfm_name</key>
+					<string>multipleAppsTitle</string>
+					<key>pfm_title</key>
+					<string>Multiple Apps Prompt Title</string>
+					<key>pfm_type</key>
+					<string>string</string>
+					<key>pfm_value_placeholder</key>
+					<string>Important Updates Available</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>A custom message displayed on the initial \"App needs to quit\" prompt shown when there is 1 pending App update.</string>
+					<key>pfm_enabled</key>
+					<false/>
+					<key>pfm_name</key>
+					<string>singleInitialQuitPromptMessage</string>
+					<key>pfm_title</key>
+					<string>Single App Initial Prompt Message</string>
+					<key>pfm_type</key>
+					<string>string</string>
+					<key>pfm_value_placeholder</key>
+					<string>An important update is pending which requires the App to quit...</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>A custom message displayed on the initial \"Apps need to quit\" prompt shown when there are multiple pending App updates.</string>
+					<key>pfm_enabled</key>
+					<false/>
+					<key>pfm_name</key>
+					<string>multipleInitialQuitPromptMessage</string>
+					<key>pfm_title</key>
+					<string>Multiple Apps Initial Prompt Message</string>
+					<key>pfm_type</key>
+					<string>string</string>
+					<key>pfm_value_placeholder</key>
+					<string>Important updates are pending which require Apps to quit...</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>A custom message displayed on the initial \"App needs to quit\" prompt shown when a user manually initiates an update check and there is 1 pending update.</string>
+					<key>pfm_enabled</key>
+					<false/>
+					<key>pfm_name</key>
+					<string>singleSelfServiceQuitMessage</string>
+					<key>pfm_title</key>
+					<string>Single App Self Service Prompt Message</string>
+					<key>pfm_type</key>
+					<string>string</string>
+					<key>pfm_value_placeholder</key>
+					<string>An important update is pending which requires the App to quit...</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>A custom message displayed on the initial \"Apps need to quit\" prompt shown when a user manually initiates an update check and there are multiple pending App updates.</string>
+					<key>pfm_enabled</key>
+					<false/>
+					<key>pfm_name</key>
+					<string>multipleSelfServiceQuitMessage</string>
+					<key>pfm_title</key>
+					<string>Multiple App Self Service Prompt Message</string>
+					<key>pfm_type</key>
+					<string>string</string>
+					<key>pfm_value_placeholder</key>
+					<string>Important updates are pending which require Apps to quit...</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>A custom message displayed on the \"App needs to quit\" grace period prompt shown when there is 1 pending update. This prompt shows a grace period timer and is displayed when no deferrals are remaining or configured.</string>
+					<key>pfm_enabled</key>
+					<false/>
+					<key>pfm_name</key>
+					<string>singleAppGracePeriodQuitMessage</string>
+					<key>pfm_title</key>
+					<string>Single App Grace Period Prompt Message</string>
+					<key>pfm_type</key>
+					<string>string</string>
+					<key>pfm_value_placeholder</key>
+					<string>Please save your work and click update...</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>A custom message displayed on the \"Apps need to quit\" grace period prompt shown when there are multiple pending updates. This prompt shows a grace period timer and is displayed when no deferrals are remaining or configured.</string>
+					<key>pfm_enabled</key>
+					<false/>
+					<key>pfm_name</key>
+					<string>multipleAppGracePeriodQuitMessage</string>
+					<key>pfm_title</key>
+					<string>Multiple App Grace Period Prompt Message</string>
+					<key>pfm_type</key>
+					<string>string</string>
+					<key>pfm_value_placeholder</key>
+					<string>Please save your work and click update...</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>A custom Defer button label displayed on prompts where deferrals are allowed.</string>
+					<key>pfm_enabled</key>
+					<false/>
+					<key>pfm_name</key>
+					<string>customDeferButton</string>
+					<key>pfm_title</key>
+					<string>Defer Button Label</string>
+					<key>pfm_type</key>
+					<string>string</string>
+					<key>pfm_value_placeholder</key>
+					<string>Defer</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>A custom Skip button label displayed on the Self Service update prompts that allows users to back out of installing updates without affecting deferrals.</string>
+					<key>pfm_enabled</key>
+					<false/>
+					<key>pfm_name</key>
+					<string>customSkipButton</string>
+					<key>pfm_title</key>
+					<string>Self Service Skip Button Label</string>
+					<key>pfm_type</key>
+					<string>string</string>
+					<key>pfm_value_placeholder</key>
+					<string>Skip</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>A custom Update button label displayed on the update prompts.</string>
+					<key>pfm_enabled</key>
+					<false/>
+					<key>pfm_name</key>
+					<string>customUpdateButton</string>
+					<key>pfm_title</key>
+					<string>Update Button Label</string>
+					<key>pfm_type</key>
+					<string>string</string>
+					<key>pfm_value_placeholder</key>
+					<string>Update</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>Determines how to display the list of Apps on the update prompts. Apps can either be displayed in a vertical scrollable list beneath the prompt message, or displayed horizontally as part of the prompt message. When using the horizontal list option, the list of Apps is stored in the appList variable.</string>
+					<key>pfm_enabled</key>
+					<false/>
+					<key>pfm_name</key>
+					<string>appListType</string>
+					<key>pfm_range_list</key>
+					<array>
+						<string>vertical</string>
+						<string>horizontal</string>
+					</array>
+					<key>pfm_range_list_titles</key>
+					<array>
+						<string>Vertical List</string>
+						<string>Horizontal List</string>
+					</array>
+					<key>pfm_title</key>
+					<string>App List Type</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+				<dict>
+					<key>pfm_default</key>
+					<integer>20</integer>
+					<key>pfm_description</key>
+					<string>The amount of time in seconds the user prompts refresh. The prompts require a refresh to pull focus if the user swipes away to ignore the prompt and ensures they either select defer or update. The default value is 20 seconds. The minimum allowed value is 10 seconds.</string>
+					<key>pfm_enabled</key>
+					<false/>
+					<key>pfm_name</key>
+					<string>refreshInterval</string>
+					<key>pfm_range_min</key>
+					<integer>10</integer>
+					<key>pfm_title</key>
+					<string>Prompt Refresh Interval</string>
+					<key>pfm_type</key>
+					<string>integer</string>
+					<key>pfm_value_placeholder</key>
+					<string>20</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>Application Bundle IDs specified here will prevent Zappl from prompting users to update if the App(s) are identified as being active in the foreground (You can specify one or more Bundle IDs). To get Bundle IDs, enter the following in terminal (replacing Safari with the relevant App): defaults read /Applications/Safari.app/Contents/Info.plist CFBundleIdentifier.</string>
+					<key>pfm_name</key>
+					<string>acceptableAppBundleIDs</string>
+					<key>pfm_subkeys</key>
+					<array>
+						<dict>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_value_placeholder</key>
+							<string>us.zoom.xos</string>
+						</dict>
+					</array>
+					<key>pfm_title</key>
+					<string>Do Not Disturb Applications</string>
+					<key>pfm_type</key>
+					<string>array</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>Application names specified here will prevent Zappl from prompting users to update if the App(s) are identified as using assertions (You can specify one or more Application names). To get the required Application name format, run \"/usr/bin/pmset -g assertions\" in terminal while the application is running and using assertions.</string>
+					<key>pfm_name</key>
+					<string>acceptableAppAssertions</string>
+					<key>pfm_subkeys</key>
+					<array>
+						<dict>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_value_placeholder</key>
+							<string>Google Chrome</string>
+						</dict>
+					</array>
+					<key>pfm_title</key>
+					<string>Do Not Disturb Application Assertions</string>
+					<key>pfm_type</key>
+					<string>array</string>
+				</dict>
+				<dict>
+					<key>pfm_default</key>
+					<false/>
+					<key>pfm_description</key>
+					<string>Setting as True will prevent Zappl from prompting users if Do Not Disturb mode is detected.</string>
+					<key>pfm_enabled</key>
+					<false/>
+					<key>pfm_name</key>
+					<string>acceptableDNDMode</string>
+					<key>pfm_title</key>
+					<string>Respect Do Not Disturb Mode</string>
+					<key>pfm_type</key>
+					<string>boolean</string>
+				</dict>
+				<dict>
+					<key>pfm_default</key>
+					<false/>
+					<key>pfm_description</key>
+					<string>Setting as True will prevent Zappl from prompting users if the camera is in use. Note: Apple Silicon Macs running macOS 12 (Monterey) do not accurately report camera usage, therefore this setting will be ignored. Upgrading to macOS 13 (Ventura) will resolve this issue for Apple Silicon Macs.</string>
+					<key>pfm_enabled</key>
+					<false/>
+					<key>pfm_name</key>
+					<string>acceptableCameraUsage</string>
+					<key>pfm_title</key>
+					<string>Do Not Disturb Camera Usage</string>
+					<key>pfm_type</key>
+					<string>boolean</string>
+				</dict>
+				<dict>
+					<key>pfm_default</key>
+					<false/>
+					<key>pfm_description</key>
+					<string>Setting as True will prevent Zappl from prompting users if Screen Sharing is in use.</string>
+					<key>pfm_enabled</key>
+					<false/>
+					<key>pfm_name</key>
+					<string>acceptableScreenSharing</string>
+					<key>pfm_title</key>
+					<string>Do Not Disturb Screen Sharing</string>
+					<key>pfm_type</key>
+					<string>boolean</string>
+				</dict>
+				<dict>
+					<key>pfm_default</key>
+					<string>topright</string>
+					<key>pfm_description</key>
+					<string>The position on the screen of the prompt which displays the progress of an update. The default position is top right.</string>
+					<key>pfm_enabled</key>
+					<false/>
+					<key>pfm_name</key>
+					<string>updateProgressPosition</string>
+					<key>pfm_range_list</key>
+					<array>
+						<string>topright</string>
+						<string>right</string>
+						<string>bottomright</string>
+						<string>topleft</string>
+						<string>left</string>
+						<string>bottomleft</string>
+						<string>top</string>
+						<string>center/centre</string>
+						<string>bottom</string>
+					</array>
+					<key>pfm_range_list_titles</key>
+					<array>
+						<string>Top Right</string>
+						<string>Right</string>
+						<string>Bottom Right</string>
+						<string>Top Left</string>
+						<string>Left</string>
+						<string>Bottom Left</string>
+						<string>Top Centre</string>
+						<string>Centre</string>
+						<string>Bottom Centre</string>
+					</array>
+					<key>pfm_title</key>
+					<string>Update Progress Prompt Position</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+				<dict>
+					<key>pfm_default</key>
+					<string>noFocusPrompt</string>
+					<key>pfm_description</key>
+					<string>Determines the behaviour of the prompt shown when updates are in progress. You can either select a prompt that does not take focus over other running Apps (default), a prompt that does take focus over all other running Apps, or disable the progress prompt completely. If you chose to show no prompt, you can still enable the \"Display Complete Message\" setting to inform users when the update has finished.</string>
+					<key>pfm_enabled</key>
+					<false/>
+					<key>pfm_name</key>
+					<string>updateProgressPrompt</string>
+					<key>pfm_range_list</key>
+					<array>
+						<string>noFocusPrompt</string>
+						<string>focusPrompt</string>
+						<string>noPrompt</string>
+					</array>
+					<key>pfm_range_list_titles</key>
+					<array>
+						<string>Prompt Without Focus</string>
+						<string>Prompt With Focus</string>
+						<string>No Prompt</string>
+					</array>
+					<key>pfm_title</key>
+					<string>Update Progress Prompt Behaviour</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>An icon overlay on the prompt shown during the App updates. The overlay is displayed on the bottom right of the main icon, which on this prompt is the App icon. Possible values are paths to a valid .png, .jpg or .icns file, or use the 'selfService' variable for the Jamf Self Service icon.</string>
+					<key>pfm_enabled</key>
+					<false/>
+					<key>pfm_name</key>
+					<string>updateProgressOverlayIcon</string>
+					<key>pfm_title</key>
+					<string>Update Progress Prompt Overlay Icon</string>
+					<key>pfm_type</key>
+					<string>string</string>
+					<key>pfm_value_placeholder</key>
+					<string>/usr/local/images/CustomIcon.png</string>
+				</dict>
+				<dict>
+					<key>pfm_default</key>
+					<true/>
+					<key>pfm_description</key>
+					<string>Determines whether Zappl automatically relaunches apps that were running prior to updating once the update completes.</string>
+					<key>pfm_enabled</key>
+					<false/>
+					<key>pfm_name</key>
+					<string>autoRelaunchApps</string>
+					<key>pfm_title</key>
+					<string>Automatically Relaunch Apps</string>
+					<key>pfm_type</key>
+					<string>boolean</string>
+				</dict>
+				<dict>
+					<key>pfm_default</key>
+					<true/>
+					<key>pfm_description</key>
+					<string>Determines whether a prompt is displayed to the user to inform them that the updates are complete. The prompt will inherit the same window position as the Update Progress prompt. Default is true.</string>
+					<key>pfm_enabled</key>
+					<false/>
+					<key>pfm_name</key>
+					<string>displayCompletePrompt</string>
+					<key>pfm_title</key>
+					<string>Display Complete Message</string>
+					<key>pfm_type</key>
+					<string>boolean</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>Scheduled Update Options</string>
+			<key>pfm_type</key>
+			<string>dictionary</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Define days and time windows during which forced updates are allowed to run.</string>
+			<key>pfm_name</key>
+			<string>ForcedUpdates</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_description</key>
+					<string>Use this preference to limit which weekdays and times Zappl is allowed to prompt users to install forced updates. Check the boxes next to any days you wish to allow Zappl to prompt users, and uncheck any days you want update prompts to be skipped. If you allow Zappl to run on a particular day, you can then limit runs to a specific time window using the start and end time fields. Note: If you have specified a weekly patch day and that day is not checked below, the patch day setting will override this setting.</string>
+					<key>pfm_name</key>
+					<string>runLimitations</string>
+					<key>pfm_subkeys</key>
+					<array>
+						<dict>
+							<key>pfm_default</key>
+							<true/>
+							<key>pfm_description</key>
+							<string>If selected, update prompts will be allowed on Mondays.</string>
+							<key>pfm_enabled</key>
+							<true/>
+							<key>pfm_name</key>
+							<string>monday</string>
+							<key>pfm_title</key>
+							<string>Monday</string>
+							<key>pfm_type</key>
+							<string>boolean</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<string>00:00</string>
+							<key>pfm_description</key>
+							<string>If you allowed updates on Mondays, use to define the time on a Monday Zappl is permitted to start prompting users to install pending updates. This should be in 24 hour format, e.g., 09:00 for 9am, or 21:00 for 9pm.</string>
+							<key>pfm_enabled</key>
+							<true/>
+							<key>pfm_format</key>
+							<string>^$|^(?:[01]\d|2[0-3]):[0-5]\d$</string>
+							<key>pfm_name</key>
+							<string>mondayStartTime</string>
+							<key>pfm_title</key>
+							<string>Monday Start Time</string>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_value_placeholder</key>
+							<string>00:00</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<string>23:59</string>
+							<key>pfm_description</key>
+							<string>If you allowed updates on Mondays, use to define the time on a Monday Zappl should stop prompting users to install pending updates. This should be in 24 hour format, e.g., 09:00 for 9am, or 21:00 for 9pm.</string>
+							<key>pfm_enabled</key>
+							<true/>
+							<key>pfm_format</key>
+							<string>^$|^(?:[01]\d|2[0-3]):[0-5]\d$</string>
+							<key>pfm_name</key>
+							<string>mondayEndTime</string>
+							<key>pfm_title</key>
+							<string>Monday End Time</string>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_value_placeholder</key>
+							<string>23:59</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<true/>
+							<key>pfm_description</key>
+							<string>If selected, update prompts will be allowed on Tuesdays.</string>
+							<key>pfm_enabled</key>
+							<true/>
+							<key>pfm_name</key>
+							<string>tuesday</string>
+							<key>pfm_title</key>
+							<string>Tuesday</string>
+							<key>pfm_type</key>
+							<string>boolean</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<string>00:00</string>
+							<key>pfm_description</key>
+							<string>If you allowed updates on Tuesdays, use to define the time on a Tuesday Zappl is permitted to start prompting users to install pending updates. This should be in 24 hour format, e.g., 09:00 for 9am, or 21:00 for 9pm.</string>
+							<key>pfm_enabled</key>
+							<true/>
+							<key>pfm_format</key>
+							<string>^$|^(?:[01]\d|2[0-3]):[0-5]\d$</string>
+							<key>pfm_name</key>
+							<string>tuesdayStartTime</string>
+							<key>pfm_title</key>
+							<string>Tuesday Start Time</string>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_value_placeholder</key>
+							<string>00:00</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<string>23:59</string>
+							<key>pfm_description</key>
+							<string>If you allowed updates on Tuesdays, use to define the time on a Tuesday Zappl should stop prompting users to install pending updates. This should be in 24 hour format, e.g., 09:00 for 9am, or 21:00 for 9pm.</string>
+							<key>pfm_enabled</key>
+							<true/>
+							<key>pfm_format</key>
+							<string>^$|^(?:[01]\d|2[0-3]):[0-5]\d$</string>
+							<key>pfm_name</key>
+							<string>tuesdayEndTime</string>
+							<key>pfm_title</key>
+							<string>Tuesday End Time</string>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_value_placeholder</key>
+							<string>23:59</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<true/>
+							<key>pfm_description</key>
+							<string>If selected, update prompts will be allowed on Wednesdays.</string>
+							<key>pfm_enabled</key>
+							<true/>
+							<key>pfm_name</key>
+							<string>wednesday</string>
+							<key>pfm_title</key>
+							<string>Wednesday</string>
+							<key>pfm_type</key>
+							<string>boolean</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<string>00:00</string>
+							<key>pfm_description</key>
+							<string>If you allowed updates on Wednesdays, use to define the time on a Wednesday Zappl is permitted to start prompting users to install pending updates. This should be in 24 hour format, e.g., 09:00 for 9am, or 21:00 for 9pm.</string>
+							<key>pfm_enabled</key>
+							<true/>
+							<key>pfm_format</key>
+							<string>^$|^(?:[01]\d|2[0-3]):[0-5]\d$</string>
+							<key>pfm_name</key>
+							<string>wednesdayStartTime</string>
+							<key>pfm_title</key>
+							<string>Wednesday Start Time</string>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_value_placeholder</key>
+							<string>00:00</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<string>23:59</string>
+							<key>pfm_description</key>
+							<string>If you allowed updates on Wednesdays, use to define the time on a Wednesday Zappl should stop prompting users to install pending updates. This should be in 24 hour format, e.g., 09:00 for 9am, or 21:00 for 9pm.</string>
+							<key>pfm_enabled</key>
+							<true/>
+							<key>pfm_format</key>
+							<string>^$|^(?:[01]\d|2[0-3]):[0-5]\d$</string>
+							<key>pfm_name</key>
+							<string>wednesdayEndTime</string>
+							<key>pfm_title</key>
+							<string>Wednesday End Time</string>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_value_placeholder</key>
+							<string>23:59</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<true/>
+							<key>pfm_description</key>
+							<string>If selected, update prompts will be allowed on Thursdays.</string>
+							<key>pfm_enabled</key>
+							<true/>
+							<key>pfm_name</key>
+							<string>thursday</string>
+							<key>pfm_title</key>
+							<string>Thursday</string>
+							<key>pfm_type</key>
+							<string>boolean</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<string>00:00</string>
+							<key>pfm_description</key>
+							<string>If you allowed updates on Thursdays, use to define the time on a Thursday Zappl is permitted to start prompting users to install pending updates. This should be in 24 hour format, e.g., 09:00 for 9am, or 21:00 for 9pm.</string>
+							<key>pfm_enabled</key>
+							<true/>
+							<key>pfm_format</key>
+							<string>^$|^(?:[01]\d|2[0-3]):[0-5]\d$</string>
+							<key>pfm_name</key>
+							<string>thursdayStartTime</string>
+							<key>pfm_title</key>
+							<string>Thursday Start Time</string>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_value_placeholder</key>
+							<string>00:00</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<string>23:59</string>
+							<key>pfm_description</key>
+							<string>If you allowed updates on Thursdays, use to define the time on a Thursday Zappl should stop prompting users to install pending updates. This should be in 24 hour format, e.g., 09:00 for 9am, or 21:00 for 9pm.</string>
+							<key>pfm_enabled</key>
+							<true/>
+							<key>pfm_format</key>
+							<string>^$|^(?:[01]\d|2[0-3]):[0-5]\d$</string>
+							<key>pfm_name</key>
+							<string>thursdayEndTime</string>
+							<key>pfm_title</key>
+							<string>Thursday End Time</string>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_value_placeholder</key>
+							<string>23:59</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<true/>
+							<key>pfm_description</key>
+							<string>If selected, update prompts will be allowed on Fridays.</string>
+							<key>pfm_enabled</key>
+							<true/>
+							<key>pfm_name</key>
+							<string>friday</string>
+							<key>pfm_title</key>
+							<string>Friday</string>
+							<key>pfm_type</key>
+							<string>boolean</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<string>00:00</string>
+							<key>pfm_description</key>
+							<string>If you allowed updates on Fridays, use to define the time on a Friday Zappl is permitted to start prompting users to install pending updates. This should be in 24 hour format, e.g., 09:00 for 9am, or 21:00 for 9pm.</string>
+							<key>pfm_enabled</key>
+							<true/>
+							<key>pfm_format</key>
+							<string>^$|^(?:[01]\d|2[0-3]):[0-5]\d$</string>
+							<key>pfm_name</key>
+							<string>fridayStartTime</string>
+							<key>pfm_title</key>
+							<string>Friday Start Time</string>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_value_placeholder</key>
+							<string>00:00</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<string>23:59</string>
+							<key>pfm_description</key>
+							<string>If you allowed updates on Fridays, use to define the time on a Friday Zappl should stop prompting users to install pending updates. This should be in 24 hour format, e.g., 09:00 for 9am, or 21:00 for 9pm.</string>
+							<key>pfm_enabled</key>
+							<true/>
+							<key>pfm_format</key>
+							<string>^$|^(?:[01]\d|2[0-3]):[0-5]\d$</string>
+							<key>pfm_name</key>
+							<string>fridayEndTime</string>
+							<key>pfm_title</key>
+							<string>Friday End Time</string>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_value_placeholder</key>
+							<string>23:59</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<true/>
+							<key>pfm_description</key>
+							<string>If selected, update prompts will be allowed on Saturdays.</string>
+							<key>pfm_enabled</key>
+							<true/>
+							<key>pfm_name</key>
+							<string>saturday</string>
+							<key>pfm_title</key>
+							<string>Saturday</string>
+							<key>pfm_type</key>
+							<string>boolean</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<string>00:00</string>
+							<key>pfm_description</key>
+							<string>If you allowed updates on Saturdays, use to define the time on a Saturday Zappl is permitted to start prompting users to install pending updates. This should be in 24 hour format, e.g., 09:00 for 9am, or 21:00 for 9pm.</string>
+							<key>pfm_enabled</key>
+							<true/>
+							<key>pfm_format</key>
+							<string>^$|^(?:[01]\d|2[0-3]):[0-5]\d$</string>
+							<key>pfm_name</key>
+							<string>saturdayStartTime</string>
+							<key>pfm_title</key>
+							<string>Saturday Start Time</string>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_value_placeholder</key>
+							<string>00:00</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<string>23:59</string>
+							<key>pfm_description</key>
+							<string>If you allowed updates on Saturdays, use to define the time on a Saturday Zappl should stop prompting users to install pending updates. This should be in 24 hour format, e.g., 09:00 for 9am, or 21:00 for 9pm.</string>
+							<key>pfm_enabled</key>
+							<true/>
+							<key>pfm_format</key>
+							<string>^$|^(?:[01]\d|2[0-3]):[0-5]\d$</string>
+							<key>pfm_name</key>
+							<string>saturdayEndTime</string>
+							<key>pfm_title</key>
+							<string>Saturday End Time</string>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_value_placeholder</key>
+							<string>23:59</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<true/>
+							<key>pfm_description</key>
+							<string>If selected, update prompts will be allowed on Sundays.</string>
+							<key>pfm_enabled</key>
+							<true/>
+							<key>pfm_name</key>
+							<string>sunday</string>
+							<key>pfm_title</key>
+							<string>Sunday</string>
+							<key>pfm_type</key>
+							<string>boolean</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<string>00:00</string>
+							<key>pfm_description</key>
+							<string>If you allowed updates on Sundays, use to define the time on a Sunday Zappl is permitted to start prompting users to install pending updates. This should be in 24 hour format, e.g., 09:00 for 9am, or 21:00 for 9pm.</string>
+							<key>pfm_enabled</key>
+							<true/>
+							<key>pfm_format</key>
+							<string>^$|^(?:[01]\d|2[0-3]):[0-5]\d$</string>
+							<key>pfm_name</key>
+							<string>sundayStartTime</string>
+							<key>pfm_title</key>
+							<string>Sunday Start Time</string>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_value_placeholder</key>
+							<string>00:00</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<string>23:59</string>
+							<key>pfm_description</key>
+							<string>If you allowed updates on Sundays, use to define the time on a Sunday Zappl should stop prompting users to install pending updates. This should be in 24 hour format, e.g., 09:00 for 9am, or 21:00 for 9pm.</string>
+							<key>pfm_enabled</key>
+							<true/>
+							<key>pfm_format</key>
+							<string>^$|^(?:[01]\d|2[0-3]):[0-5]\d$</string>
+							<key>pfm_name</key>
+							<string>sundayEndTime</string>
+							<key>pfm_title</key>
+							<string>Sunday End Time</string>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_value_placeholder</key>
+							<string>23:59</string>
+						</dict>
+					</array>
+					<key>pfm_title</key>
+					<string>Run Limitations</string>
+					<key>pfm_type</key>
+					<string>dictionary</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>A custom icon to be displayed on the user prompts. The default when not specified is the icon of the App being forced to update.</string>
+					<key>pfm_enabled</key>
+					<false/>
+					<key>pfm_name</key>
+					<string>customIcon</string>
+					<key>pfm_title</key>
+					<string>Icon</string>
+					<key>pfm_type</key>
+					<string>string</string>
+					<key>pfm_value_placeholder</key>
+					<string>/usr/local/images/CustomIcon.png</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>An icon overlay on the initial or grace period update prompts. The overlay is displayed on the bottom right of the main icon, which on this prompt is the App icon. Possible values are paths to a valid .png, .jpg or .icns file, or use the 'selfService' variable for the Jamf Self Service icon.</string>
+					<key>pfm_enabled</key>
+					<false/>
+					<key>pfm_name</key>
+					<string>initialPromptOverlayIcon</string>
+					<key>pfm_title</key>
+					<string>Initial Prompt Icon Overlay</string>
+					<key>pfm_type</key>
+					<string>string</string>
+					<key>pfm_value_placeholder</key>
+					<string>/usr/local/images/CustomIcon.png</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>Use to customise the size of the initial prompt displayed to users when they can either defer or update. Note: Only configure this setting if defining custom prompt messages. If you are using the default prompt messages, customising prompt size is not recommended as the default prompt size is pre-configured to correctly match the size of the default message displayed.</string>
+					<key>pfm_enabled</key>
+					<false/>
+					<key>pfm_name</key>
+					<string>customInitialPromptSize</string>
+					<key>pfm_subkeys</key>
+					<array>
+						<dict>
+							<key>pfm_default</key>
+							<integer>330</integer>
+							<key>pfm_description</key>
+							<string>Use to customise the height of the initial prompt displayed to users when they can either defer or update. Only use to define a custom height in points for the prompts shown to users, e.g. 330.</string>
+							<key>pfm_name</key>
+							<string>promptHeight</string>
+							<key>pfm_note</key>
+							<string>Only configure this setting if defining custom prompt messages. If you are using the default prompt messages, customising prompt size is not recommended as the default prompt size is pre-configured to correctly match the size of the default message displayed.</string>
+							<key>pfm_title</key>
+							<string>Custom Initial Prompt | Height</string>
+							<key>pfm_type</key>
+							<string>integer</string>
+							<key>pfm_value_placeholder</key>
+							<string>330</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<integer>640</integer>
+							<key>pfm_description</key>
+							<string>Use to customise the width of the initial prompt displayed to users when they can either defer or update. Only use to define a custom width in points for the prompts shown to users, e.g. 640.</string>
+							<key>pfm_name</key>
+							<string>promptWidth</string>
+							<key>pfm_note</key>
+							<string>Only configure this setting if defining custom prompt messages. If you are using the default prompt messages, customising prompt size is not recommended as the default prompt size is pre-configured to correctly match the size of the default message displayed.</string>
+							<key>pfm_title</key>
+							<string>Custom Initial Prompt | Width</string>
+							<key>pfm_type</key>
+							<string>integer</string>
+							<key>pfm_value_placeholder</key>
+							<string>640</string>
+						</dict>
+					</array>
+					<key>pfm_title</key>
+					<string>Initial Prompt Size</string>
+					<key>pfm_type</key>
+					<string>dictionary</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>Use to customise the size of the grace period timer prompt shown when users have no remaining deferrals. Note: Only configure this setting if defining custom prompt messages. If you are using the default prompt messages, customising prompt size is not recommended as the default prompt size is pre-configured to correctly match the size of the default message displayed.</string>
+					<key>pfm_enabled</key>
+					<false/>
+					<key>pfm_name</key>
+					<string>customGracePromptSize</string>
+					<key>pfm_subkeys</key>
+					<array>
+						<dict>
+							<key>pfm_default</key>
+							<integer>330</integer>
+							<key>pfm_description</key>
+							<string>Use to customise the height of the grace period timer prompt displayed to users when they have no remaining deferrals. Only use to define a custom height in points for the prompts shown to users, e.g. 330.</string>
+							<key>pfm_name</key>
+							<string>promptHeight</string>
+							<key>pfm_note</key>
+							<string>Only configure this setting if defining custom prompt messages. If you are using the default prompt messages, customising prompt size is not recommended as the default prompt size is pre-configured to correctly match the size of the default message displayed.</string>
+							<key>pfm_title</key>
+							<string>Custom Grace Prompt | Height</string>
+							<key>pfm_type</key>
+							<string>integer</string>
+							<key>pfm_value_placeholder</key>
+							<string>330</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<integer>640</integer>
+							<key>pfm_description</key>
+							<string>Use to customise the width of the grace period timer prompt displayed to users when they have no remaining deferrals. Only use to define a custom width in points for the prompts shown to users, e.g. 640.</string>
+							<key>pfm_name</key>
+							<string>promptWidth</string>
+							<key>pfm_note</key>
+							<string>Only configure this setting if defining custom prompt messages. If you are using the default prompt messages, customising prompt size is not recommended as the default prompt size is pre-configured to correctly match the size of the default message displayed.</string>
+							<key>pfm_title</key>
+							<string>Custom Grace Prompt | Width</string>
+							<key>pfm_type</key>
+							<string>integer</string>
+							<key>pfm_value_placeholder</key>
+							<string>640</string>
+						</dict>
+					</array>
+					<key>pfm_title</key>
+					<string>Custom Grace Prompt Size</string>
+					<key>pfm_type</key>
+					<string>dictionary</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>A custom title to be displayed on the initial force update prompts which are shown prior to the updates running, e.g the defer/update prompt (if configured) or the grace period prompt.</string>
+					<key>pfm_enabled</key>
+					<false/>
+					<key>pfm_name</key>
+					<string>customTitle</string>
+					<key>pfm_title</key>
+					<string>Custom Title</string>
+					<key>pfm_type</key>
+					<string>string</string>
+					<key>pfm_value_placeholder</key>
+					<string>appName Update Required</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>A custom message displayed on the initial \"App needs to quit\" forced update prompt.</string>
+					<key>pfm_enabled</key>
+					<false/>
+					<key>pfm_name</key>
+					<string>initialQuitPromptMessage</string>
+					<key>pfm_title</key>
+					<string>Custom Title</string>
+					<key>pfm_type</key>
+					<string>string</string>
+					<key>pfm_value_placeholder</key>
+					<string>Important updates are pending which require Apps to quit...</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>A custom message displayed on the grace period \"App needs to quit\" prompt. This prompt shows a grace period timer and is displayed when no deferrals are remaining or configured.</string>
+					<key>pfm_enabled</key>
+					<false/>
+					<key>pfm_name</key>
+					<string>gracePeriodQuitPromptMessage</string>
+					<key>pfm_title</key>
+					<string>Grace Period Quit Prompt Message</string>
+					<key>pfm_type</key>
+					<string>string</string>
+					<key>pfm_value_placeholder</key>
+					<string>Please save your work and click update...</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>A custom Defer button displayed on prompts where deferrals are allowed.</string>
+					<key>pfm_enabled</key>
+					<false/>
+					<key>pfm_name</key>
+					<string>customDeferButton</string>
+					<key>pfm_title</key>
+					<string>Custom Defer Button</string>
+					<key>pfm_type</key>
+					<string>string</string>
+					<key>pfm_value_placeholder</key>
+					<string>Defer</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>A custom Update button label displayed on the update prompts.</string>
+					<key>pfm_enabled</key>
+					<false/>
+					<key>pfm_name</key>
+					<string>customUpdateButton</string>
+					<key>pfm_title</key>
+					<string>Custom Update Button</string>
+					<key>pfm_type</key>
+					<string>string</string>
+					<key>pfm_value_placeholder</key>
+					<string>Update</string>
+				</dict>
+				<dict>
+					<key>pfm_default</key>
+					<integer>20</integer>
+					<key>pfm_description</key>
+					<string>The amount of time in seconds the user prompts refresh when deferrals have been configured for forced updates. The prompts require a refresh to pull focus if the user swipes away to ignore the prompt and ensures they either select defer or update. The default value is 20 seconds. The minimum allowed value is 10 seconds.</string>
+					<key>pfm_enabled</key>
+					<false/>
+					<key>pfm_name</key>
+					<string>refreshInterval</string>
+					<key>pfm_range_min</key>
+					<integer>10</integer>
+					<key>pfm_title</key>
+					<string>Prompt Refresh Interval</string>
+					<key>pfm_type</key>
+					<string>integer</string>
+					<key>pfm_value_placeholder</key>
+					<string>20</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>Application Bundle IDs specified here will prevent Zappl from prompting users to update if the App(s) are identified as being active in the foreground (You can specify one or more Bundle IDs). To get Bundle IDs, enter the following in terminal (replacing Safari with the relevant App): defaults read /Applications/Safari.app/Contents/Info.plist CFBundleIdentifier.</string>
+					<key>pfm_name</key>
+					<string>acceptableAppBundleIDs</string>
+					<key>pfm_subkeys</key>
+					<array>
+						<dict>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_value_placeholder</key>
+							<string>us.zoom.xos</string>
+						</dict>
+					</array>
+					<key>pfm_title</key>
+					<string>Do Not Disturb Applications</string>
+					<key>pfm_type</key>
+					<string>array</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>Application names specified here will prevent Zappl from prompting users to update if the App(s) are identified as using assertions (You can specify one or more Application names). To get the required Application name format, run \"/usr/bin/pmset -g assertions\" in terminal while the application is running and using assertions.</string>
+					<key>pfm_name</key>
+					<string>acceptableAppAssertions</string>
+					<key>pfm_subkeys</key>
+					<array>
+						<dict>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_value_placeholder</key>
+							<string>Google Chrome</string>
+						</dict>
+					</array>
+					<key>pfm_title</key>
+					<string>Do Not Disturb Application Assertions</string>
+					<key>pfm_type</key>
+					<string>array</string>
+				</dict>
+				<dict>
+					<key>pfm_default</key>
+					<false/>
+					<key>pfm_description</key>
+					<string>Setting as True will prevent Zappl from prompting users if Do Not Disturb mode is detected.</string>
+					<key>pfm_enabled</key>
+					<false/>
+					<key>pfm_name</key>
+					<string>acceptableDNDMode</string>
+					<key>pfm_title</key>
+					<string>Respect Do Not Disturb Mode</string>
+					<key>pfm_type</key>
+					<string>boolean</string>
+				</dict>
+				<dict>
+					<key>pfm_default</key>
+					<false/>
+					<key>pfm_description</key>
+					<string>Setting as True will prevent Zappl from prompting users if the camera is in use. Note: Apple Silicon Macs running macOS 12 (Monterey) do not accurately report camera usage, therefore this setting will be ignored. Upgrading to macOS 13 (Ventura) will resolve this issue for Apple Silicon Macs.</string>
+					<key>pfm_enabled</key>
+					<false/>
+					<key>pfm_name</key>
+					<string>acceptableCameraUsage</string>
+					<key>pfm_title</key>
+					<string>Do Not Disturb Camera Usage</string>
+					<key>pfm_type</key>
+					<string>boolean</string>
+				</dict>
+				<dict>
+					<key>pfm_default</key>
+					<false/>
+					<key>pfm_description</key>
+					<string>Setting as True will prevent Zappl from prompting users if Screen Sharing is in use.</string>
+					<key>pfm_enabled</key>
+					<false/>
+					<key>pfm_name</key>
+					<string>acceptableScreenSharing</string>
+					<key>pfm_title</key>
+					<string>Do Not Disturb Screen Sharing</string>
+					<key>pfm_type</key>
+					<string>boolean</string>
+				</dict>
+				<dict>
+					<key>pfm_default</key>
+					<string>topright</string>
+					<key>pfm_description</key>
+					<string>The position on the screen of the prompt which displays the progress of an update. The default position is top right.</string>
+					<key>pfm_enabled</key>
+					<false/>
+					<key>pfm_name</key>
+					<string>updateProgressPosition</string>
+					<key>pfm_range_list</key>
+					<array>
+						<string>topright</string>
+						<string>right</string>
+						<string>bottomright</string>
+						<string>topleft</string>
+						<string>left</string>
+						<string>bottomleft</string>
+						<string>top</string>
+						<string>center/centre</string>
+						<string>bottom</string>
+					</array>
+					<key>pfm_range_list_titles</key>
+					<array>
+						<string>Top Right</string>
+						<string>Right</string>
+						<string>Bottom Right</string>
+						<string>Top Left</string>
+						<string>Left</string>
+						<string>Bottom Left</string>
+						<string>Top Centre</string>
+						<string>Centre</string>
+						<string>Bottom Centre</string>
+					</array>
+					<key>pfm_title</key>
+					<string>Update Progress Prompt Position</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+				<dict>
+					<key>pfm_default</key>
+					<string>noFocusPrompt</string>
+					<key>pfm_description</key>
+					<string>Determines the behaviour of the prompt shown when updates are in progress. You can either select a prompt that does not take focus over other running Apps (default), a prompt that does take focus over all other running Apps, or disable the progress prompt completely. If you chose to show no prompt, you can still enable the \"Display Complete Message\" setting to inform users when the update has finished.</string>
+					<key>pfm_enabled</key>
+					<false/>
+					<key>pfm_name</key>
+					<string>updateProgressPrompt</string>
+					<key>pfm_range_list</key>
+					<array>
+						<string>noFocusPrompt</string>
+						<string>focusPrompt</string>
+						<string>noPrompt</string>
+					</array>
+					<key>pfm_range_list_titles</key>
+					<array>
+						<string>Prompt Without Focus</string>
+						<string>Prompt With Focus</string>
+						<string>No Prompt</string>
+					</array>
+					<key>pfm_title</key>
+					<string>Update Progress Prompt Behaviour</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>An icon overlay on the prompt shown during the App updates. The overlay is displayed on the bottom right of the main icon, which on this prompt is the App icon. Possible values are paths to a valid .png, .jpg or .icns file, or use the 'selfService' variable for the Jamf Self Service icon.</string>
+					<key>pfm_enabled</key>
+					<false/>
+					<key>pfm_name</key>
+					<string>updateProgressOverlayIcon</string>
+					<key>pfm_title</key>
+					<string>Update Progress Prompt Overlay Icon</string>
+					<key>pfm_type</key>
+					<string>string</string>
+					<key>pfm_value_placeholder</key>
+					<string>/usr/local/images/CustomIcon.png</string>
+				</dict>
+				<dict>
+					<key>pfm_default</key>
+					<true/>
+					<key>pfm_description</key>
+					<string>Determines whether Zappl automatically relaunches apps that were running prior to updating once the update completes.</string>
+					<key>pfm_enabled</key>
+					<false/>
+					<key>pfm_name</key>
+					<string>autoRelaunchApps</string>
+					<key>pfm_title</key>
+					<string>Automatically Relaunch Apps</string>
+					<key>pfm_type</key>
+					<string>boolean</string>
+				</dict>
+				<dict>
+					<key>pfm_default</key>
+					<true/>
+					<key>pfm_description</key>
+					<string>Determines whether a prompt is displayed to the user to inform them that the updates are complete. The prompt will inherit the same window position as the Update Progress prompt. Default is true.</string>
+					<key>pfm_enabled</key>
+					<false/>
+					<key>pfm_name</key>
+					<string>displayCompletePrompt</string>
+					<key>pfm_title</key>
+					<string>Display Complete Message</string>
+					<key>pfm_type</key>
+					<string>boolean</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>Forced Updates</string>
+			<key>pfm_type</key>
+			<string>dictionary</string>
+		</dict>
+	</array>
+	<key>pfm_targets</key>
+	<array>
+		<string>system</string>
+	</array>
+	<key>pfm_title</key>
+	<string>Zappl</string>
+	<key>pfm_unique</key>
+	<true/>
+	<key>pfm_version</key>
+	<integer>1</integer>
+</dict>
+</plist>
