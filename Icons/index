@@ -280,12 +280,12 @@
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.crowdstrike.falcon.png</string>
 		</dict>
-		<key>com.dare.zappl</key>
+		<key>com.dare.zappl.preferences</key>
 		<dict>
 			<key>hash</key>
 			<string>1460392e387160d72e9d4e2374dfe73b</string>
 			<key>path</key>
-			<string>Icons/ManagedPreferencesApplications/com.dare.zappl.png</string>
+			<string>Icons/ManagedPreferencesApplications/com.dare.zappl.preferences.png</string>
 		</dict>
 		<key>com.docker.config</key>
 		<dict>
@@ -818,6 +818,13 @@
 			<string>2ac53860411c773f9e99a0ec64a853a3</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/us.zoom.config.png</string>
+		</dict>
+		<key>xyz.techitout.appAutoPatch</key>
+		<dict>
+			<key>hash</key>
+			<string>83b95c01ac58055f30258269cede421f</string>
+			<key>path</key>
+			<string>Icons/ManagedPreferencesApplications/xyz.techitout.appAutoPatch.png</string>
 		</dict>
 	</dict>
 	<key>ManifestsApple</key>
@@ -1545,6 +1552,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2025-04-29T18:04:20Z</date>
+	<date>2025-05-16T10:17:52Z</date>
 </dict>
 </plist>

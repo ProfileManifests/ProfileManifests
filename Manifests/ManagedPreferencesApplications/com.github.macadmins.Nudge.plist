@@ -13,7 +13,7 @@
 	<key>pfm_format_version</key>
 	<integer>1</integer>
 	<key>pfm_last_modified</key>
-	<date>2025-02-13T00:00:00Z</date>
+	<date>2025-05-13T20:40:28Z</date>
 	<key>pfm_macos_min</key>
 	<string>11.0</string>
 	<key>pfm_platforms</key>
@@ -1488,7 +1488,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<key>pfm_documentation_url</key>
 					<string>https://github.com/macadmins/nudge/wiki/userInterface#icondarkpath---type-string-default-value-</string>
 					<key>pfm_format</key>
-					<string>^.*\.(icns|jpg|png)</string>
+					<string>^(.*\.(icns|jpg|png)|data:image\/png;base64,.*)$</string>
 					<key>pfm_name</key>
 					<string>iconDarkPath</string>
 					<key>pfm_title</key>
@@ -1506,7 +1506,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<key>pfm_documentation_url</key>
 					<string>https://github.com/macadmins/nudge/wiki/userInterface#iconlightpath---type-string-default-value-</string>
 					<key>pfm_format</key>
-					<string>^.*\.(icns|jpg|png)</string>
+					<string>^(.*\.(icns|jpg|png)|data:image\/png;base64,.*)$</string>
 					<key>pfm_name</key>
 					<string>iconLightPath</string>
 					<key>pfm_title</key>
@@ -1524,7 +1524,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<key>pfm_documentation_url</key>
 					<string>https://github.com/macadmins/nudge/wiki/userInterface#screenshotdarkpath---type-string-default-value-</string>
 					<key>pfm_format</key>
-					<string>^.*\.(icns|jpg|png)</string>
+					<string>^(.*\.(icns|jpg|png)|data:image\/png;base64,.*)$</string>
 					<key>pfm_name</key>
 					<string>screenShotDarkPath</string>
 					<key>pfm_title</key>
@@ -1542,7 +1542,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<key>pfm_documentation_url</key>
 					<string>https://github.com/macadmins/nudge/wiki/userInterface#screenshotlightpath---type-string-default-value-</string>
 					<key>pfm_format</key>
-					<string>^.*\.(icns|jpg|png)</string>
+					<string>^(.*\.(icns|jpg|png)|data:image\/png;base64,.*)$</string>
 					<key>pfm_name</key>
 					<string>screenShotLightPath</string>
 					<key>pfm_title</key>
@@ -2084,6 +2084,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 	<key>pfm_unique</key>
 	<true/>
 	<key>pfm_version</key>
-	<integer>4</integer>
+	<integer>5</integer>
 </dict>
 </plist>

@@ -1,0 +1,1775 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>pfm_app_url</key>
+	<string>https://github.com/App-Auto-Patch/App-Auto-Patch/releases</string>
+	<key>pfm_description</key>
+	<string>This will configure the settings for the App Auto-Patch tool</string>
+	<key>pfm_documentation_url</key>
+	<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+	<key>pfm_domain</key>
+	<string>xyz.techitout.appAutoPatch</string>
+	<key>pfm_format_version</key>
+	<integer>1</integer>
+	<key>pfm_last_modified</key>
+	<date>2025-05-16T10:13:48Z</date>
+	<key>pfm_platforms</key>
+	<array>
+		<string>macOS</string>
+	</array>
+	<key>pfm_subkeys</key>
+	<array>
+		<dict>
+			<key>pfm_default</key>
+			<string>Configures App Auto-Patch configuration preferences</string>
+			<key>pfm_description</key>
+			<string>Description of the payload.</string>
+			<key>pfm_description_reference</key>
+			<string>Optional. A human-readable description of this payload. This description is shown on the Detail screen.</string>
+			<key>pfm_name</key>
+			<string>PayloadDescription</string>
+			<key>pfm_title</key>
+			<string>Payload Description</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>App Auto-Patch</string>
+			<key>pfm_description</key>
+			<string>Name of the payload.</string>
+			<key>pfm_description_reference</key>
+			<string>A human-readable name for the profile payload. This name is displayed on the Detail screen. It does not have to be unique.</string>
+			<key>pfm_name</key>
+			<string>PayloadDisplayName</string>
+			<key>pfm_require</key>
+			<string>always</string>
+			<key>pfm_title</key>
+			<string>Payload Display Name</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>xyz.techitout.appAutoPatch</string>
+			<key>pfm_description</key>
+			<string>A unique identifier for the payload, dot-delimited.  Usually root PayloadIdentifier+subidentifier</string>
+			<key>pfm_description_reference</key>
+			<string>A reverse-DNS-style identifier for the specific payload. It is usually the same identifier as the root-level PayloadIdentifier value with an additional component appended.</string>
+			<key>pfm_name</key>
+			<string>PayloadIdentifier</string>
+			<key>pfm_require</key>
+			<string>always</string>
+			<key>pfm_title</key>
+			<string>Payload Identifier</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>xyz.techitout.appAutoPatch</string>
+			<key>pfm_description</key>
+			<string>The type of the payload, a reverse dns string.</string>
+			<key>pfm_description_reference</key>
+			<string>The payload type.</string>
+			<key>pfm_name</key>
+			<string>PayloadType</string>
+			<key>pfm_require</key>
+			<string>always</string>
+			<key>pfm_title</key>
+			<string>Payload Type</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Unique identifier for the payload (format 01234567-89AB-CDEF-0123-456789ABCDEF)</string>
+			<key>pfm_description_reference</key>
+			<string>A globally unique identifier for the payload. The actual content is unimportant, but it must be globally unique. In macOS, you can use uuidgen to generate reasonable UUIDs.</string>
+			<key>pfm_format</key>
+			<string>^[0-9A-Za-z]{8}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{12}$</string>
+			<key>pfm_name</key>
+			<string>PayloadUUID</string>
+			<key>pfm_require</key>
+			<string>always</string>
+			<key>pfm_title</key>
+			<string>Payload UUID</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<integer>1</integer>
+			<key>pfm_description</key>
+			<string>The version of the whole configuration profile.</string>
+			<key>pfm_description_reference</key>
+			<string>The version number of the individual payload.</string>
+			<key>pfm_name</key>
+			<string>PayloadVersion</string>
+			<key>pfm_require</key>
+			<string>always</string>
+			<key>pfm_title</key>
+			<string>Payload Version</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>This value describes the issuing organization of the profile, as displayed to the user</string>
+			<key>pfm_name</key>
+			<string>PayloadOrganization</string>
+			<key>pfm_title</key>
+			<string>Payload Organization</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_name</key>
+			<string>PFC_SegmentedControl_0</string>
+			<key>pfm_range_list_titles</key>
+			<array>
+				<string>Deferrals and Deadlines</string>
+				<string>Dialogs and Notifications</string>
+				<string>Labels</string>
+				<string>Workflow and Options</string>
+				<string>UI</string>
+			</array>
+			<key>pfm_require</key>
+			<string>always</string>
+			<key>pfm_segments</key>
+			<dict>
+				<key>Deferrals and Deadlines</key>
+				<array>
+					<string>DaysUntilReset</string>
+					<string>PatchWeekStartDay</string>
+					<string>DeadlineCountFocus</string>
+					<string>DeadlineCountHard</string>
+					<string>DeadlineDaysFocus</string>
+					<string>DeadlineDaysHard</string>
+					<string>DeferralTimerDefault</string>
+					<string>DeferralTimerError</string>
+					<string>DeferralTimerFocus</string>
+					<string>DeferralTimerMenu</string>
+					<string>DeferralTimerWorkflowRelaunch</string>
+				</array>
+				<key>Dialogs and Notifications</key>
+				<array>
+					<string>DialogOnTop</string>
+					<string>DialogTimeoutDeferral</string>
+					<string>DialogTimeoutDeferralAction</string>
+					<string>UnattendedExit</string>
+					<string>UnattendedExitSeconds</string>
+					<string>UseOverlayIcon</string>
+				</array>
+				<key>Labels</key>
+				<array>
+					<string>IgnoredLabels</string>
+					<string>OptionalLabels</string>
+					<string>RequiredLabels</string>
+				</array>
+				<key>UI</key>
+				<array>
+					<string>dialogElements</string>
+					<string>userInterface</string>
+				</array>
+				<key>Workflow and Options</key>
+				<array>
+					<string>AppTitle</string>
+					<string>ConvertAppsInHomeFolder</string>
+					<string>IgnoreAppsInHomeFolder</string>
+					<string>InstallomatorOptions</string>
+					<string>InstallomatorUpdateDisable</string>
+					<string>InstallomatorVersion</string>
+					<string>InstallomatorVersionCustomRepoPath</string>
+					<string>InstallomatorVersionCustomBranchName</string>
+					<string>InteractiveMode</string>
+					<string>RemoveInstallomatorPath</string>
+					<string>SupportTeamName</string>
+					<string>SupportTeamEmail</string>
+					<string>SupportTeamPhone</string>
+					<string>SupportTeamWebsite</string>
+					<string>WebhookFeature</string>
+					<string>WebhookURLSlack</string>
+					<string>WebhookURLTeams</string>
+					<string>WorkflowDisableAppDiscovery</string>
+					<string>WorkflowDisableRelaunch</string>
+					<string>WorkflowInstallNowPatchingStatusAction</string>
+				</array>
+			</dict>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_description</key>
+			<string>The number of days after the patching cadence start date (Zero Date) that the patching complete status will reset from TRUE to FALSE</string>
+			<key>pfm_description_reference</key>
+			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings#daysuntilreset</string>
+			<key>pfm_name</key>
+			<string>DaysUntilReset</string>
+			<key>pfm_title</key>
+			<string>Days Until Reset</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<integer>7</integer>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_description</key>
+			<string>The day of the week to force the patching cadence start date (Zero Date) to go back to in order to have the patch cadence start the same day of the week for all users</string>
+			<key>pfm_description_reference</key>
+			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings#patchweekstartday</string>
+			<key>pfm_name</key>
+			<string>PatchWeekStartDay</string>
+			<key>pfm_range_list</key>
+			<array>
+				<integer>1</integer>
+				<integer>2</integer>
+				<integer>3</integer>
+				<integer>4</integer>
+				<integer>5</integer>
+				<integer>6</integer>
+				<integer>7</integer>
+			</array>
+			<key>pfm_range_list_titles</key>
+			<array>
+				<string>Monday - 1</string>
+				<string>Tuesday - 2</string>
+				<string>Wednesday - 3</string>
+				<string>Thursday - 4</string>
+				<string>Friday - 5</string>
+				<string>Saturday - 6</string>
+				<string>Sunday - 7</string>
+			</array>
+			<key>pfm_title</key>
+			<string>Patch Week Start Day</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_description</key>
+			<string>The maximum number of automatic deferrals allowed if the system is in user-enabled Focus/Do Not Disturb or when a process has requested that the display not go to sleep</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings#deadlinecountfocus</string>
+			<key>pfm_name</key>
+			<string>DeadlineCountFocus</string>
+			<key>pfm_title</key>
+			<string>Focus Count Deadline</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>5</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_description</key>
+			<string>The maximum number of user selected deferrals allowed before App Auto-Patch will no longer allow deferrals and will automatically patch when the timer expires</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings#deadlinecounthard</string>
+			<key>pfm_name</key>
+			<string>DeadlineCountHard</string>
+			<key>pfm_title</key>
+			<string>Hard Count Deadline</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>5</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.1</string>
+			<key>pfm_description</key>
+			<string>The maximum number of days that automatic deferrals are allowed if the system is in user-enabled Focus/Do Not Disturb or when a process has requested that the display not go to sleep</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Days-Deadlines</string>
+			<key>pfm_name</key>
+			<string>DeadlineDaysFocus</string>
+			<key>pfm_title</key>
+			<string>Focus Days Deadline</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>5</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.1</string>
+			<key>pfm_description</key>
+			<string>The maximum number of days deferrals allowed before App Auto-Patch will no longer allow deferrals and will automatically patch when the timer expires</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Days-Deadlines</string>
+			<key>pfm_name</key>
+			<string>DeadlineDaysHard</string>
+			<key>pfm_title</key>
+			<string>Hard Days Deadline</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>5</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_description</key>
+			<string>The number of minutes to defer until the next update workflow attempt if a user choses not install updates</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings#deferraltimerdefault</string>
+			<key>pfm_name</key>
+			<string>DeferralTimerDefault</string>
+			<key>pfm_title</key>
+			<string>Deferral Timer Default</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>1440</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_description</key>
+			<string>The number of minutes to defer if AAP detects an error in the workflow</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings#deferraltimererror</string>
+			<key>pfm_name</key>
+			<string>DeferralTimerError</string>
+			<key>pfm_title</key>
+			<string>Deferral Timer Error</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>60</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_description</key>
+			<string>The number of minutes to defer the update restart dialog automatically if a process has prevented display sleep (for example, during an active meeting) or the user has Focus or Do Not Disturb enabled</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings#deferraltimerfocus</string>
+			<key>pfm_name</key>
+			<string>DeferralTimerFocus</string>
+			<key>pfm_title</key>
+			<string>Deferral Timer Focus</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>60</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_description</key>
+			<string>Display a deferral time pop-up menu in the non-deadline install dialog that allows the user to override the Deferral Timer Default timer</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings#deferraltimermenu</string>
+			<key>pfm_name</key>
+			<string>DeferralTimerMenu</string>
+			<key>pfm_title</key>
+			<string>Deferral Timer Menu</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>120,1440,10080</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_description</key>
+			<string>Amount of time in minutes until AAP is relaunched after a workflow. This timer results in AAP acting as a permanent agent that checks for app updates on a regular basis</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings#deferraltimerworkflowrelaunch</string>
+			<key>pfm_name</key>
+			<string>DeferralTimerWorkflowRelaunch</string>
+			<key>pfm_title</key>
+			<string>Deferral Timer Workflow Relaunch</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>1440</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_description</key>
+			<string>Forces the AAP dialogs to stay on top of all other windows</string>
+			<key>pfm_description_reference</key>
+			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings#dialogontop</string>
+			<key>pfm_name</key>
+			<string>DialogOnTop</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>TRUE</string>
+				<string>FALSE</string>
+			</array>
+			<key>pfm_range_list_titles</key>
+			<array>
+				<string>Force Dialog On Top</string>
+				<string>Do Not Force Dialog On Top</string>
+			</array>
+			<key>pfm_title</key>
+			<string>Dialog On Top</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_description</key>
+			<string>Time given to the user to respond to deferral prompt if enabled</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings</string>
+			<key>pfm_name</key>
+			<string>DialogTimeoutDeferral</string>
+			<key>pfm_title</key>
+			<string>Deferral Dialog Timeout</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+			<key>pfm_value_placeholder</key>
+			<string>300</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_description</key>
+			<string>What happens when the deferral timer expires</string>
+			<key>pfm_description_reference</key>
+			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings</string>
+			<key>pfm_name</key>
+			<string>DialogTimeoutDeferralAction</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>Defer</string>
+				<string>Continue</string>
+			</array>
+			<key>pfm_range_list_titles</key>
+			<array>
+				<string>Defer after timer expires</string>
+				<string>Continue after timer expires</string>
+			</array>
+			<key>pfm_title</key>
+			<string>Deferral Dialog Timeout Action</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_description</key>
+			<string>Deterines if the Dialog should automatically close after completion if there is no response from the end-user</string>
+			<key>pfm_description_reference</key>
+			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings</string>
+			<key>pfm_name</key>
+			<string>UnattendedExit</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>TRUE</string>
+				<string>FALSE</string>
+			</array>
+			<key>pfm_range_list_titles</key>
+			<array>
+				<string>Auto Close Dialog</string>
+				<string>Do Not Auto Close Dialog</string>
+			</array>
+			<key>pfm_title</key>
+			<string>Unattended Exit</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_description</key>
+			<string>The number of seconds the AAP dialog will automatically close if UnattendedExit is set to TRUE</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings</string>
+			<key>pfm_name</key>
+			<string>UnattendedExitSeconds</string>
+			<key>pfm_title</key>
+			<string>Unattended Exit Seconds</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+			<key>pfm_value_placeholder</key>
+			<string>60</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_description</key>
+			<string>Toggles swiftDialog to use an overlay icon</string>
+			<key>pfm_description_reference</key>
+			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings</string>
+			<key>pfm_name</key>
+			<string>UseOverlayIcon</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>TRUE</string>
+				<string>FALSE</string>
+			</array>
+			<key>pfm_range_list_titles</key>
+			<array>
+				<string>Use Overlay Icon</string>
+				<string>Do Not Use Overlay Icon</string>
+			</array>
+			<key>pfm_title</key>
+			<string>Use Overlay Icon</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_description</key>
+			<string>A space-separated list of Installomator labels to ignore for the AAP workflow. Supports wilddcards</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings</string>
+			<key>pfm_name</key>
+			<string>IgnoredLabels</string>
+			<key>pfm_title</key>
+			<string>Ignored Labels</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>1password* androidstudio microsoft*</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_description</key>
+			<string>a space-separated list of Installomator labels that are required, regardless if the app is installed or or the latest version. Supports wildcards.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings</string>
+			<key>pfm_name</key>
+			<string>RequiredLabels</string>
+			<key>pfm_title</key>
+			<string>Required Labels</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>1password* androidstudio microsoft*</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_description</key>
+			<string>A space-separated list of optional Installomator labels. Labels in this category are only included if the app exists on the end-users device and will force install even if its the latest version. Does Not Support Wildcards</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings</string>
+			<key>pfm_name</key>
+			<string>OptionalLabels</string>
+			<key>pfm_title</key>
+			<string>Optional Labels</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>1password androidstudio googlechromepkg</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_default</key>
+			<string>App Auto-Patch</string>
+			<key>pfm_description</key>
+			<string>Allows you to customize the name of App Auto-Patch to something else</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings</string>
+			<key>pfm_name</key>
+			<string>AppTitle</string>
+			<key>pfm_title</key>
+			<string>App Title</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_default</key>
+			<string>TRUE</string>
+			<key>pfm_description</key>
+			<string>This will convert any apps found in the users home folder to the /Applications folder</string>
+			<key>pfm_description_reference</key>
+			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings#convertappsinhomefolder</string>
+			<key>pfm_name</key>
+			<string>ConvertAppsInHomeFolder</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>TRUE</string>
+				<string>FALSE</string>
+			</array>
+			<key>pfm_range_list_titles</key>
+			<array>
+				<string>Convert Apps</string>
+				<string>Do Not Convert Apps</string>
+			</array>
+			<key>pfm_title</key>
+			<string>Convert Apps In Home Folder</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_default</key>
+			<string>FALSE</string>
+			<key>pfm_description</key>
+			<string>Ignore apps found in '/Users/'. If an update is found in '/Users/' and variable is set to false, the app will be updated into the application's default path</string>
+			<key>pfm_description_reference</key>
+			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings#ignoreappsinhomefolder</string>
+			<key>pfm_name</key>
+			<string>IgnoreAppsInHomeFolder</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>TRUE</string>
+				<string>FALSE</string>
+			</array>
+			<key>pfm_range_list_titles</key>
+			<array>
+				<string>Ignore Apps in Home Folder</string>
+				<string>Move Apps to the Default Path</string>
+			</array>
+			<key>pfm_title</key>
+			<string>Ignore Apps In Home Folder</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_description</key>
+			<string>A space-separated list of options to override default Installomator options (i.e., BLOCKING_PROCESS_ACTION=prompt_user NOTIFY=silent LOGO=appstore)</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings</string>
+			<key>pfm_name</key>
+			<string>InstallomatorOptions</string>
+			<key>pfm_title</key>
+			<string>Installomator Options</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>BLOCKING_PROCESS_ACTION=quit_kill NOTIFY=silent</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.2</string>
+			<key>pfm_default</key>
+			<string>FALSE</string>
+			<key>pfm_description</key>
+			<string>This will prevent Installomator from automatically updating. If Installomator does not exist in the working folder, it will still download from GitHub to prevent script failure</string>
+			<key>pfm_description_reference</key>
+			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Installomator-Integration#installomator-update-disable</string>
+			<key>pfm_name</key>
+			<string>InstallomatorUpdateDisable</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>TRUE</string>
+				<string>FALSE</string>
+			</array>
+			<key>pfm_range_list_titles</key>
+			<array>
+				<string>Disable Installomator Updates</string>
+				<string>Enable Installomator Updates</string>
+			</array>
+			<key>pfm_title</key>
+			<string>Installomator Update Disable</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_default</key>
+			<string>Main</string>
+			<key>pfm_description</key>
+			<string>Determines if the AAP script should use the Main, Release, or Custom version of Installomator. The version from the Main branch typically includes more recent updates from PR's to fix issues or add new labels. If using Custom, you must also set the InstallomatorVersionCustomRepoPath and InstallomatorVersionCustomBranchName keys</string>
+			<key>pfm_description_reference</key>
+			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Installomator-Integration#installomator-versions</string>
+			<key>pfm_name</key>
+			<string>InstallomatorVersion</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>Main</string>
+				<string>Release</string>
+				<string>Custom</string>
+			</array>
+			<key>pfm_title</key>
+			<string>Installomator Version</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_description</key>
+			<string>If InstallomatorVersion is set to Custom, enter the Github Site and Repository name in the following format: site_name/repo_name . For example, if the custom fork is located at https://github.com/TechTrekkie/Installomator, you would set this key to techtrekkie/installomator</string>
+			<key>pfm_description_reference</key>
+			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Installomator-Integration#custom-installomator-repo</string>
+			<key>pfm_name</key>
+			<string>InstallomatorVersionCustomRepoPath</string>
+			<key>pfm_title</key>
+			<string>Installomator Version custom Repo Path</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>Installomator/Installomator</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_description</key>
+			<string>The name of the branch you want to use in your custom repo, typically main.</string>
+			<key>pfm_description_reference</key>
+			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Installomator-Integration#custom-installomator-repo</string>
+			<key>pfm_name</key>
+			<string>InstallomatorVersionCustomBranchName</string>
+			<key>pfm_title</key>
+			<string>Installomator Version Custom Branch Name</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>main</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_default</key>
+			<string>2</string>
+			<key>pfm_description</key>
+			<string>0 (Completely Silent) | 1 (Silent Discovery, Interactive Patching) | 2 (Full Interactive) (default)</string>
+			<key>pfm_description_reference</key>
+			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings</string>
+			<key>pfm_name</key>
+			<string>InteractiveMode</string>
+			<key>pfm_range_list</key>
+			<array>
+				<integer>0</integer>
+				<integer>1</integer>
+				<integer>2</integer>
+			</array>
+			<key>pfm_range_list_titles</key>
+			<array>
+				<string>0 - Completely Silent</string>
+				<string>1 - Silent Discovery, Interactive Patching</string>
+				<string>2 - Full Interactive</string>
+			</array>
+			<key>pfm_title</key>
+			<string>Interactive Mode</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_default</key>
+			<string>FALSE</string>
+			<key>pfm_description</key>
+			<string>Remove Installomator after App Auto-Patch is completed</string>
+			<key>pfm_description_reference</key>
+			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings</string>
+			<key>pfm_name</key>
+			<string>RemoveInstallomatorPath</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>TRUE</string>
+				<string>FALSE</string>
+			</array>
+			<key>pfm_range_list_titles</key>
+			<array>
+				<string>Remove Installomator</string>
+				<string>Do Not Remove Installomator</string>
+			</array>
+			<key>pfm_title</key>
+			<string>Remove Installomator Path</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_description</key>
+			<string>For the Support Team details that display in the Help Message</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings</string>
+			<key>pfm_name</key>
+			<string>SupportTeamName</string>
+			<key>pfm_title</key>
+			<string>Support Team Name</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>Support Team Name</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_description</key>
+			<string>For the Support Team details that display in the Help Message</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings</string>
+			<key>pfm_name</key>
+			<string>SupportTeamEmail</string>
+			<key>pfm_title</key>
+			<string>Support Team Email</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>Support Team Email</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_description</key>
+			<string>For the Support Team details that display in the Help Message</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings</string>
+			<key>pfm_name</key>
+			<string>SupportTeamPhone</string>
+			<key>pfm_title</key>
+			<string>Support Team Phone</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>Support Team Phone</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_description</key>
+			<string>For the Support Team details that display in the Help Message</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings</string>
+			<key>pfm_name</key>
+			<string>SupportTeamWebsite</string>
+			<key>pfm_title</key>
+			<string>Support Team Website</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>Support Team Website</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_default</key>
+			<string>FAILURES</string>
+			<key>pfm_description</key>
+			<string>Determines if Webhooks are sent when patching is completed</string>
+			<key>pfm_description_reference</key>
+			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings</string>
+			<key>pfm_name</key>
+			<string>WebhookFeature</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>FALSE</string>
+				<string>ALL</string>
+				<string>FAILURES</string>
+			</array>
+			<key>pfm_title</key>
+			<string>Webhook Feature</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_description</key>
+			<string>The Slack Webhook URL to use if WebhookFeature is set to TRUE</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings</string>
+			<key>pfm_name</key>
+			<string>WebhookURLSlack</string>
+			<key>pfm_title</key>
+			<string>Slack Webhook URL</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>https://webhook.slack.com</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_description</key>
+			<string>The Teams Webhook URL to use if WebhookFeature is set to TRUE</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings</string>
+			<key>pfm_name</key>
+			<string>WebhookURLTeams</string>
+			<key>pfm_title</key>
+			<string>Teams Webhook URL</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>https://webhook.microsoft.com</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_default</key>
+			<string>FALSE</string>
+			<key>pfm_description</key>
+			<string>Disables the discovery of applications that require patching. If a list of labels from a previous discovery exists, AAP will use that list for the workflow</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings</string>
+			<key>pfm_name</key>
+			<string>WorkflowDisableAppDiscovery</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>TRUE</string>
+				<string>FALSE</string>
+			</array>
+			<key>pfm_range_list_titles</key>
+			<array>
+				<string>Disable App Discovery</string>
+				<string>Enable App Discovery</string>
+			</array>
+			<key>pfm_title</key>
+			<string>Disable App Discovery Workflow</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_default</key>
+			<string>FALSE</string>
+			<key>pfm_description</key>
+			<string>Disable the automatic relaunch of AAP after the current workflow successfully completes</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings</string>
+			<key>pfm_name</key>
+			<string>WorkflowDisableRelaunch</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>TRUE</string>
+				<string>FALSE</string>
+			</array>
+			<key>pfm_range_list_titles</key>
+			<array>
+				<string>Disable Automatic Relaunch</string>
+				<string>Enable Automatic Relaunch</string>
+			</array>
+			<key>pfm_title</key>
+			<string>Disable Relaunch Workflow</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.1</string>
+			<key>pfm_default</key>
+			<string>SUCCESS</string>
+			<key>pfm_description</key>
+			<string>Determines if the Patching Completion Status is set to true when using the --workflow-install-now trigger</string>
+			<key>pfm_description_reference</key>
+			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings</string>
+			<key>pfm_name</key>
+			<string>WorkflowInstallNowPatchingStatusAction</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>NEVER</string>
+				<string>ALWAYS</string>
+				<string>SUCCESS</string>
+			</array>
+			<key>pfm_title</key>
+			<string>Workflow Install Now Patching Status Action</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.2</string>
+			<key>pfm_description</key>
+			<string>All features related to how App Auto Patch defines the user interface.</string>
+			<key>pfm_name</key>
+			<string>userInterface</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_app_min</key>
+					<string>3.2</string>
+					<key>pfm_description</key>
+					<string>The individual buttons and text elements that can be customized. This includes per country localization.</string>
+					<key>pfm_documentation_url</key>
+					<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+					<key>pfm_name</key>
+					<string>dialogElements</string>
+					<key>pfm_subkeys</key>
+					<array>
+						<dict>
+							<key>pfm_subkeys</key>
+							<array>
+								<dict>
+									<key>pfm_app_min</key>
+									<string>3.2</string>
+									<key>pfm_description</key>
+									<string>The targeted language locale for the user interface. Note: For a list of locales, please run the following command in Terminal: /usr/bin/locale -a</string>
+									<key>pfm_documentation_url</key>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<key>pfm_name</key>
+									<string>language</string>
+									<key>pfm_note</key>
+									<string>For a list of locales, please run the following command in Terminal: /usr/bin/locale -a</string>
+									<key>pfm_title</key>
+									<string>Language</string>
+									<key>pfm_type</key>
+									<string>string</string>
+									<key>pfm_value_placeholder</key>
+									<string>EX: en</string>
+								</dict>
+								<dict>
+									<key>pfm_app_min</key>
+									<string>3.2</string>
+									<key>pfm_description</key>
+									<string>Language for the defer button in dialogs when the deferral time is sometime today.</string>
+									<key>pfm_documentation_url</key>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<key>pfm_name</key>
+									<string>display_string_defer_today_button</string>
+									<key>pfm_title</key>
+									<string>Defer Today Button</string>
+									<key>pfm_type</key>
+									<string>string</string>
+									<key>pfm_value_placeholder</key>
+									<string>Defer</string>
+								</dict>
+								<dict>
+									<key>pfm_app_min</key>
+									<string>3.2</string>
+									<key>pfm_description</key>
+									<string>Language for the defer button in dialogs when the deferral time is tomorrow</string>
+									<key>pfm_documentation_url</key>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<key>pfm_name</key>
+									<string>display_string_defer_tomorrow_button</string>
+									<key>pfm_title</key>
+									<string>Defer Tomorrow Button</string>
+									<key>pfm_type</key>
+									<string>string</string>
+									<key>pfm_value_placeholder</key>
+									<string>Defer Until Tomorrow</string>
+								</dict>
+								<dict>
+									<key>pfm_app_min</key>
+									<string>3.2</string>
+									<key>pfm_description</key>
+									<string>Language for the defer button in dialogs when the deferral time is in the future.</string>
+									<key>pfm_documentation_url</key>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<key>pfm_name</key>
+									<string>display_string_defer_future_button</string>
+									<key>pfm_title</key>
+									<string>Defer Future Button</string>
+									<key>pfm_type</key>
+									<string>string</string>
+									<key>pfm_value_placeholder</key>
+									<string>Defer Until</string>
+								</dict>
+								<dict>
+									<key>pfm_app_min</key>
+									<string>3.2</string>
+									<key>pfm_description</key>
+									<string>Language for deferral timer durations - Minutes</string>
+									<key>pfm_documentation_url</key>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<key>pfm_name</key>
+									<string>display_string_minutes</string>
+									<key>pfm_title</key>
+									<string>Minutes Display String</string>
+									<key>pfm_type</key>
+									<string>string</string>
+									<key>pfm_value_placeholder</key>
+									<string>Minutes</string>
+								</dict>
+								<dict>
+									<key>pfm_app_min</key>
+									<string>3.2</string>
+									<key>pfm_description</key>
+									<string>Language for deferral timer durations - Hour</string>
+									<key>pfm_documentation_url</key>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<key>pfm_name</key>
+									<string>display_string_hour</string>
+									<key>pfm_title</key>
+									<string>Hour Display String</string>
+									<key>pfm_type</key>
+									<string>string</string>
+									<key>pfm_value_placeholder</key>
+									<string>Hour</string>
+								</dict>
+								<dict>
+									<key>pfm_app_min</key>
+									<string>3.2</string>
+									<key>pfm_description</key>
+									<string>Language for deferral timer durations - Hours</string>
+									<key>pfm_documentation_url</key>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<key>pfm_name</key>
+									<string>display_string_hours</string>
+									<key>pfm_title</key>
+									<string>Hours Display String</string>
+									<key>pfm_type</key>
+									<string>string</string>
+									<key>pfm_value_placeholder</key>
+									<string>Hours</string>
+								</dict>
+								<dict>
+									<key>pfm_app_min</key>
+									<string>3.2</string>
+									<key>pfm_description</key>
+									<string>Language for deferral timer durations - and</string>
+									<key>pfm_documentation_url</key>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<key>pfm_name</key>
+									<string>display_string_and</string>
+									<key>pfm_title</key>
+									<string>and Display String</string>
+									<key>pfm_type</key>
+									<string>string</string>
+									<key>pfm_value_placeholder</key>
+									<string>and</string>
+								</dict>
+								<dict>
+									<key>pfm_app_min</key>
+									<string>3.2</string>
+									<key>pfm_description</key>
+									<string>Language for deferral timer durations - days</string>
+									<key>pfm_documentation_url</key>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<key>pfm_name</key>
+									<string>display_string_days</string>
+									<key>pfm_title</key>
+									<string>days Display String</string>
+									<key>pfm_type</key>
+									<string>string</string>
+									<key>pfm_value_placeholder</key>
+									<string>days</string>
+								</dict>
+								<dict>
+									<key>pfm_app_min</key>
+									<string>3.2</string>
+									<key>pfm_description</key>
+									<string>Language for deferral timer durations - times</string>
+									<key>pfm_documentation_url</key>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<key>pfm_name</key>
+									<string>display_string_times</string>
+									<key>pfm_title</key>
+									<string>times Display String</string>
+									<key>pfm_type</key>
+									<string>string</string>
+									<key>pfm_value_placeholder</key>
+									<string>times</string>
+								</dict>
+								<dict>
+									<key>pfm_app_min</key>
+									<string>3.2</string>
+									<key>pfm_description</key>
+									<string>Language for deferral timer durations - There are</string>
+									<key>pfm_documentation_url</key>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<key>pfm_name</key>
+									<string>display_string_there_are</string>
+									<key>pfm_title</key>
+									<string>There are Display String</string>
+									<key>pfm_type</key>
+									<string>string</string>
+									<key>pfm_value_placeholder</key>
+									<string>There are</string>
+								</dict>
+								<dict>
+									<key>pfm_app_min</key>
+									<string>3.2</string>
+									<key>pfm_description</key>
+									<string>Language for the message displayed during App Discovery</string>
+									<key>pfm_documentation_url</key>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<key>pfm_name</key>
+									<string>display_string_discovery_message</string>
+									<key>pfm_title</key>
+									<string>Discovery Message</string>
+									<key>pfm_type</key>
+									<string>string</string>
+									<key>pfm_value_placeholder</key>
+									<string>Analyzing installed apps</string>
+								</dict>
+								<dict>
+									<key>pfm_app_min</key>
+									<string>3.2</string>
+									<key>pfm_description</key>
+									<string>Language for the action message during App Discovery</string>
+									<key>pfm_documentation_url</key>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<key>pfm_name</key>
+									<string>display_string_discovery_action_message</string>
+									<key>pfm_title</key>
+									<string>Discovery action message</string>
+									<key>pfm_type</key>
+									<string>string</string>
+									<key>pfm_value_placeholder</key>
+									<string>Analyzing</string>
+								</dict>
+								<dict>
+									<key>pfm_app_min</key>
+									<string>3.2</string>
+									<key>pfm_description</key>
+									<string>Langauge for the progress message during App Discovery</string>
+									<key>pfm_documentation_url</key>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<key>pfm_name</key>
+									<string>display_string_discovery_progress</string>
+									<key>pfm_title</key>
+									<string>Discovery progress message</string>
+									<key>pfm_type</key>
+									<string>string</string>
+									<key>pfm_value_placeholder</key>
+									<string>Scanning</string>
+								</dict>
+								<dict>
+									<key>pfm_app_min</key>
+									<string>3.2</string>
+									<key>pfm_description</key>
+									<string>Language for Button1 of the Deferral Dialog</string>
+									<key>pfm_documentation_url</key>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<key>pfm_name</key>
+									<string>display_string_deferral_button1</string>
+									<key>pfm_title</key>
+									<string>Deferral Dialog Button1</string>
+									<key>pfm_type</key>
+									<string>string</string>
+									<key>pfm_value_placeholder</key>
+									<string>Continue</string>
+								</dict>
+								<dict>
+									<key>pfm_app_min</key>
+									<string>3.2</string>
+									<key>pfm_description</key>
+									<string>Language for Button1 of the Deferral Dialog</string>
+									<key>pfm_documentation_url</key>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<key>pfm_name</key>
+									<string>display_string_deferral_button2</string>
+									<key>pfm_title</key>
+									<string>Deferral Dialog Button2</string>
+									<key>pfm_type</key>
+									<string>string</string>
+									<key>pfm_value_placeholder</key>
+									<string>Defer</string>
+								</dict>
+								<dict>
+									<key>pfm_app_min</key>
+									<string>3.2</string>
+									<key>pfm_description</key>
+									<string>Langauge for part 1 of the infobox on the Deferral Dialog</string>
+									<key>pfm_documentation_url</key>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<key>pfm_name</key>
+									<string>display_string_deferral_infobox1</string>
+									<key>pfm_title</key>
+									<string>Deferral Dialog Infobox part1</string>
+									<key>pfm_type</key>
+									<string>string</string>
+									<key>pfm_value_placeholder</key>
+									<string>Deferral available until</string>
+								</dict>
+								<dict>
+									<key>pfm_app_min</key>
+									<string>3.2</string>
+									<key>pfm_description</key>
+									<string>Langauge for part 2 of the infobox on the Deferral Dialog</string>
+									<key>pfm_documentation_url</key>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<key>pfm_name</key>
+									<string>display_string_deferral_infobox2</string>
+									<key>pfm_title</key>
+									<string>Deferral Dialog Infobox part2</string>
+									<key>pfm_type</key>
+									<string>string</string>
+									<key>pfm_value_placeholder</key>
+									<string>out of</string>
+								</dict>
+								<dict>
+									<key>pfm_app_min</key>
+									<string>3.2</string>
+									<key>pfm_description</key>
+									<string>Langauge for part 3 of the infobox on the Deferral Dialog</string>
+									<key>pfm_documentation_url</key>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<key>pfm_name</key>
+									<string>display_string_deferral_infobox3</string>
+									<key>pfm_title</key>
+									<string>Deferral Dialog Infobox part3</string>
+									<key>pfm_type</key>
+									<string>string</string>
+									<key>pfm_value_placeholder</key>
+									<string>deferrals remaining</string>
+								</dict>
+								<dict>
+									<key>pfm_app_min</key>
+									<string>3.2</string>
+									<key>pfm_description</key>
+									<string>Langauge for part 1 of the message on the Deferral Dialog</string>
+									<key>pfm_documentation_url</key>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<key>pfm_name</key>
+									<string>display_string_deferral_message_01</string>
+									<key>pfm_title</key>
+									<string>Deferral Dialog Message part 1</string>
+									<key>pfm_type</key>
+									<string>string</string>
+									<key>pfm_value_placeholder</key>
+									<string>You can **Defer** the updates or **Continue** to close the applications and apply updates.</string>
+								</dict>
+								<dict>
+									<key>pfm_app_min</key>
+									<string>3.2</string>
+									<key>pfm_description</key>
+									<string>Language for part 2 of the message on the Deferral Dialog</string>
+									<key>pfm_documentation_url</key>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<key>pfm_name</key>
+									<string>display_string_deferral_message_02</string>
+									<key>pfm_title</key>
+									<string>Deferral Dialog Message part 2</string>
+									<key>pfm_type</key>
+									<string>string</string>
+									<key>pfm_value_placeholder</key>
+									<string>application(s) that require updates:</string>
+								</dict>
+								<dict>
+									<key>pfm_app_min</key>
+									<string>3.2</string>
+									<key>pfm_description</key>
+									<string>Langauge for unlimited deferrals</string>
+									<key>pfm_documentation_url</key>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<key>pfm_name</key>
+									<string>display_string_deferral_unlimited</string>
+									<key>pfm_title</key>
+									<string>Deferral Dialog Unlimited Deferrals</string>
+									<key>pfm_type</key>
+									<string>string</string>
+									<key>pfm_value_placeholder</key>
+									<string>No deadline date and unlimited deferrals</string>
+								</dict>
+								<dict>
+									<key>pfm_app_min</key>
+									<string>3.2</string>
+									<key>pfm_description</key>
+									<string>Deferral Deadline Dialog button1</string>
+									<key>pfm_documentation_url</key>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<key>pfm_name</key>
+									<string>display_string_deferraldeadline_button1</string>
+									<key>pfm_title</key>
+									<string>Deadline Dialog Button 1</string>
+									<key>pfm_type</key>
+									<string>string</string>
+									<key>pfm_value_placeholder</key>
+									<string>Continue</string>
+								</dict>
+								<dict>
+									<key>pfm_app_min</key>
+									<string>3.2</string>
+									<key>pfm_description</key>
+									<string>Deferral Deadline Dialog button2</string>
+									<key>pfm_documentation_url</key>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<key>pfm_name</key>
+									<string>display_string_deferraldeadline_button2</string>
+									<key>pfm_title</key>
+									<string>Deadline Dialog Button 2</string>
+									<key>pfm_type</key>
+									<string>string</string>
+									<key>pfm_value_placeholder</key>
+									<string>Max Deferrals Reached</string>
+								</dict>
+								<dict>
+									<key>pfm_app_min</key>
+									<string>3.2</string>
+									<key>pfm_description</key>
+									<string>Deferral Deadline Dialog infbox</string>
+									<key>pfm_documentation_url</key>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<key>pfm_name</key>
+									<string>display_string_deferraldeadline_infobox</string>
+									<key>pfm_title</key>
+									<string>Deadline Dialog infobox</string>
+									<key>pfm_type</key>
+									<string>string</string>
+									<key>pfm_value_placeholder</key>
+									<string>Updates will automatically install after the timer expires. \n\n #### No Deferrals Remaining ####</string>
+								</dict>
+								<dict>
+									<key>pfm_app_min</key>
+									<string>3.2</string>
+									<key>pfm_description</key>
+									<string>Deferral Deadline Dialog Message</string>
+									<key>pfm_documentation_url</key>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<key>pfm_name</key>
+									<string>display_string_deferraldeadline_message_deadline</string>
+									<key>pfm_title</key>
+									<string>Deadline Dialog Message</string>
+									<key>pfm_type</key>
+									<string>string</string>
+									<key>pfm_value_placeholder</key>
+									<string>application(s) that require updates\n\n You have deferred the maximum number of</string>
+								</dict>
+								<dict>
+									<key>pfm_app_min</key>
+									<string>3.2</string>
+									<key>pfm_description</key>
+									<string>Patching Dialog button1</string>
+									<key>pfm_documentation_url</key>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<key>pfm_name</key>
+									<string>display_string_patching_button1</string>
+									<key>pfm_title</key>
+									<string>Patching Dialog Button 1</string>
+									<key>pfm_type</key>
+									<string>string</string>
+									<key>pfm_value_placeholder</key>
+									<string>Done</string>
+								</dict>
+								<dict>
+									<key>pfm_app_min</key>
+									<string>3.2</string>
+									<key>pfm_description</key>
+									<string>Patching Dialog Checking</string>
+									<key>pfm_documentation_url</key>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<key>pfm_name</key>
+									<string>display_string_patching_checking</string>
+									<key>pfm_title</key>
+									<string>Patching Dialog Checking</string>
+									<key>pfm_type</key>
+									<string>string</string>
+									<key>pfm_value_placeholder</key>
+									<string>Checking</string>
+								</dict>
+								<dict>
+									<key>pfm_app_min</key>
+									<string>3.2</string>
+									<key>pfm_description</key>
+									<string>Patching Dialog Progress</string>
+									<key>pfm_documentation_url</key>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<key>pfm_name</key>
+									<string>display_string_patching_progress</string>
+									<key>pfm_title</key>
+									<string>Patching Dialog Progress</string>
+									<key>pfm_type</key>
+									<string>string</string>
+									<key>pfm_value_placeholder</key>
+									<string>Processing</string>
+								</dict>
+								<dict>
+									<key>pfm_app_min</key>
+									<string>3.2</string>
+									<key>pfm_description</key>
+									<string>Patching Dialog Infobox Computer Name</string>
+									<key>pfm_documentation_url</key>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<key>pfm_name</key>
+									<string>display_string_patching_infobox_computer_name</string>
+									<key>pfm_title</key>
+									<string>Patching Dialog Infobox Computer Name</string>
+									<key>pfm_type</key>
+									<string>string</string>
+									<key>pfm_value_placeholder</key>
+									<string>**Computer Name:**</string>
+								</dict>
+								<dict>
+									<key>pfm_app_min</key>
+									<string>3.2</string>
+									<key>pfm_description</key>
+									<string>Patching Dialog Infobox macOS Version</string>
+									<key>pfm_documentation_url</key>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<key>pfm_name</key>
+									<string>display_string_patching_infobox_macos_version</string>
+									<key>pfm_title</key>
+									<string>Patching Dialog Infobox macOS Version</string>
+									<key>pfm_type</key>
+									<string>string</string>
+									<key>pfm_value_placeholder</key>
+									<string>**macOS Version:**</string>
+								</dict>
+								<dict>
+									<key>pfm_app_min</key>
+									<string>3.2</string>
+									<key>pfm_description</key>
+									<string>Patching Dialog infobox updates</string>
+									<key>pfm_documentation_url</key>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<key>pfm_name</key>
+									<string>display_string_patching_infobox_updates</string>
+									<key>pfm_title</key>
+									<string>Patching Dialog infobox updates</string>
+									<key>pfm_type</key>
+									<string>string</string>
+									<key>pfm_value_placeholder</key>
+									<string>Updates:</string>
+								</dict>
+								<dict>
+									<key>pfm_app_min</key>
+									<string>3.2</string>
+									<key>pfm_description</key>
+									<string>Patching Dialog Message</string>
+									<key>pfm_documentation_url</key>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<key>pfm_name</key>
+									<string>display_string_patching_message</string>
+									<key>pfm_title</key>
+									<string>Patching Dialog Message</string>
+									<key>pfm_type</key>
+									<string>string</string>
+									<key>pfm_value_placeholder</key>
+									<string>Updating the following apps</string>
+								</dict>
+								<dict>
+									<key>pfm_app_min</key>
+									<string>3.2</string>
+									<key>pfm_description</key>
+									<string>Patching Complete Progress Message</string>
+									<key>pfm_documentation_url</key>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<key>pfm_name</key>
+									<string>display_string_complete_progress</string>
+									<key>pfm_title</key>
+									<string>Patching Complete Progress Message</string>
+									<key>pfm_type</key>
+									<string>string</string>
+									<key>pfm_value_placeholder</key>
+									<string>Updates Complete!</string>
+								</dict>
+								<dict>
+									<key>pfm_app_min</key>
+									<string>3.2</string>
+									<key>pfm_description</key>
+									<string>All Apps Up To Date Button 1</string>
+									<key>pfm_documentation_url</key>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<key>pfm_name</key>
+									<string>display_string_uptodate_button1</string>
+									<key>pfm_title</key>
+									<string>All Apps Up To Date Button 1</string>
+									<key>pfm_type</key>
+									<string>string</string>
+									<key>pfm_value_placeholder</key>
+									<string>Close</string>
+								</dict>
+								<dict>
+									<key>pfm_app_min</key>
+									<string>3.2</string>
+									<key>pfm_description</key>
+									<string>All Apps Up To Date Message</string>
+									<key>pfm_documentation_url</key>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<key>pfm_name</key>
+									<string>display_string_uptodate_message</string>
+									<key>pfm_title</key>
+									<string>All Apps Up To Date Message</string>
+									<key>pfm_type</key>
+									<string>string</string>
+									<key>pfm_value_placeholder</key>
+									<string>All apps are up to date.</string>
+								</dict>
+								<dict>
+									<key>pfm_app_min</key>
+									<string>3.2</string>
+									<key>pfm_description</key>
+									<string>Help Message - Intro</string>
+									<key>pfm_documentation_url</key>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<key>pfm_name</key>
+									<string>display_string_help_message_intro</string>
+									<key>pfm_title</key>
+									<string>Help Message - Intro</string>
+									<key>pfm_type</key>
+									<string>string</string>
+									<key>pfm_value_placeholder</key>
+									<string>If you need assistance, please contact</string>
+								</dict>
+								<dict>
+									<key>pfm_app_min</key>
+									<string>3.2</string>
+									<key>pfm_description</key>
+									<string>Help Message - Telephone</string>
+									<key>pfm_documentation_url</key>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<key>pfm_name</key>
+									<string>display_string_help_message_telephone</string>
+									<key>pfm_title</key>
+									<string>Help Message - Telephone</string>
+									<key>pfm_type</key>
+									<string>string</string>
+									<key>pfm_value_placeholder</key>
+									<string>Telephone</string>
+								</dict>
+								<dict>
+									<key>pfm_app_min</key>
+									<string>3.2</string>
+									<key>pfm_description</key>
+									<string>Help Message - Email</string>
+									<key>pfm_documentation_url</key>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<key>pfm_name</key>
+									<string>display_string_help_message_email</string>
+									<key>pfm_title</key>
+									<string>Help Message - Email</string>
+									<key>pfm_type</key>
+									<string>string</string>
+									<key>pfm_value_placeholder</key>
+									<string>Email</string>
+								</dict>
+								<dict>
+									<key>pfm_app_min</key>
+									<string>3.2</string>
+									<key>pfm_description</key>
+									<string>Help Message - Help Website</string>
+									<key>pfm_documentation_url</key>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<key>pfm_name</key>
+									<string>display_string_help_message_help_website</string>
+									<key>pfm_title</key>
+									<string>Help Message - Help Website</string>
+									<key>pfm_type</key>
+									<string>string</string>
+									<key>pfm_value_placeholder</key>
+									<string>Help Website</string>
+								</dict>
+								<dict>
+									<key>pfm_app_min</key>
+									<string>3.2</string>
+									<key>pfm_description</key>
+									<string>Help Message - Computer Info</string>
+									<key>pfm_documentation_url</key>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<key>pfm_name</key>
+									<string>display_string_help_message_computer_info</string>
+									<key>pfm_title</key>
+									<string>Help Message - Computer Info</string>
+									<key>pfm_type</key>
+									<string>string</string>
+									<key>pfm_value_placeholder</key>
+									<string>Computer Information</string>
+								</dict>
+								<dict>
+									<key>pfm_app_min</key>
+									<string>3.2</string>
+									<key>pfm_description</key>
+									<string>Help Message - Operating System</string>
+									<key>pfm_documentation_url</key>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<key>pfm_name</key>
+									<string>display_string_help_message_operating_system</string>
+									<key>pfm_title</key>
+									<string>Help Message - Operating System</string>
+									<key>pfm_type</key>
+									<string>string</string>
+									<key>pfm_value_placeholder</key>
+									<string>Operating System</string>
+								</dict>
+								<dict>
+									<key>pfm_app_min</key>
+									<string>3.2</string>
+									<key>pfm_description</key>
+									<string>Help Message - Serial Number</string>
+									<key>pfm_documentation_url</key>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<key>pfm_name</key>
+									<string>display_string_help_message_serial</string>
+									<key>pfm_title</key>
+									<string>Help Message - Serial Number</string>
+									<key>pfm_type</key>
+									<string>string</string>
+									<key>pfm_value_placeholder</key>
+									<string>Serial Number</string>
+								</dict>
+								<dict>
+									<key>pfm_app_min</key>
+									<string>3.2</string>
+									<key>pfm_description</key>
+									<string>Help Message - Dialog</string>
+									<key>pfm_documentation_url</key>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<key>pfm_name</key>
+									<string>display_string_help_message_dialog</string>
+									<key>pfm_title</key>
+									<string>Help Message - Dialog</string>
+									<key>pfm_type</key>
+									<string>string</string>
+									<key>pfm_value_placeholder</key>
+									<string>Dialog</string>
+								</dict>
+								<dict>
+									<key>pfm_app_min</key>
+									<string>3.2</string>
+									<key>pfm_description</key>
+									<string>Help Message - Started</string>
+									<key>pfm_documentation_url</key>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<key>pfm_name</key>
+									<string>display_string_help_message_started</string>
+									<key>pfm_title</key>
+									<string>Help Message - Started</string>
+									<key>pfm_type</key>
+									<string>string</string>
+									<key>pfm_value_placeholder</key>
+									<string>Started</string>
+								</dict>
+								<dict>
+									<key>pfm_app_min</key>
+									<string>3.2</string>
+									<key>pfm_description</key>
+									<string>Help Message - Script Version</string>
+									<key>pfm_documentation_url</key>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<key>pfm_name</key>
+									<string>display_string_help_message_script_version</string>
+									<key>pfm_title</key>
+									<string>Help Message - Script Version</string>
+									<key>pfm_type</key>
+									<string>string</string>
+									<key>pfm_value_placeholder</key>
+									<string>Script Version</string>
+								</dict>
+							</array>
+							<key>pfm_title</key>
+							<string>dialogElements - Dictionary</string>
+							<key>pfm_type</key>
+							<string>dictionary</string>
+						</dict>
+					</array>
+					<key>pfm_title</key>
+					<string>Dialog Elements</string>
+					<key>pfm_type</key>
+					<string>array</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>User Interface</string>
+			<key>pfm_type</key>
+			<string>dictionary</string>
+		</dict>
+	</array>
+	<key>pfm_targets</key>
+	<array>
+		<string>system</string>
+		<string>user</string>
+	</array>
+	<key>pfm_title</key>
+	<string>App Auto-Patch</string>
+	<key>pfm_unique</key>
+	<true/>
+	<key>pfm_version</key>
+	<integer>1</integer>
+</dict>
+</plist>
