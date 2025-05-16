@@ -13,7 +13,7 @@
 	<key>pfm_format_version</key>
 	<integer>1</integer>
 	<key>pfm_last_modified</key>
-	<date>2025-05-16T10:13:48Z</date>
+	<date>2025-05-16T13:25:42Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -738,7 +738,7 @@
 			<key>pfm_app_min</key>
 			<string>3.0</string>
 			<key>pfm_default</key>
-			<string>2</string>
+			<integer>2</integer>
 			<key>pfm_description</key>
 			<string>0 (Completely Silent) | 1 (Silent Discovery, Interactive Patching) | 2 (Full Interactive) (default)</string>
 			<key>pfm_description_reference</key>
