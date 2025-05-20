@@ -38,7 +38,7 @@
 			<key>pfm_default</key>
 			<string>XCreds</string>
 			<key>pfm_description</key>
-			<string>The human-readable name for the profile payload. The name appears on the Detail screen and doesn't need to be unique.</string>
+			<string>The human-readable name for the profile payload. The name appears on the Detail screen and doesn&apos;t need to be unique.</string>
 			<key>pfm_description_reference</key>
 			<string>A human-readable name for the profile payload. This name is displayed on the Detail screen. It does not have to be unique.</string>
 			<key>pfm_name</key>
@@ -55,7 +55,7 @@
 			<string>com.twocanoes.xcreds</string>
 			<key>pfm_description</key>
 			<string>The reverse-DNS-style identifier for the payload. This identifier is usually the same as the TopLevel value, with an additional appended component. This string must be unique within the profile.
-During a profile replacement, the system updates payloads with the same 'PayloadIdentifier' and 'PayloadUUID' in the old and new profiles.</string>
+During a profile replacement, the system updates payloads with the same &apos;PayloadIdentifier&apos; and &apos;PayloadUUID&apos; in the old and new profiles.</string>
 			<key>pfm_description_reference</key>
 			<string>A reverse-DNS-style identifier for the specific payload. It is usually the same identifier as the root-level PayloadIdentifier value with an additional component appended.</string>
 			<key>pfm_name</key>
@@ -71,7 +71,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<string>com.twocanoes.xcreds</string>
 			<key>pfm_description</key>
-			<string>The payload type, which each payload domain's reference page specifies.</string>
+			<string>The payload type, which each payload domain&apos;s reference page specifies.</string>
 			<key>pfm_description_reference</key>
 			<string>The payload type.</string>
 			<key>pfm_name</key>
@@ -85,8 +85,8 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_description</key>
-			<string>The globally unique identifier for the payload. The actual content is unimportant, but must be globally unique. In macOS, use 'uuidgen' to generate UUIDs.
-During a profile replacement, the system updates payloads with the same 'PayloadIdentifier' and 'PayloadUUID' in the old and new profiles.</string>
+			<string>The globally unique identifier for the payload. The actual content is unimportant, but must be globally unique. In macOS, use &apos;uuidgen&apos; to generate UUIDs.
+During a profile replacement, the system updates payloads with the same &apos;PayloadIdentifier&apos; and &apos;PayloadUUID&apos; in the old and new profiles.</string>
 			<key>pfm_description_reference</key>
 			<string>A globally unique identifier for the payload. The actual content is unimportant, but it must be globally unique. In macOS, you can use uuidgen to generate reasonable UUIDs.</string>
 			<key>pfm_format</key>
@@ -119,7 +119,7 @@ A profile can consist of payloads with different version numbers. For example, c
 		</dict>
 		<dict>
 			<key>pfm_description</key>
-			<string>The human-readable string containing the name of the organization that provides the profile. This value doesn't need to match the organization payload value in the enclosing dictionary.</string>
+			<string>The human-readable string containing the name of the organization that provides the profile. This value doesn&apos;t need to match the organization payload value in the enclosing dictionary.</string>
 			<key>pfm_name</key>
 			<string>PayloadOrganization</string>
 			<key>pfm_title</key>
@@ -550,7 +550,7 @@ A profile can consist of payloads with different version numbers. For example, c
 			<key>pfm_app_min</key>
 			<string>5.3</string>
 			<key>pfm_default</key>
-			<integer>1</integer>
+			<real>1</real>
 			<key>pfm_description</key>
 			<string>Alpha value of loginWindowBackgroundImage. Default value: 1</string>
 			<key>pfm_documentation_url</key>
@@ -630,7 +630,7 @@ A profile can consist of payloads with different version numbers. For example, c
 			<key>pfm_app_min</key>
 			<string>5.3</string>
 			<key>pfm_default</key>
-			<integer>1</integer>
+			<real>1</real>
 			<key>pfm_description</key>
 			<string>Alpha value of menuItemWindowBackgroundImageURL. Default value: 1</string>
 			<key>pfm_documentation_url</key>
@@ -680,7 +680,7 @@ A profile can consist of payloads with different version numbers. For example, c
 			<key>pfm_app_min</key>
 			<string>5.3</string>
 			<key>pfm_default</key>
-			<integer>1</integer>
+			<real>1</real>
 			<key>pfm_description</key>
 			<string>Alpha value of loginWindowSecondaryMonitorsBackground. Default value: 1</string>
 			<key>pfm_documentation_url</key>
@@ -895,7 +895,7 @@ Note that Google does not support the offline_access scope so instead use the pr
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>Favor using XCreds' local login screen over the cloud login UI.</string>
+			<string>Favor using XCreds&apos; local login screen over the cloud login UI.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://twocanoes.com/knowledge-base/xcreds-admin-guide/#preferences</string>
 			<key>pfm_name</key>
@@ -1029,7 +1029,7 @@ Note that Google does not support the offline_access scope so instead use the pr
 			<key>pfm_default</key>
 			<string>interaction_required</string>
 			<key>pfm_description</key>
-			<string>When a ROPG request is completed successfully to verify password, it may return an error that two factor is required. Add the string that is returned for the JSON response. For Azure, it is typically interaction_required. For Okta, the response is usually {"error":"invalid_grant","error_description":"Resource owner password credentials authentication denied by sign on policy."} Can be a string or an array of strings.</string>
+			<string>When a ROPG request is completed successfully to verify password, it may return an error that two factor is required. Add the string that is returned for the JSON response. For Azure, it is typically interaction_required. For Okta, the response is usually {&quot;error&quot;:&quot;invalid_grant&quot;,&quot;error_description&quot;:&quot;Resource owner password credentials authentication denied by sign on policy.&quot;} Can be a string or an array of strings.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://twocanoes.com/knowledge-base/xcreds-admin-guide/#preferences</string>
 			<key>pfm_name</key>
@@ -1043,7 +1043,7 @@ Note that Google does not support the offline_access scope so instead use the pr
 			<key>pfm_app_min</key>
 			<string>4.0</string>
 			<key>pfm_description</key>
-			<string>Don't show the UI if this key is defined and a file or folder exists at this path.</string>
+			<string>Don&apos;t show the UI if this key is defined and a file or folder exists at this path.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://twocanoes.com/knowledge-base/xcreds-admin-guide/#preferences</string>
 			<key>pfm_name</key>
@@ -1057,7 +1057,7 @@ Note that Google does not support the offline_access scope so instead use the pr
 			<key>pfm_app_min</key>
 			<string>4.0</string>
 			<key>pfm_description</key>
-			<string>Name of OIDC claim that contains an alias to add to a user account. Usually this is the "upn" (eg syd@twocanoes.com) so the user can log in at the standard login window the same as the IdP login window. Adds the value to record name of the user account as an alias.</string>
+			<string>Name of OIDC claim that contains an alias to add to a user account. Usually this is the &quot;upn&quot; (eg syd@twocanoes.com) so the user can log in at the standard login window the same as the IdP login window. Adds the value to record name of the user account as an alias.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://twocanoes.com/knowledge-base/xcreds-admin-guide/#preferences</string>
 			<key>pfm_name</key>
@@ -1662,9 +1662,9 @@ Note that Google does not support the offline_access scope so instead use the pr
 		</dict>
 		<dict>
 			<key>pfm_description</key>
-			<string>Password element id of the html element that has the password. It is read by using JavaScript to get the value (for example, for Azure, the JavaScript document.getElementById('i0118').value is sent. If this default is not set, standard values for Azure and Google Cloud will be used. To find out this value, use a browser to inspect the source of the page that has the password on it. Find the id of the textfield that has the password. Fill in the password and then open the JavaScript console. Run:
+			<string>Password element id of the html element that has the password. It is read by using JavaScript to get the value (for example, for Azure, the JavaScript document.getElementById(&apos;i0118&apos;).value is sent. If this default is not set, standard values for Azure and Google Cloud will be used. To find out this value, use a browser to inspect the source of the page that has the password on it. Find the id of the textfield that has the password. Fill in the password and then open the JavaScript console. Run:
 
-document.getElementById('passwordID').value
+document.getElementById(&apos;passwordID&apos;).value
 
 changing “passwordID” to the correct element ID. If the value you typed into the textfield is returned, this is the correct ID.</string>
 			<key>pfm_documentation_url</key>
@@ -1696,7 +1696,7 @@ changing “passwordID” to the correct element ID. If the value you typed into
 			<key>pfm_default</key>
 			<string>family_name</string>
 			<key>pfm_description</key>
-			<string>Local DS to OIDC/AD Mapping for Last Name. Default value: “family_name” (OIDC), "sn" (AD). map_lastname should be set to an OIDC claim for last name.</string>
+			<string>Local DS to OIDC/AD Mapping for Last Name. Default value: “family_name” (OIDC), &quot;sn&quot; (AD). map_lastname should be set to an OIDC claim for last name.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://twocanoes.com/knowledge-base/xcreds-admin-guide/#preferences</string>
 			<key>pfm_name</key>
@@ -1712,7 +1712,7 @@ changing “passwordID” to the correct element ID. If the value you typed into
 			<key>pfm_default</key>
 			<string>name</string>
 			<key>pfm_description</key>
-			<string>Local DS to OIDC/AD Attribute Mapping for Full Name. Default value: “name”(OIDC), "displayName" (AD). map_fullname should be set to an OIDC claim/AD Attribute for full name.</string>
+			<string>Local DS to OIDC/AD Attribute Mapping for Full Name. Default value: “name”(OIDC), &quot;displayName&quot; (AD). map_fullname should be set to an OIDC claim/AD Attribute for full name.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://twocanoes.com/knowledge-base/xcreds-admin-guide/#preferences</string>
 			<key>pfm_name</key>
@@ -1728,7 +1728,7 @@ changing “passwordID” to the correct element ID. If the value you typed into
 			<key>pfm_default</key>
 			<string>name</string>
 			<key>pfm_description</key>
-			<string>Local DS to OIDC Mapping/AD Attribute for Name. Default value: “name” (OIDC), "userPrincipalName" (AD). map_username should be set to an OIDC claim/AD Attribute for name. The macOS username will be set as the portion of this value before an @ symbol if present.</string>
+			<string>Local DS to OIDC Mapping/AD Attribute for Name. Default value: “name” (OIDC), &quot;userPrincipalName&quot; (AD). map_username should be set to an OIDC claim/AD Attribute for name. The macOS username will be set as the portion of this value before an @ symbol if present.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://twocanoes.com/knowledge-base/xcreds-admin-guide/#preferences</string>
 			<key>pfm_name</key>
@@ -2028,7 +2028,7 @@ changing “passwordID” to the correct element ID. If the value you typed into
 		</dict>
 		<dict>
 			<key>pfm_description</key>
-			<string>Name for Shares menu item. Default: "Shares".</string>
+			<string>Name for Shares menu item. Default: &quot;Shares&quot;.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://twocanoes.com/knowledge-base/xcreds-admin-guide/#preferences</string>
 			<key>pfm_name</key>
