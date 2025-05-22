@@ -5,7 +5,7 @@
 	<key>pfm_app_url</key>
 	<string>https://github.com/twocanoes/xcreds</string>
 	<key>pfm_description</key>
-	<string>XCreds 5.2 (8268) OAuth Settings</string>
+	<string>XCreds 5.4 (8684) OAuth Settings</string>
 	<key>pfm_documentation_url</key>
 	<string>https://twocanoes.com/knowledge-base/xcreds-admin-guide/#preferences</string>
 	<key>pfm_domain</key>
@@ -13,7 +13,7 @@
 	<key>pfm_format_version</key>
 	<integer>1</integer>
 	<key>pfm_last_modified</key>
-	<date>2025-02-04T20:37:42Z</date>
+	<date>2025-05-12T19:13:52Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -110,10 +110,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 A profile can consist of payloads with different version numbers. For example, changes to the VPN software in iOS might introduce a new payload version to support additional features, but Mail payload versions would not necessarily change in the same release.</string>
 			<key>pfm_name</key>
 			<string>PayloadVersion</string>
-			<key>pfm_range_list</key>
-			<array>
-				<integer>1</integer>
-			</array>
 			<key>pfm_require</key>
 			<string>always</string>
 			<key>pfm_title</key>
@@ -154,6 +150,22 @@ A profile can consist of payloads with different version numbers. For example, c
 			<string>Map Kerberos Principal Name</string>
 			<key>pfm_type</key>
 			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>5.3</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>If the user principal has a domain name and the OpenID token does not match the ADDomain name, replace it with the ADDomain name. For example: bob@sub.example.com -&gt; bob@example.com if ADDomain was example.com.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://twocanoes.com/knowledge-base/xcreds-admin-guide/#preferences</string>
+			<key>pfm_name</key>
+			<string>shouldUpdateKerberosUserPrincipalADDomain</string>
+			<key>pfm_title</key>
+			<string>Should Update Kerberos User Principal ADDomain</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
 		</dict>
 		<dict>
 			<key>pfm_description</key>
@@ -487,8 +499,40 @@ A profile can consist of payloads with different version numbers. For example, c
 			<string>string</string>
 		</dict>
 		<dict>
+			<key>pfm_app_min</key>
+			<string>5.4</string>
 			<key>pfm_default</key>
-			<string>file:///System/Library/Desktop Pictures/Monterey Graphic.heic</string>
+			<false/>
+			<key>pfm_description</key>
+			<string>Hide the login window logo.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://twocanoes.com/knowledge-base/xcreds-admin-guide/#preferences</string>
+			<key>pfm_name</key>
+			<string>shouldHideLoginWindowLogo</string>
+			<key>pfm_title</key>
+			<string>should Hide Login Window Logo</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>5.3</string>
+			<key>pfm_description</key>
+			<string>URL to an image to show icon in the username / password login window</string>
+			<key>pfm_documentation_url</key>
+			<string>https://twocanoes.com/knowledge-base/xcreds-admin-guide/#preferences</string>
+			<key>pfm_format</key>
+			<string>(https?://|file:///).*</string>
+			<key>pfm_name</key>
+			<string>loginWindowLogoPath</string>
+			<key>pfm_title</key>
+			<string>Login Window Logo Path</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>file:///System/Library/CoreServices/DefaultDesktop.heic</string>
 			<key>pfm_description</key>
 			<string>URL to an image to show in the background while logging in. Default value: file:///System/Library/Desktop Pictures/Monterey Graphic.heic.</string>
 			<key>pfm_documentation_url</key>
@@ -499,6 +543,44 @@ A profile can consist of payloads with different version numbers. For example, c
 			<string>loginWindowBackgroundImageURL</string>
 			<key>pfm_title</key>
 			<string>Login Window Background Image URL</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>5.3</string>
+			<key>pfm_default</key>
+			<real>1</real>
+			<key>pfm_description</key>
+			<string>Alpha value of loginWindowBackgroundImage. Default value: 1</string>
+			<key>pfm_documentation_url</key>
+			<string>https://twocanoes.com/knowledge-base/xcreds-admin-guide/#preferences</string>
+			<key>pfm_name</key>
+			<string>loginWindowBackgroundImageAlpha</string>
+			<key>pfm_range_max</key>
+			<integer>1</integer>
+			<key>pfm_range_min</key>
+			<integer>0</integer>
+			<key>pfm_title</key>
+			<string>Login Window Background Image Alpha</string>
+			<key>pfm_type</key>
+			<string>real</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>5.3</string>
+			<key>pfm_default</key>
+			<string>file:///System/Library/CoreServices/DefaultDesktop.heic</string>
+			<key>pfm_description</key>
+			<string>URL to an image to show in the background on secondary display while logging in. Default value: file:///System/Library/Desktop Pictures/Monterey Graphic.heic.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://twocanoes.com/knowledge-base/xcreds-admin-guide/#preferences</string>
+			<key>pfm_format</key>
+			<string>(https?://|file:///).*</string>
+			<key>pfm_name</key>
+			<string>loginWindowSecondaryMonitorsBackgroundImageURL</string>
+			<key>pfm_title</key>
+			<string>Login Window Secondary Monitors Background Image URL</string>
 			<key>pfm_type</key>
 			<string>string</string>
 		</dict>
@@ -545,8 +627,28 @@ A profile can consist of payloads with different version numbers. For example, c
 			<string>string</string>
 		</dict>
 		<dict>
+			<key>pfm_app_min</key>
+			<string>5.3</string>
 			<key>pfm_default</key>
-			<false/>
+			<real>1</real>
+			<key>pfm_description</key>
+			<string>Alpha value of menuItemWindowBackgroundImageURL. Default value: 1</string>
+			<key>pfm_documentation_url</key>
+			<string>https://twocanoes.com/knowledge-base/xcreds-admin-guide/#preferences</string>
+			<key>pfm_name</key>
+			<string>menuItemWindowBackgroundImageAlpha</string>
+			<key>pfm_range_max</key>
+			<integer>1</integer>
+			<key>pfm_range_min</key>
+			<integer>0</integer>
+			<key>pfm_title</key>
+			<string>Menu Item Background Image Alpha</string>
+			<key>pfm_type</key>
+			<string>real</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<true/>
 			<key>pfm_description</key>
 			<string>Set the background image to Fill Screen rather than Fit to Screen</string>
 			<key>pfm_documentation_url</key>
@@ -559,8 +661,76 @@ A profile can consist of payloads with different version numbers. For example, c
 			<string>boolean</string>
 		</dict>
 		<dict>
+			<key>pfm_app_min</key>
+			<string>5.3</string>
+			<key>pfm_default</key>
+			<true/>
 			<key>pfm_description</key>
-			<string>Add a menu item for changing the password that will open this URL when the menu item is selected.</string>
+			<string>Set the secondary monitor(s) background image to Fill Screen rather than Fit to Screen</string>
+			<key>pfm_documentation_url</key>
+			<string>https://twocanoes.com/knowledge-base/xcreds-admin-guide/#preferences</string>
+			<key>pfm_name</key>
+			<string>shouldLoginWindowSecondaryMonitorsBackgroundImageFillScreen</string>
+			<key>pfm_title</key>
+			<string>Login Window Secondary Monitors Background Image Fill Screen</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>5.3</string>
+			<key>pfm_default</key>
+			<real>1</real>
+			<key>pfm_description</key>
+			<string>Alpha value of loginWindowSecondaryMonitorsBackground. Default value: 1</string>
+			<key>pfm_documentation_url</key>
+			<string>https://twocanoes.com/knowledge-base/xcreds-admin-guide/#preferences</string>
+			<key>pfm_name</key>
+			<string>loginWindowSecondaryMonitorsBackgroundAlpha</string>
+			<key>pfm_range_max</key>
+			<integer>1</integer>
+			<key>pfm_range_min</key>
+			<integer>0</integer>
+			<key>pfm_title</key>
+			<string>Login Window Secondary Monitors Background Image Alpha</string>
+			<key>pfm_type</key>
+			<string>real</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>5.3</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>When XCreds is installed, a launch agent is installed to automatically keep the menu item running when a user is logged in. Setting shouldRemoveMenuItemAutoLaunch to true makes XCreds at the login window remove the launchagent plist that was installed. This will cause the launchagent to not launch XCreds menu item on log in.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://twocanoes.com/knowledge-base/xcreds-admin-guide/#preferences</string>
+			<key>pfm_name</key>
+			<string>shouldRemoveMenuItemAutoLaunch</string>
+			<key>pfm_title</key>
+			<string>Should Remove Menu Item Auto Launch</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>5.4</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>When changing password via menu item, use the native UI to change password in Active Directory.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://twocanoes.com/knowledge-base/xcreds-admin-guide/#preferences</string>
+			<key>pfm_name</key>
+			<string>shouldUseADNativePasswordChangeMenuItem</string>
+			<key>pfm_title</key>
+			<string>Should Use AD Native Password Change Menu Item</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Add a menu item for changing the password that will open this URL when the menu item is selected. If shouldUseADNativePasswordChangeMenuItem is set to true, this value is not used.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://twocanoes.com/knowledge-base/xcreds-admin-guide/#preferences</string>
 			<key>pfm_format</key>
@@ -651,7 +821,7 @@ Provide the following values the follow IdPs:
 Google: profile openid email
 Azure: profile openid offline_access
 
-Note that Google does not support the offline_access scope so instead use the preference shouldSetGoogleAccessTypeToOffline. Azure provides unique_name which is mapped to the local user account by using the prefix before “@” in unique_name and matching to the short name of a user account. Google provides “email” and is matched in the same way.</string>
+Note that Google does not support the offline_access scope so instead use the preference shouldSetGoogleAccessTypeToOffline. Azure provides unique_name which is mapped to the local user account by using the prefix before "@" in unique_name and matching to the short name of a user account. Google provides "email" and is matched in the same way.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://twocanoes.com/knowledge-base/xcreds-admin-guide/#preferences</string>
 			<key>pfm_name</key>
@@ -752,6 +922,22 @@ Note that Google does not support the offline_access scope so instead use the pr
 			<string>boolean</string>
 		</dict>
 		<dict>
+			<key>pfm_app_min</key>
+			<string>5.3</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>When using ROPG, do basic HTTP auth. Default: false</string>
+			<key>pfm_documentation_url</key>
+			<string>https://twocanoes.com/knowledge-base/xcreds-admin-guide/#preferences</string>
+			<key>pfm_name</key>
+			<string>shouldUseBasicAuthWithROPG</string>
+			<key>pfm_title</key>
+			<string>Should Use Basic Auth With ROPG</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
 			<key>pfm_app_max</key>
 			<string>3.2.1</string>
 			<key>pfm_description</key>
@@ -843,7 +1029,7 @@ Note that Google does not support the offline_access scope so instead use the pr
 			<key>pfm_default</key>
 			<string>interaction_required</string>
 			<key>pfm_description</key>
-			<string>When a ROPG request is completed succesfully to verify password, it may return an error that two factor is required. Add the response string that is returned in the JSON response. For Azure, it is typically interaction_required.</string>
+			<string>When a ROPG request is completed successfully to verify password, it may return an error that two factor is required. Add the string that is returned for the JSON response. For Azure, it is typically interaction_required. For Okta, the response is usually {"error":"invalid_grant","error_description":"Resource owner password credentials authentication denied by sign on policy."} Can be a string or an array of strings.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://twocanoes.com/knowledge-base/xcreds-admin-guide/#preferences</string>
 			<key>pfm_name</key>
@@ -943,7 +1129,7 @@ Note that Google does not support the offline_access scope so instead use the pr
 			<key>pfm_app_min</key>
 			<string>5.0</string>
 			<key>pfm_default</key>
-			<string>Your local account password needs to be changed to match your online password. Please authenticate now.</string>
+			<string>Log in to verify your cloud credentials. After verification, your local user account password will be set to your cloud password.</string>
 			<key>pfm_description</key>
 			<string>Text at top of window shown in user session when prompting for password.</string>
 			<key>pfm_documentation_url</key>
@@ -1159,7 +1345,7 @@ Note that Google does not support the offline_access scope so instead use the pr
 		</dict>
 		<dict>
 			<key>pfm_default</key>
-			<true/>
+			<false/>
 			<key>pfm_description</key>
 			<string>Show Quit in the menu item menu. Default value: true</string>
 			<key>pfm_documentation_url</key>
@@ -1276,6 +1462,38 @@ Note that Google does not support the offline_access scope so instead use the pr
 			<string>localAdminPassword</string>
 			<key>pfm_title</key>
 			<string>Local Admin Password</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>5.3</string>
+			<key>pfm_default</key>
+			<string>Unlock Account</string>
+			<key>pfm_description</key>
+			<string>Title of dialog prompting user to enter in their prior local password when account is locked.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://twocanoes.com/knowledge-base/xcreds-admin-guide/#preferences</string>
+			<key>pfm_name</key>
+			<string>accountLockedPasswordDialogTitle</string>
+			<key>pfm_title</key>
+			<string>Account Locked Password Dialog Title</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>5.3</string>
+			<key>pfm_default</key>
+			<string>The user account is locked.  You can wait for the account to unlock or reset the password by clicking the Reset button below.</string>
+			<key>pfm_description</key>
+			<string>Text of dialog prompting user to enter in their prior local password when account is locked.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://twocanoes.com/knowledge-base/xcreds-admin-guide/#preferences</string>
+			<key>pfm_name</key>
+			<string>accountLockedPasswordDialogText</string>
+			<key>pfm_title</key>
+			<string>Account Locked Password Dialog Text</string>
 			<key>pfm_type</key>
 			<string>string</string>
 		</dict>
@@ -1448,7 +1666,7 @@ Note that Google does not support the offline_access scope so instead use the pr
 
 document.getElementById('passwordID').value
 
-changing “passwordID” to the correct element ID. If the value you typed into the textfield is returned, this is the correct ID.</string>
+changing "passwordID" to the correct element ID. If the value you typed into the textfield is returned, this is the correct ID.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://twocanoes.com/knowledge-base/xcreds-admin-guide/#preferences</string>
 			<key>pfm_name</key>
@@ -1462,7 +1680,7 @@ changing “passwordID” to the correct element ID. If the value you typed into
 			<key>pfm_default</key>
 			<string>given_name</string>
 			<key>pfm_description</key>
-			<string>Local DS to OIDC/AD Mapping for First Name. Default value: “given_name” (OIDC), “givenName” (AD). map_firstname should be set to an OIDC claim/AD Attribute for first name.</string>
+			<string>Local DS to OIDC/AD Mapping for First Name. Default value: "given_name" (OIDC), "givenName" (AD). map_firstname should be set to an OIDC claim/AD Attribute for first name.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://twocanoes.com/knowledge-base/xcreds-admin-guide/#preferences</string>
 			<key>pfm_name</key>
@@ -1478,7 +1696,7 @@ changing “passwordID” to the correct element ID. If the value you typed into
 			<key>pfm_default</key>
 			<string>family_name</string>
 			<key>pfm_description</key>
-			<string>Local DS to OIDC/AD Mapping for Last Name. Default value: “family_name” (OIDC), "sn" (AD). map_lastname should be set to an OIDC claim for last name.</string>
+			<string>Local DS to OIDC/AD Mapping for Last Name. Default value: "family_name" (OIDC), "sn" (AD). map_lastname should be set to an OIDC claim for last name.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://twocanoes.com/knowledge-base/xcreds-admin-guide/#preferences</string>
 			<key>pfm_name</key>
@@ -1494,7 +1712,7 @@ changing “passwordID” to the correct element ID. If the value you typed into
 			<key>pfm_default</key>
 			<string>name</string>
 			<key>pfm_description</key>
-			<string>Local DS to OIDC/AD Attribute Mapping for Full Name. Default value: “name”(OIDC), "displayName" (AD). map_fullname should be set to an OIDC claim/AD Attribute for full name.</string>
+			<string>Local DS to OIDC/AD Attribute Mapping for Full Name. Default value: "name"(OIDC), "displayName" (AD). map_fullname should be set to an OIDC claim/AD Attribute for full name.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://twocanoes.com/knowledge-base/xcreds-admin-guide/#preferences</string>
 			<key>pfm_name</key>
@@ -1510,7 +1728,7 @@ changing “passwordID” to the correct element ID. If the value you typed into
 			<key>pfm_default</key>
 			<string>name</string>
 			<key>pfm_description</key>
-			<string>Local DS to OIDC Mapping/AD Attribute for Name. Default value: “name” (OIDC), "userPrincipalName" (AD). map_username should be set to an OIDC claim/AD Attribute for name. The macOS username will be set as the portion of this value before an @ symbol if present.</string>
+			<string>Local DS to OIDC Mapping/AD Attribute for Name. Default value: "name" (OIDC), "userPrincipalName" (AD). map_username should be set to an OIDC claim/AD Attribute for name. The macOS username will be set as the portion of this value before an @ symbol if present.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://twocanoes.com/knowledge-base/xcreds-admin-guide/#preferences</string>
 			<key>pfm_name</key>
@@ -1528,7 +1746,7 @@ changing “passwordID” to the correct element ID. If the value you typed into
 			<key>pfm_default</key>
 			<string>name</string>
 			<key>pfm_description</key>
-			<string>Local DS to OIDC Mapping for Full Username (for example, freddy@twocanoes.com) Default value: “unique_name”. map_username should be set to an OIDC claim for full username.</string>
+			<string>Local DS to OIDC Mapping for Full Username (for example, freddy@twocanoes.com) Default value: "unique_name". map_username should be set to an OIDC claim for full username.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://twocanoes.com/knowledge-base/xcreds-admin-guide/#preferences</string>
 			<key>pfm_name</key>
@@ -1789,6 +2007,8 @@ changing “passwordID” to the correct element ID. If the value you typed into
 			<string>array</string>
 		</dict>
 		<dict>
+			<key>pfm_default</key>
+			<true/>
 			<key>pfm_description</key>
 			<string>Show and mount home directory from AD profile if defined.</string>
 			<key>pfm_name</key>
@@ -1799,6 +2019,8 @@ changing “passwordID” to the correct element ID. If the value you typed into
 			<string>boolean</string>
 		</dict>
 		<dict>
+			<key>pfm_default</key>
+			<false/>
 			<key>pfm_description</key>
 			<string>Append the domain name to the share defined in the profile.</string>
 			<key>pfm_name</key>
@@ -1831,6 +2053,6 @@ changing “passwordID” to the correct element ID. If the value you typed into
 	<key>pfm_unique</key>
 	<false/>
 	<key>pfm_version</key>
-	<integer>11</integer>
+	<integer>13</integer>
 </dict>
 </plist>
