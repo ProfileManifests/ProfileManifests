@@ -714,6 +714,13 @@
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/de.fau.rrze.NetworkShareMounter.png</string>
 		</dict>
+		<key>dev.firezone.firezone</key>
+		<dict>
+			<key>hash</key>
+			<string>11fe3f94e6e55da26d3821e38660a58c</string>
+			<key>path</key>
+			<string>Icons/ManagedPreferencesApplications/dev.firezone.firezone.png</string>
+		</dict>
 		<key>fr.handbrake.HandBrake</key>
 		<dict>
 			<key>hash</key>
@@ -1552,6 +1559,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2025-05-22T08:24:59Z</date>
+	<date>2025-05-26T14:46:15Z</date>
 </dict>
 </plist>
