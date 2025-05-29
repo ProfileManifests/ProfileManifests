@@ -63,7 +63,7 @@
 	ChiYvHgSithnzR++s9bEkCFDhgwZMuR8+TcgDLDRAr0H4wAAAABJRU5ErkJggg==
 	</data>
 	<key>pfm_last_modified</key>
-	<date>2025-02-16T02:52:57Z</date>
+	<date>2025-05-29T15:55:05Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -299,7 +299,7 @@ If the value contains 'Disabled', the Device Health page isn't displayed in Okta
 			<key>pfm_name</key>
 			<string>OktaVerify.UserPrincipalName</string>
 			<key>pfm_title</key>
-			<string>Okta User Principle Name</string>
+			<string>Okta User Principal Name</string>
 			<key>pfm_type</key>
 			<string>string</string>
 			<key>pfm_value_placeholder</key>
