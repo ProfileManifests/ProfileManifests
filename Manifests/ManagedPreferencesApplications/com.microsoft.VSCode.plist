@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>pfm_app_min</key>
-	<string>1.67</string>
+	<string>1.99</string>
 	<key>pfm_app_url</key>
 	<string>https://code.visualstudio.com/</string>
 	<key>pfm_description</key>
@@ -15,7 +15,7 @@
 	<key>pfm_format_version</key>
 	<integer>1</integer>
 	<key>pfm_last_modified</key>
-	<date>2025-05-28T16:01:53Z</date>
+	<date>2025-06-02T08:56:25Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -121,8 +121,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>string</string>
 		</dict>
 		<dict>
-			<key>pfm_app_min</key>
-			<string>1.99</string>
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
@@ -135,8 +133,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>boolean</string>
 		</dict>
 		<dict>
-			<key>pfm_app_min</key>
-			<string>1.99</string>
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
@@ -149,8 +145,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>boolean</string>
 		</dict>
 		<dict>
-			<key>pfm_app_min</key>
-			<string>1.99</string>
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
@@ -163,8 +157,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>boolean</string>
 		</dict>
 		<dict>
-			<key>pfm_app_min</key>
-			<string>1.99</string>
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
@@ -177,8 +169,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>boolean</string>
 		</dict>
 		<dict>
-			<key>pfm_app_min</key>
-			<string>1.99</string>
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
@@ -191,8 +181,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>boolean</string>
 		</dict>
 		<dict>
-			<key>pfm_app_min</key>
-			<string>1.67</string>
 			<key>pfm_default</key>
 			<string>default</string>
 			<key>pfm_description</key>
@@ -221,8 +209,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>string</string>
 		</dict>
 		<dict>
-			<key>pfm_app_min</key>
-			<string>1.96</string>
 			<key>pfm_description</key>
 			<string>Controls which extensions can be installed. The value of this policy is a JSON string that contains the allowed extensions.</string>
 			<key>pfm_documentation_url</key>
@@ -237,8 +223,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>{"microsoft": true, "github": true}</string>
 		</dict>
 		<dict>
-			<key>pfm_app_min</key>
-			<string>1.99</string>
 			<key>pfm_description</key>
 			<string>Configure the Marketplace service URL to connect to.</string>
 			<key>pfm_name</key>
@@ -251,8 +235,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>string</string>
 		</dict>
 		<dict>
-			<key>pfm_app_min</key>
-			<string>1.99</string>
 			<key>pfm_description</key>
 			<string>Controls the level of telemetry data.</string>
 			<key>pfm_documentation_url</key>
@@ -279,8 +261,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>string</string>
 		</dict>
 		<dict>
-			<key>pfm_app_min</key>
-			<string>1.99</string>
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
