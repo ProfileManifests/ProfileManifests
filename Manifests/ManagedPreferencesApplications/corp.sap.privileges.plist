@@ -13,7 +13,7 @@
 	<key>pfm_format_version</key>
 	<integer>1</integer>
 	<key>pfm_last_modified</key>
-	<date>2025-01-15T16:36:56Z</date>
+	<date>2025-06-04T14:30:53Z</date>
 	<key>pfm_macos_min</key>
 	<string>10.12</string>
 	<key>pfm_platforms</key>
@@ -731,6 +731,38 @@ A profile can consist of payloads with different version numbers. For example, c
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
+			<string>2.0.0</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>If set to true, the Settings menu item is no longer displayed in the status item's menu.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/SAP/macOS-enterprise-privileges/wiki/Managing-Privileges#HideSettingsFromStatusItem</string>
+			<key>pfm_name</key>
+			<string>HideSettingsFromStatusItem</string>
+			<key>pfm_title</key>
+			<string>Hide Settings From Menu Bar</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2.0.0</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>If set to true, a Privileges status item is displayed in the Menu Bar.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/SAP/macOS-enterprise-privileges/wiki/Managing-Privileges#ShowInMenuBar</string>
+			<key>pfm_name</key>
+			<string>ShowInMenuBar</string>
+			<key>pfm_title</key>
+			<string>Show in Menu Bar</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
 			<string>1.5.0</string>
 			<key>pfm_description</key>
 			<string>Requires authentication before using Privileges.app. If set to true, the logged-in user is prompted to authenticate via Touch ID or by entering their account password.</string>
@@ -997,6 +1029,6 @@ A profile can consist of payloads with different version numbers. For example, c
 	<key>pfm_unique</key>
 	<true/>
 	<key>pfm_version</key>
-	<integer>4</integer>
+	<integer>5</integer>
 </dict>
 </plist>
