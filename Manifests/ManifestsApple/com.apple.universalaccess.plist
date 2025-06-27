@@ -13,7 +13,7 @@
 	<key>pfm_interaction</key>
 	<string>combined</string>
 	<key>pfm_last_modified</key>
-	<date>2023-11-23T13:57:28Z</date>
+	<date>2025-06-27T12:30:09Z</date>
 	<key>pfm_macos_min</key>
 	<string>10.9</string>
 	<key>pfm_platforms</key>
@@ -209,6 +209,22 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>whiteOnBlack</string>
 			<key>pfm_title</key>
 			<string>Invert colors</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>Turns on "Reduce Transparency" in Display options</string>
+			<key>pfm_documentation_url</key>
+			<string>https://derflounder.wordpress.com/2025/06/18/setting-reduced-transparency-on-macos-sequoia/</string>
+			<key>pfm_macos_min</key>
+			<string>10.10</string>
+			<key>pfm_name</key>
+			<string>reduceTransparency</string>
+			<key>pfm_title</key>
+			<string>Reduce Transparency</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 		</dict>
@@ -431,6 +447,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 	<key>pfm_unique</key>
 	<true/>
 	<key>pfm_version</key>
-	<integer>2</integer>
+	<integer>3</integer>
 </dict>
 </plist>
