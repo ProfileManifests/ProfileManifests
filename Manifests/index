@@ -1996,7 +1996,7 @@
 		<key>com.apple.mobiledevice.passwordpolicy</key>
 		<dict>
 			<key>modified</key>
-			<date>2024-09-03T15:13:17Z</date>
+			<date>2025-06-27T08:35:02Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.mobiledevice.passwordpolicy.plist</string>
 			<key>version</key>
@@ -2356,11 +2356,11 @@
 		<key>com.apple.universalaccess</key>
 		<dict>
 			<key>modified</key>
-			<date>2023-11-23T13:57:28Z</date>
+			<date>2025-06-27T12:36:33Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.universalaccess.plist</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<key>com.apple.vpn.managed</key>
 		<dict>
@@ -2436,6 +2436,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2025-06-26T14:04:54Z</date>
+	<date>2025-06-27T12:46:55Z</date>
 </dict>
 </plist>
