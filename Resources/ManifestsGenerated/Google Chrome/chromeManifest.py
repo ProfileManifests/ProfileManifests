@@ -10,7 +10,6 @@ import datetime
 manifestpath = os.path.abspath('/Applications/Google Chrome.app/Contents/Resources/com.google.Chrome.manifest/Contents/Resources/com.google.Chrome.manifest')
 manifest = plistlib.readPlist(manifestpath)
 Localizable = os.path.abspath('/Applications/Google Chrome.app/Contents/Resources/com.google.Chrome.manifest/Contents/Resources/en.lproj/Localizable.strings')
-call(["/usr/bin/plutil", "-convert", "xml1", Localizable])
 strings = plistlib.readPlist(Localizable)
 chromeinfo = plistlib.readPlist(
     os.path.abspath("/Applications/Google Chrome.app/Contents/Info.plist"))
