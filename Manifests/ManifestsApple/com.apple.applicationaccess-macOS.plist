@@ -15,7 +15,7 @@
 	<key>pfm_interaction</key>
 	<string>combined</string>
 	<key>pfm_last_modified</key>
-	<date>2025-04-04T13:24:55Z</date>
+	<date>2025-07-07T09:35:09Z</date>
 	<key>pfm_macos_min</key>
 	<string>10.7</string>
 	<key>pfm_platforms</key>
@@ -1853,6 +1853,8 @@ The system still allows third-party password managers, and apps can use AutoFill
 			<string>allowMailSummary</string>
 			<key>pfm_supervised</key>
 			<true/>
+			<key>pfm_title</key>
+			<string>Allow Mail Summary</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 		</dict>
@@ -1867,6 +1869,8 @@ The system still allows third-party password managers, and apps can use AutoFill
 			<string>allowMailSmartReplies</string>
 			<key>pfm_supervised</key>
 			<true/>
+			<key>pfm_title</key>
+			<string>Allow Mail Smart Replies</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 		</dict>
@@ -1964,6 +1968,8 @@ The system still allows third-party password managers, and apps can use AutoFill
 			<string>allowNotesTranscriptionSummary</string>
 			<key>pfm_supervised</key>
 			<true/>
+			<key>pfm_title</key>
+			<string>Allow Notes Transcript Summarization</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 		</dict>
@@ -2008,6 +2014,8 @@ The system still allows third-party password managers, and apps can use AutoFill
 			<string>allowSafariSummary</string>
 			<key>pfm_supervised</key>
 			<true/>
+			<key>pfm_title</key>
+			<string>Allow Content Summarization in Safari</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 		</dict>
