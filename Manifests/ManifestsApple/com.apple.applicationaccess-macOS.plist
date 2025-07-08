@@ -1969,7 +1969,7 @@ The system still allows third-party password managers, and apps can use AutoFill
 			<key>pfm_supervised</key>
 			<true/>
 			<key>pfm_title</key>
-			<string>Allow Notes Transcript Summarization</string>
+			<string>Allow Notes Transcript Summary</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 		</dict>
@@ -2015,7 +2015,7 @@ The system still allows third-party password managers, and apps can use AutoFill
 			<key>pfm_supervised</key>
 			<true/>
 			<key>pfm_title</key>
-			<string>Allow Content Summarization in Safari</string>
+			<string>Allow Content Summary in Safari</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 		</dict>
