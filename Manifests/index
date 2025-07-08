@@ -658,11 +658,11 @@
 		<key>com.jamf.setupmanager</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-04-07T16:00:00Z</date>
+			<date>2025-06-25T19:00:00Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.jamf.setupmanager.plist</string>
 			<key>version</key>
-			<integer>3</integer>
+			<integer>4</integer>
 		</dict>
 		<key>com.jamf.trust</key>
 		<dict>
@@ -1609,7 +1609,7 @@
 		<key>com.apple.applicationaccess-macOS</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-04-04T13:24:55Z</date>
+			<date>2025-07-07T09:35:09Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.applicationaccess-macOS.plist</string>
 			<key>version</key>
@@ -1762,11 +1762,11 @@
 		<key>com.apple.dock</key>
 		<dict>
 			<key>modified</key>
-			<date>2024-09-18T11:31:37Z</date>
+			<date>2025-06-03T08:45:33Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.dock.plist</string>
 			<key>version</key>
-			<integer>7</integer>
+			<integer>8</integer>
 		</dict>
 		<key>com.apple.domains</key>
 		<dict>
@@ -2436,6 +2436,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2025-06-27T12:46:55Z</date>
+	<date>2025-07-08T15:28:24Z</date>
 </dict>
 </plist>
