@@ -44,7 +44,11 @@ for dict in manifest["pfm_subkeys"]:
         for item in range_list:
             for line in description.splitlines():
                 if line.startswith(str(item) + ' '):
-                    range_list_titles.append(line.split(' - ')[1])
+                    line_split = line.split(' - ')
+                    if len(line_split) >= 2:
+                        range_list_titles.append(line_split[1])
+                    else:
+                        range_list_titles.append(line)
                     description_new = description_new.replace(line + '\n','')
         
         if range_list_titles and len(range_list_titles) == len(range_list):
