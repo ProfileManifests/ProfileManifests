@@ -9,13 +9,13 @@
 	<key>pfm_description</key>
 	<string>Preferences for bundle ID com.microsoft.VSCode were automatically generated from a sampled configuration profile.</string>
 	<key>pfm_documentation_url</key>
-	<string>https://code.visualstudio.com/docs/setup/enterprise#_configure-automatic-updates</string>
+	<string>https://code.visualstudio.com/docs/setup/enterprise</string>
 	<key>pfm_domain</key>
 	<string>com.microsoft.VSCode</string>
 	<key>pfm_format_version</key>
 	<integer>1</integer>
 	<key>pfm_last_modified</key>
-	<date>2025-06-02T08:56:25Z</date>
+	<date>2025-07-11T12:05:49Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
