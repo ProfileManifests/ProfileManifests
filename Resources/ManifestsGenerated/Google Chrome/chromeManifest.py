@@ -137,6 +137,6 @@ newmanifest["pfm_platforms"] = ["macOS"]
 # Add pfm_interaction
 newmanifest["pfm_interaction"] = "combined"
 
-path = os.path.abspath(os.path.expanduser("~/Desktop/GoogleChrome_{}.plist".format(chromeinfo["CFBundleShortVersionString"])))
+path = os.path.abspath(os.path.expanduser(os.path.dirname(os.path.realpath(__file__))+"/GoogleChrome_{}.plist".format(chromeinfo["CFBundleShortVersionString"])))
 with open(path, 'wb') as fh:
     plistlib.dump(newmanifest, fh)
