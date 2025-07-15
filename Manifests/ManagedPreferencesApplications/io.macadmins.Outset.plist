@@ -13,7 +13,7 @@
 	<key>pfm_format_version</key>
 	<integer>1</integer>
 	<key>pfm_last_modified</key>
-	<date>2025-07-15T13:07:27Z</date>
+	<date>2025-07-15T13:22:02Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -157,6 +157,8 @@ A profile can consist of payloads with different version numbers. For example, c
 			<string>boolean</string>
 		</dict>
 		<dict>
+			<key>pfm_default</key>
+			<integer>180</integer>
 			<key>pfm_description</key>
 			<string>Specify how long Outset waits for network activity</string>
 			<key>pfm_name</key>
