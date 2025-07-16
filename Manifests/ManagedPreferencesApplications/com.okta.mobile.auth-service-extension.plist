@@ -63,7 +63,7 @@
 	ChiYvHgSithnzR++s9bEkCFDhgwZMuR8+TcgDLDRAr0H4wAAAABJRU5ErkJggg==
 	</data>
 	<key>pfm_last_modified</key>
-	<date>2025-05-29T15:55:05Z</date>
+	<date>2025-07-15T15:19:08Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -305,6 +305,34 @@ If the value contains 'Disabled', the Device Health page isn't displayed in Okta
 			<key>pfm_value_placeholder</key>
 			<string>username@domain.com</string>
 		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>Specifies whether custom OSQuery checks can be run on this device.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://help.okta.com/oie/en-us/content/topics/identity-engine/devices/managed-app-configs-macos.htm#OktaVeri7</string>
+			<key>pfm_name</key>
+			<string>OktaVerify.EnableOSQueryCustomChecks</string>
+			<key>pfm_title</key>
+			<string>Enable OS Query Custom Checks</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Defines the organizations that can run custom OSQuery checks on this device.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://help.okta.com/oie/en-us/content/topics/identity-engine/devices/managed-app-configs-macos.htm#OktaVeri8</string>
+			<key>pfm_name</key>
+			<string>OktaVerify.OSQueryAllowedDomains</string>
+			<key>pfm_title</key>
+			<string>OS Query Allowed Domains</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>my-test-domain.oktapreview.com;my-prod-domain.oktapreview.com</string>
+		</dict>
 	</array>
 	<key>pfm_targets</key>
 	<array>
@@ -315,6 +343,6 @@ If the value contains 'Disabled', the Device Health page isn't displayed in Okta
 	<key>pfm_unique</key>
 	<true/>
 	<key>pfm_version</key>
-	<integer>1</integer>
+	<integer>2</integer>
 </dict>
 </plist>
