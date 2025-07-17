@@ -728,6 +728,13 @@
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/fr.handbrake.HandBrake.png</string>
 		</dict>
+		<key>io.macadmins.Outset</key>
+		<dict>
+			<key>hash</key>
+			<string>145257bc26fc8fc22ab4ddff84f727ba</string>
+			<key>path</key>
+			<string>Icons/ManagedPreferencesApplications/io.macadmins.Outset.png</string>
+		</dict>
 		<key>io.tailscale.ipn.macos</key>
 		<dict>
 			<key>hash</key>
@@ -1559,6 +1566,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2025-07-15T15:53:00Z</date>
+	<date>2025-07-17T15:54:14Z</date>
 </dict>
 </plist>
