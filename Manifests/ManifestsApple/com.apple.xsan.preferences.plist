@@ -3,7 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>pfm_description</key>
-	<string>Xsan Preference settings</string>
+	<string>The payload that configures the Xsan preferences that define the volumes that automatically mount at startup.</string>
+	<key>pfm_description_reference</key>
+	<string>The payload for configuring the Xsan preferences that define the volumes that automatically mount at startup.</string>
 	<key>pfm_documentation_url</key>
 	<string>https://developer.apple.com/documentation/devicemanagement/xsanpreferences</string>
 	<key>pfm_domain</key>
@@ -13,7 +15,7 @@
 	<key>pfm_interaction</key>
 	<string>combined</string>
 	<key>pfm_last_modified</key>
-	<date>2023-08-29T09:17:10Z</date>
+	<date>2025-08-04T08:25:08Z</date>
 	<key>pfm_macos_min</key>
 	<string>10.11</string>
 	<key>pfm_platforms</key>
@@ -24,7 +26,7 @@
 	<array>
 		<dict>
 			<key>pfm_default</key>
-			<string>Configures Xsan Preferences settings</string>
+			<string>The payload that configures the Xsan preferences that define the volumes that automatically mount at startup.</string>
 			<key>pfm_description</key>
 			<string>The human-readable description of this payload. This description appears on the Detail screen.</string>
 			<key>pfm_name</key>
@@ -52,7 +54,8 @@
 			<key>pfm_default</key>
 			<string>com.apple.xsan.preferences</string>
 			<key>pfm_description</key>
-			<string>The reverse-DNS-style identifier for the payload. This identifier is usually the same as the TopLevel value, with an additional appended component. This string must be unique within the profile.
+			<string>The reverse-DNS-style identifier for the payload. This identifier is usually the same as the 'TopLevel' value, with an additional appended component. This string must be unique within the profile.
+
 During a profile replacement, the system updates payloads with the same 'PayloadIdentifier' and 'PayloadUUID' in the old and new profiles.</string>
 			<key>pfm_name</key>
 			<string>PayloadIdentifier</string>
@@ -82,6 +85,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string></string>
 			<key>pfm_description</key>
 			<string>The globally unique identifier for the payload. The actual content is unimportant, but must be globally unique. In macOS, use 'uuidgen' to generate UUIDs.
+
 During a profile replacement, the system updates payloads with the same 'PayloadIdentifier' and 'PayloadUUID' in the old and new profiles.</string>
 			<key>pfm_format</key>
 			<string>^[0-9A-Za-z]{8}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{12}$</string>
@@ -142,6 +146,12 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_subkeys</key>
 			<array>
 				<dict>
+					<key>pfm_description</key>
+					<string>A volume name.</string>
+					<key>pfm_name</key>
+					<string>onlyMountItem</string>
+					<key>pfm_require</key>
+					<string>always</string>
 					<key>pfm_title</key>
 					<string>Xsan or StorNext Volume Name</string>
 					<key>pfm_type</key>
@@ -161,6 +171,12 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_subkeys</key>
 			<array>
 				<dict>
+					<key>pfm_description</key>
+					<string>A volume name.</string>
+					<key>pfm_name</key>
+					<string>denyMountItem</string>
+					<key>pfm_require</key>
+					<string>always</string>
 					<key>pfm_title</key>
 					<string>Xsan or StorNext Volume Name</string>
 					<key>pfm_type</key>
@@ -180,6 +196,12 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_subkeys</key>
 			<array>
 				<dict>
+					<key>pfm_description</key>
+					<string>A volume name.</string>
+					<key>pfm_name</key>
+					<string>preferDLCItem</string>
+					<key>pfm_require</key>
+					<string>always</string>
 					<key>pfm_title</key>
 					<string>StorNext Volume Name</string>
 					<key>pfm_type</key>
@@ -199,6 +221,12 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_subkeys</key>
 			<array>
 				<dict>
+					<key>pfm_description</key>
+					<string>A volume name.</string>
+					<key>pfm_name</key>
+					<string>denyDLCItem</string>
+					<key>pfm_require</key>
+					<string>always</string>
 					<key>pfm_title</key>
 					<string>StorNext Volume Name</string>
 					<key>pfm_type</key>

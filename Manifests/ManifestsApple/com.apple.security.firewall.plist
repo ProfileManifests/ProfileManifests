@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>pfm_description</key>
-	<string>Firewall settings</string>
+	<string>The payload that configures the firewall.</string>
 	<key>pfm_domain</key>
 	<string>com.apple.security.firewall</string>
 	<key>pfm_format_version</key>
@@ -11,7 +11,7 @@
 	<key>pfm_interaction</key>
 	<string>combined</string>
 	<key>pfm_last_modified</key>
-	<date>2024-12-13T08:12:27Z</date>
+	<date>2025-08-04T08:25:08Z</date>
 	<key>pfm_macos_min</key>
 	<string>10.12</string>
 	<key>pfm_platforms</key>
@@ -22,7 +22,7 @@
 	<array>
 		<dict>
 			<key>pfm_default</key>
-			<string></string>
+			<string>The payload that configures the firewall.</string>
 			<key>pfm_description</key>
 			<string>The human-readable description of this payload. This description appears on the Detail screen.</string>
 			<key>pfm_name</key>
@@ -50,7 +50,8 @@
 			<key>pfm_default</key>
 			<string>com.apple.security.firewall</string>
 			<key>pfm_description</key>
-			<string>The reverse-DNS-style identifier for the payload. This identifier is usually the same as the TopLevel value, with an additional appended component. This string must be unique within the profile.
+			<string>The reverse-DNS-style identifier for the payload. This identifier is usually the same as the 'TopLevel' value, with an additional appended component. This string must be unique within the profile.
+
 During a profile replacement, the system updates payloads with the same 'PayloadIdentifier' and 'PayloadUUID' in the old and new profiles.</string>
 			<key>pfm_name</key>
 			<string>PayloadIdentifier</string>
@@ -80,6 +81,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string></string>
 			<key>pfm_description</key>
 			<string>The globally unique identifier for the payload. The actual content is unimportant, but must be globally unique. In macOS, use 'uuidgen' to generate UUIDs.
+
 During a profile replacement, the system updates payloads with the same 'PayloadIdentifier' and 'PayloadUUID' in the old and new profiles.</string>
 			<key>pfm_format</key>
 			<string>^[0-9A-Za-z]{8}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{12}$</string>
@@ -212,7 +214,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 						</dict>
 					</array>
 					<key>pfm_title</key>
-					<string>Application Item</string>
+					<string>Applications</string>
 					<key>pfm_type</key>
 					<string>dictionary</string>
 				</dict>
@@ -295,6 +297,8 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<true/>
 			<key>pfm_description</key>
 			<string>If 'true', the system allows built-in software to receive incoming connections. Available in macOS 12.3 and later.
+
+Note:
 The system ensures that 'AllowSigned' always has a value. If missing from the payload, the system sets it to 'true'.</string>
 			<key>pfm_macos_min</key>
 			<string>12.3</string>
@@ -318,6 +322,8 @@ The system ensures that 'AllowSigned' always has a value. If missing from the pa
 			<true/>
 			<key>pfm_description</key>
 			<string>If 'true', the system allows downloaded signed software to receive incoming connections. Available in macOS 12.3 and later.
+
+Note:
 The system ensures that 'AllowSignedApp' always has a value. If missing from the payload, the system sets it to 'true'.</string>
 			<key>pfm_macos_min</key>
 			<string>12.3</string>

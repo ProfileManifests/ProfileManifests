@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>pfm_description</key>
-	<string>Accessibility Settings</string>
+	<string>The payload that configures the accessibility features of the device.</string>
 	<key>pfm_documentation_url</key>
 	<string>https://developer.apple.com/documentation/devicemanagement/accessibility</string>
 	<key>pfm_domain</key>
@@ -13,7 +13,7 @@
 	<key>pfm_interaction</key>
 	<string>combined</string>
 	<key>pfm_last_modified</key>
-	<date>2025-06-27T12:36:33Z</date>
+	<date>2025-08-04T08:25:08Z</date>
 	<key>pfm_macos_min</key>
 	<string>10.9</string>
 	<key>pfm_platforms</key>
@@ -24,7 +24,7 @@
 	<array>
 		<dict>
 			<key>pfm_default</key>
-			<string>Configures Universal Access settings</string>
+			<string>The payload that configures the accessibility features of the device.</string>
 			<key>pfm_description</key>
 			<string>The human-readable description of this payload. This description appears on the Detail screen.</string>
 			<key>pfm_name</key>
@@ -52,7 +52,8 @@
 			<key>pfm_default</key>
 			<string>com.apple.universalaccess</string>
 			<key>pfm_description</key>
-			<string>The reverse-DNS-style identifier for the payload. This identifier is usually the same as the TopLevel value, with an additional appended component. This string must be unique within the profile.
+			<string>The reverse-DNS-style identifier for the payload. This identifier is usually the same as the 'TopLevel' value, with an additional appended component. This string must be unique within the profile.
+
 During a profile replacement, the system updates payloads with the same 'PayloadIdentifier' and 'PayloadUUID' in the old and new profiles.</string>
 			<key>pfm_name</key>
 			<string>PayloadIdentifier</string>
@@ -82,6 +83,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string></string>
 			<key>pfm_description</key>
 			<string>The globally unique identifier for the payload. The actual content is unimportant, but must be globally unique. In macOS, use 'uuidgen' to generate UUIDs.
+
 During a profile replacement, the system updates payloads with the same 'PayloadIdentifier' and 'PayloadUUID' in the old and new profiles.</string>
 			<key>pfm_format</key>
 			<string>^[0-9A-Za-z]{8}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{12}$</string>
@@ -126,7 +128,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>If 'true', enables “Use scroll gesture” in the Zoom options.</string>
+			<string>If 'true', enables "Use scroll gesture" in the Zoom options.</string>
 			<key>pfm_name</key>
 			<string>closeViewScrollWheelToggle</string>
 			<key>pfm_title</key>
@@ -138,7 +140,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>If 'true', enables “Use keyboard shortcuts” in the Zoom options.</string>
+			<string>If 'true', enables "Use keyboard shortcuts" in the Zoom options.</string>
 			<key>pfm_name</key>
 			<string>closeViewHotkeysEnabled</string>
 			<key>pfm_title</key>
@@ -178,9 +180,9 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>If 'true', enables “Show preview rectangle” in the Zoom options. Only available in macOS 10.15 and earlier.</string>
+			<string>If 'true', enables "Show preview rectangle" in the Zoom options. Only available in macOS 10.15 and earlier.</string>
 			<key>pfm_macos_deprecated</key>
-			<string>11.0</string>
+			<string>10.15</string>
 			<key>pfm_macos_min</key>
 			<string>10.9</string>
 			<key>pfm_name</key>
@@ -204,7 +206,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>If 'true', enables “Smooth images” in the Zoom options.</string>
+			<string>If 'true', enables "Smooth images" in the Zoom options.</string>
 			<key>pfm_name</key>
 			<string>closeViewSmoothImages</string>
 			<key>pfm_title</key>
@@ -228,23 +230,8 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>If 'true', enables “Reduce Transparency” in the Display options.</string>
-			<key>pfm_documentation_url</key>
-			<string>https://derflounder.wordpress.com/2025/06/18/setting-reduced-transparency-on-macos-sequoia/</string>
-			<key>pfm_macos_min</key>
-			<string>10.10</string>
-			<key>pfm_name</key>
-			<string>reduceTransparency</string>
-			<key>pfm_title</key>
-			<string>Reduce Transparency</string>
-			<key>pfm_type</key>
-			<string>boolean</string>
-		</dict>
-		<dict>
-			<key>pfm_default</key>
-			<false/>
-			<key>pfm_description</key>
-			<string>If 'true', enables “Use grayscale” in the Display options.
+			<string>If 'true', enables "Use grayscale" in the Display options.
+
 This option is deprecated in macOS 11.</string>
 			<key>pfm_macos_deprecated</key>
 			<string>11.0</string>
@@ -311,7 +298,7 @@ This option is deprecated in macOS 11.</string>
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>If 'true', enables “Flash the screen” in the Audio options.</string>
+			<string>If 'true', enables "Flash the screen" in the Audio options.</string>
 			<key>pfm_name</key>
 			<string>flashScreen</string>
 			<key>pfm_title</key>
@@ -347,7 +334,7 @@ This option is deprecated in macOS 11.</string>
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>If 'true', enables “Display pressed keys on screen” for Sticky Keys.</string>
+			<string>If 'true', enables "Display pressed keys on screen" for Sticky Keys.</string>
 			<key>pfm_name</key>
 			<string>stickyKeyShowWindow</string>
 			<key>pfm_title</key>
@@ -371,7 +358,7 @@ This option is deprecated in macOS 11.</string>
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>If 'true', enables “Slow Keys” in the Keyboard options.</string>
+			<string>If 'true', enables "Slow Keys" in the Keyboard options.</string>
 			<key>pfm_name</key>
 			<string>slowKey</string>
 			<key>pfm_title</key>
@@ -383,7 +370,7 @@ This option is deprecated in macOS 11.</string>
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>If 'true', enables “click key sounds” for Slow Keys.</string>
+			<string>If 'true', enables "click key sounds" for Slow Keys.</string>
 			<key>pfm_name</key>
 			<string>slowKeyBeepOn</string>
 			<key>pfm_title</key>
@@ -482,6 +469,8 @@ This option is deprecated in macOS 11.</string>
 			<key>pfmx_multiple</key>
 			<false/>
 			<key>pfmx_requires_dep</key>
+			<false/>
+			<key>pfmx_supervised</key>
 			<false/>
 			<key>pfmx_user_approved_mdm</key>
 			<false/>

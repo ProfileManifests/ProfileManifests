@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>pfm_description</key>
-	<string>Disc Burning settings</string>
+	<string>The payload that configures disc-burning settings.</string>
 	<key>pfm_description_reference</key>
 	<string>Disc burning restrictions require both Disc Burning and Finder payloads.
 The Disc Burning payload is designated by specifying com.apple.DiscRecording as the PayloadType value.</string>
@@ -14,7 +14,7 @@ The Disc Burning payload is designated by specifying com.apple.DiscRecording as 
 	<key>pfm_interaction</key>
 	<string>exclusive</string>
 	<key>pfm_last_modified</key>
-	<date>2025-03-15T16:11:44Z</date>
+	<date>2025-08-04T08:25:08Z</date>
 	<key>pfm_macos_min</key>
 	<string>10.7</string>
 	<key>pfm_platforms</key>
@@ -25,7 +25,7 @@ The Disc Burning payload is designated by specifying com.apple.DiscRecording as 
 	<array>
 		<dict>
 			<key>pfm_default</key>
-			<string>Configures Disc Burning settings</string>
+			<string>The payload that configures disc-burning settings.</string>
 			<key>pfm_description</key>
 			<string>The human-readable description of this payload. This description appears on the Detail screen.</string>
 			<key>pfm_name</key>
@@ -53,7 +53,8 @@ The Disc Burning payload is designated by specifying com.apple.DiscRecording as 
 			<key>pfm_default</key>
 			<string>com.apple.DiscRecording</string>
 			<key>pfm_description</key>
-			<string>The reverse-DNS-style identifier for the payload. This identifier is usually the same as the TopLevel value, with an additional appended component. This string must be unique within the profile.
+			<string>The reverse-DNS-style identifier for the payload. This identifier is usually the same as the 'TopLevel' value, with an additional appended component. This string must be unique within the profile.
+
 During a profile replacement, the system updates payloads with the same 'PayloadIdentifier' and 'PayloadUUID' in the old and new profiles.</string>
 			<key>pfm_name</key>
 			<string>PayloadIdentifier</string>
@@ -83,6 +84,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string></string>
 			<key>pfm_description</key>
 			<string>The globally unique identifier for the payload. The actual content is unimportant, but must be globally unique. In macOS, use 'uuidgen' to generate UUIDs.
+
 During a profile replacement, the system updates payloads with the same 'PayloadIdentifier' and 'PayloadUUID' in the old and new profiles.</string>
 			<key>pfm_format</key>
 			<string>^[0-9A-Za-z]{8}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{12}$</string>
@@ -146,10 +148,9 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			</array>
 			<key>pfm_description</key>
 			<string>Configure disc-burn. Allowed values:
-
-* 'off': The system disables disc burning.
-* 'on': The system allows normal default operation. Setting this key to 'on' doesn't enable disc burn support if other mechanisms or preferences disabled it. Needs to be enabled with the Finder profile.
-* 'authenticate': The system requires authentication.</string>
+- 'off': The system disables disc burning.
+- 'on': The system allows normal default operation. Setting this key to 'on' doesn't enable disc burn support if other mechanisms or preferences disabled it. Needs to be enabled with the 'Finder' profile.
+- 'authenticate': The system requires authentication.</string>
 			<key>pfm_name</key>
 			<string>BurnSupport</string>
 			<key>pfm_range_list</key>

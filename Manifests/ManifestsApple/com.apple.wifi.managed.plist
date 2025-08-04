@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>pfm_description</key>
-	<string>Use this section to define Wi-Fi settings</string>
+	<string>The payload that configures Wi-Fi settings.</string>
 	<key>pfm_documentation_url</key>
 	<string>https://developer.apple.com/documentation/devicemanagement/wifi</string>
 	<key>pfm_domain</key>
@@ -15,7 +15,7 @@
 	<key>pfm_ios_min</key>
 	<string>4.0</string>
 	<key>pfm_last_modified</key>
-	<date>2025-06-26T12:12:18Z</date>
+	<date>2025-08-04T08:25:08Z</date>
 	<key>pfm_macos_min</key>
 	<string>10.7</string>
 	<key>pfm_platforms</key>
@@ -28,7 +28,7 @@
 	<array>
 		<dict>
 			<key>pfm_default</key>
-			<string>Use this section to define Wi-Fi settings</string>
+			<string>The payload that configures Wi-Fi settings.</string>
 			<key>pfm_description</key>
 			<string>The human-readable description of this payload. This description appears on the Detail screen.</string>
 			<key>pfm_name</key>
@@ -56,7 +56,8 @@
 			<key>pfm_default</key>
 			<string>com.apple.wifi.managed</string>
 			<key>pfm_description</key>
-			<string>The reverse-DNS-style identifier for the payload. This identifier is usually the same as the TopLevel value, with an additional appended component. This string must be unique within the profile.
+			<string>The reverse-DNS-style identifier for the payload. This identifier is usually the same as the 'TopLevel' value, with an additional appended component. This string must be unique within the profile.
+
 During a profile replacement, the system updates payloads with the same 'PayloadIdentifier' and 'PayloadUUID' in the old and new profiles.</string>
 			<key>pfm_name</key>
 			<string>PayloadIdentifier</string>
@@ -86,6 +87,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string></string>
 			<key>pfm_description</key>
 			<string>The globally unique identifier for the payload. The actual content is unimportant, but must be globally unique. In macOS, use 'uuidgen' to generate UUIDs.
+
 During a profile replacement, the system updates payloads with the same 'PayloadIdentifier' and 'PayloadUUID' in the old and new profiles.</string>
 			<key>pfm_format</key>
 			<string>^[0-9A-Za-z]{8}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{12}$</string>
@@ -302,7 +304,9 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<true/>
 			<key>pfm_description</key>
 			<string>If 'true', the device joins the network automatically.
+
 If 'false', the user must tap the network name to join it.
+
 Available in iOS 5.0 and later, and in macOS 10.7 and later.</string>
 			<key>pfm_ios_min</key>
 			<string>5.0</string>
@@ -360,8 +364,10 @@ Available in iOS 5.0 and later, and in macOS 10.7 and later.</string>
 			<false/>
 			<key>pfm_description</key>
 			<string>If 'true,' disables MAC address randomization for a Wi-Fi network while associated with that network. This feature also shows a privacy warning in Settings indicating that the network has reduced privacy protections.
-If 'false', then the system enables MAC address randomization on iOS, watchOS, and visionOS.
-This value is only locked when MDM installs the profile. If the profile is manually installed, the system sets the value but the user can change it. Available in iOS 14 and later, watchOS 7 and later, macOS 15 and later, and visionOS.</string>
+
+If 'false', then the system enables MAC address randomization on iOS, watchOS, and visionOS..
+
+This value is only locked when MDM installs the profile. If the profile is manually installed, the system sets the value but the user can change it. Available in iOS 14 and later, macOS 15 and later, and watchOS 7 and later, and visionOS..</string>
 			<key>pfm_ios_min</key>
 			<string>14.0</string>
 			<key>pfm_macos_min</key>
@@ -841,13 +847,18 @@ This value is only locked when MDM installs the profile. If the profile is manua
 			<string>Any</string>
 			<key>pfm_description</key>
 			<string>The encryption type for the network.
+
 If set to anything except 'None', the payload may contain the following three keys: 'Password', 'PayloadCertificateUUID', or 'EAPClientConfiguration'.
+
 As of iOS 16, tvOS 16, watchOS 9, and macOS 13:
-* 'WPA' allows joining WPA or WPA2 networks
-* 'WPA2' allows joining WPA2 or WPA3 networks
-* 'WPA3' allows joining WPA3 networks only
-* 'Any' allows joining WPA, WPA2, WPA3, and WEP networks
+
+- 'WPA' allows joining WPA or WPA2 networks
+- 'WPA2' allows joining WPA2 or WPA3 networks
+- 'WPA3' allows joining WPA3 networks only
+- 'Any' allows joining WPA, WPA2, WPA3, and WEP networks
+
 Prior to iOS 16, tvOS 16, and watchOS 9, specifying 'WPA', 'WPA2', and 'WPA3' were equivalent and would allow joining any WPA network.
+
 Prior to macOS 13, the encryption type, if specified explicitly, needed to match the encryption type of the network exactly.</string>
 			<key>pfm_ios_min</key>
 			<string>4.0</string>
@@ -1488,15 +1499,7 @@ Prior to macOS 13, the encryption type, if specified explicitly, needed to match
 			<array>
 				<dict>
 					<key>pfm_description</key>
-					<string>The EAP types that the system accepts. Allowed values:
-
-* 13: TLS
-* 17: LEAP
-* 18: EAP-SIM
-* 21: TTLS
-* 23: EAP-AKA
-* 25: PEAP
-* 43: EAP-FAST
+					<string>The EAP types that the system accepts.
 
 For EAP-TLS authentication without a network payload, install the necessary identity certificates and have your users select EAP-TLS mode in the 802.1X credentials dialog that appears when they connect to the network. For other EAP types, a network payload is necessary and must specify the correct settings for the network.</string>
 					<key>pfm_name</key>
@@ -2370,6 +2373,8 @@ If you don't specify a value, the default is 'true' for EAP-TLS, and 'false' for
 					<key>pfm_description</key>
 					<string>If 'true', disables L3 marking and only uses L2 marking for traffic that goes to the Wi-Fi network.
 
+
+
 If 'false', the system behaves as if Wi-Fi doesn't have an association with a Cisco QoS fast lane network.</string>
 					<key>pfm_name</key>
 					<string>QoSMarkingEnabled</string>
@@ -2382,11 +2387,11 @@ If 'false', the system behaves as if Wi-Fi doesn't have an association with a Ci
 					<key>pfm_default</key>
 					<true/>
 					<key>pfm_description</key>
-					<string>If 'true', adds audio and video traffic of built-in audio/video services, such as FaceTime and Wi-Fi Calling, to the allow list for L2 and L3 marking for traffic that goes to the Wi-Fi network.</string>
+					<string>If 'true', adds audio and video traffic of built-in audio or video services, such as FaceTime and Wi-Fi Calling, to the allow list for L2 and L3 marking for traffic that goes to the Wi-Fi network.</string>
 					<key>pfm_name</key>
 					<string>QoSMarkingAppleAudioVideoCalls</string>
 					<key>pfm_title</key>
-					<string>QoS marking for audio/video calls</string>
+					<string>QoS marking for audio or video calls</string>
 					<key>pfm_type</key>
 					<string>boolean</string>
 				</dict>
@@ -2572,6 +2577,121 @@ If 'false', the system behaves as if Wi-Fi doesn't have an association with a Ci
 			<key>pfm_type</key>
 			<string>boolean</string>
 		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>If 'true', the device makes this network available for joining before the device is unlocked for the first time following a reboot, on a device configured for return to service. Any network credentials are placed into Class D storage within the keychain, and information about the network is stored on disk in Class D.
+
+There are several restrictions on the use of this flag:
+
+- This property is only available in the return to service mode.
+- Only one network can be designated as available before first unlock.
+- 'EAPClientConfiguration' must not be present.
+- If 'IsHotspot' is present, it must be set to 'false'.
+- 'QoSMarkingPolicy' must not be present.
+- If 'ProxyType' is present, it must be set to 'None'.
+
+The device fails to install the profile payload if any of these conditions are not met.</string>
+			<key>pfm_exclude</key>
+			<array>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_present</key>
+							<true/>
+							<key>pfm_target</key>
+							<string>EAPClientConfiguration</string>
+						</dict>
+					</array>
+				</dict>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_range_list</key>
+							<array>
+								<true/>
+							</array>
+							<key>pfm_target</key>
+							<string>IsHotspot</string>
+						</dict>
+					</array>
+				</dict>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_present</key>
+							<true/>
+							<key>pfm_target</key>
+							<string>QoSMarkingPolicy</string>
+						</dict>
+					</array>
+				</dict>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_present</key>
+							<true/>
+							<key>pfm_target</key>
+							<string>ProxyType</string>
+						</dict>
+						<dict>
+							<key>pfm_n_range_list</key>
+							<array>
+								<string>None</string>
+							</array>
+							<key>pfm_target</key>
+							<string>ProxyType</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+			<key>pfm_name</key>
+			<string>AllowJoinBeforeFirstUnlock</string>
+			<key>pfm_title</key>
+			<string>Allow Join Before First Unlock</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>iOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>n/a</string>
+				</dict>
+				<key>macOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>n/a</string>
+				</dict>
+				<key>tvOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>n/a</string>
+				</dict>
+				<key>visionOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>26.0</string>
+					<key>pfmx_supervised</key>
+					<true/>
+					<key>pfmx_user_enrollment</key>
+					<dict>
+						<key>pfmx_mode</key>
+						<string>forbidden</string>
+					</dict>
+				</dict>
+				<key>watchOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>n/a</string>
+				</dict>
+			</dict>
+		</dict>
 	</array>
 	<key>pfm_targets</key>
 	<array>
@@ -2624,6 +2744,8 @@ If 'false', the system behaves as if Wi-Fi doesn't have an association with a Ci
 			<key>pfmx_multiple</key>
 			<true/>
 			<key>pfmx_requires_dep</key>
+			<false/>
+			<key>pfmx_supervised</key>
 			<false/>
 			<key>pfmx_user_approved_mdm</key>
 			<false/>

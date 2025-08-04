@@ -3,15 +3,17 @@
 <plist version="1.0">
 <dict>
 	<key>pfm_description</key>
-	<string>Use this section to define settings for subscribed calendar account.</string>
+	<string>The payload that configures subscribed calendars.</string>
 	<key>pfm_domain</key>
 	<string>com.apple.subscribedcalendar.account</string>
 	<key>pfm_format_version</key>
 	<integer>1</integer>
 	<key>pfm_interaction</key>
 	<string>combined</string>
+	<key>pfm_ios_min</key>
+	<string>4.0</string>
 	<key>pfm_last_modified</key>
-	<date>2024-03-01T15:25:39Z</date>
+	<date>2025-08-04T08:25:08Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>iOS</string>
@@ -20,7 +22,7 @@
 	<array>
 		<dict>
 			<key>pfm_default</key>
-			<string>Configures settings for calendar subscriptions</string>
+			<string>The payload that configures subscribed calendars.</string>
 			<key>pfm_description</key>
 			<string>The human-readable description of this payload. This description appears on the Detail screen.</string>
 			<key>pfm_name</key>
@@ -48,7 +50,8 @@
 			<key>pfm_default</key>
 			<string>com.apple.subscribedcalendar.account</string>
 			<key>pfm_description</key>
-			<string>The reverse-DNS-style identifier for the payload. This identifier is usually the same as the TopLevel value, with an additional appended component. This string must be unique within the profile.
+			<string>The reverse-DNS-style identifier for the payload. This identifier is usually the same as the 'TopLevel' value, with an additional appended component. This string must be unique within the profile.
+
 During a profile replacement, the system updates payloads with the same 'PayloadIdentifier' and 'PayloadUUID' in the old and new profiles.</string>
 			<key>pfm_name</key>
 			<string>PayloadIdentifier</string>
@@ -78,6 +81,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string></string>
 			<key>pfm_description</key>
 			<string>The globally unique identifier for the payload. The actual content is unimportant, but must be globally unique. In macOS, use 'uuidgen' to generate UUIDs.
+
 During a profile replacement, the system updates payloads with the same 'PayloadIdentifier' and 'PayloadUUID' in the old and new profiles.</string>
 			<key>pfm_format</key>
 			<string>^[0-9A-Za-z]{8}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{12}$</string>
@@ -166,15 +170,35 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_default</key>
-			<true/>
+			<false/>
 			<key>pfm_description</key>
-			<string>If 'true', enables SSL.</string>
+			<string>If 'true', the system enables SSL.</string>
 			<key>pfm_name</key>
 			<string>SubCalAccountUseSSL</string>
 			<key>pfm_title</key>
 			<string>Use SSL</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>The VPNUUID of the per-app VPN the account uses for network communication. Available in iOS 14 and later.</string>
+			<key>pfm_ios_min</key>
+			<string>14.0</string>
+			<key>pfm_name</key>
+			<string>VPNUUID</string>
+			<key>pfm_title</key>
+			<string>VPNUUID</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>iOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>14.0</string>
+				</dict>
+			</dict>
 		</dict>
 	</array>
 	<key>pfm_targets</key>
@@ -186,7 +210,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 	<key>pfm_unique</key>
 	<false/>
 	<key>pfm_version</key>
-	<integer>1</integer>
+	<integer>2</integer>
 	<key>pfmx_supported_oses</key>
 	<dict>
 		<key>iOS</key>
@@ -206,6 +230,22 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				<key>pfmx_user_channel</key>
 				<true/>
 			</dict>
+			<key>pfmx_supervised</key>
+			<false/>
+			<key>pfmx_user_enrollment</key>
+			<dict>
+				<key>pfmx_mode</key>
+				<string>allowed</string>
+			</dict>
+		</dict>
+		<key>visionOS</key>
+		<dict>
+			<key>pfmx_allow_manual_install</key>
+			<true/>
+			<key>pfmx_introduced</key>
+			<string>1.1</string>
+			<key>pfmx_multiple</key>
+			<true/>
 			<key>pfmx_supervised</key>
 			<false/>
 			<key>pfmx_user_enrollment</key>

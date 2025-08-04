@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>pfm_description</key>
-	<string>AirPlay Security settings</string>
+	<string>The payload that configures Apple TV for a particular style of AirPlay security.</string>
 	<key>pfm_description_reference</key>
 	<string>The AirPlay Security payload locks the Apple TV to a particular style of AirPlay Security. The AirPlay Security payload is designated by specifying com.apple.airplay.security as the PayloadType vaue.
 This payload is supported on tvOS 11.0 and later.</string>
@@ -14,7 +14,7 @@ This payload is supported on tvOS 11.0 and later.</string>
 	<key>pfm_interaction</key>
 	<string>exclusive</string>
 	<key>pfm_last_modified</key>
-	<date>2023-08-29T09:17:10Z</date>
+	<date>2025-08-04T08:25:08Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>tvOS</string>
@@ -23,11 +23,9 @@ This payload is supported on tvOS 11.0 and later.</string>
 	<array>
 		<dict>
 			<key>pfm_default</key>
-			<string>AirPlay Security settings</string>
+			<string>The payload that configures Apple TV for a particular style of AirPlay security.</string>
 			<key>pfm_description</key>
 			<string>The human-readable description of this payload. This description appears on the Detail screen.</string>
-			<key>pfm_description_reference</key>
-			<string>Optional. A human-readable description of this payload. This description is shown on the Detail screen.</string>
 			<key>pfm_name</key>
 			<string>PayloadDescription</string>
 			<key>pfm_title</key>
@@ -40,8 +38,6 @@ This payload is supported on tvOS 11.0 and later.</string>
 			<string>AirPlay Security</string>
 			<key>pfm_description</key>
 			<string>The human-readable name for the profile payload. The name appears on the Detail screen and doesn't need to be unique.</string>
-			<key>pfm_description_reference</key>
-			<string>A human-readable name for the profile payload. This name is displayed on the Detail screen. It does not have to be unique.</string>
 			<key>pfm_name</key>
 			<string>PayloadDisplayName</string>
 			<key>pfm_require</key>
@@ -55,10 +51,9 @@ This payload is supported on tvOS 11.0 and later.</string>
 			<key>pfm_default</key>
 			<string>com.apple.airplay.security</string>
 			<key>pfm_description</key>
-			<string>The reverse-DNS-style identifier for the payload. This identifier is usually the same as the TopLevel value, with an additional appended component. This string must be unique within the profile.
+			<string>The reverse-DNS-style identifier for the payload. This identifier is usually the same as the 'TopLevel' value, with an additional appended component. This string must be unique within the profile.
+
 During a profile replacement, the system updates payloads with the same 'PayloadIdentifier' and 'PayloadUUID' in the old and new profiles.</string>
-			<key>pfm_description_reference</key>
-			<string>A reverse-DNS-style identifier for the specific payload. It is usually the same identifier as the root-level PayloadIdentifier value with an additional component appended.</string>
 			<key>pfm_name</key>
 			<string>PayloadIdentifier</string>
 			<key>pfm_require</key>
@@ -73,8 +68,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>com.apple.airplay.security</string>
 			<key>pfm_description</key>
 			<string>The payload type, which each payload domain's reference page specifies.</string>
-			<key>pfm_description_reference</key>
-			<string>The payload type.</string>
 			<key>pfm_name</key>
 			<string>PayloadType</string>
 			<key>pfm_require</key>
@@ -89,9 +82,8 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string></string>
 			<key>pfm_description</key>
 			<string>The globally unique identifier for the payload. The actual content is unimportant, but must be globally unique. In macOS, use 'uuidgen' to generate UUIDs.
+
 During a profile replacement, the system updates payloads with the same 'PayloadIdentifier' and 'PayloadUUID' in the old and new profiles.</string>
-			<key>pfm_description_reference</key>
-			<string>A globally unique identifier for the payload. The actual content is unimportant, but it must be globally unique. In macOS, you can use uuidgen to generate reasonable UUIDs.</string>
 			<key>pfm_format</key>
 			<string>^[0-9A-Za-z]{8}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{12}$</string>
 			<key>pfm_name</key>
@@ -108,9 +100,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<integer>1</integer>
 			<key>pfm_description</key>
 			<string>The version of this specific payload.</string>
-			<key>pfm_description_reference</key>
-			<string>The version number of the individual payload.
-A profile can consist of payloads with different version numbers. For example, changes to the VPN software in iOS might introduce a new payload version to support additional features, but Mail payload versions would not necessarily change in the same release.</string>
 			<key>pfm_name</key>
 			<string>PayloadVersion</string>
 			<key>pfm_range_list</key>
@@ -127,9 +116,6 @@ A profile can consist of payloads with different version numbers. For example, c
 		<dict>
 			<key>pfm_description</key>
 			<string>The human-readable string containing the name of the organization that provides the profile. This value doesn't need to match the organization payload value in the enclosing dictionary.</string>
-			<key>pfm_description_reference</key>
-			<string>Optional. A human-readable string containing the name of the organization that provided the profile.
-The payload organization for a payload need not match the payload organization in the enclosing profile.</string>
 			<key>pfm_name</key>
 			<string>PayloadOrganization</string>
 			<key>pfm_title</key>
@@ -140,12 +126,10 @@ The payload organization for a payload need not match the payload organization i
 		<dict>
 			<key>pfm_description</key>
 			<string>The access policy for AirPlay.
-'ANY' allows connections from both Ethernet/WiFi and Apple Wireless Direct Link.
-'WIFI_ONLY' allows connections only from devices on the same Ethernet/WiFi network as Apple TV.</string>
-			<key>pfm_description_reference</key>
-			<string>Required. Must be one of the defined values: ANY or WIFI_ONLY.
-ANY allows connections from both Ethernet/WiFi and AWDL.
-WIFI_ONLY allows connections only from devices on the same Ethernet/WiFi network as the Apple TV.</string>
+
+'ANY' allows connections from both Ethernet, Wi-Fi, and Apple Wireless Direct Link.
+
+'WIFI_ONLY' allows connections only from devices on the same Ethernet or Wi-Fi network as Apple TV.</string>
 			<key>pfm_name</key>
 			<string>AccessType</string>
 			<key>pfm_range_list</key>
@@ -161,25 +145,20 @@ WIFI_ONLY allows connections only from devices on the same Ethernet/WiFi network
 			<key>pfm_require</key>
 			<string>always</string>
 			<key>pfm_title</key>
-			<string>Access</string>
+			<string>Access Type</string>
 			<key>pfm_type</key>
 			<string>string</string>
 		</dict>
 		<dict>
 			<key>pfm_description</key>
-			<string>The security policy for AirPlay.
-'PASSCODE_ONCE' requires an onscreen passcode on first connection from a device. Subsequent connections from the same device aren't prompted.
-'PASSCODE_ALWAYS' requires an onscreen passcode for every AirPlay connection. After an AirPlay connection ends, reconnecting within 30 seconds is allowed without a password.
+			<string>The security policy for AirPlay. Allowed values:
 
-'PASSWORD' requires a passphrase as specified in the 'Password' key.
+- 'PASSCODE_ONCE': Requires an onscreen passcode on first connection from a device. Subsequent connections from the same device aren't prompted.
+- 'PASSCODE_ALWAYS': Requires an onscreen passcode for every AirPlay connection. After an AirPlay connection ends, the system allows reconnecting within 30 seconds without a password.
+- 'PASSWORD': Requires the passphrase set for 'Password'.
 
-'NONE' was deprecated in tvOS 11.3. Existing profiles using 'NONE' get the 'PASSWORD_ONCE' behavior.</string>
-			<key>pfm_description_reference</key>
-			<string>Required. Must be one of the defined values: PASSCODE_ONCE, PASSCODE_ALWAYS, or PASSWORD.
-PASSCODE_ONCE will require an on-screen passcode to be entered on the first connection from a device. Subsequent connections from the same device will not be prompted.
-PASSCODE_ALWAYS will require an on-screen passcode to be entered upon every AirPlay connection.
-PASSWORD will require a passphrase to be entered as specified in the Password key. The Password key is required if this SecurityType is selected.
-NONE was deprecated in tvOS 11.3. Existing profiles using NONE will get the PASSWORD_ONCE behavior.</string>
+Note:
+'NONE' was deprecated in tvOS 11.3. Existing profiles that use 'NONE' get the 'PASSWORD_ONCE' behavior.</string>
 			<key>pfm_name</key>
 			<string>SecurityType</string>
 			<key>pfm_range_list</key>
@@ -199,7 +178,7 @@ NONE was deprecated in tvOS 11.3. Existing profiles using NONE will get the PASS
 			<key>pfm_require</key>
 			<string>always</string>
 			<key>pfm_title</key>
-			<string>Security</string>
+			<string>Security Type</string>
 			<key>pfm_type</key>
 			<string>string</string>
 		</dict>
@@ -223,7 +202,7 @@ NONE was deprecated in tvOS 11.3. Existing profiles using NONE will get the PASS
 				</dict>
 			</array>
 			<key>pfm_description</key>
-			<string>The AirPlay password; required if SecurityType is 'PASSWORD'.</string>
+			<string>The AirPlay password; required if 'SecurityType' is 'PASSWORD'.</string>
 			<key>pfm_exclude</key>
 			<array>
 				<dict>
@@ -257,7 +236,7 @@ NONE was deprecated in tvOS 11.3. Existing profiles using NONE will get the PASS
 	<key>pfm_tvos_min</key>
 	<string>11.0</string>
 	<key>pfm_unique</key>
-	<true/>
+	<false/>
 	<key>pfm_version</key>
 	<integer>3</integer>
 	<key>pfmx_supported_oses</key>

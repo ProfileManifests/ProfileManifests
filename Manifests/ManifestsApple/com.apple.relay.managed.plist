@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>pfm_description</key>
-	<string>Use this section to define settings for network relays.</string>
+	<string>The payload that configures relay settings.</string>
 	<key>pfm_domain</key>
 	<string>com.apple.relay.managed</string>
 	<key>pfm_format_version</key>
@@ -11,7 +11,7 @@
 	<key>pfm_ios_min</key>
 	<string>17.0</string>
 	<key>pfm_last_modified</key>
-	<date>2025-03-15T16:11:44Z</date>
+	<date>2025-08-04T08:25:08Z</date>
 	<key>pfm_macos_min</key>
 	<string>14.0</string>
 	<key>pfm_platforms</key>
@@ -24,7 +24,7 @@
 	<array>
 		<dict>
 			<key>pfm_default</key>
-			<string>Use this section to define settings for network relays.</string>
+			<string>The payload that configures relay settings.</string>
 			<key>pfm_description</key>
 			<string>The human-readable description of this payload. This description appears on the Detail screen.</string>
 			<key>pfm_name</key>
@@ -52,7 +52,8 @@
 			<key>pfm_default</key>
 			<string>com.apple.relay.managed</string>
 			<key>pfm_description</key>
-			<string>The reverse-DNS-style identifier for the payload. This identifier is usually the same as the TopLevel value, with an additional appended component. This string must be unique within the profile.
+			<string>The reverse-DNS-style identifier for the payload. This identifier is usually the same as the 'TopLevel' value, with an additional appended component. This string must be unique within the profile.
+
 During a profile replacement, the system updates payloads with the same 'PayloadIdentifier' and 'PayloadUUID' in the old and new profiles.</string>
 			<key>pfm_name</key>
 			<string>PayloadIdentifier</string>
@@ -80,6 +81,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		<dict>
 			<key>pfm_description</key>
 			<string>The globally unique identifier for the payload. The actual content is unimportant, but must be globally unique. In macOS, use 'uuidgen' to generate UUIDs.
+
 During a profile replacement, the system updates payloads with the same 'PayloadIdentifier' and 'PayloadUUID' in the old and new profiles.</string>
 			<key>pfm_format</key>
 			<string>^[0-9A-Za-z]{8}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{12}$</string>
@@ -137,6 +139,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 						<dict>
 							<key>pfm_description</key>
 							<string>The URL or URI template, as defined in RFC 9298, of a relay server that's reachable using HTTP/3 and supports proxying TCP and UDP using the CONNECT method.
+
 Each relay needs to include either 'HTTP2RelayURL' or 'HTTP3RelayURL', or it can include both.</string>
 							<key>pfm_name</key>
 							<string>HTTP3RelayURL</string>
@@ -148,6 +151,7 @@ Each relay needs to include either 'HTTP2RelayURL' or 'HTTP3RelayURL', or it can
 						<dict>
 							<key>pfm_description</key>
 							<string>The URL or URI template, as defined in RFC 9298, of a relay server that's reachable using HTTP/2 and supports proxying TCP and UDP using the CONNECT method.
+
 Each relay needs to include either 'HTTP2RelayURL' or 'HTTP3RelayURL', or it can include both.</string>
 							<key>pfm_name</key>
 							<string>HTTP2RelayURL</string>
@@ -209,7 +213,8 @@ Each relay needs to include either 'HTTP2RelayURL' or 'HTTP3RelayURL', or it can
 						</dict>
 						<dict>
 							<key>pfm_description</key>
-							<string>An array of DER-encoded public keys that the system uses to authenticate the server during a TLS handshake. The server needs to use one of the keys in the handshake to authenticate.
+							<string>An array of DER-encoded raw public keys that the system uses to authenticate the server during a TLS handshake. The server needs to use one of the keys in the handshake to authenticate.
+
 If this array is empty, the system uses the default TLS trust evaluation.</string>
 							<key>pfm_name</key>
 							<string>RawPublicKeys</string>
@@ -244,8 +249,10 @@ If this array is empty, the system uses the default TLS trust evaluation.</strin
 		<dict>
 			<key>pfm_description</key>
 			<string>A list of domain strings that the system uses to determine which connection to route through the servers in 'Relays'.
+
 Any connection that matches a domain in the list exactly or is a subdomain of the listed domain uses the relay servers, unless it matches a domain in 'ExcludedDomains'.
-If this list is empty, the system routes traffic to all domains to the relay servers, except those that match an excluded domain.</string>
+
+If this list and 'MatchFQDNs' are empty, the system routes traffic to all domains to the relay servers, except those that match an excluded domain or excluded FQDN.</string>
 			<key>pfm_name</key>
 			<string>MatchDomains</string>
 			<key>pfm_subkeys</key>
@@ -287,7 +294,7 @@ If this list is empty, the system routes traffic to all domains to the relay ser
 		</dict>
 		<dict>
 			<key>pfm_description</key>
-			<string>A globally-unique identifier for this relay configuration. The system uses this UUID to route managed apps through the servers in 'Relays'. This key is required for user enrollments.</string>
+			<string>A globally unique identifier for this relay configuration. The system uses this UUID to route managed apps through the servers in 'Relays'. This key is required for user enrollment.</string>
 			<key>pfm_name</key>
 			<string>RelayUUID</string>
 			<key>pfm_type</key>
@@ -295,7 +302,7 @@ If this list is empty, the system routes traffic to all domains to the relay ser
 		</dict>
 		<dict>
 			<key>pfm_description</key>
-			<string>A list of Fully Qualified Domain Names (FQDNs), also known as hostnames, that should be routed through the servers contained in Relays. Any connection that matches this exact FQDN or hostname will use the relays. If no FQDNs and no 'MatchDomains' are listed, traffic to all domains, except those matching an excluded domain or excluded FQDN, will be routed to the relay servers.</string>
+			<string>A list of Fully Qualified Domain Names (FQDNs) to be routed through the servers contained in 'Relays'. Any connection that matches an FQDN in the list exactly uses the relay servers. If this list and 'MatchDomains' are empty, the system routes traffic to all domains to the relay servers, except those that match an excluded domain or excluded FQDN.</string>
 			<key>pfm_ios_min</key>
 			<string>18.4</string>
 			<key>pfm_macos_min</key>
@@ -345,7 +352,7 @@ If this list is empty, the system routes traffic to all domains to the relay ser
 		</dict>
 		<dict>
 			<key>pfm_description</key>
-			<string>A list of Fully Qualified Domain Names (FQDNs), also known as hostnames, that should not be routed through the servers contained in Relays. Any connection that matches the FQDN exactly will not use the relay server. When 'MatchDomains' are also specified any FQDN listed here in 'ExcludedFQDNs' should be a subdomain of at least one MatchDomain otherwise it will not have any effect.</string>
+			<string>A list of Fully Qualified Domain Names (FQDNs) to exclude from routing through the servers contained in 'Relays'. Any connection that matches an FQDN in the list exactly won't use the relay server. When 'MatchDomains' is also present, any FQDN listed in the list should be a subdomain of at least one 'MatchDomain' value, otherwise it will not have any effect.</string>
 			<key>pfm_ios_min</key>
 			<string>18.4</string>
 			<key>pfm_macos_min</key>
@@ -393,6 +400,88 @@ If this list is empty, the system routes traffic to all domains to the relay ser
 				</dict>
 			</dict>
 		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>If 'true', the device allows the user to disable this network relay configuration.</string>
+			<key>pfm_ios_min</key>
+			<string>26.0</string>
+			<key>pfm_macos_min</key>
+			<string>26.0</string>
+			<key>pfm_name</key>
+			<string>UIToggleEnabled</string>
+			<key>pfm_title</key>
+			<string>UI Toggle Enabled</string>
+			<key>pfm_tvos_min</key>
+			<string>26.0</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>iOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>26.0</string>
+				</dict>
+				<key>macOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>26.0</string>
+				</dict>
+				<key>tvOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>26.0</string>
+				</dict>
+				<key>visionOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>26.0</string>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>If 'true', the device allows the relay to failover to the default system DNS resolver.</string>
+			<key>pfm_ios_min</key>
+			<string>26.0</string>
+			<key>pfm_macos_min</key>
+			<string>26.0</string>
+			<key>pfm_name</key>
+			<string>AllowDNSFailover</string>
+			<key>pfm_title</key>
+			<string>Allow DNS Failover</string>
+			<key>pfm_tvos_min</key>
+			<string>26.0</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>iOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>26.0</string>
+				</dict>
+				<key>macOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>26.0</string>
+				</dict>
+				<key>tvOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>26.0</string>
+				</dict>
+				<key>visionOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>26.0</string>
+				</dict>
+			</dict>
+		</dict>
 	</array>
 	<key>pfm_targets</key>
 	<array>
@@ -406,7 +495,7 @@ If this list is empty, the system routes traffic to all domains to the relay ser
 	<key>pfm_unique</key>
 	<false/>
 	<key>pfm_version</key>
-	<integer>2</integer>
+	<integer>3</integer>
 	<key>pfmx_supported_oses</key>
 	<dict>
 		<key>iOS</key>

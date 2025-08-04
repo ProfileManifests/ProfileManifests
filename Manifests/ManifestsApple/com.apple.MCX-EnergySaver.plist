@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>pfm_description</key>
-	<string>Energy Saver settings</string>
+	<string>The payload that configures Energy Saver settings.</string>
 	<key>pfm_documentation_url</key>
 	<string>https://developer.apple.com/documentation/devicemanagement/energysaver</string>
 	<key>pfm_domain</key>
@@ -13,7 +13,9 @@
 	<key>pfm_interaction</key>
 	<string>combined</string>
 	<key>pfm_last_modified</key>
-	<date>2024-05-16T08:07:50Z</date>
+	<date>2025-08-04T08:25:08Z</date>
+	<key>pfm_macos_min</key>
+	<string>10.7</string>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -24,7 +26,7 @@
 	<array>
 		<dict>
 			<key>pfm_default</key>
-			<string>Configures Energy Saver settings</string>
+			<string>The payload that configures Energy Saver settings.</string>
 			<key>pfm_description</key>
 			<string>The human-readable description of this payload. This description appears on the Detail screen.</string>
 			<key>pfm_name</key>
@@ -52,7 +54,8 @@
 			<key>pfm_default</key>
 			<string>com.apple.MCX</string>
 			<key>pfm_description</key>
-			<string>The reverse-DNS-style identifier for the payload. This identifier is usually the same as the TopLevel value, with an additional appended component. This string must be unique within the profile.
+			<string>The reverse-DNS-style identifier for the payload. This identifier is usually the same as the 'TopLevel' value, with an additional appended component. This string must be unique within the profile.
+
 During a profile replacement, the system updates payloads with the same 'PayloadIdentifier' and 'PayloadUUID' in the old and new profiles.</string>
 			<key>pfm_name</key>
 			<string>PayloadIdentifier</string>
@@ -82,6 +85,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string></string>
 			<key>pfm_description</key>
 			<string>The globally unique identifier for the payload. The actual content is unimportant, but must be globally unique. In macOS, use 'uuidgen' to generate UUIDs.
+
 During a profile replacement, the system updates payloads with the same 'PayloadIdentifier' and 'PayloadUUID' in the old and new profiles.</string>
 			<key>pfm_format</key>
 			<string>^[0-9A-Za-z]{8}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{12}$</string>
@@ -219,9 +223,14 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string>Wake the system for network access</string>
+					<string>If 'true', enables "Wake for network access."</string>
 					<key>pfm_name</key>
-					<string>Wake On LAN</string>
+					<string>Wake on LAN</string>
+					<key>pfm_range_list</key>
+					<array>
+						<integer>0</integer>
+						<integer>1</integer>
+					</array>
 					<key>pfm_title</key>
 					<string>Wake on LAN</string>
 					<key>pfm_type</key>
@@ -231,9 +240,14 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string>If 'true', enables 'Wake for modem ring.'</string>
+					<string>If 'true', enables "Wake for modem ring."</string>
 					<key>pfm_name</key>
 					<string>Wake On Modem Ring</string>
+					<key>pfm_range_list</key>
+					<array>
+						<integer>0</integer>
+						<integer>1</integer>
+					</array>
 					<key>pfm_title</key>
 					<string>Wake On Modem Ring</string>
 					<key>pfm_type</key>
@@ -243,9 +257,14 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string>If 'true', enables 'Start up automatically after a power failure.'</string>
+					<string>If 'true', enables "Start up automatically after a power failure."</string>
 					<key>pfm_name</key>
 					<string>Automatic Restart On Power Loss</string>
+					<key>pfm_range_list</key>
+					<array>
+						<integer>0</integer>
+						<integer>1</integer>
+					</array>
 					<key>pfm_title</key>
 					<string>Start up Automatically After a Power Failure</string>
 					<key>pfm_type</key>
@@ -258,6 +277,11 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<string>May not be available on all systems.</string>
 					<key>pfm_name</key>
 					<string>Dynamic Power Step</string>
+					<key>pfm_range_list</key>
+					<array>
+						<integer>0</integer>
+						<integer>1</integer>
+					</array>
 					<key>pfm_title</key>
 					<string>Dynamic Power Step</string>
 					<key>pfm_type</key>
@@ -270,6 +294,11 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<string>May not be available on all systems.</string>
 					<key>pfm_name</key>
 					<string>Reduce Processor Speed</string>
+					<key>pfm_range_list</key>
+					<array>
+						<integer>0</integer>
+						<integer>1</integer>
+					</array>
 					<key>pfm_title</key>
 					<string>Reduce Processor Speed</string>
 					<key>pfm_type</key>
@@ -369,9 +398,14 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string>Wake the system for network access</string>
+					<string>If 'true', enables "Wake for network access."</string>
 					<key>pfm_name</key>
-					<string>Wake On LAN</string>
+					<string>Wake on LAN</string>
+					<key>pfm_range_list</key>
+					<array>
+						<integer>0</integer>
+						<integer>1</integer>
+					</array>
 					<key>pfm_title</key>
 					<string>Wake on LAN</string>
 					<key>pfm_type</key>
@@ -381,9 +415,14 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string>If 'true', enables 'Wake for modem ring.'</string>
+					<string>If 'true', enables "Wake for modem ring."</string>
 					<key>pfm_name</key>
 					<string>Wake On Modem Ring</string>
+					<key>pfm_range_list</key>
+					<array>
+						<integer>0</integer>
+						<integer>1</integer>
+					</array>
 					<key>pfm_title</key>
 					<string>Wake On Modem Ring</string>
 					<key>pfm_type</key>
@@ -393,9 +432,14 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string>If 'true', enables 'Start up automatically after a power failure.'</string>
+					<string>If 'true', enables "Start up automatically after a power failure."</string>
 					<key>pfm_name</key>
 					<string>Automatic Restart On Power Loss</string>
+					<key>pfm_range_list</key>
+					<array>
+						<integer>0</integer>
+						<integer>1</integer>
+					</array>
 					<key>pfm_title</key>
 					<string>Start up Automatically After a Power Failure</string>
 					<key>pfm_type</key>
@@ -408,6 +452,11 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<string>May not be available on all systems.</string>
 					<key>pfm_name</key>
 					<string>Dynamic Power Step</string>
+					<key>pfm_range_list</key>
+					<array>
+						<integer>0</integer>
+						<integer>1</integer>
+					</array>
 					<key>pfm_title</key>
 					<string>Dynamic Power Step</string>
 					<key>pfm_type</key>
@@ -420,6 +469,11 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<string>May not be available on all systems.</string>
 					<key>pfm_name</key>
 					<string>Reduce Processor Speed</string>
+					<key>pfm_range_list</key>
+					<array>
+						<integer>0</integer>
+						<integer>1</integer>
+					</array>
 					<key>pfm_title</key>
 					<string>Reduce Processor Speed</string>
 					<key>pfm_type</key>
@@ -494,9 +548,14 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string>Wake the system for network access</string>
+					<string>If 'true', enables "Wake for network access."</string>
 					<key>pfm_name</key>
-					<string>Wake On LAN</string>
+					<string>Wake on LAN</string>
+					<key>pfm_range_list</key>
+					<array>
+						<integer>0</integer>
+						<integer>1</integer>
+					</array>
 					<key>pfm_title</key>
 					<string>Wake on LAN</string>
 					<key>pfm_type</key>
@@ -506,9 +565,14 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string>If 'true', enables 'Wake for modem ring.'</string>
+					<string>If 'true', enables "Wake for modem ring."</string>
 					<key>pfm_name</key>
 					<string>Wake On Modem Ring</string>
+					<key>pfm_range_list</key>
+					<array>
+						<integer>0</integer>
+						<integer>1</integer>
+					</array>
 					<key>pfm_title</key>
 					<string>Wake On Modem Ring</string>
 					<key>pfm_type</key>
@@ -518,9 +582,14 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string>If 'true', enables 'Start up automatically after a power failure.'</string>
+					<string>If 'true', enables "Start up automatically after a power failure."</string>
 					<key>pfm_name</key>
 					<string>Automatic Restart On Power Loss</string>
+					<key>pfm_range_list</key>
+					<array>
+						<integer>0</integer>
+						<integer>1</integer>
+					</array>
 					<key>pfm_title</key>
 					<string>Start up Automatically After a Power Failure</string>
 					<key>pfm_type</key>
@@ -533,6 +602,11 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<string>May not be available on all systems.</string>
 					<key>pfm_name</key>
 					<string>Dynamic Power Step</string>
+					<key>pfm_range_list</key>
+					<array>
+						<integer>0</integer>
+						<integer>1</integer>
+					</array>
 					<key>pfm_title</key>
 					<string>Dynamic Power Step</string>
 					<key>pfm_type</key>
@@ -545,6 +619,11 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<string>May not be available on all systems.</string>
 					<key>pfm_name</key>
 					<string>Reduce Processor Speed</string>
+					<key>pfm_range_list</key>
+					<array>
+						<integer>0</integer>
+						<integer>1</integer>
+					</array>
 					<key>pfm_title</key>
 					<string>Reduce Processor Speed</string>
 					<key>pfm_type</key>
@@ -584,12 +663,14 @@ During a profile replacement, the system updates payloads with the same 'Payload
 							<key>pfm_range_list</key>
 							<array>
 								<string>wake</string>
+								<string>poweron</string>
 								<string>wakepoweron</string>
 							</array>
 							<key>pfm_range_list_titles</key>
 							<array>
-								<string>Wake</string>
-								<string>Start Up/Wake</string>
+								<string>Wake Up</string>
+								<string>Power On</string>
+								<string>Wake Up/Power On</string>
 							</array>
 							<key>pfm_require</key>
 							<string>always</string>
@@ -603,13 +684,14 @@ During a profile replacement, the system updates payloads with the same 'Payload
 							<integer>31</integer>
 							<key>pfm_description</key>
 							<string>One or more days of the week in an unsigned integer bitmap:
-* '1' = Mon
-* '2' = Tue
-* '4' = Wed
-* '8' = Thu
-* '16' = Fri
-* '32' = Sat
-* '64' = Sun</string>
+
+- '1' = Mon
+- '2' = Tue
+- '4' = Wed
+- '8' = Thu
+- '16' = Fri
+- '32' = Sat
+- '64' = Sun</string>
 							<key>pfm_name</key>
 							<string>weekdays</string>
 							<key>pfm_require</key>
@@ -697,14 +779,14 @@ During a profile replacement, the system updates payloads with the same 'Payload
 							<key>pfm_range_list</key>
 							<array>
 								<string>sleep</string>
-								<string>restart</string>
 								<string>shutdown</string>
+								<string>restart</string>
 							</array>
 							<key>pfm_range_list_titles</key>
 							<array>
 								<string>Sleep</string>
-								<string>Restart</string>
 								<string>Shut Down</string>
+								<string>Restart</string>
 							</array>
 							<key>pfm_require</key>
 							<string>always</string>
@@ -718,13 +800,14 @@ During a profile replacement, the system updates payloads with the same 'Payload
 							<integer>31</integer>
 							<key>pfm_description</key>
 							<string>One or more days of the week in an unsigned integer bitmap:
-* '1' = Mon
-* '2' = Tue
-* '4' = Wed
-* '8' = Thu
-* '16' = Fri
-* '32' = Sat
-* '64' = Sun</string>
+
+- '1' = Mon
+- '2' = Tue
+- '4' = Wed
+- '8' = Thu
+- '16' = Fri
+- '32' = Sat
+- '64' = Sun</string>
 							<key>pfm_name</key>
 							<string>weekdays</string>
 							<key>pfm_require</key>
@@ -823,7 +906,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 	<key>pfm_title</key>
 	<string>Energy Saver</string>
 	<key>pfm_unique</key>
-	<true/>
+	<false/>
 	<key>pfm_version</key>
 	<integer>2</integer>
 	<key>pfmx_supported_oses</key>

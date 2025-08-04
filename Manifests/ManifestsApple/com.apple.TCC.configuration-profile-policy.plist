@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>pfm_description</key>
-	<string>Configures Privacy Preferences Policy Control settings</string>
+	<string>The payload that configures privacy preferences.</string>
 	<key>pfm_documentation_url</key>
 	<string>https://developer.apple.com/documentation/devicemanagement/privacypreferencespolicycontrol</string>
 	<key>pfm_domain</key>
@@ -13,7 +13,7 @@
 	<key>pfm_interaction</key>
 	<string>combined</string>
 	<key>pfm_last_modified</key>
-	<date>2024-08-12T14:52:11Z</date>
+	<date>2025-08-04T08:25:08Z</date>
 	<key>pfm_macos_min</key>
 	<string>10.14</string>
 	<key>pfm_platforms</key>
@@ -24,7 +24,7 @@
 	<array>
 		<dict>
 			<key>pfm_default</key>
-			<string>Configures Privacy Preferences Policy Control settings</string>
+			<string>The payload that configures privacy preferences.</string>
 			<key>pfm_description</key>
 			<string>The human-readable description of this payload. This description appears on the Detail screen.</string>
 			<key>pfm_name</key>
@@ -52,7 +52,8 @@
 			<key>pfm_default</key>
 			<string>com.apple.TCC.configuration-profile-policy</string>
 			<key>pfm_description</key>
-			<string>The reverse-DNS-style identifier for the payload. This identifier is usually the same as the TopLevel value, with an additional appended component. This string must be unique within the profile.
+			<string>The reverse-DNS-style identifier for the payload. This identifier is usually the same as the 'TopLevel' value, with an additional appended component. This string must be unique within the profile.
+
 During a profile replacement, the system updates payloads with the same 'PayloadIdentifier' and 'PayloadUUID' in the old and new profiles.</string>
 			<key>pfm_name</key>
 			<string>PayloadIdentifier</string>
@@ -82,6 +83,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string></string>
 			<key>pfm_description</key>
 			<string>The globally unique identifier for the payload. The actual content is unimportant, but must be globally unique. In macOS, use 'uuidgen' to generate UUIDs.
+
 During a profile replacement, the system updates payloads with the same 'PayloadIdentifier' and 'PayloadUUID' in the old and new profiles.</string>
 			<key>pfm_format</key>
 			<string>^[0-9A-Za-z]{8}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{12}$</string>
@@ -142,7 +144,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Keys are limited to the privacy service names listed below. Each key is an array of dictionaries describing the app or process to which access is given. In the case of conflicting specifications, the most restrictive setting (deny) will be used.</string>
+							<string>A dictionary listing apps and the privacy policy to apply to them.</string>
 							<key>pfm_name</key>
 							<string>IdentityDict</string>
 							<key>pfm_require</key>
@@ -187,9 +189,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>The designated requirement describing the code signature of this executable.</string>
-									<key>pfm_description_reference</key>
-									<string>Obtained via the command ''codesign -display -r -''.</string>
+									<string>Obtained via the command 'codesign -display -r -'.</string>
 									<key>pfm_name</key>
 									<string>CodeRequirement</string>
 									<key>pfm_require</key>
@@ -215,11 +215,13 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<key>pfm_description</key>
 									<string>The 'Authorization' key is an optional replacement for the 'Allowed' key, which has one of the following possible values:
 
-* 'Allow': Equivalent to a 'true' value for the 'Allowed' key
-* 'Deny': Equivalent to a 'false' value for the 'Allowed' key
-* 'AllowStandardUserToSetSystemService': Allows a standard (non-admin) user to configure the permissions for the specified app in the Privacy preferences for services that otherwise require admin authorization; only valid for the 'ListenEvent' and 'ScreenCapture' services
+- 'Allow': Equivalent to a 'true' value for the 'Allowed' key
+- 'Deny': Equivalent to a 'false' value for the 'Allowed' key
+- 'AllowStandardUserToSetSystemService': Allows a standard (non-admin) user to configure the permissions for the specified app in the Privacy preferences for services that otherwise require admin authorization; only valid for the 'ListenEvent' and 'ScreenCapture' services
 
+Note:
 Every payload needs to include either 'Authorization' or 'Allowed', but not both.
+
 Available in macOS 11 and later.</string>
 									<key>pfm_macos_min</key>
 									<string>11.0</string>
@@ -244,6 +246,8 @@ Available in macOS 11 and later.</string>
 								<dict>
 									<key>pfm_description</key>
 									<string>If 'true', access is granted; otherwise, the process doesn't have access. The user isn't prompted and can't change this value.
+
+Note:
 Every payload needs to include either 'Authorization' or 'Allowed', but not both.</string>
 									<key>pfm_name</key>
 									<string>Allowed</string>
@@ -299,7 +303,7 @@ Every payload needs to include either 'Authorization' or 'Allowed', but not both
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Keys are limited to the privacy service names listed below. Each key is an array of dictionaries describing the app or process to which access is given. In the case of conflicting specifications, the most restrictive setting (deny) will be used.</string>
+							<string>A dictionary listing apps and the privacy policy to apply to them.</string>
 							<key>pfm_name</key>
 							<string>IdentityDict</string>
 							<key>pfm_require</key>
@@ -344,9 +348,7 @@ Every payload needs to include either 'Authorization' or 'Allowed', but not both
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>The designated requirement describing the code signature of this executable.</string>
-									<key>pfm_description_reference</key>
-									<string>Obtained via the command ''codesign -display -r -''.</string>
+									<string>Obtained via the command 'codesign -display -r -'.</string>
 									<key>pfm_name</key>
 									<string>CodeRequirement</string>
 									<key>pfm_require</key>
@@ -372,11 +374,13 @@ Every payload needs to include either 'Authorization' or 'Allowed', but not both
 									<key>pfm_description</key>
 									<string>The 'Authorization' key is an optional replacement for the 'Allowed' key, which has one of the following possible values:
 
-* 'Allow': Equivalent to a 'true' value for the 'Allowed' key
-* 'Deny': Equivalent to a 'false' value for the 'Allowed' key
-* 'AllowStandardUserToSetSystemService': Allows a standard (non-admin) user to configure the permissions for the specified app in the Privacy preferences for services that otherwise require admin authorization; only valid for the 'ListenEvent' and 'ScreenCapture' services
+- 'Allow': Equivalent to a 'true' value for the 'Allowed' key
+- 'Deny': Equivalent to a 'false' value for the 'Allowed' key
+- 'AllowStandardUserToSetSystemService': Allows a standard (non-admin) user to configure the permissions for the specified app in the Privacy preferences for services that otherwise require admin authorization; only valid for the 'ListenEvent' and 'ScreenCapture' services
 
+Note:
 Every payload needs to include either 'Authorization' or 'Allowed', but not both.
+
 Available in macOS 11 and later.</string>
 									<key>pfm_macos_min</key>
 									<string>11.0</string>
@@ -401,6 +405,8 @@ Available in macOS 11 and later.</string>
 								<dict>
 									<key>pfm_description</key>
 									<string>If 'true', access is granted; otherwise, the process doesn't have access. The user isn't prompted and can't change this value.
+
+Note:
 Every payload needs to include either 'Authorization' or 'Allowed', but not both.</string>
 									<key>pfm_name</key>
 									<string>Allowed</string>
@@ -502,7 +508,7 @@ Every payload needs to include either 'Authorization' or 'Allowed', but not both
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Keys are limited to the privacy service names listed below. Each key is an array of dictionaries describing the app or process to which access is given. In the case of conflicting specifications, the most restrictive setting (deny) will be used.</string>
+							<string>A dictionary listing apps and the privacy policy to apply to them.</string>
 							<key>pfm_name</key>
 							<string>IdentityDict</string>
 							<key>pfm_require</key>
@@ -547,9 +553,7 @@ Every payload needs to include either 'Authorization' or 'Allowed', but not both
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>The designated requirement describing the code signature of this executable.</string>
-									<key>pfm_description_reference</key>
-									<string>Obtained via the command ''codesign -display -r -''.</string>
+									<string>Obtained via the command 'codesign -display -r -'.</string>
 									<key>pfm_name</key>
 									<string>CodeRequirement</string>
 									<key>pfm_require</key>
@@ -575,11 +579,13 @@ Every payload needs to include either 'Authorization' or 'Allowed', but not both
 									<key>pfm_description</key>
 									<string>The 'Authorization' key is an optional replacement for the 'Allowed' key, which has one of the following possible values:
 
-* 'Allow': Equivalent to a 'true' value for the 'Allowed' key
-* 'Deny': Equivalent to a 'false' value for the 'Allowed' key
-* 'AllowStandardUserToSetSystemService': Allows a standard (non-admin) user to configure the permissions for the specified app in the Privacy preferences for services that otherwise require admin authorization; only valid for the 'ListenEvent' and 'ScreenCapture' services
+- 'Allow': Equivalent to a 'true' value for the 'Allowed' key
+- 'Deny': Equivalent to a 'false' value for the 'Allowed' key
+- 'AllowStandardUserToSetSystemService': Allows a standard (non-admin) user to configure the permissions for the specified app in the Privacy preferences for services that otherwise require admin authorization; only valid for the 'ListenEvent' and 'ScreenCapture' services
 
+Note:
 Every payload needs to include either 'Authorization' or 'Allowed', but not both.
+
 Available in macOS 11 and later.</string>
 									<key>pfm_macos_min</key>
 									<string>11.0</string>
@@ -604,6 +610,8 @@ Available in macOS 11 and later.</string>
 								<dict>
 									<key>pfm_description</key>
 									<string>If 'true', access is granted; otherwise, the process doesn't have access. The user isn't prompted and can't change this value.
+
+Note:
 Every payload needs to include either 'Authorization' or 'Allowed', but not both.</string>
 									<key>pfm_name</key>
 									<string>Allowed</string>
@@ -663,7 +671,7 @@ Every payload needs to include either 'Authorization' or 'Allowed', but not both
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Keys are limited to the privacy service names listed below. Each key is an array of dictionaries describing the app or process to which access is given. In the case of conflicting specifications, the most restrictive setting (deny) will be used.</string>
+							<string>A dictionary listing apps and the privacy policy to apply to them.</string>
 							<key>pfm_name</key>
 							<string>IdentityDict</string>
 							<key>pfm_require</key>
@@ -708,9 +716,7 @@ Every payload needs to include either 'Authorization' or 'Allowed', but not both
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>The designated requirement describing the code signature of this executable.</string>
-									<key>pfm_description_reference</key>
-									<string>Obtained via the command ''codesign -display -r -''.</string>
+									<string>Obtained via the command 'codesign -display -r -'.</string>
 									<key>pfm_name</key>
 									<string>CodeRequirement</string>
 									<key>pfm_require</key>
@@ -736,11 +742,13 @@ Every payload needs to include either 'Authorization' or 'Allowed', but not both
 									<key>pfm_description</key>
 									<string>The 'Authorization' key is an optional replacement for the 'Allowed' key, which has one of the following possible values:
 
-* 'Allow': Equivalent to a 'true' value for the 'Allowed' key
-* 'Deny': Equivalent to a 'false' value for the 'Allowed' key
-* 'AllowStandardUserToSetSystemService': Allows a standard (non-admin) user to configure the permissions for the specified app in the Privacy preferences for services that otherwise require admin authorization; only valid for the 'ListenEvent' and 'ScreenCapture' services
+- 'Allow': Equivalent to a 'true' value for the 'Allowed' key
+- 'Deny': Equivalent to a 'false' value for the 'Allowed' key
+- 'AllowStandardUserToSetSystemService': Allows a standard (non-admin) user to configure the permissions for the specified app in the Privacy preferences for services that otherwise require admin authorization; only valid for the 'ListenEvent' and 'ScreenCapture' services
 
+Note:
 Every payload needs to include either 'Authorization' or 'Allowed', but not both.
+
 Available in macOS 11 and later.</string>
 									<key>pfm_macos_min</key>
 									<string>11.0</string>
@@ -765,6 +773,8 @@ Available in macOS 11 and later.</string>
 								<dict>
 									<key>pfm_description</key>
 									<string>If 'true', access is granted; otherwise, the process doesn't have access. The user isn't prompted and can't change this value.
+
+Note:
 Every payload needs to include either 'Authorization' or 'Allowed', but not both.</string>
 									<key>pfm_name</key>
 									<string>Allowed</string>
@@ -820,7 +830,7 @@ Every payload needs to include either 'Authorization' or 'Allowed', but not both
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Keys are limited to the privacy service names listed below. Each key is an array of dictionaries describing the app or process to which access is given. In the case of conflicting specifications, the most restrictive setting (deny) will be used.</string>
+							<string>A dictionary listing apps and the privacy policy to apply to them.</string>
 							<key>pfm_name</key>
 							<string>IdentityDict</string>
 							<key>pfm_require</key>
@@ -865,9 +875,7 @@ Every payload needs to include either 'Authorization' or 'Allowed', but not both
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>The designated requirement describing the code signature of this executable.</string>
-									<key>pfm_description_reference</key>
-									<string>Obtained via the command ''codesign -display -r -''.</string>
+									<string>Obtained via the command 'codesign -display -r -'.</string>
 									<key>pfm_name</key>
 									<string>CodeRequirement</string>
 									<key>pfm_require</key>
@@ -893,11 +901,13 @@ Every payload needs to include either 'Authorization' or 'Allowed', but not both
 									<key>pfm_description</key>
 									<string>The 'Authorization' key is an optional replacement for the 'Allowed' key, which has one of the following possible values:
 
-* 'Allow': Equivalent to a 'true' value for the 'Allowed' key
-* 'Deny': Equivalent to a 'false' value for the 'Allowed' key
-* 'AllowStandardUserToSetSystemService': Allows a standard (non-admin) user to configure the permissions for the specified app in the Privacy preferences for services that otherwise require admin authorization; only valid for the 'ListenEvent' and 'ScreenCapture' services
+- 'Allow': Equivalent to a 'true' value for the 'Allowed' key
+- 'Deny': Equivalent to a 'false' value for the 'Allowed' key
+- 'AllowStandardUserToSetSystemService': Allows a standard (non-admin) user to configure the permissions for the specified app in the Privacy preferences for services that otherwise require admin authorization; only valid for the 'ListenEvent' and 'ScreenCapture' services
 
+Note:
 Every payload needs to include either 'Authorization' or 'Allowed', but not both.
+
 Available in macOS 11 and later.</string>
 									<key>pfm_macos_min</key>
 									<string>11.0</string>
@@ -921,6 +931,8 @@ Available in macOS 11 and later.</string>
 								<dict>
 									<key>pfm_description</key>
 									<string>If 'true', access is granted; otherwise, the process doesn't have access. The user isn't prompted and can't change this value.
+
+Note:
 Every payload needs to include either 'Authorization' or 'Allowed', but not both.</string>
 									<key>pfm_name</key>
 									<string>Allowed</string>
@@ -974,7 +986,7 @@ Every payload needs to include either 'Authorization' or 'Allowed', but not both
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Keys are limited to the privacy service names listed below. Each key is an array of dictionaries describing the app or process to which access is given. In the case of conflicting specifications, the most restrictive setting (deny) will be used.</string>
+							<string>A dictionary listing apps and the privacy policy to apply to them.</string>
 							<key>pfm_name</key>
 							<string>IdentityDict</string>
 							<key>pfm_require</key>
@@ -1019,9 +1031,7 @@ Every payload needs to include either 'Authorization' or 'Allowed', but not both
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>The designated requirement describing the code signature of this executable.</string>
-									<key>pfm_description_reference</key>
-									<string>Obtained via the command ''codesign -display -r -''.</string>
+									<string>Obtained via the command 'codesign -display -r -'.</string>
 									<key>pfm_name</key>
 									<string>CodeRequirement</string>
 									<key>pfm_require</key>
@@ -1047,11 +1057,13 @@ Every payload needs to include either 'Authorization' or 'Allowed', but not both
 									<key>pfm_description</key>
 									<string>The 'Authorization' key is an optional replacement for the 'Allowed' key, which has one of the following possible values:
 
-* 'Allow': Equivalent to a 'true' value for the 'Allowed' key
-* 'Deny': Equivalent to a 'false' value for the 'Allowed' key
-* 'AllowStandardUserToSetSystemService': Allows a standard (non-admin) user to configure the permissions for the specified app in the Privacy preferences for services that otherwise require admin authorization; only valid for the 'ListenEvent' and 'ScreenCapture' services
+- 'Allow': Equivalent to a 'true' value for the 'Allowed' key
+- 'Deny': Equivalent to a 'false' value for the 'Allowed' key
+- 'AllowStandardUserToSetSystemService': Allows a standard (non-admin) user to configure the permissions for the specified app in the Privacy preferences for services that otherwise require admin authorization; only valid for the 'ListenEvent' and 'ScreenCapture' services
 
+Note:
 Every payload needs to include either 'Authorization' or 'Allowed', but not both.
+
 Available in macOS 11 and later.</string>
 									<key>pfm_macos_min</key>
 									<string>11.0</string>
@@ -1076,6 +1088,8 @@ Available in macOS 11 and later.</string>
 								<dict>
 									<key>pfm_description</key>
 									<string>If 'true', access is granted; otherwise, the process doesn't have access. The user isn't prompted and can't change this value.
+
+Note:
 Every payload needs to include either 'Authorization' or 'Allowed', but not both.</string>
 									<key>pfm_name</key>
 									<string>Allowed</string>
@@ -1131,7 +1145,7 @@ Every payload needs to include either 'Authorization' or 'Allowed', but not both
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Keys are limited to the privacy service names listed below. Each key is an array of dictionaries describing the app or process to which access is given. In the case of conflicting specifications, the most restrictive setting (deny) will be used.</string>
+							<string>A dictionary listing apps and the privacy policy to apply to them.</string>
 							<key>pfm_name</key>
 							<string>IdentityDict</string>
 							<key>pfm_require</key>
@@ -1176,9 +1190,7 @@ Every payload needs to include either 'Authorization' or 'Allowed', but not both
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>The designated requirement describing the code signature of this executable.</string>
-									<key>pfm_description_reference</key>
-									<string>Obtained via the command ''codesign -display -r -''.</string>
+									<string>Obtained via the command 'codesign -display -r -'.</string>
 									<key>pfm_name</key>
 									<string>CodeRequirement</string>
 									<key>pfm_require</key>
@@ -1204,11 +1216,13 @@ Every payload needs to include either 'Authorization' or 'Allowed', but not both
 									<key>pfm_description</key>
 									<string>The 'Authorization' key is an optional replacement for the 'Allowed' key, which has one of the following possible values:
 
-* 'Allow': Equivalent to a 'true' value for the 'Allowed' key
-* 'Deny': Equivalent to a 'false' value for the 'Allowed' key
-* 'AllowStandardUserToSetSystemService': Allows a standard (non-admin) user to configure the permissions for the specified app in the Privacy preferences for services that otherwise require admin authorization; only valid for the 'ListenEvent' and 'ScreenCapture' services
+- 'Allow': Equivalent to a 'true' value for the 'Allowed' key
+- 'Deny': Equivalent to a 'false' value for the 'Allowed' key
+- 'AllowStandardUserToSetSystemService': Allows a standard (non-admin) user to configure the permissions for the specified app in the Privacy preferences for services that otherwise require admin authorization; only valid for the 'ListenEvent' and 'ScreenCapture' services
 
+Note:
 Every payload needs to include either 'Authorization' or 'Allowed', but not both.
+
 Available in macOS 11 and later.</string>
 									<key>pfm_macos_min</key>
 									<string>11.0</string>
@@ -1233,6 +1247,8 @@ Available in macOS 11 and later.</string>
 								<dict>
 									<key>pfm_description</key>
 									<string>If 'true', access is granted; otherwise, the process doesn't have access. The user isn't prompted and can't change this value.
+
+Note:
 Every payload needs to include either 'Authorization' or 'Allowed', but not both.</string>
 									<key>pfm_name</key>
 									<string>Allowed</string>
@@ -1294,7 +1310,7 @@ Every payload needs to include either 'Authorization' or 'Allowed', but not both
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Keys are limited to the privacy service names listed below. Each key is an array of dictionaries describing the app or process to which access is given. In the case of conflicting specifications, the most restrictive setting (deny) will be used.</string>
+							<string>A dictionary listing apps and the privacy policy to apply to them.</string>
 							<key>pfm_name</key>
 							<string>IdentityDict</string>
 							<key>pfm_require</key>
@@ -1339,9 +1355,7 @@ Every payload needs to include either 'Authorization' or 'Allowed', but not both
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>The designated requirement describing the code signature of this executable.</string>
-									<key>pfm_description_reference</key>
-									<string>Obtained via the command ''codesign -display -r -''.</string>
+									<string>Obtained via the command 'codesign -display -r -'.</string>
 									<key>pfm_name</key>
 									<string>CodeRequirement</string>
 									<key>pfm_require</key>
@@ -1367,11 +1381,13 @@ Every payload needs to include either 'Authorization' or 'Allowed', but not both
 									<key>pfm_description</key>
 									<string>The 'Authorization' key is an optional replacement for the 'Allowed' key, which has one of the following possible values:
 
-* 'Allow': Equivalent to a 'true' value for the 'Allowed' key
-* 'Deny': Equivalent to a 'false' value for the 'Allowed' key
-* 'AllowStandardUserToSetSystemService': Allows a standard (non-admin) user to configure the permissions for the specified app in the Privacy preferences for services that otherwise require admin authorization; only valid for the 'ListenEvent' and 'ScreenCapture' services
+- 'Allow': Equivalent to a 'true' value for the 'Allowed' key
+- 'Deny': Equivalent to a 'false' value for the 'Allowed' key
+- 'AllowStandardUserToSetSystemService': Allows a standard (non-admin) user to configure the permissions for the specified app in the Privacy preferences for services that otherwise require admin authorization; only valid for the 'ListenEvent' and 'ScreenCapture' services
 
+Note:
 Every payload needs to include either 'Authorization' or 'Allowed', but not both.
+
 Available in macOS 11 and later.</string>
 									<key>pfm_macos_min</key>
 									<string>11.0</string>
@@ -1401,6 +1417,8 @@ Available in macOS 11 and later.</string>
 								<dict>
 									<key>pfm_description</key>
 									<string>If 'true', access is granted; otherwise, the process doesn't have access. The user isn't prompted and can't change this value.
+
+Note:
 Every payload needs to include either 'Authorization' or 'Allowed', but not both.</string>
 									<key>pfm_name</key>
 									<string>Allowed</string>
@@ -1462,7 +1480,7 @@ Every payload needs to include either 'Authorization' or 'Allowed', but not both
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Keys are limited to the privacy service names listed below. Each key is an array of dictionaries describing the app or process to which access is given. In the case of conflicting specifications, the most restrictive setting (deny) will be used.</string>
+							<string>A dictionary listing apps and the privacy policy to apply to them.</string>
 							<key>pfm_name</key>
 							<string>IdentityDict</string>
 							<key>pfm_require</key>
@@ -1507,9 +1525,7 @@ Every payload needs to include either 'Authorization' or 'Allowed', but not both
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>The designated requirement describing the code signature of this executable.</string>
-									<key>pfm_description_reference</key>
-									<string>Obtained via the command ''codesign -display -r -''.</string>
+									<string>Obtained via the command 'codesign -display -r -'.</string>
 									<key>pfm_name</key>
 									<string>CodeRequirement</string>
 									<key>pfm_require</key>
@@ -1535,11 +1551,13 @@ Every payload needs to include either 'Authorization' or 'Allowed', but not both
 									<key>pfm_description</key>
 									<string>The 'Authorization' key is an optional replacement for the 'Allowed' key, which has one of the following possible values:
 
-* 'Allow': Equivalent to a 'true' value for the 'Allowed' key
-* 'Deny': Equivalent to a 'false' value for the 'Allowed' key
-* 'AllowStandardUserToSetSystemService': Allows a standard (non-admin) user to configure the permissions for the specified app in the Privacy preferences for services that otherwise require admin authorization; only valid for the 'ListenEvent' and 'ScreenCapture' services
+- 'Allow': Equivalent to a 'true' value for the 'Allowed' key
+- 'Deny': Equivalent to a 'false' value for the 'Allowed' key
+- 'AllowStandardUserToSetSystemService': Allows a standard (non-admin) user to configure the permissions for the specified app in the Privacy preferences for services that otherwise require admin authorization; only valid for the 'ListenEvent' and 'ScreenCapture' services
 
+Note:
 Every payload needs to include either 'Authorization' or 'Allowed', but not both.
+
 Available in macOS 11 and later.</string>
 									<key>pfm_macos_min</key>
 									<string>11.0</string>
@@ -1564,6 +1582,8 @@ Available in macOS 11 and later.</string>
 								<dict>
 									<key>pfm_description</key>
 									<string>If 'true', access is granted; otherwise, the process doesn't have access. The user isn't prompted and can't change this value.
+
+Note:
 Every payload needs to include either 'Authorization' or 'Allowed', but not both.</string>
 									<key>pfm_name</key>
 									<string>Allowed</string>
@@ -1627,7 +1647,7 @@ Every payload needs to include either 'Authorization' or 'Allowed', but not both
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Keys are limited to the privacy service names listed below. Each key is an array of dictionaries describing the app or process to which access is given. In the case of conflicting specifications, the most restrictive setting (deny) will be used.</string>
+							<string>A dictionary listing apps and the privacy policy to apply to them.</string>
 							<key>pfm_name</key>
 							<string>IdentityDict</string>
 							<key>pfm_require</key>
@@ -1672,9 +1692,7 @@ Every payload needs to include either 'Authorization' or 'Allowed', but not both
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>The designated requirement describing the code signature of this executable.</string>
-									<key>pfm_description_reference</key>
-									<string>Obtained via the command ''codesign -display -r -''.</string>
+									<string>Obtained via the command 'codesign -display -r -'.</string>
 									<key>pfm_name</key>
 									<string>CodeRequirement</string>
 									<key>pfm_require</key>
@@ -1700,11 +1718,13 @@ Every payload needs to include either 'Authorization' or 'Allowed', but not both
 									<key>pfm_description</key>
 									<string>The 'Authorization' key is an optional replacement for the 'Allowed' key, which has one of the following possible values:
 
-* 'Allow': Equivalent to a 'true' value for the 'Allowed' key
-* 'Deny': Equivalent to a 'false' value for the 'Allowed' key
-* 'AllowStandardUserToSetSystemService': Allows a standard (non-admin) user to configure the permissions for the specified app in the Privacy preferences for services that otherwise require admin authorization; only valid for the 'ListenEvent' and 'ScreenCapture' services
+- 'Allow': Equivalent to a 'true' value for the 'Allowed' key
+- 'Deny': Equivalent to a 'false' value for the 'Allowed' key
+- 'AllowStandardUserToSetSystemService': Allows a standard (non-admin) user to configure the permissions for the specified app in the Privacy preferences for services that otherwise require admin authorization; only valid for the 'ListenEvent' and 'ScreenCapture' services
 
+Note:
 Every payload needs to include either 'Authorization' or 'Allowed', but not both.
+
 Available in macOS 11 and later.</string>
 									<key>pfm_macos_min</key>
 									<string>11.0</string>
@@ -1728,6 +1748,8 @@ Available in macOS 11 and later.</string>
 								<dict>
 									<key>pfm_description</key>
 									<string>If 'true', access is granted; otherwise, the process doesn't have access. The user isn't prompted and can't change this value.
+
+Note:
 Every payload needs to include either 'Authorization' or 'Allowed', but not both.</string>
 									<key>pfm_name</key>
 									<string>Allowed</string>
@@ -1781,7 +1803,7 @@ Every payload needs to include either 'Authorization' or 'Allowed', but not both
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Keys are limited to the privacy service names listed below. Each key is an array of dictionaries describing the app or process to which access is given. In the case of conflicting specifications, the most restrictive setting (deny) will be used.</string>
+							<string>A dictionary listing apps and the privacy policy to apply to them.</string>
 							<key>pfm_name</key>
 							<string>IdentityDict</string>
 							<key>pfm_require</key>
@@ -1826,9 +1848,7 @@ Every payload needs to include either 'Authorization' or 'Allowed', but not both
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>The designated requirement describing the code signature of this executable.</string>
-									<key>pfm_description_reference</key>
-									<string>Obtained via the command ''codesign -display -r -''.</string>
+									<string>Obtained via the command 'codesign -display -r -'.</string>
 									<key>pfm_name</key>
 									<string>CodeRequirement</string>
 									<key>pfm_require</key>
@@ -1854,11 +1874,13 @@ Every payload needs to include either 'Authorization' or 'Allowed', but not both
 									<key>pfm_description</key>
 									<string>The 'Authorization' key is an optional replacement for the 'Allowed' key, which has one of the following possible values:
 
-* 'Allow': Equivalent to a 'true' value for the 'Allowed' key
-* 'Deny': Equivalent to a 'false' value for the 'Allowed' key
-* 'AllowStandardUserToSetSystemService': Allows a standard (non-admin) user to configure the permissions for the specified app in the Privacy preferences for services that otherwise require admin authorization; only valid for the 'ListenEvent' and 'ScreenCapture' services
+- 'Allow': Equivalent to a 'true' value for the 'Allowed' key
+- 'Deny': Equivalent to a 'false' value for the 'Allowed' key
+- 'AllowStandardUserToSetSystemService': Allows a standard (non-admin) user to configure the permissions for the specified app in the Privacy preferences for services that otherwise require admin authorization; only valid for the 'ListenEvent' and 'ScreenCapture' services
 
+Note:
 Every payload needs to include either 'Authorization' or 'Allowed', but not both.
+
 Available in macOS 11 and later.</string>
 									<key>pfm_macos_min</key>
 									<string>11.0</string>
@@ -1883,6 +1905,8 @@ Available in macOS 11 and later.</string>
 								<dict>
 									<key>pfm_description</key>
 									<string>If 'true', access is granted; otherwise, the process doesn't have access. The user isn't prompted and can't change this value.
+
+Note:
 Every payload needs to include either 'Authorization' or 'Allowed', but not both.</string>
 									<key>pfm_name</key>
 									<string>Allowed</string>
@@ -1938,7 +1962,7 @@ Every payload needs to include either 'Authorization' or 'Allowed', but not both
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Keys are limited to the privacy service names listed below. Each key is an array of dictionaries describing the app or process to which access is given. In the case of conflicting specifications, the most restrictive setting (deny) will be used.</string>
+							<string>A dictionary listing apps and the privacy policy to apply to them.</string>
 							<key>pfm_name</key>
 							<string>IdentityDict</string>
 							<key>pfm_require</key>
@@ -1983,9 +2007,7 @@ Every payload needs to include either 'Authorization' or 'Allowed', but not both
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>The designated requirement describing the code signature of this executable.</string>
-									<key>pfm_description_reference</key>
-									<string>Obtained via the command ''codesign -display -r -''.</string>
+									<string>Obtained via the command 'codesign -display -r -'.</string>
 									<key>pfm_name</key>
 									<string>CodeRequirement</string>
 									<key>pfm_require</key>
@@ -2011,11 +2033,13 @@ Every payload needs to include either 'Authorization' or 'Allowed', but not both
 									<key>pfm_description</key>
 									<string>The 'Authorization' key is an optional replacement for the 'Allowed' key, which has one of the following possible values:
 
-* 'Allow': Equivalent to a 'true' value for the 'Allowed' key
-* 'Deny': Equivalent to a 'false' value for the 'Allowed' key
-* 'AllowStandardUserToSetSystemService': Allows a standard (non-admin) user to configure the permissions for the specified app in the Privacy preferences for services that otherwise require admin authorization; only valid for the 'ListenEvent' and 'ScreenCapture' services
+- 'Allow': Equivalent to a 'true' value for the 'Allowed' key
+- 'Deny': Equivalent to a 'false' value for the 'Allowed' key
+- 'AllowStandardUserToSetSystemService': Allows a standard (non-admin) user to configure the permissions for the specified app in the Privacy preferences for services that otherwise require admin authorization; only valid for the 'ListenEvent' and 'ScreenCapture' services
 
+Note:
 Every payload needs to include either 'Authorization' or 'Allowed', but not both.
+
 Available in macOS 11 and later.</string>
 									<key>pfm_macos_min</key>
 									<string>11.0</string>
@@ -2040,6 +2064,8 @@ Available in macOS 11 and later.</string>
 								<dict>
 									<key>pfm_description</key>
 									<string>If 'true', access is granted; otherwise, the process doesn't have access. The user isn't prompted and can't change this value.
+
+Note:
 Every payload needs to include either 'Authorization' or 'Allowed', but not both.</string>
 									<key>pfm_name</key>
 									<string>Allowed</string>
@@ -2095,7 +2121,7 @@ Every payload needs to include either 'Authorization' or 'Allowed', but not both
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Keys are limited to the privacy service names listed below. Each key is an array of dictionaries describing the app or process to which access is given. In the case of conflicting specifications, the most restrictive setting (deny) will be used.</string>
+							<string>A dictionary listing apps and the privacy policy to apply to them.</string>
 							<key>pfm_name</key>
 							<string>IdentityDict</string>
 							<key>pfm_require</key>
@@ -2140,9 +2166,7 @@ Every payload needs to include either 'Authorization' or 'Allowed', but not both
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>The designated requirement describing the code signature of this executable.</string>
-									<key>pfm_description_reference</key>
-									<string>Obtained via the command ''codesign -display -r -''.</string>
+									<string>Obtained via the command 'codesign -display -r -'.</string>
 									<key>pfm_name</key>
 									<string>CodeRequirement</string>
 									<key>pfm_require</key>
@@ -2168,11 +2192,13 @@ Every payload needs to include either 'Authorization' or 'Allowed', but not both
 									<key>pfm_description</key>
 									<string>The 'Authorization' key is an optional replacement for the 'Allowed' key, which has one of the following possible values:
 
-* 'Allow': Equivalent to a 'true' value for the 'Allowed' key
-* 'Deny': Equivalent to a 'false' value for the 'Allowed' key
-* 'AllowStandardUserToSetSystemService': Allows a standard (non-admin) user to configure the permissions for the specified app in the Privacy preferences for services that otherwise require admin authorization; only valid for the 'ListenEvent' and 'ScreenCapture' services
+- 'Allow': Equivalent to a 'true' value for the 'Allowed' key
+- 'Deny': Equivalent to a 'false' value for the 'Allowed' key
+- 'AllowStandardUserToSetSystemService': Allows a standard (non-admin) user to configure the permissions for the specified app in the Privacy preferences for services that otherwise require admin authorization; only valid for the 'ListenEvent' and 'ScreenCapture' services
 
+Note:
 Every payload needs to include either 'Authorization' or 'Allowed', but not both.
+
 Available in macOS 11 and later.</string>
 									<key>pfm_macos_min</key>
 									<string>11.0</string>
@@ -2197,6 +2223,8 @@ Available in macOS 11 and later.</string>
 								<dict>
 									<key>pfm_description</key>
 									<string>If 'true', access is granted; otherwise, the process doesn't have access. The user isn't prompted and can't change this value.
+
+Note:
 Every payload needs to include either 'Authorization' or 'Allowed', but not both.</string>
 									<key>pfm_name</key>
 									<string>Allowed</string>
@@ -2252,7 +2280,7 @@ Every payload needs to include either 'Authorization' or 'Allowed', but not both
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Keys are limited to the privacy service names listed below. Each key is an array of dictionaries describing the app or process to which access is given. In the case of conflicting specifications, the most restrictive setting (deny) will be used.</string>
+							<string>A dictionary listing apps and the privacy policy to apply to them.</string>
 							<key>pfm_name</key>
 							<string>IdentityDict</string>
 							<key>pfm_require</key>
@@ -2297,9 +2325,7 @@ Every payload needs to include either 'Authorization' or 'Allowed', but not both
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>The designated requirement describing the code signature of this executable.</string>
-									<key>pfm_description_reference</key>
-									<string>Obtained via the command ''codesign -display -r -''.</string>
+									<string>Obtained via the command 'codesign -display -r -'.</string>
 									<key>pfm_name</key>
 									<string>CodeRequirement</string>
 									<key>pfm_require</key>
@@ -2325,11 +2351,13 @@ Every payload needs to include either 'Authorization' or 'Allowed', but not both
 									<key>pfm_description</key>
 									<string>The 'Authorization' key is an optional replacement for the 'Allowed' key, which has one of the following possible values:
 
-* 'Allow': Equivalent to a 'true' value for the 'Allowed' key
-* 'Deny': Equivalent to a 'false' value for the 'Allowed' key
-* 'AllowStandardUserToSetSystemService': Allows a standard (non-admin) user to configure the permissions for the specified app in the Privacy preferences for services that otherwise require admin authorization; only valid for the 'ListenEvent' and 'ScreenCapture' services
+- 'Allow': Equivalent to a 'true' value for the 'Allowed' key
+- 'Deny': Equivalent to a 'false' value for the 'Allowed' key
+- 'AllowStandardUserToSetSystemService': Allows a standard (non-admin) user to configure the permissions for the specified app in the Privacy preferences for services that otherwise require admin authorization; only valid for the 'ListenEvent' and 'ScreenCapture' services
 
+Note:
 Every payload needs to include either 'Authorization' or 'Allowed', but not both.
+
 Available in macOS 11 and later.</string>
 									<key>pfm_macos_min</key>
 									<string>11.0</string>
@@ -2354,6 +2382,8 @@ Available in macOS 11 and later.</string>
 								<dict>
 									<key>pfm_description</key>
 									<string>If 'true', access is granted; otherwise, the process doesn't have access. The user isn't prompted and can't change this value.
+
+Note:
 Every payload needs to include either 'Authorization' or 'Allowed', but not both.</string>
 									<key>pfm_name</key>
 									<string>Allowed</string>
@@ -2409,7 +2439,7 @@ Every payload needs to include either 'Authorization' or 'Allowed', but not both
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Keys are limited to the privacy service names listed below. Each key is an array of dictionaries describing the app or process to which access is given. In the case of conflicting specifications, the most restrictive setting (deny) will be used.</string>
+							<string>A dictionary listing apps and the privacy policy to apply to them.</string>
 							<key>pfm_name</key>
 							<string>IdentityDict</string>
 							<key>pfm_require</key>
@@ -2454,9 +2484,7 @@ Every payload needs to include either 'Authorization' or 'Allowed', but not both
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>The designated requirement describing the code signature of this executable.</string>
-									<key>pfm_description_reference</key>
-									<string>Obtained via the command ''codesign -display -r -''.</string>
+									<string>Obtained via the command 'codesign -display -r -'.</string>
 									<key>pfm_name</key>
 									<string>CodeRequirement</string>
 									<key>pfm_require</key>
@@ -2482,11 +2510,13 @@ Every payload needs to include either 'Authorization' or 'Allowed', but not both
 									<key>pfm_description</key>
 									<string>The 'Authorization' key is an optional replacement for the 'Allowed' key, which has one of the following possible values:
 
-* 'Allow': Equivalent to a 'true' value for the 'Allowed' key
-* 'Deny': Equivalent to a 'false' value for the 'Allowed' key
-* 'AllowStandardUserToSetSystemService': Allows a standard (non-admin) user to configure the permissions for the specified app in the Privacy preferences for services that otherwise require admin authorization; only valid for the 'ListenEvent' and 'ScreenCapture' services
+- 'Allow': Equivalent to a 'true' value for the 'Allowed' key
+- 'Deny': Equivalent to a 'false' value for the 'Allowed' key
+- 'AllowStandardUserToSetSystemService': Allows a standard (non-admin) user to configure the permissions for the specified app in the Privacy preferences for services that otherwise require admin authorization; only valid for the 'ListenEvent' and 'ScreenCapture' services
 
+Note:
 Every payload needs to include either 'Authorization' or 'Allowed', but not both.
+
 Available in macOS 11 and later.</string>
 									<key>pfm_macos_min</key>
 									<string>11.0</string>
@@ -2516,6 +2546,8 @@ Available in macOS 11 and later.</string>
 								<dict>
 									<key>pfm_description</key>
 									<string>If 'true', access is granted; otherwise, the process doesn't have access. The user isn't prompted and can't change this value.
+
+Note:
 Every payload needs to include either 'Authorization' or 'Allowed', but not both.</string>
 									<key>pfm_name</key>
 									<string>Allowed</string>
@@ -2577,7 +2609,7 @@ Every payload needs to include either 'Authorization' or 'Allowed', but not both
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Keys are limited to the privacy service names listed below. Each key is an array of dictionaries describing the app or process to which access is given. In the case of conflicting specifications, the most restrictive setting (deny) will be used.</string>
+							<string>A dictionary listing apps and the privacy policy to apply to them.</string>
 							<key>pfm_name</key>
 							<string>IdentityDict</string>
 							<key>pfm_require</key>
@@ -2622,9 +2654,7 @@ Every payload needs to include either 'Authorization' or 'Allowed', but not both
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>The designated requirement describing the code signature of this executable.</string>
-									<key>pfm_description_reference</key>
-									<string>Obtained via the command ''codesign -display -r -''.</string>
+									<string>Obtained via the command 'codesign -display -r -'.</string>
 									<key>pfm_name</key>
 									<string>CodeRequirement</string>
 									<key>pfm_require</key>
@@ -2650,11 +2680,13 @@ Every payload needs to include either 'Authorization' or 'Allowed', but not both
 									<key>pfm_description</key>
 									<string>The 'Authorization' key is an optional replacement for the 'Allowed' key, which has one of the following possible values:
 
-* 'Allow': Equivalent to a 'true' value for the 'Allowed' key
-* 'Deny': Equivalent to a 'false' value for the 'Allowed' key
-* 'AllowStandardUserToSetSystemService': Allows a standard (non-admin) user to configure the permissions for the specified app in the Privacy preferences for services that otherwise require admin authorization; only valid for the 'ListenEvent' and 'ScreenCapture' services
+- 'Allow': Equivalent to a 'true' value for the 'Allowed' key
+- 'Deny': Equivalent to a 'false' value for the 'Allowed' key
+- 'AllowStandardUserToSetSystemService': Allows a standard (non-admin) user to configure the permissions for the specified app in the Privacy preferences for services that otherwise require admin authorization; only valid for the 'ListenEvent' and 'ScreenCapture' services
 
+Note:
 Every payload needs to include either 'Authorization' or 'Allowed', but not both.
+
 Available in macOS 11 and later.</string>
 									<key>pfm_macos_min</key>
 									<string>11.0</string>
@@ -2679,6 +2711,8 @@ Available in macOS 11 and later.</string>
 								<dict>
 									<key>pfm_description</key>
 									<string>If 'true', access is granted; otherwise, the process doesn't have access. The user isn't prompted and can't change this value.
+
+Note:
 Every payload needs to include either 'Authorization' or 'Allowed', but not both.</string>
 									<key>pfm_name</key>
 									<string>Allowed</string>
@@ -2742,7 +2776,7 @@ Every payload needs to include either 'Authorization' or 'Allowed', but not both
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Keys are limited to the privacy service names listed below. Each key is an array of dictionaries describing the app or process to which access is given. In the case of conflicting specifications, the most restrictive setting (deny) will be used.</string>
+							<string>A dictionary listing apps and the privacy policy to apply to them.</string>
 							<key>pfm_name</key>
 							<string>IdentityDict</string>
 							<key>pfm_require</key>
@@ -2787,9 +2821,7 @@ Every payload needs to include either 'Authorization' or 'Allowed', but not both
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>The designated requirement describing the code signature of this executable.</string>
-									<key>pfm_description_reference</key>
-									<string>Obtained via the command ''codesign -display -r -''.</string>
+									<string>Obtained via the command 'codesign -display -r -'.</string>
 									<key>pfm_name</key>
 									<string>CodeRequirement</string>
 									<key>pfm_require</key>
@@ -2815,11 +2847,13 @@ Every payload needs to include either 'Authorization' or 'Allowed', but not both
 									<key>pfm_description</key>
 									<string>The 'Authorization' key is an optional replacement for the 'Allowed' key, which has one of the following possible values:
 
-* 'Allow': Equivalent to a 'true' value for the 'Allowed' key
-* 'Deny': Equivalent to a 'false' value for the 'Allowed' key
-* 'AllowStandardUserToSetSystemService': Allows a standard (non-admin) user to configure the permissions for the specified app in the Privacy preferences for services that otherwise require admin authorization; only valid for the 'ListenEvent' and 'ScreenCapture' services
+- 'Allow': Equivalent to a 'true' value for the 'Allowed' key
+- 'Deny': Equivalent to a 'false' value for the 'Allowed' key
+- 'AllowStandardUserToSetSystemService': Allows a standard (non-admin) user to configure the permissions for the specified app in the Privacy preferences for services that otherwise require admin authorization; only valid for the 'ListenEvent' and 'ScreenCapture' services
 
+Note:
 Every payload needs to include either 'Authorization' or 'Allowed', but not both.
+
 Available in macOS 11 and later.</string>
 									<key>pfm_macos_min</key>
 									<string>11.0</string>
@@ -2844,6 +2878,8 @@ Available in macOS 11 and later.</string>
 								<dict>
 									<key>pfm_description</key>
 									<string>If 'true', access is granted; otherwise, the process doesn't have access. The user isn't prompted and can't change this value.
+
+Note:
 Every payload needs to include either 'Authorization' or 'Allowed', but not both.</string>
 									<key>pfm_name</key>
 									<string>Allowed</string>
@@ -2907,7 +2943,7 @@ Every payload needs to include either 'Authorization' or 'Allowed', but not both
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Keys are limited to the privacy service names listed below. Each key is an array of dictionaries describing the app or process to which access is given. In the case of conflicting specifications, the most restrictive setting (deny) will be used.</string>
+							<string>A dictionary listing apps and the privacy policy to apply to them.</string>
 							<key>pfm_name</key>
 							<string>IdentityDict</string>
 							<key>pfm_require</key>
@@ -2952,9 +2988,7 @@ Every payload needs to include either 'Authorization' or 'Allowed', but not both
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>The designated requirement describing the code signature of this executable.</string>
-									<key>pfm_description_reference</key>
-									<string>Obtained via the command ''codesign -display -r -''.</string>
+									<string>Obtained via the command 'codesign -display -r -'.</string>
 									<key>pfm_name</key>
 									<string>CodeRequirement</string>
 									<key>pfm_require</key>
@@ -2980,11 +3014,13 @@ Every payload needs to include either 'Authorization' or 'Allowed', but not both
 									<key>pfm_description</key>
 									<string>The 'Authorization' key is an optional replacement for the 'Allowed' key, which has one of the following possible values:
 
-* 'Allow': Equivalent to a 'true' value for the 'Allowed' key
-* 'Deny': Equivalent to a 'false' value for the 'Allowed' key
-* 'AllowStandardUserToSetSystemService': Allows a standard (non-admin) user to configure the permissions for the specified app in the Privacy preferences for services that otherwise require admin authorization; only valid for the 'ListenEvent' and 'ScreenCapture' services
+- 'Allow': Equivalent to a 'true' value for the 'Allowed' key
+- 'Deny': Equivalent to a 'false' value for the 'Allowed' key
+- 'AllowStandardUserToSetSystemService': Allows a standard (non-admin) user to configure the permissions for the specified app in the Privacy preferences for services that otherwise require admin authorization; only valid for the 'ListenEvent' and 'ScreenCapture' services
 
+Note:
 Every payload needs to include either 'Authorization' or 'Allowed', but not both.
+
 Available in macOS 11 and later.</string>
 									<key>pfm_macos_min</key>
 									<string>11.0</string>
@@ -3009,6 +3045,8 @@ Available in macOS 11 and later.</string>
 								<dict>
 									<key>pfm_description</key>
 									<string>If 'true', access is granted; otherwise, the process doesn't have access. The user isn't prompted and can't change this value.
+
+Note:
 Every payload needs to include either 'Authorization' or 'Allowed', but not both.</string>
 									<key>pfm_name</key>
 									<string>Allowed</string>
@@ -3072,7 +3110,7 @@ Every payload needs to include either 'Authorization' or 'Allowed', but not both
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Keys are limited to the privacy service names listed below. Each key is an array of dictionaries describing the app or process to which access is given. In the case of conflicting specifications, the most restrictive setting (deny) will be used.</string>
+							<string>A dictionary listing apps and the privacy policy to apply to them.</string>
 							<key>pfm_name</key>
 							<string>IdentityDict</string>
 							<key>pfm_require</key>
@@ -3117,9 +3155,7 @@ Every payload needs to include either 'Authorization' or 'Allowed', but not both
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>The designated requirement describing the code signature of this executable.</string>
-									<key>pfm_description_reference</key>
-									<string>Obtained via the command ''codesign -display -r -''.</string>
+									<string>Obtained via the command 'codesign -display -r -'.</string>
 									<key>pfm_name</key>
 									<string>CodeRequirement</string>
 									<key>pfm_require</key>
@@ -3145,11 +3181,13 @@ Every payload needs to include either 'Authorization' or 'Allowed', but not both
 									<key>pfm_description</key>
 									<string>The 'Authorization' key is an optional replacement for the 'Allowed' key, which has one of the following possible values:
 
-* 'Allow': Equivalent to a 'true' value for the 'Allowed' key
-* 'Deny': Equivalent to a 'false' value for the 'Allowed' key
-* 'AllowStandardUserToSetSystemService': Allows a standard (non-admin) user to configure the permissions for the specified app in the Privacy preferences for services that otherwise require admin authorization; only valid for the 'ListenEvent' and 'ScreenCapture' services
+- 'Allow': Equivalent to a 'true' value for the 'Allowed' key
+- 'Deny': Equivalent to a 'false' value for the 'Allowed' key
+- 'AllowStandardUserToSetSystemService': Allows a standard (non-admin) user to configure the permissions for the specified app in the Privacy preferences for services that otherwise require admin authorization; only valid for the 'ListenEvent' and 'ScreenCapture' services
 
+Note:
 Every payload needs to include either 'Authorization' or 'Allowed', but not both.
+
 Available in macOS 11 and later.</string>
 									<key>pfm_macos_min</key>
 									<string>11.0</string>
@@ -3174,6 +3212,8 @@ Available in macOS 11 and later.</string>
 								<dict>
 									<key>pfm_description</key>
 									<string>If 'true', access is granted; otherwise, the process doesn't have access. The user isn't prompted and can't change this value.
+
+Note:
 Every payload needs to include either 'Authorization' or 'Allowed', but not both.</string>
 									<key>pfm_name</key>
 									<string>Allowed</string>
@@ -3237,7 +3277,7 @@ Every payload needs to include either 'Authorization' or 'Allowed', but not both
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Keys are limited to the privacy service names listed below. Each key is an array of dictionaries describing the app or process to which access is given. In the case of conflicting specifications, the most restrictive setting (deny) will be used.</string>
+							<string>A dictionary listing apps and the privacy policy to apply to them.</string>
 							<key>pfm_name</key>
 							<string>IdentityDict</string>
 							<key>pfm_require</key>
@@ -3282,9 +3322,7 @@ Every payload needs to include either 'Authorization' or 'Allowed', but not both
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>The designated requirement describing the code signature of this executable.</string>
-									<key>pfm_description_reference</key>
-									<string>Obtained via the command ''codesign -display -r -''.</string>
+									<string>Obtained via the command 'codesign -display -r -'.</string>
 									<key>pfm_name</key>
 									<string>CodeRequirement</string>
 									<key>pfm_require</key>
@@ -3310,11 +3348,13 @@ Every payload needs to include either 'Authorization' or 'Allowed', but not both
 									<key>pfm_description</key>
 									<string>The 'Authorization' key is an optional replacement for the 'Allowed' key, which has one of the following possible values:
 
-* 'Allow': Equivalent to a 'true' value for the 'Allowed' key
-* 'Deny': Equivalent to a 'false' value for the 'Allowed' key
-* 'AllowStandardUserToSetSystemService': Allows a standard (non-admin) user to configure the permissions for the specified app in the Privacy preferences for services that otherwise require admin authorization; only valid for the 'ListenEvent' and 'ScreenCapture' services
+- 'Allow': Equivalent to a 'true' value for the 'Allowed' key
+- 'Deny': Equivalent to a 'false' value for the 'Allowed' key
+- 'AllowStandardUserToSetSystemService': Allows a standard (non-admin) user to configure the permissions for the specified app in the Privacy preferences for services that otherwise require admin authorization; only valid for the 'ListenEvent' and 'ScreenCapture' services
 
+Note:
 Every payload needs to include either 'Authorization' or 'Allowed', but not both.
+
 Available in macOS 11 and later.</string>
 									<key>pfm_macos_min</key>
 									<string>11.0</string>
@@ -3339,6 +3379,8 @@ Available in macOS 11 and later.</string>
 								<dict>
 									<key>pfm_description</key>
 									<string>If 'true', access is granted; otherwise, the process doesn't have access. The user isn't prompted and can't change this value.
+
+Note:
 Every payload needs to include either 'Authorization' or 'Allowed', but not both.</string>
 									<key>pfm_name</key>
 									<string>Allowed</string>
@@ -3402,7 +3444,7 @@ Every payload needs to include either 'Authorization' or 'Allowed', but not both
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Keys are limited to the privacy service names listed below. Each key is an array of dictionaries describing the app or process to which access is given. In the case of conflicting specifications, the most restrictive setting (deny) will be used.</string>
+							<string>A dictionary listing apps and the privacy policy to apply to them.</string>
 							<key>pfm_name</key>
 							<string>IdentityDict</string>
 							<key>pfm_require</key>
@@ -3447,9 +3489,7 @@ Every payload needs to include either 'Authorization' or 'Allowed', but not both
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>The designated requirement describing the code signature of this executable.</string>
-									<key>pfm_description_reference</key>
-									<string>Obtained via the command ''codesign -display -r -''.</string>
+									<string>Obtained via the command 'codesign -display -r -'.</string>
 									<key>pfm_name</key>
 									<string>CodeRequirement</string>
 									<key>pfm_require</key>
@@ -3475,11 +3515,13 @@ Every payload needs to include either 'Authorization' or 'Allowed', but not both
 									<key>pfm_description</key>
 									<string>The 'Authorization' key is an optional replacement for the 'Allowed' key, which has one of the following possible values:
 
-* 'Allow': Equivalent to a 'true' value for the 'Allowed' key
-* 'Deny': Equivalent to a 'false' value for the 'Allowed' key
-* 'AllowStandardUserToSetSystemService': Allows a standard (non-admin) user to configure the permissions for the specified app in the Privacy preferences for services that otherwise require admin authorization; only valid for the 'ListenEvent' and 'ScreenCapture' services
+- 'Allow': Equivalent to a 'true' value for the 'Allowed' key
+- 'Deny': Equivalent to a 'false' value for the 'Allowed' key
+- 'AllowStandardUserToSetSystemService': Allows a standard (non-admin) user to configure the permissions for the specified app in the Privacy preferences for services that otherwise require admin authorization; only valid for the 'ListenEvent' and 'ScreenCapture' services
 
+Note:
 Every payload needs to include either 'Authorization' or 'Allowed', but not both.
+
 Available in macOS 11 and later.</string>
 									<key>pfm_macos_min</key>
 									<string>11.0</string>
@@ -3504,6 +3546,8 @@ Available in macOS 11 and later.</string>
 								<dict>
 									<key>pfm_description</key>
 									<string>If 'true', access is granted; otherwise, the process doesn't have access. The user isn't prompted and can't change this value.
+
+Note:
 Every payload needs to include either 'Authorization' or 'Allowed', but not both.</string>
 									<key>pfm_name</key>
 									<string>Allowed</string>
@@ -3567,7 +3611,7 @@ Every payload needs to include either 'Authorization' or 'Allowed', but not both
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Keys are limited to the privacy service names listed below. Each key is an array of dictionaries describing the app or process to which access is given. In the case of conflicting specifications, the most restrictive setting (deny) will be used.</string>
+							<string>A dictionary listing apps and the privacy policy to apply to them.</string>
 							<key>pfm_name</key>
 							<string>IdentityDict</string>
 							<key>pfm_require</key>
@@ -3612,9 +3656,7 @@ Every payload needs to include either 'Authorization' or 'Allowed', but not both
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>The designated requirement describing the code signature of this executable.</string>
-									<key>pfm_description_reference</key>
-									<string>Obtained via the command ''codesign -display -r -''.</string>
+									<string>Obtained via the command 'codesign -display -r -'.</string>
 									<key>pfm_name</key>
 									<string>CodeRequirement</string>
 									<key>pfm_require</key>
@@ -3640,11 +3682,13 @@ Every payload needs to include either 'Authorization' or 'Allowed', but not both
 									<key>pfm_description</key>
 									<string>The 'Authorization' key is an optional replacement for the 'Allowed' key, which has one of the following possible values:
 
-* 'Allow': Equivalent to a 'true' value for the 'Allowed' key
-* 'Deny': Equivalent to a 'false' value for the 'Allowed' key
-* 'AllowStandardUserToSetSystemService': Allows a standard (non-admin) user to configure the permissions for the specified app in the Privacy preferences for services that otherwise require admin authorization; only valid for the 'ListenEvent' and 'ScreenCapture' services
+- 'Allow': Equivalent to a 'true' value for the 'Allowed' key
+- 'Deny': Equivalent to a 'false' value for the 'Allowed' key
+- 'AllowStandardUserToSetSystemService': Allows a standard (non-admin) user to configure the permissions for the specified app in the Privacy preferences for services that otherwise require admin authorization; only valid for the 'ListenEvent' and 'ScreenCapture' services
 
+Note:
 Every payload needs to include either 'Authorization' or 'Allowed', but not both.
+
 Available in macOS 11 and later.</string>
 									<key>pfm_macos_min</key>
 									<string>11.0</string>
@@ -3669,6 +3713,8 @@ Available in macOS 11 and later.</string>
 								<dict>
 									<key>pfm_description</key>
 									<string>If 'true', access is granted; otherwise, the process doesn't have access. The user isn't prompted and can't change this value.
+
+Note:
 Every payload needs to include either 'Authorization' or 'Allowed', but not both.</string>
 									<key>pfm_name</key>
 									<string>Allowed</string>
@@ -3715,7 +3761,7 @@ Every payload needs to include either 'Authorization' or 'Allowed', but not both
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string>Allows the application to access data of other apps.</string>
+					<string>Specifies the policies for the app to access the data of other apps.</string>
 					<key>pfm_macos_min</key>
 					<string>14.0</string>
 					<key>pfm_name</key>
@@ -3754,9 +3800,7 @@ Every payload needs to include either 'Authorization' or 'Allowed', but not both
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>The designated requirement describing the code signature of this executable.</string>
-									<key>pfm_description_reference</key>
-									<string>Obtained via the command ''codesign -display -r -''.</string>
+									<string>Obtained via the command 'codesign -display -r -'.</string>
 									<key>pfm_name</key>
 									<string>CodeRequirement</string>
 									<key>pfm_require</key>
@@ -3778,11 +3822,13 @@ Every payload needs to include either 'Authorization' or 'Allowed', but not both
 									<key>pfm_description</key>
 									<string>The 'Authorization' key is an optional replacement for the 'Allowed' key, which has one of the following possible values:
 
-* 'Allow': Equivalent to a 'true' value for the 'Allowed' key
-* 'Deny': Equivalent to a 'false' value for the 'Allowed' key
-* 'AllowStandardUserToSetSystemService': Allows a standard (non-admin) user to configure the permissions for the specified app in the Privacy preferences for services that otherwise require admin authorization; only valid for the 'ListenEvent' and 'ScreenCapture' services
+- 'Allow': Equivalent to a 'true' value for the 'Allowed' key
+- 'Deny': Equivalent to a 'false' value for the 'Allowed' key
+- 'AllowStandardUserToSetSystemService': Allows a standard (non-admin) user to configure the permissions for the specified app in the Privacy preferences for services that otherwise require admin authorization; only valid for the 'ListenEvent' and 'ScreenCapture' services
 
+Note:
 Every payload needs to include either 'Authorization' or 'Allowed', but not both.
+
 Available in macOS 11 and later.</string>
 									<key>pfm_macos_min</key>
 									<string>11.0</string>
@@ -3807,6 +3853,8 @@ Available in macOS 11 and later.</string>
 								<dict>
 									<key>pfm_description</key>
 									<string>If 'true', access is granted; otherwise, the process doesn't have access. The user isn't prompted and can't change this value.
+
+Note:
 Every payload needs to include either 'Authorization' or 'Allowed', but not both.</string>
 									<key>pfm_name</key>
 									<string>Allowed</string>
@@ -3862,7 +3910,7 @@ Every payload needs to include either 'Authorization' or 'Allowed', but not both
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Keys are limited to the privacy service names listed below. Each key is an array of dictionaries describing the app or process to which access is given. In the case of conflicting specifications, the most restrictive setting (deny) will be used.</string>
+							<string>A dictionary listing apps and the privacy policy to apply to them.</string>
 							<key>pfm_name</key>
 							<string>IdentityDict</string>
 							<key>pfm_require</key>
@@ -3907,9 +3955,7 @@ Every payload needs to include either 'Authorization' or 'Allowed', but not both
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>The designated requirement describing the code signature of this executable.</string>
-									<key>pfm_description_reference</key>
-									<string>Obtained via the command ''codesign -display -r -''.</string>
+									<string>Obtained via the command 'codesign -display -r -'.</string>
 									<key>pfm_name</key>
 									<string>CodeRequirement</string>
 									<key>pfm_require</key>
@@ -3935,11 +3981,13 @@ Every payload needs to include either 'Authorization' or 'Allowed', but not both
 									<key>pfm_description</key>
 									<string>The 'Authorization' key is an optional replacement for the 'Allowed' key, which has one of the following possible values:
 
-* 'Allow': Equivalent to a 'true' value for the 'Allowed' key
-* 'Deny': Equivalent to a 'false' value for the 'Allowed' key
-* 'AllowStandardUserToSetSystemService': Allows a standard (non-admin) user to configure the permissions for the specified app in the Privacy preferences for services that otherwise require admin authorization; only valid for the 'ListenEvent' and 'ScreenCapture' services
+- 'Allow': Equivalent to a 'true' value for the 'Allowed' key
+- 'Deny': Equivalent to a 'false' value for the 'Allowed' key
+- 'AllowStandardUserToSetSystemService': Allows a standard (non-admin) user to configure the permissions for the specified app in the Privacy preferences for services that otherwise require admin authorization; only valid for the 'ListenEvent' and 'ScreenCapture' services
 
+Note:
 Every payload needs to include either 'Authorization' or 'Allowed', but not both.
+
 Available in macOS 11 and later.</string>
 									<key>pfm_macos_min</key>
 									<string>11.0</string>
@@ -3964,6 +4012,8 @@ Available in macOS 11 and later.</string>
 								<dict>
 									<key>pfm_description</key>
 									<string>If 'true', access is granted; otherwise, the process doesn't have access. The user isn't prompted and can't change this value.
+
+Note:
 Every payload needs to include either 'Authorization' or 'Allowed', but not both.</string>
 									<key>pfm_name</key>
 									<string>Allowed</string>

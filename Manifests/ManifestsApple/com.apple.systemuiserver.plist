@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>pfm_description</key>
-	<string>Allowed media management and menu bar extras settings</string>
+	<string>The payload that configures media management.</string>
 	<key>pfm_documentation_url</key>
 	<string>https://developer.apple.com/documentation/devicemanagement/mediamanagementallowedmedia</string>
 	<key>pfm_domain</key>
@@ -13,7 +13,7 @@
 	<key>pfm_interaction</key>
 	<string>combined</string>
 	<key>pfm_last_modified</key>
-	<date>2023-08-29T09:17:10Z</date>
+	<date>2025-08-04T08:25:08Z</date>
 	<key>pfm_macos_deprecated</key>
 	<string>11.0</string>
 	<key>pfm_macos_max</key>
@@ -28,7 +28,7 @@
 	<array>
 		<dict>
 			<key>pfm_default</key>
-			<string>Configures Allowed Media settings</string>
+			<string>The payload that configures media management.</string>
 			<key>pfm_description</key>
 			<string>The human-readable description of this payload. This description appears on the Detail screen.</string>
 			<key>pfm_name</key>
@@ -56,7 +56,8 @@
 			<key>pfm_default</key>
 			<string>com.apple.systemuiserver</string>
 			<key>pfm_description</key>
-			<string>The reverse-DNS-style identifier for the payload. This identifier is usually the same as the TopLevel value, with an additional appended component. This string must be unique within the profile.
+			<string>The reverse-DNS-style identifier for the payload. This identifier is usually the same as the 'TopLevel' value, with an additional appended component. This string must be unique within the profile.
+
 During a profile replacement, the system updates payloads with the same 'PayloadIdentifier' and 'PayloadUUID' in the old and new profiles.</string>
 			<key>pfm_name</key>
 			<string>PayloadIdentifier</string>
@@ -86,6 +87,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string></string>
 			<key>pfm_description</key>
 			<string>The globally unique identifier for the payload. The actual content is unimportant, but must be globally unique. In macOS, use 'uuidgen' to generate UUIDs.
+
 During a profile replacement, the system updates payloads with the same 'PayloadIdentifier' and 'PayloadUUID' in the old and new profiles.</string>
 			<key>pfm_format</key>
 			<string>^[0-9A-Za-z]{8}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{12}$</string>
@@ -177,6 +179,8 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<key>pfm_description</key>
 					<string>A string or an array of media action strings. Internally installed SD cards and USB flash drives are included in the hard disk-external category.
 
+
+
 This key is the default for media types that don't fall into other categories.</string>
 					<key>pfm_name</key>
 					<string>harddisk-external</string>
@@ -184,9 +188,13 @@ This key is the default for media types that don't fall into other categories.</
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Action</string>
+							<string>One of the following values:
+* authenticate - User will be authenticated before media is mounted
+* read-only - The media will be mounted read-only. Not valid for unmount-controls.
+* deny - The media will not be mounted.
+* eject - The media will not be mounted and it will be ejected if possible. Note that some volumes are not defined as ejectable, so using the deny key may be the best solution. Not valid for unmount-controls.</string>
 							<key>pfm_name</key>
-							<string>action</string>
+							<string>ActionStringItem</string>
 							<key>pfm_range_list</key>
 							<array>
 								<string>authenticate</string>
@@ -225,9 +233,13 @@ This key is the default for media types that don't fall into other categories.</
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Action</string>
+							<string>One of the following values:
+* authenticate - User will be authenticated before media is mounted
+* read-only - The media will be mounted read-only. Not valid for unmount-controls.
+* deny - The media will not be mounted.
+* eject - The media will not be mounted and it will be ejected if possible. Note that some volumes are not defined as ejectable, so using the deny key may be the best solution. Not valid for unmount-controls.</string>
 							<key>pfm_name</key>
-							<string>action</string>
+							<string>ActionStringItem</string>
 							<key>pfm_range_list</key>
 							<array>
 								<string>authenticate</string>
@@ -266,9 +278,13 @@ This key is the default for media types that don't fall into other categories.</
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Action</string>
+							<string>One of the following values:
+* authenticate - User will be authenticated before media is mounted
+* read-only - The media will be mounted read-only. Not valid for unmount-controls.
+* deny - The media will not be mounted.
+* eject - The media will not be mounted and it will be ejected if possible. Note that some volumes are not defined as ejectable, so using the deny key may be the best solution. Not valid for unmount-controls.</string>
 							<key>pfm_name</key>
-							<string>action</string>
+							<string>ActionStringItem</string>
 							<key>pfm_range_list</key>
 							<array>
 								<string>authenticate</string>
@@ -307,9 +323,13 @@ This key is the default for media types that don't fall into other categories.</
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Action</string>
+							<string>One of the following values:
+* authenticate - User will be authenticated before media is mounted
+* read-only - The media will be mounted read-only. Not valid for unmount-controls.
+* deny - The media will not be mounted.
+* eject - The media will not be mounted and it will be ejected if possible. Note that some volumes are not defined as ejectable, so using the deny key may be the best solution. Not valid for unmount-controls.</string>
 							<key>pfm_name</key>
-							<string>action</string>
+							<string>ActionStringItem</string>
 							<key>pfm_range_list</key>
 							<array>
 								<string>authenticate</string>
@@ -348,9 +368,13 @@ This key is the default for media types that don't fall into other categories.</
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Action</string>
+							<string>One of the following values:
+* authenticate - User will be authenticated before media is mounted
+* read-only - The media will be mounted read-only. Not valid for unmount-controls.
+* deny - The media will not be mounted.
+* eject - The media will not be mounted and it will be ejected if possible. Note that some volumes are not defined as ejectable, so using the deny key may be the best solution. Not valid for unmount-controls.</string>
 							<key>pfm_name</key>
-							<string>action</string>
+							<string>ActionStringItem</string>
 							<key>pfm_range_list</key>
 							<array>
 								<string>authenticate</string>
@@ -389,9 +413,13 @@ This key is the default for media types that don't fall into other categories.</
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Action</string>
+							<string>One of the following values:
+* authenticate - User will be authenticated before media is mounted
+* read-only - The media will be mounted read-only. Not valid for unmount-controls.
+* deny - The media will not be mounted.
+* eject - The media will not be mounted and it will be ejected if possible. Note that some volumes are not defined as ejectable, so using the deny key may be the best solution. Not valid for unmount-controls.</string>
 							<key>pfm_name</key>
-							<string>action</string>
+							<string>ActionStringItem</string>
 							<key>pfm_range_list</key>
 							<array>
 								<string>authenticate</string>
@@ -430,9 +458,13 @@ This key is the default for media types that don't fall into other categories.</
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Action</string>
+							<string>One of the following values:
+* authenticate - User will be authenticated before media is mounted
+* read-only - The media will be mounted read-only. Not valid for unmount-controls.
+* deny - The media will not be mounted.
+* eject - The media will not be mounted and it will be ejected if possible. Note that some volumes are not defined as ejectable, so using the deny key may be the best solution. Not valid for unmount-controls.</string>
 							<key>pfm_name</key>
-							<string>action</string>
+							<string>ActionStringItem</string>
 							<key>pfm_range_list</key>
 							<array>
 								<string>authenticate</string>
@@ -471,9 +503,13 @@ This key is the default for media types that don't fall into other categories.</
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Action</string>
+							<string>One of the following values:
+* authenticate - User will be authenticated before media is mounted
+* read-only - The media will be mounted read-only. Not valid for unmount-controls.
+* deny - The media will not be mounted.
+* eject - The media will not be mounted and it will be ejected if possible. Note that some volumes are not defined as ejectable, so using the deny key may be the best solution. Not valid for unmount-controls.</string>
 							<key>pfm_name</key>
-							<string>action</string>
+							<string>ActionStringItem</string>
 							<key>pfm_range_list</key>
 							<array>
 								<string>authenticate</string>
@@ -512,9 +548,13 @@ This key is the default for media types that don't fall into other categories.</
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Action</string>
+							<string>One of the following values:
+* authenticate - User will be authenticated before media is mounted
+* read-only - The media will be mounted read-only. Not valid for unmount-controls.
+* deny - The media will not be mounted.
+* eject - The media will not be mounted and it will be ejected if possible. Note that some volumes are not defined as ejectable, so using the deny key may be the best solution. Not valid for unmount-controls.</string>
 							<key>pfm_name</key>
-							<string>action</string>
+							<string>ActionStringItem</string>
 							<key>pfm_range_list</key>
 							<array>
 								<string>authenticate</string>
@@ -553,9 +593,13 @@ This key is the default for media types that don't fall into other categories.</
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Action</string>
+							<string>One of the following values:
+* authenticate - User will be authenticated before media is mounted
+* read-only - The media will be mounted read-only. Not valid for unmount-controls.
+* deny - The media will not be mounted.
+* eject - The media will not be mounted and it will be ejected if possible. Note that some volumes are not defined as ejectable, so using the deny key may be the best solution. Not valid for unmount-controls.</string>
 							<key>pfm_name</key>
-							<string>action</string>
+							<string>ActionStringItem</string>
 							<key>pfm_range_list</key>
 							<array>
 								<string>authenticate</string>
@@ -594,9 +638,13 @@ This key is the default for media types that don't fall into other categories.</
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Action</string>
+							<string>One of the following values:
+* authenticate - User will be authenticated before media is mounted
+* read-only - The media will be mounted read-only. Not valid for unmount-controls.
+* deny - The media will not be mounted.
+* eject - The media will not be mounted and it will be ejected if possible. Note that some volumes are not defined as ejectable, so using the deny key may be the best solution. Not valid for unmount-controls.</string>
 							<key>pfm_name</key>
-							<string>action</string>
+							<string>ActionStringItem</string>
 							<key>pfm_range_list</key>
 							<array>
 								<string>authenticate</string>
@@ -625,6 +673,14 @@ This key is the default for media types that don't fall into other categories.</
 					<string>array</string>
 					<key>pfm_type_input</key>
 					<string>boolean</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>Unused; set to an empty string.</string>
+					<key>pfm_name</key>
+					<string>all-media</string>
+					<key>pfm_type</key>
+					<string>string</string>
 				</dict>
 			</array>
 			<key>pfm_title</key>
@@ -649,6 +705,8 @@ This key is the default for media types that don't fall into other categories.</
 					<key>pfm_description</key>
 					<string>A string or an array of media action strings. Internally installed SD cards and USB flash drives are included in the hard disk-external category.
 
+
+
 This key is the default for media types that don't fall into other categories.</string>
 					<key>pfm_name</key>
 					<string>harddisk-external</string>
@@ -656,9 +714,13 @@ This key is the default for media types that don't fall into other categories.</
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Action</string>
+							<string>One of the following values:
+* authenticate - User will be authenticated before media is mounted
+* read-only - The media will be mounted read-only. Not valid for unmount-controls.
+* deny - The media will not be mounted.
+* eject - The media will not be mounted and it will be ejected if possible. Note that some volumes are not defined as ejectable, so using the deny key may be the best solution. Not valid for unmount-controls.</string>
 							<key>pfm_name</key>
-							<string>action</string>
+							<string>ActionStringItem</string>
 							<key>pfm_range_list</key>
 							<array>
 								<string>authenticate</string>
@@ -697,9 +759,13 @@ This key is the default for media types that don't fall into other categories.</
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Action</string>
+							<string>One of the following values:
+* authenticate - User will be authenticated before media is mounted
+* read-only - The media will be mounted read-only. Not valid for unmount-controls.
+* deny - The media will not be mounted.
+* eject - The media will not be mounted and it will be ejected if possible. Note that some volumes are not defined as ejectable, so using the deny key may be the best solution. Not valid for unmount-controls.</string>
 							<key>pfm_name</key>
-							<string>action</string>
+							<string>ActionStringItem</string>
 							<key>pfm_range_list</key>
 							<array>
 								<string>authenticate</string>
@@ -738,9 +804,13 @@ This key is the default for media types that don't fall into other categories.</
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Action</string>
+							<string>One of the following values:
+* authenticate - User will be authenticated before media is mounted
+* read-only - The media will be mounted read-only. Not valid for unmount-controls.
+* deny - The media will not be mounted.
+* eject - The media will not be mounted and it will be ejected if possible. Note that some volumes are not defined as ejectable, so using the deny key may be the best solution. Not valid for unmount-controls.</string>
 							<key>pfm_name</key>
-							<string>action</string>
+							<string>ActionStringItem</string>
 							<key>pfm_range_list</key>
 							<array>
 								<string>authenticate</string>
@@ -779,9 +849,13 @@ This key is the default for media types that don't fall into other categories.</
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Action</string>
+							<string>One of the following values:
+* authenticate - User will be authenticated before media is mounted
+* read-only - The media will be mounted read-only. Not valid for unmount-controls.
+* deny - The media will not be mounted.
+* eject - The media will not be mounted and it will be ejected if possible. Note that some volumes are not defined as ejectable, so using the deny key may be the best solution. Not valid for unmount-controls.</string>
 							<key>pfm_name</key>
-							<string>action</string>
+							<string>ActionStringItem</string>
 							<key>pfm_range_list</key>
 							<array>
 								<string>authenticate</string>
@@ -820,9 +894,13 @@ This key is the default for media types that don't fall into other categories.</
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Action</string>
+							<string>One of the following values:
+* authenticate - User will be authenticated before media is mounted
+* read-only - The media will be mounted read-only. Not valid for unmount-controls.
+* deny - The media will not be mounted.
+* eject - The media will not be mounted and it will be ejected if possible. Note that some volumes are not defined as ejectable, so using the deny key may be the best solution. Not valid for unmount-controls.</string>
 							<key>pfm_name</key>
-							<string>action</string>
+							<string>ActionStringItem</string>
 							<key>pfm_range_list</key>
 							<array>
 								<string>authenticate</string>
@@ -861,9 +939,13 @@ This key is the default for media types that don't fall into other categories.</
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Action</string>
+							<string>One of the following values:
+* authenticate - User will be authenticated before media is mounted
+* read-only - The media will be mounted read-only. Not valid for unmount-controls.
+* deny - The media will not be mounted.
+* eject - The media will not be mounted and it will be ejected if possible. Note that some volumes are not defined as ejectable, so using the deny key may be the best solution. Not valid for unmount-controls.</string>
 							<key>pfm_name</key>
-							<string>action</string>
+							<string>ActionStringItem</string>
 							<key>pfm_range_list</key>
 							<array>
 								<string>authenticate</string>
@@ -902,9 +984,13 @@ This key is the default for media types that don't fall into other categories.</
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Action</string>
+							<string>One of the following values:
+* authenticate - User will be authenticated before media is mounted
+* read-only - The media will be mounted read-only. Not valid for unmount-controls.
+* deny - The media will not be mounted.
+* eject - The media will not be mounted and it will be ejected if possible. Note that some volumes are not defined as ejectable, so using the deny key may be the best solution. Not valid for unmount-controls.</string>
 							<key>pfm_name</key>
-							<string>action</string>
+							<string>ActionStringItem</string>
 							<key>pfm_range_list</key>
 							<array>
 								<string>authenticate</string>
@@ -943,9 +1029,13 @@ This key is the default for media types that don't fall into other categories.</
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Action</string>
+							<string>One of the following values:
+* authenticate - User will be authenticated before media is mounted
+* read-only - The media will be mounted read-only. Not valid for unmount-controls.
+* deny - The media will not be mounted.
+* eject - The media will not be mounted and it will be ejected if possible. Note that some volumes are not defined as ejectable, so using the deny key may be the best solution. Not valid for unmount-controls.</string>
 							<key>pfm_name</key>
-							<string>action</string>
+							<string>ActionStringItem</string>
 							<key>pfm_range_list</key>
 							<array>
 								<string>authenticate</string>
@@ -984,9 +1074,13 @@ This key is the default for media types that don't fall into other categories.</
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Action</string>
+							<string>One of the following values:
+* authenticate - User will be authenticated before media is mounted
+* read-only - The media will be mounted read-only. Not valid for unmount-controls.
+* deny - The media will not be mounted.
+* eject - The media will not be mounted and it will be ejected if possible. Note that some volumes are not defined as ejectable, so using the deny key may be the best solution. Not valid for unmount-controls.</string>
 							<key>pfm_name</key>
-							<string>action</string>
+							<string>ActionStringItem</string>
 							<key>pfm_range_list</key>
 							<array>
 								<string>authenticate</string>
@@ -1025,9 +1119,13 @@ This key is the default for media types that don't fall into other categories.</
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Action</string>
+							<string>One of the following values:
+* authenticate - User will be authenticated before media is mounted
+* read-only - The media will be mounted read-only. Not valid for unmount-controls.
+* deny - The media will not be mounted.
+* eject - The media will not be mounted and it will be ejected if possible. Note that some volumes are not defined as ejectable, so using the deny key may be the best solution. Not valid for unmount-controls.</string>
 							<key>pfm_name</key>
-							<string>action</string>
+							<string>ActionStringItem</string>
 							<key>pfm_range_list</key>
 							<array>
 								<string>authenticate</string>
@@ -1066,9 +1164,13 @@ This key is the default for media types that don't fall into other categories.</
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Action</string>
+							<string>One of the following values:
+* authenticate - User will be authenticated before media is mounted
+* read-only - The media will be mounted read-only. Not valid for unmount-controls.
+* deny - The media will not be mounted.
+* eject - The media will not be mounted and it will be ejected if possible. Note that some volumes are not defined as ejectable, so using the deny key may be the best solution. Not valid for unmount-controls.</string>
 							<key>pfm_name</key>
-							<string>action</string>
+							<string>ActionStringItem</string>
 							<key>pfm_range_list</key>
 							<array>
 								<string>authenticate</string>
@@ -1097,6 +1199,14 @@ This key is the default for media types that don't fall into other categories.</
 					<string>array</string>
 					<key>pfm_type_input</key>
 					<string>boolean</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>Unused; set to an empty string.</string>
+					<key>pfm_name</key>
+					<string>all-media</string>
+					<key>pfm_type</key>
+					<string>string</string>
 				</dict>
 			</array>
 			<key>pfm_title</key>
@@ -1121,6 +1231,8 @@ This key is the default for media types that don't fall into other categories.</
 					<key>pfm_description</key>
 					<string>A string or an array of media action strings. Internally installed SD cards and USB flash drives are included in the hard disk-external category.
 
+
+
 This key is the default for media types that don't fall into other categories.</string>
 					<key>pfm_name</key>
 					<string>harddisk-external</string>
@@ -1128,9 +1240,13 @@ This key is the default for media types that don't fall into other categories.</
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Action</string>
+							<string>One of the following values:
+* authenticate - User will be authenticated before media is mounted
+* read-only - The media will be mounted read-only. Not valid for unmount-controls.
+* deny - The media will not be mounted.
+* eject - The media will not be mounted and it will be ejected if possible. Note that some volumes are not defined as ejectable, so using the deny key may be the best solution. Not valid for unmount-controls.</string>
 							<key>pfm_name</key>
-							<string>action</string>
+							<string>ActionStringItem</string>
 							<key>pfm_range_list</key>
 							<array>
 								<string>authenticate</string>
@@ -1169,9 +1285,13 @@ This key is the default for media types that don't fall into other categories.</
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Action</string>
+							<string>One of the following values:
+* authenticate - User will be authenticated before media is mounted
+* read-only - The media will be mounted read-only. Not valid for unmount-controls.
+* deny - The media will not be mounted.
+* eject - The media will not be mounted and it will be ejected if possible. Note that some volumes are not defined as ejectable, so using the deny key may be the best solution. Not valid for unmount-controls.</string>
 							<key>pfm_name</key>
-							<string>action</string>
+							<string>ActionStringItem</string>
 							<key>pfm_range_list</key>
 							<array>
 								<string>authenticate</string>
@@ -1210,9 +1330,13 @@ This key is the default for media types that don't fall into other categories.</
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Action</string>
+							<string>One of the following values:
+* authenticate - User will be authenticated before media is mounted
+* read-only - The media will be mounted read-only. Not valid for unmount-controls.
+* deny - The media will not be mounted.
+* eject - The media will not be mounted and it will be ejected if possible. Note that some volumes are not defined as ejectable, so using the deny key may be the best solution. Not valid for unmount-controls.</string>
 							<key>pfm_name</key>
-							<string>action</string>
+							<string>ActionStringItem</string>
 							<key>pfm_range_list</key>
 							<array>
 								<string>authenticate</string>
@@ -1251,9 +1375,13 @@ This key is the default for media types that don't fall into other categories.</
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Action</string>
+							<string>One of the following values:
+* authenticate - User will be authenticated before media is mounted
+* read-only - The media will be mounted read-only. Not valid for unmount-controls.
+* deny - The media will not be mounted.
+* eject - The media will not be mounted and it will be ejected if possible. Note that some volumes are not defined as ejectable, so using the deny key may be the best solution. Not valid for unmount-controls.</string>
 							<key>pfm_name</key>
-							<string>action</string>
+							<string>ActionStringItem</string>
 							<key>pfm_range_list</key>
 							<array>
 								<string>authenticate</string>
@@ -1292,9 +1420,13 @@ This key is the default for media types that don't fall into other categories.</
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Action</string>
+							<string>One of the following values:
+* authenticate - User will be authenticated before media is mounted
+* read-only - The media will be mounted read-only. Not valid for unmount-controls.
+* deny - The media will not be mounted.
+* eject - The media will not be mounted and it will be ejected if possible. Note that some volumes are not defined as ejectable, so using the deny key may be the best solution. Not valid for unmount-controls.</string>
 							<key>pfm_name</key>
-							<string>action</string>
+							<string>ActionStringItem</string>
 							<key>pfm_range_list</key>
 							<array>
 								<string>authenticate</string>
@@ -1333,9 +1465,13 @@ This key is the default for media types that don't fall into other categories.</
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Action</string>
+							<string>One of the following values:
+* authenticate - User will be authenticated before media is mounted
+* read-only - The media will be mounted read-only. Not valid for unmount-controls.
+* deny - The media will not be mounted.
+* eject - The media will not be mounted and it will be ejected if possible. Note that some volumes are not defined as ejectable, so using the deny key may be the best solution. Not valid for unmount-controls.</string>
 							<key>pfm_name</key>
-							<string>action</string>
+							<string>ActionStringItem</string>
 							<key>pfm_range_list</key>
 							<array>
 								<string>authenticate</string>
@@ -1374,9 +1510,13 @@ This key is the default for media types that don't fall into other categories.</
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Action</string>
+							<string>One of the following values:
+* authenticate - User will be authenticated before media is mounted
+* read-only - The media will be mounted read-only. Not valid for unmount-controls.
+* deny - The media will not be mounted.
+* eject - The media will not be mounted and it will be ejected if possible. Note that some volumes are not defined as ejectable, so using the deny key may be the best solution. Not valid for unmount-controls.</string>
 							<key>pfm_name</key>
-							<string>action</string>
+							<string>ActionStringItem</string>
 							<key>pfm_range_list</key>
 							<array>
 								<string>authenticate</string>
@@ -1415,9 +1555,13 @@ This key is the default for media types that don't fall into other categories.</
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Action</string>
+							<string>One of the following values:
+* authenticate - User will be authenticated before media is mounted
+* read-only - The media will be mounted read-only. Not valid for unmount-controls.
+* deny - The media will not be mounted.
+* eject - The media will not be mounted and it will be ejected if possible. Note that some volumes are not defined as ejectable, so using the deny key may be the best solution. Not valid for unmount-controls.</string>
 							<key>pfm_name</key>
-							<string>action</string>
+							<string>ActionStringItem</string>
 							<key>pfm_range_list</key>
 							<array>
 								<string>authenticate</string>
@@ -1456,9 +1600,13 @@ This key is the default for media types that don't fall into other categories.</
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Action</string>
+							<string>One of the following values:
+* authenticate - User will be authenticated before media is mounted
+* read-only - The media will be mounted read-only. Not valid for unmount-controls.
+* deny - The media will not be mounted.
+* eject - The media will not be mounted and it will be ejected if possible. Note that some volumes are not defined as ejectable, so using the deny key may be the best solution. Not valid for unmount-controls.</string>
 							<key>pfm_name</key>
-							<string>action</string>
+							<string>ActionStringItem</string>
 							<key>pfm_range_list</key>
 							<array>
 								<string>authenticate</string>
@@ -1497,9 +1645,13 @@ This key is the default for media types that don't fall into other categories.</
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Action</string>
+							<string>One of the following values:
+* authenticate - User will be authenticated before media is mounted
+* read-only - The media will be mounted read-only. Not valid for unmount-controls.
+* deny - The media will not be mounted.
+* eject - The media will not be mounted and it will be ejected if possible. Note that some volumes are not defined as ejectable, so using the deny key may be the best solution. Not valid for unmount-controls.</string>
 							<key>pfm_name</key>
-							<string>action</string>
+							<string>ActionStringItem</string>
 							<key>pfm_range_list</key>
 							<array>
 								<string>authenticate</string>
@@ -1538,9 +1690,13 @@ This key is the default for media types that don't fall into other categories.</
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Action</string>
+							<string>One of the following values:
+* authenticate - User will be authenticated before media is mounted
+* read-only - The media will be mounted read-only. Not valid for unmount-controls.
+* deny - The media will not be mounted.
+* eject - The media will not be mounted and it will be ejected if possible. Note that some volumes are not defined as ejectable, so using the deny key may be the best solution. Not valid for unmount-controls.</string>
 							<key>pfm_name</key>
-							<string>action</string>
+							<string>ActionStringItem</string>
 							<key>pfm_range_list</key>
 							<array>
 								<string>authenticate</string>
@@ -1569,6 +1725,14 @@ This key is the default for media types that don't fall into other categories.</
 					<string>array</string>
 					<key>pfm_type_input</key>
 					<string>boolean</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>Unused; set to an empty string.</string>
+					<key>pfm_name</key>
+					<string>all-media</string>
+					<key>pfm_type</key>
+					<string>string</string>
 				</dict>
 			</array>
 			<key>pfm_title</key>
@@ -1638,9 +1802,9 @@ This key is the default for media types that don't fall into other categories.</
 	<key>pfm_title</key>
 	<string>Allowed Media and Menu Bar Extras</string>
 	<key>pfm_unique</key>
-	<true/>
+	<false/>
 	<key>pfm_version</key>
-	<integer>5</integer>
+	<integer>6</integer>
 	<key>pfmx_supported_oses</key>
 	<dict>
 		<key>macOS</key>
@@ -1656,6 +1820,8 @@ This key is the default for media types that don't fall into other categories.</
 			<key>pfmx_multiple</key>
 			<false/>
 			<key>pfmx_requires_dep</key>
+			<false/>
+			<key>pfmx_supervised</key>
 			<false/>
 			<key>pfmx_user_approved_mdm</key>
 			<false/>

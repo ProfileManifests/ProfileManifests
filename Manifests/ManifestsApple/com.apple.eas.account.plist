@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>pfm_description</key>
-	<string>Use this section to define settings for the Exchange ActiveSync account.</string>
+	<string>The payload that configures Exchange ActiveSync accounts.</string>
 	<key>pfm_description_reference</key>
 	<string>In iOS, the Exchange payload is designated by specifying com.apple.eas.account as the PayloadType value. This payload configures an Exchange Active Sync Contacts account on the device. Mail and Calendar are not config- ured using this payload on iOS.</string>
 	<key>pfm_documentation_url</key>
@@ -17,7 +17,7 @@
 	<key>pfm_ios_min</key>
 	<string>4.0</string>
 	<key>pfm_last_modified</key>
-	<date>2025-03-15T16:11:44Z</date>
+	<date>2025-08-04T08:25:08Z</date>
 	<key>pfm_note</key>
 	<string>As with VPN and Wi-Fi configurations, it is possible to associate an SCEP credential with an Exchange configu- ration via the PayloadCertificateUUID key.</string>
 	<key>pfm_platforms</key>
@@ -28,7 +28,7 @@
 	<array>
 		<dict>
 			<key>pfm_default</key>
-			<string>Use this section to define settings for the Exchange ActiveSync account.</string>
+			<string>The payload that configures Exchange ActiveSync accounts.</string>
 			<key>pfm_description</key>
 			<string>The human-readable description of this payload. This description appears on the Detail screen.</string>
 			<key>pfm_name</key>
@@ -58,7 +58,8 @@
 			<key>pfm_default</key>
 			<string>com.apple.eas.account</string>
 			<key>pfm_description</key>
-			<string>The reverse-DNS-style identifier for the payload. This identifier is usually the same as the TopLevel value, with an additional appended component. This string must be unique within the profile.
+			<string>The reverse-DNS-style identifier for the payload. This identifier is usually the same as the 'TopLevel' value, with an additional appended component. This string must be unique within the profile.
+
 During a profile replacement, the system updates payloads with the same 'PayloadIdentifier' and 'PayloadUUID' in the old and new profiles.</string>
 			<key>pfm_name</key>
 			<string>PayloadIdentifier</string>
@@ -88,6 +89,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string></string>
 			<key>pfm_description</key>
 			<string>The globally unique identifier for the payload. The actual content is unimportant, but must be globally unique. In macOS, use 'uuidgen' to generate UUIDs.
+
 During a profile replacement, the system updates payloads with the same 'PayloadIdentifier' and 'PayloadUUID' in the old and new profiles.</string>
 			<key>pfm_format</key>
 			<string>^[0-9A-Za-z]{8}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{12}$</string>
@@ -229,6 +231,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<false/>
 			<key>pfm_description</key>
 			<string>If 'true', enables OAuth for authentication. If enabled, don't specify a password.
+
 Available only in iOS 12.0 and above.</string>
 			<key>pfm_ios_min</key>
 			<string>12.0</string>
@@ -528,6 +531,7 @@ Available only in iOS 12.0 and above.</string>
 			<false/>
 			<key>pfm_description</key>
 			<string>If 'true', the system displays the per-message encryption switch in the Mail Compose UI.
+
 Available in iOS 8.0 and later. As of iOS 12.0, this key is deprecated. Use 'SMIMEEnableEncryptionPerMessageSwitch' instead.</string>
 			<key>pfm_ios_deprecated</key>
 			<string>12.0</string>
@@ -692,6 +696,8 @@ Available in iOS 8.0 and later. As of iOS 12.0, this key is deprecated. Use 'SMI
 			<true/>
 			<key>pfm_description</key>
 			<string>If 'false', the system disables the Calendars service for this account. The user can reenable Calendars service in Settings unless 'EnableCalendarsUserOverridable' is 'false'.
+
+Note:
 At least of the following fields needs to be 'true': 'EnableMail', 'EnableContacts', 'EnableCalendars', 'EnableReminders', and 'EnableNotes'.</string>
 			<key>pfm_ios_min</key>
 			<string>13.0</string>
@@ -717,6 +723,8 @@ At least of the following fields needs to be 'true': 'EnableMail', 'EnableContac
 			<true/>
 			<key>pfm_description</key>
 			<string>If 'false', the system disables the Contacts service for this account. The user can reenable Contacts service in Settings unless 'EnableContactsUserOverridable' is 'false'.
+
+Note:
 At least of the following fields needs to be 'true': 'EnableMail', 'EnableContacts', 'EnableCalendars', 'EnableReminders', and 'EnableNotes'.</string>
 			<key>pfm_ios_min</key>
 			<string>13.0</string>
@@ -742,6 +750,8 @@ At least of the following fields needs to be 'true': 'EnableMail', 'EnableContac
 			<true/>
 			<key>pfm_description</key>
 			<string>If 'false', the system disables the Mail service for this account. The user can reenable Mail service in Settings unless 'EnableMailUserOverridable' is 'false'.
+
+Note:
 At least of the following fields needs to be 'true': 'EnableMail', 'EnableContacts', 'EnableCalendars', 'EnableReminders', and 'EnableNotes'.</string>
 			<key>pfm_ios_min</key>
 			<string>13.0</string>
@@ -767,6 +777,8 @@ At least of the following fields needs to be 'true': 'EnableMail', 'EnableContac
 			<true/>
 			<key>pfm_description</key>
 			<string>If 'false', the system disables the Notes service for this account. The user can reenable Notes service in Settings unless 'EnableNotesUserOverridable' is 'false'.
+
+Note:
 At least of the following fields needs to be 'true': 'EnableMail', 'EnableContacts', 'EnableCalendars', 'EnableReminders', and 'EnableNotes'.</string>
 			<key>pfm_ios_min</key>
 			<string>13.0</string>
@@ -792,6 +804,8 @@ At least of the following fields needs to be 'true': 'EnableMail', 'EnableContac
 			<true/>
 			<key>pfm_description</key>
 			<string>If 'false', the system disables the Reminders service for this account. The user can reenable Reminders service in Settings unless 'EnableRemindersUserOverridable' is 'false'.
+
+Note:
 At least of the following fields needs to be 'true': 'EnableMail', 'EnableContacts', 'EnableCalendars', 'EnableReminders', and 'EnableNotes'.</string>
 			<key>pfm_ios_min</key>
 			<string>13.0</string>
@@ -941,6 +955,7 @@ At least of the following fields needs to be 'true': 'EnableMail', 'EnableContac
 			<integer>7</integer>
 			<key>pfm_description</key>
 			<string>The number of days in the past to sync mail on the device.
+
 For no limit, use the value '0'.</string>
 			<key>pfm_name</key>
 			<string>MailNumberOfPastDaysToSync</string>

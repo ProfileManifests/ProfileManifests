@@ -3,7 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>pfm_description</key>
-	<string>AirPlay settings</string>
+	<string>The payload that configures AirPlay settings.</string>
+	<key>pfm_description_reference</key>
+	<string>The AirPlay payload is designated by specifying com.apple.airplay as the PayloadType value. This payload is supported on iOS 7.0 and later and on macOS 10.10 and later.</string>
 	<key>pfm_domain</key>
 	<string>com.apple.airplay</string>
 	<key>pfm_format_version</key>
@@ -13,7 +15,7 @@
 	<key>pfm_ios_min</key>
 	<string>7.0</string>
 	<key>pfm_last_modified</key>
-	<date>2024-12-13T08:12:33Z</date>
+	<date>2025-08-04T08:25:08Z</date>
 	<key>pfm_macos_min</key>
 	<string>10.10</string>
 	<key>pfm_platforms</key>
@@ -25,7 +27,7 @@
 	<array>
 		<dict>
 			<key>pfm_default</key>
-			<string>AirPlay settings</string>
+			<string>The payload that configures AirPlay settings.</string>
 			<key>pfm_description</key>
 			<string>The human-readable description of this payload. This description appears on the Detail screen.</string>
 			<key>pfm_name</key>
@@ -53,7 +55,8 @@
 			<key>pfm_default</key>
 			<string>com.apple.airplay</string>
 			<key>pfm_description</key>
-			<string>The reverse-DNS-style identifier for the payload. This identifier is usually the same as the TopLevel value, with an additional appended component. This string must be unique within the profile.
+			<string>The reverse-DNS-style identifier for the payload. This identifier is usually the same as the 'TopLevel' value, with an additional appended component. This string must be unique within the profile.
+
 During a profile replacement, the system updates payloads with the same 'PayloadIdentifier' and 'PayloadUUID' in the old and new profiles.</string>
 			<key>pfm_name</key>
 			<string>PayloadIdentifier</string>
@@ -83,6 +86,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string></string>
 			<key>pfm_description</key>
 			<string>The globally unique identifier for the payload. The actual content is unimportant, but must be globally unique. In macOS, use 'uuidgen' to generate UUIDs.
+
 During a profile replacement, the system updates payloads with the same 'PayloadIdentifier' and 'PayloadUUID' in the old and new profiles.</string>
 			<key>pfm_format</key>
 			<string>^[0-9A-Za-z]{8}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{12}$</string>
@@ -152,8 +156,11 @@ During a profile replacement, the system updates payloads with the same 'Payload
 						<dict>
 							<key>pfm_description</key>
 							<string>The device ID of the AirPlay destination in the format 'xx:xx:xx:xx:xx:xx'. This field isn't case-sensitive.
+
 The system limits the list of visible AirPlay destinations to devices that are present in the 'AllowList' field of all installed AirPlay payloads.
+
 Specifying the same MACAddress more than once, whether in the same payload across different payloads, results in undefined behavior.
+
 As of tvOS 18, 'DeviceID' isn't supported.</string>
 							<key>pfm_format</key>
 							<string>^([0-9A-Fa-f]{2}:){5}([0-9A-Fa-f]{2})$</string>
@@ -186,6 +193,7 @@ As of tvOS 18, 'DeviceID' isn't supported.</string>
 						<dict>
 							<key>pfm_description</key>
 							<string>The name of the AirPlay device.
+
 The system limits the list of visible AirPlay destinations to devices that are present in the 'AllowList' field of all installed AirPlay payloads.</string>
 							<key>pfm_ios_min</key>
 							<string>18.0</string>
@@ -308,8 +316,11 @@ The system limits the list of visible AirPlay destinations to devices that are p
 						<dict>
 							<key>pfm_description</key>
 							<string>The device ID of the AirPlay destination in the format 'xx:xx:xx:xx:xx:xx'. This field isn't case-sensitive.
+
 The system limits the list of visible AirPlay destinations to devices that are present in the 'AllowList' field of all installed AirPlay payloads.
+
 Specifying the same MACAddress more than once, whether in the same payload across different payloads, results in undefined behavior.
+
 As of tvOS 18, 'DeviceID' isn't supported.</string>
 							<key>pfm_format</key>
 							<string>^([0-9A-Fa-f]{2}:){5}([0-9A-Fa-f]{2})$</string>
@@ -342,6 +353,7 @@ As of tvOS 18, 'DeviceID' isn't supported.</string>
 						<dict>
 							<key>pfm_description</key>
 							<string>The name of the AirPlay device.
+
 The system limits the list of visible AirPlay destinations to devices that are present in the 'AllowList' field of all installed AirPlay payloads.</string>
 							<key>pfm_ios_min</key>
 							<string>18.0</string>
@@ -476,7 +488,8 @@ The system limits the list of visible AirPlay destinations to devices that are p
 						<dict>
 							<key>pfm_description</key>
 							<string>The device ID of the AirPlay destination; used in macOS.
-In macOS 15 and later, 'DeviceID' is deprecated as tvOS 18 AirPlay destinations do not support it; use 'DeviceName' instead.</string>
+
+Deprecated in macOS 15 and later as tvOS 18 AirPlay destinations don't support it; use 'DeviceName' instead.</string>
 							<key>pfm_format</key>
 							<string>^([0-9A-Fa-f]{2}:){5}([0-9A-Fa-f]{2})$</string>
 							<key>pfm_macos_deprecated</key>
