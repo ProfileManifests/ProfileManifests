@@ -13,7 +13,7 @@
 	<key>pfm_interaction</key>
 	<string>exclusive</string>
 	<key>pfm_last_modified</key>
-	<date>2025-08-11T12:20:32Z</date>
+	<date>2025-08-11T15:50:00Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -323,7 +323,7 @@ Updates never applied = Never update Chrome</string>
 						</dict>
 						<dict>
 							<key>pfm_default</key>
-							<string>Stable</string>
+							<string>stable</string>
 							<key>pfm_description</key>
 							<string>Choose the Stable, Extended stable, Beta, or Dev Chrome browser update channel for Chrome version 90 or above.
 Google Software Update will not downgrade Chrome to a lower version when switching channels.
