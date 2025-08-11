@@ -568,11 +568,11 @@
 		<key>com.google.Keystone</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-08-04T08:25:08Z</date>
+			<date>2025-08-11T12:20:32Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.google.Keystone.plist</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<key>com.google.drivefs.settings</key>
 		<dict>
@@ -2445,6 +2445,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2025-08-04T10:10:52Z</date>
+	<date>2025-08-11T12:26:45Z</date>
 </dict>
 </plist>
