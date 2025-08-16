@@ -8,6 +8,8 @@
 	<string>The Identification payload is designated by specifying com.apple.configurationprofile.identification value as the PayloadType value.
 This payload allows you to save names of the account user and prompt text. If left blank, the user has to provide this information when he or she installs the profile.
 The Identification payload is not supported in iOS.</string>
+	<key>pfm_documentation_url</key>
+	<string>https://developer.apple.com/documentation/devicemanagement/identification</string>
 	<key>pfm_domain</key>
 	<string>com.apple.configurationprofile.identification</string>
 	<key>pfm_format_version</key>
@@ -15,7 +17,7 @@ The Identification payload is not supported in iOS.</string>
 	<key>pfm_interaction</key>
 	<string>exclusive</string>
 	<key>pfm_last_modified</key>
-	<date>2025-08-04T08:25:08Z</date>
+	<date>2025-08-15T19:32:34Z</date>
 	<key>pfm_macos_deprecated</key>
 	<string>15.4</string>
 	<key>pfm_macos_min</key>

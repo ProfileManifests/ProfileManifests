@@ -12,6 +12,8 @@ Cellular payloads have two important installation requirements:
 • Nomorethanonecellularpayloadcanbeinstalledatanytime.
 • AcellularpayloadcannotbeinstalledifanAPNpayloadisalreadyinstalled.
 This payload replaces the com.apple.managedCarrier payload, which is supported, but deprecated.</string>
+	<key>pfm_documentation_url</key>
+	<string>https://developer.apple.com/documentation/devicemanagement/cellular</string>
 	<key>pfm_domain</key>
 	<string>com.apple.cellular</string>
 	<key>pfm_format_version</key>
@@ -21,7 +23,7 @@ This payload replaces the com.apple.managedCarrier payload, which is supported, 
 	<key>pfm_ios_min</key>
 	<string>7.0</string>
 	<key>pfm_last_modified</key>
-	<date>2025-08-04T08:25:08Z</date>
+	<date>2025-08-15T19:32:34Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>iOS</string>

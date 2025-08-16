@@ -6,6 +6,8 @@
 	<string>The payload that configures FileVault.</string>
 	<key>pfm_description_reference</key>
 	<string>In macOS 10.9, you can use FileVault 2 to perform full XTS-AES 128 encryption on the contents of a volume. FileVault 2 payloads are designated by specifying com.apple.MCX.FileVault2 as the PayloadType value. Removal of the FileVault payload does not disable FileVault.</string>
+	<key>pfm_documentation_url</key>
+	<string>https://developer.apple.com/documentation/devicemanagement/fdefilevault</string>
 	<key>pfm_domain</key>
 	<string>com.apple.MCX.FileVault2</string>
 	<key>pfm_format_version</key>
@@ -13,7 +15,7 @@
 	<key>pfm_interaction</key>
 	<string>undefined</string>
 	<key>pfm_last_modified</key>
-	<date>2025-08-04T08:25:08Z</date>
+	<date>2025-08-15T19:32:34Z</date>
 	<key>pfm_macos_max</key>
 	<string>10.12.6</string>
 	<key>pfm_macos_min</key>
