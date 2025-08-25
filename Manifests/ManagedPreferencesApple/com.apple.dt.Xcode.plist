@@ -9,7 +9,7 @@
 	<key>pfm_format_version</key>
 	<integer>1</integer>
 	<key>pfm_last_modified</key>
-	<date>2025-08-20T16:09:15Z</date>
+	<date>2025-08-25T15:54:21Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -165,7 +165,7 @@ A profile can consist of payloads with different version numbers. For example, c
 			<key>pfm_documentation_url</key>
 			<string>https://developer.apple.com/documentation/xcode-release-notes/xcode-26-release-notes</string>
 			<key>pfm_name</key>
-			<string>AssistantAllowExternalIntegrations</string>
+			<string>CodingAssistantAllowExternalIntegrations</string>
 			<key>pfm_title</key>
 			<string>Allow Coding Assistant</string>
 			<key>pfm_type</key>
