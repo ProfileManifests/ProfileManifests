@@ -3,19 +3,19 @@
 <plist version="1.0">
 <dict>
 	<key>pfm_app_min</key>
-	<string>1.67</string>
+	<string>1.99</string>
 	<key>pfm_app_url</key>
 	<string>https://code.visualstudio.com/</string>
 	<key>pfm_description</key>
 	<string>Preferences for bundle ID com.microsoft.VSCode were automatically generated from a sampled configuration profile.</string>
 	<key>pfm_documentation_url</key>
-	<string>https://code.visualstudio.com/docs/setup/enterprise#_configure-automatic-updates</string>
+	<string>https://code.visualstudio.com/docs/setup/enterprise</string>
 	<key>pfm_domain</key>
 	<string>com.microsoft.VSCode</string>
 	<key>pfm_format_version</key>
 	<integer>1</integer>
 	<key>pfm_last_modified</key>
-	<date>2025-05-28T16:01:53Z</date>
+	<date>2025-09-02T13:46:19Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -121,78 +121,78 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>string</string>
 		</dict>
 		<dict>
-			<key>pfm_app_min</key>
-			<string>1.99</string>
 			<key>pfm_default</key>
-			<false/>
+			<true/>
 			<key>pfm_description</key>
 			<string>Enable using tools contributed by third-party extensions.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/microsoft/vscode/blob/f562c9d3e85b683f6f8ff75aff280cb74ffbaaae/src/vs/workbench/contrib/chat/browser/chat.contribution.ts#L411</string>
 			<key>pfm_name</key>
 			<string>ChatAgentExtensionTools</string>
 			<key>pfm_title</key>
-			<string>Chat Agent Extension Tools</string>
+			<string>Enable Chat Agent Extension Tools</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 		</dict>
 		<dict>
-			<key>pfm_app_min</key>
-			<string>1.99</string>
 			<key>pfm_default</key>
-			<false/>
+			<true/>
 			<key>pfm_description</key>
-			<string>Controls if agent mode is enabled in chat.</string>
+			<string>Enable agent mode for chat. When this is enabled, agent mode can be activated via the dropdown in the view.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/microsoft/vscode/blob/f562c9d3e85b683f6f8ff75aff280cb74ffbaaae/src/vs/workbench/contrib/chat/browser/chat.contribution.ts#L421</string>
 			<key>pfm_name</key>
 			<string>ChatAgentMode</string>
 			<key>pfm_title</key>
-			<string>Chat Agent Mode</string>
+			<string>Enable Chat Agent Mode</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 		</dict>
 		<dict>
-			<key>pfm_app_min</key>
-			<string>1.99</string>
 			<key>pfm_default</key>
-			<false/>
+			<true/>
 			<key>pfm_description</key>
 			<string>Enable integration with Model Context Protocol (MCP) servers.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/microsoft/vscode/blob/f562c9d3e85b683f6f8ff75aff280cb74ffbaaae/src/vs/workbench/contrib/chat/browser/chat.contribution.ts#L320</string>
 			<key>pfm_name</key>
 			<string>ChatMCP</string>
 			<key>pfm_title</key>
-			<string>Chat MCP</string>
+			<string>Enable Chat MCP</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 		</dict>
 		<dict>
-			<key>pfm_app_min</key>
-			<string>1.99</string>
 			<key>pfm_default</key>
-			<false/>
+			<true/>
 			<key>pfm_description</key>
-			<string>Enable reusable prompt and instruction files in chat.</string>
+			<string>Enables reusable prompt and instruction files in Chat sessions.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/microsoft/vscode/blob/f562c9d3e85b683f6f8ff75aff280cb74ffbaaae/src/vs/workbench/contrib/chat/browser/chat.contribution.ts#L467</string>
 			<key>pfm_name</key>
 			<string>ChatPromptFiles</string>
 			<key>pfm_title</key>
-			<string>Chat Prompt Files</string>
+			<string>Enable Chat Prompt Files</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 		</dict>
 		<dict>
-			<key>pfm_app_min</key>
-			<string>1.99</string>
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>Enable auto-approval for agent mode tools.</string>
+			<string>Global auto approve also known as "YOLO mode" disables manual approval completely for all tools in all workspaces, allowing the agent to act fully autonomously. This is extremely dangerous and is *never* recommended, even containerized environments like Codespaces and Dev Containers have user keys forwarded into the container that could be compromised.
+			
+			This feature disables critical security protections and makes it much easier for an attacker to compromise the machine.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/microsoft/vscode/blob/f562c9d3e85b683f6f8ff75aff280cb74ffbaaae/src/vs/workbench/contrib/chat/browser/chat.contribution.ts#L238</string>
 			<key>pfm_name</key>
 			<string>ChatToolsAutoApprove</string>
 			<key>pfm_title</key>
-			<string>Chat Tools Auto Approve</string>
+			<string>Enable Chat Tools Auto Approve</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 		</dict>
 		<dict>
-			<key>pfm_app_min</key>
-			<string>1.67</string>
 			<key>pfm_default</key>
 			<string>default</string>
 			<key>pfm_description</key>
@@ -221,8 +221,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>string</string>
 		</dict>
 		<dict>
-			<key>pfm_app_min</key>
-			<string>1.96</string>
 			<key>pfm_description</key>
 			<string>Controls which extensions can be installed. The value of this policy is a JSON string that contains the allowed extensions.</string>
 			<key>pfm_documentation_url</key>
@@ -237,14 +235,14 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>{"microsoft": true, "github": true}</string>
 		</dict>
 		<dict>
-			<key>pfm_app_min</key>
-			<string>1.99</string>
 			<key>pfm_description</key>
 			<string>Configure the Marketplace service URL to connect to.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/microsoft/vscode/blob/f562c9d3e85b683f6f8ff75aff280cb74ffbaaae/src/vs/workbench/contrib/extensions/browser/extensions.contribution.ts#L280</string>
 			<key>pfm_name</key>
 			<string>ExtensionGalleryServiceUrl</string>
 			<key>pfm_note</key>
-			<string>This undocumented property is not widely available and may be removed in the near future according to discussion on Visual Studio Code issue https://github.com/microsoft/vscode/issues/246420.</string>
+			<string>This property is not widely available and may be removed in the near future according to discussion on Visual Studio Code issue https://github.com/microsoft/vscode/issues/246420.</string>
 			<key>pfm_title</key>
 			<string>Extension Gallery Service URL</string>
 			<key>pfm_type</key>
@@ -252,7 +250,19 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>1.99</string>
+			<string>1.101</string>
+			<key>pfm_description</key>
+			<string>Configure the MCP Gallery service URL to connect to.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/microsoft/vscode/blob/f562c9d3e85b683f6f8ff75aff280cb74ffbaaae/src/vs/workbench/contrib/chat/browser/chat.contribution.ts#L454</string>
+			<key>pfm_name</key>
+			<string>McpGalleryServiceUrl</string>
+			<key>pfm_title</key>
+			<string>MCP Gallery Service URL</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
 			<key>pfm_description</key>
 			<string>Controls the level of telemetry data.</string>
 			<key>pfm_documentation_url</key>
@@ -279,8 +289,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>string</string>
 		</dict>
 		<dict>
-			<key>pfm_app_min</key>
-			<string>1.99</string>
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
@@ -303,6 +311,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 	<key>pfm_unique</key>
 	<true/>
 	<key>pfm_version</key>
-	<integer>1</integer>
+	<integer>2</integer>
 </dict>
 </plist>
