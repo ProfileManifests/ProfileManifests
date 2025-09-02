@@ -811,11 +811,11 @@
 		<key>com.microsoft.VSCode</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-05-28T16:01:53Z</date>
+			<date>2025-09-02T13:46:19Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.microsoft.VSCode.plist</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<key>com.microsoft.Word</key>
 		<dict>
@@ -2445,6 +2445,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2025-08-25T15:57:10Z</date>
+	<date>2025-09-02T13:49:50Z</date>
 </dict>
 </plist>
