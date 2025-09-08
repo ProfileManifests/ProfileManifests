@@ -795,7 +795,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>To ensure the Application is protected by the on-device system extension, to prevent misuse and tampering.</string>
+			<string>Elevate24 v2.3+ Only. To ensure the Application is protected by the on-device system extension, to prevent misuse and tampering.</string>
 			<key>pfm_documentation_url</key>
 			<string>UPDATE URL</string>
 			<key>pfm_name</key>
