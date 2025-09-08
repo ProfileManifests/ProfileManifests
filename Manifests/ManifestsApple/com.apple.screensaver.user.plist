@@ -7,6 +7,8 @@
 	<key>pfm_description_reference</key>
 	<string>User level screensaver payloads are designated by specifying com.apple.screensaver.user as the PayloadType.
 The user level screensaver settings are specific to a user, instead of the device.</string>
+	<key>pfm_documentation_url</key>
+	<string>https://developer.apple.com/documentation/devicemanagement/screensaveruser</string>
 	<key>pfm_domain</key>
 	<string>com.apple.screensaver.user</string>
 	<key>pfm_format_version</key>
@@ -14,7 +16,7 @@ The user level screensaver settings are specific to a user, instead of the devic
 	<key>pfm_interaction</key>
 	<string>exclusive</string>
 	<key>pfm_last_modified</key>
-	<date>2024-04-18T09:04:00Z</date>
+	<date>2025-08-15T19:32:34Z</date>
 	<key>pfm_macos_min</key>
 	<string>10.11</string>
 	<key>pfm_platforms</key>

@@ -6,6 +6,8 @@
 	<string>App Store settings</string>
 	<key>pfm_description_reference</key>
 	<string>The AppStore payload is designated by specifying com.apple.appstore as the PayloadType value. It establishes macOS AppStore restrictions and is supported on the User channel.</string>
+	<key>pfm_documentation_url</key>
+	<string>https://developer.apple.com/documentation/devicemanagement/appstore</string>
 	<key>pfm_domain</key>
 	<string>com.apple.appstore</string>
 	<key>pfm_format_version</key>
@@ -13,7 +15,7 @@
 	<key>pfm_interaction</key>
 	<string>exclusive</string>
 	<key>pfm_last_modified</key>
-	<date>2023-08-15T08:00:00Z</date>
+	<date>2025-08-15T19:32:34Z</date>
 	<key>pfm_macos_min</key>
 	<string>10.9</string>
 	<key>pfm_platforms</key>

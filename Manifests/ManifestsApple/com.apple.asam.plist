@@ -10,6 +10,8 @@ This payload grants Autonomous Single App Mode capabilities for specific applica
 and later.
 It must be installed as a device profile. Only one payload of this type can be installed on a system. This payload can only be installed via a "user approved" MDM server.
 To be granted access, applications must be signed with the specified bundle identifier and team identifier using an Apple-issued production developer certificate. Applications must specify the com.apple.developer.assessment entitlement with a value of true.</string>
+	<key>pfm_documentation_url</key>
+	<string>https://developer.apple.com/documentation/devicemanagement/autonomoussingleappmode</string>
 	<key>pfm_domain</key>
 	<string>com.apple.asam</string>
 	<key>pfm_format_version</key>
@@ -17,7 +19,7 @@ To be granted access, applications must be signed with the specified bundle iden
 	<key>pfm_interaction</key>
 	<string>exclusive</string>
 	<key>pfm_last_modified</key>
-	<date>2023-08-15T08:00:00Z</date>
+	<date>2025-08-15T19:32:34Z</date>
 	<key>pfm_macos_min</key>
 	<string>10.13.4</string>
 	<key>pfm_note</key>

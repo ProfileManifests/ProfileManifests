@@ -14,6 +14,8 @@ Note these cautions:
 • Thepreviouspayload(com.apple.security.FDERecoveryRedirect)isnolongersupported.Itcanstill be installed, but it will be ignored. This lets servers send out the same profile to old and new clients.
 • Ifonlyanold-styleredirectionpayloadisinstalledatthetimeFileVaultisturnedon(bymeansoftheSecurity Preferences pane), an error will be displayed and FileVault will not be enabled.
 • No warning or error will be provided if FileVault is already enabled and an old-style payload is installed. In this case, itʼs assumed that the recovery key has already been escrowed with the server.</string>
+	<key>pfm_documentation_url</key>
+	<string>https://developer.apple.com/documentation/devicemanagement/fderecoverykeyescrow</string>
 	<key>pfm_domain</key>
 	<string>com.apple.security.FDERecoveryKeyEscrow</string>
 	<key>pfm_format_version</key>
@@ -21,7 +23,7 @@ Note these cautions:
 	<key>pfm_interaction</key>
 	<string>exclusive</string>
 	<key>pfm_last_modified</key>
-	<date>2023-08-15T08:00:00Z</date>
+	<date>2025-08-15T19:32:34Z</date>
 	<key>pfm_macos_min</key>
 	<string>10.13</string>
 	<key>pfm_platforms</key>

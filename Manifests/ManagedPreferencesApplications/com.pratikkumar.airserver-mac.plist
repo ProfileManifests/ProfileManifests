@@ -270,6 +270,8 @@ A profile can consist of payloads with different version numbers. For example, c
 			<string>When set to false, will not submit this anonymous computer profile data.</string>
 			<key>pfm_name</key>
 			<string>SUSendProfileInfo</string>
+			<key>pfm_title</key>
+			<string>Send Anonymous Profile Information</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 		</dict>
@@ -278,6 +280,8 @@ A profile can consist of payloads with different version numbers. For example, c
 			<string>Enable this setting if you want to use the native macOS fullscreen mode - slower.</string>
 			<key>pfm_name</key>
 			<string>UseLionStyleFullscreen</string>
+			<key>pfm_title</key>
+			<string>Use Lion-Style Full Screen</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 		</dict>
@@ -286,6 +290,8 @@ A profile can consist of payloads with different version numbers. For example, c
 			<string>Use this field to override the name of the computer that appears on the AirPlay network.</string>
 			<key>pfm_name</key>
 			<string>UserDeviceName</string>
+			<key>pfm_title</key>
+			<string>User-Visible Device Name</string>
 			<key>pfm_type</key>
 			<string>string</string>
 		</dict>
@@ -318,6 +324,8 @@ A profile can consist of payloads with different version numbers. For example, c
 			<string>UserLosslessAudioReceiverName</string>
 			<key>pfm_type</key>
 			<string>string</string>
+			<key>pfm_title</key>
+			<string>User-Visible Lossless Recevier Device Name</string>
 			<key>pfm_value_placeholder</key>
 			<string>Lossless Quality Receiver Name</string>
 		</dict>
@@ -328,6 +336,8 @@ A profile can consist of payloads with different version numbers. For example, c
 			<string>Have AirServer launch on system startup.</string>
 			<key>pfm_name</key>
 			<string>autoLaunch</string>
+			<key>pfm_title</key>
+			<string>Launch at System Startup</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 		</dict>
@@ -386,6 +396,8 @@ A profile can consist of payloads with different version numbers. For example, c
 				<string>450 ms</string>
 				<string>500 ms</string>
 			</array>
+			<key>pfm_title</key>
+			<string>Audio Buffer Size</string>
 			<key>pfm_type</key>
 			<string>real</string>
 		</dict>
@@ -400,6 +412,8 @@ A profile can consist of payloads with different version numbers. For example, c
 				<string>Onscreen Code</string>
 				<string>Ask me</string>
 			</array>
+			<key>pfm_title</key>
+			<string>Password Type</string>
 			<key>pfm_type</key>
 			<string>string</string>
 		</dict>
@@ -410,6 +424,8 @@ A profile can consist of payloads with different version numbers. For example, c
 			<string>When set to false, AirServer will not automatically check for software updates.</string>
 			<key>pfm_name</key>
 			<string>com.airserverapp.alwaysOnTop</string>
+			<key>pfm_title</key>
+			<string>Always on Top</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 		</dict>
@@ -446,6 +462,8 @@ A profile can consist of payloads with different version numbers. For example, c
 			<string>If enabled, changing the volume on your iOS device will change the volume of your preferred output sound device; otherwise AirServer will lower the streaming music volume.</string>
 			<key>pfm_name</key>
 			<string>com.airserverapp.linkMasterVolume</string>
+			<key>pfm_title</key>
+			<string>Link iOS Device Volume</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 		</dict>
@@ -473,6 +491,8 @@ A profile can consist of payloads with different version numbers. For example, c
 				<string>Projector 1024x768</string>
 				<string>Projector 1600x1200</string>
 			</array>
+			<key>pfm_title</key>
+			<string>Optimize Mirroring for Device Type</string>
 			<key>pfm_type</key>
 			<string>string</string>
 		</dict>
@@ -481,6 +501,8 @@ A profile can consist of payloads with different version numbers. For example, c
 			<string>Enabling this setting will lower the mirroring quality by half but uses four times less bandwidth.</string>
 			<key>pfm_name</key>
 			<string>com.airserverapp.slowNetwork</string>
+			<key>pfm_title</key>
+			<string>Use Slow Network Mode</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 		</dict>
@@ -489,6 +511,8 @@ A profile can consist of payloads with different version numbers. For example, c
 			<string>Enable this setting if your AirPlay device regularly freezes or if you notice green artifacts when using AirPlay mirroring. This is common on older Macs that do not properly support hardware-accelerated video encoding.</string>
 			<key>pfm_name</key>
 			<string>com.airserverapp.SoftwareDecoderOnly</string>
+			<key>pfm_title</key>
+			<string>Use Software Decoder Only</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 		</dict>
@@ -499,6 +523,8 @@ A profile can consist of payloads with different version numbers. For example, c
 			<string>When set to true, AirServer will show up in the Dock and not in the menu bar.</string>
 			<key>pfm_name</key>
 			<string>showInDock</string>
+			<key>pfm_title</key>
+			<string>Show in Dock</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 		</dict>

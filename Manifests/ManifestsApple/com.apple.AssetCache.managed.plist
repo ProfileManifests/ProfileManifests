@@ -6,6 +6,8 @@
 	<string>Content Caching settings</string>
 	<key>pfm_description_reference</key>
 	<string>The Content Caching payload is designated by specifying com.apple.AssetCache.managed as the PayloadType. It configures the Content Caching service.</string>
+	<key>pfm_documentation_url</key>
+	<string>https://developer.apple.com/documentation/devicemanagement/contentcaching</string>
 	<key>pfm_domain</key>
 	<string>com.apple.AssetCache.managed</string>
 	<key>pfm_format_version</key>
@@ -13,7 +15,7 @@
 	<key>pfm_interaction</key>
 	<string>exclusive</string>
 	<key>pfm_last_modified</key>
-	<date>2025-01-15T11:02:30Z</date>
+	<date>2025-08-15T19:32:34Z</date>
 	<key>pfm_macos_min</key>
 	<string>10.13.4</string>
 	<key>pfm_platforms</key>

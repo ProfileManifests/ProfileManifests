@@ -13,7 +13,7 @@
 	<key>pfm_format_version</key>
 	<integer>1</integer>
 	<key>pfm_last_modified</key>
-	<date>2024-05-18T11:03:00Z</date>
+	<date>2025-04-23T00:00:00Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -163,6 +163,16 @@ A profile can consist of payloads with different version numbers. For example, c
 						</dict>
 						<dict>
 							<key>pfm_description</key>
+							<string>The expected SHA256 of the script being run.</string>
+							<key>pfm_name</key>
+							<string>SHA256</string>
+							<key>pfm_title</key>
+							<string>SHA256</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+						<dict>
+							<key>pfm_description</key>
 							<string>The expected MD5 of the script being run.</string>
 							<key>pfm_name</key>
 							<string>MD5</string>
@@ -180,6 +190,16 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>Arguments</string>
 							<key>pfm_type</key>
 							<string>string</string>
+						</dict>
+						<dict>
+							<key>pfm_description</key>
+							<string>Enable this option to run the script as the logged in user.</string>
+							<key>pfm_name</key>
+							<string>AsUser</string>
+							<key>pfm_title</key>
+							<string>Run as User</string>
+							<key>pfm_type</key>
+							<string>boolean</string>
 						</dict>
 					</array>
 					<key>pfm_type</key>
@@ -305,6 +325,16 @@ A profile can consist of payloads with different version numbers. For example, c
 						</dict>
 						<dict>
 							<key>pfm_description</key>
+							<string>The expected SHA256 of the package being installed.</string>
+							<key>pfm_name</key>
+							<string>SHA256</string>
+							<key>pfm_title</key>
+							<string>SHA256</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+						<dict>
+							<key>pfm_description</key>
 							<string>The expected MD5 of the package being installed.</string>
 							<key>pfm_name</key>
 							<string>MD5</string>
@@ -387,6 +417,16 @@ A profile can consist of payloads with different version numbers. For example, c
 						</dict>
 						<dict>
 							<key>pfm_description</key>
+							<string>The expected SHA256 of the script being run.</string>
+							<key>pfm_name</key>
+							<string>SHA256</string>
+							<key>pfm_title</key>
+							<string>SHA256</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+						<dict>
+							<key>pfm_description</key>
 							<string>The expected MD5 of the script being run.</string>
 							<key>pfm_name</key>
 							<string>MD5</string>
@@ -404,6 +444,16 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>Arguments</string>
 							<key>pfm_type</key>
 							<string>string</string>
+						</dict>
+						<dict>
+							<key>pfm_description</key>
+							<string>Enable this option to run the script as the logged in user.</string>
+							<key>pfm_name</key>
+							<string>AsUser</string>
+							<key>pfm_title</key>
+							<string>Run as User</string>
+							<key>pfm_type</key>
+							<string>boolean</string>
 						</dict>
 						<dict>
 							<key>pfm_description</key>
@@ -480,6 +530,8 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>string</string>
 						</dict>
 						<dict>
+							<key>pfm_app_min</key>
+							<string>2.1</string>
 							<key>pfm_description</key>
 							<string>The subtitle text to appear on this line item.</string>
 							<key>pfm_name</key>
@@ -500,12 +552,90 @@ A profile can consist of payloads with different version numbers. For example, c
 			<string>array</string>
 		</dict>
 		<dict>
+			<key>pfm_description</key>
+			<string>Define scripts that are run just before completion dialogs. For reporting webhooks, cleanup tasks, etc. Similar to InitialScripts, these items do not appear on the List View.</string>
+			<key>pfm_name</key>
+			<string>FinalScripts</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_subkeys</key>
+					<array>
+						<dict>
+							<key>pfm_description</key>
+							<string>The name you want to appear SwiftDialog and logs. Final Scripts will only be shown to the user if the item Fails.</string>
+							<key>pfm_name</key>
+							<string>DisplayName</string>
+							<key>pfm_title</key>
+							<string>Display Name</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+						<dict>
+							<key>pfm_description</key>
+							<string>A path to the script you want to run. Can be a local file path or a URL.</string>
+							<key>pfm_name</key>
+							<string>ScriptPath</string>
+							<key>pfm_title</key>
+							<string>Script Path</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+						<dict>
+							<key>pfm_description</key>
+							<string>The expected SHA256 of the script being run.</string>
+							<key>pfm_name</key>
+							<string>SHA256</string>
+							<key>pfm_title</key>
+							<string>SHA256</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+						<dict>
+							<key>pfm_description</key>
+							<string>The expected MD5 of the script being run.</string>
+							<key>pfm_name</key>
+							<string>MD5</string>
+							<key>pfm_title</key>
+							<string>MD5</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+						<dict>
+							<key>pfm_description</key>
+							<string>Arguments you want to pass to the script when it is run.</string>
+							<key>pfm_name</key>
+							<string>Arguments</string>
+							<key>pfm_title</key>
+							<string>Arguments</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+						<dict>
+							<key>pfm_description</key>
+							<string>Enable this option to run the script as the logged in user.</string>
+							<key>pfm_name</key>
+							<string>AsUser</string>
+							<key>pfm_title</key>
+							<string>Run as User</string>
+							<key>pfm_type</key>
+							<string>boolean</string>
+						</dict>
+					</array>
+					<key>pfm_type</key>
+					<string>dictionary</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>FinalScripts</string>
+			<key>pfm_type</key>
+			<string>array</string>
+		</dict>
+		<dict>
 			<key>pfm_app_min</key>
 			<string>2.2</string>
-			<key>pfm_default</key>
-			<integer>300</integer>
 			<key>pfm_description</key>
-			<string>When using WaitFor, enter the number of seconds you wish to wait before Baseline considers remaining items a failure. This timer does not start until all other items are processed.</string>
+			<string>When using WaitFor, enter the number of seconds you wish to wait before Baseline considers remaining items a failure. This timer does not start until all other items are processed. Default if key is omitted is 600.</string>
 			<key>pfm_name</key>
 			<string>WaitForTimeout</string>
 			<key>pfm_title</key>
@@ -587,7 +717,7 @@ A profile can consist of payloads with different version numbers. For example, c
 		</dict>
 		<dict>
 			<key>pfm_description</key>
-			<string>This setting controls whether Baseline will reinstall SwiftDialog as the final step before completion. Default behavior if this key is omitted will reinstall SwiftDialog if a custom PNG is found in /Library/Application Support/Dialog/Dialog.png. Leave this as default if you use Baseline to deploy a custom SwiftDialog icon. Set to false if you do not want Baseline to ever reinstall SwiftDialog. Set to True if you always want to reinstall SwiftDialog after each Baseline.</string>
+			<string>Deprecated: This feature was removed in v.2.3, as it is no longer needed. This setting controls whether Baseline will reinstall SwiftDialog as the final step before completion. Default behavior if this key is omitted will reinstall SwiftDialog if a custom PNG is found in /Library/Application Support/Dialog/Dialog.png. Leave this as default if you use Baseline to deploy a custom SwiftDialog icon. Set to false if you do not want Baseline to ever reinstall SwiftDialog. Set to True if you always want to reinstall SwiftDialog after each Baseline.</string>
 			<key>pfm_name</key>
 			<string>ReinstallDialog</string>
 			<key>pfm_title</key>
@@ -642,6 +772,20 @@ A profile can consist of payloads with different version numbers. For example, c
 			<string>JamfVerbose</string>
 			<key>pfm_title</key>
 			<string>Verbose Jamf Items</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2.3</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>If set to true, Baseline will close the list view window before running FinalScripts. Use this option if you want to utilize FinalScripts to have the user complete actions prior to the Baseline completion dialog.</string>
+			<key>pfm_name</key>
+			<string>CloseListBeforeFinalScripts</string>
+			<key>pfm_title</key>
+			<string>Close List View Before Final Scripts</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 		</dict>
@@ -705,6 +849,6 @@ A profile can consist of payloads with different version numbers. For example, c
 	<key>pfm_unique</key>
 	<true/>
 	<key>pfm_version</key>
-	<integer>4</integer>
+	<integer>5</integer>
 </dict>
 </plist>

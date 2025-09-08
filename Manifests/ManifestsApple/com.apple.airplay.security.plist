@@ -7,6 +7,8 @@
 	<key>pfm_description_reference</key>
 	<string>The AirPlay Security payload locks the Apple TV to a particular style of AirPlay Security. The AirPlay Security payload is designated by specifying com.apple.airplay.security as the PayloadType vaue.
 This payload is supported on tvOS 11.0 and later.</string>
+	<key>pfm_documentation_url</key>
+	<string>https://developer.apple.com/documentation/devicemanagement/airplaysecurity</string>
 	<key>pfm_domain</key>
 	<string>com.apple.airplay.security</string>
 	<key>pfm_format_version</key>
@@ -14,7 +16,7 @@ This payload is supported on tvOS 11.0 and later.</string>
 	<key>pfm_interaction</key>
 	<string>exclusive</string>
 	<key>pfm_last_modified</key>
-	<date>2019-10-11T08:52:32Z</date>
+	<date>2025-08-15T19:32:34Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>tvOS</string>

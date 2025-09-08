@@ -8,6 +8,8 @@
 	<string>Screensaver payloads are designated by specifying com.apple.screensaver as the PayloadType.
 The device level screensaver payload can be used to customize the screensaver and enable or disable the screen lock
 password function.</string>
+	<key>pfm_documentation_url</key>
+	<string>https://developer.apple.com/documentation/devicemanagement/screensaver</string>
 	<key>pfm_domain</key>
 	<string>com.apple.screensaver</string>
 	<key>pfm_format_version</key>
@@ -15,7 +17,7 @@ password function.</string>
 	<key>pfm_interaction</key>
 	<string>exclusive</string>
 	<key>pfm_last_modified</key>
-	<date>2024-04-18T09:04:00Z</date>
+	<date>2025-08-15T19:32:34Z</date>
 	<key>pfm_macos_min</key>
 	<string>10.11</string>
 	<key>pfm_platforms</key>

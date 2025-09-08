@@ -8,6 +8,8 @@
 	<string>The Desktop payload is designated by specifying com.apple.desktop as the PayloadType.
 This payload sets up macOS Desktop settings and restrictions. It is supported on the user channel and on macOS
 10.10 and later.</string>
+	<key>pfm_documentation_url</key>
+	<string>https://developer.apple.com/documentation/devicemanagement/desktop</string>
 	<key>pfm_domain</key>
 	<string>com.apple.desktop</string>
 	<key>pfm_format_version</key>
@@ -15,7 +17,7 @@ This payload sets up macOS Desktop settings and restrictions. It is supported on
 	<key>pfm_interaction</key>
 	<string>exclusive</string>
 	<key>pfm_last_modified</key>
-	<date>2021-05-03T15:38:44Z</date>
+	<date>2025-08-15T19:32:34Z</date>
 	<key>pfm_macos_min</key>
 	<string>10.10</string>
 	<key>pfm_platforms</key>

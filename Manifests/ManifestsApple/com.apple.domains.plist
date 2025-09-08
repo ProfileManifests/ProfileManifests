@@ -6,6 +6,8 @@
 	<string>Use this section to define Domains settings.</string>
 	<key>pfm_description_reference</key>
 	<string>This payload defines domains that are under an enterpriseʼs management. This payload is designated by the com.apple.domains PayloadType value.</string>
+	<key>pfm_documentation_url</key>
+	<string>https://developer.apple.com/documentation/devicemanagement/domains</string>
 	<key>pfm_domain</key>
 	<string>com.apple.domains</string>
 	<key>pfm_format_version</key>
@@ -15,7 +17,7 @@
 	<key>pfm_ios_min</key>
 	<string>8.0</string>
 	<key>pfm_last_modified</key>
-	<date>2024-12-13T08:49:11Z</date>
+	<date>2025-08-15T19:32:34Z</date>
 	<key>pfm_macos_min</key>
 	<string>10.10</string>
 	<key>pfm_platforms</key>

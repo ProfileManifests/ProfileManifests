@@ -13,7 +13,7 @@
 	<key>pfm_format_version</key>
 	<integer>1</integer>
 	<key>pfm_last_modified</key>
-	<date>2024-05-17T16:05:57Z</date>
+	<date>2025-07-14T18:36:00Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -4198,7 +4198,7 @@ To get the correct entry you will need to set the font in BBEdit first, then ope
 				<string>Only if the printed document is wrapped for display</string>
 			</array>
 			<key>pfm_title</key>
-			<string>Time stamp</string>
+			<string>Wrap Text to Printed Page</string>
 			<key>pfm_type</key>
 			<string>integer</string>
 		</dict>

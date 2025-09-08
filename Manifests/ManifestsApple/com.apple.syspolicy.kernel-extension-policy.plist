@@ -4,6 +4,8 @@
 <dict>
 	<key>pfm_description</key>
 	<string>Kernel Extension Policy settings</string>
+	<key>pfm_documentation_url</key>
+	<string>https://developer.apple.com/documentation/devicemanagement/systempolicykernelextensions</string>
 	<key>pfm_domain</key>
 	<string>com.apple.syspolicy.kernel-extension-policy</string>
 	<key>pfm_format_version</key>
@@ -11,7 +13,7 @@
 	<key>pfm_interaction</key>
 	<string>exclusive</string>
 	<key>pfm_last_modified</key>
-	<date>2021-12-18T19:55:17Z</date>
+	<date>2025-08-15T19:32:34Z</date>
 	<key>pfm_macos_min</key>
 	<string>10.13.2</string>
 	<key>pfm_platforms</key>

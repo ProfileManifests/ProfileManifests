@@ -4,6 +4,8 @@
 <dict>
 	<key>pfm_description</key>
 	<string>Lock Screen Message settings</string>
+	<key>pfm_documentation_url</key>
+	<string>https://developer.apple.com/documentation/devicemanagement/lockscreenmessage</string>
 	<key>pfm_domain</key>
 	<string>com.apple.shareddeviceconfiguration</string>
 	<key>pfm_format_version</key>
@@ -13,7 +15,7 @@
 	<key>pfm_ios_min</key>
 	<string>9.3</string>
 	<key>pfm_last_modified</key>
-	<date>2021-12-22T05:49:22Z</date>
+	<date>2025-08-15T19:32:34Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>iOS</string>

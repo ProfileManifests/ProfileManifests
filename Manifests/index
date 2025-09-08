@@ -7,11 +7,11 @@
 		<key>.GlobalPreferences</key>
 		<dict>
 			<key>modified</key>
-			<date>2023-08-15T08:00:00Z</date>
+			<date>2025-08-15T19:32:34Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApple/com.apple.GlobalPreferences.plist</string>
 			<key>version</key>
-			<integer>7</integer>
+			<integer>8</integer>
 		</dict>
 		<key>com.apple.AdLib</key>
 		<dict>
@@ -34,11 +34,11 @@
 		<key>com.apple.Safari</key>
 		<dict>
 			<key>modified</key>
-			<date>2023-08-15T08:00:00Z</date>
+			<date>2025-02-26T02:52:49Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApple/com.apple.safari.plist</string>
 			<key>version</key>
-			<integer>10</integer>
+			<integer>11</integer>
 		</dict>
 		<key>com.apple.Safari.SandboxBroker</key>
 		<dict>
@@ -115,11 +115,11 @@
 		<key>com.apple.dt.Xcode</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-01-27T01:01:44Z</date>
+			<date>2025-08-25T15:54:21Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApple/com.apple.dt.Xcode.plist</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<key>com.apple.finder</key>
 		<dict>
@@ -442,7 +442,7 @@
 		<key>com.barebones.bbedit</key>
 		<dict>
 			<key>modified</key>
-			<date>2024-05-17T16:05:57Z</date>
+			<date>2025-07-14T18:36:00Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.barebones.bbedit.plist</string>
 			<key>version</key>
@@ -484,6 +484,15 @@
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
+		<key>com.dare.zappl.preferences</key>
+		<dict>
+			<key>modified</key>
+			<date>2025-04-25T15:30:48Z</date>
+			<key>path</key>
+			<string>Manifests/ManagedPreferencesApplications/com.dare.zappl.preferences.plist</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 		<key>com.docker.config</key>
 		<dict>
 			<key>modified</key>
@@ -514,11 +523,11 @@
 		<key>com.github.macadmins.Nudge</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-02-13T00:00:00Z</date>
+			<date>2025-05-13T20:40:28Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.github.macadmins.Nudge.plist</string>
 			<key>version</key>
-			<integer>4</integer>
+			<integer>5</integer>
 		</dict>
 		<key>com.github.macadmins.SupportCompanion</key>
 		<dict>
@@ -559,11 +568,11 @@
 		<key>com.google.Keystone</key>
 		<dict>
 			<key>modified</key>
-			<date>2023-08-15T08:00:00Z</date>
+			<date>2025-08-11T15:50:00Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.google.Keystone.plist</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<key>com.google.drivefs.settings</key>
 		<dict>
@@ -667,11 +676,11 @@
 		<key>com.jamf.setupmanager</key>
 		<dict>
 			<key>modified</key>
-			<date>2024-12-29T05:55:49Z</date>
+			<date>2025-06-25T19:00:00Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.jamf.setupmanager.plist</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>4</integer>
 		</dict>
 		<key>com.jamf.trust</key>
 		<dict>
@@ -694,16 +703,16 @@
 		<key>com.jigsaw24.Elevate24</key>
 		<dict>
 			<key>modified</key>
-			<date>2024-12-29T05:56:33Z</date>
+			<date>2025-03-20T14:56:33Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.jigsaw24.Elevate24.plist</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<key>com.jigsaw24.Elevate24SecurityExtension</key>
 		<dict>
 			<key>modified</key>
-			<date>2024-01-01T10:35:00Z</date>
+			<date>2025-03-20T14:56:33Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.jigsaw24.ElevateSecurityLogs.plist</string>
 			<key>version</key>
@@ -901,20 +910,20 @@
 		<key>com.okta.mobile</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-02-16T02:52:57Z</date>
+			<date>2025-07-15T15:19:08Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.okta.mobile.plist</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<key>com.okta.mobile.auth-service-extension</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-02-16T02:52:57Z</date>
+			<date>2025-07-15T15:19:08Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.okta.mobile.auth-service-extension.plist</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<key>com.papercut.printdeploy.client</key>
 		<dict>
@@ -946,11 +955,11 @@
 		<key>com.secondsonconsulting.baseline</key>
 		<dict>
 			<key>modified</key>
-			<date>2024-05-18T11:03:00Z</date>
+			<date>2025-04-23T00:00:00Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.secondsonconsulting.baseline.plist</string>
 			<key>version</key>
-			<integer>4</integer>
+			<integer>5</integer>
 		</dict>
 		<key>com.secondsonconsulting.renew</key>
 		<dict>
@@ -991,7 +1000,7 @@
 		<key>com.tinyspeck.slackmacgap</key>
 		<dict>
 			<key>modified</key>
-			<date>2023-04-09T15:57:47Z</date>
+			<date>2025-02-11T16:43:03Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.tinyspeck.slackmacgap.plist</string>
 			<key>version</key>
@@ -1018,11 +1027,11 @@
 		<key>com.twocanoes.xcreds</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-02-04T20:37:42Z</date>
+			<date>2025-05-12T19:13:52Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.twocanoes.xcreds.plist</string>
 			<key>version</key>
-			<integer>11</integer>
+			<integer>13</integer>
 		</dict>
 		<key>com.unity3d.UnityEditor5.x</key>
 		<dict>
@@ -1054,11 +1063,11 @@
 		<key>corp.sap.privileges</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-01-15T16:36:56Z</date>
+			<date>2025-08-25T11:45:50Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/corp.sap.privileges.plist</string>
 			<key>version</key>
-			<integer>4</integer>
+			<integer>6</integer>
 		</dict>
 		<key>cx.c3.theunarchiver</key>
 		<dict>
@@ -1077,6 +1086,15 @@
 			<string>Manifests/ManagedPreferencesApplications/de.fau.rrze.NetworkShareMounter.plist</string>
 			<key>version</key>
 			<integer>3</integer>
+		</dict>
+		<key>dev.firezone.firezone</key>
+		<dict>
+			<key>modified</key>
+			<date>2025-05-26T15:53:00Z</date>
+			<key>path</key>
+			<string>Manifests/ManagedPreferencesApplications/dev.firezone.firezone.plist</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<key>edu.ncsu.confboard</key>
 		<dict>
@@ -1105,23 +1123,32 @@
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
+		<key>io.macadmins.Outset</key>
+		<dict>
+			<key>modified</key>
+			<date>2025-07-15T13:24:42Z</date>
+			<key>path</key>
+			<string>Manifests/ManagedPreferencesApplications/io.macadmins.Outset.plist</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 		<key>io.tailscale.ipn.macos</key>
 		<dict>
 			<key>modified</key>
-			<date>2024-02-22T08:00:00Z</date>
+			<date>2025-02-07T19:22:04Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/io.tailscale.ipn.macos.plist</string>
 			<key>version</key>
-			<integer>4</integer>
+			<integer>5</integer>
 		</dict>
 		<key>io.tailscale.ipn.macsys</key>
 		<dict>
 			<key>modified</key>
-			<date>2024-02-22T08:00:00Z</date>
+			<date>2025-02-07T19:22:04Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/io.tailscale.ipn.macsys.plist</string>
 			<key>version</key>
-			<integer>4</integer>
+			<integer>5</integer>
 		</dict>
 		<key>menu.nomad.NoMADPro</key>
 		<dict>
@@ -1162,11 +1189,11 @@
 		<key>net.glencode.Particulars</key>
 		<dict>
 			<key>modified</key>
-			<date>2024-06-29T14:00:00Z</date>
+			<date>2025-03-14T13:00:00Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/net.glencode.Particulars.plist</string>
 			<key>version</key>
-			<integer>4</integer>
+			<integer>5</integer>
 		</dict>
 		<key>net.glencode.Particulars.Widget</key>
 		<dict>
@@ -1189,7 +1216,7 @@
 		<key>org.mozilla.firefox</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-02-04T16:20:00Z</date>
+			<date>2025-04-29T17:40:13Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/org.mozilla.firefox.plist</string>
 			<key>version</key>
@@ -1230,6 +1257,15 @@
 			<string>Manifests/ManagedPreferencesApplications/us.zoom.config.plist</string>
 			<key>version</key>
 			<integer>6</integer>
+		</dict>
+		<key>xyz.techitout.appAutoPatch</key>
+		<dict>
+			<key>modified</key>
+			<date>2025-05-16T13:25:42Z</date>
+			<key>path</key>
+			<string>Manifests/ManagedPreferencesApplications/xyz.techitout.appAutoPatch.plist</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 	</dict>
 	<key>ManagedPreferencesDeveloper</key>
@@ -1348,7 +1384,7 @@
 		<key>com.apple.ADCertificate.managed</key>
 		<dict>
 			<key>modified</key>
-			<date>2021-12-22T05:49:22Z</date>
+			<date>2025-08-15T19:32:34Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.ADCertificate.managed.plist</string>
 			<key>version</key>
@@ -1357,7 +1393,7 @@
 		<key>com.apple.AIM.account</key>
 		<dict>
 			<key>modified</key>
-			<date>2021-11-17T16:39:02Z</date>
+			<date>2025-08-15T19:32:34Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.AIM.account.plist</string>
 			<key>version</key>
@@ -1366,7 +1402,7 @@
 		<key>com.apple.AssetCache.managed</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-01-15T11:02:30Z</date>
+			<date>2025-08-15T19:32:34Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.AssetCache.managed.plist</string>
 			<key>version</key>
@@ -1375,7 +1411,7 @@
 		<key>com.apple.Dictionary</key>
 		<dict>
 			<key>modified</key>
-			<date>2021-11-17T16:39:02Z</date>
+			<date>2025-08-15T19:32:34Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.Dictionary.plist</string>
 			<key>version</key>
@@ -1384,7 +1420,7 @@
 		<key>com.apple.DirectoryService.managed</key>
 		<dict>
 			<key>modified</key>
-			<date>2024-03-04T09:35:44Z</date>
+			<date>2025-08-15T19:32:34Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.DirectoryService.managed.plist</string>
 			<key>version</key>
@@ -1393,7 +1429,7 @@
 		<key>com.apple.DiscRecording</key>
 		<dict>
 			<key>modified</key>
-			<date>2018-07-18T08:58:49Z</date>
+			<date>2025-08-15T19:32:34Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.DiscRecording.plist</string>
 			<key>version</key>
@@ -1456,7 +1492,7 @@
 		<key>com.apple.MCX.FileVault2</key>
 		<dict>
 			<key>modified</key>
-			<date>2024-12-13T08:12:27Z</date>
+			<date>2025-08-15T19:32:34Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.MCX.FileVault2.plist</string>
 			<key>version</key>
@@ -1465,7 +1501,7 @@
 		<key>com.apple.MCX.TimeMachine</key>
 		<dict>
 			<key>modified</key>
-			<date>2019-11-07T15:29:16Z</date>
+			<date>2025-08-15T19:32:34Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.MCX.TimeMachine.plist</string>
 			<key>version</key>
@@ -1474,7 +1510,7 @@
 		<key>com.apple.NSExtension</key>
 		<dict>
 			<key>modified</key>
-			<date>2019-03-01T07:09:15Z</date>
+			<date>2025-08-15T19:32:34Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.NSExtension.plist</string>
 			<key>version</key>
@@ -1483,7 +1519,7 @@
 		<key>com.apple.SetupAssistant.managed</key>
 		<dict>
 			<key>modified</key>
-			<date>2024-10-23T08:11:19Z</date>
+			<date>2025-03-03T11:08:08Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.SetupAssistant.managed.plist</string>
 			<key>version</key>
@@ -1537,7 +1573,7 @@
 		<key>com.apple.airplay</key>
 		<dict>
 			<key>modified</key>
-			<date>2024-12-13T08:12:33Z</date>
+			<date>2025-08-15T19:32:34Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.airplay.plist</string>
 			<key>version</key>
@@ -1546,7 +1582,7 @@
 		<key>com.apple.airplay.security</key>
 		<dict>
 			<key>modified</key>
-			<date>2019-10-11T08:52:32Z</date>
+			<date>2025-08-15T19:32:34Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.airplay.security.plist</string>
 			<key>version</key>
@@ -1564,7 +1600,7 @@
 		<key>com.apple.app.lock</key>
 		<dict>
 			<key>modified</key>
-			<date>2023-08-15T08:00:00Z</date>
+			<date>2025-08-15T19:32:34Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.app.lock.plist</string>
 			<key>version</key>
@@ -1573,16 +1609,16 @@
 		<key>com.apple.applicationaccess-iOS</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-01-28T21:00:50Z</date>
+			<date>2025-04-04T13:24:55Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.applicationaccess-iOS.plist</string>
 			<key>version</key>
-			<integer>17</integer>
+			<integer>19</integer>
 		</dict>
 		<key>com.apple.applicationaccess-macOS</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-01-28T21:00:50Z</date>
+			<date>2025-07-07T09:35:09Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.applicationaccess-macOS.plist</string>
 			<key>version</key>
@@ -1591,7 +1627,7 @@
 		<key>com.apple.applicationaccess-tvOS</key>
 		<dict>
 			<key>modified</key>
-			<date>2024-12-13T08:12:27Z</date>
+			<date>2025-04-04T13:24:55Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.applicationaccess-tvOS.plist</string>
 			<key>version</key>
@@ -1609,7 +1645,7 @@
 		<key>com.apple.appstore</key>
 		<dict>
 			<key>modified</key>
-			<date>2023-08-15T08:00:00Z</date>
+			<date>2025-08-15T19:32:34Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.appstore.plist</string>
 			<key>version</key>
@@ -1618,7 +1654,7 @@
 		<key>com.apple.asam</key>
 		<dict>
 			<key>modified</key>
-			<date>2023-08-15T08:00:00Z</date>
+			<date>2025-08-15T19:32:34Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.asam.plist</string>
 			<key>version</key>
@@ -1636,7 +1672,7 @@
 		<key>com.apple.caldav.account</key>
 		<dict>
 			<key>modified</key>
-			<date>2023-08-15T08:00:00Z</date>
+			<date>2025-08-15T19:32:34Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.caldav.account.plist</string>
 			<key>version</key>
@@ -1645,7 +1681,7 @@
 		<key>com.apple.carddav.account</key>
 		<dict>
 			<key>modified</key>
-			<date>2019-09-17T08:52:32Z</date>
+			<date>2025-08-15T19:32:34Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.carddav.account.plist</string>
 			<key>version</key>
@@ -1654,7 +1690,7 @@
 		<key>com.apple.cellular</key>
 		<dict>
 			<key>modified</key>
-			<date>2022-08-31T02:01:52Z</date>
+			<date>2025-08-15T19:32:34Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.cellular.plist</string>
 			<key>version</key>
@@ -1672,7 +1708,7 @@
 		<key>com.apple.conferenceroomdisplay</key>
 		<dict>
 			<key>modified</key>
-			<date>2023-08-15T08:00:00Z</date>
+			<date>2025-08-15T19:32:34Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.conferenceroomdisplay.plist</string>
 			<key>version</key>
@@ -1681,7 +1717,7 @@
 		<key>com.apple.configurationprofile.identification</key>
 		<dict>
 			<key>modified</key>
-			<date>2024-03-04T09:35:44Z</date>
+			<date>2025-08-15T19:32:34Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.configurationprofile.identification.plist</string>
 			<key>version</key>
@@ -1708,7 +1744,7 @@
 		<key>com.apple.desktop</key>
 		<dict>
 			<key>modified</key>
-			<date>2021-05-03T15:38:44Z</date>
+			<date>2025-08-15T19:32:34Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.desktop.plist</string>
 			<key>version</key>
@@ -1726,7 +1762,7 @@
 		<key>com.apple.dnsSettings.managed</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-01-15T11:02:30Z</date>
+			<date>2025-04-04T13:00:05Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.dnsSettings.managed.plist</string>
 			<key>version</key>
@@ -1735,16 +1771,16 @@
 		<key>com.apple.dock</key>
 		<dict>
 			<key>modified</key>
-			<date>2024-09-18T11:20:15Z</date>
+			<date>2025-06-03T08:45:33Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.dock.plist</string>
 			<key>version</key>
-			<integer>7</integer>
+			<integer>8</integer>
 		</dict>
 		<key>com.apple.domains</key>
 		<dict>
 			<key>modified</key>
-			<date>2024-12-13T08:49:11Z</date>
+			<date>2025-08-15T19:32:34Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.domains.plist</string>
 			<key>version</key>
@@ -1753,16 +1789,16 @@
 		<key>com.apple.eas.account</key>
 		<dict>
 			<key>modified</key>
-			<date>2024-04-17T07:26:36Z</date>
+			<date>2025-03-03T11:08:08Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.eas.account.plist</string>
 			<key>version</key>
-			<integer>5</integer>
+			<integer>6</integer>
 		</dict>
 		<key>com.apple.education</key>
 		<dict>
 			<key>modified</key>
-			<date>2024-09-12T10:00:38Z</date>
+			<date>2025-08-15T19:32:34Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.education.plist</string>
 			<key>version</key>
@@ -1780,16 +1816,16 @@
 		<key>com.apple.extensiblesso</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-01-15T16:36:56Z</date>
+			<date>2025-04-04T13:24:55Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.extensiblesso.plist</string>
 			<key>version</key>
-			<integer>7</integer>
+			<integer>8</integer>
 		</dict>
 		<key>com.apple.familycontrols.contentfilter</key>
 		<dict>
 			<key>modified</key>
-			<date>2020-09-16T02:20:42Z</date>
+			<date>2025-08-15T19:32:34Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.familycontrols.contentfilter.plist</string>
 			<key>version</key>
@@ -1816,7 +1852,7 @@
 		<key>com.apple.finder</key>
 		<dict>
 			<key>modified</key>
-			<date>2023-03-06T08:05:44Z</date>
+			<date>2025-08-15T19:32:34Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.finder.plist</string>
 			<key>version</key>
@@ -1852,7 +1888,7 @@
 		<key>com.apple.gamed</key>
 		<dict>
 			<key>modified</key>
-			<date>2021-05-03T15:38:44Z</date>
+			<date>2025-08-15T19:32:34Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.gamed.plist</string>
 			<key>version</key>
@@ -1870,7 +1906,7 @@
 		<key>com.apple.google-oauth</key>
 		<dict>
 			<key>modified</key>
-			<date>2018-07-18T08:58:51Z</date>
+			<date>2025-08-15T19:32:34Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.google-oauth.plist</string>
 			<key>version</key>
@@ -1888,7 +1924,7 @@
 		<key>com.apple.jabber.account</key>
 		<dict>
 			<key>modified</key>
-			<date>2021-11-17T16:39:02Z</date>
+			<date>2025-08-15T19:32:34Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.jabber.account.plist</string>
 			<key>version</key>
@@ -1897,7 +1933,7 @@
 		<key>com.apple.ldap.account</key>
 		<dict>
 			<key>modified</key>
-			<date>2018-07-18T08:58:51Z</date>
+			<date>2025-08-15T19:32:34Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.ldap.account.plist</string>
 			<key>version</key>
@@ -1933,7 +1969,7 @@
 		<key>com.apple.mail.managed</key>
 		<dict>
 			<key>modified</key>
-			<date>2023-08-17T11:42:43Z</date>
+			<date>2025-08-15T19:32:34Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.mail.managed.plist</string>
 			<key>version</key>
@@ -1942,7 +1978,7 @@
 		<key>com.apple.mcxloginscripts</key>
 		<dict>
 			<key>modified</key>
-			<date>2023-08-15T08:00:00Z</date>
+			<date>2025-08-15T19:32:34Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.mcxloginscripts.plist</string>
 			<key>version</key>
@@ -1951,7 +1987,7 @@
 		<key>com.apple.mcxprinting</key>
 		<dict>
 			<key>modified</key>
-			<date>2023-08-15T08:00:00Z</date>
+			<date>2025-08-15T19:32:34Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.mcxprinting.plist</string>
 			<key>version</key>
@@ -1969,7 +2005,7 @@
 		<key>com.apple.mobiledevice.passwordpolicy</key>
 		<dict>
 			<key>modified</key>
-			<date>2024-09-03T15:13:17Z</date>
+			<date>2025-08-15T19:32:34Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.mobiledevice.passwordpolicy.plist</string>
 			<key>version</key>
@@ -1978,7 +2014,7 @@
 		<key>com.apple.networkusagerules</key>
 		<dict>
 			<key>modified</key>
-			<date>2024-03-04T09:35:44Z</date>
+			<date>2025-08-15T19:32:34Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.networkusagerules.plist</string>
 			<key>version</key>
@@ -2005,7 +2041,7 @@
 		<key>com.apple.osxserver.account</key>
 		<dict>
 			<key>modified</key>
-			<date>2018-07-18T08:58:51Z</date>
+			<date>2025-08-15T19:32:34Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.osxserver.account.plist</string>
 			<key>version</key>
@@ -2014,7 +2050,7 @@
 		<key>com.apple.preference.security</key>
 		<dict>
 			<key>modified</key>
-			<date>2018-07-18T08:58:51Z</date>
+			<date>2025-08-15T19:32:34Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.preference.security.plist</string>
 			<key>version</key>
@@ -2023,7 +2059,7 @@
 		<key>com.apple.profileRemovalPassword</key>
 		<dict>
 			<key>modified</key>
-			<date>2021-09-27T09:00:30Z</date>
+			<date>2025-08-15T19:32:34Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.profileRemovalPassword.plist</string>
 			<key>version</key>
@@ -2032,7 +2068,7 @@
 		<key>com.apple.proxy.http.global</key>
 		<dict>
 			<key>modified</key>
-			<date>2024-09-03T15:13:17Z</date>
+			<date>2025-08-15T19:32:34Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.proxy.http.global.plist</string>
 			<key>version</key>
@@ -2041,16 +2077,16 @@
 		<key>com.apple.relay.managed</key>
 		<dict>
 			<key>modified</key>
-			<date>2024-09-12T10:00:38Z</date>
+			<date>2025-08-15T19:32:34Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.relay.managed.plist</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<key>com.apple.screensaver</key>
 		<dict>
 			<key>modified</key>
-			<date>2024-04-18T09:04:00Z</date>
+			<date>2025-08-15T19:32:34Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.screensaver.plist</string>
 			<key>version</key>
@@ -2059,7 +2095,7 @@
 		<key>com.apple.screensaver.user</key>
 		<dict>
 			<key>modified</key>
-			<date>2024-04-18T09:04:00Z</date>
+			<date>2025-08-15T19:32:34Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.screensaver.user.plist</string>
 			<key>version</key>
@@ -2086,7 +2122,7 @@
 		<key>com.apple.security.FDERecoveryKeyEscrow</key>
 		<dict>
 			<key>modified</key>
-			<date>2023-08-15T08:00:00Z</date>
+			<date>2025-08-15T19:32:34Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.security.FDERecoveryKeyEscrow.plist</string>
 			<key>version</key>
@@ -2104,7 +2140,7 @@
 		<key>com.apple.security.acme</key>
 		<dict>
 			<key>modified</key>
-			<date>2024-09-03T15:13:17Z</date>
+			<date>2025-04-04T13:00:05Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.security.acme.plist</string>
 			<key>version</key>
@@ -2122,7 +2158,7 @@
 		<key>com.apple.security.certificatetransparency</key>
 		<dict>
 			<key>modified</key>
-			<date>2023-08-15T08:00:00Z</date>
+			<date>2025-08-15T19:32:34Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.security.certificatetransparency.plist</string>
 			<key>version</key>
@@ -2131,7 +2167,7 @@
 		<key>com.apple.security.firewall</key>
 		<dict>
 			<key>modified</key>
-			<date>2024-12-13T08:12:27Z</date>
+			<date>2025-08-15T19:32:34Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.security.firewall.plist</string>
 			<key>version</key>
@@ -2176,7 +2212,7 @@
 		<key>com.apple.security.scep</key>
 		<dict>
 			<key>modified</key>
-			<date>2024-09-03T15:13:17Z</date>
+			<date>2025-08-15T19:32:34Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.security.scep.plist</string>
 			<key>version</key>
@@ -2185,7 +2221,7 @@
 		<key>com.apple.security.smartcard</key>
 		<dict>
 			<key>modified</key>
-			<date>2023-08-15T08:00:00Z</date>
+			<date>2025-04-04T13:00:05Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.security.smartcard.plist</string>
 			<key>version</key>
@@ -2203,7 +2239,7 @@
 		<key>com.apple.shareddeviceconfiguration</key>
 		<dict>
 			<key>modified</key>
-			<date>2021-12-22T05:49:22Z</date>
+			<date>2025-08-15T19:32:34Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.shareddeviceconfiguration.plist</string>
 			<key>version</key>
@@ -2221,7 +2257,7 @@
 		<key>com.apple.subscribedcalendar.account</key>
 		<dict>
 			<key>modified</key>
-			<date>2018-07-18T08:58:52Z</date>
+			<date>2025-08-15T19:32:34Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.subscribedcalendar.account.plist</string>
 			<key>version</key>
@@ -2230,7 +2266,7 @@
 		<key>com.apple.syspolicy.kernel-extension-policy</key>
 		<dict>
 			<key>modified</key>
-			<date>2021-12-18T19:55:17Z</date>
+			<date>2025-08-15T19:32:34Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.syspolicy.kernel-extension-policy.plist</string>
 			<key>version</key>
@@ -2257,7 +2293,7 @@
 		<key>com.apple.systemmigration</key>
 		<dict>
 			<key>modified</key>
-			<date>2018-07-18T08:58:52Z</date>
+			<date>2025-08-15T19:32:34Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.systemmigration.plist</string>
 			<key>version</key>
@@ -2266,7 +2302,7 @@
 		<key>com.apple.systempolicy.control</key>
 		<dict>
 			<key>modified</key>
-			<date>2024-12-13T08:12:27Z</date>
+			<date>2025-08-15T19:32:34Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.systempolicy.control.plist</string>
 			<key>version</key>
@@ -2275,7 +2311,7 @@
 		<key>com.apple.systempolicy.managed</key>
 		<dict>
 			<key>modified</key>
-			<date>2023-08-15T08:00:00Z</date>
+			<date>2025-08-15T19:32:34Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.systempolicy.managed.plist</string>
 			<key>version</key>
@@ -2356,7 +2392,7 @@
 		<key>com.apple.wifi.managed</key>
 		<dict>
 			<key>modified</key>
-			<date>2024-09-10T12:46:34Z</date>
+			<date>2025-06-26T12:12:18Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.wifi.managed.plist</string>
 			<key>version</key>
@@ -2365,11 +2401,11 @@
 		<key>com.apple.xsan</key>
 		<dict>
 			<key>modified</key>
-			<date>2018-07-18T08:58:52Z</date>
+			<date>2025-08-15T19:32:34Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.xsan.plist</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<key>com.apple.xsan.preferences</key>
 		<dict>
@@ -2383,7 +2419,7 @@
 		<key>loginwindow</key>
 		<dict>
 			<key>modified</key>
-			<date>2019-11-07T15:29:16Z</date>
+			<date>2025-08-15T19:32:34Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/loginwindow.plist</string>
 			<key>version</key>
@@ -2391,6 +2427,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2025-02-26T15:20:08Z</date>
+	<date>2025-08-25T15:57:10Z</date>
 </dict>
 </plist>

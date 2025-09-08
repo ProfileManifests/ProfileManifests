@@ -6,6 +6,8 @@
 	<string>Calendar settings</string>
 	<key>pfm_description_reference</key>
 	<string>The payload is designated by specifying com.apple.caldav.account as the PayloadType. This payload configures a CalDAV account.</string>
+	<key>pfm_documentation_url</key>
+	<string>https://developer.apple.com/documentation/devicemanagement/caldav</string>
 	<key>pfm_domain</key>
 	<string>com.apple.caldav.account</string>
 	<key>pfm_format_version</key>
@@ -13,7 +15,7 @@
 	<key>pfm_interaction</key>
 	<string>combined</string>
 	<key>pfm_last_modified</key>
-	<date>2023-08-15T08:00:00Z</date>
+	<date>2025-08-15T19:32:34Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>iOS</string>

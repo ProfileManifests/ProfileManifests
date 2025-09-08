@@ -6,6 +6,8 @@
 	<string>AirPlay settings</string>
 	<key>pfm_description_reference</key>
 	<string>The AirPlay payload is designated by specifying com.apple.airplay as the PayloadType value. This payload is supported on iOS 7.0 and later and on macOS 10.10 and later.</string>
+	<key>pfm_documentation_url</key>
+	<string>https://developer.apple.com/documentation/devicemanagement/airplay</string>
 	<key>pfm_domain</key>
 	<string>com.apple.airplay</string>
 	<key>pfm_format_version</key>
@@ -15,7 +17,7 @@
 	<key>pfm_ios_min</key>
 	<string>7.0</string>
 	<key>pfm_last_modified</key>
-	<date>2024-12-13T08:12:33Z</date>
+	<date>2025-08-15T19:32:34Z</date>
 	<key>pfm_macos_min</key>
 	<string>10.10</string>
 	<key>pfm_platforms</key>

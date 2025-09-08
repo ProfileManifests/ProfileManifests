@@ -4,6 +4,8 @@
 <dict>
 	<key>pfm_description</key>
 	<string>Use this section to define settings for subscribed calendar account.</string>
+	<key>pfm_documentation_url</key>
+	<string>https://developer.apple.com/documentation/devicemanagement/subscribedcalendars</string>
 	<key>pfm_domain</key>
 	<string>com.apple.subscribedcalendar.account</string>
 	<key>pfm_format_version</key>
@@ -11,7 +13,7 @@
 	<key>pfm_interaction</key>
 	<string>combined</string>
 	<key>pfm_last_modified</key>
-	<date>2018-07-18T08:58:52Z</date>
+	<date>2025-08-15T19:32:34Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>iOS</string>

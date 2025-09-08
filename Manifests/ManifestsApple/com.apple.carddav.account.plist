@@ -7,6 +7,8 @@
 	<key>pfm_description_reference</key>
 	<string>The CardDAV payload is designated by specifying com.apple.carddav.account as the PayloadType value. As of macOS v10.8 and later, this payload type supports obtaining CardDAVUsername and CardDAVPassword from
 an Identification Payload, if present.</string>
+	<key>pfm_documentation_url</key>
+	<string>https://developer.apple.com/documentation/devicemanagement/carddav</string>
 	<key>pfm_domain</key>
 	<string>com.apple.carddav.account</string>
 	<key>pfm_format_version</key>
@@ -14,7 +16,7 @@ an Identification Payload, if present.</string>
 	<key>pfm_interaction</key>
 	<string>combined</string>
 	<key>pfm_last_modified</key>
-	<date>2019-09-17T08:52:32Z</date>
+	<date>2025-08-15T19:32:34Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>iOS</string>

@@ -280,6 +280,13 @@
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.crowdstrike.falcon.png</string>
 		</dict>
+		<key>com.dare.zappl.preferences</key>
+		<dict>
+			<key>hash</key>
+			<string>1460392e387160d72e9d4e2374dfe73b</string>
+			<key>path</key>
+			<string>Icons/ManagedPreferencesApplications/com.dare.zappl.preferences.png</string>
+		</dict>
 		<key>com.docker.config</key>
 		<dict>
 			<key>hash</key>
@@ -689,7 +696,7 @@
 		<key>corp.sap.privileges</key>
 		<dict>
 			<key>hash</key>
-			<string>e073ebafb207b69b1c41e675081a26b3</string>
+			<string>e44e0b1fbfc3e36bc0607369705f3f5e</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/corp.sap.privileges.png</string>
 		</dict>
@@ -707,12 +714,26 @@
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/de.fau.rrze.NetworkShareMounter.png</string>
 		</dict>
+		<key>dev.firezone.firezone</key>
+		<dict>
+			<key>hash</key>
+			<string>11fe3f94e6e55da26d3821e38660a58c</string>
+			<key>path</key>
+			<string>Icons/ManagedPreferencesApplications/dev.firezone.firezone.png</string>
+		</dict>
 		<key>fr.handbrake.HandBrake</key>
 		<dict>
 			<key>hash</key>
 			<string>adc42d6f928b3be696bf0739ea9dfa04</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/fr.handbrake.HandBrake.png</string>
+		</dict>
+		<key>io.macadmins.Outset</key>
+		<dict>
+			<key>hash</key>
+			<string>145257bc26fc8fc22ab4ddff84f727ba</string>
+			<key>path</key>
+			<string>Icons/ManagedPreferencesApplications/io.macadmins.Outset.png</string>
 		</dict>
 		<key>io.tailscale.ipn.macos</key>
 		<dict>
@@ -811,6 +832,13 @@
 			<string>2ac53860411c773f9e99a0ec64a853a3</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/us.zoom.config.png</string>
+		</dict>
+		<key>xyz.techitout.appAutoPatch</key>
+		<dict>
+			<key>hash</key>
+			<string>83b95c01ac58055f30258269cede421f</string>
+			<key>path</key>
+			<string>Icons/ManagedPreferencesApplications/xyz.techitout.appAutoPatch.png</string>
 		</dict>
 	</dict>
 	<key>ManifestsApple</key>
@@ -1538,6 +1566,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2025-02-26T15:20:08Z</date>
+	<date>2025-08-25T15:57:10Z</date>
 </dict>
 </plist>

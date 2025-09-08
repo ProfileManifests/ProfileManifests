@@ -9,7 +9,7 @@
 The Education Configuration Payload defines the users, groups, and departments within an educational organization. It is supported on iOS 9.3 and later. On iOS, it must be supervised and sent over the device channel.
 It is supported on macOS 10.14 and later. On macOS, it must be sent over the user channel. Student payloads are only supported on macOS 10.14.4 and later.</string>
 	<key>pfm_documentation_url</key>
-	<string></string>
+	<string>https://developer.apple.com/documentation/devicemanagement/educationconfiguration</string>
 	<key>pfm_domain</key>
 	<string>com.apple.education</string>
 	<key>pfm_format_version</key>
@@ -19,7 +19,7 @@ It is supported on macOS 10.14 and later. On macOS, it must be sent over the use
 	<key>pfm_ios_min</key>
 	<string>9.3</string>
 	<key>pfm_last_modified</key>
-	<date>2024-09-12T10:00:38Z</date>
+	<date>2025-08-15T19:32:34Z</date>
 	<key>pfm_macos_min</key>
 	<string>10.14</string>
 	<key>pfm_platforms</key>

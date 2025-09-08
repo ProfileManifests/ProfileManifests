@@ -4,6 +4,8 @@
 <dict>
 	<key>pfm_description</key>
 	<string>Finder settings</string>
+	<key>pfm_documentation_url</key>
+	<string>https://developer.apple.com/documentation/devicemanagement/finder</string>
 	<key>pfm_domain</key>
 	<string>com.apple.finder</string>
 	<key>pfm_format_version</key>
@@ -11,7 +13,7 @@
 	<key>pfm_interaction</key>
 	<string>combined</string>
 	<key>pfm_last_modified</key>
-	<date>2023-03-06T08:05:44Z</date>
+	<date>2025-08-15T19:32:34Z</date>
 	<key>pfm_macos_min</key>
 	<string>10.7</string>
 	<key>pfm_platforms</key>

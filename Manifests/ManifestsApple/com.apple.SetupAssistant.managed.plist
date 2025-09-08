@@ -15,7 +15,7 @@
 	<key>pfm_ios_min</key>
 	<string>14.0</string>
 	<key>pfm_last_modified</key>
-	<date>2024-10-23T08:11:19Z</date>
+	<date>2025-03-03T11:08:08Z</date>
 	<key>pfm_macos_min</key>
 	<string>10.12</string>
 	<key>pfm_platforms</key>
@@ -171,6 +171,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 						<string>Restore</string>
 						<string>RestoreCompleted</string>
 						<string>Safety</string>
+						<string>SafetyAndHandling</string>
 						<string>ScreenTime</string>
 						<string>SIMSetup</string>
 						<string>Siri</string>
@@ -215,6 +216,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 						<string>Restore</string>
 						<string>Restore Completed</string>
 						<string>Safety</string>
+						<string>Safety and Handling</string>
 						<string>ScreenTime</string>
 						<string>SIM Setup</string>
 						<string>Siri</string>

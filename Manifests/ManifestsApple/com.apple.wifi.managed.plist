@@ -15,7 +15,7 @@
 	<key>pfm_ios_min</key>
 	<string>4.0</string>
 	<key>pfm_last_modified</key>
-	<date>2024-09-10T12:46:34Z</date>
+	<date>2025-06-26T12:12:18Z</date>
 	<key>pfm_macos_min</key>
 	<string>10.7</string>
 	<key>pfm_platforms</key>
@@ -1344,6 +1344,28 @@ For EAP-TLS authentication without a network payload, install the necessary iden
 					<string>The list of accepted server certificate common names. If a server presents a certificate that isn't in this list, the system doesn't trust it.
 If you specify this property, the system disables dynamic trust (the certificate dialog) unless you also specify 'TLSAllowTrustExceptions' with the value 'true'.
 If necessary, use wildcards to specify the name, such as 'wpa.*.example.com'.</string>
+					<key>pfm_exclude</key>
+					<array>
+						<dict>
+							<key>pfm_target_conditions</key>
+							<array>
+								<dict>
+									<key>pfm_n_contains_any</key>
+									<array>
+										<integer>13</integer>
+										<integer>17</integer>
+										<integer>18</integer>
+										<integer>21</integer>
+										<integer>23</integer>
+										<integer>25</integer>
+										<integer>43</integer>
+									</array>
+									<key>pfm_target</key>
+									<string>EAPClientConfiguration.AcceptEAPTypes</string>
+								</dict>
+							</array>
+						</dict>
+					</array>
 					<key>pfm_name</key>
 					<string>TLSTrustedServerNames</string>
 					<key>pfm_subkeys</key>
