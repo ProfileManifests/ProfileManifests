@@ -283,6 +283,8 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				</array>
 				<key>Security Settings</key>
 				<array>
+		      		<string>UseSystemExtension</string>
+					<string>EnableSessionMonitoring</string>
 					<string>enableAppleAuth</string>
 					<string>GoogleAuth</string>
 					<string>standardAtLoad</string>
@@ -290,7 +292,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<string>demoteAllAdminQuit</string>
 					<string>killterminalsessions</string>
 					<string>demoteExclusions</string>
-					<string>EnableSessionMonitoring</string>
 				</array>
 				<key>Time and Reason</key>
 				<array>
@@ -337,7 +338,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>Change Elevate24 to show to the new UI. The new UI will be default in a later version of Elevate24.</string>
+			<string>Change Elevate24 to show to the new UI. Not required for Elevate24 2.3+ as this is now default.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://github.com/Jigsaw24/Elevate24/blob/main/Documentation/Elevate24%20-%20Configuration%20Keys.md#elevated-session-customisation</string>
 			<key>pfm_name</key>
@@ -787,6 +788,20 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>killterminalsessions</string>
 			<key>pfm_title</key>
 			<string>Kill Terminal Sessions</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>To ensure the Application is protected by the on-device system extension, to prevent misuse and tampering.</string>
+			<key>pfm_documentation_url</key>
+			<string>UPDATE URL</string>
+			<key>pfm_name</key>
+			<string>UseSystemExtension</string>
+			<key>pfm_title</key>
+			<string>System Extension</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 		</dict>
