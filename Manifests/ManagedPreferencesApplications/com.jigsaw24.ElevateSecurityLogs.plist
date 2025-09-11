@@ -115,7 +115,7 @@
 	<key>pfm_interaction</key>
 	<string>exclusive</string>
 	<key>pfm_last_modified</key>
-	<date>2025-03-20T14:56:33Z</date>
+	<date>2025-09-11T12:00:00Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -933,6 +933,6 @@ A profile can consist of payloads with different version numbers. For example, c
 	<key>pfm_unique</key>
 	<true/>
 	<key>pfm_version</key>
-	<integer>3</integer>
+	<integer>4</integer>
 </dict>
 </plist>

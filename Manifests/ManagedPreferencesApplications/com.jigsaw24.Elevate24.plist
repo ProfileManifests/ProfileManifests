@@ -113,7 +113,7 @@
 	RK5CYII=
 	</data>
 	<key>pfm_last_modified</key>
-	<date>2025-03-20T14:56:33Z</date>
+	<date>2025-09-11T12:00:00Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -919,6 +919,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 	<key>pfm_unique</key>
 	<true/>
 	<key>pfm_version</key>
-	<integer>2</integer>
+	<integer>4</integer>
 </dict>
 </plist>
