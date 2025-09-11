@@ -6,6 +6,8 @@
 	<string>https://github.com/Jigsaw24/Elevate24/tree/main</string>
 	<key>pfm_description</key>
 	<string>Monitoring Extension for Elevate24 by Jigsaw24</string>
+	<key>pfm_documentation_url</key>
+	<string>https://docs.jigsaw24.com/Elevate24/</string>
 	<key>pfm_domain</key>
 	<string>com.jigsaw24.Elevate24SecurityExtension</string>
 	<key>pfm_format_version</key>
@@ -318,7 +320,7 @@ A profile can consist of payloads with different version numbers. For example, c
 			<key>pfm_description</key>
 			<string>Headers to be included in the HTTP request.</string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/Jigsaw24/Elevate24/blob/main/Documentation/Elevate24%20Session%20Reporting%20-%20Reporting%20Configuration%20Keys.md#reporting-configuration-keys-for-elevate24</string>
+			<string>https://docs.jigsaw24.com/Elevate24/Documentation/Elevate24%20Monitoring/2%20Elevate24%20Session%20Monitoring%20-%20General.html#monitoring-general-settings</string>
 			<key>pfm_name</key>
 			<string>siemUploadHeaders</string>
 			<key>pfm_subkeys</key>
@@ -364,7 +366,7 @@ A profile can consist of payloads with different version numbers. For example, c
 			<key>pfm_description</key>
 			<string>By default events are uploaded in JSON format as an array of events. Some systems require events to be seperated with a new line.</string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/Jigsaw24/Elevate24/blob/main/Documentation/Elevate24%20Session%20Reporting%20-%20Reporting%20Configuration%20Keys.md#reporting-configuration-keys-for-elevate24</string>
+			<string>https://docs.jigsaw24.com/Elevate24/Documentation/Elevate24%20Reporting/3%20Elevate24%20-%20Security%20Monitoring%20Reporting.html#elevate24-security-monitoring-reporting-configuration-keys</string>
 			<key>pfm_name</key>
 			<string>siemNewLineSeperated</string>
 			<key>pfm_title</key>
@@ -376,7 +378,7 @@ A profile can consist of payloads with different version numbers. For example, c
 			<key>pfm_description</key>
 			<string>Tennant ID</string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/Jigsaw24/Elevate24/blob/main/Documentation/Elevate24%20Session%20Reporting%20-%20Reporting%20Configuration%20Keys.md#reporting-configuration-keys-for-elevate24</string>
+			<string>https://docs.jigsaw24.com/Elevate24/Documentation/Elevate24%20Reporting/3%20Elevate24%20-%20Security%20Monitoring%20Reporting.html#elevate24-security-monitoring-reporting-configuration-keys</string>
 			<key>pfm_name</key>
 			<string>SentinelTennantId</string>
 			<key>pfm_title</key>
@@ -388,7 +390,7 @@ A profile can consist of payloads with different version numbers. For example, c
 			<key>pfm_description</key>
 			<string>Client ID</string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/Jigsaw24/Elevate24/blob/main/Documentation/Elevate24%20Session%20Reporting%20-%20Reporting%20Configuration%20Keys.md#reporting-configuration-keys-for-elevate24</string>
+			<string>https://docs.jigsaw24.com/Elevate24/Documentation/Elevate24%20Reporting/3%20Elevate24%20-%20Security%20Monitoring%20Reporting.html#elevate24-security-monitoring-reporting-configuration-keys</string>
 			<key>pfm_name</key>
 			<string>SentinelClientId</string>
 			<key>pfm_title</key>
@@ -400,7 +402,7 @@ A profile can consist of payloads with different version numbers. For example, c
 			<key>pfm_description</key>
 			<string>Client Secret</string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/Jigsaw24/Elevate24/blob/main/Documentation/Elevate24%20Session%20Reporting%20-%20Reporting%20Configuration%20Keys.md#reporting-configuration-keys-for-elevate24</string>
+			<string>https://docs.jigsaw24.com/Elevate24/Documentation/Elevate24%20Reporting/3%20Elevate24%20-%20Security%20Monitoring%20Reporting.html#elevate24-security-monitoring-reporting-configuration-keys</string>
 			<key>pfm_name</key>
 			<string>SentinelClientSecret</string>
 			<key>pfm_title</key>
@@ -412,7 +414,7 @@ A profile can consist of payloads with different version numbers. For example, c
 			<key>pfm_description</key>
 			<string>URL to upload events to Microsoft Sentinel</string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/Jigsaw24/Elevate24/blob/main/Documentation/Elevate24%20Session%20Reporting%20-%20Reporting%20Configuration%20Keys.md#reporting-configuration-keys-for-elevate24</string>
+			<string>https://docs.jigsaw24.com/Elevate24/Documentation/Elevate24%20Reporting/3%20Elevate24%20-%20Security%20Monitoring%20Reporting.html#elevate24-security-monitoring-reporting-configuration-keys</string>
 			<key>pfm_name</key>
 			<string>SentinelUploadURL</string>
 			<key>pfm_title</key>
@@ -425,6 +427,8 @@ A profile can consist of payloads with different version numbers. For example, c
 			<integer>1000000</integer>
 			<key>pfm_description</key>
 			<string>Max size of single HTTP request uploading data. (Uncompressed size in bytes default size is 1,000,000 bytes)</string>
+			<key>pfm_documentation_url</key>
+			<string>https://docs.jigsaw24.com/Elevate24/Documentation/Elevate24%20Reporting/3%20Elevate24%20-%20Security%20Monitoring%20Reporting.html#elevate24-security-monitoring-reporting-configuration-keys</string>
 			<key>pfm_name</key>
 			<string>MaxDataUploadSize</string>
 			<key>pfm_title</key>
@@ -439,6 +443,8 @@ A profile can consist of payloads with different version numbers. For example, c
 			<false/>
 			<key>pfm_description</key>
 			<string>Deploys default rules to discard some events which can be considered noise.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://docs.jigsaw24.com/Elevate24/Documentation/Elevate24%20Monitoring/4%20Elevate24%20Session%20Monitoring%20-%20Filter%20Rules.html#monitoring-filter-rules</string>
 			<key>pfm_name</key>
 			<string>DefaultFilterRules</string>
 			<key>pfm_title</key>
@@ -450,7 +456,9 @@ A profile can consist of payloads with different version numbers. For example, c
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>Deploys authorisation rules to attempt to stop the user making changes to Elevate24 Monitoring.</string>
+			<string>Deploys authorisation rules to attempt to stop the user making changes to Elevate24 database.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://docs.jigsaw24.com/Elevate24/Documentation/Elevate24%20Monitoring/2%20Elevate24%20Session%20Monitoring%20-%20General.html#monitoring-general-settings</string>
 			<key>pfm_name</key>
 			<string>SelfProtectionRules</string>
 			<key>pfm_title</key>
@@ -463,6 +471,8 @@ A profile can consist of payloads with different version numbers. For example, c
 			<false/>
 			<key>pfm_description</key>
 			<string>Stops all blocking/logging operations. Effectively a switch to disable this tool.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://docs.jigsaw24.com/Elevate24/Documentation/Elevate24%20Monitoring/2%20Elevate24%20Session%20Monitoring%20-%20General.html#monitoring-general-settings</string>
 			<key>pfm_name</key>
 			<string>DisableAll</string>
 			<key>pfm_title</key>
@@ -475,6 +485,8 @@ A profile can consist of payloads with different version numbers. For example, c
 			<false/>
 			<key>pfm_description</key>
 			<string>Enables the local retention of Events after they have been uploaded to Jigsaw24/SIEM.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://docs.jigsaw24.com/Elevate24/Documentation/Elevate24%20Monitoring/2%20Elevate24%20Session%20Monitoring%20-%20General.html#monitoring-general-settings</string>
 			<key>pfm_name</key>
 			<string>EnableArchive</string>
 			<key>pfm_title</key>
@@ -487,6 +499,8 @@ A profile can consist of payloads with different version numbers. For example, c
 			<integer>7</integer>
 			<key>pfm_description</key>
 			<string>Sets maximum age of events retained locally.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://docs.jigsaw24.com/Elevate24/Documentation/Elevate24%20Monitoring/2%20Elevate24%20Session%20Monitoring%20-%20General.html#monitoring-general-settings</string>
 			<key>pfm_name</key>
 			<string>MaxArchiveAge</string>
 			<key>pfm_title</key>
@@ -501,6 +515,8 @@ A profile can consist of payloads with different version numbers. For example, c
 			<false/>
 			<key>pfm_description</key>
 			<string>Upload Events when connected to iPhone personal hotspot.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://docs.jigsaw24.com/Elevate24/Documentation/Elevate24%20Monitoring/2%20Elevate24%20Session%20Monitoring%20-%20General.html#monitoring-general-settings</string>
 			<key>pfm_name</key>
 			<string>UploadOnHotspot</string>
 			<key>pfm_title</key>
@@ -511,6 +527,8 @@ A profile can consist of payloads with different version numbers. For example, c
 		<dict>
 			<key>pfm_description</key>
 			<string>Rules to restrict file operations. Allow rules can be used in conjunction with block rules to allow a process to execute under the specified conditions. \nFile open operations can be restricted to read only access where required.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://docs.jigsaw24.com/Elevate24/Documentation/Elevate24%20Monitoring/5%20Elevate24%20Session%20Monitoring%20-%20Authorisation%20Rules.html#monitoring-authorisation-rules</string>
 			<key>pfm_name</key>
 			<string>FileOperationRules</string>
 			<key>pfm_subkeys</key>
@@ -611,6 +629,8 @@ A profile can consist of payloads with different version numbers. For example, c
 			</array>
 			<key>pfm_description</key>
 			<string>Rules to restrict execution of processes. Allow rules can be used in conjunction with block rules to allow a process to execute under the specified conditions. \nMultiple arguments can be specified by seperating them with a comma.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://docs.jigsaw24.com/Elevate24/Documentation/Elevate24%20Monitoring/5%20Elevate24%20Session%20Monitoring%20-%20Authorisation%20Rules.html#monitoring-authorisation-rules</string>
 			<key>pfm_name</key>
 			<string>ExecuteProcessRules</string>
 			<key>pfm_subkeys</key>
@@ -690,7 +710,7 @@ A profile can consist of payloads with different version numbers. For example, c
 			<key>pfm_description</key>
 			<string>Set all event types to be logged. Use with caution, as this could produce a lot of data entries.</string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/Jigsaw24/Elevate24/blob/main/Documentation/Elevate24%20Session%20Reporting%20-%20Configuration%20Keys.md#event-types</string>
+			<string>https://docs.jigsaw24.com/Elevate24/Documentation/Elevate24%20Monitoring/4%20Elevate24%20Session%20Monitoring%20-%20Filter%20Rules.html#monitoring-filter-rules</string>
 			<key>pfm_name</key>
 			<string>logAllEventTypes</string>
 			<key>pfm_title</key>
@@ -723,6 +743,8 @@ A profile can consist of payloads with different version numbers. For example, c
 			</array>
 			<key>pfm_description</key>
 			<string>Define which event types to log.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://docs.jigsaw24.com/Elevate24/Documentation/Elevate24%20Monitoring/4%20Elevate24%20Session%20Monitoring%20-%20Filter%20Rules.html#monitoring-filter-rules</string>
 			<key>pfm_exclude</key>
 			<array>
 				<dict>
@@ -817,6 +839,8 @@ A profile can consist of payloads with different version numbers. For example, c
 			</array>
 			<key>pfm_description</key>
 			<string>Define rules to not store events matching the following rules.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://docs.jigsaw24.com/Elevate24/Documentation/Elevate24%20Monitoring/4%20Elevate24%20Session%20Monitoring%20-%20Filter%20Rules.html#monitoring-filter-rules</string>
 			<key>pfm_name</key>
 			<string>filterRules</string>
 			<key>pfm_subkeys</key>
