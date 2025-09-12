@@ -266,8 +266,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<string>siemAuthHeader</string>
 					<string>siemAuthToken</string>
 					<string>microsoftsentinel</string>
-					<string>teamswebhook</string>
-					<string>slack-webhook</string>
 				</array>
 				<key>Secondary Account (Premium)</key>
 				<array>
