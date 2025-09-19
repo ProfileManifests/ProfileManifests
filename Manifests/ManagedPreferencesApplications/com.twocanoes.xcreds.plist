@@ -5,7 +5,7 @@
 	<key>pfm_app_url</key>
 	<string>https://github.com/twocanoes/xcreds</string>
 	<key>pfm_description</key>
-	<string>XCreds 5.4 (8684) OAuth Settings</string>
+	<string>XCreds 5.5 (8916) OAuth Settings</string>
 	<key>pfm_documentation_url</key>
 	<string>https://twocanoes.com/knowledge-base/xcreds-admin-guide/#preferences</string>
 	<key>pfm_domain</key>
@@ -13,7 +13,7 @@
 	<key>pfm_format_version</key>
 	<integer>1</integer>
 	<key>pfm_last_modified</key>
-	<date>2025-05-12T19:13:52Z</date>
+	<date>2025-09-11T17:08:12Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -207,6 +207,22 @@ A profile can consist of payloads with different version numbers. For example, c
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
+			<string>5.5</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>When set to true and a new user home is created, the .skipbuddy file will be created at the top of the home folder to skip user setup screens.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://twocanoes.com/knowledge-base/xcreds-admin-guide/#preferences</string>
+			<key>pfm_name</key>
+			<string>skipUserSetupBuddy</string>
+			<key>pfm_title</key>
+			<string>Skip User Setup Buddy</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
 			<string>4.0</string>
 			<key>pfm_default</key>
 			<string>upn</string>
@@ -246,7 +262,7 @@ A profile can consist of payloads with different version numbers. For example, c
 			<key>pfm_app_min</key>
 			<string>5.0</string>
 			<key>pfm_description</key>
-			<string>List of groups whose members should be allowed to login. If the user is a member of any of these groups they can login regardless (including creating new local account) if authorization succeeds. If a local account exists but the user is no longer part of a group the login will be denied.</string>
+			<string>(OIDC only, not yet supported for AD) List of groups whose members should be allowed to login. If the user is a member of any of these groups they can login regardless (including creating new local account) if authorization succeeds. If a local account exists but the user is no longer part of a group the login will be denied.</string>
 			<key>pfm_name</key>
 			<string>allowLoginIfMemberOfGroup</string>
 			<key>pfm_subkeys</key>
@@ -1358,10 +1374,12 @@ Note that Google does not support the offline_access scope so instead use the pr
 			<string>boolean</string>
 		</dict>
 		<dict>
+			<key>pfm_app_max</key>
+			<string>5.4</string>
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
-			<string>Show the version number and build number in the lower left corner of XCreds Login.</string>
+			<string>(Deprecated in v5.4 and replaced by shouldActivateSystemInfoButton) Show the version number and build number in the lower left corner of XCreds Login.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://twocanoes.com/knowledge-base/xcreds-admin-guide/#preferences</string>
 			<key>pfm_name</key>
@@ -1400,6 +1418,8 @@ Note that Google does not support the offline_access scope so instead use the pr
 		<dict>
 			<key>pfm_default</key>
 			<false/>
+            <key>pfm_app_max</key>
+            <string>5.4</string>
 			<key>pfm_description</key>
 			<string>When a local user password does not match the cloud or AD password, this key will allow the user to select a Reset button to set their password to match their AD/cloud password, move their current keychain aside and create a new keychain. If XCreds does not have access to local admin credentials set from the XCreds command line tools, the user will prompted to enter local admin credentials.</string>
 			<key>pfm_documentation_url</key>
@@ -1776,6 +1796,22 @@ changing "passwordID" to the correct element ID. If the value you typed into the
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
+			<string>5.5</string>
+			<key>pfm_default</key>
+			<string>20</string>
+			<key>pfm_description</key>
+			<string>Primary Group ID when creating a new user. Default value 20.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://twocanoes.com/knowledge-base/xcreds-admin-guide/#preferences</string>
+			<key>pfm_name</key>
+			<string>primaryGroupID</string>
+			<key>pfm_title</key>
+			<string>Primary Group ID</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
 			<string>5.0</string>
 			<key>pfm_default</key>
 			<string>pwd_exp</string>
@@ -2053,6 +2089,6 @@ changing "passwordID" to the correct element ID. If the value you typed into the
 	<key>pfm_unique</key>
 	<false/>
 	<key>pfm_version</key>
-	<integer>13</integer>
+	<integer>14</integer>
 </dict>
 </plist>
