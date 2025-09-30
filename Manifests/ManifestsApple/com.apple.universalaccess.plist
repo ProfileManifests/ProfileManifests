@@ -13,7 +13,7 @@
 	<key>pfm_interaction</key>
 	<string>combined</string>
 	<key>pfm_last_modified</key>
-	<date>2025-08-04T08:25:08Z</date>
+	<date>2025-09-17T09:38:09Z</date>
 	<key>pfm_macos_min</key>
 	<string>10.9</string>
 	<key>pfm_platforms</key>
@@ -268,7 +268,7 @@ This option is deprecated in macOS 11.</string>
 		</dict>
 		<dict>
 			<key>pfm_default</key>
-			<real>1</real>
+			<integer>1</integer>
 			<key>pfm_description</key>
 			<string>The size of the cursor.</string>
 			<key>pfm_name</key>
@@ -406,7 +406,7 @@ This option is deprecated in macOS 11.</string>
 		</dict>
 		<dict>
 			<key>pfm_default</key>
-			<real>1</real>
+			<integer>1</integer>
 			<key>pfm_description</key>
 			<string>The initial delay before moving the mouse with Mouse Keys.</string>
 			<key>pfm_name</key>

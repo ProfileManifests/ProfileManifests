@@ -16,7 +16,7 @@ This payload is supported on tvOS 11.0 and later.</string>
 	<key>pfm_interaction</key>
 	<string>exclusive</string>
 	<key>pfm_last_modified</key>
-	<date>2025-08-15T19:32:34Z</date>
+	<date>2025-09-17T09:38:09Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>tvOS</string>

@@ -16,7 +16,7 @@ It configures an Apple TV to enter Conference Room Display mode and restricts ex
 	<key>pfm_interaction</key>
 	<string>exclusive</string>
 	<key>pfm_last_modified</key>
-	<date>2025-08-15T19:32:34Z</date>
+	<date>2025-09-17T09:38:09Z</date>
 	<key>pfm_note</key>
 	<string>When Conference Room Display mode and Single App mode are both enabled, Conference Room Display mode is active and the user canʼt access the app.</string>
 	<key>pfm_platforms</key>

@@ -17,7 +17,7 @@
 	<key>pfm_ios_min</key>
 	<string>8.0</string>
 	<key>pfm_last_modified</key>
-	<date>2025-08-15T19:32:34Z</date>
+	<date>2025-09-17T09:38:09Z</date>
 	<key>pfm_macos_min</key>
 	<string>10.10</string>
 	<key>pfm_platforms</key>
@@ -131,7 +131,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_description</key>
-			<string>An array of domains. The system considers email addresses that lack a suffix matching any of these strings out of domain and marked in Mail.
+			<string>An array of domains. Mail marks in red all email addresses that lack a suffix matching any of these strings.
 
 Available in iOS 8 and later and macOS 10.10 and later.</string>
 			<key>pfm_name</key>

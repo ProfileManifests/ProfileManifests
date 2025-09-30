@@ -13,7 +13,7 @@
 	<key>pfm_ios_min</key>
 	<string>4.0</string>
 	<key>pfm_last_modified</key>
-	<date>2025-08-04T08:25:08Z</date>
+	<date>2025-09-17T09:38:09Z</date>
 	<key>pfm_macos_min</key>
 	<string>10.7</string>
 	<key>pfm_platforms</key>
@@ -491,7 +491,7 @@ When updating the payload, the value of this key must not change. Any change is 
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>If 'true', the device attempts to send a CheckOut &lt;https://developer.apple.com/library/archive/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/2-MDM_Check_In_Protocol/MDM_Check_In_Protocol..html#//apple_ref/doc/uid/TP40017387-CH4-SW7&gt; message to the 'CheckInURL' when the profile is removed.</string>
+			<string>If 'true', the device attempts to send a 'Check-Out' message to the 'CheckInURL' when the profile is removed.</string>
 			<key>pfm_exclude</key>
 			<array>
 				<dict>
@@ -554,10 +554,10 @@ If 'false', the system performs revocation checks on a best-attempt basis, where
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>If 'true', the system warns the user that they need to reboot into RecoveryOS and allow the MDM to use the Bootstrap Token for authentication for certain sensitive operations such as enabling kernel extensions or installing some types of software updates. If the MDM doesn't need to perform these operations, it can leave this key set to 'false', and the user isn't notified.
+			<string>If 'true', the system warns the user that they need to reboot into RecoveryOS and allow the MDM to use the bootstrap token for authentication for certain sensitive operations such as enabling kernel extensions or installing some types of software updates. If the MDM doesn't need to perform these operations, it can leave this key set to 'false', and the user isn't notified.
 The SettingsCommand.Command.Settings.MDMOptions.MDMOptions command overrides this default value.
 This setting only applies to devices that have 'BootstrapTokenRequiredForSoftwareUpdate' or 'BootstrapTokenRequiredForKernelExtensionApproval' set to 'true' in their SecurityInfoResponse.SecurityInfo.
-DEP-enrolled devices are automatically allowed to use the Bootstrap Token for authentication.
+DEP-enrolled devices are automatically allowed to use the bootstrap token for authentication.
 Available in macOS 11 and later.</string>
 			<key>pfm_macos_min</key>
 			<string>11.0</string>

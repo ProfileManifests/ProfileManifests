@@ -13,7 +13,7 @@
 	<key>pfm_ios_min</key>
 	<string>4.0</string>
 	<key>pfm_last_modified</key>
-	<date>2025-08-04T08:25:08Z</date>
+	<date>2025-09-17T09:38:09Z</date>
 	<key>pfm_macos_min</key>
 	<string>10.7</string>
 	<key>pfm_platforms</key>
@@ -375,7 +375,17 @@ You should provide a default value if possible. No warning will be displayed if 
 			<key>pfm_description</key>
 			<string>The type of platform of the target device. Specifying the platform type helps prevent unintended installations.
 
-For interactive installations on iOS devices, specifying a target platform avoids interstitial alerts that prompt the user to choose a profile target when multiple targets are eligible.</string>
+For interactive installations on iOS devices, specifying a target platform avoids interstitial alerts that prompt the user to choose a profile target when multiple targets are eligible.
+
+Allowed values:
+
+- '0': Any/unspecified
+- '1': iPhone/iPad/iPod Touch
+- '2': Apple Watch
+- '3': HomePod
+- '4': Apple TV
+- '5': Mac
+- '6': Vision Pro</string>
 			<key>pfm_ios_min</key>
 			<string>12.2</string>
 			<key>pfm_macos_min</key>

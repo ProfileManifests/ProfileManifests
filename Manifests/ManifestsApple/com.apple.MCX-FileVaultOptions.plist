@@ -13,7 +13,7 @@
 	<key>pfm_interaction</key>
 	<string>combined</string>
 	<key>pfm_last_modified</key>
-	<date>2025-08-04T08:25:08Z</date>
+	<date>2025-09-17T09:38:09Z</date>
 	<key>pfm_macos_min</key>
 	<string>10.7</string>
 	<key>pfm_platforms</key>
@@ -158,7 +158,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_documentation_url</key>
 			<string>https://developer.apple.com/documentation/devicemanagement/energysaver</string>
 			<key>pfm_macos_min</key>
-			<string>10.9</string>
+			<string>10.10</string>
 			<key>pfm_name</key>
 			<string>DestroyFVKeyOnStandby</string>
 			<key>pfm_note</key>

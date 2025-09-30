@@ -14,7 +14,7 @@ It is used to define a white list of dashboard widgets.</string>
 	<key>pfm_interaction</key>
 	<string>exclusive</string>
 	<key>pfm_last_modified</key>
-	<date>2025-08-04T08:25:08Z</date>
+	<date>2025-09-17T09:38:09Z</date>
 	<key>pfm_macos_deprecated</key>
 	<string>10.15</string>
 	<key>pfm_macos_min</key>

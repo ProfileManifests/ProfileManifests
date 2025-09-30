@@ -19,7 +19,7 @@ It is supported on macOS 10.14 and later. On macOS, it must be sent over the use
 	<key>pfm_ios_min</key>
 	<string>9.3</string>
 	<key>pfm_last_modified</key>
-	<date>2025-08-15T19:32:34Z</date>
+	<date>2025-09-17T09:38:09Z</date>
 	<key>pfm_macos_min</key>
 	<string>10.14</string>
 	<key>pfm_platforms</key>
@@ -478,7 +478,7 @@ _For member/student profiles:_ The array of dictionaries that needs to contain t
 						</dict>
 						<dict>
 							<key>pfm_description</key>
-							<string>The managed Apple Account for this user.
+							<string>The Managed Apple Account for this user.
 
 Not required to configure Classroom, but if set the system uses it.
 

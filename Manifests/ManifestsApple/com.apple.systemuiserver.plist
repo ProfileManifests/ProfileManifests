@@ -13,7 +13,7 @@
 	<key>pfm_interaction</key>
 	<string>combined</string>
 	<key>pfm_last_modified</key>
-	<date>2025-08-04T08:25:08Z</date>
+	<date>2025-09-17T09:38:09Z</date>
 	<key>pfm_macos_deprecated</key>
 	<string>11.0</string>
 	<key>pfm_macos_max</key>
@@ -178,8 +178,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				<dict>
 					<key>pfm_description</key>
 					<string>A string or an array of media action strings. Internally installed SD cards and USB flash drives are included in the hard disk-external category.
-
-
 
 This key is the default for media types that don't fall into other categories.</string>
 					<key>pfm_name</key>
@@ -1230,8 +1228,6 @@ This key is the default for media types that don't fall into other categories.</
 				<dict>
 					<key>pfm_description</key>
 					<string>A string or an array of media action strings. Internally installed SD cards and USB flash drives are included in the hard disk-external category.
-
-
 
 This key is the default for media types that don't fall into other categories.</string>
 					<key>pfm_name</key>

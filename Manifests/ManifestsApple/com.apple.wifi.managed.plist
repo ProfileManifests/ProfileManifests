@@ -15,7 +15,7 @@
 	<key>pfm_ios_min</key>
 	<string>4.0</string>
 	<key>pfm_last_modified</key>
-	<date>2025-08-04T08:25:08Z</date>
+	<date>2025-09-17T09:38:09Z</date>
 	<key>pfm_macos_min</key>
 	<string>10.7</string>
 	<key>pfm_platforms</key>
@@ -177,7 +177,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>If 'true', the device treats the network as a hotspot. Available in iOS 7.0 and later, and in macOS 10.9 and later.</string>
+			<string>If 'true', the device treats the network as a hotspot.</string>
 			<key>pfm_exclude</key>
 			<array>
 				<dict>
@@ -305,9 +305,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_description</key>
 			<string>If 'true', the device joins the network automatically.
 
-If 'false', the user must tap the network name to join it.
-
-Available in iOS 5.0 and later, and in macOS 10.7 and later.</string>
+If 'false', the user must tap the network name to join it.</string>
 			<key>pfm_ios_min</key>
 			<string>5.0</string>
 			<key>pfm_macos_min</key>
@@ -331,7 +329,7 @@ Available in iOS 5.0 and later, and in macOS 10.7 and later.</string>
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>If 'true', the system bypasses Captive Network detection when the device connects to the network. Available in iOS 10.0 and later.</string>
+			<string>If 'true', the system bypasses Captive Network detection when the device connects to the network.</string>
 			<key>pfm_ios_min</key>
 			<string>10.0</string>
 			<key>pfm_name</key>
@@ -365,9 +363,9 @@ Available in iOS 5.0 and later, and in macOS 10.7 and later.</string>
 			<key>pfm_description</key>
 			<string>If 'true,' disables MAC address randomization for a Wi-Fi network while associated with that network. This feature also shows a privacy warning in Settings indicating that the network has reduced privacy protections.
 
-If 'false', then the system enables MAC address randomization on iOS, watchOS, and visionOS..
+If 'false', then the system enables MAC address randomization on iOS, watchOS, and visionOS.
 
-This value is only locked when MDM installs the profile. If the profile is manually installed, the system sets the value but the user can change it. Available in iOS 14 and later, macOS 15 and later, and watchOS 7 and later, and visionOS..</string>
+This value is only locked when MDM installs the profile. If the profile is manually installed, the system sets the value but the user can change it.</string>
 			<key>pfm_ios_min</key>
 			<string>14.0</string>
 			<key>pfm_macos_min</key>
@@ -441,7 +439,7 @@ This value is only locked when MDM installs the profile. If the profile is manua
 			<key>pfm_default</key>
 			<string>None</string>
 			<key>pfm_description</key>
-			<string>The proxy type, if any, to use. If you choose the manual proxy type, you need the proxy server address, including its port and optionally a user name and password into the proxy server. If you choose the auto proxy type, you can enter a proxy autoconfiguration (PAC) URL. Available in iOS 5.0 and later, and on all versions of macOS.</string>
+			<string>The proxy type, if any, to use. If you choose the manual proxy type, you need the proxy server address, including its port and optionally a user name and password into the proxy server. If you choose the auto proxy type, you can enter a proxy autoconfiguration (PAC) URL.</string>
 			<key>pfm_ios_min</key>
 			<string>5.0</string>
 			<key>pfm_name</key>
@@ -946,7 +944,7 @@ Prior to macOS 13, the encryption type, if specified explicitly, needed to match
 				</dict>
 			</array>
 			<key>pfm_description</key>
-			<string>The operator name to display when connected to this network. Used only with Wi-Fi Hotspot 2.0 access points. Available in iOS 7.0 and later, and in macOS 10.9 and later.</string>
+			<string>The operator name to display when connected to this network. Used only with Wi-Fi Hotspot 2.0 access points.</string>
 			<key>pfm_exclude</key>
 			<array>
 				<dict>
@@ -1015,7 +1013,7 @@ Prior to macOS 13, the encryption type, if specified explicitly, needed to match
 				</dict>
 			</array>
 			<key>pfm_description</key>
-			<string>The primary domain of the tunnel. Available in iOS 7.0 and later, and in macOS 10.9 and later.</string>
+			<string>The primary domain of the tunnel.</string>
 			<key>pfm_exclude</key>
 			<array>
 				<dict>
@@ -1068,7 +1066,7 @@ Prior to macOS 13, the encryption type, if specified explicitly, needed to match
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>If 'true', allows connection to roaming service providers. Available in iOS 7.0 and later, and in macOS 10.9 and later.</string>
+			<string>If 'true', allows connection to roaming service providers.</string>
 			<key>pfm_exclude</key>
 			<array>
 				<dict>
@@ -1125,7 +1123,7 @@ Prior to macOS 13, the encryption type, if specified explicitly, needed to match
 		</dict>
 		<dict>
 			<key>pfm_description</key>
-			<string>An array of Roaming Consortium Organization Identifiers used for Wi-Fi Hotspot 2.0 negotiation. Available in iOS 7.0 and later, and in macOS 10.9 and later.</string>
+			<string>An array of Roaming Consortium Organization Identifiers used for Wi-Fi Hotspot 2.0 negotiation.</string>
 			<key>pfm_exclude</key>
 			<array>
 				<dict>
@@ -1193,7 +1191,7 @@ Prior to macOS 13, the encryption type, if specified explicitly, needed to match
 		</dict>
 		<dict>
 			<key>pfm_description</key>
-			<string>An array of Network Access Identifier Realm names used for Wi-Fi Hotspot 2.0 negotiation. Available in iOS 7.0 and later, and in macOS 10.9 and later.</string>
+			<string>An array of Network Access Identifier Realm names used for Wi-Fi Hotspot 2.0 negotiation.</string>
 			<key>pfm_exclude</key>
 			<array>
 				<dict>
@@ -1259,7 +1257,7 @@ Prior to macOS 13, the encryption type, if specified explicitly, needed to match
 		</dict>
 		<dict>
 			<key>pfm_description</key>
-			<string>An array of Mobile Country Code/Mobile Network Code (MCC/MNC) pairs used for Wi-Fi Hotspot 2.0 negotiation. Each string must contain exactly six digits. Available in iOS 7.0 and later. This feature isn't supported in macOS.</string>
+			<string>An array of Mobile Country Code/Mobile Network Code (MCC/MNC) pairs used for Wi-Fi Hotspot 2.0 negotiation. Each string must contain exactly six digits.</string>
 			<key>pfm_exclude</key>
 			<array>
 				<dict>
@@ -1499,7 +1497,15 @@ Prior to macOS 13, the encryption type, if specified explicitly, needed to match
 			<array>
 				<dict>
 					<key>pfm_description</key>
-					<string>The EAP types that the system accepts.
+					<string>The EAP types that the system accepts. Allowed values:
+
+- '13': EAP-TLS
+- '17': LEAP
+- '18': EAP-SIM
+- '21': EAP-TTLS
+- '23': EAP-AKA
+- '25': PEAPv0/v1
+- '43': EAP-FAST
 
 For EAP-TLS authentication without a network payload, install the necessary identity certificates and have your users select EAP-TLS mode in the 802.1X credentials dialog that appears when they connect to the network. For other EAP types, a network payload is necessary and must specify the correct settings for the network.</string>
 					<key>pfm_name</key>
@@ -1707,7 +1713,7 @@ For EAP-TLS authentication without a network payload, install the necessary iden
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string>An array of the UUID of a certificate payloads in the same profile to trust for authentication. Use this key to prevent the device from asking the user whether to trust the listed certificates. Dynamic trust (the certificate dialogue) is in a disabled state if you specify this property without also enabling 'TLSAllowTrustExceptions'.</string>
+					<string>An array of the UUID of each certificate payload in the same profile to trust for authentication. Use this key to prevent the device from asking the user whether to trust the listed certificates. Dynamic trust (the certificate dialogue) is in a disabled state if you specify this property without also enabling 'TLSAllowTrustExceptions'.</string>
 					<key>pfm_name</key>
 					<string>PayloadCertificateAnchorUUID</string>
 					<key>pfm_subkeys</key>
@@ -2358,7 +2364,7 @@ If you don't specify a value, the default is 'true' for EAP-TLS, and 'false' for
 		</dict>
 		<dict>
 			<key>pfm_description</key>
-			<string>A dictionary that contains the list of apps that the system allows to benefit from L2 and L3 marking. When this dictionary isn't present, the system allows all apps to use L2 and L3 marking when the Wi-Fi network supports Cisco QoS fast lane. Available in iOS 10.0 and later, and in macOS 10.13 and later.</string>
+			<string>A dictionary that contains the list of apps that the system allows to benefit from L2 and L3 marking. When this dictionary isn't present, the system allows all apps to use L2 and L3 marking when the Wi-Fi network supports Cisco QoS fast lane.</string>
 			<key>pfm_ios_min</key>
 			<string>10.0</string>
 			<key>pfm_macos_min</key>

@@ -17,7 +17,7 @@
 	<key>pfm_ios_min</key>
 	<string>7.0</string>
 	<key>pfm_last_modified</key>
-	<date>2025-08-15T19:32:34Z</date>
+	<date>2025-09-17T09:38:09Z</date>
 	<key>pfm_macos_min</key>
 	<string>10.10</string>
 	<key>pfm_platforms</key>
@@ -225,7 +225,7 @@ The system limits the list of visible AirPlay destinations to devices that are p
 					<key>pfm_supervised</key>
 					<true/>
 					<key>pfm_title</key>
-					<string>Allow List Content Item</string>
+					<string>AllowList Content Item</string>
 					<key>pfm_type</key>
 					<string>dictionary</string>
 					<key>pfmx_supported_oses</key>
@@ -258,7 +258,7 @@ The system limits the list of visible AirPlay destinations to devices that are p
 			<key>pfm_supervised</key>
 			<true/>
 			<key>pfm_title</key>
-			<string>Allow List</string>
+			<string>AllowList</string>
 			<key>pfm_type</key>
 			<string>array</string>
 			<key>pfm_value_import_processor</key>

@@ -15,7 +15,7 @@
 	<key>pfm_interaction</key>
 	<string>undefined</string>
 	<key>pfm_last_modified</key>
-	<date>2025-08-15T19:32:34Z</date>
+	<date>2025-09-17T09:38:09Z</date>
 	<key>pfm_macos_max</key>
 	<string>10.12.6</string>
 	<key>pfm_macos_min</key>
@@ -209,7 +209,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				<string>public.x509-certificate</string>
 			</array>
 			<key>pfm_description</key>
-			<string>The DER-encoded certificate data if the system creates an institutional recovery key. This key isn't supported on Mac computers with Apple silicon.</string>
+			<string>The DER-encoded certificate data if the system creates an institutional recovery key. This key isn't supported on a Mac with Apple silicon.</string>
 			<key>pfm_name</key>
 			<string>Certificate</string>
 			<key>pfm_title</key>
