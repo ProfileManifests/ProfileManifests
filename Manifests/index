@@ -2086,7 +2086,7 @@
 		<key>com.apple.screensaver</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-09-17T09:38:09Z</date>
+			<date>2025-10-06T09:00:00Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.screensaver.plist</string>
 			<key>version</key>
@@ -2095,7 +2095,7 @@
 		<key>com.apple.screensaver.user</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-09-17T09:38:09Z</date>
+			<date>2025-10-06T09:00:00Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.screensaver.user.plist</string>
 			<key>version</key>
@@ -2445,6 +2445,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2025-09-30T13:06:44Z</date>
+	<date>2025-10-06T09:12:18Z</date>
 </dict>
 </plist>
