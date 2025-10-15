@@ -559,11 +559,11 @@
 		<key>com.google.Chrome</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-08-04T08:25:08Z</date>
+			<date>2025-10-14T00:00:00Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.google.Chrome.plist</string>
 			<key>version</key>
-			<integer>16</integer>
+			<integer>17</integer>
 		</dict>
 		<key>com.google.Keystone</key>
 		<dict>
@@ -2445,6 +2445,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2025-10-13T09:18:05Z</date>
+	<date>2025-10-15T08:17:12Z</date>
 </dict>
 </plist>
