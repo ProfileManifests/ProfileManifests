@@ -511,6 +511,13 @@
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.microsoft.SkypeForBusiness.png</string>
 		</dict>
+		<key>com.microsoft.VSCode</key>
+		<dict>
+			<key>hash</key>
+			<string>55346c16f1fc347eae1df18e70072b3c</string>
+			<key>path</key>
+			<string>Icons/ManagedPreferencesApplications/com.microsoft.VSCode.png</string>
+		</dict>
 		<key>com.microsoft.Word</key>
 		<dict>
 			<key>hash</key>
@@ -650,6 +657,13 @@
 			<string>ac3f6249e4ee3f0f856a5782de27fdcb</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.tinyspeck.slackmacgap.png</string>
+		</dict>
+		<key>com.todesktop.230313mzl4w4u92</key>
+		<dict>
+			<key>hash</key>
+			<string>33e8bbd365df8c0654c4f6ca19b43075</string>
+			<key>path</key>
+			<string>Icons/ManagedPreferencesApplications/com.todesktop.230313mzl4w4u92.png</string>
 		</dict>
 		<key>com.trusourcelabs.NoMAD</key>
 		<dict>
@@ -1566,6 +1580,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2025-10-20T16:05:27Z</date>
+	<date>2025-10-20T16:41:06Z</date>
 </dict>
 </plist>

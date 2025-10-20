@@ -826,6 +826,15 @@
 			<key>version</key>
 			<integer>4</integer>
 		</dict>
+		<key>com.microsoft.VSCode</key>
+		<dict>
+			<key>modified</key>
+			<date>2025-10-20T12:41:36Z</date>
+			<key>path</key>
+			<string>Manifests/ManagedPreferencesApplications/com.microsoft.VSCode.plist</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 		<key>com.microsoft.Word</key>
 		<dict>
 			<key>modified</key>
@@ -1005,6 +1014,15 @@
 			<string>Manifests/ManagedPreferencesApplications/com.tinyspeck.slackmacgap.plist</string>
 			<key>version</key>
 			<integer>3</integer>
+		</dict>
+		<key>com.todesktop.230313mzl4w4u92</key>
+		<dict>
+			<key>modified</key>
+			<date>2025-10-20T01:52:09Z</date>
+			<key>path</key>
+			<string>Manifests/ManagedPreferencesApplications/com.todesktop.230313mzl4w4u92.plist</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<key>com.trusourcelabs.NoMAD</key>
 		<dict>
@@ -2427,6 +2445,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2025-10-20T16:05:27Z</date>
+	<date>2025-10-20T16:41:06Z</date>
 </dict>
 </plist>
