@@ -1519,7 +1519,7 @@
 		<key>com.apple.SetupAssistant.managed</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-09-17T09:38:09Z</date>
+			<date>2025-11-05T14:06:39Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.SetupAssistant.managed.plist</string>
 			<key>version</key>
@@ -1609,16 +1609,16 @@
 		<key>com.apple.applicationaccess-iOS</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-09-17T09:38:09Z</date>
+			<date>2025-11-05T14:06:39Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.applicationaccess-iOS.plist</string>
 			<key>version</key>
-			<integer>20</integer>
+			<integer>21</integer>
 		</dict>
 		<key>com.apple.applicationaccess-macOS</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-09-17T09:38:09Z</date>
+			<date>2025-11-05T14:06:39Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.applicationaccess-macOS.plist</string>
 			<key>version</key>
@@ -1816,7 +1816,7 @@
 		<key>com.apple.extensiblesso</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-09-17T09:38:09Z</date>
+			<date>2025-11-05T14:06:39Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.extensiblesso.plist</string>
 			<key>version</key>
@@ -1951,7 +1951,7 @@
 		<key>com.apple.loginwindow</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-09-17T09:38:09Z</date>
+			<date>2025-11-05T14:06:39Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.loginwindow.plist</string>
 			<key>version</key>
@@ -2086,7 +2086,7 @@
 		<key>com.apple.screensaver</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-10-06T09:00:00Z</date>
+			<date>2025-11-05T14:06:39Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.screensaver.plist</string>
 			<key>version</key>
@@ -2445,6 +2445,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2025-10-20T16:05:27Z</date>
+	<date>2025-11-05T14:28:05Z</date>
 </dict>
 </plist>
