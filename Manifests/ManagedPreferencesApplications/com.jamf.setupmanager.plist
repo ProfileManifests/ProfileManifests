@@ -3,11 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>pfm_app_url</key>
-	<string>https://github.com/Jamf-Concepts/Setup-Manager</string>
+	<string>https://github.com/jamf/Setup-Manager</string>
 	<key>pfm_description</key>
 	<string>Jamf Setup Manager settings</string>
 	<key>pfm_documentation_url</key>
-	<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md</string>
+	<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md</string>
 	<key>pfm_domain</key>
 	<string>com.jamf.setupmanager</string>
 	<key>pfm_format_version</key>
@@ -201,7 +201,7 @@ A profile can consist of payloads with different version numbers. For example, c
 			<key>pfm_description</key>
 			<string>Enables debug mode. See documentation for behavior changes.</string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#debug</string>
+			<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#debug</string>
 			<key>pfm_name</key>
 			<string>DEBUG</string>
 			<key>pfm_title</key>
@@ -215,7 +215,7 @@ A profile can consist of payloads with different version numbers. For example, c
 			<key>pfm_description</key>
 			<string>The main title over the window.</string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#title</string>
+			<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#title</string>
 			<key>pfm_name</key>
 			<string>title</string>
 			<key>pfm_title</key>
@@ -229,7 +229,7 @@ A profile can consist of payloads with different version numbers. For example, c
 			<key>pfm_description</key>
 			<string>The icon shown at the top center of the window. There are many options to define icons, as described in the documentation.</string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#icon</string>
+			<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#icon</string>
 			<key>pfm_name</key>
 			<string>icon</string>
 			<key>pfm_title</key>
@@ -243,7 +243,7 @@ A profile can consist of payloads with different version numbers. For example, c
 			<key>pfm_description</key>
 			<string>The message shown below the title.</string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#message</string>
+			<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#message</string>
 			<key>pfm_name</key>
 			<string>message</string>
 			<key>pfm_title</key>
@@ -255,7 +255,7 @@ A profile can consist of payloads with different version numbers. For example, c
 			<key>pfm_description</key>
 			<string>When set, Setup Manager displays the image full screen as a background behind the main window. Supports the same sources as Icon.</string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#background</string>
+			<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#background</string>
 			<key>pfm_name</key>
 			<string>background</string>
 			<key>pfm_title</key>
@@ -271,7 +271,7 @@ A profile can consist of payloads with different version numbers. For example, c
 			<key>pfm_description</key>
 			<string>This value determines when Setup Manager should launch.</string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#runat</string>
+			<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#runat</string>
 			<key>pfm_name</key>
 			<string>runAt</string>
 			<key>pfm_range_list</key>
@@ -293,7 +293,7 @@ A profile can consist of payloads with different version numbers. For example, c
 			<key>pfm_description</key>
 			<string>Sets the accent color for buttons, progress bar, SF Symbol icons, and other UI elements. Use this to match branding. Color is encoded as a six digit hex code, e.g. #FF0088.</string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#accentcolor</string>
+			<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#accentcolor</string>
 			<key>pfm_name</key>
 			<string>accentColor</string>
 			<key>pfm_title</key>
@@ -307,7 +307,7 @@ A profile can consist of payloads with different version numbers. For example, c
 			<key>pfm_description</key>
 			<string>Changes the duration (in seconds) of the "final countdown" before the app automatically performs the finalAction. Set to -1 (or any negative number) to disable automated execution. This setting is ignored if finalAction is set to 'none'.</string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#finalcountdown</string>
+			<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#finalcountdown</string>
 			<key>pfm_name</key>
 			<string>finalCountdown</string>
 			<key>pfm_title</key>
@@ -321,7 +321,7 @@ A profile can consist of payloads with different version numbers. For example, c
 			<key>pfm_description</key>
 			<string>Sets the action and label for the button shown when Setup Manger has completed.</string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#finalaction</string>
+			<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#finalaction</string>
 			<key>pfm_name</key>
 			<string>finalAction</string>
 			<key>pfm_range_list</key>
@@ -347,7 +347,7 @@ A profile can consist of payloads with different version numbers. For example, c
 			<key>pfm_description</key>
 			<string>Use this value to provide an estimate for the total size of all items that will be downloaded.</string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#totaldownloadbytes</string>
+			<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#totaldownloadbytes</string>
 			<key>pfm_name</key>
 			<string>totalDownloadBytes</string>
 			<key>pfm_title</key>
@@ -359,7 +359,7 @@ A profile can consist of payloads with different version numbers. For example, c
 			<key>pfm_description</key>
 			<string>When using JSM with Jamf Pro, set this to $JSSID in a Jamf Pro configuration profile and Setup Manager will be aware of its computer's id in Jamf Pro.</string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#jssid</string>
+			<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#jssid</string>
 			<key>pfm_name</key>
 			<string>jssID</string>
 			<key>pfm_range_list</key>
@@ -375,7 +375,7 @@ A profile can consist of payloads with different version numbers. For example, c
 			<key>pfm_description</key>
 			<string>Set this to $EMAIL in the configuration profile. This communicates the user who logged in to customized enrollment to Setup Manager. This can be used together with the userEntry.showForUserIDs key to control which users see the user entry UI.</string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#userid</string>
+			<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#userid</string>
 			<key>pfm_name</key>
 			<string>userID</string>
 			<key>pfm_range_list</key>
@@ -392,7 +392,7 @@ A profile can consist of payloads with different version numbers. For example, c
 			<key>pfm_description</key>
 			<string>Setup Manager will generate the computer name from this template and set it automatically. See the documentation for substitutions that can used in the template. (Setting this overrides the Computer Name field in user entry.)</string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#computernametemplate</string>
+			<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#computernametemplate</string>
 			<key>pfm_name</key>
 			<string>computerNameTemplate</string>
 			<key>pfm_title</key>
@@ -404,7 +404,7 @@ A profile can consist of payloads with different version numbers. For example, c
 			<key>pfm_description</key>
 			<string>When set, the "About this Mac" info window will show this value instead of the real serial number.</string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#overrideserialnumber</string>
+			<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#overrideserialnumber</string>
 			<key>pfm_name</key>
 			<string>overrideSerialNumber</string>
 			<key>pfm_title</key>
@@ -416,7 +416,7 @@ A profile can consist of payloads with different version numbers. For example, c
 			<key>pfm_description</key>
 			<string>Hides the individual labels under each action's icon.</string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#hideactionlabels</string>
+			<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#hideactionlabels</string>
 			<key>pfm_name</key>
 			<string>hideActionLabels</string>
 			<key>pfm_title</key>
@@ -432,7 +432,7 @@ A profile can consist of payloads with different version numbers. For example, c
 			<key>pfm_description</key>
 			<string>Controls whether the output of actions is written to the Setup Manager log file.</string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#actionoutputlogging</string>
+			<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#actionoutputlogging</string>
 			<key>pfm_name</key>
 			<string>actionOutputLogging</string>
 			<key>pfm_range_list</key>
@@ -456,7 +456,7 @@ A profile can consist of payloads with different version numbers. For example, c
 			<key>pfm_description</key>
 			<string>Suppresses display of the red 'DEBUG' label in debug mode.</string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#hidedebuglabel</string>
+			<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#hidedebuglabel</string>
 			<key>pfm_name</key>
 			<string>hideDebugLabel</string>
 			<key>pfm_title</key>
@@ -468,7 +468,7 @@ A profile can consist of payloads with different version numbers. For example, c
 			<key>pfm_description</key>
 			<string>When debug mode is enabled, you can set this to Jamf Pro or Jamf School. This allows you to do test runs on un-enrolled Macs.</string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#simulatemdm</string>
+			<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#simulatemdm</string>
 			<key>pfm_name</key>
 			<string>simulateMDM</string>
 			<key>pfm_range_list</key>
@@ -492,7 +492,7 @@ A profile can consist of payloads with different version numbers. For example, c
 					<key>pfm_description</key>
 					<string>The title for the help message.</string>
 					<key>pfm_documentation_url</key>
-					<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#title-1</string>
+					<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#title-1</string>
 					<key>pfm_name</key>
 					<string>title</string>
 					<key>pfm_title</key>
@@ -504,7 +504,7 @@ A profile can consist of payloads with different version numbers. For example, c
 					<key>pfm_description</key>
 					<string>The help message.</string>
 					<key>pfm_documentation_url</key>
-					<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#message-1</string>
+					<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#message-1</string>
 					<key>pfm_name</key>
 					<string>message</string>
 					<key>pfm_title</key>
@@ -516,7 +516,7 @@ A profile can consist of payloads with different version numbers. For example, c
 					<key>pfm_description</key>
 					<string>The URL will be translated into a QR code and displayed next to the help message.</string>
 					<key>pfm_documentation_url</key>
-					<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#url</string>
+					<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#url</string>
 					<key>pfm_name</key>
 					<string>url</string>
 					<key>pfm_title</key>
@@ -534,7 +534,7 @@ A profile can consist of payloads with different version numbers. For example, c
 			<key>pfm_description</key>
 			<string>When any of these are defined, Setup Manager will prompt for user data while the enrollment actions are running.</string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#user-entry</string>
+			<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#user-entry</string>
 			<key>pfm_name</key>
 			<string>userEntry</string>
 			<key>pfm_subkeys</key>
@@ -550,7 +550,7 @@ A profile can consist of payloads with different version numbers. For example, c
 							<key>pfm_description</key>
 							<string>A pre-populated value for the User ID field.</string>
 							<key>pfm_documentation_url</key>
-							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#default</string>
+							<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#default</string>
 							<key>pfm_name</key>
 							<string>default</string>
 							<key>pfm_title</key>
@@ -562,7 +562,7 @@ A profile can consist of payloads with different version numbers. For example, c
 							<key>pfm_description</key>
 							<string>A placeholder value for User ID. This is displayed in gray when no value has been entered.</string>
 							<key>pfm_documentation_url</key>
-							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#placeholder</string>
+							<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#placeholder</string>
 							<key>pfm_name</key>
 							<string>placeholder</string>
 							<key>pfm_title</key>
@@ -574,7 +574,7 @@ A profile can consist of payloads with different version numbers. For example, c
 							<key>pfm_description</key>
 							<string>Options displayed in a dropdown menu for User ID.</string>
 							<key>pfm_documentation_url</key>
-							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#options</string>
+							<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#options</string>
 							<key>pfm_name</key>
 							<string>options</string>
 							<key>pfm_subkeys</key>
@@ -595,7 +595,7 @@ A profile can consist of payloads with different version numbers. For example, c
 							<key>pfm_description</key>
 							<string>A regular expression used to validate the value of User ID.</string>
 							<key>pfm_documentation_url</key>
-							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#validation</string>
+							<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#validation</string>
 							<key>pfm_name</key>
 							<string>validation</string>
 							<key>pfm_title</key>
@@ -607,7 +607,7 @@ A profile can consist of payloads with different version numbers. For example, c
 							<key>pfm_description</key>
 							<string>A message displayed to the user when User ID fails to match the regular expression.</string>
 							<key>pfm_documentation_url</key>
-							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#validationmessage</string>
+							<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#validationmessage</string>
 							<key>pfm_name</key>
 							<string>validationMessage</string>
 							<key>pfm_title</key>
@@ -623,7 +623,7 @@ A profile can consist of payloads with different version numbers. For example, c
 							<key>pfm_description</key>
 							<string>Override the default label for the User ID field.</string>
 							<key>pfm_documentation_url</key>
-							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#label-1</string>
+							<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#label-1</string>
 							<key>pfm_name</key>
 							<string>label</string>
 							<key>pfm_title</key>
@@ -650,7 +650,7 @@ A profile can consist of payloads with different version numbers. For example, c
 							<key>pfm_description</key>
 							<string>A pre-populated value for the Email field.</string>
 							<key>pfm_documentation_url</key>
-							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#default</string>
+							<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#default</string>
 							<key>pfm_name</key>
 							<string>default</string>
 							<key>pfm_title</key>
@@ -664,7 +664,7 @@ A profile can consist of payloads with different version numbers. For example, c
 							<key>pfm_description</key>
 							<string>A placeholder value for Email. This is displayed in gray when no value has been entered.</string>
 							<key>pfm_documentation_url</key>
-							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#placeholder</string>
+							<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#placeholder</string>
 							<key>pfm_name</key>
 							<string>placeholder</string>
 							<key>pfm_title</key>
@@ -678,7 +678,7 @@ A profile can consist of payloads with different version numbers. For example, c
 							<key>pfm_description</key>
 							<string>Options displayed in a dropdown menu for Email.</string>
 							<key>pfm_documentation_url</key>
-							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#options</string>
+							<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#options</string>
 							<key>pfm_name</key>
 							<string>options</string>
 							<key>pfm_subkeys</key>
@@ -701,7 +701,7 @@ A profile can consist of payloads with different version numbers. For example, c
 							<key>pfm_description</key>
 							<string>A regular expression used to validate the value of Email.</string>
 							<key>pfm_documentation_url</key>
-							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#validation</string>
+							<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#validation</string>
 							<key>pfm_name</key>
 							<string>validation</string>
 							<key>pfm_title</key>
@@ -715,7 +715,7 @@ A profile can consist of payloads with different version numbers. For example, c
 							<key>pfm_description</key>
 							<string>A message displayed to the user when Email fails to match the regular expression.</string>
 							<key>pfm_documentation_url</key>
-							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#validationmessage</string>
+							<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#validationmessage</string>
 							<key>pfm_name</key>
 							<string>validationMessage</string>
 							<key>pfm_title</key>
@@ -731,7 +731,7 @@ A profile can consist of payloads with different version numbers. For example, c
 							<key>pfm_description</key>
 							<string>Override the default label for the Email field.</string>
 							<key>pfm_documentation_url</key>
-							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#label-1</string>
+							<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#label-1</string>
 							<key>pfm_name</key>
 							<string>label</string>
 							<key>pfm_title</key>
@@ -758,7 +758,7 @@ A profile can consist of payloads with different version numbers. For example, c
 							<key>pfm_description</key>
 							<string>A pre-populated value for the Account Name field.</string>
 							<key>pfm_documentation_url</key>
-							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#default</string>
+							<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#default</string>
 							<key>pfm_name</key>
 							<string>default</string>
 							<key>pfm_title</key>
@@ -772,7 +772,7 @@ A profile can consist of payloads with different version numbers. For example, c
 							<key>pfm_description</key>
 							<string>A placeholder value for Account Name. This is displayed in gray when no value has been entered.</string>
 							<key>pfm_documentation_url</key>
-							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#placeholder</string>
+							<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#placeholder</string>
 							<key>pfm_name</key>
 							<string>placeholder</string>
 							<key>pfm_title</key>
@@ -786,7 +786,7 @@ A profile can consist of payloads with different version numbers. For example, c
 							<key>pfm_description</key>
 							<string>Options displayed in a dropdown menu for Account Name.</string>
 							<key>pfm_documentation_url</key>
-							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#options</string>
+							<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#options</string>
 							<key>pfm_name</key>
 							<string>options</string>
 							<key>pfm_subkeys</key>
@@ -809,7 +809,7 @@ A profile can consist of payloads with different version numbers. For example, c
 							<key>pfm_description</key>
 							<string>A regular expression used to validate the value of Account Name.</string>
 							<key>pfm_documentation_url</key>
-							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#validation</string>
+							<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#validation</string>
 							<key>pfm_name</key>
 							<string>validation</string>
 							<key>pfm_title</key>
@@ -823,7 +823,7 @@ A profile can consist of payloads with different version numbers. For example, c
 							<key>pfm_description</key>
 							<string>A message displayed to the user when Account Name fails to match the regular expression.</string>
 							<key>pfm_documentation_url</key>
-							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#validationmessage</string>
+							<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#validationmessage</string>
 							<key>pfm_name</key>
 							<string>validationMessage</string>
 							<key>pfm_title</key>
@@ -839,7 +839,7 @@ A profile can consist of payloads with different version numbers. For example, c
 							<key>pfm_description</key>
 							<string>Override the default label for the Account Name field.</string>
 							<key>pfm_documentation_url</key>
-							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#label-1</string>
+							<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#label-1</string>
 							<key>pfm_name</key>
 							<string>label</string>
 							<key>pfm_title</key>
@@ -866,7 +866,7 @@ A profile can consist of payloads with different version numbers. For example, c
 							<key>pfm_description</key>
 							<string>A pre-populated value for the Full Name field.</string>
 							<key>pfm_documentation_url</key>
-							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#default</string>
+							<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#default</string>
 							<key>pfm_name</key>
 							<string>default</string>
 							<key>pfm_title</key>
@@ -880,7 +880,7 @@ A profile can consist of payloads with different version numbers. For example, c
 							<key>pfm_description</key>
 							<string>A placeholder value for Full Name. This is displayed in gray when no value has been entered.</string>
 							<key>pfm_documentation_url</key>
-							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#placeholder</string>
+							<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#placeholder</string>
 							<key>pfm_name</key>
 							<string>placeholder</string>
 							<key>pfm_title</key>
@@ -894,7 +894,7 @@ A profile can consist of payloads with different version numbers. For example, c
 							<key>pfm_description</key>
 							<string>Options displayed in a dropdown menu for Full Name.</string>
 							<key>pfm_documentation_url</key>
-							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#options</string>
+							<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#options</string>
 							<key>pfm_name</key>
 							<string>options</string>
 							<key>pfm_subkeys</key>
@@ -917,7 +917,7 @@ A profile can consist of payloads with different version numbers. For example, c
 							<key>pfm_description</key>
 							<string>A regular expression used to validate the value of Full Name.</string>
 							<key>pfm_documentation_url</key>
-							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#validation</string>
+							<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#validation</string>
 							<key>pfm_name</key>
 							<string>validation</string>
 							<key>pfm_title</key>
@@ -931,7 +931,7 @@ A profile can consist of payloads with different version numbers. For example, c
 							<key>pfm_description</key>
 							<string>A message displayed to the user when Full Name fails to match the regular expression.</string>
 							<key>pfm_documentation_url</key>
-							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#validationmessage</string>
+							<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#validationmessage</string>
 							<key>pfm_name</key>
 							<string>validationMessage</string>
 							<key>pfm_title</key>
@@ -947,7 +947,7 @@ A profile can consist of payloads with different version numbers. For example, c
 							<key>pfm_description</key>
 							<string>Override the default label for the Full Name field.</string>
 							<key>pfm_documentation_url</key>
-							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#label-1</string>
+							<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#label-1</string>
 							<key>pfm_name</key>
 							<string>label</string>
 							<key>pfm_title</key>
@@ -974,7 +974,7 @@ A profile can consist of payloads with different version numbers. For example, c
 							<key>pfm_description</key>
 							<string>A pre-populated value for the Position field.</string>
 							<key>pfm_documentation_url</key>
-							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#default</string>
+							<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#default</string>
 							<key>pfm_name</key>
 							<string>default</string>
 							<key>pfm_title</key>
@@ -988,7 +988,7 @@ A profile can consist of payloads with different version numbers. For example, c
 							<key>pfm_description</key>
 							<string>A placeholder value for Position. This is displayed in gray when no value has been entered.</string>
 							<key>pfm_documentation_url</key>
-							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#placeholder</string>
+							<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#placeholder</string>
 							<key>pfm_name</key>
 							<string>placeholder</string>
 							<key>pfm_title</key>
@@ -1002,7 +1002,7 @@ A profile can consist of payloads with different version numbers. For example, c
 							<key>pfm_description</key>
 							<string>Options displayed in a dropdown menu for Position.</string>
 							<key>pfm_documentation_url</key>
-							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#options</string>
+							<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#options</string>
 							<key>pfm_name</key>
 							<string>options</string>
 							<key>pfm_subkeys</key>
@@ -1025,7 +1025,7 @@ A profile can consist of payloads with different version numbers. For example, c
 							<key>pfm_description</key>
 							<string>A regular expression used to validate the value of Position.</string>
 							<key>pfm_documentation_url</key>
-							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#validation</string>
+							<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#validation</string>
 							<key>pfm_name</key>
 							<string>validation</string>
 							<key>pfm_title</key>
@@ -1039,7 +1039,7 @@ A profile can consist of payloads with different version numbers. For example, c
 							<key>pfm_description</key>
 							<string>A message displayed to the user when Position fails to match the regular expression.</string>
 							<key>pfm_documentation_url</key>
-							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#validationmessage</string>
+							<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#validationmessage</string>
 							<key>pfm_name</key>
 							<string>validationMessage</string>
 							<key>pfm_title</key>
@@ -1055,7 +1055,7 @@ A profile can consist of payloads with different version numbers. For example, c
 							<key>pfm_description</key>
 							<string>Override the default label for the Position field.</string>
 							<key>pfm_documentation_url</key>
-							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#label-1</string>
+							<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#label-1</string>
 							<key>pfm_name</key>
 							<string>label</string>
 							<key>pfm_title</key>
@@ -1082,7 +1082,7 @@ A profile can consist of payloads with different version numbers. For example, c
 							<key>pfm_description</key>
 							<string>A pre-populated value for the Phone field.</string>
 							<key>pfm_documentation_url</key>
-							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#default</string>
+							<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#default</string>
 							<key>pfm_name</key>
 							<string>default</string>
 							<key>pfm_title</key>
@@ -1096,7 +1096,7 @@ A profile can consist of payloads with different version numbers. For example, c
 							<key>pfm_description</key>
 							<string>A placeholder value for Phone. This is displayed in gray when no value has been entered.</string>
 							<key>pfm_documentation_url</key>
-							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#placeholder</string>
+							<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#placeholder</string>
 							<key>pfm_name</key>
 							<string>placeholder</string>
 							<key>pfm_title</key>
@@ -1110,7 +1110,7 @@ A profile can consist of payloads with different version numbers. For example, c
 							<key>pfm_description</key>
 							<string>Options displayed in a dropdown menu for Phone.</string>
 							<key>pfm_documentation_url</key>
-							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#options</string>
+							<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#options</string>
 							<key>pfm_name</key>
 							<string>options</string>
 							<key>pfm_subkeys</key>
@@ -1133,7 +1133,7 @@ A profile can consist of payloads with different version numbers. For example, c
 							<key>pfm_description</key>
 							<string>A regular expression used to validate the value of Phone.</string>
 							<key>pfm_documentation_url</key>
-							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#validation</string>
+							<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#validation</string>
 							<key>pfm_name</key>
 							<string>validation</string>
 							<key>pfm_title</key>
@@ -1147,7 +1147,7 @@ A profile can consist of payloads with different version numbers. For example, c
 							<key>pfm_description</key>
 							<string>A message displayed to the user when Phone fails to match the regular expression.</string>
 							<key>pfm_documentation_url</key>
-							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#validationmessage</string>
+							<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#validationmessage</string>
 							<key>pfm_name</key>
 							<string>validationMessage</string>
 							<key>pfm_title</key>
@@ -1163,7 +1163,7 @@ A profile can consist of payloads with different version numbers. For example, c
 							<key>pfm_description</key>
 							<string>Override the default label for the Phone field.</string>
 							<key>pfm_documentation_url</key>
-							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#label-1</string>
+							<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#label-1</string>
 							<key>pfm_name</key>
 							<string>label</string>
 							<key>pfm_title</key>
@@ -1188,7 +1188,7 @@ A profile can consist of payloads with different version numbers. For example, c
 							<key>pfm_description</key>
 							<string>A pre-populated value for the Department field.</string>
 							<key>pfm_documentation_url</key>
-							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#default</string>
+							<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#default</string>
 							<key>pfm_name</key>
 							<string>default</string>
 							<key>pfm_title</key>
@@ -1200,7 +1200,7 @@ A profile can consist of payloads with different version numbers. For example, c
 							<key>pfm_description</key>
 							<string>A placeholder value for Department. This is displayed in gray when no value has been entered.</string>
 							<key>pfm_documentation_url</key>
-							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#placeholder</string>
+							<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#placeholder</string>
 							<key>pfm_name</key>
 							<string>placeholder</string>
 							<key>pfm_title</key>
@@ -1212,7 +1212,7 @@ A profile can consist of payloads with different version numbers. For example, c
 							<key>pfm_description</key>
 							<string>Options displayed in a dropdown menu for Department.</string>
 							<key>pfm_documentation_url</key>
-							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#options</string>
+							<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#options</string>
 							<key>pfm_name</key>
 							<string>options</string>
 							<key>pfm_subkeys</key>
@@ -1233,7 +1233,7 @@ A profile can consist of payloads with different version numbers. For example, c
 							<key>pfm_description</key>
 							<string>A regular expression used to validate the value of Department.</string>
 							<key>pfm_documentation_url</key>
-							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#validation</string>
+							<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#validation</string>
 							<key>pfm_name</key>
 							<string>validation</string>
 							<key>pfm_title</key>
@@ -1245,7 +1245,7 @@ A profile can consist of payloads with different version numbers. For example, c
 							<key>pfm_description</key>
 							<string>A message displayed to the user when Department fails to match the regular expression.</string>
 							<key>pfm_documentation_url</key>
-							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#validationmessage</string>
+							<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#validationmessage</string>
 							<key>pfm_name</key>
 							<string>validationMessage</string>
 							<key>pfm_title</key>
@@ -1261,7 +1261,7 @@ A profile can consist of payloads with different version numbers. For example, c
 							<key>pfm_description</key>
 							<string>Override the default label for the Department field.</string>
 							<key>pfm_documentation_url</key>
-							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#label-1</string>
+							<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#label-1</string>
 							<key>pfm_name</key>
 							<string>label</string>
 							<key>pfm_title</key>
@@ -1286,7 +1286,7 @@ A profile can consist of payloads with different version numbers. For example, c
 							<key>pfm_description</key>
 							<string>A pre-populated value for the Building field.</string>
 							<key>pfm_documentation_url</key>
-							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#default</string>
+							<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#default</string>
 							<key>pfm_name</key>
 							<string>default</string>
 							<key>pfm_title</key>
@@ -1298,7 +1298,7 @@ A profile can consist of payloads with different version numbers. For example, c
 							<key>pfm_description</key>
 							<string>A placeholder value for Building. This is displayed in gray when no value has been entered.</string>
 							<key>pfm_documentation_url</key>
-							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#placeholder</string>
+							<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#placeholder</string>
 							<key>pfm_name</key>
 							<string>placeholder</string>
 							<key>pfm_title</key>
@@ -1310,7 +1310,7 @@ A profile can consist of payloads with different version numbers. For example, c
 							<key>pfm_description</key>
 							<string>Options displayed in a dropdown menu for Building.</string>
 							<key>pfm_documentation_url</key>
-							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#options</string>
+							<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#options</string>
 							<key>pfm_name</key>
 							<string>options</string>
 							<key>pfm_subkeys</key>
@@ -1331,7 +1331,7 @@ A profile can consist of payloads with different version numbers. For example, c
 							<key>pfm_description</key>
 							<string>A regular expression used to validate the value of Building.</string>
 							<key>pfm_documentation_url</key>
-							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#validation</string>
+							<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#validation</string>
 							<key>pfm_name</key>
 							<string>validation</string>
 							<key>pfm_title</key>
@@ -1343,7 +1343,7 @@ A profile can consist of payloads with different version numbers. For example, c
 							<key>pfm_description</key>
 							<string>A message displayed to the user when Building fails to match the regular expression.</string>
 							<key>pfm_documentation_url</key>
-							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#validationmessage</string>
+							<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#validationmessage</string>
 							<key>pfm_name</key>
 							<string>validationMessage</string>
 							<key>pfm_title</key>
@@ -1359,7 +1359,7 @@ A profile can consist of payloads with different version numbers. For example, c
 							<key>pfm_description</key>
 							<string>Override the default label for the Building field.</string>
 							<key>pfm_documentation_url</key>
-							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#label-1</string>
+							<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#label-1</string>
 							<key>pfm_name</key>
 							<string>label</string>
 							<key>pfm_title</key>
@@ -1384,7 +1384,7 @@ A profile can consist of payloads with different version numbers. For example, c
 							<key>pfm_description</key>
 							<string>A pre-populated value for the Room field.</string>
 							<key>pfm_documentation_url</key>
-							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#default</string>
+							<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#default</string>
 							<key>pfm_name</key>
 							<string>default</string>
 							<key>pfm_title</key>
@@ -1396,7 +1396,7 @@ A profile can consist of payloads with different version numbers. For example, c
 							<key>pfm_description</key>
 							<string>A placeholder value for Room. This is displayed in gray when no value has been entered.</string>
 							<key>pfm_documentation_url</key>
-							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#placeholder</string>
+							<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#placeholder</string>
 							<key>pfm_name</key>
 							<string>placeholder</string>
 							<key>pfm_title</key>
@@ -1408,7 +1408,7 @@ A profile can consist of payloads with different version numbers. For example, c
 							<key>pfm_description</key>
 							<string>Options displayed in a dropdown menu for Room.</string>
 							<key>pfm_documentation_url</key>
-							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#options</string>
+							<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#options</string>
 							<key>pfm_name</key>
 							<string>options</string>
 							<key>pfm_subkeys</key>
@@ -1429,7 +1429,7 @@ A profile can consist of payloads with different version numbers. For example, c
 							<key>pfm_description</key>
 							<string>A regular expression used to validate the value of Room.</string>
 							<key>pfm_documentation_url</key>
-							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#validation</string>
+							<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#validation</string>
 							<key>pfm_name</key>
 							<string>validation</string>
 							<key>pfm_title</key>
@@ -1441,7 +1441,7 @@ A profile can consist of payloads with different version numbers. For example, c
 							<key>pfm_description</key>
 							<string>A message displayed to the user when Room fails to match the regular expression.</string>
 							<key>pfm_documentation_url</key>
-							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#validationmessage</string>
+							<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#validationmessage</string>
 							<key>pfm_name</key>
 							<string>validationMessage</string>
 							<key>pfm_title</key>
@@ -1457,7 +1457,7 @@ A profile can consist of payloads with different version numbers. For example, c
 							<key>pfm_description</key>
 							<string>Override the default label for the Room field.</string>
 							<key>pfm_documentation_url</key>
-							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#label-1</string>
+							<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#label-1</string>
 							<key>pfm_name</key>
 							<string>label</string>
 							<key>pfm_title</key>
@@ -1482,7 +1482,7 @@ A profile can consist of payloads with different version numbers. For example, c
 							<key>pfm_description</key>
 							<string>A pre-populated value for the Asset Tag field.</string>
 							<key>pfm_documentation_url</key>
-							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#default</string>
+							<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#default</string>
 							<key>pfm_name</key>
 							<string>default</string>
 							<key>pfm_title</key>
@@ -1494,7 +1494,7 @@ A profile can consist of payloads with different version numbers. For example, c
 							<key>pfm_description</key>
 							<string>A placeholder value for Asset Tag. This is displayed in gray when no value has been entered.</string>
 							<key>pfm_documentation_url</key>
-							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#placeholder</string>
+							<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#placeholder</string>
 							<key>pfm_name</key>
 							<string>placeholder</string>
 							<key>pfm_title</key>
@@ -1506,7 +1506,7 @@ A profile can consist of payloads with different version numbers. For example, c
 							<key>pfm_description</key>
 							<string>Options displayed in a dropdown menu for Asset Tag.</string>
 							<key>pfm_documentation_url</key>
-							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#options</string>
+							<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#options</string>
 							<key>pfm_name</key>
 							<string>options</string>
 							<key>pfm_subkeys</key>
@@ -1527,7 +1527,7 @@ A profile can consist of payloads with different version numbers. For example, c
 							<key>pfm_description</key>
 							<string>A regular expression used to validate the value of Asset Tag.</string>
 							<key>pfm_documentation_url</key>
-							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#validation</string>
+							<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#validation</string>
 							<key>pfm_name</key>
 							<string>validation</string>
 							<key>pfm_title</key>
@@ -1539,7 +1539,7 @@ A profile can consist of payloads with different version numbers. For example, c
 							<key>pfm_description</key>
 							<string>A message displayed to the user when Asset Tag fails to match the regular expression.</string>
 							<key>pfm_documentation_url</key>
-							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#validationmessage</string>
+							<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#validationmessage</string>
 							<key>pfm_name</key>
 							<string>validationMessage</string>
 							<key>pfm_title</key>
@@ -1555,7 +1555,7 @@ A profile can consist of payloads with different version numbers. For example, c
 							<key>pfm_description</key>
 							<string>Override the default label for the Asset Tag field.</string>
 							<key>pfm_documentation_url</key>
-							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#label-1</string>
+							<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#label-1</string>
 							<key>pfm_name</key>
 							<string>label</string>
 							<key>pfm_title</key>
@@ -1580,7 +1580,7 @@ A profile can consist of payloads with different version numbers. For example, c
 							<key>pfm_description</key>
 							<string>A pre-populated value for the Computer Name field.</string>
 							<key>pfm_documentation_url</key>
-							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#default</string>
+							<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#default</string>
 							<key>pfm_name</key>
 							<string>default</string>
 							<key>pfm_title</key>
@@ -1592,7 +1592,7 @@ A profile can consist of payloads with different version numbers. For example, c
 							<key>pfm_description</key>
 							<string>A placeholder value for Computer Name. This is displayed in gray when no value has been entered.</string>
 							<key>pfm_documentation_url</key>
-							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#placeholder</string>
+							<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#placeholder</string>
 							<key>pfm_name</key>
 							<string>placeholder</string>
 							<key>pfm_title</key>
@@ -1604,7 +1604,7 @@ A profile can consist of payloads with different version numbers. For example, c
 							<key>pfm_description</key>
 							<string>Options displayed in a dropdown menu for Computer Name.</string>
 							<key>pfm_documentation_url</key>
-							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#options</string>
+							<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#options</string>
 							<key>pfm_name</key>
 							<string>options</string>
 							<key>pfm_subkeys</key>
@@ -1625,7 +1625,7 @@ A profile can consist of payloads with different version numbers. For example, c
 							<key>pfm_description</key>
 							<string>A regular expression used to validate the value of Computer Name.</string>
 							<key>pfm_documentation_url</key>
-							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#validation</string>
+							<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#validation</string>
 							<key>pfm_name</key>
 							<string>validation</string>
 							<key>pfm_title</key>
@@ -1637,7 +1637,7 @@ A profile can consist of payloads with different version numbers. For example, c
 							<key>pfm_description</key>
 							<string>A message displayed to the user when Computer Name fails to match the regular expression.</string>
 							<key>pfm_documentation_url</key>
-							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#validationmessage</string>
+							<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#validationmessage</string>
 							<key>pfm_name</key>
 							<string>validationMessage</string>
 							<key>pfm_title</key>
@@ -1653,7 +1653,7 @@ A profile can consist of payloads with different version numbers. For example, c
 							<key>pfm_description</key>
 							<string>Override the default label for the Computer Name field.</string>
 							<key>pfm_documentation_url</key>
-							<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#label-1</string>
+							<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#label-1</string>
 							<key>pfm_name</key>
 							<string>label</string>
 							<key>pfm_title</key>
@@ -1671,7 +1671,7 @@ A profile can consist of payloads with different version numbers. For example, c
 					<key>pfm_description</key>
 					<string>You can configure Setup Manager to only show the user entry section when specified users have authenticated in enrollment customization.</string>
 					<key>pfm_documentation_url</key>
-					<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#conditionally-show-the-user-entry-for-certain-users</string>
+					<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#conditionally-show-the-user-entry-for-certain-users</string>
 					<key>pfm_name</key>
 					<string>showForUserIDs</string>
 					<key>pfm_subkeys</key>
@@ -1698,7 +1698,7 @@ A profile can consist of payloads with different version numbers. For example, c
 			<key>pfm_description</key>
 			<string>Describes the individual actions to be performed by Setup Manager. For each row, complete the Label, Icon, and then one of the following: Shell command, Jamf Pro Policy Trigger, Watch Path, Wait, Wait For User Entry, Jamf Pro Recon, or Installomator Label.</string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#actions</string>
+			<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#actions</string>
 			<key>pfm_name</key>
 			<string>enrollmentActions</string>
 			<key>pfm_note</key>
@@ -1885,7 +1885,7 @@ A profile can consist of payloads with different version numbers. For example, c
 			<key>pfm_description</key>
 			<string>A full path to a script file which will be executed after Setup Manager has finished its workflow. This process runs independently of Setup Manager, so it can run installers or scripts that affect Setup Manager.</string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#finishedscript</string>
+			<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#finishedscript</string>
 			<key>pfm_name</key>
 			<string>finishedScript</string>
 			<key>pfm_title</key>
@@ -1899,7 +1899,7 @@ A profile can consist of payloads with different version numbers. For example, c
 			<key>pfm_description</key>
 			<string>A custom Jamf Pro policy trigger which will be executed after Setup Manager has finished its workflow. This process runs independently of Setup Manager, so it can run installers or scripts that affect Setup Manager.</string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/ConfigurationProfile.md#finishedtrigger</string>
+			<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#finishedtrigger</string>
 			<key>pfm_name</key>
 			<string>finishedTrigger</string>
 			<key>pfm_title</key>
@@ -1918,7 +1918,7 @@ A profile can consist of payloads with different version numbers. For example, c
 					<key>pfm_description</key>
 					<string>Webhooks called when Setup Manager starts its workflow.</string>
 					<key>pfm_documentation_url</key>
-					<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/Docs/Webhooks.md</string>
+					<string>https://github.com/jamf/Setup-Manager/blob/main/Docs/Webhooks.md</string>
 					<key>pfm_name</key>
 					<string>started</string>
 					<key>pfm_subkeys</key>
@@ -1978,7 +1978,7 @@ A profile can consist of payloads with different version numbers. For example, c
 					<key>pfm_description</key>
 					<string>Webhooks called when Setup Manager finishes its workflow.</string>
 					<key>pfm_documentation_url</key>
-					<string>https://github.com/Jamf-Concepts/Setup-Manager/blob/main/Docs/Webhooks.md</string>
+					<string>https://github.com/jamf/Setup-Manager/blob/main/Docs/Webhooks.md</string>
 					<key>pfm_name</key>
 					<string>finished</string>
 					<key>pfm_subkeys</key>
