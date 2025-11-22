@@ -189,6 +189,13 @@
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.alectrona.patch.png</string>
 		</dict>
+		<key>com.anthropic.claudefordesktop</key>
+		<dict>
+			<key>hash</key>
+			<string>09acc3c1d9036c7678f40be5f19383ef</string>
+			<key>path</key>
+			<string>Icons/ManagedPreferencesApplications/com.anthropic.claudefordesktop.png</string>
+		</dict>
 		<key>com.apple.Compressor</key>
 		<dict>
 			<key>hash</key>
@@ -1566,6 +1573,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2025-10-20T16:05:27Z</date>
+	<date>2025-11-22T02:59:37Z</date>
 </dict>
 </plist>

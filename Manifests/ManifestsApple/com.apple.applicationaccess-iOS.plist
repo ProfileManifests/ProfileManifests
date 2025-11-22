@@ -17,7 +17,7 @@
 	<key>pfm_ios_min</key>
 	<string>4.0</string>
 	<key>pfm_last_modified</key>
-	<date>2025-09-17T09:38:09Z</date>
+	<date>2025-11-05T14:06:39Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>iOS</string>
@@ -225,6 +225,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<string>allowDefaultBrowserModification</string>
 					<string>allowDefaultCallingAppModification</string>
 					<string>allowDefaultMessagingAppModification</string>
+					<string>ratingAppsExemptedBundleIDM</string>
 				</array>
 				<key>Classroom</key>
 				<array>
@@ -1618,7 +1619,7 @@ The system doesn't preserve eSIM if Find My initiates erasing the device.</strin
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
-			<string>If 'false', the system allows iOS devices to always connect to USB accessories while locked. In macOS, allows new USB and Thunderbolt accessories, and SD cards to connect without authorization. If the system has Lockdown mode enabled, it ignores this value.</string>
+			<string>If 'false', the system allows iOS devices to always connect to USB accessories while locked. In macOS, allows new USB and Thunderbolt accessories, and SD cards to connect without authorization. If the system has Lockdown mode enabled, it ignores this value. This restriction is not supported on the user channel.</string>
 			<key>pfm_ios_min</key>
 			<string>11.4.1</string>
 			<key>pfm_name</key>
@@ -3015,7 +3016,7 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
-			<string>If 'false', the system prohibits installation of rapid security responses.</string>
+			<string>If 'false', the system prohibits installation of Background Security Improvements.</string>
 			<key>pfm_ios_deprecated</key>
 			<string>26.0</string>
 			<key>pfm_ios_min</key>
@@ -3025,7 +3026,7 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 			<key>pfm_supervised</key>
 			<true/>
 			<key>pfm_title</key>
-			<string>Allow Rapid Security Response Installation</string>
+			<string>Allow Background Security Improvement Installation</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 		</dict>
@@ -3033,7 +3034,7 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
-			<string>If 'false', the system prohibits removal of rapid security responses.</string>
+			<string>If 'false', the system prohibits removal of Background Security Improvements.</string>
 			<key>pfm_ios_deprecated</key>
 			<string>26.0</string>
 			<key>pfm_ios_min</key>
@@ -3043,7 +3044,7 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 			<key>pfm_supervised</key>
 			<true/>
 			<key>pfm_title</key>
-			<string>Allow Rapid Security Response Removal</string>
+			<string>Allow Background Security Improvement Removal</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 		</dict>
@@ -3564,6 +3565,29 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 			<key>pfm_type</key>
 			<string>array</string>
 		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>If present, the system exempts apps with bundle IDs in the array from age-based rating restrictions. The system uses intersection combine rules to combine multiple payloads and any exceptions that parental control apps provide, including ScreenTime.</string>
+			<key>pfm_ios_min</key>
+			<string>26.1</string>
+			<key>pfm_name</key>
+			<string>ratingAppsExemptedBundleIDs</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_name</key>
+					<string>ratingAppsExemptedBundleID</string>
+					<key>pfm_title</key>
+					<string>Exempted App</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>Apps Exempted from Rating Restrictions</string>
+			<key>pfm_type</key>
+			<string>array</string>
+		</dict>
 	</array>
 	<key>pfm_targets</key>
 	<array>
@@ -3575,6 +3599,6 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 	<key>pfm_unique</key>
 	<false/>
 	<key>pfm_version</key>
-	<integer>20</integer>
+	<integer>21</integer>
 </dict>
 </plist>

@@ -15,7 +15,7 @@
 	<key>pfm_interaction</key>
 	<string>combined</string>
 	<key>pfm_last_modified</key>
-	<date>2025-11-04T10:00:02Z</date>
+	<date>2025-11-19T18:35:23Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -7848,12 +7848,12 @@ If you disable this policy, the AutoLaunch Protocols component is disabled.</str
 			<string>https://learn.microsoft.com/en-au/deployedge/microsoft-edge-browser-policies/autolaunchprotocolscomponentenabled</string>
 			<key>pfm_name</key>
 			<string>AutoLaunchProtocolsComponentEnabled</string>
+			<key>pfm_note</key>
+			<string>The protocols are found in '~/Library/Application Support/Microsoft Edge/AutoLaunchProtocolsComponent/[version]/protocols.json'</string>
 			<key>pfm_title</key>
 			<string>Enable the AutoLaunch Protocols component</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
-			<key>pfm_note</key>
-			<string>The protocols are found in '~/Library/Application Support/Microsoft Edge/AutoLaunchProtocolsComponent/[version]/protocols.json'</string>
 		</dict>
 	</array>
 	<key>pfm_targets</key>
