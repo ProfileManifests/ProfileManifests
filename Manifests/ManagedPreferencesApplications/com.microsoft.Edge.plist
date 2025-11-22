@@ -15,7 +15,7 @@
 	<key>pfm_interaction</key>
 	<string>combined</string>
 	<key>pfm_last_modified</key>
-	<date>2025-11-19T18:35:23Z</date>
+	<date>2025-11-22T11:47:35Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -7937,6 +7937,6 @@ If an origin is covered by both this policy and by LocalNetworkAccessAllowedForU
 	<key>pfm_unique</key>
 	<true/>
 	<key>pfm_version</key>
-	<integer>16</integer>
+	<integer>17</integer>
 </dict>
 </plist>
