@@ -213,7 +213,7 @@ A profile can consist of payloads with different version numbers. For example, c
 			<key>pfm_default</key>
 			<string>Welcome to Setup Manager</string>
 			<key>pfm_description</key>
-			<string>The main title over the window.</string>
+			<string>The main title over the window. Support substitutions.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#title</string>
 			<key>pfm_name</key>
@@ -241,7 +241,7 @@ A profile can consist of payloads with different version numbers. For example, c
 			<key>pfm_default</key>
 			<string>Setup Manager is configuring your Mac…</string>
 			<key>pfm_description</key>
-			<string>The message shown below the title.</string>
+			<string>The message shown below the title. Supports Markdown and substitutions.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#message</string>
 			<key>pfm_name</key>
@@ -502,7 +502,7 @@ A profile can consist of payloads with different version numbers. For example, c
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string>The help message.</string>
+					<string>The help message. Supports Markdown.</string>
 					<key>pfm_documentation_url</key>
 					<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#message-1</string>
 					<key>pfm_name</key>
