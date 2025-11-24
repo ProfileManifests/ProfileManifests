@@ -189,6 +189,13 @@
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.alectrona.patch.png</string>
 		</dict>
+		<key>com.anthropic.claudefordesktop</key>
+		<dict>
+			<key>hash</key>
+			<string>09acc3c1d9036c7678f40be5f19383ef</string>
+			<key>path</key>
+			<string>Icons/ManagedPreferencesApplications/com.anthropic.claudefordesktop.png</string>
+		</dict>
 		<key>com.apple.Compressor</key>
 		<dict>
 			<key>hash</key>
@@ -780,7 +787,7 @@
 		<key>net.glencode.Particulars</key>
 		<dict>
 			<key>hash</key>
-			<string>3268e02bc8b8aa87012fa71adb3be12b</string>
+			<string>116635ebd4aeea09bd1964bf0e69d352</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/net.glencode.Particulars.png</string>
 		</dict>
@@ -1566,6 +1573,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2025-11-19T20:00:27Z</date>
+	<date>2025-11-22T18:39:09Z</date>
 </dict>
 </plist>
