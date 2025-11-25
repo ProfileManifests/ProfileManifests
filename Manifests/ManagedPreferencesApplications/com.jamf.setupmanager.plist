@@ -219,7 +219,7 @@ A profile can consist of payloads with different version numbers. For example, c
 			<key>pfm_default</key>
 			<string>Welcome to Setup Manager</string>
 			<key>pfm_description</key>
-			<string>The main title over the window. Support substitutions.</string>
+			<string>The main title over the window. Supports substitutions.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://github.com/jamf/Setup-Manager/blob/main/ConfigurationProfile.md#title</string>
 			<key>pfm_name</key>
