@@ -787,7 +787,7 @@
 		<key>net.glencode.Particulars</key>
 		<dict>
 			<key>hash</key>
-			<string>3268e02bc8b8aa87012fa71adb3be12b</string>
+			<string>116635ebd4aeea09bd1964bf0e69d352</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/net.glencode.Particulars.png</string>
 		</dict>
@@ -1573,6 +1573,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2025-11-22T02:59:37Z</date>
+	<date>2025-11-25T15:43:36Z</date>
 </dict>
 </plist>
