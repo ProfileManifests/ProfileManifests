@@ -157,6 +157,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<string>BannedBlockMessage</string>
 					<string>ModeNotificationMonitor</string>
 					<string>ModeNotificationLockdown</string>
+					<string>DismissText</string>
 				</array>
 				<key>Event Logging</key>
 				<array>
@@ -167,6 +168,15 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<string>MailDirectorySizeThresholdMB</string>
 					<string>MailDirectoryEventMaxFlushTimeSec</string>
 					<string>EnableMachineIDDecoration</string>
+					<string>EnableDebugLogging</string>
+					<string>EnableSilentMode</string>
+					<string>EnableSilentTTYMode</string>
+					<string>EnableStandalonePasswordFallback</string>
+					<string>EnableTransitiveRules</string>
+					<string>SpoolDirectory</string>
+					<string>SpoolDirectoryFileSizeThresholdKB</string>
+					<string>SpoolDirectoryEventMaxFlushTimeSec</string>
+					<string>SpoolDirectorySizeThresholdMB</string>
 				</array>
 				<key>General</key>
 				<array>
@@ -178,6 +188,8 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<string>EnableBadSignatureProtection</string>
 					<string>EnablePageZeroProtection</string>
 					<string>EnableSysxCache</string>
+					<string>EntitlementsPrefixFilter</string>
+					<string>EntitlementsTeamIDFilter</string>
 				</array>
 				<key>Metrics</key>
 				<array>
@@ -186,8 +198,9 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<string>MetricExportInterval</string>
 					<string>MetricExportTimeout</string>
 					<string>MetricExtraLabels</string>
+					<string>Telemetry</string>
 				</array>
-				<key>SyncServer</key>
+				<key>Sync Server</key>
 				<array>
 					<string>SyncBaseURL</string>
 					<string>SyncEnableCleanSyncEventUpload</string>
@@ -205,6 +218,10 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<string>MachineIDKey</string>
 					<string>EnableAllEventUpload</string>
 					<string>DisableUnknownEventUpload</string>
+					<string>BlockUSBMount</string>
+					<string>SyncClientContentEncoding</string>
+					<string>SyncEnableProtoTransfer</string>
+					<string>SyncExtraHeaders</string>
 				</array>
 			</dict>
 			<key>pfm_type</key>
@@ -216,18 +233,20 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_description</key>
 			<string></string>
 			<key>pfm_description_reference</key>
-			<string>1 = MONITOR, 2 = LOCKDOWN, defaults to MONITOR</string>
+			<string>1 = MONITOR, 2 = LOCKDOWN, 3 = STANDALONE defaults to MONITOR</string>
 			<key>pfm_name</key>
 			<string>ClientMode</string>
 			<key>pfm_range_list</key>
 			<array>
 				<integer>1</integer>
 				<integer>2</integer>
+				<integer>3</integer>
 			</array>
 			<key>pfm_range_list_titles</key>
 			<array>
 				<string>Monitor</string>
 				<string>Lockdown</string>
+				<string>Standalone</string>
 			</array>
 			<key>pfm_title</key>
 			<string>Client Mode</string>
@@ -306,6 +325,18 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_default</key>
+			<string>Dismiss</string>
+			<key>pfm_description</key>
+			<string>The text to display on the button that dismisses the binary block dialog.</string>
+			<key>pfm_name</key>
+			<string>DismissText</string>
+			<key>pfm_title</key>
+			<string>Dismiss Text</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
 			<string>Block binaries with a bad signing chain, unless explicitly allowed.</string>
@@ -315,6 +346,84 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>EnableBadSignatureProtection</string>
 			<key>pfm_title</key>
 			<string>Bad Signature Protection</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>Blocking USB Mass storage</string>
+			<key>pfm_name</key>
+			<string>BlockUSBMount</string>
+			<key>pfm_title</key>
+			<string>Block USB Mount</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>If true, client will log additional debug messages to the Apple Unified Log</string>
+			<key>pfm_name</key>
+			<string>EnableDebugLogging</string>
+			<key>pfm_note</key>
+			<string>For example, transitive rule creation logs can be viewed with log stream --predicate 'sender=="com.northpolesec.santa.daemon"'</string>
+			<key>pfm_title</key>
+			<string>Debug Logging</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>If true, Santa will not post any GUI notifications</string>
+			<key>pfm_name</key>
+			<string>EnableSilentMode</string>
+			<key>pfm_note</key>
+			<string>This can be a very confusing experience for users, use with caution</string>
+			<key>pfm_title</key>
+			<string>Silent Mode</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>If true, Santa will not post any TTY notifications</string>
+			<key>pfm_name</key>
+			<string>EnableSilentTTYMode</string>
+			<key>pfm_note</key>
+			<string>This can be a very confusing experience for users, use with caution</string>
+			<key>pfm_title</key>
+			<string>Silent Mode TTY</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>If true, Santa will fallback to password authorization for Standalone mode</string>
+			<key>pfm_name</key>
+			<string>EnableStandalonePasswordFallback</string>
+			<key>pfm_title</key>
+			<string>Standalone Password Fallback</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>If true, Santa will respect compiler rule types and create allow rules for the executables they produce</string>
+			<key>pfm_name</key>
+			<string>EnableTransitiveRules</string>
+			<key>pfm_title</key>
+			<string>Transitive Rules</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 		</dict>
@@ -371,6 +480,93 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>string</string>
 			<key>pfm_value_placeholder</key>
 			<string>https://sync-server-hostname/moreinfo</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>deflate</string>
+			<key>pfm_description</key>
+			<string>Sets the Content-Encoding header for requests sent to the sync service.</string>
+			<key>pfm_name</key>
+			<string>SyncClientContentEncoding</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>deflate</string>
+				<string>gzip</string>
+				<string>none</string>
+			</array>
+			<key>pfm_range_list_titles</key>
+			<array>
+				<string>Deflate</string>
+				<string>GZip</string>
+				<string>None</string>
+			</array>
+			<key>pfm_title</key>
+			<string>Sync Client Content Encoding</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Dictionary of additional headers to include in all requests made to the sync server</string>
+			<key>pfm_name</key>
+			<string>SyncExtraHeaders</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_name</key>
+					<string>X-API-Key</string>
+					<key>pfm_title</key>
+					<string>X-API-Key (SyncExtraHeaders)</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>Sync Extra Headers</string>
+			<key>pfm_type</key>
+			<string>dictionary</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Array of strings for events that should be logged</string>
+			<key>pfm_name</key>
+			<string>Telemetry</string>
+			<key>pfm_note</key>
+			<string>If not specified, defaults to Everything</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_range_list</key>
+					<array>
+						<string>Everything</string>
+						<string>Execution</string>
+						<string>Fork</string>
+						<string>Exit</string>
+						<string>Close</string>
+						<string>Rename</string>
+						<string>Unlink</string>
+						<string>Link</string>
+						<string>ExchangeData</string>
+						<string>Disk</string>
+						<string>Bundle</string>
+						<string>Allowlist</string>
+						<string>FileAccess</string>
+						<string>CodesigningInvalidated</string>
+						<string>LoginWindowSession</string>
+						<string>LoginLogout</string>
+						<string>ScreenSharing</string>
+						<string>OpenSSH</string>
+						<string>Authentication</string>
+						<string>None</string>
+					</array>
+					<key>pfm_type</key>
+					<string>string</string>
+					<key>pfm_value_unique</key>
+					<true/>
+				</dict>
+			</array>
+			<key>pfm_type</key>
+			<string>array</string>
 		</dict>
 		<dict>
 			<key>pfm_description</key>
@@ -530,6 +726,18 @@ For example: https://sync-server-hostname/%machine_id%/%file_sha%</string>
 			<string>SyncEnableCleanSyncEventUpload</string>
 			<key>pfm_title</key>
 			<string>Enable Upload Clean Syncs</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>If true, sync will happen using binary protos instead of JSON</string>
+			<key>pfm_name</key>
+			<string>SyncEnableProtoTransfer</string>
+			<key>pfm_title</key>
+			<string>Sync Proto Transfer</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 		</dict>
@@ -711,7 +919,6 @@ For example: https://sync-server-hostname/%machine_id%/%file_sha%</string>
 				<string>syslog</string>
 				<string>filelog</string>
 				<string>protobuf</string>
-				<string></string>
 			</array>
 			<key>pfm_range_list_titles</key>
 			<array>
@@ -1012,6 +1219,176 @@ For example: https://sync-server-hostname/%machine_id%/%file_sha%</string>
 			<string>integer</string>
 			<key>pfm_value_unit</key>
 			<string>seconds</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>/var/db/santa/spool</string>
+			<key>pfm_description</key>
+			<string>Provides the base directory used to save files according to a maildir-like format</string>
+			<key>pfm_exclude</key>
+			<array>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_n_range_list</key>
+							<array>
+								<string>protobuf</string>
+							</array>
+							<key>pfm_present</key>
+							<false/>
+							<key>pfm_target</key>
+							<string>EventLogType</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+			<key>pfm_name</key>
+			<string>SpoolDirectory</string>
+			<key>pfm_title</key>
+			<string>Spool Directory</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<integer>100</integer>
+			<key>pfm_description</key>
+			<string>Defines the per-file size limit in KB for files stored in the spool directory</string>
+			<key>pfm_exclude</key>
+			<array>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_n_range_list</key>
+							<array>
+								<string>protobuf</string>
+							</array>
+							<key>pfm_present</key>
+							<false/>
+							<key>pfm_target</key>
+							<string>EventLogType</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+			<key>pfm_name</key>
+			<string>SpoolDirectoryFileSizeThresholdKB</string>
+			<key>pfm_note</key>
+			<string>Events are buffered in memory until this threshold would be exceeded (or SpoolDirectoryEventMaxFlushTimeSec is exceeded)</string>
+			<key>pfm_title</key>
+			<string>Spool Directory File Size Threshold</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+			<key>pfm_value_unit</key>
+			<string>KB</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<integer>10</integer>
+			<key>pfm_description</key>
+			<string>Defines the maximum amount of time in seconds events will stay buffered in memory before being flushed to disk, regardless of whether or not SpoolDirectoryFileSizeThresholdKB would be exceeded</string>
+			<key>pfm_exclude</key>
+			<array>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_n_range_list</key>
+							<array>
+								<string>protobuf</string>
+							</array>
+							<key>pfm_present</key>
+							<false/>
+							<key>pfm_target</key>
+							<string>EventLogType</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+			<key>pfm_name</key>
+			<string>SpoolDirectoryEventMaxFlushTimeSec</string>
+			<key>pfm_title</key>
+			<string>Spool Directory Event Max Flush Time</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+			<key>pfm_value_unit</key>
+			<string>seconds</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<integer>100</integer>
+			<key>pfm_description</key>
+			<string>Defines the total combined size limit of all files in MB in the spool directory</string>
+			<key>pfm_exclude</key>
+			<array>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_n_range_list</key>
+							<array>
+								<string>protobuf</string>
+							</array>
+							<key>pfm_present</key>
+							<false/>
+							<key>pfm_target</key>
+							<string>EventLogType</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+			<key>pfm_name</key>
+			<string>SpoolDirectorySizeThresholdMB</string>
+			<key>pfm_note</key>
+			<string>Once the threshold is met, no more events will be saved</string>
+			<key>pfm_title</key>
+			<string>Spool Directory Size Threshold</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+			<key>pfm_value_unit</key>
+			<string>seconds</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Array of strings of entitlement prefixes that should not be logged</string>
+			<key>pfm_name</key>
+			<string>EntitlementsPrefixFilter</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_title</key>
+					<string>Entitlement Prefix Filters</string>
+					<key>pfm_type</key>
+					<string>string</string>
+					<key>pfm_value_placeholder</key>
+					<string>com.apple.private</string>
+				</dict>
+			</array>
+			<key>pfm_type</key>
+			<string>array</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Array of TeamIDs</string>
+			<key>pfm_name</key>
+			<string>EntitlementsTeamIDFilter</string>
+			<key>pfm_note</key>
+			<string>Entitlements from processes with a matching TeamID in the code signature will not be logged. Use the value "platform" to filter entitlements from platform binaries</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_title</key>
+					<string>Entitlements TeamIDs</string>
+					<key>pfm_type</key>
+					<string>string</string>
+					<key>pfm_value_placeholder</key>
+					<string>platform</string>
+				</dict>
+			</array>
+			<key>pfm_type</key>
+			<string>array</string>
 		</dict>
 	</array>
 	<key>pfm_targets</key>
