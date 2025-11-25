@@ -703,7 +703,7 @@
 		<key>com.jigsaw24.Elevate24SecurityExtension</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-09-11T12:00:00Z</date>
+			<date>2025-11-25T09:52:16Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.jigsaw24.ElevateSecurityLogs.plist</string>
 			<key>version</key>
@@ -1261,7 +1261,7 @@
 		<key>xyz.techitout.appAutoPatch</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-11-19T18:35:23Z</date>
+			<date>2025-11-25T09:52:16Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/xyz.techitout.appAutoPatch.plist</string>
 			<key>version</key>
@@ -2454,6 +2454,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2025-11-25T15:43:36Z</date>
+	<date>2025-11-25T15:47:57Z</date>
 </dict>
 </plist>
