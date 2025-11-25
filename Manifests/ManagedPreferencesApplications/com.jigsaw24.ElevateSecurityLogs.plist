@@ -115,7 +115,7 @@
 	<key>pfm_interaction</key>
 	<string>exclusive</string>
 	<key>pfm_last_modified</key>
-	<date>2025-09-11T12:00:00Z</date>
+	<date>2025-11-25T09:52:16Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -528,7 +528,9 @@ A profile can consist of payloads with different version numbers. For example, c
 		</dict>
 		<dict>
 			<key>pfm_description</key>
-			<string>Rules to restrict file operations. Allow rules can be used in conjunction with block rules to allow a process to execute under the specified conditions. \nFile open operations can be restricted to read only access where required.</string>
+			<string>Rules to restrict file operations. Allow rules can be used in conjunction with block rules to allow a process to execute under the specified conditions.
+			
+File open operations can be restricted to read only access where required.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://docs.jigsaw24.com/Elevate24/Documentation/Elevate24%20Monitoring/5%20Elevate24%20Session%20Monitoring%20-%20Authorisation%20Rules.html#monitoring-authorisation-rules</string>
 			<key>pfm_name</key>
@@ -630,7 +632,9 @@ A profile can consist of payloads with different version numbers. For example, c
 				<dict/>
 			</array>
 			<key>pfm_description</key>
-			<string>Rules to restrict execution of processes. Allow rules can be used in conjunction with block rules to allow a process to execute under the specified conditions. \nMultiple arguments can be specified by seperating them with a comma.</string>
+			<string>Rules to restrict execution of processes. Allow rules can be used in conjunction with block rules to allow a process to execute under the specified conditions.
+			
+Multiple arguments can be specified by seperating them with a comma.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://docs.jigsaw24.com/Elevate24/Documentation/Elevate24%20Monitoring/5%20Elevate24%20Session%20Monitoring%20-%20Authorisation%20Rules.html#monitoring-authorisation-rules</string>
 			<key>pfm_name</key>

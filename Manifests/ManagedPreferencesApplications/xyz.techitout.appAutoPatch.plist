@@ -13,7 +13,7 @@
 	<key>pfm_format_version</key>
 	<integer>1</integer>
 	<key>pfm_last_modified</key>
-	<date>2025-11-19T18:35:23Z</date>
+	<date>2025-11-25T09:52:16Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -1564,7 +1564,9 @@ During a profile replacement, the system updates payloads with the same `Payload
 									<key>pfm_type</key>
 									<string>string</string>
 									<key>pfm_value_placeholder</key>
-									<string>Updates will automatically install after the timer expires. \n\n #### No Deferrals Remaining ####</string>
+									<string>Updates will automatically install after the timer expires.
+									
+#### No Deferrals Remaining ####</string>
 								</dict>
 								<dict>
 									<key>pfm_app_min</key>
@@ -1580,7 +1582,9 @@ During a profile replacement, the system updates payloads with the same `Payload
 									<key>pfm_type</key>
 									<string>string</string>
 									<key>pfm_value_placeholder</key>
-									<string>application(s) that require updates\n\n You have deferred the maximum number of</string>
+									<string>application(s) that require updates
+
+You have deferred the maximum number of</string>
 								</dict>
 								<dict>
 									<key>pfm_app_min</key>
