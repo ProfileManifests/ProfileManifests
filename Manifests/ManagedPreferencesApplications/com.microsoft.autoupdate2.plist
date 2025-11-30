@@ -13,7 +13,7 @@
 	<key>pfm_format_version</key>
 	<integer>1</integer>
 	<key>pfm_last_modified</key>
-	<date>2024-12-16T19:42:12Z</date>
+	<date>2025-11-30T12:00:00Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -230,6 +230,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<array>
 				<string>Production</string>
 				<string>Current</string>
+				<string>CurrentThrottle</string>
 				<string>External</string>
 				<string>Preview</string>
 				<string>InsiderFast</string>
@@ -240,6 +241,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<array>
 				<string>Production (pre MAU 4.29)</string>
 				<string>Current (MAU 4.29+)</string>
+				<string>CurrentThrottle - Current channel without weekly Outlook updates (MAU 4.29+)</string>
 				<string>Office Insider Slow: "External" (pre MAU 4.29)</string>
 				<string>Preview (MAU 4.29+)</string>
 				<string>Office Insider Fast: "InsiderFast" (pre MAU 4.29)</string>
@@ -2549,6 +2551,6 @@ Writes logs to: /Library/Logs/Microsoft/autoupdate.log</string>
 	<key>pfm_unique</key>
 	<true/>
 	<key>pfm_version</key>
-	<integer>18</integer>
+	<integer>19</integer>
 </dict>
 </plist>
