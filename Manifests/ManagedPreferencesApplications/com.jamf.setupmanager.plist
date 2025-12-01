@@ -2003,11 +2003,13 @@ A profile can consist of payloads with different version numbers. For example, c
 									<array>
 										<string>generic</string>
 										<string>teams</string>
+										<string>slack</string>
 									</array>
 									<key>pfm_range_list_titles</key>
 									<array>
 										<string>Generic</string>
 										<string>Microsoft Teams</string>
+										<string>Slack</string>
 									</array>
 									<key>pfm_required</key>
 									<true/>
