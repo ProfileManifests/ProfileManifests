@@ -5,7 +5,7 @@
 	<key>pfm_app_url</key>
 	<string>https://github.com/twocanoes/xcreds</string>
 	<key>pfm_description</key>
-	<string>XCreds 5.6 (8978) OAuth Settings</string>
+	<string>XCreds 5.7 (9047) OAuth Settings</string>
 	<key>pfm_documentation_url</key>
 	<string>https://twocanoes.com/knowledge-base/xcreds-admin-guide/#preferences</string>
 	<key>pfm_domain</key>
@@ -13,7 +13,7 @@
 	<key>pfm_format_version</key>
 	<integer>1</integer>
 	<key>pfm_last_modified</key>
-	<date>2025-09-29T15:22:44Z</date>
+	<date>2025-11-17T19:22:18Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -1130,6 +1130,34 @@ Note that Google does not support the offline_access scope so instead use the pr
 			<string>boolean</string>
 		</dict>
 		<dict>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>Skip FileVault login during startup if FileVault is enabled. The current username and password are used to tell fdesetup to silently use the credentials during next reboot to unlock FileVault. Passthrough is also disabled and the user will see the XCreds Login Window. To avoid the user being prompted for admin credentials, set the "Login And Background Item Management" management item (com.apple.servicemanagement) to allow teamid UXP6YEHSPW to have background tasks.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://twocanoes.com/knowledge-base/xcreds-admin-guide/#preferences</string>
+			<key>pfm_name</key>
+			<string>shouldSkipFileVaultLogin</string>
+			<key>pfm_title</key>
+			<string>Skip FileVault Login</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>Skip FileVault authentication at startup if FileVault is enabled. The admin credentials will be used to tell fdesetup to silently use the credentials during next reboot to unlock FileVault. Passthrough is also disabled and the user will see the XCreds Login Window. To avoid the user being prompted for admin credentials, set the "Login And Background Item Management" management item (com.apple.servicemanagement) to allow teamid UXP6YEHSPW to have background tasks. Default value: false</string>
+			<key>pfm_documentation_url</key>
+			<string>https://twocanoes.com/knowledge-base/xcreds-admin-guide/#preferences</string>
+			<key>pfm_name</key>
+			<string>shouldSkipFileVaultLoginAdmin</string>
+			<key>pfm_title</key>
+			<string>Skip FileVault Login as Admin</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
 			<key>pfm_app_min</key>
 			<string>5.0</string>
 			<key>pfm_default</key>
@@ -2097,6 +2125,6 @@ changing "passwordID" to the correct element ID. If the value you typed into the
 	<key>pfm_unique</key>
 	<false/>
 	<key>pfm_version</key>
-	<integer>15</integer>
+	<integer>16</integer>
 </dict>
 </plist>
