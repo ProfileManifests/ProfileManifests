@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>pfm_description</key>
-	<string>Time Machine settings</string>
+	<string>The payload that configures Time Machine.</string>
 	<key>pfm_documentation_url</key>
 	<string>https://developer.apple.com/documentation/devicemanagement/timemachine</string>
 	<key>pfm_domain</key>
@@ -13,7 +13,9 @@
 	<key>pfm_interaction</key>
 	<string>combined</string>
 	<key>pfm_last_modified</key>
-	<date>2025-08-15T19:32:34Z</date>
+	<date>2025-09-17T09:38:09Z</date>
+	<key>pfm_macos_min</key>
+	<string>10.7</string>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -22,7 +24,7 @@
 	<array>
 		<dict>
 			<key>pfm_default</key>
-			<string>Configures Time Machine settings</string>
+			<string>The payload that configures Time Machine.</string>
 			<key>pfm_description</key>
 			<string>The human-readable description of this payload. This description appears on the Detail screen.</string>
 			<key>pfm_name</key>
@@ -50,7 +52,8 @@
 			<key>pfm_default</key>
 			<string>com.apple.MCX.TimeMachine</string>
 			<key>pfm_description</key>
-			<string>The reverse-DNS-style identifier for the payload. This identifier is usually the same as the TopLevel value, with an additional appended component. This string must be unique within the profile.
+			<string>The reverse-DNS-style identifier for the payload. This identifier is usually the same as the 'TopLevel' value, with an additional appended component. This string must be unique within the profile.
+
 During a profile replacement, the system updates payloads with the same 'PayloadIdentifier' and 'PayloadUUID' in the old and new profiles.</string>
 			<key>pfm_name</key>
 			<string>PayloadIdentifier</string>
@@ -80,6 +83,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string></string>
 			<key>pfm_description</key>
 			<string>The globally unique identifier for the payload. The actual content is unimportant, but must be globally unique. In macOS, use 'uuidgen' to generate UUIDs.
+
 During a profile replacement, the system updates payloads with the same 'PayloadIdentifier' and 'PayloadUUID' in the old and new profiles.</string>
 			<key>pfm_format</key>
 			<string>^[0-9A-Za-z]{8}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{12}$</string>
@@ -122,7 +126,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_description</key>
-			<string>URL of the backup destination. (e.g., smb://server.example.com/backups/)</string>
+			<string>The URL of the backup destination.</string>
 			<key>pfm_name</key>
 			<string>BackupDestURL</string>
 			<key>pfm_require</key>
@@ -136,7 +140,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>Only startup volume is backed up by default.</string>
+			<string>If 'true', backs up only the startup volume by default.</string>
 			<key>pfm_name</key>
 			<string>BackupAllVolumes</string>
 			<key>pfm_title</key>
@@ -148,7 +152,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>System files and folders are skipped by default.</string>
+			<string>If 'true', skips system files and folders by default.</string>
 			<key>pfm_name</key>
 			<string>BackupSkipSys</string>
 			<key>pfm_title</key>
@@ -162,7 +166,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
-			<string>Automatically backup at regulard intervals.</string>
+			<string>If 'true', performs automatic backups at regular intervals.</string>
 			<key>pfm_name</key>
 			<string>AutoBackup</string>
 			<key>pfm_title</key>
@@ -174,7 +178,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
-			<string>Creates local backup snapshots if the backup destination is offline.</string>
+			<string>If 'true', create local backup snapshots when not connected to the network.</string>
 			<key>pfm_macos_min</key>
 			<string>10.8</string>
 			<key>pfm_name</key>
@@ -188,7 +192,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<integer>0</integer>
 			<key>pfm_description</key>
-			<string>Enter a limit in MB for the size of the backup. Set to 0 for unlimited.</string>
+			<string>The backup size limit, in megabytes. Set to 0 for unlimited.</string>
 			<key>pfm_name</key>
 			<string>BackupSizeMB</string>
 			<key>pfm_title</key>
@@ -200,16 +204,16 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_description</key>
-			<string>Enter additional volumes and locations to exclude from the backup.</string>
+			<string>The path to skip from start volume.</string>
 			<key>pfm_name</key>
 			<string>SkipPaths</string>
 			<key>pfm_subkeys</key>
 			<array>
 				<dict>
-					<key>pfm_description</key>
-					<string></string>
 					<key>pfm_name</key>
-					<string>SkipPath</string>
+					<string>SkipPathItem</string>
+					<key>pfm_require</key>
+					<string>always</string>
 					<key>pfm_title</key>
 					<string>Path to skip</string>
 					<key>pfm_type</key>
@@ -221,6 +225,25 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_type</key>
 			<string>array</string>
 		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>The list of paths to back up besides the startup volume.</string>
+			<key>pfm_name</key>
+			<string>BasePaths</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_name</key>
+					<string>BasePathItem</string>
+					<key>pfm_require</key>
+					<string>always</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+			</array>
+			<key>pfm_type</key>
+			<string>array</string>
+		</dict>
 	</array>
 	<key>pfm_targets</key>
 	<array>
@@ -229,8 +252,8 @@ During a profile replacement, the system updates payloads with the same 'Payload
 	<key>pfm_title</key>
 	<string>Time Machine</string>
 	<key>pfm_unique</key>
-	<true/>
+	<false/>
 	<key>pfm_version</key>
-	<integer>1</integer>
+	<integer>2</integer>
 </dict>
 </plist>

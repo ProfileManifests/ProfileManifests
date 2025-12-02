@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>pfm_description</key>
-	<string>Use this section to define settings for FileVault 2</string>
+	<string>The payload that configures FileVault.</string>
 	<key>pfm_description_reference</key>
 	<string>In macOS 10.9, you can use FileVault 2 to perform full XTS-AES 128 encryption on the contents of a volume. FileVault 2 payloads are designated by specifying com.apple.MCX.FileVault2 as the PayloadType value. Removal of the FileVault payload does not disable FileVault.</string>
 	<key>pfm_documentation_url</key>
@@ -11,11 +11,11 @@
 	<key>pfm_domain</key>
 	<string>com.apple.MCX.FileVault2</string>
 	<key>pfm_format_version</key>
-	<real>1</real>
+	<integer>1</integer>
 	<key>pfm_interaction</key>
 	<string>undefined</string>
 	<key>pfm_last_modified</key>
-	<date>2025-08-15T19:32:34Z</date>
+	<date>2025-09-17T09:38:09Z</date>
 	<key>pfm_macos_max</key>
 	<string>10.12.6</string>
 	<key>pfm_macos_min</key>
@@ -28,7 +28,7 @@
 	<array>
 		<dict>
 			<key>pfm_default</key>
-			<string>Configures FileVault 2 settings</string>
+			<string>The payload that configures FileVault.</string>
 			<key>pfm_description</key>
 			<string>The human-readable description of this payload. This description appears on the Detail screen.</string>
 			<key>pfm_name</key>
@@ -207,7 +207,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				<string>public.x509-certificate</string>
 			</array>
 			<key>pfm_description</key>
-			<string>The DER-encoded certificate data if the system creates an institutional recovery key. This key isn't supported on Macs with Apple silicon.</string>
+			<string>The DER-encoded certificate data if the system creates an institutional recovery key. This key isn't supported on a Mac with Apple silicon.</string>
 			<key>pfm_name</key>
 			<string>Certificate</string>
 			<key>pfm_title</key>
@@ -292,7 +292,9 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<false/>
 			<key>pfm_description</key>
 			<string>If 'true', and installation of this payload occurs after enrolling with MDM in Setup Assistant, the system requests Setup Assistant to enable FileVault at setup time.
-To use this, enable the Await Device Configured DEP configuration option and send this profile with this key set, before sending the DeviceConfiguredCommand.
+
+To use this, enable the Await Device Configured DEP configuration option and send this profile with this key set, before sending the 'DeviceConfiguredCommand'.
+
 An admin SecureToken user is required, otherwise the FileVault pane does not appear.</string>
 			<key>pfm_macos_min</key>
 			<string>14.0</string>

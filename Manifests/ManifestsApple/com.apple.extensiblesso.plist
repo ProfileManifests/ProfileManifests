@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>pfm_description</key>
-	<string>Configures an app extension to handle SSO.</string>
+	<string>The payload that configures an app extension that performs single sign-on (SSO).</string>
 	<key>pfm_description_reference</key>
 	<string>The payload for configuring an app extension that performs single sign-on.</string>
 	<key>pfm_documentation_url</key>
@@ -11,13 +11,13 @@
 	<key>pfm_domain</key>
 	<string>com.apple.extensiblesso</string>
 	<key>pfm_format_version</key>
-	<real>1</real>
+	<integer>1</integer>
 	<key>pfm_interaction</key>
 	<string>combined</string>
 	<key>pfm_ios_min</key>
 	<string>13.0</string>
 	<key>pfm_last_modified</key>
-	<date>2025-04-04T13:24:55Z</date>
+	<date>2025-11-05T14:06:39Z</date>
 	<key>pfm_macos_min</key>
 	<string>10.15</string>
 	<key>pfm_platforms</key>
@@ -29,7 +29,7 @@
 	<array>
 		<dict>
 			<key>pfm_default</key>
-			<string>Configures an app extension to handle SSO.</string>
+			<string>The payload that configures an app extension that performs single sign-on (SSO).</string>
 			<key>pfm_description</key>
 			<string>The human-readable description of this payload. This description appears on the Detail screen.</string>
 			<key>pfm_name</key>
@@ -242,11 +242,16 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			</array>
 			<key>pfm_description</key>
 			<string>An array of host or domain names that apps can authenticate through the app extension.
+
 Required for 'Credential' payloads. Ignored for 'Redirect' payloads.
+
 The system:
-* Matches host or domain names case-insensitively
-* Requires that all the host and domain names of all installed Extensible SSO payloads are unique
-Host names that begin with a “.” are wildcard suffixes that match all subdomains; otherwise the host name needs be an exact match.</string>
+
+- Matches host or domain names case-insensitively
+- Requires that all the host and domain names of all installed Extensible SSO payloads are unique
+
+Note:
+Host names that begin with a "." are wildcard suffixes that match all subdomains; otherwise the host name needs be an exact match.</string>
 			<key>pfm_exclude</key>
 			<array>
 				<dict>
@@ -277,7 +282,7 @@ Hosts that begin with a "." are wildcard suffixes and will match all subdomains,
 			<array>
 				<dict>
 					<key>pfm_description</key>
-					<string>A host or domain name. Values that begin with a "." will be used as domain names.</string>
+					<string>A host or domain name, with or without a leading dot.</string>
 					<key>pfm_name</key>
 					<string>hostname</string>
 					<key>pfm_require</key>
@@ -360,12 +365,16 @@ Hosts that begin with a "." are wildcard suffixes and will match all subdomains,
 			</array>
 			<key>pfm_description</key>
 			<string>An array of URL prefixes of identity providers where the app extension performs SSO.
+
 Required for 'Redirect' payloads. Ignored for 'Credential' payloads.
+
 The URLs need to begin with 'http://' or 'https://'.
+
 The system:
-* Matches scheme and host name case-insensitively
-* Doesn't allow query parameters and URL fragments
-* Requires that the URLs of all installed Extensible SSO payloads are unique</string>
+
+- Matches scheme and host name case-insensitively
+- Doesn't allow query parameters and URL fragments
+- Requires that the URLs of all installed Extensible SSO payloads are unique</string>
 			<key>pfm_exclude</key>
 			<array>
 				<dict>
@@ -447,7 +456,7 @@ The system:
 			<key>pfm_default</key>
 			<string>Cancel</string>
 			<key>pfm_description</key>
-			<string>If set to 'Cancel', the system cancels authentication requests when the screen is locked. If set to 'DoNotHandle', the request continues without SSO instead. This doesn't apply to requests where 'userInterfaceEnabled' is 'false', or for background URLSession requests. Available in iOS 15 and later, and macOS 12 and later.</string>
+			<string>If set to 'Cancel', the system cancels authentication requests when the screen is locked. If set to 'DoNotHandle', the request continues without SSO instead. This doesn't apply to requests where 'userInterfaceEnabled' is 'false', or for background 'URLSession' requests. Available in iOS 15 and later, and macOS 12 and later.</string>
 			<key>pfm_ios_min</key>
 			<string>15.0</string>
 			<key>pfm_macos_min</key>
@@ -808,9 +817,10 @@ The system:
 					<key>pfm_description</key>
 					<string>This setting affects how other processes use the Kerberos Extension credential. Allowed values:
 
-* 'always': The system always uses the credential if the SPN matches the Kerberos Extension 'Hosts' array and the caller hasn't specified another credential. However, the system won't use the credential if the calling app isn't in the 'credentialBundleIDACL'.
-* 'whenNotSpecified': The system only uses the extension credential if the SPN matches the Kerberos Extension 'Hosts' array. However, the system won't use the credential if the calling app isn't in the 'credentialBundleIDACL'.
-* 'kerberosDefault': The system uses the default Kerberos processes to select credentials, and normally uses the default Kerberos credential. This is the same as turning off this capabiliity.
+- 'always': The system always uses the credential if the SPN matches the Kerberos Extension 'Hosts' array and the caller hasn't specified another credential. However, the system won't use the credential if the calling app isn't in the 'credentialBundleIDACL'.
+- 'whenNotSpecified': The system only uses the extension credential if the SPN matches the Kerberos Extension 'Hosts' array. However, the system won't use the credential if the calling app isn't in the 'credentialBundleIDACL'.
+- 'kerberosDefault': The system uses the default Kerberos processes to select credentials, and normally uses the default Kerberos credential. This is the same as turning off this capability.
+
 Available in macOS 11 and later.</string>
 					<key>pfm_exclude</key>
 					<array>
@@ -859,7 +869,7 @@ kerberosDefault - The default Kerberos processes for selecting credentials is us
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string>The custom user name label used in the Kerberos extension instead of “Username,” such as “Company ID”. Available in macOS 11 and later.</string>
+					<string>The custom user name label used in the Kerberos extension instead of "Username," such as "Company ID". Available in macOS 11 and later.</string>
 					<key>pfm_exclude</key>
 					<array>
 						<dict>
@@ -919,7 +929,7 @@ kerberosDefault - The default Kerberos processes for selecting credentials is us
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string>The text to display to the user at the bottom of the Kerberos login window. You can also use this to display help information or disclaimer text. Available in iOS 14 and later, and macOS 11 and later.</string>
+					<string>The text to display to the user at the bottom of the Kerberos Login Window. You can also use this to display help information or disclaimer text. Available in iOS 14 and later, and macOS 11 and later.</string>
 					<key>pfm_exclude</key>
 					<array>
 						<dict>
@@ -1104,9 +1114,10 @@ kerberosDefault - The default Kerberos processes for selecting credentials is us
 				<dict>
 					<key>pfm_description</key>
 					<string>The ordered list of preferred Key Distribution Centers (KDCs) to use for Kerberos traffic. Use this if the servers aren't discoverable through DNS. If the servers are specified, then the system uses them for both connectivity checks and attempts to use them first for Kerberos traffic. If the servers don't respond, the device falls back to DNS discovery. Format each entry the same as it would be in a 'krb5.conf' file, for example:
-* 'adserver1.example.com'
-* 'tcp/adserver1.example.com:88'
-* 'kkdcp://kerberosproxy.example.com:443/kkdcp'</string>
+
+- 'adserver1.example.com'
+- 'tcp/adserver1.example.com:88'
+- 'kkdcp://kerberosproxy.example.com:443/kkdcp'</string>
 					<key>pfm_exclude</key>
 					<array>
 						<dict>
@@ -1247,7 +1258,7 @@ kerberosDefault - The default Kerberos processes for selecting credentials is us
 					<key>pfm_default</key>
 					<false/>
 					<key>pfm_description</key>
-					<string>If 'true', the system requires passwords to meet Active Directory's definition of “complex”. Available in macOS 10.15 and later.</string>
+					<string>If 'true', the system requires passwords to meet Active Directory's definition of "complex". Available in macOS 10.15 and later.</string>
 					<key>pfm_exclude</key>
 					<array>
 						<dict>
@@ -2010,7 +2021,7 @@ kerberosDefault - The default Kerberos processes for selecting credentials is us
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string>A string with wildcards that can use used to filter the list of available SmartCards by issuer. e.g “*My CA2*”. If there is one remaining, it will be auto-selected. If there more than one remaining, then the list is shorter. Available in macOS 15 and later.</string>
+					<string>A string with wildcards that can use used to filter the list of available SmartCards by issuer. e.g "\*My CA2\*". If there is one remaining, it will be auto-selected. If there more than one remaining, then the list is shorter. Available in macOS 15 and later.</string>
 					<key>pfm_exclude</key>
 					<array>
 						<dict>
@@ -2170,7 +2181,23 @@ kerberosDefault - The default Kerberos processes for selecting credentials is us
 		</dict>
 		<dict>
 			<key>pfm_description</key>
-			<string>The dictionary to configure Platform SSO.</string>
+			<string>The dictionary to configure Platform SSO. Requires 'Type' to be set to 'Redirect'.</string>
+			<key>pfm_exclude</key>
+			<array>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_n_range_list</key>
+							<array>
+								<string>Redirect</string>
+							</array>
+							<key>pfm_target</key>
+							<string>Type</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
 			<key>pfm_macos_min</key>
 			<string>14.0</string>
 			<key>pfm_name</key>
@@ -2229,7 +2256,7 @@ kerberosDefault - The default Kerberos processes for selecting credentials is us
 					<key>pfm_default</key>
 					<false/>
 					<key>pfm_description</key>
-					<string>Enables creating new users at the login window with an 'AuthenticationMethod' of either 'Password' or 'SmartCard'. Requires that 'UseSharedDeviceKeys' is 'true'.</string>
+					<string>Enables creating users at the Login Window with an 'AuthenticationMethod' of either 'Password' or 'SmartCard'. Requires that 'UseSharedDeviceKeys' is 'true'.</string>
 					<key>pfm_name</key>
 					<string>EnableCreateUserAtLogin</string>
 					<key>pfm_type</key>
@@ -2247,7 +2274,7 @@ kerberosDefault - The default Kerberos processes for selecting credentials is us
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string>The attribute mapping to use when creating new users or for authorization.</string>
+					<string>The attribute mapping to use when creating users, or for authorization.</string>
 					<key>pfm_name</key>
 					<string>TokenToUserMapping</string>
 					<key>pfm_subkeys</key>
@@ -2276,9 +2303,10 @@ kerberosDefault - The default Kerberos processes for selecting credentials is us
 					<key>pfm_description</key>
 					<string>The permission to apply to newly created accounts at login. Allowed values:
 
-* 'Standard': The account is a standard user.
-* 'Admin': The system adds the account to the local administrators group.
-* 'Groups': The system assigns group to the account using 'AdministratorGroups', 'AdditionalGroups', or 'AuthorizationGroups'.</string>
+- 'Standard': The account is a standard user.
+- 'Admin': The system adds the account to the local administrators group.
+- 'Groups': The system assigns groups to the account using 'AdministratorGroups', 'AdditionalGroups', or 'AuthorizationGroups'.
+- 'Temporary': The system uses a temporary session configuration for newly created accounts at login.</string>
 					<key>pfm_name</key>
 					<string>NewUserAuthorizationMode</string>
 					<key>pfm_range_list</key>
@@ -2286,6 +2314,7 @@ kerberosDefault - The default Kerberos processes for selecting credentials is us
 						<string>Standard</string>
 						<string>Admin</string>
 						<string>Groups</string>
+						<string>Temporary</string>
 					</array>
 					<key>pfm_type</key>
 					<string>string</string>
@@ -2294,9 +2323,9 @@ kerberosDefault - The default Kerberos processes for selecting credentials is us
 					<key>pfm_description</key>
 					<string>The permission to apply to an account each time the user authenticates. Allowed values:
 
-* 'Standard': The account is a standard user.
-* 'Admin': The system adds the account to the local administrators group.
-* 'Groups': The system assigns group to the account using 'AdministratorGroups', 'AdditionalGroups', or 'AuthorizationGroups'.</string>
+- 'Standard': The account is a standard user.
+- 'Admin': The system adds the account to the local administrators group.
+- 'Groups': The system assigns group to the account using 'AdministratorGroups', 'AdditionalGroups', or 'AuthorizationGroups'.</string>
 					<key>pfm_name</key>
 					<string>UserAuthorizationMode</string>
 					<key>pfm_range_list</key>
@@ -2348,7 +2377,7 @@ kerberosDefault - The default Kerberos processes for selecting credentials is us
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string>The pairing of Authorization Rights to group names. The system updates the Authorization Right to use the group when used.</string>
+					<string>The pairing of Authorization Rights to group names. When using this, the system updates the Authorization Right to use the group.</string>
 					<key>pfm_name</key>
 					<string>AuthorizationGroups</string>
 					<key>pfm_subkeys</key>
@@ -2379,7 +2408,7 @@ kerberosDefault - The default Kerberos processes for selecting credentials is us
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string>The policy to apply when using Platform SSO at FileVault unlock on Apple Silicon Macs. Applies when 'AuthenticationMethod' is 'Password'. Available in macOS 15 and later.</string>
+					<string>The policy to apply when using Platform SSO at FileVault unlock on a Mac with Apple silicon. Applies when 'AuthenticationMethod' is 'Password'. Available in macOS 15 and later.</string>
 					<key>pfm_macos_min</key>
 					<string>15.0</string>
 					<key>pfm_name</key>
@@ -2394,18 +2423,18 @@ kerberosDefault - The default Kerberos processes for selecting credentials is us
     successful Platform SSO authentication is required to proceed, even if taken offline.
 * RequireAuthentication
     Platform SSO authentication is required before proceeding.  If the device is offline and
-    `AllowOfflineGracePeriod` is enabled, then the offline `OfflineGracePeriod` is used to determine
+    'AllowOfflineGracePeriod' is enabled, then the offline 'OfflineGracePeriod' is used to determine
     if the user can proceed or not. If online and the credential is incorrect, then a valid Platform
-    SSO authentication is required to proceed regardless of the `OfflineGracePeriod`. If the account
-    is not registered for Platform SSO and `AllowAuthenticationGracePeriod` is enabled, then the
-    `AuthenticationGracePeriod` is used to determine if the user can proceed or not.
+    SSO authentication is required to proceed regardless of the 'OfflineGracePeriod'. If the account
+    is not registered for Platform SSO and 'AllowAuthenticationGracePeriod' is enabled, then the
+    'AuthenticationGracePeriod' is used to determine if the user can proceed or not.
 * AllowOfflineGracePeriod
-    Allow the use of the `OfflineGracePeriod` when `RequireAuthentication` is enabled.  If
-    `AllowOfflineGracePeriod` is not set, then offline access is denied.
+    Allow the use of the 'OfflineGracePeriod' when 'RequireAuthentication' is enabled.  If
+    'AllowOfflineGracePeriod' is not set, then offline access is denied.
 * AllowAuthenticationGracePeriod
-    Allow the use of the `AuthenticationGracePeriod` for other local accounts when `RequireAuthentication`
-    is enabled. The `AuthenticationGracePeriod` starts when any of the policies have been updated. If
-    `AllowAuthenticationGracePeriod` is not set, then unregistered account access is denied.</string>
+    Allow the use of the 'AuthenticationGracePeriod' for other local accounts when 'RequireAuthentication'
+    is enabled. The 'AuthenticationGracePeriod' starts when any of the policies have been updated. If
+    'AllowAuthenticationGracePeriod' is not set, then unregistered account access is denied.</string>
 							<key>pfm_name</key>
 							<string>policy</string>
 							<key>pfm_range_list</key>
@@ -2426,7 +2455,7 @@ kerberosDefault - The default Kerberos processes for selecting credentials is us
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string>The policy to apply when using Platform SSO at the login window. Applies when 'AuthenticationMethod' is 'Password'. Available in macOS 15 and later.</string>
+					<string>The policy to apply when using Platform SSO at the Login Window. Applies when 'AuthenticationMethod' is 'Password'. Available in macOS 15 and later.</string>
 					<key>pfm_macos_min</key>
 					<string>15.0</string>
 					<key>pfm_name</key>
@@ -2441,18 +2470,18 @@ kerberosDefault - The default Kerberos processes for selecting credentials is us
     successful Platform SSO authentication is required to proceed, even if taken offline.
 * RequireAuthentication
     Platform SSO authentication is required before proceeding.  If the device is offline and
-    `AllowOfflineGracePeriod` is enabled, then the offline `OfflineGracePeriod` is used to determine
+    'AllowOfflineGracePeriod' is enabled, then the offline 'OfflineGracePeriod' is used to determine
     if the user can proceed or not. If online and the credential is incorrect, then a valid Platform
-    SSO authentication is required to proceed regardless of the `OfflineGracePeriod`. If the account
-    is not registered for Platform SSO and `AllowAuthenticationGracePeriod` is enabled, then the
-    `AuthenticationGracePeriod` is used to determine if the user can proceed or not.
+    SSO authentication is required to proceed regardless of the 'OfflineGracePeriod'. If the account
+    is not registered for Platform SSO and 'AllowAuthenticationGracePeriod' is enabled, then the
+    'AuthenticationGracePeriod' is used to determine if the user can proceed or not.
 * AllowOfflineGracePeriod
-    Allow the use of the `OfflineGracePeriod` when `RequireAuthentication` is enabled.  If
-    `AllowOfflineGracePeriod` is not set, then offline access is denied.
+    Allow the use of the 'OfflineGracePeriod' when 'RequireAuthentication' is enabled.  If
+    'AllowOfflineGracePeriod' is not set, then offline access is denied.
 * AllowAuthenticationGracePeriod
-    Allow the use of the `AuthenticationGracePeriod` for other local accounts when `RequireAuthentication`
-    is enabled. The `AuthenticationGracePeriod` starts when any of the policies have been updated. If
-    `AllowAuthenticationGracePeriod` is not set, then unregistered account access is denied.</string>
+    Allow the use of the 'AuthenticationGracePeriod' for other local accounts when 'RequireAuthentication'
+    is enabled. The 'AuthenticationGracePeriod' starts when any of the policies have been updated. If
+    'AllowAuthenticationGracePeriod' is not set, then unregistered account access is denied.</string>
 							<key>pfm_name</key>
 							<string>policy</string>
 							<key>pfm_range_list</key>
@@ -2488,21 +2517,21 @@ kerberosDefault - The default Kerberos processes for selecting credentials is us
     successful Platform SSO authentication is required to proceed, even if taken offline.
 * RequireAuthentication
     Platform SSO authentication is required before proceeding.  If the device is offline and
-    `AllowOfflineGracePeriod` is enabled, then the offline `OfflineGracePeriod` is used to determine
+    'AllowOfflineGracePeriod' is enabled, then the offline 'OfflineGracePeriod' is used to determine
     if the user can proceed or not. If online and the credential is incorrect, then a valid Platform
-    SSO authentication is required to proceed regardless of the `OfflineGracePeriod`. If the account
-    is not registered for Platform SSO and `AllowAuthenticationGracePeriod` is enabled, then the
-    `AuthenticationGracePeriod` is used to determine if the user can proceed or not.
+    SSO authentication is required to proceed regardless of the 'OfflineGracePeriod'. If the account
+    is not registered for Platform SSO and 'AllowAuthenticationGracePeriod' is enabled, then the
+    'AuthenticationGracePeriod' is used to determine if the user can proceed or not.
 * AllowOfflineGracePeriod
-    Allow the use of the `OfflineGracePeriod` when `RequireAuthentication` is enabled.  If
-    `AllowOfflineGracePeriod` is not set, then offline access is denied.
+    Allow the use of the 'OfflineGracePeriod' when 'RequireAuthentication' is enabled.  If
+    'AllowOfflineGracePeriod' is not set, then offline access is denied.
 * AllowAuthenticationGracePeriod
-    Allow the use of the `AuthenticationGracePeriod` for other local accounts when `RequireAuthentication`
-    is enabled. The `AuthenticationGracePeriod` starts when any of the policies have been updated. If
-    `AllowAuthenticationGracePeriod` is not set, then unregistered account access is denied.
+    Allow the use of the 'AuthenticationGracePeriod' for other local accounts when 'RequireAuthentication'
+    is enabled. The 'AuthenticationGracePeriod' starts when any of the policies have been updated. If
+    'AllowAuthenticationGracePeriod' is not set, then unregistered account access is denied.
 * AllowTouchIDOrWatchForUnlock
     Allow TouchID or Watch to unlock the screensaver instead of Platform SSO authentication when
-    `RequireAuthentication` is enabled.</string>
+    'RequireAuthentication' is enabled.</string>
 							<key>pfm_name</key>
 							<string>policy</string>
 							<key>pfm_range_list</key>
@@ -2524,7 +2553,7 @@ kerberosDefault - The default Kerberos processes for selecting credentials is us
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string>The amount of time after the last successful Platform SSO login a local account password can be used offline. Required when 'AllowOfflineGracePeriod' is set. Available in macOS 15 and later.</string>
+					<string>The amount of time after the last successful Platform SSO login for using a local account password offline. Required when setting 'AllowOfflineGracePeriod'. Available in macOS 15 and later.</string>
 					<key>pfm_macos_min</key>
 					<string>15.0</string>
 					<key>pfm_name</key>
@@ -2534,7 +2563,7 @@ kerberosDefault - The default Kerberos processes for selecting credentials is us
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string>The amount of time after a 'FileVaultPolicy', 'LoginPolicy', or 'UnlockPolicy' is received or updated that unregistered local accounts can be used. Required when 'AllowAuthenticationGracePeriod' is set. Available in macOS 15 and later.</string>
+					<string>The amount of time after receiving or updating a 'FileVaultPolicy', 'LoginPolicy', or 'UnlockPolicy' that the system can use unregistered local accounts. Required when 'AllowAuthenticationGracePeriod' is set. Available in macOS 15 and later.</string>
 					<key>pfm_macos_min</key>
 					<string>15.0</string>
 					<key>pfm_name</key>
@@ -2544,7 +2573,7 @@ kerberosDefault - The default Kerberos processes for selecting credentials is us
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string>The list of local accounts that aren't subject to the 'FileVaultPolicy', 'LoginPolicy', or 'UnlockPolicy'. The accounts aren't prompted to register for Platform SSO. Available in macOS 15 and later.</string>
+					<string>The list of local accounts that aren't subject to the 'FileVaultPolicy', 'LoginPolicy', or 'UnlockPolicy'. The accounts don't receive a prompt to register for Platform SSO. Available in macOS 15 and later.</string>
 					<key>pfm_macos_min</key>
 					<string>15.0</string>
 					<key>pfm_name</key>
@@ -2569,11 +2598,126 @@ kerberosDefault - The default Kerberos processes for selecting credentials is us
 					<key>pfm_default</key>
 					<false/>
 					<key>pfm_description</key>
-					<string>If set to true, the device UDID and serial number will be included in Platform SSO attestations.</string>
+					<string>If 'true', the system includes the device UDID and serial number in Platform SSO attestations.</string>
 					<key>pfm_macos_min</key>
 					<string>15.4</string>
 					<key>pfm_name</key>
 					<string>AllowDeviceIdentifiersInAttestation</string>
+					<key>pfm_type</key>
+					<string>boolean</string>
+				</dict>
+				<dict>
+					<key>pfm_default</key>
+					<true/>
+					<key>pfm_description</key>
+					<string>If 'true', the device uses Platform SSO to create the first user account on the Mac during 'Setup Assistant'.</string>
+					<key>pfm_macos_min</key>
+					<string>26.0</string>
+					<key>pfm_name</key>
+					<string>EnableCreateFirstUserDuringSetup</string>
+					<key>pfm_type</key>
+					<string>boolean</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>The set of authentication methods to use for newly created accounts at login or during 'Setup Assistant'. The system uses 'Password' and 'SmartCard' if this key isn't present.</string>
+					<key>pfm_macos_min</key>
+					<string>26.0</string>
+					<key>pfm_name</key>
+					<string>NewUserAuthenticationMethods</string>
+					<key>pfm_subkeys</key>
+					<array>
+						<dict>
+							<key>pfm_description</key>
+							<string>An authentication method to use for newly created accounts at login or during 'Setup Assistant'. Allowed values:
+
+- 'Password': The account uses a password for authentication.
+- 'SmartCard': The account uses a smart card for authentication.
+- 'AccessKey': The account uses an access key for authentication.</string>
+							<key>pfm_name</key>
+							<string>NewUserAuthenticationMethod</string>
+							<key>pfm_range_list</key>
+							<array>
+								<string>Password</string>
+								<string>SmartCard</string>
+								<string>AccessKey</string>
+							</array>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+					</array>
+					<key>pfm_type</key>
+					<string>array</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>The reader group identifier for use with the 'AccessKey'. The value needs to match the configured access key. Required if 'NewUserAuthenticationMethods' contains 'AccessKey'.</string>
+					<key>pfm_macos_min</key>
+					<string>26.0</string>
+					<key>pfm_name</key>
+					<string>AccessKeyReaderGroupIdentifier</string>
+					<key>pfm_type</key>
+					<string>data</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>The 'PayloadUUID' of an identity payload to use as the 'Terminal' identity of the access key. The identity needs to be trusted by the access key. Required if 'NewUserAuthenticationMethods' includes 'AccessKey'. Allowed identity payload types:
+
+- 'com.apple.security.pkcs12'
+- 'com.apple.security.acme'
+- 'com.apple.security.scep'</string>
+					<key>pfm_macos_min</key>
+					<string>26.0</string>
+					<key>pfm_name</key>
+					<string>AccessKeyTerminalIdentityUUID</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+				<dict>
+					<key>pfm_default</key>
+					<false/>
+					<key>pfm_description</key>
+					<string>If 'true', the system uses the access key in express mode, and doesn't require authentication before use.</string>
+					<key>pfm_macos_min</key>
+					<string>26.0</string>
+					<key>pfm_name</key>
+					<string>AllowAccessKeyExpressMode</string>
+					<key>pfm_type</key>
+					<string>boolean</string>
+				</dict>
+				<dict>
+					<key>pfm_default</key>
+					<false/>
+					<key>pfm_description</key>
+					<string>If 'true', the system requests the user's profile picture from the SSO extension.</string>
+					<key>pfm_macos_min</key>
+					<string>26.0</string>
+					<key>pfm_name</key>
+					<string>SynchronizeProfilePicture</string>
+					<key>pfm_type</key>
+					<string>boolean</string>
+				</dict>
+				<dict>
+					<key>pfm_default</key>
+					<false/>
+					<key>pfm_description</key>
+					<string>If 'true', the system uses a quicker Authenticated Guest Mode login to Mac behavior. The system erases user data from only select locations in the user home directory after each session completes. Once every eight hours the system erases the full user home directory after a session completes. Turn this on for shared environments that have a high frequency of short sessions.</string>
+					<key>pfm_macos_min</key>
+					<string>26.0</string>
+					<key>pfm_name</key>
+					<string>TemporarySessionQuickLogin</string>
+					<key>pfm_type</key>
+					<string>boolean</string>
+				</dict>
+				<dict>
+					<key>pfm_default</key>
+					<false/>
+					<key>pfm_description</key>
+					<string>If 'true', the system enables the PlatformSSO registration process during Setup Assistant on devices running macOS 26 and later. Set this key to 'true' when configuring PlatformSSO before enrollment using the 'com.apple.psso.required' error response.</string>
+					<key>pfm_macos_min</key>
+					<string>26.0</string>
+					<key>pfm_name</key>
+					<string>EnableRegistrationDuringSetup</string>
 					<key>pfm_type</key>
 					<string>boolean</string>
 				</dict>
@@ -2583,7 +2727,7 @@ kerberosDefault - The default Kerberos processes for selecting credentials is us
 		</dict>
 		<dict>
 			<key>pfm_description</key>
-			<string>The token this device uses for registration with Platform SSO. Use it for silent registration with the Identity Provider. Requires that 'PlatformSSO.AuthenticationMethod' isn't empty. Available in macOS 13 and later.</string>
+			<string>The token this device uses for registration with Platform SSO. Use it for silent registration with the Identity Provider. Requires that 'AuthenticationMethod' in 'PlatformSSO' isn't empty. Available in macOS 13 and later.</string>
 			<key>pfm_exclude</key>
 			<array>
 				<dict>
@@ -2630,6 +2774,6 @@ kerberosDefault - The default Kerberos processes for selecting credentials is us
 	<key>pfm_user_approved</key>
 	<true/>
 	<key>pfm_version</key>
-	<integer>8</integer>
+	<integer>9</integer>
 </dict>
 </plist>

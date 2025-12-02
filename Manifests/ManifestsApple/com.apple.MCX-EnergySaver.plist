@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>pfm_description</key>
-	<string>Energy Saver settings</string>
+	<string>The payload that configures Energy Saver settings.</string>
 	<key>pfm_documentation_url</key>
 	<string>https://developer.apple.com/documentation/devicemanagement/energysaver</string>
 	<key>pfm_domain</key>
@@ -13,7 +13,9 @@
 	<key>pfm_interaction</key>
 	<string>combined</string>
 	<key>pfm_last_modified</key>
-	<date>2024-05-16T08:07:50Z</date>
+	<date>2025-09-17T09:38:09Z</date>
+	<key>pfm_macos_min</key>
+	<string>10.7</string>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -24,7 +26,7 @@
 	<array>
 		<dict>
 			<key>pfm_default</key>
-			<string>Configures Energy Saver settings</string>
+			<string>The payload that configures Energy Saver settings.</string>
 			<key>pfm_description</key>
 			<string>The human-readable description of this payload. This description appears on the Detail screen.</string>
 			<key>pfm_name</key>
@@ -160,7 +162,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_description</key>
-			<string>Managed settings for the desktop energy profile.</string>
+			<string>The settings for a desktop computer.</string>
 			<key>pfm_hidden</key>
 			<string>container</string>
 			<key>pfm_name</key>
@@ -169,7 +171,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<array>
 				<dict>
 					<key>pfm_description</key>
-					<string>Minutes of inactivity before the display will be turned off, in an integer value where 0 means never</string>
+					<string>The display sleep time, in minutes. A value of 0 means never.</string>
 					<key>pfm_name</key>
 					<string>Display Sleep Timer</string>
 					<key>pfm_range_max</key>
@@ -185,7 +187,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string>Minutes of inactivity before the system will enter sleep mode, in an integer value where 0 means never</string>
+					<string>System sleep time, in minutes. A value of 0 means never.</string>
 					<key>pfm_name</key>
 					<string>System Sleep Timer</string>
 					<key>pfm_range_max</key>
@@ -203,7 +205,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<key>pfm_default</key>
 					<integer>10</integer>
 					<key>pfm_description</key>
-					<string>Minutes of inactivity before the disks(s) will be powered down, in an integer value where 0 means never</string>
+					<string>The disk sleep time, in minutes. A value of 0 means never.</string>
 					<key>pfm_name</key>
 					<string>Disk Sleep Timer</string>
 					<key>pfm_range_max</key>
@@ -219,9 +221,14 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string>Wake the system for network access</string>
+					<string>If 'true', enables "Wake for network access."</string>
 					<key>pfm_name</key>
-					<string>Wake On LAN</string>
+					<string>Wake on LAN</string>
+					<key>pfm_range_list</key>
+					<array>
+						<integer>0</integer>
+						<integer>1</integer>
+					</array>
 					<key>pfm_title</key>
 					<string>Wake on LAN</string>
 					<key>pfm_type</key>
@@ -231,9 +238,14 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string></string>
+					<string>If 'true', enables "Wake for modem ring."</string>
 					<key>pfm_name</key>
 					<string>Wake On Modem Ring</string>
+					<key>pfm_range_list</key>
+					<array>
+						<integer>0</integer>
+						<integer>1</integer>
+					</array>
 					<key>pfm_title</key>
 					<string>Wake On Modem Ring</string>
 					<key>pfm_type</key>
@@ -243,9 +255,14 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string></string>
+					<string>If 'true', enables "Start up automatically after a power failure."</string>
 					<key>pfm_name</key>
 					<string>Automatic Restart On Power Loss</string>
+					<key>pfm_range_list</key>
+					<array>
+						<integer>0</integer>
+						<integer>1</integer>
+					</array>
 					<key>pfm_title</key>
 					<string>Start up Automatically After a Power Failure</string>
 					<key>pfm_type</key>
@@ -255,9 +272,14 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string>May not be available on all systems</string>
+					<string>May not be available on all systems.</string>
 					<key>pfm_name</key>
 					<string>Dynamic Power Step</string>
+					<key>pfm_range_list</key>
+					<array>
+						<integer>0</integer>
+						<integer>1</integer>
+					</array>
 					<key>pfm_title</key>
 					<string>Dynamic Power Step</string>
 					<key>pfm_type</key>
@@ -267,9 +289,14 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string>May not be available on all systems</string>
+					<string>May not be available on all systems.</string>
 					<key>pfm_name</key>
 					<string>Reduce Processor Speed</string>
+					<key>pfm_range_list</key>
+					<array>
+						<integer>0</integer>
+						<integer>1</integer>
+					</array>
 					<key>pfm_title</key>
 					<string>Reduce Processor Speed</string>
 					<key>pfm_type</key>
@@ -310,7 +337,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_description</key>
-			<string>Managed settings for the portable battery power energy profile</string>
+			<string>The settings for a laptop computer using battery power.</string>
 			<key>pfm_hidden</key>
 			<string>container</string>
 			<key>pfm_name</key>
@@ -319,7 +346,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<array>
 				<dict>
 					<key>pfm_description</key>
-					<string>Minutes of inactivity before the display will be turned off, in an integer value where 0 means never</string>
+					<string>The display sleep time, in minutes. A value of 0 means never.</string>
 					<key>pfm_name</key>
 					<string>Display Sleep Timer</string>
 					<key>pfm_range_max</key>
@@ -335,7 +362,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string>Minutes of inactivity before the system will enter sleep mode, in an integer value where 0 means never</string>
+					<string>System sleep time, in minutes. A value of 0 means never.</string>
 					<key>pfm_name</key>
 					<string>System Sleep Timer</string>
 					<key>pfm_range_max</key>
@@ -353,7 +380,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<key>pfm_default</key>
 					<integer>10</integer>
 					<key>pfm_description</key>
-					<string>Minutes of inactivity before the disks(s) will be powered down, in an integer value where 0 means never</string>
+					<string>The disk sleep time, in minutes. A value of 0 means never.</string>
 					<key>pfm_name</key>
 					<string>Disk Sleep Timer</string>
 					<key>pfm_range_max</key>
@@ -369,9 +396,14 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string>Wake the system for network access</string>
+					<string>If 'true', enables "Wake for network access."</string>
 					<key>pfm_name</key>
-					<string>Wake On LAN</string>
+					<string>Wake on LAN</string>
+					<key>pfm_range_list</key>
+					<array>
+						<integer>0</integer>
+						<integer>1</integer>
+					</array>
 					<key>pfm_title</key>
 					<string>Wake on LAN</string>
 					<key>pfm_type</key>
@@ -381,9 +413,14 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string></string>
+					<string>If 'true', enables "Wake for modem ring."</string>
 					<key>pfm_name</key>
 					<string>Wake On Modem Ring</string>
+					<key>pfm_range_list</key>
+					<array>
+						<integer>0</integer>
+						<integer>1</integer>
+					</array>
 					<key>pfm_title</key>
 					<string>Wake On Modem Ring</string>
 					<key>pfm_type</key>
@@ -393,9 +430,14 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string></string>
+					<string>If 'true', enables "Start up automatically after a power failure."</string>
 					<key>pfm_name</key>
 					<string>Automatic Restart On Power Loss</string>
+					<key>pfm_range_list</key>
+					<array>
+						<integer>0</integer>
+						<integer>1</integer>
+					</array>
 					<key>pfm_title</key>
 					<string>Start up Automatically After a Power Failure</string>
 					<key>pfm_type</key>
@@ -405,9 +447,14 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string>May not be available on all systems</string>
+					<string>May not be available on all systems.</string>
 					<key>pfm_name</key>
 					<string>Dynamic Power Step</string>
+					<key>pfm_range_list</key>
+					<array>
+						<integer>0</integer>
+						<integer>1</integer>
+					</array>
 					<key>pfm_title</key>
 					<string>Dynamic Power Step</string>
 					<key>pfm_type</key>
@@ -417,9 +464,14 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string>May not be available on all systems</string>
+					<string>May not be available on all systems.</string>
 					<key>pfm_name</key>
 					<string>Reduce Processor Speed</string>
+					<key>pfm_range_list</key>
+					<array>
+						<integer>0</integer>
+						<integer>1</integer>
+					</array>
 					<key>pfm_title</key>
 					<string>Reduce Processor Speed</string>
 					<key>pfm_type</key>
@@ -435,7 +487,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_description</key>
-			<string>Managed settings for the portable AC power energy profile.</string>
+			<string>The settings for a laptop computer using AC power.</string>
 			<key>pfm_hidden</key>
 			<string>container</string>
 			<key>pfm_name</key>
@@ -444,7 +496,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<array>
 				<dict>
 					<key>pfm_description</key>
-					<string>Minutes of inactivity before the display will be turned off, in an integer value where 0 means never</string>
+					<string>The display sleep time, in minutes. A value of 0 means never.</string>
 					<key>pfm_name</key>
 					<string>Display Sleep Timer</string>
 					<key>pfm_range_max</key>
@@ -460,7 +512,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string>Minutes of inactivity before the system will enter sleep mode, in an integer value where 0 means never</string>
+					<string>System sleep time, in minutes. A value of 0 means never.</string>
 					<key>pfm_name</key>
 					<string>System Sleep Timer</string>
 					<key>pfm_range_max</key>
@@ -478,7 +530,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<key>pfm_default</key>
 					<integer>10</integer>
 					<key>pfm_description</key>
-					<string>Minutes of inactivity before the disks(s) will be powered down, in an integer value where 0 means never</string>
+					<string>The disk sleep time, in minutes. A value of 0 means never.</string>
 					<key>pfm_name</key>
 					<string>Disk Sleep Timer</string>
 					<key>pfm_range_max</key>
@@ -494,9 +546,14 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string>Wake the system for network access</string>
+					<string>If 'true', enables "Wake for network access."</string>
 					<key>pfm_name</key>
-					<string>Wake On LAN</string>
+					<string>Wake on LAN</string>
+					<key>pfm_range_list</key>
+					<array>
+						<integer>0</integer>
+						<integer>1</integer>
+					</array>
 					<key>pfm_title</key>
 					<string>Wake on LAN</string>
 					<key>pfm_type</key>
@@ -506,9 +563,14 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string></string>
+					<string>If 'true', enables "Wake for modem ring."</string>
 					<key>pfm_name</key>
 					<string>Wake On Modem Ring</string>
+					<key>pfm_range_list</key>
+					<array>
+						<integer>0</integer>
+						<integer>1</integer>
+					</array>
 					<key>pfm_title</key>
 					<string>Wake On Modem Ring</string>
 					<key>pfm_type</key>
@@ -518,9 +580,14 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string></string>
+					<string>If 'true', enables "Start up automatically after a power failure."</string>
 					<key>pfm_name</key>
 					<string>Automatic Restart On Power Loss</string>
+					<key>pfm_range_list</key>
+					<array>
+						<integer>0</integer>
+						<integer>1</integer>
+					</array>
 					<key>pfm_title</key>
 					<string>Start up Automatically After a Power Failure</string>
 					<key>pfm_type</key>
@@ -530,9 +597,14 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string>May not be available on all systems</string>
+					<string>May not be available on all systems.</string>
 					<key>pfm_name</key>
 					<string>Dynamic Power Step</string>
+					<key>pfm_range_list</key>
+					<array>
+						<integer>0</integer>
+						<integer>1</integer>
+					</array>
 					<key>pfm_title</key>
 					<string>Dynamic Power Step</string>
 					<key>pfm_type</key>
@@ -542,9 +614,14 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string>May not be available on all systems</string>
+					<string>May not be available on all systems.</string>
 					<key>pfm_name</key>
 					<string>Reduce Processor Speed</string>
+					<key>pfm_range_list</key>
+					<array>
+						<integer>0</integer>
+						<integer>1</integer>
+					</array>
 					<key>pfm_title</key>
 					<string>Reduce Processor Speed</string>
 					<key>pfm_type</key>
@@ -560,7 +637,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_description</key>
-			<string>Use this key to manage scheduled power on and power off events.</string>
+			<string>The schedule for turning a computer on and off.</string>
 			<key>pfm_hidden</key>
 			<string>container</string>
 			<key>pfm_name</key>
@@ -569,7 +646,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<array>
 				<dict>
 					<key>pfm_description</key>
-					<string>Use this key to describe a repeating start up/wake time.</string>
+					<string>The schedule for turning the device on.</string>
 					<key>pfm_name</key>
 					<string>RepeatingPowerOn</string>
 					<key>pfm_subkeys</key>
@@ -578,18 +655,20 @@ During a profile replacement, the system updates payloads with the same 'Payload
 							<key>pfm_default</key>
 							<string>wakepoweron</string>
 							<key>pfm_description</key>
-							<string>The type of action to take at the scheduled time.</string>
+							<string>The type of action defined by this schedule.</string>
 							<key>pfm_name</key>
 							<string>eventtype</string>
 							<key>pfm_range_list</key>
 							<array>
 								<string>wake</string>
+								<string>poweron</string>
 								<string>wakepoweron</string>
 							</array>
 							<key>pfm_range_list_titles</key>
 							<array>
-								<string>Wake</string>
-								<string>Start Up/Wake</string>
+								<string>Wake Up</string>
+								<string>Power On</string>
+								<string>Wake Up/Power On</string>
 							</array>
 							<key>pfm_require</key>
 							<string>always</string>
@@ -602,7 +681,15 @@ During a profile replacement, the system updates payloads with the same 'Payload
 							<key>pfm_default</key>
 							<integer>31</integer>
 							<key>pfm_description</key>
-							<string>The days on which the scheduled event occurs.</string>
+							<string>One or more days of the week in an unsigned integer bitmap:
+
+- '1' = Mon
+- '2' = Tue
+- '4' = Wed
+- '8' = Thu
+- '16' = Fri
+- '32' = Sat
+- '64' = Sun</string>
 							<key>pfm_name</key>
 							<string>weekdays</string>
 							<key>pfm_require</key>
@@ -655,7 +742,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 							<key>pfm_default</key>
 							<integer>0</integer>
 							<key>pfm_description</key>
-							<string>The time of day to perform the action.</string>
+							<string>The time, in minutes, since midnight.</string>
 							<key>pfm_name</key>
 							<string>time</string>
 							<key>pfm_require</key>
@@ -677,27 +764,27 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string>Use this key to describe a repeating shut down, sleep or restart.</string>
+					<string>The schedule for turning the device off.</string>
 					<key>pfm_name</key>
 					<string>RepeatingPowerOff</string>
 					<key>pfm_subkeys</key>
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>The type of action to take at the scheduled time.</string>
+							<string>The type of action defined by this schedule.</string>
 							<key>pfm_name</key>
 							<string>eventtype</string>
 							<key>pfm_range_list</key>
 							<array>
 								<string>sleep</string>
-								<string>restart</string>
 								<string>shutdown</string>
+								<string>restart</string>
 							</array>
 							<key>pfm_range_list_titles</key>
 							<array>
 								<string>Sleep</string>
-								<string>Restart</string>
 								<string>Shut Down</string>
+								<string>Restart</string>
 							</array>
 							<key>pfm_require</key>
 							<string>always</string>
@@ -710,7 +797,15 @@ During a profile replacement, the system updates payloads with the same 'Payload
 							<key>pfm_default</key>
 							<integer>31</integer>
 							<key>pfm_description</key>
-							<string>The days on which the scheduled event occurs.</string>
+							<string>One or more days of the week in an unsigned integer bitmap:
+
+- '1' = Mon
+- '2' = Tue
+- '4' = Wed
+- '8' = Thu
+- '16' = Fri
+- '32' = Sat
+- '64' = Sun</string>
 							<key>pfm_name</key>
 							<string>weekdays</string>
 							<key>pfm_require</key>
@@ -763,7 +858,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 							<key>pfm_default</key>
 							<integer>0</integer>
 							<key>pfm_description</key>
-							<string>The time of day to perform the action.</string>
+							<string>The time, in minutes, since midnight.</string>
 							<key>pfm_name</key>
 							<string>time</string>
 							<key>pfm_require</key>
@@ -793,7 +888,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string></string>
+			<string>If 'true', disables sleep.</string>
 			<key>pfm_name</key>
 			<string>SleepDisabled</string>
 			<key>pfm_title</key>
@@ -809,7 +904,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 	<key>pfm_title</key>
 	<string>Energy Saver</string>
 	<key>pfm_unique</key>
-	<true/>
+	<false/>
 	<key>pfm_version</key>
 	<integer>2</integer>
 </dict>

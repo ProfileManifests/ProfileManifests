@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>pfm_description</key>
-	<string>Kernel Extension Policy settings</string>
+	<string>The payload that configures the kernel extension policies.</string>
 	<key>pfm_documentation_url</key>
 	<string>https://developer.apple.com/documentation/devicemanagement/systempolicykernelextensions</string>
 	<key>pfm_domain</key>
@@ -13,7 +13,7 @@
 	<key>pfm_interaction</key>
 	<string>exclusive</string>
 	<key>pfm_last_modified</key>
-	<date>2025-08-15T19:32:34Z</date>
+	<date>2025-09-17T09:38:09Z</date>
 	<key>pfm_macos_min</key>
 	<string>10.13.2</string>
 	<key>pfm_platforms</key>
@@ -24,7 +24,7 @@
 	<array>
 		<dict>
 			<key>pfm_default</key>
-			<string>Configures Kernel Extension Policy settings</string>
+			<string>The payload that configures the kernel extension policies.</string>
 			<key>pfm_description</key>
 			<string>The human-readable description of this payload. This description appears on the Detail screen.</string>
 			<key>pfm_name</key>
@@ -36,7 +36,7 @@
 		</dict>
 		<dict>
 			<key>pfm_default</key>
-			<string>Kernel Extension Policy</string>
+			<string>System Policy - Kernel Extensions</string>
 			<key>pfm_description</key>
 			<string>The human-readable name for the profile payload. The name appears on the Detail screen and doesn't need to be unique.</string>
 			<key>pfm_name</key>
@@ -52,7 +52,8 @@
 			<key>pfm_default</key>
 			<string>com.apple.syspolicy.kernel-extension-policy</string>
 			<key>pfm_description</key>
-			<string>The reverse-DNS-style identifier for the payload. This identifier is usually the same as the TopLevel value, with an additional appended component. This string must be unique within the profile.
+			<string>The reverse-DNS-style identifier for the payload. This identifier is usually the same as the 'TopLevel' value, with an additional appended component. This string must be unique within the profile.
+
 During a profile replacement, the system updates payloads with the same 'PayloadIdentifier' and 'PayloadUUID' in the old and new profiles.</string>
 			<key>pfm_name</key>
 			<string>PayloadIdentifier</string>
@@ -82,6 +83,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string></string>
 			<key>pfm_description</key>
 			<string>The globally unique identifier for the payload. The actual content is unimportant, but must be globally unique. In macOS, use 'uuidgen' to generate UUIDs.
+
 During a profile replacement, the system updates payloads with the same 'PayloadIdentifier' and 'PayloadUUID' in the old and new profiles.</string>
 			<key>pfm_format</key>
 			<string>^[0-9A-Za-z]{8}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{12}$</string>
@@ -124,9 +126,9 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_default</key>
-			<true/>
+			<false/>
 			<key>pfm_description</key>
-			<string>Users can approve kernel extensions not explicitly allowed by configuration profiles.</string>
+			<string>If 'true', users can approve additional kernel extensions that configuration profiles don't explicitly allow.</string>
 			<key>pfm_name</key>
 			<string>AllowUserOverrides</string>
 			<key>pfm_title</key>
@@ -138,9 +140,11 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>Non-admin users can approve kernel extensions not explicitly allowed by configuration profiles.</string>
+			<string>If 'true', nonadministrative users can approve additional kernel extensions in the Security &amp; Privacy preferences.
+
+Available in macOS 11 and later.</string>
 			<key>pfm_macos_min</key>
-			<string>11</string>
+			<string>11.0</string>
 			<key>pfm_name</key>
 			<string>AllowNonAdminUserApprovals</string>
 			<key>pfm_title</key>
@@ -154,7 +158,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				<string>com.apple.package</string>
 			</array>
 			<key>pfm_description</key>
-			<string>List of team identifiers that define which validly signed kernel extensions will be allowed to load.</string>
+			<string>The array of team identifiers that define which validly signed kernel extensions can load.</string>
 			<key>pfm_name</key>
 			<string>AllowedTeamIdentifiers</string>
 			<key>pfm_note</key>
@@ -165,7 +169,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<key>pfm_description</key>
 					<string></string>
 					<key>pfm_name</key>
-					<string>TeamIdentifier</string>
+					<string>AllowedTeamIdentifiersItem</string>
 					<key>pfm_title</key>
 					<string>Team Identifier</string>
 					<key>pfm_type</key>
@@ -187,23 +191,25 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				<string>com.apple.package</string>
 			</array>
 			<key>pfm_description</key>
-			<string>Bundle identifier and team identifier of kernel extensions that will be allowed. Use an empty team identifier for unsigned legacy kernel extensions.</string>
+			<string>The dictionary that represents a set of kernel extensions that the system always allows to load on the computer. The dictionary maps team identifiers (keys) to arrays of bundle identifiers.</string>
 			<key>pfm_name</key>
 			<string>AllowedKernelExtensions</string>
 			<key>pfm_subkeys</key>
 			<array>
 				<dict>
 					<key>pfm_description</key>
-					<string></string>
+					<string>The kernel extension data.</string>
 					<key>pfm_name</key>
 					<string>{{value}}</string>
 					<key>pfm_subkeys</key>
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string></string>
+							<string>Kernel extension data.</string>
 							<key>pfm_name</key>
-							<string>BundleIdentifier</string>
+							<string>AllowedKernelExtensionsItems</string>
+							<key>pfm_require</key>
+							<string>always-nested</string>
 							<key>pfm_title</key>
 							<string>Bundle Identifier</string>
 							<key>pfm_type</key>
@@ -243,7 +249,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		<string>system</string>
 	</array>
 	<key>pfm_title</key>
-	<string>Kernel Extension Policy</string>
+	<string>System Policy - Kernel Extensions</string>
 	<key>pfm_unique</key>
 	<false/>
 	<key>pfm_user_approved</key>

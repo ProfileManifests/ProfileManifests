@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>pfm_description</key>
-	<string>Use this section to define policy for system extensions.</string>
+	<string>The payload that configures system extensions.</string>
 	<key>pfm_documentation_url</key>
 	<string>https://developer.apple.com/documentation/devicemanagement/systemextensions</string>
 	<key>pfm_domain</key>
@@ -13,7 +13,7 @@
 	<key>pfm_interaction</key>
 	<string>combined</string>
 	<key>pfm_last_modified</key>
-	<date>2024-12-13T08:12:27Z</date>
+	<date>2025-09-17T09:38:09Z</date>
 	<key>pfm_macos_min</key>
 	<string>10.15</string>
 	<key>pfm_platforms</key>
@@ -24,7 +24,7 @@
 	<array>
 		<dict>
 			<key>pfm_default</key>
-			<string></string>
+			<string>The payload that configures system extensions.</string>
 			<key>pfm_description</key>
 			<string>The human-readable description of this payload. This description appears on the Detail screen.</string>
 			<key>pfm_name</key>
@@ -52,7 +52,8 @@
 			<key>pfm_default</key>
 			<string>com.apple.system-extension-policy</string>
 			<key>pfm_description</key>
-			<string>The reverse-DNS-style identifier for the payload. This identifier is usually the same as the TopLevel value, with an additional appended component. This string must be unique within the profile.
+			<string>The reverse-DNS-style identifier for the payload. This identifier is usually the same as the 'TopLevel' value, with an additional appended component. This string must be unique within the profile.
+
 During a profile replacement, the system updates payloads with the same 'PayloadIdentifier' and 'PayloadUUID' in the old and new profiles.</string>
 			<key>pfm_name</key>
 			<string>PayloadIdentifier</string>
@@ -82,6 +83,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string></string>
 			<key>pfm_description</key>
 			<string>The globally unique identifier for the payload. The actual content is unimportant, but must be globally unique. In macOS, use 'uuidgen' to generate UUIDs.
+
 During a profile replacement, the system updates payloads with the same 'PayloadIdentifier' and 'PayloadUUID' in the old and new profiles.</string>
 			<key>pfm_format</key>
 			<string>^[0-9A-Za-z]{8}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{12}$</string>
@@ -139,7 +141,9 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		<dict>
 			<key>pfm_description</key>
 			<string>An array of team identifiers that defines valid, signed system extensions that are allowable to load. Approved system extensions are those signed with any of the specified team identifiers.
-To avoid requiring an administrator to authorize the operation, you can activate system extensions that this key specifies using activationRequest(forExtensionWithIdentifier:queue:).
+
+To avoid requiring an administrator to authorize the operation, you can activate system extensions that this key specifies using 'OSSystemExtensionActivationRequest API'.
+
 It's an error for the same team identifier to appear in both this array and as a key in the 'AllowedSystemExtensions' dictionary.</string>
 			<key>pfm_format</key>
 			<string>^[A-Z0-9]{10}$</string>
@@ -168,7 +172,9 @@ It's an error for the same team identifier to appear in both this array and as a
 		<dict>
 			<key>pfm_description</key>
 			<string>A dictionary of approved system extensions on the computer. The dictionary maps the team identifiers (keys) to arrays of bundle identifiers, where the bundle identifier defines the system extension to install.
-To avoid requiring an administrator to authorize the operation, you can activate system extensions that this key specifies using activationRequest(forExtensionWithIdentifier:queue:).
+
+To avoid requiring an administrator to authorize the operation, you can activate system extensions that this key specifies using 'OSSystemExtensionActivationRequest API'.
+
 It's an error for the same team identifier to appear in both the 'AllowedTeamIdentifiers' array and as a key in this dictionary.</string>
 			<key>pfm_name</key>
 			<string>AllowedSystemExtensions</string>
@@ -224,6 +230,7 @@ It's an error for the same team identifier to appear in both the 'AllowedTeamIde
 		<dict>
 			<key>pfm_description</key>
 			<string>A dictionary that maps a team identifier to an array of strings, where each string is a type of system extension that you can install for that team identifier. The allowed extension types are 'DriverExtension', 'NetworkExtension', and 'EndpointSecurityExtension'.
+
 If there's no entry for a specified team identifier in the dictionary, the system allows all extension types.</string>
 			<key>pfm_name</key>
 			<string>AllowedSystemExtensionTypes</string>
@@ -287,6 +294,7 @@ If there's no entry for a specified team identifier in the dictionary, the syste
 		<dict>
 			<key>pfm_description</key>
 			<string>A dictionary of system extensions that are allowed to remove themselves from the machine. The dictionary maps team identifiers (keys) to arrays of bundle identifiers, where the bundle identifier defines the system extension. An application using the 'OSSystemExtensionDeactivationRequest' API can deactivate the specified system extensions without requiring an administrator to authorize the operation.
+
 Available in macOS 12 and later.</string>
 			<key>pfm_macos_min</key>
 			<string>12.0</string>

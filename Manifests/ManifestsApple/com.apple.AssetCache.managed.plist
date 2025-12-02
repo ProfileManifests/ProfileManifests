@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>pfm_description</key>
-	<string>Content Caching settings</string>
+	<string>The payload that configures the Content Caching service.</string>
 	<key>pfm_description_reference</key>
 	<string>The Content Caching payload is designated by specifying com.apple.AssetCache.managed as the PayloadType. It configures the Content Caching service.</string>
 	<key>pfm_documentation_url</key>
@@ -15,7 +15,7 @@
 	<key>pfm_interaction</key>
 	<string>exclusive</string>
 	<key>pfm_last_modified</key>
-	<date>2025-08-15T19:32:34Z</date>
+	<date>2025-09-17T09:38:09Z</date>
 	<key>pfm_macos_min</key>
 	<string>10.13.4</string>
 	<key>pfm_platforms</key>
@@ -26,11 +26,9 @@
 	<array>
 		<dict>
 			<key>pfm_default</key>
-			<string>Configures Content Caching settings</string>
+			<string>The payload that configures the Content Caching service.</string>
 			<key>pfm_description</key>
 			<string>The human-readable description of this payload. This description appears on the Detail screen.</string>
-			<key>pfm_description_reference</key>
-			<string>Optional. A human-readable description of this payload. This description is shown on the Detail screen.</string>
 			<key>pfm_name</key>
 			<string>PayloadDescription</string>
 			<key>pfm_title</key>
@@ -43,8 +41,6 @@
 			<string>Content Caching</string>
 			<key>pfm_description</key>
 			<string>The human-readable name for the profile payload. The name appears on the Detail screen and doesn't need to be unique.</string>
-			<key>pfm_description_reference</key>
-			<string>A human-readable name for the profile payload. This name is displayed on the Detail screen. It does not have to be unique.</string>
 			<key>pfm_name</key>
 			<string>PayloadDisplayName</string>
 			<key>pfm_require</key>
@@ -58,10 +54,9 @@
 			<key>pfm_default</key>
 			<string>com.apple.AssetCache.managed</string>
 			<key>pfm_description</key>
-			<string>The reverse-DNS-style identifier for the payload. This identifier is usually the same as the TopLevel value, with an additional appended component. This string must be unique within the profile.
+			<string>The reverse-DNS-style identifier for the payload. This identifier is usually the same as the 'TopLevel' value, with an additional appended component. This string must be unique within the profile.
+
 During a profile replacement, the system updates payloads with the same 'PayloadIdentifier' and 'PayloadUUID' in the old and new profiles.</string>
-			<key>pfm_description_reference</key>
-			<string>A reverse-DNS-style identifier for the specific payload. It is usually the same identifier as the root-level PayloadIdentifier value with an additional component appended.</string>
 			<key>pfm_name</key>
 			<string>PayloadIdentifier</string>
 			<key>pfm_require</key>
@@ -76,8 +71,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>com.apple.AssetCache.managed</string>
 			<key>pfm_description</key>
 			<string>The payload type, which each payload domain's reference page specifies.</string>
-			<key>pfm_description_reference</key>
-			<string>The payload type.</string>
 			<key>pfm_name</key>
 			<string>PayloadType</string>
 			<key>pfm_require</key>
@@ -92,9 +85,8 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string></string>
 			<key>pfm_description</key>
 			<string>The globally unique identifier for the payload. The actual content is unimportant, but must be globally unique. In macOS, use 'uuidgen' to generate UUIDs.
+
 During a profile replacement, the system updates payloads with the same 'PayloadIdentifier' and 'PayloadUUID' in the old and new profiles.</string>
-			<key>pfm_description_reference</key>
-			<string>A globally unique identifier for the payload. The actual content is unimportant, but it must be globally unique. In macOS, you can use uuidgen to generate reasonable UUIDs.</string>
 			<key>pfm_format</key>
 			<string>^[0-9A-Za-z]{8}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{12}$</string>
 			<key>pfm_name</key>
@@ -111,9 +103,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<integer>1</integer>
 			<key>pfm_description</key>
 			<string>The version of this specific payload.</string>
-			<key>pfm_description_reference</key>
-			<string>The version number of the individual payload.
-A profile can consist of payloads with different version numbers. For example, changes to the VPN software in iOS might introduce a new payload version to support additional features, but Mail payload versions would not necessarily change in the same release.</string>
 			<key>pfm_name</key>
 			<string>PayloadVersion</string>
 			<key>pfm_range_list</key>
@@ -130,9 +119,6 @@ A profile can consist of payloads with different version numbers. For example, c
 		<dict>
 			<key>pfm_description</key>
 			<string>The human-readable string containing the name of the organization that provides the profile. This value doesn't need to match the organization payload value in the enclosing dictionary.</string>
-			<key>pfm_description_reference</key>
-			<string>Optional. A human-readable string containing the name of the organization that provided the profile.
-The payload organization for a payload need not match the payload organization in the enclosing profile.</string>
 			<key>pfm_name</key>
 			<string>PayloadOrganization</string>
 			<key>pfm_title</key>
@@ -144,10 +130,11 @@ The payload organization for a payload need not match the payload organization i
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>Users can't turn off the content caching service.</string>
-			<key>pfm_description_reference</key>
-			<string>Optional. If set to true, automatically activate the Content Cache when possible and prevent disabling of the Content Cache. Default is false.
-Availability: Available in macOS 10.13.4 and later.</string>
+			<string>If 'true', the system automatically activates the content cache when possible and prevents disabling it. If 'allowContentCaching' is 'false', 'AutoActivation' is also 'false'.
+
+Removing a profile that set 'AutoActivation' to 'true' doesn't deactivate the Content Cache.</string>
+			<key>pfm_macos_min</key>
+			<string>10.13.4</string>
 			<key>pfm_name</key>
 			<string>AutoActivation</string>
 			<key>pfm_title</key>
@@ -159,10 +146,9 @@ Availability: Available in macOS 10.13.4 and later.</string>
 			<key>pfm_default</key>
 			<integer>0</integer>
 			<key>pfm_description</key>
-			<string>The maximum number of bytes of disk space that will be used for the content cache. The value of zero allows unlimited space.</string>
-			<key>pfm_description_reference</key>
-			<string>Optional. Defines the maximum number of bytes of disk space that will be used for the Content Cache. A CacheLimit of 0 means unlimited disk space. Default is 0.
-Availability: Available in macOS 10.13.4 and later.</string>
+			<string>The maximum number of bytes of disk space to use for the content cache. Set to '0' for unlimited disk space.</string>
+			<key>pfm_macos_min</key>
+			<string>10.13.4</string>
 			<key>pfm_name</key>
 			<string>CacheLimit</string>
 			<key>pfm_title</key>
@@ -192,10 +178,12 @@ Availability: Available in macOS 10.13.4 and later.</string>
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
-			<string>Clients may take some time (hours, days) to react to changes to this setting; it does not have an immediate effect. At least one of the AllowPersonalCaching or AllowSharedCaching keys must be true. Data includes documents and photos, among others.</string>
-			<key>pfm_description_reference</key>
-			<string>Optional. If set to true, caches the userʼs iCloud data. Clients may take some time (hours, days) to react to changes to this setting; it does not have an immediate effect. Default is true. At least one of the AllowPersonalCaching or AllowSharedCaching keys must be true.
-Availability: Available in macOS 10.13.4 and later.</string>
+			<string>If 'true', the system caches the user's iCloud data. Changes to this value don't have an immediate effect. Clients may take some time, such as hours or days, to react to changes.
+
+Note:
+At least one of the 'AllowPersonalCaching' or 'AllowSharedCaching' keys need to be 'true'.</string>
+			<key>pfm_macos_min</key>
+			<string>10.13.4</string>
 			<key>pfm_name</key>
 			<string>AllowPersonalCaching</string>
 			<key>pfm_title</key>
@@ -223,11 +211,12 @@ Availability: Available in macOS 10.13.4 and later.</string>
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
-			<string>Clients may take some time (hours, days) to react to changes to this setting; it does not have an immediate effect. At least one of the AllowPersonalCaching or AllowSharedCaching keys must be true. Data includes apps and software updates.</string>
-			<key>pfm_description_reference</key>
-			<string>Optional. If set to true, caches non-iCloud content, such as apps and software updates. Clients may take some time (hours, days) to react to changes to this setting; it does not have an immediate effect. Default is true.
-At least one of the AllowPersonalCaching or AllowSharedCaching keys must be true.
-Availability: Available in macOS 10.13.4 and later.</string>
+			<string>If 'true', the system caches non-iCloud content, such as apps and software updates. Changes to this value don't have an immediate effect. Clients may take some time, such as hours or days, to react to changes.
+
+Note:
+At least one of the 'AllowPersonalCaching' or 'AllowSharedCaching' keys need to be 'true'.</string>
+			<key>pfm_macos_min</key>
+			<string>10.13.4</string>
 			<key>pfm_name</key>
 			<string>AllowSharedCaching</string>
 			<key>pfm_title</key>
@@ -236,8 +225,12 @@ Availability: Available in macOS 10.13.4 and later.</string>
 			<string>boolean</string>
 		</dict>
 		<dict>
+			<key>pfm_default</key>
+			<false/>
 			<key>pfm_description</key>
-			<string>Requires you to allow sharing the computer's Internet connection and cached content with iOS devices connected using USB.</string>
+			<string>If 'true', the system automatically enables Internet connection sharing when possible and prevent disabling Internet connection sharing. 'DenyTetheredCaching' overrides 'AutoEnableTetheredCaching'. Tethered caching requires Content Caching.
+
+Available in macOS 10.15.4 and later.</string>
 			<key>pfm_macos_min</key>
 			<string>10.15.4</string>
 			<key>pfm_name</key>
@@ -251,10 +244,9 @@ Availability: Available in macOS 10.13.4 and later.</string>
 			<key>pfm_default</key>
 			<integer>0</integer>
 			<key>pfm_description</key>
-			<string>TCP port on which the content caching service accepts requests for uploads or downloads. Set to 0 to pick a random port.</string>
-			<key>pfm_description_reference</key>
-			<string>Optional. The TCP port number on which the Content Cache accepts requests for uploads or downloads. Port set to 0 picks a random, available port. Default is 0.
-Availability: Available in macOS 10.13.4 and later.</string>
+			<string>The TCP port number on which the content cache accepts requests for uploads or downloads. Set to '0' to pick a random, available port.</string>
+			<key>pfm_macos_min</key>
+			<string>10.13.4</string>
 			<key>pfm_name</key>
 			<string>Port</string>
 			<key>pfm_range_max</key>
@@ -270,12 +262,11 @@ Availability: Available in macOS 10.13.4 and later.</string>
 			<key>pfm_default</key>
 			<string>/Library/Application Support/Apple/AssetCache/Data</string>
 			<key>pfm_description</key>
-			<string>The path to the directory used to store cached content. Changing this setting manually doesn't automatically move cached content from the old to the new location. To move content automatically, use Content Caching preferences. You can also set this value in Content Caching preferences.</string>
-			<key>pfm_description_reference</key>
-			<string>Optional. The path to the directory used to store Cached Content. Changing this setting manually does not automatically move cached content from the old to the new location. To move content automatically, use the Sharing preferenceʼs Content Caching pane.
-The value must be, or end with, /Library/Application Support/Apple/AssetCache/Data. A directory (and its intermediates) will be created for the given DataPath if it does not already exist. The directory will be owned by _assetcache:_assetcache and have mode 0750. Its immediate parent directory (.../Library/Application Support/Apple/AssetCache) will be owned by _assetcache:_assetcache and have mode 0755.
-Default is /Library/Application Support/Apple/AssetCache/Data.
-Availability: Available in macOS 10.13.4 and later.</string>
+			<string>The path to the directory used to store cached content. Changing this setting manually doesn't automatically move cached content from the old location to the new one. To move content automatically, use the Sharing preference's Content Caching pane. The value must be (or end with) '/Library/Application Support/Apple/AssetCache/Data'.
+
+The system creates a directory and its intermediates for the given data path if it doesn't already exist. The directory is owned by '_assetcache:_assetcache' and has mode 0750. Its immediate parent directory ('.../Library/Application Support/Apple/AssetCache') is owned by '_assetcache:_assetcache' and has mode '0755'.</string>
+			<key>pfm_macos_min</key>
+			<string>10.13.4</string>
 			<key>pfm_name</key>
 			<string>DataPath</string>
 			<key>pfm_title</key>
@@ -287,10 +278,9 @@ Availability: Available in macOS 10.13.4 and later.</string>
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>Share this computer's Internet connection and cached content with iOS devices connected using USB.</string>
-			<key>pfm_description_reference</key>
-			<string>Optional. If set to true, tethered caching is disabled. Default is false.
-Availability: Available in macOS 10.13.4 and later.</string>
+			<string>If 'true', the system disables tethered caching.</string>
+			<key>pfm_macos_min</key>
+			<string>10.13.4</string>
 			<key>pfm_name</key>
 			<string>DenyTetheredCaching</string>
 			<key>pfm_title</key>
@@ -304,10 +294,9 @@ Availability: Available in macOS 10.13.4 and later.</string>
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>Log the IP address and port number of clients that request content.</string>
-			<key>pfm_description_reference</key>
-			<string>Optional. If set to true, the Content Cache will log the IP address and port number of the clients that request content. Default is false.
-Availability: Available in macOS 10.13.4 and later.</string>
+			<string>If 'true', the Content Cache logs the IP address and port number of the clients that request content.</string>
+			<key>pfm_macos_min</key>
+			<string>10.13.4</string>
 			<key>pfm_name</key>
 			<string>LogClientIdentity</string>
 			<key>pfm_title</key>
@@ -317,20 +306,20 @@ Availability: Available in macOS 10.13.4 and later.</string>
 		</dict>
 		<dict>
 			<key>pfm_description</key>
-			<string>A list of the local IP addresses of other content caches from which this cache should download or upload content instead of downloading from or uploading to Apple directly.</string>
-			<key>pfm_description_reference</key>
-			<string>Optional. Array of the local IP addresses of other Content Caches that this cache should download from or upload to, instead of downloading from or uploading to Apple directly. Invalid addresses and addresses of computers that are not Content Caches are ignored.
-Parent caches that become unavailable are skipped. If all parent Content Caches become unavailable, the Content Cache will download from or upload to Apple directly until a parent Content Cache becomes available again.
-Availability: Available in macOS 10.13.4 and later.</string>
+			<string>An array of the local IP addresses of other content caches that this cache should download from or upload to, instead of downloading from or uploading to Apple directly. The system ignores invalid addresses and addresses of computers that aren't content caches. The system skips Parent caches that become unavailable. If all parent content caches become unavailable, the content cache downloads from or uploads to Apple directly, until a parent content cache becomes available again.</string>
+			<key>pfm_macos_min</key>
+			<string>10.13.4</string>
 			<key>pfm_name</key>
 			<string>Parents</string>
 			<key>pfm_subkeys</key>
 			<array>
 				<dict>
 					<key>pfm_description</key>
-					<string></string>
+					<string>An IP address.</string>
 					<key>pfm_name</key>
-					<string>IPAddress</string>
+					<string>ParentsItem</string>
+					<key>pfm_require</key>
+					<string>always</string>
 					<key>pfm_title</key>
 					<string>IP Address</string>
 					<key>pfm_type</key>
@@ -348,33 +337,32 @@ Availability: Available in macOS 10.13.4 and later.</string>
 			<key>pfm_default</key>
 			<string>round-robin</string>
 			<key>pfm_description</key>
-			<string>The policy to use when choosing among more than one configured parent content cache.</string>
-			<key>pfm_description_reference</key>
-			<string>Optional. The policy to use when choosing among more than one configured parent Content Cache. With every policy, parent caches that are temporarily unavailable are skipped.
-• first-available: Always use the first parent in the Parents list that is available. This is useful for designating permanent primary, secondary, and subsequent parents.
-• url-path-hash: Hash the path part of the requested URL so that the same parent is always used for the same URL. This is useful for maximizing the size of the combined caches of the parents.
-• random: Choose a parent at random. This is useful for load balancing.
-• round-robin: Rotate through the parents in order. This is useful for load balancing.
-• sticky-available: Starting with the first parent in the Parents list, always use the first parent that is available. Use that parent until it becomes unavailable, then advance to the next one. This is useful for designating floating primary, secondary, and subsequent parents.
-Default is round-robin.
-Availability: Available in macOS 10.13.4 and later.</string>
+			<string>The policy to implement when choosing among more than one configured parent content cache. With every policy, the system skips parent caches that are temporarily unavailable. Allowed values:
+
+- 'first-available': Always use the first available parent in the Parents list. Use this policy to designate permanent primary, secondary, and subsequent parents.
+- 'url-path-hash': Hash the path part of the requested URL so that the same parent is always used for the same URL. This is useful for maximizing the size of the combined caches of     the parents.
+- 'random': Choose a parent at random. Use this policy for load balancing.
+- 'round-robin': Rotate through the parents in order. Use this policy for load balancing.
+- 'sticky-available': Use the first available parent in the Parents list until it becomes unavailable, then advance to the next one. Use this policy for designating floating primary, secondary, and subsequent parents.</string>
+			<key>pfm_macos_min</key>
+			<string>10.13.4</string>
 			<key>pfm_name</key>
 			<string>ParentSelectionPolicy</string>
 			<key>pfm_range_list</key>
 			<array>
 				<string>first-available</string>
+				<string>url-path-hash</string>
 				<string>random</string>
 				<string>round-robin</string>
 				<string>sticky-available</string>
-				<string>url-path-hash</string>
 			</array>
 			<key>pfm_range_list_titles</key>
 			<array>
 				<string>First available</string>
+				<string>Hash</string>
 				<string>Random</string>
 				<string>Round robin</string>
 				<string>Sticky available</string>
-				<string>Hash</string>
 			</array>
 			<key>pfm_title</key>
 			<string>Parent Selection Policy</string>
@@ -383,10 +371,7 @@ Availability: Available in macOS 10.13.4 and later.</string>
 		</dict>
 		<dict>
 			<key>pfm_description</key>
-			<string>A range of public IP addresses that the cloud servers should use for matching clients to Content Caches.</string>
-			<key>pfm_description_reference</key>
-			<string>Optional. Array of dictionaries describing a range of public IP addresses that the cloud servers should use for matching clients to Content Caches.
-Availability: Available in macOS 10.13.4 and later.</string>
+			<string>An array of dictionaries describing a range of public IP addresses that the cloud servers should use for matching clients to content caches.</string>
 			<key>pfm_exclude</key>
 			<array>
 				<dict>
@@ -403,22 +388,26 @@ Availability: Available in macOS 10.13.4 and later.</string>
 					</array>
 				</dict>
 			</array>
+			<key>pfm_macos_min</key>
+			<string>10.13.4</string>
 			<key>pfm_name</key>
 			<string>PublicRanges</string>
 			<key>pfm_subkeys</key>
 			<array>
 				<dict>
 					<key>pfm_description</key>
-					<string></string>
+					<string>A range of IP addresses to cache.</string>
 					<key>pfm_name</key>
-					<string>RangeDict</string>
+					<string>RangesItem</string>
 					<key>pfm_subkeys</key>
 					<array>
 						<dict>
 							<key>pfm_default</key>
 							<string>IPv4</string>
 							<key>pfm_description</key>
-							<string></string>
+							<string>The IP address type.</string>
+							<key>pfm_macos_min</key>
+							<string>10.13.4</string>
 							<key>pfm_name</key>
 							<string>type</string>
 							<key>pfm_range_list</key>
@@ -433,9 +422,13 @@ Availability: Available in macOS 10.13.4 and later.</string>
 						</dict>
 						<dict>
 							<key>pfm_description</key>
-							<string></string>
+							<string>The first IP address in the range.</string>
+							<key>pfm_macos_min</key>
+							<string>10.13.4</string>
 							<key>pfm_name</key>
 							<string>first</string>
+							<key>pfm_require</key>
+							<string>always</string>
 							<key>pfm_title</key>
 							<string>Start IP Address</string>
 							<key>pfm_type</key>
@@ -443,9 +436,13 @@ Availability: Available in macOS 10.13.4 and later.</string>
 						</dict>
 						<dict>
 							<key>pfm_description</key>
-							<string></string>
+							<string>The last IP address in the range.</string>
+							<key>pfm_macos_min</key>
+							<string>10.13.4</string>
 							<key>pfm_name</key>
 							<string>last</string>
+							<key>pfm_require</key>
+							<string>always</string>
 							<key>pfm_title</key>
 							<string>End IP Address</string>
 							<key>pfm_type</key>
@@ -483,7 +480,9 @@ Availability: Available in macOS 10.13.4 and later.</string>
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
-			<string>Automatically remove content from the cache when the system needs disk space for other apps.</string>
+			<string>If true, the system purges content from the cache automatically when it needs disk space for other apps when free disk space runs low on the computer. Set to 'false' to maximize effectiveness of Content Caching. Available in macOS 10.15 and later.</string>
+			<key>pfm_macos_min</key>
+			<string>10.15</string>
 			<key>pfm_name</key>
 			<string>AllowCacheDelete</string>
 			<key>pfm_title</key>
@@ -495,7 +494,9 @@ Availability: Available in macOS 10.13.4 and later.</string>
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>Display Content Caching alerts as notifications.</string>
+			<string>If 'true', Content Caching displays exceptional conditions (alerts) as system notifications in the upper corner of the screen. Alerts were automatically displayed starting in macOS 10.13. In macOS 10.15 the alerts are off by default, but still available through this setting. Available in macOS 10.15 and later.</string>
+			<key>pfm_macos_min</key>
+			<string>10.15</string>
 			<key>pfm_name</key>
 			<string>DisplayAlerts</string>
 			<key>pfm_title</key>
@@ -507,7 +508,9 @@ Availability: Available in macOS 10.13.4 and later.</string>
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>Prevent the computer from sleeping while caching is on.</string>
+			<string>If 'true', the system prevents the computer from sleeping as long as Content Caching is on (System Preferences &gt; Sharing &gt; Content Caching is on). Customers who want Content Caching to be as available as much as possible should turn this setting on. Available in macOS 10.15 and later.</string>
+			<key>pfm_macos_min</key>
+			<string>10.15</string>
 			<key>pfm_name</key>
 			<string>KeepAwake</string>
 			<key>pfm_title</key>
@@ -795,12 +798,12 @@ Availability: Available in macOS 10.13.4 and later.</string>
 		<dict>
 			<key>pfm_default</key>
 			<true/>
-			<key>pfm_description_reference</key>
-			<string>Indicates whether content caching registers with the union of the ListenRanges, PeerListenRanges, and Parents keys, or only with the ListenRanges key.
-
-Note that ListenRanges could be automatically generated from LocalSubnetsOnly, and PeerListenRanges could be automatically generated from PeerLocalSubnetsOnly.</string>
+			<key>pfm_description</key>
+			<string>If 'true', the content cache provides content to the clients in the union of the 'ListenRanges', 'PeerListenRanges' and 'Parents'.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://support.apple.com/guide/mac-help/configure-advanced-content-caching-settings-mchl91e7141a/10.15/mac/10.15</string>
+			<key>pfm_macos_min</key>
+			<string>10.13.4</string>
 			<key>pfm_name</key>
 			<string>ListenWithPeersAndParents</string>
 			<key>pfm_note</key>
@@ -1173,11 +1176,9 @@ Clamped between 1-60 seconds, inclusive.</string>
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
-			<string>Content Cache offers content to clients only on the same immediate local network.</string>
-			<key>pfm_description_reference</key>
-			<string>Optional. If set to true, the Content Cache offers content to clients only on the same immediate local network as the Content Cache. No content would be offered to clients on other networks reachable by the Content Cache. Default is true.
-If LocalSubnetsOnly is set to true, ListenRanges will be ignored.
-Availability: Available in macOS 10.13.4 and later.</string>
+			<string>If 'true', the content cache offers content to clients only on the same immediate local network only. No content is offered to clients on other networks reachable by the content cache. If 'LocalSubnetsOnly' is 'true', the system ignores 'ListenRanges'.</string>
+			<key>pfm_macos_min</key>
+			<string>10.13.4</string>
 			<key>pfm_name</key>
 			<string>LocalSubnetsOnly</string>
 			<key>pfm_title</key>
@@ -1189,10 +1190,7 @@ Availability: Available in macOS 10.13.4 and later.</string>
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>Provide content only to the clients specified by the listen ranges.</string>
-			<key>pfm_description_reference</key>
-			<string>Optional. If set to true, the Content Cache provides content only to clients in the ranges specified by the ListenRanges key. To use the ListenRangesOnly key, the ListenRanges key must also be specified. Default is false.
-Availability: Available in macOS 10.13.4 and later.</string>
+			<string>If 'true', the content cache provides content to the clients in the 'ListenRanges'.</string>
 			<key>pfm_exclude</key>
 			<array>
 				<dict>
@@ -1220,6 +1218,8 @@ Availability: Available in macOS 10.13.4 and later.</string>
 					</array>
 				</dict>
 			</array>
+			<key>pfm_macos_min</key>
+			<string>10.13.4</string>
 			<key>pfm_name</key>
 			<string>ListenRangesOnly</string>
 			<key>pfm_title</key>
@@ -1229,10 +1229,7 @@ Availability: Available in macOS 10.13.4 and later.</string>
 		</dict>
 		<dict>
 			<key>pfm_description</key>
-			<string>A range of IPv4 and IPv6 addresses to restrict clients to.</string>
-			<key>pfm_description_reference</key>
-			<string>Optional. Array of dictionaries describing a range of client IP addresses to serve.
-Availability: Available in macOS 10.13.4 and later.</string>
+			<string>An array of dictionaries that describe a range of client IP addresses to serve.</string>
 			<key>pfm_exclude</key>
 			<array>
 				<dict>
@@ -1249,22 +1246,26 @@ Availability: Available in macOS 10.13.4 and later.</string>
 					</array>
 				</dict>
 			</array>
+			<key>pfm_macos_min</key>
+			<string>10.13.4</string>
 			<key>pfm_name</key>
 			<string>ListenRanges</string>
 			<key>pfm_subkeys</key>
 			<array>
 				<dict>
-					<key>pfm_hidden</key>
-					<string>container</string>
+					<key>pfm_description</key>
+					<string>A range of IP addresses to cache.</string>
+					<key>pfm_name</key>
+					<string>RangesItem</string>
 					<key>pfm_subkeys</key>
 					<array>
 						<dict>
 							<key>pfm_default</key>
 							<string>IPv4</string>
 							<key>pfm_description</key>
-							<string>IP version</string>
-							<key>pfm_description_reference</key>
-							<string>Optional. The IP address type (IPv4 or IPv6). Default is IPv4.</string>
+							<string>The IP address type.</string>
+							<key>pfm_macos_min</key>
+							<string>10.13.4</string>
 							<key>pfm_name</key>
 							<string>type</string>
 							<key>pfm_range_list</key>
@@ -1279,9 +1280,9 @@ Availability: Available in macOS 10.13.4 and later.</string>
 						</dict>
 						<dict>
 							<key>pfm_description</key>
-							<string>First IP address in range</string>
-							<key>pfm_description_reference</key>
-							<string>Required. First IP address in the range.</string>
+							<string>The first IP address in the range.</string>
+							<key>pfm_macos_min</key>
+							<string>10.13.4</string>
 							<key>pfm_name</key>
 							<string>first</string>
 							<key>pfm_require</key>
@@ -1290,14 +1291,12 @@ Availability: Available in macOS 10.13.4 and later.</string>
 							<string>Start IP Address</string>
 							<key>pfm_type</key>
 							<string>string</string>
-							<key>pfm_value_placeholder</key>
-							<string>10.0.0.0</string>
 						</dict>
 						<dict>
 							<key>pfm_description</key>
-							<string>Last IP address in range</string>
-							<key>pfm_description_reference</key>
-							<string>Required. Last IP address in the range.</string>
+							<string>The last IP address in the range.</string>
+							<key>pfm_macos_min</key>
+							<string>10.13.4</string>
 							<key>pfm_name</key>
 							<string>last</string>
 							<key>pfm_require</key>
@@ -1306,10 +1305,10 @@ Availability: Available in macOS 10.13.4 and later.</string>
 							<string>End IP Address</string>
 							<key>pfm_type</key>
 							<string>string</string>
-							<key>pfm_value_placeholder</key>
-							<string>10.255.255.255</string>
 						</dict>
 					</array>
+					<key>pfm_title</key>
+					<string>RangeDict</string>
 					<key>pfm_type</key>
 					<string>dictionary</string>
 				</dict>
@@ -1341,12 +1340,9 @@ Availability: Available in macOS 10.13.4 and later.</string>
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
-			<string>Content Cache will only peer with other Content Caches on the same immediate local network, rather than with Content Caches that use the same public IP address as the device.</string>
-			<key>pfm_description_reference</key>
-			<string>Optional. If set to true, the Content Cache will only peer with other Content Caches on the same immediate local network, rather than with Content Caches that use the same public IP address as the device. When PeerLocalSubnetsOnly is true, it overrides the configuration of PeerFilterRanges and PeerListenRanges. If the network changes, the local network peering restrictions update appropriately.
-If set to false, the Content Cache defers to PeerFilterRanges and PeerListenRanges for configuring the peering restrictions.
-Default is true.
-Availability: Available in macOS 10.13.4 and later.</string>
+			<string>If 'true', the content cache only peers with other content caches on the same immediate local network, rather than with content caches that use the same public IP address as the device. When 'PeerLocalSubnetsOnly' is 'true', it overrides the configuration of 'PeerFilterRanges' and 'PeerListenRanges'. If the network changes, the local network peering restrictions update appropriately. If 'false', the content cache defers to 'PeerFilterRanges' and 'PeerListenRanges' for configuring the peering restrictions.</string>
+			<key>pfm_macos_min</key>
+			<string>10.13.4</string>
 			<key>pfm_name</key>
 			<string>PeerLocalSubnetsOnly</string>
 			<key>pfm_title</key>
@@ -1356,9 +1352,7 @@ Availability: Available in macOS 10.13.4 and later.</string>
 		</dict>
 		<dict>
 			<key>pfm_description</key>
-			<string>A range of peer IP addresses that the Content Cache will use to filter its list of peers to query for content.</string>
-			<key>pfm_description_reference</key>
-			<string>Optional. Array of dictionaries describing a range of peer IP addresses that the Content Cache will use to filter its list of peers to query for content. The Content Cache only queries peers that are in the PeerFilterRanges. When PeerFilterRanges is an empty array the Content Cache will not query any peers. Availability: Available in macOS 10.13.4 and later.</string>
+			<string>An array of dictionaries describing a range of peer IP addresses that the content cache uses to filter its list of peers to query for content. The content cache only queries peers in 'PeerFilterRanges'. When 'PeerFilterRanges' is an empty array, the content cache doesn't query any peers.</string>
 			<key>pfm_exclude</key>
 			<array>
 				<dict>
@@ -1375,24 +1369,26 @@ Availability: Available in macOS 10.13.4 and later.</string>
 					</array>
 				</dict>
 			</array>
+			<key>pfm_macos_min</key>
+			<string>10.13.4</string>
 			<key>pfm_name</key>
 			<string>PeerFilterRanges</string>
 			<key>pfm_subkeys</key>
 			<array>
 				<dict>
 					<key>pfm_description</key>
-					<string></string>
+					<string>A range of IP addresses to cache.</string>
 					<key>pfm_name</key>
-					<string>RangeDict</string>
+					<string>RangesItem</string>
 					<key>pfm_subkeys</key>
 					<array>
 						<dict>
 							<key>pfm_default</key>
 							<string>IPv4</string>
 							<key>pfm_description</key>
-							<string></string>
-							<key>pfm_description_reference</key>
-							<string>Optional. The IP address type (IPv4 or IPv6). Default is IPv4.</string>
+							<string>The IP address type.</string>
+							<key>pfm_macos_min</key>
+							<string>10.13.4</string>
 							<key>pfm_name</key>
 							<string>type</string>
 							<key>pfm_range_list</key>
@@ -1407,9 +1403,9 @@ Availability: Available in macOS 10.13.4 and later.</string>
 						</dict>
 						<dict>
 							<key>pfm_description</key>
-							<string></string>
-							<key>pfm_description_reference</key>
-							<string>Required. First IP address in the range.</string>
+							<string>The first IP address in the range.</string>
+							<key>pfm_macos_min</key>
+							<string>10.13.4</string>
 							<key>pfm_name</key>
 							<string>first</string>
 							<key>pfm_require</key>
@@ -1418,14 +1414,12 @@ Availability: Available in macOS 10.13.4 and later.</string>
 							<string>Start IP Address</string>
 							<key>pfm_type</key>
 							<string>string</string>
-							<key>pfm_value_placeholder</key>
-							<string>10.0.0.0</string>
 						</dict>
 						<dict>
 							<key>pfm_description</key>
-							<string></string>
-							<key>pfm_description_reference</key>
-							<string>Required. Last IP address in the range.</string>
+							<string>The last IP address in the range.</string>
+							<key>pfm_macos_min</key>
+							<string>10.13.4</string>
 							<key>pfm_name</key>
 							<string>last</string>
 							<key>pfm_require</key>
@@ -1434,8 +1428,6 @@ Availability: Available in macOS 10.13.4 and later.</string>
 							<string>End IP Address</string>
 							<key>pfm_type</key>
 							<string>string</string>
-							<key>pfm_value_placeholder</key>
-							<string>10.255.255.255</string>
 						</dict>
 					</array>
 					<key>pfm_title</key>
@@ -1451,9 +1443,7 @@ Availability: Available in macOS 10.13.4 and later.</string>
 		</dict>
 		<dict>
 			<key>pfm_description</key>
-			<string>A range of peer IP addresses the Content Cache will respond to peer cache queries from.</string>
-			<key>pfm_description_reference</key>
-			<string>Optional. Array of dictionaries describing a range of peer IP addresses the Content Cache will respond to peer cache queries from. When PeerListenRanges is an empty array, the Content Cache will respond with an error to all cache queries. Availability: Available in macOS 10.13.4 and later.</string>
+			<string>An array of dictionaries describing a range of peer IP addresses the content cache responds to. When 'PeerListenRanges' is an empty array, the content cache responds with an error to all cache queries.</string>
 			<key>pfm_exclude</key>
 			<array>
 				<dict>
@@ -1470,24 +1460,26 @@ Availability: Available in macOS 10.13.4 and later.</string>
 					</array>
 				</dict>
 			</array>
+			<key>pfm_macos_min</key>
+			<string>10.13.4</string>
 			<key>pfm_name</key>
 			<string>PeerListenRanges</string>
 			<key>pfm_subkeys</key>
 			<array>
 				<dict>
 					<key>pfm_description</key>
-					<string></string>
+					<string>A range of IP addresses to cache.</string>
 					<key>pfm_name</key>
-					<string>RangeDict</string>
+					<string>RangesItem</string>
 					<key>pfm_subkeys</key>
 					<array>
 						<dict>
 							<key>pfm_default</key>
 							<string>IPv4</string>
 							<key>pfm_description</key>
-							<string></string>
-							<key>pfm_description_reference</key>
-							<string>Optional. The IP address type (IPv4 or IPv6). Default is IPv4.</string>
+							<string>The IP address type.</string>
+							<key>pfm_macos_min</key>
+							<string>10.13.4</string>
 							<key>pfm_name</key>
 							<string>type</string>
 							<key>pfm_range_list</key>
@@ -1502,9 +1494,9 @@ Availability: Available in macOS 10.13.4 and later.</string>
 						</dict>
 						<dict>
 							<key>pfm_description</key>
-							<string></string>
-							<key>pfm_description_reference</key>
-							<string>Required. First IP address in the range.</string>
+							<string>The first IP address in the range.</string>
+							<key>pfm_macos_min</key>
+							<string>10.13.4</string>
 							<key>pfm_name</key>
 							<string>first</string>
 							<key>pfm_require</key>
@@ -1513,14 +1505,12 @@ Availability: Available in macOS 10.13.4 and later.</string>
 							<string>Start IP Address</string>
 							<key>pfm_type</key>
 							<string>string</string>
-							<key>pfm_value_placeholder</key>
-							<string>10.0.0.0</string>
 						</dict>
 						<dict>
 							<key>pfm_description</key>
-							<string></string>
-							<key>pfm_description_reference</key>
-							<string>Required. Last IP address in the range.</string>
+							<string>The last IP address in the range.</string>
+							<key>pfm_macos_min</key>
+							<string>10.13.4</string>
 							<key>pfm_name</key>
 							<string>last</string>
 							<key>pfm_require</key>
@@ -1529,8 +1519,6 @@ Availability: Available in macOS 10.13.4 and later.</string>
 							<string>End IP Address</string>
 							<key>pfm_type</key>
 							<string>string</string>
-							<key>pfm_value_placeholder</key>
-							<string>10.255.255.255</string>
 						</dict>
 					</array>
 					<key>pfm_title</key>
@@ -1640,7 +1628,7 @@ Availability: Available in macOS 10.13.4 and later.</string>
 	<key>pfm_title</key>
 	<string>Content Caching</string>
 	<key>pfm_unique</key>
-	<true/>
+	<false/>
 	<key>pfm_version</key>
 	<integer>4</integer>
 </dict>

@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>pfm_description</key>
-	<string>Finder settings</string>
+	<string>The payload that configures Finder settings.</string>
 	<key>pfm_documentation_url</key>
 	<string>https://developer.apple.com/documentation/devicemanagement/finder</string>
 	<key>pfm_domain</key>
@@ -13,7 +13,7 @@
 	<key>pfm_interaction</key>
 	<string>combined</string>
 	<key>pfm_last_modified</key>
-	<date>2025-08-15T19:32:34Z</date>
+	<date>2025-09-17T09:38:09Z</date>
 	<key>pfm_macos_min</key>
 	<string>10.7</string>
 	<key>pfm_platforms</key>
@@ -24,7 +24,7 @@
 	<array>
 		<dict>
 			<key>pfm_default</key>
-			<string>Configures Finder settings</string>
+			<string>The payload that configures Finder settings.</string>
 			<key>pfm_description</key>
 			<string>The human-readable description of this payload. This description appears on the Detail screen.</string>
 			<key>pfm_name</key>
@@ -52,7 +52,8 @@
 			<key>pfm_default</key>
 			<string>com.apple.finder</string>
 			<key>pfm_description</key>
-			<string>The reverse-DNS-style identifier for the payload. This identifier is usually the same as the TopLevel value, with an additional appended component. This string must be unique within the profile.
+			<string>The reverse-DNS-style identifier for the payload. This identifier is usually the same as the 'TopLevel' value, with an additional appended component. This string must be unique within the profile.
+
 During a profile replacement, the system updates payloads with the same 'PayloadIdentifier' and 'PayloadUUID' in the old and new profiles.</string>
 			<key>pfm_name</key>
 			<string>PayloadIdentifier</string>
@@ -82,6 +83,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string></string>
 			<key>pfm_description</key>
 			<string>The globally unique identifier for the payload. The actual content is unimportant, but must be globally unique. In macOS, use 'uuidgen' to generate UUIDs.
+
 During a profile replacement, the system updates payloads with the same 'PayloadIdentifier' and 'PayloadUUID' in the old and new profiles.</string>
 			<key>pfm_format</key>
 			<string>^[0-9A-Za-z]{8}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{12}$</string>
@@ -126,7 +128,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<string>Full</string>
 			<key>pfm_description</key>
-			<string>Select if the standard (Full) or Simple Finder should be used</string>
+			<string>Specifies whether Finder should operate in Simple or Full mode.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://developer.apple.com/documentation/devicemanagement/finder</string>
 			<key>pfm_macos_deprecated</key>
@@ -135,8 +137,8 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>InterfaceLevel</string>
 			<key>pfm_range_list</key>
 			<array>
-				<string>Full</string>
 				<string>Simple</string>
+				<string>Full</string>
 			</array>
 			<key>pfm_title</key>
 			<string>Finder Interface Level</string>
@@ -147,7 +149,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
-			<string>Warning message requiring user approval before emptying the Trash</string>
+			<string>If 'false', the system doesn't warn the user before emptying the trash.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://developer.apple.com/documentation/devicemanagement/finder</string>
 			<key>pfm_name</key>
@@ -161,7 +163,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>Opens a dialog box for finding servers on the network</string>
+			<string>If 'true', the system disables Connect to Server.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://developer.apple.com/documentation/devicemanagement/finder</string>
 			<key>pfm_name</key>
@@ -177,7 +179,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>Ejects removable media and mountable volumes</string>
+			<string>If 'true', the system disables Eject.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://developer.apple.com/documentation/devicemanagement/finder</string>
 			<key>pfm_name</key>
@@ -214,7 +216,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>Writes permanent information to a CD or DVD. Disc burning restrictions require both Disc Burning and Finder payloads.</string>
+			<string>If 'true', the system disables the Finder's burn support.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://developer.apple.com/documentation/devicemanagement/finder</string>
 			<key>pfm_name</key>
@@ -230,7 +232,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>Allows user to open files or folders by typing a pathname</string>
+			<string>If 'true', the system disables Go to Folder.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://developer.apple.com/documentation/devicemanagement/finder</string>
 			<key>pfm_name</key>
@@ -246,7 +248,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>Show hard disks on the desktop</string>
+			<string>If 'false', the system doesn't show internal hard drives on the Desktop.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://developer.apple.com/documentation/devicemanagement/finder</string>
 			<key>pfm_name</key>
@@ -260,7 +262,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
-			<string>Show external disks on the desktop</string>
+			<string>If 'false', the system doesn't show external hard drives on the Desktop.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://developer.apple.com/documentation/devicemanagement/finder</string>
 			<key>pfm_name</key>
@@ -274,7 +276,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
-			<string>Show removable media on the desktop</string>
+			<string>If 'false', the system doesn't show removable media items on the Desktop.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://developer.apple.com/documentation/devicemanagement/finder</string>
 			<key>pfm_name</key>
@@ -288,7 +290,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>Show connected servers on the desktop</string>
+			<string>If 'false', the system doesn't show mounted file servers on the Desktop.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://developer.apple.com/documentation/devicemanagement/finder</string>
 			<key>pfm_name</key>
@@ -331,13 +333,13 @@ During a profile replacement, the system updates payloads with the same 'Payload
 	</array>
 	<key>pfm_targets</key>
 	<array>
-		<string>user</string>
 		<string>system</string>
+		<string>user</string>
 	</array>
 	<key>pfm_title</key>
 	<string>Finder</string>
 	<key>pfm_unique</key>
-	<true/>
+	<false/>
 	<key>pfm_version</key>
 	<integer>4</integer>
 </dict>

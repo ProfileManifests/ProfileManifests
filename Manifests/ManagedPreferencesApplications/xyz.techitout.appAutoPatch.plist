@@ -13,7 +13,7 @@
 	<key>pfm_format_version</key>
 	<integer>1</integer>
 	<key>pfm_last_modified</key>
-	<date>2025-05-16T13:25:42Z</date>
+	<date>2025-11-19T18:35:23Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -24,7 +24,7 @@
 			<key>pfm_default</key>
 			<string>Configures App Auto-Patch configuration preferences</string>
 			<key>pfm_description</key>
-			<string>Description of the payload.</string>
+			<string>The human-readable description of this payload. This description appears on the Detail screen.</string>
 			<key>pfm_description_reference</key>
 			<string>Optional. A human-readable description of this payload. This description is shown on the Detail screen.</string>
 			<key>pfm_name</key>
@@ -38,7 +38,7 @@
 			<key>pfm_default</key>
 			<string>App Auto-Patch</string>
 			<key>pfm_description</key>
-			<string>Name of the payload.</string>
+			<string>The human-readable name for the profile payload. The name appears on the Detail screen and doesn't need to be unique.</string>
 			<key>pfm_description_reference</key>
 			<string>A human-readable name for the profile payload. This name is displayed on the Detail screen. It does not have to be unique.</string>
 			<key>pfm_name</key>
@@ -54,7 +54,9 @@
 			<key>pfm_default</key>
 			<string>xyz.techitout.appAutoPatch</string>
 			<key>pfm_description</key>
-			<string>A unique identifier for the payload, dot-delimited.  Usually root PayloadIdentifier+subidentifier</string>
+			<string>The reverse-DNS-style identifier for the payload. This identifier is usually the same as the `TopLevel` value, with an additional appended component. This string must be unique within the profile.
+
+During a profile replacement, the system updates payloads with the same `PayloadIdentifier` and `PayloadUUID` in the old and new profiles.</string>
 			<key>pfm_description_reference</key>
 			<string>A reverse-DNS-style identifier for the specific payload. It is usually the same identifier as the root-level PayloadIdentifier value with an additional component appended.</string>
 			<key>pfm_name</key>
@@ -70,7 +72,7 @@
 			<key>pfm_default</key>
 			<string>xyz.techitout.appAutoPatch</string>
 			<key>pfm_description</key>
-			<string>The type of the payload, a reverse dns string.</string>
+			<string>The payload type, which each payload domain's reference page specifies.</string>
 			<key>pfm_description_reference</key>
 			<string>The payload type.</string>
 			<key>pfm_name</key>
@@ -84,7 +86,9 @@
 		</dict>
 		<dict>
 			<key>pfm_description</key>
-			<string>Unique identifier for the payload (format 01234567-89AB-CDEF-0123-456789ABCDEF)</string>
+			<string>The globally unique identifier for the payload. The actual content is unimportant, but must be globally unique. In macOS, use `uuidgen` to generate UUIDs.
+
+During a profile replacement, the system updates payloads with the same `PayloadIdentifier` and `PayloadUUID` in the old and new profiles.</string>
 			<key>pfm_description_reference</key>
 			<string>A globally unique identifier for the payload. The actual content is unimportant, but it must be globally unique. In macOS, you can use uuidgen to generate reasonable UUIDs.</string>
 			<key>pfm_format</key>
@@ -102,7 +106,7 @@
 			<key>pfm_default</key>
 			<integer>1</integer>
 			<key>pfm_description</key>
-			<string>The version of the whole configuration profile.</string>
+			<string>The version of this specific payload.</string>
 			<key>pfm_description_reference</key>
 			<string>The version number of the individual payload.</string>
 			<key>pfm_name</key>
@@ -116,7 +120,7 @@
 		</dict>
 		<dict>
 			<key>pfm_description</key>
-			<string>This value describes the issuing organization of the profile, as displayed to the user</string>
+			<string>The human-readable string containing the name of the organization that provides the profile. This value doesn't need to match the organization payload value in the enclosing dictionary.</string>
 			<key>pfm_name</key>
 			<string>PayloadOrganization</string>
 			<key>pfm_title</key>
@@ -152,6 +156,10 @@
 					<string>DeferralTimerFocus</string>
 					<string>DeferralTimerMenu</string>
 					<string>DeferralTimerWorkflowRelaunch</string>
+					<string>MonthlyPatchingCadenceEnabled</string>
+					<string>MonthlyPatchingCadenceOrdinalValue</string>
+					<string>MonthlyPatchingCadenceWeekdayIndex</string>
+					<string>MonthlyPatchingCadenceStartTime</string>
 				</array>
 				<key>Dialogs and Notifications</key>
 				<array>
@@ -161,6 +169,7 @@
 					<string>UnattendedExit</string>
 					<string>UnattendedExitSeconds</string>
 					<string>UseOverlayIcon</string>
+					<string>DialogIcon</string>
 				</array>
 				<key>Labels</key>
 				<array>
@@ -195,6 +204,8 @@
 					<string>WorkflowDisableAppDiscovery</string>
 					<string>WorkflowDisableRelaunch</string>
 					<string>WorkflowInstallNowPatchingStatusAction</string>
+					<string>SelfUpdateEnabled</string>
+					<string>SelfUpdateFrequency</string>
 				</array>
 			</dict>
 			<key>pfm_type</key>
@@ -396,6 +407,102 @@
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
+			<string>3.4.0</string>
+			<key>pfm_description</key>
+			<string></string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings</string>
+			<key>pfm_name</key>
+			<string>MonthlyPatchingCadenceEnabled</string>
+			<key>pfm_title</key>
+			<string>Monthly Patching Cadence Enabled</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.4.0</string>
+			<key>pfm_description</key>
+			<string>Week of the month you want AAP to be scheduled</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings</string>
+			<key>pfm_name</key>
+			<string>MonthlyPatchingCadenceOrdinalValue</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>first</string>
+				<string>second</string>
+				<string>third</string>
+				<string>fourth</string>
+				<string>fifth</string>
+				<string>final</string>
+			</array>
+			<key>pfm_range_list_titles</key>
+			<array>
+				<string>First Week</string>
+				<string>Second Week</string>
+				<string>Third Week</string>
+				<string>Fourth Week</string>
+				<string>Fifth Week</string>
+				<string>Final Week</string>
+			</array>
+			<key>pfm_title</key>
+			<string>Monthly Patching Cadence Ordinal Value</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.4.0</string>
+			<key>pfm_description</key>
+			<string>Day of the week you want AAP to be scheduled</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings</string>
+			<key>pfm_name</key>
+			<string>MonthlyPatchingCadenceWeekdayIndex</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>sunday</string>
+				<string>monday</string>
+				<string>tuesday</string>
+				<string>wednesday</string>
+				<string>thursday</string>
+				<string>friday</string>
+				<string>saturday</string>
+			</array>
+			<key>pfm_range_list_titles</key>
+			<array>
+				<string>Sunday</string>
+				<string>Monday</string>
+				<string>Tuesday</string>
+				<string>Wednesday</string>
+				<string>Thursday</string>
+				<string>Friday</string>
+				<string>Saturday</string>
+			</array>
+			<key>pfm_title</key>
+			<string>Monthly Patching Cadence Weekday Index</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.4.0</string>
+			<key>pfm_description</key>
+			<string>Local time you want AAP to be scheduled</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings</string>
+			<key>pfm_name</key>
+			<string>MonthlyPatchingCadenceStartTime</string>
+			<key>pfm_title</key>
+			<string>Monthly Patching Cadence Start Time</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>09:00:00</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
 			<string>3.0</string>
 			<key>pfm_description</key>
 			<string>Forces the AAP dialogs to stay on top of all other windows</string>
@@ -519,6 +626,20 @@
 			</array>
 			<key>pfm_title</key>
 			<string>Use Overlay Icon</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.4.0</string>
+			<key>pfm_description</key>
+			<string>Allows you to set a custom icon for the dialog vs. the default Laptop/Desktop symbol</string>
+			<key>pfm_description_reference</key>
+			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings</string>
+			<key>pfm_name</key>
+			<string>DialogIcon</string>
+			<key>pfm_title</key>
+			<string>Dialog Icon</string>
 			<key>pfm_type</key>
 			<string>string</string>
 		</dict>
@@ -977,6 +1098,46 @@
 			</array>
 			<key>pfm_title</key>
 			<string>Workflow Install Now Patching Status Action</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.4.0</string>
+			<key>pfm_description</key>
+			<string>Determines if the Self Update feature is enabled. this will automatically update App Auto-Patch if a new version is posted on github</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings</string>
+			<key>pfm_name</key>
+			<string>SelfUpdateEnabled</string>
+			<key>pfm_title</key>
+			<string>Self Update Enabled</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.4.0</string>
+			<key>pfm_description</key>
+			<string>The frequency to check for updates to the App Auto-Patch script</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings</string>
+			<key>pfm_name</key>
+			<string>SelfUpdateFrequency</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>daily</string>
+				<string>weekly</string>
+				<string>monthly</string>
+			</array>
+			<key>pfm_range_list_titles</key>
+			<array>
+				<string>Daily</string>
+				<string>Weekly</string>
+				<string>Monthly</string>
+			</array>
+			<key>pfm_title</key>
+			<string>Self Update Frequency</string>
 			<key>pfm_type</key>
 			<string>string</string>
 		</dict>
@@ -1770,6 +1931,6 @@
 	<key>pfm_unique</key>
 	<true/>
 	<key>pfm_version</key>
-	<integer>1</integer>
+	<integer>2</integer>
 </dict>
 </plist>

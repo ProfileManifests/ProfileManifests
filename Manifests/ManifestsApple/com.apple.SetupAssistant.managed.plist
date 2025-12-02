@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>pfm_description</key>
-	<string>Use this section to define which Setup Assistant items should be skipped.</string>
+	<string>The payload that configures Setup Assistant settings.</string>
 	<key>pfm_documentation_url</key>
 	<string>https://developer.apple.com/documentation/devicemanagement/setupassistant</string>
 	<key>pfm_domain</key>
@@ -15,7 +15,7 @@
 	<key>pfm_ios_min</key>
 	<string>14.0</string>
 	<key>pfm_last_modified</key>
-	<date>2025-03-03T11:08:08Z</date>
+	<date>2025-11-05T14:06:39Z</date>
 	<key>pfm_macos_min</key>
 	<string>10.12</string>
 	<key>pfm_platforms</key>
@@ -27,7 +27,7 @@
 	<array>
 		<dict>
 			<key>pfm_default</key>
-			<string></string>
+			<string>The payload that configures Setup Assistant settings.</string>
 			<key>pfm_description</key>
 			<string>The human-readable description of this payload. This description appears on the Detail screen.</string>
 			<key>pfm_name</key>
@@ -55,7 +55,8 @@
 			<key>pfm_default</key>
 			<string>com.apple.SetupAssistant.managed</string>
 			<key>pfm_description</key>
-			<string>The reverse-DNS-style identifier for the payload. This identifier is usually the same as the TopLevel value, with an additional appended component. This string must be unique within the profile.
+			<string>The reverse-DNS-style identifier for the payload. This identifier is usually the same as the 'TopLevel' value, with an additional appended component. This string must be unique within the profile.
+
 During a profile replacement, the system updates payloads with the same 'PayloadIdentifier' and 'PayloadUUID' in the old and new profiles.</string>
 			<key>pfm_name</key>
 			<string>PayloadIdentifier</string>
@@ -85,6 +86,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string></string>
 			<key>pfm_description</key>
 			<string>The globally unique identifier for the payload. The actual content is unimportant, but must be globally unique. In macOS, use 'uuidgen' to generate UUIDs.
+
 During a profile replacement, the system updates payloads with the same 'PayloadIdentifier' and 'PayloadUUID' in the old and new profiles.</string>
 			<key>pfm_format</key>
 			<string>^[0-9A-Za-z]{8}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{12}$</string>
@@ -127,7 +129,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_description</key>
-			<string>An array strings that describe the setup items to skip. SkipKeys provides a list of valid strings and their meanings. Available in iOS 14, macOS 15 and later.</string>
+			<string>An array of strings that describe the setup items to skip. 'SkipKeys' provides a list of valid strings and their meanings. Available in iOS 14 and later, and macOS 15 and later.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://developer.apple.com/documentation/devicemanagement/skipkeys</string>
 			<key>pfm_ios_min</key>
@@ -145,6 +147,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<array>
 						<string>Accessibility</string>
 						<string>ActionButton</string>
+						<string>AgeBasedSafetySettings</string>
 						<string>Android</string>
 						<string>Appearance</string>
 						<string>AppleID</string>
@@ -164,7 +167,9 @@ During a profile replacement, the system updates payloads with the same 'Payload
 						<string>Keyboard</string>
 						<string>Location</string>
 						<string>MessagingActivationUsingPhoneNumber</string>
+						<string>Multitasking</string>
 						<string>OnBoarding</string>
+						<string>OSShowcase</string>
 						<string>Passcode</string>
 						<string>Payment</string>
 						<string>Privacy</string>
@@ -179,6 +184,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 						<string>SoftwareUpdate</string>
 						<string>TermsOfAddress</string>
 						<string>TOS</string>
+						<string>Tips</string>
 						<string>UnlockWithWatch</string>
 						<string>UpdateCompleted</string>
 						<string>Wallpaper</string>
@@ -190,6 +196,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<array>
 						<string>Accessibility</string>
 						<string>Action Button</string>
+						<string>Age-Based Safety Settings</string>
 						<string>Android</string>
 						<string>Appearance</string>
 						<string>Apple ID</string>
@@ -209,7 +216,9 @@ During a profile replacement, the system updates payloads with the same 'Payload
 						<string>Keyboard</string>
 						<string>Location</string>
 						<string>Messaging Activation Using Phone Number</string>
+						<string>Multitasking</string>
 						<string>OnBoarding</string>
+						<string>OS Showcase</string>
 						<string>Passcode</string>
 						<string>Payment</string>
 						<string>Privacy</string>
@@ -224,6 +233,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 						<string>Software Update</string>
 						<string>Terms of Address</string>
 						<string>Terms of Service</string>
+						<string>Tips</string>
 						<string>Unlock with Apple Watch</string>
 						<string>Update Completed</string>
 						<string>Wallpaper</string>

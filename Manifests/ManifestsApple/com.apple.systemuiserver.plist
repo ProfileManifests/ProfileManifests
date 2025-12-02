@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>pfm_description</key>
-	<string>Allowed media management and menu bar extras settings</string>
+	<string>The payload that configures media management.</string>
 	<key>pfm_documentation_url</key>
 	<string>https://developer.apple.com/documentation/devicemanagement/mediamanagementallowedmedia</string>
 	<key>pfm_domain</key>
@@ -13,7 +13,7 @@
 	<key>pfm_interaction</key>
 	<string>combined</string>
 	<key>pfm_last_modified</key>
-	<date>2023-04-18T11:26:55Z</date>
+	<date>2025-09-17T09:38:09Z</date>
 	<key>pfm_macos_deprecated</key>
 	<string>11.0</string>
 	<key>pfm_macos_max</key>
@@ -28,7 +28,7 @@
 	<array>
 		<dict>
 			<key>pfm_default</key>
-			<string>Configures Allowed Media settings</string>
+			<string>The payload that configures media management.</string>
 			<key>pfm_description</key>
 			<string>The human-readable description of this payload. This description appears on the Detail screen.</string>
 			<key>pfm_name</key>
@@ -162,7 +162,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_description</key>
-			<string>Media type dictionary to control volume mounting.</string>
+			<string>The media type dictionary that controls volume mounting.</string>
 			<key>pfm_macos_deprecated</key>
 			<string>11.0</string>
 			<key>pfm_macos_max</key>
@@ -175,16 +175,22 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<array>
 				<dict>
 					<key>pfm_description</key>
-					<string>This key is the default for media types that donʼt fall into other categories. Like internally installed SD-Cards and USB flash drives.</string>
+					<string>A string or an array of media action strings. Internally installed SD cards and USB flash drives are included in the hard disk-external category.
+
+This key is the default for media types that don't fall into other categories.</string>
 					<key>pfm_name</key>
 					<string>harddisk-external</string>
 					<key>pfm_subkeys</key>
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Action</string>
+							<string>One of the following values:
+* authenticate - User will be authenticated before media is mounted
+* read-only - The media will be mounted read-only. Not valid for unmount-controls.
+* deny - The media will not be mounted.
+* eject - The media will not be mounted and it will be ejected if possible. Note that some volumes are not defined as ejectable, so using the deny key may be the best solution. Not valid for unmount-controls.</string>
 							<key>pfm_name</key>
-							<string>action</string>
+							<string>ActionStringItem</string>
 							<key>pfm_range_list</key>
 							<array>
 								<string>authenticate</string>
@@ -216,16 +222,20 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string></string>
+					<string>A media action string or an array of media action strings.</string>
 					<key>pfm_name</key>
 					<string>harddisk-internal</string>
 					<key>pfm_subkeys</key>
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Action</string>
+							<string>One of the following values:
+* authenticate - User will be authenticated before media is mounted
+* read-only - The media will be mounted read-only. Not valid for unmount-controls.
+* deny - The media will not be mounted.
+* eject - The media will not be mounted and it will be ejected if possible. Note that some volumes are not defined as ejectable, so using the deny key may be the best solution. Not valid for unmount-controls.</string>
 							<key>pfm_name</key>
-							<string>action</string>
+							<string>ActionStringItem</string>
 							<key>pfm_range_list</key>
 							<array>
 								<string>authenticate</string>
@@ -257,16 +267,20 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string></string>
+					<string>A media action string or an array of media action strings.</string>
 					<key>pfm_name</key>
 					<string>networkdisk</string>
 					<key>pfm_subkeys</key>
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Action</string>
+							<string>One of the following values:
+* authenticate - User will be authenticated before media is mounted
+* read-only - The media will be mounted read-only. Not valid for unmount-controls.
+* deny - The media will not be mounted.
+* eject - The media will not be mounted and it will be ejected if possible. Note that some volumes are not defined as ejectable, so using the deny key may be the best solution. Not valid for unmount-controls.</string>
 							<key>pfm_name</key>
-							<string>action</string>
+							<string>ActionStringItem</string>
 							<key>pfm_range_list</key>
 							<array>
 								<string>authenticate</string>
@@ -298,16 +312,20 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string></string>
+					<string>A media action string or an array of media action strings.</string>
 					<key>pfm_name</key>
 					<string>disk-image</string>
 					<key>pfm_subkeys</key>
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Action</string>
+							<string>One of the following values:
+* authenticate - User will be authenticated before media is mounted
+* read-only - The media will be mounted read-only. Not valid for unmount-controls.
+* deny - The media will not be mounted.
+* eject - The media will not be mounted and it will be ejected if possible. Note that some volumes are not defined as ejectable, so using the deny key may be the best solution. Not valid for unmount-controls.</string>
 							<key>pfm_name</key>
-							<string>action</string>
+							<string>ActionStringItem</string>
 							<key>pfm_range_list</key>
 							<array>
 								<string>authenticate</string>
@@ -339,16 +357,20 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string></string>
+					<string>A media action string or an array of media action strings.</string>
 					<key>pfm_name</key>
 					<string>bd</string>
 					<key>pfm_subkeys</key>
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Action</string>
+							<string>One of the following values:
+* authenticate - User will be authenticated before media is mounted
+* read-only - The media will be mounted read-only. Not valid for unmount-controls.
+* deny - The media will not be mounted.
+* eject - The media will not be mounted and it will be ejected if possible. Note that some volumes are not defined as ejectable, so using the deny key may be the best solution. Not valid for unmount-controls.</string>
 							<key>pfm_name</key>
-							<string>action</string>
+							<string>ActionStringItem</string>
 							<key>pfm_range_list</key>
 							<array>
 								<string>authenticate</string>
@@ -380,16 +402,20 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string></string>
+					<string>A media action string or an array of media action strings.</string>
 					<key>pfm_name</key>
 					<string>cd</string>
 					<key>pfm_subkeys</key>
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Action</string>
+							<string>One of the following values:
+* authenticate - User will be authenticated before media is mounted
+* read-only - The media will be mounted read-only. Not valid for unmount-controls.
+* deny - The media will not be mounted.
+* eject - The media will not be mounted and it will be ejected if possible. Note that some volumes are not defined as ejectable, so using the deny key may be the best solution. Not valid for unmount-controls.</string>
 							<key>pfm_name</key>
-							<string>action</string>
+							<string>ActionStringItem</string>
 							<key>pfm_range_list</key>
 							<array>
 								<string>authenticate</string>
@@ -421,16 +447,20 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string></string>
+					<string>A media action string or an array of media action strings.</string>
 					<key>pfm_name</key>
 					<string>dvd</string>
 					<key>pfm_subkeys</key>
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Action</string>
+							<string>One of the following values:
+* authenticate - User will be authenticated before media is mounted
+* read-only - The media will be mounted read-only. Not valid for unmount-controls.
+* deny - The media will not be mounted.
+* eject - The media will not be mounted and it will be ejected if possible. Note that some volumes are not defined as ejectable, so using the deny key may be the best solution. Not valid for unmount-controls.</string>
 							<key>pfm_name</key>
-							<string>action</string>
+							<string>ActionStringItem</string>
 							<key>pfm_range_list</key>
 							<array>
 								<string>authenticate</string>
@@ -462,16 +492,20 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string></string>
+					<string>A media action string or an array of media action strings.</string>
 					<key>pfm_name</key>
 					<string>dvdram</string>
 					<key>pfm_subkeys</key>
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Action</string>
+							<string>One of the following values:
+* authenticate - User will be authenticated before media is mounted
+* read-only - The media will be mounted read-only. Not valid for unmount-controls.
+* deny - The media will not be mounted.
+* eject - The media will not be mounted and it will be ejected if possible. Note that some volumes are not defined as ejectable, so using the deny key may be the best solution. Not valid for unmount-controls.</string>
 							<key>pfm_name</key>
-							<string>action</string>
+							<string>ActionStringItem</string>
 							<key>pfm_range_list</key>
 							<array>
 								<string>authenticate</string>
@@ -503,16 +537,20 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string></string>
+					<string>A media action string or an array of media action strings.</string>
 					<key>pfm_name</key>
 					<string>blankbd</string>
 					<key>pfm_subkeys</key>
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Action</string>
+							<string>One of the following values:
+* authenticate - User will be authenticated before media is mounted
+* read-only - The media will be mounted read-only. Not valid for unmount-controls.
+* deny - The media will not be mounted.
+* eject - The media will not be mounted and it will be ejected if possible. Note that some volumes are not defined as ejectable, so using the deny key may be the best solution. Not valid for unmount-controls.</string>
 							<key>pfm_name</key>
-							<string>action</string>
+							<string>ActionStringItem</string>
 							<key>pfm_range_list</key>
 							<array>
 								<string>authenticate</string>
@@ -544,16 +582,20 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string></string>
+					<string>A media action string or an array of media action strings.</string>
 					<key>pfm_name</key>
 					<string>blankcd</string>
 					<key>pfm_subkeys</key>
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Action</string>
+							<string>One of the following values:
+* authenticate - User will be authenticated before media is mounted
+* read-only - The media will be mounted read-only. Not valid for unmount-controls.
+* deny - The media will not be mounted.
+* eject - The media will not be mounted and it will be ejected if possible. Note that some volumes are not defined as ejectable, so using the deny key may be the best solution. Not valid for unmount-controls.</string>
 							<key>pfm_name</key>
-							<string>action</string>
+							<string>ActionStringItem</string>
 							<key>pfm_range_list</key>
 							<array>
 								<string>authenticate</string>
@@ -585,16 +627,20 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string></string>
+					<string>A media action string or an array of media action strings.</string>
 					<key>pfm_name</key>
 					<string>blankdvd</string>
 					<key>pfm_subkeys</key>
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Action</string>
+							<string>One of the following values:
+* authenticate - User will be authenticated before media is mounted
+* read-only - The media will be mounted read-only. Not valid for unmount-controls.
+* deny - The media will not be mounted.
+* eject - The media will not be mounted and it will be ejected if possible. Note that some volumes are not defined as ejectable, so using the deny key may be the best solution. Not valid for unmount-controls.</string>
 							<key>pfm_name</key>
-							<string>action</string>
+							<string>ActionStringItem</string>
 							<key>pfm_range_list</key>
 							<array>
 								<string>authenticate</string>
@@ -624,6 +670,14 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<key>pfm_type_input</key>
 					<string>boolean</string>
 				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>Unused; set to an empty string.</string>
+					<key>pfm_name</key>
+					<string>all-media</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
 			</array>
 			<key>pfm_title</key>
 			<string>Volume Mount Controls</string>
@@ -632,7 +686,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_description</key>
-			<string>Media type dictionary to control volume unmounting.</string>
+			<string>The media type dictionary that controls volume unmounting.</string>
 			<key>pfm_macos_deprecated</key>
 			<string>11.0</string>
 			<key>pfm_macos_max</key>
@@ -645,16 +699,22 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<array>
 				<dict>
 					<key>pfm_description</key>
-					<string>This key is the default for media types that donʼt fall into other categories. Like internally installed SD-Cards and USB flash drives.</string>
+					<string>A string or an array of media action strings. Internally installed SD cards and USB flash drives are included in the hard disk-external category.
+
+This key is the default for media types that don't fall into other categories.</string>
 					<key>pfm_name</key>
 					<string>harddisk-external</string>
 					<key>pfm_subkeys</key>
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Action</string>
+							<string>One of the following values:
+* authenticate - User will be authenticated before media is mounted
+* read-only - The media will be mounted read-only. Not valid for unmount-controls.
+* deny - The media will not be mounted.
+* eject - The media will not be mounted and it will be ejected if possible. Note that some volumes are not defined as ejectable, so using the deny key may be the best solution. Not valid for unmount-controls.</string>
 							<key>pfm_name</key>
-							<string>action</string>
+							<string>ActionStringItem</string>
 							<key>pfm_range_list</key>
 							<array>
 								<string>authenticate</string>
@@ -686,16 +746,20 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string></string>
+					<string>A media action string or an array of media action strings.</string>
 					<key>pfm_name</key>
 					<string>harddisk-internal</string>
 					<key>pfm_subkeys</key>
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Action</string>
+							<string>One of the following values:
+* authenticate - User will be authenticated before media is mounted
+* read-only - The media will be mounted read-only. Not valid for unmount-controls.
+* deny - The media will not be mounted.
+* eject - The media will not be mounted and it will be ejected if possible. Note that some volumes are not defined as ejectable, so using the deny key may be the best solution. Not valid for unmount-controls.</string>
 							<key>pfm_name</key>
-							<string>action</string>
+							<string>ActionStringItem</string>
 							<key>pfm_range_list</key>
 							<array>
 								<string>authenticate</string>
@@ -727,16 +791,20 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string></string>
+					<string>A media action string or an array of media action strings.</string>
 					<key>pfm_name</key>
 					<string>networkdisk</string>
 					<key>pfm_subkeys</key>
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Action</string>
+							<string>One of the following values:
+* authenticate - User will be authenticated before media is mounted
+* read-only - The media will be mounted read-only. Not valid for unmount-controls.
+* deny - The media will not be mounted.
+* eject - The media will not be mounted and it will be ejected if possible. Note that some volumes are not defined as ejectable, so using the deny key may be the best solution. Not valid for unmount-controls.</string>
 							<key>pfm_name</key>
-							<string>action</string>
+							<string>ActionStringItem</string>
 							<key>pfm_range_list</key>
 							<array>
 								<string>authenticate</string>
@@ -768,16 +836,20 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string></string>
+					<string>A media action string or an array of media action strings.</string>
 					<key>pfm_name</key>
 					<string>disk-image</string>
 					<key>pfm_subkeys</key>
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Action</string>
+							<string>One of the following values:
+* authenticate - User will be authenticated before media is mounted
+* read-only - The media will be mounted read-only. Not valid for unmount-controls.
+* deny - The media will not be mounted.
+* eject - The media will not be mounted and it will be ejected if possible. Note that some volumes are not defined as ejectable, so using the deny key may be the best solution. Not valid for unmount-controls.</string>
 							<key>pfm_name</key>
-							<string>action</string>
+							<string>ActionStringItem</string>
 							<key>pfm_range_list</key>
 							<array>
 								<string>authenticate</string>
@@ -809,16 +881,20 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string></string>
+					<string>A media action string or an array of media action strings.</string>
 					<key>pfm_name</key>
 					<string>bd</string>
 					<key>pfm_subkeys</key>
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Action</string>
+							<string>One of the following values:
+* authenticate - User will be authenticated before media is mounted
+* read-only - The media will be mounted read-only. Not valid for unmount-controls.
+* deny - The media will not be mounted.
+* eject - The media will not be mounted and it will be ejected if possible. Note that some volumes are not defined as ejectable, so using the deny key may be the best solution. Not valid for unmount-controls.</string>
 							<key>pfm_name</key>
-							<string>action</string>
+							<string>ActionStringItem</string>
 							<key>pfm_range_list</key>
 							<array>
 								<string>authenticate</string>
@@ -850,16 +926,20 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string></string>
+					<string>A media action string or an array of media action strings.</string>
 					<key>pfm_name</key>
 					<string>cd</string>
 					<key>pfm_subkeys</key>
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Action</string>
+							<string>One of the following values:
+* authenticate - User will be authenticated before media is mounted
+* read-only - The media will be mounted read-only. Not valid for unmount-controls.
+* deny - The media will not be mounted.
+* eject - The media will not be mounted and it will be ejected if possible. Note that some volumes are not defined as ejectable, so using the deny key may be the best solution. Not valid for unmount-controls.</string>
 							<key>pfm_name</key>
-							<string>action</string>
+							<string>ActionStringItem</string>
 							<key>pfm_range_list</key>
 							<array>
 								<string>authenticate</string>
@@ -891,16 +971,20 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string></string>
+					<string>A media action string or an array of media action strings.</string>
 					<key>pfm_name</key>
 					<string>dvd</string>
 					<key>pfm_subkeys</key>
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Action</string>
+							<string>One of the following values:
+* authenticate - User will be authenticated before media is mounted
+* read-only - The media will be mounted read-only. Not valid for unmount-controls.
+* deny - The media will not be mounted.
+* eject - The media will not be mounted and it will be ejected if possible. Note that some volumes are not defined as ejectable, so using the deny key may be the best solution. Not valid for unmount-controls.</string>
 							<key>pfm_name</key>
-							<string>action</string>
+							<string>ActionStringItem</string>
 							<key>pfm_range_list</key>
 							<array>
 								<string>authenticate</string>
@@ -932,16 +1016,20 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string></string>
+					<string>A media action string or an array of media action strings.</string>
 					<key>pfm_name</key>
 					<string>dvdram</string>
 					<key>pfm_subkeys</key>
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Action</string>
+							<string>One of the following values:
+* authenticate - User will be authenticated before media is mounted
+* read-only - The media will be mounted read-only. Not valid for unmount-controls.
+* deny - The media will not be mounted.
+* eject - The media will not be mounted and it will be ejected if possible. Note that some volumes are not defined as ejectable, so using the deny key may be the best solution. Not valid for unmount-controls.</string>
 							<key>pfm_name</key>
-							<string>action</string>
+							<string>ActionStringItem</string>
 							<key>pfm_range_list</key>
 							<array>
 								<string>authenticate</string>
@@ -973,16 +1061,20 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string></string>
+					<string>A media action string or an array of media action strings.</string>
 					<key>pfm_name</key>
 					<string>blankbd</string>
 					<key>pfm_subkeys</key>
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Action</string>
+							<string>One of the following values:
+* authenticate - User will be authenticated before media is mounted
+* read-only - The media will be mounted read-only. Not valid for unmount-controls.
+* deny - The media will not be mounted.
+* eject - The media will not be mounted and it will be ejected if possible. Note that some volumes are not defined as ejectable, so using the deny key may be the best solution. Not valid for unmount-controls.</string>
 							<key>pfm_name</key>
-							<string>action</string>
+							<string>ActionStringItem</string>
 							<key>pfm_range_list</key>
 							<array>
 								<string>authenticate</string>
@@ -1014,16 +1106,20 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string></string>
+					<string>A media action string or an array of media action strings.</string>
 					<key>pfm_name</key>
 					<string>blankcd</string>
 					<key>pfm_subkeys</key>
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Action</string>
+							<string>One of the following values:
+* authenticate - User will be authenticated before media is mounted
+* read-only - The media will be mounted read-only. Not valid for unmount-controls.
+* deny - The media will not be mounted.
+* eject - The media will not be mounted and it will be ejected if possible. Note that some volumes are not defined as ejectable, so using the deny key may be the best solution. Not valid for unmount-controls.</string>
 							<key>pfm_name</key>
-							<string>action</string>
+							<string>ActionStringItem</string>
 							<key>pfm_range_list</key>
 							<array>
 								<string>authenticate</string>
@@ -1055,16 +1151,20 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string></string>
+					<string>A media action string or an array of media action strings.</string>
 					<key>pfm_name</key>
 					<string>blankdvd</string>
 					<key>pfm_subkeys</key>
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Action</string>
+							<string>One of the following values:
+* authenticate - User will be authenticated before media is mounted
+* read-only - The media will be mounted read-only. Not valid for unmount-controls.
+* deny - The media will not be mounted.
+* eject - The media will not be mounted and it will be ejected if possible. Note that some volumes are not defined as ejectable, so using the deny key may be the best solution. Not valid for unmount-controls.</string>
 							<key>pfm_name</key>
-							<string>action</string>
+							<string>ActionStringItem</string>
 							<key>pfm_range_list</key>
 							<array>
 								<string>authenticate</string>
@@ -1094,6 +1194,14 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<key>pfm_type_input</key>
 					<string>boolean</string>
 				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>Unused; set to an empty string.</string>
+					<key>pfm_name</key>
+					<string>all-media</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
 			</array>
 			<key>pfm_title</key>
 			<string>Volume Unmount Controls</string>
@@ -1102,7 +1210,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_description</key>
-			<string>Volumes to eject when the user logs out.</string>
+			<string>The media type dictionary that defines volumes to eject when the user logs out.</string>
 			<key>pfm_macos_deprecated</key>
 			<string>11.0</string>
 			<key>pfm_macos_max</key>
@@ -1115,16 +1223,22 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<array>
 				<dict>
 					<key>pfm_description</key>
-					<string>This key is the default for media types that donʼt fall into other categories. Like internally installed SD-Cards and USB flash drives.</string>
+					<string>A string or an array of media action strings. Internally installed SD cards and USB flash drives are included in the hard disk-external category.
+
+This key is the default for media types that don't fall into other categories.</string>
 					<key>pfm_name</key>
 					<string>harddisk-external</string>
 					<key>pfm_subkeys</key>
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Action</string>
+							<string>One of the following values:
+* authenticate - User will be authenticated before media is mounted
+* read-only - The media will be mounted read-only. Not valid for unmount-controls.
+* deny - The media will not be mounted.
+* eject - The media will not be mounted and it will be ejected if possible. Note that some volumes are not defined as ejectable, so using the deny key may be the best solution. Not valid for unmount-controls.</string>
 							<key>pfm_name</key>
-							<string>action</string>
+							<string>ActionStringItem</string>
 							<key>pfm_range_list</key>
 							<array>
 								<string>authenticate</string>
@@ -1156,16 +1270,20 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string></string>
+					<string>A media action string or an array of media action strings.</string>
 					<key>pfm_name</key>
 					<string>harddisk-internal</string>
 					<key>pfm_subkeys</key>
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Action</string>
+							<string>One of the following values:
+* authenticate - User will be authenticated before media is mounted
+* read-only - The media will be mounted read-only. Not valid for unmount-controls.
+* deny - The media will not be mounted.
+* eject - The media will not be mounted and it will be ejected if possible. Note that some volumes are not defined as ejectable, so using the deny key may be the best solution. Not valid for unmount-controls.</string>
 							<key>pfm_name</key>
-							<string>action</string>
+							<string>ActionStringItem</string>
 							<key>pfm_range_list</key>
 							<array>
 								<string>authenticate</string>
@@ -1197,16 +1315,20 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string></string>
+					<string>A media action string or an array of media action strings.</string>
 					<key>pfm_name</key>
 					<string>networkdisk</string>
 					<key>pfm_subkeys</key>
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Action</string>
+							<string>One of the following values:
+* authenticate - User will be authenticated before media is mounted
+* read-only - The media will be mounted read-only. Not valid for unmount-controls.
+* deny - The media will not be mounted.
+* eject - The media will not be mounted and it will be ejected if possible. Note that some volumes are not defined as ejectable, so using the deny key may be the best solution. Not valid for unmount-controls.</string>
 							<key>pfm_name</key>
-							<string>action</string>
+							<string>ActionStringItem</string>
 							<key>pfm_range_list</key>
 							<array>
 								<string>authenticate</string>
@@ -1238,16 +1360,20 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string></string>
+					<string>A media action string or an array of media action strings.</string>
 					<key>pfm_name</key>
 					<string>disk-image</string>
 					<key>pfm_subkeys</key>
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Action</string>
+							<string>One of the following values:
+* authenticate - User will be authenticated before media is mounted
+* read-only - The media will be mounted read-only. Not valid for unmount-controls.
+* deny - The media will not be mounted.
+* eject - The media will not be mounted and it will be ejected if possible. Note that some volumes are not defined as ejectable, so using the deny key may be the best solution. Not valid for unmount-controls.</string>
 							<key>pfm_name</key>
-							<string>action</string>
+							<string>ActionStringItem</string>
 							<key>pfm_range_list</key>
 							<array>
 								<string>authenticate</string>
@@ -1279,16 +1405,20 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string></string>
+					<string>A media action string or an array of media action strings.</string>
 					<key>pfm_name</key>
 					<string>bd</string>
 					<key>pfm_subkeys</key>
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Action</string>
+							<string>One of the following values:
+* authenticate - User will be authenticated before media is mounted
+* read-only - The media will be mounted read-only. Not valid for unmount-controls.
+* deny - The media will not be mounted.
+* eject - The media will not be mounted and it will be ejected if possible. Note that some volumes are not defined as ejectable, so using the deny key may be the best solution. Not valid for unmount-controls.</string>
 							<key>pfm_name</key>
-							<string>action</string>
+							<string>ActionStringItem</string>
 							<key>pfm_range_list</key>
 							<array>
 								<string>authenticate</string>
@@ -1320,16 +1450,20 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string></string>
+					<string>A media action string or an array of media action strings.</string>
 					<key>pfm_name</key>
 					<string>cd</string>
 					<key>pfm_subkeys</key>
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Action</string>
+							<string>One of the following values:
+* authenticate - User will be authenticated before media is mounted
+* read-only - The media will be mounted read-only. Not valid for unmount-controls.
+* deny - The media will not be mounted.
+* eject - The media will not be mounted and it will be ejected if possible. Note that some volumes are not defined as ejectable, so using the deny key may be the best solution. Not valid for unmount-controls.</string>
 							<key>pfm_name</key>
-							<string>action</string>
+							<string>ActionStringItem</string>
 							<key>pfm_range_list</key>
 							<array>
 								<string>authenticate</string>
@@ -1361,16 +1495,20 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string></string>
+					<string>A media action string or an array of media action strings.</string>
 					<key>pfm_name</key>
 					<string>dvd</string>
 					<key>pfm_subkeys</key>
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Action</string>
+							<string>One of the following values:
+* authenticate - User will be authenticated before media is mounted
+* read-only - The media will be mounted read-only. Not valid for unmount-controls.
+* deny - The media will not be mounted.
+* eject - The media will not be mounted and it will be ejected if possible. Note that some volumes are not defined as ejectable, so using the deny key may be the best solution. Not valid for unmount-controls.</string>
 							<key>pfm_name</key>
-							<string>action</string>
+							<string>ActionStringItem</string>
 							<key>pfm_range_list</key>
 							<array>
 								<string>authenticate</string>
@@ -1402,16 +1540,20 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string></string>
+					<string>A media action string or an array of media action strings.</string>
 					<key>pfm_name</key>
 					<string>dvdram</string>
 					<key>pfm_subkeys</key>
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Action</string>
+							<string>One of the following values:
+* authenticate - User will be authenticated before media is mounted
+* read-only - The media will be mounted read-only. Not valid for unmount-controls.
+* deny - The media will not be mounted.
+* eject - The media will not be mounted and it will be ejected if possible. Note that some volumes are not defined as ejectable, so using the deny key may be the best solution. Not valid for unmount-controls.</string>
 							<key>pfm_name</key>
-							<string>action</string>
+							<string>ActionStringItem</string>
 							<key>pfm_range_list</key>
 							<array>
 								<string>authenticate</string>
@@ -1443,16 +1585,20 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string></string>
+					<string>A media action string or an array of media action strings.</string>
 					<key>pfm_name</key>
 					<string>blankbd</string>
 					<key>pfm_subkeys</key>
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Action</string>
+							<string>One of the following values:
+* authenticate - User will be authenticated before media is mounted
+* read-only - The media will be mounted read-only. Not valid for unmount-controls.
+* deny - The media will not be mounted.
+* eject - The media will not be mounted and it will be ejected if possible. Note that some volumes are not defined as ejectable, so using the deny key may be the best solution. Not valid for unmount-controls.</string>
 							<key>pfm_name</key>
-							<string>action</string>
+							<string>ActionStringItem</string>
 							<key>pfm_range_list</key>
 							<array>
 								<string>authenticate</string>
@@ -1484,16 +1630,20 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string></string>
+					<string>A media action string or an array of media action strings.</string>
 					<key>pfm_name</key>
 					<string>blankcd</string>
 					<key>pfm_subkeys</key>
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Action</string>
+							<string>One of the following values:
+* authenticate - User will be authenticated before media is mounted
+* read-only - The media will be mounted read-only. Not valid for unmount-controls.
+* deny - The media will not be mounted.
+* eject - The media will not be mounted and it will be ejected if possible. Note that some volumes are not defined as ejectable, so using the deny key may be the best solution. Not valid for unmount-controls.</string>
 							<key>pfm_name</key>
-							<string>action</string>
+							<string>ActionStringItem</string>
 							<key>pfm_range_list</key>
 							<array>
 								<string>authenticate</string>
@@ -1525,16 +1675,20 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string></string>
+					<string>A media action string or an array of media action strings.</string>
 					<key>pfm_name</key>
 					<string>blankdvd</string>
 					<key>pfm_subkeys</key>
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Action</string>
+							<string>One of the following values:
+* authenticate - User will be authenticated before media is mounted
+* read-only - The media will be mounted read-only. Not valid for unmount-controls.
+* deny - The media will not be mounted.
+* eject - The media will not be mounted and it will be ejected if possible. Note that some volumes are not defined as ejectable, so using the deny key may be the best solution. Not valid for unmount-controls.</string>
 							<key>pfm_name</key>
-							<string>action</string>
+							<string>ActionStringItem</string>
 							<key>pfm_range_list</key>
 							<array>
 								<string>authenticate</string>
@@ -1563,6 +1717,14 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<string>array</string>
 					<key>pfm_type_input</key>
 					<string>boolean</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>Unused; set to an empty string.</string>
+					<key>pfm_name</key>
+					<string>all-media</string>
+					<key>pfm_type</key>
+					<string>string</string>
 				</dict>
 			</array>
 			<key>pfm_title</key>
@@ -1632,8 +1794,8 @@ During a profile replacement, the system updates payloads with the same 'Payload
 	<key>pfm_title</key>
 	<string>Allowed Media and Menu Bar Extras</string>
 	<key>pfm_unique</key>
-	<true/>
+	<false/>
 	<key>pfm_version</key>
-	<integer>5</integer>
+	<integer>6</integer>
 </dict>
 </plist>
