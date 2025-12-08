@@ -1036,11 +1036,11 @@
 		<key>com.twocanoes.xcreds</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-09-30T12:02:18Z</date>
+			<date>2025-12-05T20:00:13Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.twocanoes.xcreds.plist</string>
 			<key>version</key>
-			<integer>14</integer>
+			<integer>15</integer>
 		</dict>
 		<key>com.unity3d.UnityEditor5.x</key>
 		<dict>
@@ -2436,6 +2436,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2025-12-03T12:19:24Z</date>
+	<date>2025-12-08T09:59:35Z</date>
 </dict>
 </plist>
