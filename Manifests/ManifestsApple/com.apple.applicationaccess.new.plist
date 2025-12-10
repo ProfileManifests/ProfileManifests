@@ -286,8 +286,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 											<string></string>
 											<key>pfm_description_reference</key>
 											<string></string>
-											<key>pfm_documentation_source</key>
-											<string>Profile Manager</string>
 											<key>pfm_name</key>
 											<string>appStore</string>
 											<key>pfm_title</key>
@@ -332,8 +330,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 							<string></string>
 							<key>pfm_description_reference</key>
 							<string></string>
-							<key>pfm_documentation_source</key>
-							<string>Profile Manager</string>
 							<key>pfm_name</key>
 							<string>appStore</string>
 							<key>pfm_title</key>
