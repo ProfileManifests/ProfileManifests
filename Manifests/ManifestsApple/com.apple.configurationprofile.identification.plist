@@ -17,7 +17,7 @@ The Identification payload is not supported in iOS.</string>
 	<key>pfm_interaction</key>
 	<string>exclusive</string>
 	<key>pfm_last_modified</key>
-	<date>2025-09-17T09:38:09Z</date>
+	<date>2025-12-10T12:16:57Z</date>
 	<key>pfm_macos_deprecated</key>
 	<string>15.4</string>
 	<key>pfm_macos_min</key>
@@ -210,8 +210,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<string>UserEnteredPassword</string>
 					<key>pfm_description</key>
 					<string>The authorization method. Either the profile contains the password or the user provides it.</string>
-					<key>pfm_documentation_source</key>
-					<string></string>
 					<key>pfm_exclude</key>
 					<array>
 						<dict>
@@ -267,8 +265,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				<dict>
 					<key>pfm_description</key>
 					<string>The additional descriptive text for the user prompt.</string>
-					<key>pfm_documentation_source</key>
-					<string></string>
 					<key>pfm_exclude</key>
 					<array>
 						<dict>

@@ -17,7 +17,7 @@ macOS. The key AllowDockFixupOverride is supported on macOS 10.12 and later.</st
 	<key>pfm_interaction</key>
 	<string>combined</string>
 	<key>pfm_last_modified</key>
-	<date>2025-09-17T09:38:09Z</date>
+	<date>2025-12-10T12:16:57Z</date>
 	<key>pfm_macos_min</key>
 	<string>10.7</string>
 	<key>pfm_platforms</key>
@@ -200,8 +200,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<string>Display name in the profile GUI of a dock item.</string>
 									<key>pfm_description_reference</key>
 									<string></string>
-									<key>pfm_documentation_source</key>
-									<string></string>
 									<key>pfm_hidden</key>
 									<string>all</string>
 									<key>pfm_name</key>
@@ -244,8 +242,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								<dict>
 									<key>pfm_description</key>
 									<string>The data in a file. For Apple use only.</string>
-									<key>pfm_documentation_source</key>
-									<string>/System/Library/PrivateFrameworks/ConfigurationEngineModel.framework/Versions/A/ConfigurationEngineModel</string>
 									<key>pfm_hidden</key>
 									<string>container</string>
 									<key>pfm_name</key>
@@ -259,8 +255,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 											<string>Path to the application.</string>
 											<key>pfm_description_reference</key>
 											<string></string>
-											<key>pfm_documentation_source</key>
-											<string>/System/Library/PrivateFrameworks/ConfigurationEngineModel.framework/Versions/A/ConfigurationEngineModel</string>
 											<key>pfm_name</key>
 											<string>_CFURLString</string>
 											<key>pfm_title</key>
@@ -273,8 +267,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 											<string>Path type. 0 = /Path/to/item, 15 = file://Path/to/item</string>
 											<key>pfm_description_reference</key>
 											<string></string>
-											<key>pfm_documentation_source</key>
-											<string>/System/Library/PrivateFrameworks/ConfigurationEngineModel.framework/Versions/A/ConfigurationEngineModel</string>
 											<key>pfm_hidden</key>
 											<string>all</string>
 											<key>pfm_name</key>
@@ -408,8 +400,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<string>Display name in the profile GUI of a dock item.</string>
 									<key>pfm_description_reference</key>
 									<string></string>
-									<key>pfm_documentation_source</key>
-									<string></string>
 									<key>pfm_hidden</key>
 									<string>all</string>
 									<key>pfm_name</key>
@@ -468,8 +458,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								<dict>
 									<key>pfm_description</key>
 									<string>The data in a file. For Apple use only.</string>
-									<key>pfm_documentation_source</key>
-									<string>/System/Library/PrivateFrameworks/ConfigurationEngineModel.framework/Versions/A/ConfigurationEngineModel</string>
 									<key>pfm_exclude</key>
 									<array>
 										<dict>
@@ -506,8 +494,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 											<string>Path to the file.</string>
 											<key>pfm_description_reference</key>
 											<string></string>
-											<key>pfm_documentation_source</key>
-											<string>/System/Library/PrivateFrameworks/ConfigurationEngineModel.framework/Versions/A/ConfigurationEngineModel</string>
 											<key>pfm_name</key>
 											<string>_CFURLString</string>
 											<key>pfm_title</key>
@@ -520,8 +506,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 											<string>Path type. 0 = /Path/to/item, 15 = file://Path/to/item</string>
 											<key>pfm_description_reference</key>
 											<string></string>
-											<key>pfm_documentation_source</key>
-											<string>/System/Library/PrivateFrameworks/ConfigurationEngineModel.framework/Versions/A/ConfigurationEngineModel</string>
 											<key>pfm_hidden</key>
 											<string>all</string>
 											<key>pfm_name</key>
@@ -560,8 +544,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<string>Path to item relative to the current user's home directory.</string>
 									<key>pfm_description_reference</key>
 									<string></string>
-									<key>pfm_documentation_source</key>
-									<string></string>
 									<key>pfm_exclude</key>
 									<array>
 										<dict>
@@ -597,8 +579,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<key>pfm_description</key>
 									<string>Arrangement (sorting) of the directory contents.</string>
 									<key>pfm_description_reference</key>
-									<string></string>
-									<key>pfm_documentation_source</key>
 									<string></string>
 									<key>pfm_exclude</key>
 									<array>
@@ -646,8 +626,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<string>Display directory as either a Folder or a Stack.</string>
 									<key>pfm_description_reference</key>
 									<string></string>
-									<key>pfm_documentation_source</key>
-									<string></string>
 									<key>pfm_exclude</key>
 									<array>
 										<dict>
@@ -687,8 +665,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<key>pfm_description</key>
 									<string>How to show directory contents.</string>
 									<key>pfm_description_reference</key>
-									<string></string>
-									<key>pfm_documentation_source</key>
 									<string></string>
 									<key>pfm_exclude</key>
 									<array>
@@ -817,8 +793,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<string>Display name in the profile GUI of a dock item.</string>
 									<key>pfm_description_reference</key>
 									<string></string>
-									<key>pfm_documentation_source</key>
-									<string></string>
 									<key>pfm_hidden</key>
 									<string>all</string>
 									<key>pfm_name</key>
@@ -861,8 +835,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								<dict>
 									<key>pfm_description</key>
 									<string>The data in a file. For Apple use only.</string>
-									<key>pfm_documentation_source</key>
-									<string>/System/Library/PrivateFrameworks/ConfigurationEngineModel.framework/Versions/A/ConfigurationEngineModel</string>
 									<key>pfm_hidden</key>
 									<string>container</string>
 									<key>pfm_name</key>
@@ -876,8 +848,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 											<string>Path to the application.</string>
 											<key>pfm_description_reference</key>
 											<string></string>
-											<key>pfm_documentation_source</key>
-											<string>/System/Library/PrivateFrameworks/ConfigurationEngineModel.framework/Versions/A/ConfigurationEngineModel</string>
 											<key>pfm_name</key>
 											<string>_CFURLString</string>
 											<key>pfm_title</key>
@@ -890,8 +860,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 											<string>Path type. 0 = /Path/to/item, 15 = file://Path/to/item</string>
 											<key>pfm_description_reference</key>
 											<string></string>
-											<key>pfm_documentation_source</key>
-											<string>/System/Library/PrivateFrameworks/ConfigurationEngineModel.framework/Versions/A/ConfigurationEngineModel</string>
 											<key>pfm_hidden</key>
 											<string>all</string>
 											<key>pfm_name</key>
@@ -1023,8 +991,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<string>Display name in the profile GUI of a dock item.</string>
 									<key>pfm_description_reference</key>
 									<string></string>
-									<key>pfm_documentation_source</key>
-									<string></string>
 									<key>pfm_hidden</key>
 									<string>all</string>
 									<key>pfm_name</key>
@@ -1083,8 +1049,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								<dict>
 									<key>pfm_description</key>
 									<string>The data in a file. For Apple use only.</string>
-									<key>pfm_documentation_source</key>
-									<string>/System/Library/PrivateFrameworks/ConfigurationEngineModel.framework/Versions/A/ConfigurationEngineModel</string>
 									<key>pfm_exclude</key>
 									<array>
 										<dict>
@@ -1121,8 +1085,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 											<string>Path to the file.</string>
 											<key>pfm_description_reference</key>
 											<string></string>
-											<key>pfm_documentation_source</key>
-											<string>/System/Library/PrivateFrameworks/ConfigurationEngineModel.framework/Versions/A/ConfigurationEngineModel</string>
 											<key>pfm_name</key>
 											<string>_CFURLString</string>
 											<key>pfm_title</key>
@@ -1135,8 +1097,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 											<string>Path type. 0 = /Path/to/item, 15 = file://Path/to/item</string>
 											<key>pfm_description_reference</key>
 											<string></string>
-											<key>pfm_documentation_source</key>
-											<string>/System/Library/PrivateFrameworks/ConfigurationEngineModel.framework/Versions/A/ConfigurationEngineModel</string>
 											<key>pfm_hidden</key>
 											<string>all</string>
 											<key>pfm_name</key>
@@ -1175,8 +1135,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<string>Path to item relative to the current user's home directory.</string>
 									<key>pfm_description_reference</key>
 									<string></string>
-									<key>pfm_documentation_source</key>
-									<string></string>
 									<key>pfm_exclude</key>
 									<array>
 										<dict>
@@ -1212,8 +1170,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<key>pfm_description</key>
 									<string>Arrangement (sorting) of the directory contents.</string>
 									<key>pfm_description_reference</key>
-									<string></string>
-									<key>pfm_documentation_source</key>
 									<string></string>
 									<key>pfm_exclude</key>
 									<array>
@@ -1261,8 +1217,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<string>Display directory as either a Folder or a Stack.</string>
 									<key>pfm_description_reference</key>
 									<string></string>
-									<key>pfm_documentation_source</key>
-									<string></string>
 									<key>pfm_exclude</key>
 									<array>
 										<dict>
@@ -1302,8 +1256,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<key>pfm_description</key>
 									<string>How to show directory contents.</string>
 									<key>pfm_description_reference</key>
-									<string></string>
-									<key>pfm_documentation_source</key>
 									<string></string>
 									<key>pfm_exclude</key>
 									<array>
