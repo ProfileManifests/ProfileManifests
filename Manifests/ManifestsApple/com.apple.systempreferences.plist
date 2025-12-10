@@ -596,8 +596,6 @@ A given System Settings extension can supply more than one section in System Set
 			<string>Hidden Preference Panes within the System Preferences application.</string>
 			<key>pfm_description_reference</key>
 			<string></string>
-			<key>pfm_documentation_source</key>
-			<string></string>
 			<key>pfm_name</key>
 			<string>HiddenPreferencePanes</string>
 			<key>pfm_subkeys</key>

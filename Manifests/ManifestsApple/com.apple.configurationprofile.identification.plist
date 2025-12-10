@@ -210,8 +210,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<string>UserEnteredPassword</string>
 					<key>pfm_description</key>
 					<string>The authorization method. Either the profile contains the password or the user provides it.</string>
-					<key>pfm_documentation_source</key>
-					<string></string>
 					<key>pfm_exclude</key>
 					<array>
 						<dict>
@@ -267,8 +265,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				<dict>
 					<key>pfm_description</key>
 					<string>The additional descriptive text for the user prompt.</string>
-					<key>pfm_documentation_source</key>
-					<string></string>
 					<key>pfm_exclude</key>
 					<array>
 						<dict>

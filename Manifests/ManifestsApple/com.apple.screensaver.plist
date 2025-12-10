@@ -233,8 +233,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>Flurry</string>
 			<key>pfm_description</key>
 			<string>The name of the screen saver module.</string>
-			<key>pfm_documentation_source</key>
-			<string></string>
 			<key>pfm_name</key>
 			<string>moduleName</string>
 			<key>pfm_note</key>
