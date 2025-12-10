@@ -17,7 +17,7 @@ macOS. The key AllowDockFixupOverride is supported on macOS 10.12 and later.</st
 	<key>pfm_interaction</key>
 	<string>combined</string>
 	<key>pfm_last_modified</key>
-	<date>2025-09-17T09:38:09Z</date>
+	<date>2025-12-10T12:16:57Z</date>
 	<key>pfm_macos_min</key>
 	<string>10.7</string>
 	<key>pfm_platforms</key>
