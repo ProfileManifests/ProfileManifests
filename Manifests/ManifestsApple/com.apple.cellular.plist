@@ -23,7 +23,7 @@ This payload replaces the com.apple.managedCarrier payload, which is supported, 
 	<key>pfm_ios_min</key>
 	<string>7.0</string>
 	<key>pfm_last_modified</key>
-	<date>2025-09-17T09:38:09Z</date>
+	<date>2025-12-10T12:16:57Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>iOS</string>
