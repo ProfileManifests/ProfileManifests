@@ -5169,6 +5169,7 @@ See https://developers.google.com/safe-browsing for more info on Safe Browsing.<
 				<integer>1</integer>
 				<integer>2</integer>
 				<integer>3</integer>
+				<integer>4</integer>
 			</array>
 			<key>pfm_range_list_titles</key>
 			<array>
@@ -5176,6 +5177,7 @@ See https://developers.google.com/safe-browsing for more info on Safe Browsing.<
 				<string>Block dangerous downloads</string>
 				<string>Block potentially dangerous downloads</string>
 				<string>Block all downloads</string>
+				<string>Block malicious downloads</string>
 			</array>
 			<key>pfm_title</key>
 			<string>Download restrictions</string>
