@@ -11,7 +11,7 @@
 	<key>pfm_format_version</key>
 	<integer>1</integer>
 	<key>pfm_last_modified</key>
-	<date>2024-09-18T17:57:55Z</date>
+	<date>2025-12-13T20:41:02Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -1763,6 +1763,6 @@ The execute permission only refers to execution of Mach-O binaries. It does not 
 	<key>pfm_unique</key>
 	<true/>
 	<key>pfm_version</key>
-	<integer>3</integer>
+	<integer>4</integer>
 </dict>
 </plist>
