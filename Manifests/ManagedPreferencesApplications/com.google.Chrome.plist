@@ -5232,8 +5232,8 @@ See https://developers.google.com/safe-browsing for more info on Safe Browsing.<
 			<key>pfm_range_list_titles</key>
 			<array>
 				<string>No special restrictions</string>
-				<string>Block dangerous downloads</string>
-				<string>Block potentially dangerous downloads</string>
+				<string>Block malicious downloads and dangerous file types</string>
+				<string>Block malicious downloads, uncommon or unwanted downloads and dangerous file types</string>
 				<string>Block all downloads</string>
 				<string>Block malicious downloads</string>
 			</array>
