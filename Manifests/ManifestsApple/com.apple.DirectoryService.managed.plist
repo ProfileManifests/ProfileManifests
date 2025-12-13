@@ -20,7 +20,7 @@ must be set to true to set the ADPacketEncrypt key to enable.</string>
 	<key>pfm_interaction</key>
 	<string>exclusive</string>
 	<key>pfm_last_modified</key>
-	<date>2025-09-17T09:38:09Z</date>
+	<date>2025-12-10T12:16:57Z</date>
 	<key>pfm_macos_min</key>
 	<string>10.8</string>
 	<key>pfm_platforms</key>
@@ -166,8 +166,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		<dict>
 			<key>pfm_description</key>
 			<string>The client's identifier.</string>
-			<key>pfm_documentation_source</key>
-			<string></string>
 			<key>pfm_name</key>
 			<string>ClientID</string>
 			<key>pfm_title</key>
