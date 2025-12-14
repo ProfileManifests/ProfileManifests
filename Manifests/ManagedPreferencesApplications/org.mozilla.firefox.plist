@@ -20,7 +20,7 @@
 	<key>pfm_interaction</key>
 	<string>undefined</string>
 	<key>pfm_last_modified</key>
-	<date>2025-04-29T17:40:13Z</date>
+	<date>2025-12-13T20:41:02Z</date>
 	<key>pfm_macos_min</key>
 	<string>10.12</string>
 	<key>pfm_platforms</key>
@@ -6094,6 +6094,6 @@ UrlbarInterventions Don't offer Firefox specific suggestions in the URL bar. (Fi
 	<key>pfm_user_approved</key>
 	<false/>
 	<key>pfm_version</key>
-	<integer>15</integer>
+	<integer>16</integer>
 </dict>
 </plist>
