@@ -15,7 +15,7 @@
 	<key>pfm_ios_min</key>
 	<string>14.0</string>
 	<key>pfm_last_modified</key>
-	<date>2025-11-05T14:06:39Z</date>
+	<date>2025-12-16T09:08:35Z</date>
 	<key>pfm_macos_min</key>
 	<string>10.12</string>
 	<key>pfm_platforms</key>
@@ -147,6 +147,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<array>
 						<string>Accessibility</string>
 						<string>ActionButton</string>
+						<string>AgeAssurance</string>
 						<string>AgeBasedSafetySettings</string>
 						<string>Android</string>
 						<string>Appearance</string>
@@ -197,6 +198,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<array>
 						<string>Accessibility</string>
 						<string>Action Button</string>
+						<string>Age Assurance</string>
 						<string>Age-Based Safety Settings</string>
 						<string>Android</string>
 						<string>Appearance</string>
