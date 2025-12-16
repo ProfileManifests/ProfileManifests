@@ -1420,7 +1420,7 @@
 		<key>com.apple.DirectoryService.managed</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-09-17T09:38:09Z</date>
+			<date>2025-12-10T12:16:57Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.DirectoryService.managed.plist</string>
 			<key>version</key>
@@ -1645,7 +1645,7 @@
 		<key>com.apple.applicationaccess.new</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-09-17T09:38:09Z</date>
+			<date>2025-12-10T12:16:57Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.applicationaccess.new.plist</string>
 			<key>version</key>
@@ -1690,7 +1690,7 @@
 		<key>com.apple.carddav.account</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-08-15T19:32:34Z</date>
+			<date>2025-12-10T12:16:57Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.carddav.account.plist</string>
 			<key>version</key>
@@ -1699,7 +1699,7 @@
 		<key>com.apple.cellular</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-09-17T09:38:09Z</date>
+			<date>2025-12-10T12:16:57Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.cellular.plist</string>
 			<key>version</key>
@@ -1726,7 +1726,7 @@
 		<key>com.apple.configurationprofile.identification</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-09-17T09:38:09Z</date>
+			<date>2025-12-10T12:16:57Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.configurationprofile.identification.plist</string>
 			<key>version</key>
@@ -1780,7 +1780,7 @@
 		<key>com.apple.dock</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-09-17T09:38:09Z</date>
+			<date>2025-12-10T12:16:57Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.dock.plist</string>
 			<key>version</key>
@@ -1960,7 +1960,7 @@
 		<key>com.apple.loginwindow</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-11-05T14:06:39Z</date>
+			<date>2025-12-10T12:16:57Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.loginwindow.plist</string>
 			<key>version</key>
@@ -2095,7 +2095,7 @@
 		<key>com.apple.screensaver</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-11-05T14:06:39Z</date>
+			<date>2025-12-10T12:16:57Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.screensaver.plist</string>
 			<key>version</key>
@@ -2329,7 +2329,7 @@
 		<key>com.apple.systempreferences</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-09-17T09:38:09Z</date>
+			<date>2025-12-10T12:16:57Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.systempreferences.plist</string>
 			<key>version</key>
@@ -2454,6 +2454,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2025-12-09T13:16:47Z</date>
+	<date>2025-12-13T22:45:17Z</date>
 </dict>
 </plist>
