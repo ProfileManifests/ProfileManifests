@@ -11,7 +11,7 @@
 	<key>pfm_interaction</key>
 	<string>combined</string>
 	<key>pfm_last_modified</key>
-	<date>2025-09-17T09:38:09Z</date>
+	<date>2025-12-16T09:08:35Z</date>
 	<key>pfm_macos_min</key>
 	<string>10.14</string>
 	<key>pfm_platforms</key>
@@ -132,6 +132,8 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				<dict>
 					<key>pfm_description</key>
 					<string>Specifies the policies for the app via the Accessibility subsystem.</string>
+					<key>pfm_macos_deprecated</key>
+					<string>26.2</string>
 					<key>pfm_macos_min</key>
 					<string>10.14</string>
 					<key>pfm_name</key>
