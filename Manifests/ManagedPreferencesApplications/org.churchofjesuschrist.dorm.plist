@@ -24,7 +24,7 @@
 	<!-- *************************** REQUIRED KEYS *************************** -->
 
 	<key>pfm_description</key>
-	<string>Configures DDM OS Reminder preferences</string>
+	<string>Configures DDM OS Reminder message preferences</string>
 
 	<key>pfm_domain</key>
 	<string>org.churchofjesuschrist.dorm</string>
@@ -33,7 +33,7 @@
 	<integer>1</integer>
 
 	<key>pfm_last_modified</key>
-	<date>2025-12-10T00:00:00Z</date>
+	<date>2025-12-14T00:00:00Z</date>
 
 	<key>pfm_title</key>
 	<string>DDM OS Reminder</string>
@@ -235,6 +235,20 @@
 			<string>Days of Excessive Uptime Warning</string>
 			<key>pfm_description</key>
 			<string>Number of days of excessive uptime before warning the user.</string>
+			<key>pfm_default</key>
+			<integer>1</integer>
+		</dict>
+
+		<!-- MinimumDiskFreePercentage -->
+		<dict>
+			<key>pfm_name</key>
+			<string>MinimumDiskFreePercentage</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+			<key>pfm_title</key>
+			<string>Minimum Disk Free Percentage</string>
+			<key>pfm_description</key>
+			<string>Percent of free disk space required before warning the user.</string>
 			<key>pfm_default</key>
 			<integer>1</integer>
 		</dict>
@@ -461,6 +475,20 @@
 			<string>Markdown-formatted text displayed in the dialog.</string>
 			<key>pfm_default</key>
 			<string>&lt;br&gt;&lt;br&gt;**Note:** Your Mac has been powered-on for **${uptimeHumanReadable}**. For more reliable results, please manually restart your Mac before proceeding.</string>
+		</dict>
+
+		<!-- Disk Space Warning Message -->
+		<dict>
+			<key>pfm_name</key>
+			<string>Disk Space Warning Message</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_title</key>
+			<string>Excessive Uptime Warning Message</string>
+			<key>pfm_description</key>
+			<string>Markdown-formatted text displayed in the dialog.</string>
+			<key>pfm_default</key>
+		<string>&lt;br&gt;&lt;br&gt;Sample **Note:** Your Mac has only **{diskSpaceHumanReadable}**, which may prevent this macOS {titleMessageUpdateOrUpgrade:l}.</string>
 		</dict>
 
 		<!-- Message -->
