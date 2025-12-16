@@ -2,54 +2,24 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-
-	<!-- *************************** OPTIONAL KEYS *************************** -->
-
 	<key>pfm_app_url</key>
 	<string>https://github.com/erikberglund/ProfileCreator</string>
-
+	<key>pfm_description</key>
+	<string>Configures DDM OS Reminder message preferences</string>
 	<key>pfm_documentation_url</key>
 	<string>https://github.com/erikberglund/ProfileManifests/wiki/Manifest-Format</string>
-
-	<key>pfm_targets</key>
-	<array>
-		<string>system</string>
-	</array>
-
+	<key>pfm_domain</key>
+	<string>org.churchofjesuschrist.dorm</string>
+	<key>pfm_format_version</key>
+	<integer>1</integer>
+	<key>pfm_last_modified</key>
+	<date>2025-12-14T00:00:00Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
 	</array>
-
-	<!-- *************************** REQUIRED KEYS *************************** -->
-
-	<key>pfm_description</key>
-	<string>Configures DDM OS Reminder message preferences</string>
-
-	<key>pfm_domain</key>
-	<string>org.churchofjesuschrist.dorm</string>
-
-	<key>pfm_format_version</key>
-	<integer>1</integer>
-
-	<key>pfm_last_modified</key>
-	<date>2025-12-14T00:00:00Z</date>
-
-	<key>pfm_title</key>
-	<string>DDM OS Reminder</string>
-
-	<key>pfm_unique</key>
-	<false/>
-
-	<key>pfm_version</key>
-	<integer>1</integer>
-
 	<key>pfm_subkeys</key>
 	<array>
-
-		<!-- *************************** BASE PAYLOAD KEYS *************************** -->
-
-		<!-- PayloadDescription -->
 		<dict>
 			<key>pfm_default</key>
 			<string>Configures DDM OS Reminder preferences</string>
@@ -64,8 +34,6 @@
 			<key>pfm_type</key>
 			<string>string</string>
 		</dict>
-
-		<!-- PayloadDisplayName -->
 		<dict>
 			<key>pfm_default</key>
 			<string>DDM OS Reminder</string>
@@ -82,8 +50,6 @@
 			<key>pfm_type</key>
 			<string>string</string>
 		</dict>
-
-		<!-- PayloadIdentifier -->
 		<dict>
 			<key>pfm_default</key>
 			<string>org.churchofjesuschrist.dorm</string>
@@ -100,8 +66,6 @@
 			<key>pfm_type</key>
 			<string>string</string>
 		</dict>
-
-		<!-- PayloadType -->
 		<dict>
 			<key>pfm_default</key>
 			<string>org.churchofjesuschrist.dorm</string>
@@ -118,8 +82,6 @@
 			<key>pfm_type</key>
 			<string>string</string>
 		</dict>
-
-		<!-- PayloadUUID -->
 		<dict>
 			<key>pfm_description</key>
 			<string>Unique identifier for the payload (format 01234567-89AB-CDEF-0123-456789ABCDEF)</string>
@@ -136,8 +98,6 @@
 			<key>pfm_type</key>
 			<string>string</string>
 		</dict>
-
-		<!-- PayloadVersion -->
 		<dict>
 			<key>pfm_default</key>
 			<integer>1</integer>
@@ -154,8 +114,6 @@
 			<key>pfm_type</key>
 			<string>integer</string>
 		</dict>
-
-		<!-- PayloadOrganization -->
 		<dict>
 			<key>pfm_description</key>
 			<string>This value describes the issuing organization of the profile, as displayed to the user.</string>
@@ -166,387 +124,340 @@
 			<key>pfm_type</key>
 			<string>string</string>
 		</dict>
-
-		<!-- *************************** APPLICATION KEYS *************************** -->
-
-		<!-- ScriptLog -->
 		<dict>
-			<key>pfm_name</key>
-			<string>ScriptLog</string>
-			<key>pfm_type</key>
-			<string>string</string>
-			<key>pfm_title</key>
-			<string>Script Log Path</string>
-			<key>pfm_description</key>
-			<string>Path to the log file for the DDM reminder script.</string>
 			<key>pfm_default</key>
 			<string>/var/log/org.churchofjesuschrist.log</string>
-		</dict>
-
-		<!-- DaysBeforeDeadlineDisplayReminder -->
-		<dict>
-			<key>pfm_name</key>
-			<string>DaysBeforeDeadlineDisplayReminder</string>
-			<key>pfm_type</key>
-			<string>integer</string>
-			<key>pfm_title</key>
-			<string>Days Before Deadline: Display Reminder</string>
 			<key>pfm_description</key>
-			<string>Number of days before the deadline when reminders start being displayed.</string>
+			<string>Path to the log file for the DDM reminder script.</string>
+			<key>pfm_name</key>
+			<string>ScriptLog</string>
+			<key>pfm_title</key>
+			<string>Script Log Path</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
 			<key>pfm_default</key>
 			<integer>14</integer>
-		</dict>
-
-		<!-- DaysBeforeDeadlineBlurscreen -->
-		<dict>
+			<key>pfm_description</key>
+			<string>Number of days before the deadline when reminders start being displayed.</string>
 			<key>pfm_name</key>
-			<string>DaysBeforeDeadlineBlurscreen</string>
+			<string>DaysBeforeDeadlineDisplayReminder</string>
+			<key>pfm_title</key>
+			<string>Days Before Deadline: Display Reminder</string>
 			<key>pfm_type</key>
 			<string>integer</string>
-			<key>pfm_title</key>
-			<string>Days Before Deadline: Blur Screen</string>
-			<key>pfm_description</key>
-			<string>Number of days before the deadline when blur-screen enforcement starts.</string>
+		</dict>
+		<dict>
 			<key>pfm_default</key>
 			<integer>3</integer>
-		</dict>
-
-		<!-- DaysBeforeDeadlineHidingButton2 -->
-		<dict>
+			<key>pfm_description</key>
+			<string>Number of days before the deadline when blur-screen enforcement starts.</string>
 			<key>pfm_name</key>
-			<string>DaysBeforeDeadlineHidingButton2</string>
+			<string>DaysBeforeDeadlineBlurscreen</string>
+			<key>pfm_title</key>
+			<string>Days Before Deadline: Blur Screen</string>
 			<key>pfm_type</key>
 			<string>integer</string>
-			<key>pfm_title</key>
-			<string>Days Before Deadline: Hide Defer Button</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<integer>1</integer>
 			<key>pfm_description</key>
 			<string>Number of days before the deadline when the secondary button is hidden.</string>
-			<key>pfm_default</key>
-			<integer>1</integer>
-		</dict>
-
-		<!-- DaysOfExcessiveUptimeWarning -->
-		<dict>
 			<key>pfm_name</key>
-			<string>DaysOfExcessiveUptimeWarning</string>
+			<string>DaysBeforeDeadlineHidingButton2</string>
+			<key>pfm_title</key>
+			<string>Days Before Deadline: Hide Defer Button</string>
 			<key>pfm_type</key>
 			<string>integer</string>
-			<key>pfm_title</key>
-			<string>Days of Excessive Uptime Warning</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<integer>1</integer>
 			<key>pfm_description</key>
 			<string>Number of days of excessive uptime before warning the user.</string>
-			<key>pfm_default</key>
-			<integer>1</integer>
-		</dict>
-
-		<!-- MinimumDiskFreePercentage -->
-		<dict>
 			<key>pfm_name</key>
-			<string>MinimumDiskFreePercentage</string>
+			<string>DaysOfExcessiveUptimeWarning</string>
+			<key>pfm_title</key>
+			<string>Days of Excessive Uptime Warning</string>
 			<key>pfm_type</key>
 			<string>integer</string>
-			<key>pfm_title</key>
-			<string>Minimum Disk Free Percentage</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<integer>1</integer>
 			<key>pfm_description</key>
 			<string>Percent of free disk space required before warning the user.</string>
-			<key>pfm_default</key>
-			<integer>1</integer>
-		</dict>
-
-		<!-- MeetingDelay -->
-		<dict>
 			<key>pfm_name</key>
-			<string>MeetingDelay</string>
+			<string>MinimumDiskFreePercentage</string>
+			<key>pfm_title</key>
+			<string>Minimum Disk Free Percentage</string>
 			<key>pfm_type</key>
 			<string>integer</string>
-			<key>pfm_title</key>
-			<string>Meeting Delay (Minutes)</string>
-			<key>pfm_description</key>
-			<string>Delay in minutes before enforcing reminders around meetings.</string>
+		</dict>
+		<dict>
 			<key>pfm_default</key>
 			<integer>75</integer>
-		</dict>
-
-		<!-- OrganizationOverlayIconURL -->
-		<dict>
-			<key>pfm_name</key>
-			<string>OrganizationOverlayIconURL</string>
-			<key>pfm_type</key>
-			<string>string</string>
-			<key>pfm_title</key>
-			<string>Organization Overlay Icon URL</string>
 			<key>pfm_description</key>
-			<string>URL to the organization overlay icon image.</string>
+			<string>Delay in minutes before enforcing reminders around meetings.</string>
+			<key>pfm_name</key>
+			<string>MeetingDelay</string>
+			<key>pfm_title</key>
+			<string>Meeting Delay (Minutes)</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+		</dict>
+		<dict>
 			<key>pfm_default</key>
 			<string>https://usw2.ics.services.jamfcloud.com/icon/hash_4804203ac36cbd7c83607487f4719bd4707f2e283500f54428153af17da082e2</string>
-		</dict>
-
-		<!-- SwapOverlayAndLogo -->
-		<dict>
-			<key>pfm_name</key>
-			<string>SwapOverlayAndLogo</string>
-			<key>pfm_type</key>
-			<string>boolean</string>
-			<key>pfm_title</key>
-			<string>Swap Overlay And Logo</string>
 			<key>pfm_description</key>
-			<string>Whether to swap the overlay icon and primary logo positions.</string>
+			<string>URL to the organization overlay icon image.</string>
+			<key>pfm_name</key>
+			<string>OrganizationOverlayIconURL</string>
+			<key>pfm_title</key>
+			<string>Organization Overlay Icon URL</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
 			<key>pfm_default</key>
 			<false/>
-		</dict>
-
-		<!-- DateFormatDeadlineHumanReadable -->
-		<dict>
-			<key>pfm_name</key>
-			<string>DateFormatDeadlineHumanReadable</string>
-			<key>pfm_type</key>
-			<string>string</string>
-			<key>pfm_title</key>
-			<string>Deadline Date Format (Human Readable)</string>
 			<key>pfm_description</key>
-			<string>strftime format string used to render the deadline date for users.</string>
+			<string>Whether to swap the overlay icon and primary logo positions.</string>
+			<key>pfm_name</key>
+			<string>SwapOverlayAndLogo</string>
+			<key>pfm_title</key>
+			<string>Swap Overlay And Logo</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
 			<key>pfm_default</key>
 			<string>+%a, %d-%b-%Y, %-l:%M %p</string>
-		</dict>
-
-		<!-- SupportTeamName -->
-		<dict>
+			<key>pfm_description</key>
+			<string>strftime format string used to render the deadline date for users.</string>
 			<key>pfm_name</key>
-			<string>SupportTeamName</string>
+			<string>DateFormatDeadlineHumanReadable</string>
+			<key>pfm_title</key>
+			<string>Deadline Date Format (Human Readable)</string>
 			<key>pfm_type</key>
 			<string>string</string>
-			<key>pfm_title</key>
-			<string>Support Team Name</string>
-			<key>pfm_description</key>
-			<string>Display name of the support team.</string>
+		</dict>
+		<dict>
 			<key>pfm_default</key>
 			<string>IT Support</string>
-		</dict>
-
-		<!-- SupportTeamPhone -->
-		<dict>
+			<key>pfm_description</key>
+			<string>Display name of the support team.</string>
 			<key>pfm_name</key>
-			<string>SupportTeamPhone</string>
+			<string>SupportTeamName</string>
+			<key>pfm_title</key>
+			<string>Support Team Name</string>
 			<key>pfm_type</key>
 			<string>string</string>
-			<key>pfm_title</key>
-			<string>Support Team Phone</string>
-			<key>pfm_description</key>
-			<string>Phone number for support.</string>
+		</dict>
+		<dict>
 			<key>pfm_default</key>
 			<string>+1 (801) 555-1212</string>
-		</dict>
-
-		<!-- SupportTeamEmail -->
-		<dict>
+			<key>pfm_description</key>
+			<string>Phone number for support.</string>
 			<key>pfm_name</key>
-			<string>SupportTeamEmail</string>
+			<string>SupportTeamPhone</string>
+			<key>pfm_title</key>
+			<string>Support Team Phone</string>
 			<key>pfm_type</key>
 			<string>string</string>
-			<key>pfm_title</key>
-			<string>Support Team Email</string>
-			<key>pfm_description</key>
-			<string>Email address for support.</string>
+		</dict>
+		<dict>
 			<key>pfm_default</key>
 			<string>rescue@domain.org</string>
-		</dict>
-
-		<!-- SupportTeamWebsite -->
-		<dict>
+			<key>pfm_description</key>
+			<string>Email address for support.</string>
 			<key>pfm_name</key>
-			<string>SupportTeamWebsite</string>
+			<string>SupportTeamEmail</string>
+			<key>pfm_title</key>
+			<string>Support Team Email</string>
 			<key>pfm_type</key>
 			<string>string</string>
-			<key>pfm_title</key>
-			<string>Support Team Website</string>
-			<key>pfm_description</key>
-			<string>Website URL for support.</string>
+		</dict>
+		<dict>
 			<key>pfm_default</key>
 			<string>https://support.domain.org</string>
-		</dict>
-
-		<!-- SupportKB -->
-		<dict>
+			<key>pfm_description</key>
+			<string>Website URL for support.</string>
 			<key>pfm_name</key>
-			<string>SupportKB</string>
+			<string>SupportTeamWebsite</string>
+			<key>pfm_title</key>
+			<string>Support Team Website</string>
 			<key>pfm_type</key>
 			<string>string</string>
-			<key>pfm_title</key>
-			<string>Support KB Identifier</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>KB8675309</string>
 			<key>pfm_description</key>
 			<string>Knowledge base article identifier.</string>
-			<key>pfm_default</key>
-			<string>KB8675309</string>
-		</dict>
-
-		<!-- InfoButtonAction -->
-		<dict>
 			<key>pfm_name</key>
-			<string>InfoButtonAction</string>
+			<string>SupportKB</string>
+			<key>pfm_title</key>
+			<string>Support KB Identifier</string>
 			<key>pfm_type</key>
 			<string>string</string>
-			<key>pfm_title</key>
-			<string>Info Button Action URL</string>
-			<key>pfm_description</key>
-			<string>URL opened when the info button is clicked.</string>
+		</dict>
+		<dict>
 			<key>pfm_default</key>
 			<string>https://support.apple.com/108382</string>
-		</dict>
-
-		<!-- SupportKBURL -->
-		<dict>
+			<key>pfm_description</key>
+			<string>URL opened when the info button is clicked.</string>
 			<key>pfm_name</key>
-			<string>SupportKBURL</string>
+			<string>InfoButtonAction</string>
+			<key>pfm_title</key>
+			<string>Info Button Action URL</string>
 			<key>pfm_type</key>
 			<string>string</string>
-			<key>pfm_title</key>
-			<string>Support KB Markdown Link</string>
-			<key>pfm_description</key>
-			<string>Markdown-formatted link to the support knowledge base article.</string>
+		</dict>
+		<dict>
 			<key>pfm_default</key>
 			<string>[108382](https://support.apple.com/108382)</string>
-		</dict>
-
-		<!-- Title -->
-		<dict>
+			<key>pfm_description</key>
+			<string>Markdown-formatted link to the support knowledge base article.</string>
 			<key>pfm_name</key>
-			<string>Title</string>
+			<string>SupportKBURL</string>
+			<key>pfm_title</key>
+			<string>Support KB Markdown Link</string>
 			<key>pfm_type</key>
 			<string>string</string>
-			<key>pfm_title</key>
-			<string>Dialog Title</string>
-			<key>pfm_description</key>
-			<string>Title text displayed at the top of the DDM dialog.</string>
+		</dict>
+		<dict>
 			<key>pfm_default</key>
 			<string>macOS {titleMessageUpdateOrUpgrade} Required</string>
-		</dict>
-
-		<!-- Button1Text -->
-		<dict>
+			<key>pfm_description</key>
+			<string>Title text displayed at the top of the DDM dialog.</string>
 			<key>pfm_name</key>
-			<string>Button1Text</string>
+			<string>Title</string>
+			<key>pfm_title</key>
+			<string>Dialog Title</string>
 			<key>pfm_type</key>
 			<string>string</string>
-			<key>pfm_title</key>
-			<string>Primary Button Text</string>
-			<key>pfm_description</key>
-			<string>Label for the primary action button.</string>
+		</dict>
+		<dict>
 			<key>pfm_default</key>
 			<string>Open Software Update</string>
-		</dict>
-
-		<!-- Button2Text -->
-		<dict>
+			<key>pfm_description</key>
+			<string>Label for the primary action button.</string>
 			<key>pfm_name</key>
-			<string>Button2Text</string>
+			<string>Button1Text</string>
+			<key>pfm_title</key>
+			<string>Primary Button Text</string>
 			<key>pfm_type</key>
 			<string>string</string>
-			<key>pfm_title</key>
-			<string>Secondary Button Text</string>
-			<key>pfm_description</key>
-			<string>Label for the secondary (remind later) button.</string>
+		</dict>
+		<dict>
 			<key>pfm_default</key>
 			<string>Remind Me Later</string>
-		</dict>
-
-		<!-- InfoButtonText -->
-		<dict>
+			<key>pfm_description</key>
+			<string>Label for the secondary (remind later) button.</string>
 			<key>pfm_name</key>
-			<string>InfoButtonText</string>
+			<string>Button2Text</string>
+			<key>pfm_title</key>
+			<string>Secondary Button Text</string>
 			<key>pfm_type</key>
 			<string>string</string>
-			<key>pfm_title</key>
-			<string>Info Button Text</string>
-			<key>pfm_description</key>
-			<string>Label for the info button.</string>
+		</dict>
+		<dict>
 			<key>pfm_default</key>
 			<string>KB8675309</string>
-		</dict>
-
-		<!-- Excessive Uptime Warning Message -->
-		<dict>
+			<key>pfm_description</key>
+			<string>Label for the info button.</string>
 			<key>pfm_name</key>
-			<string>Excessive Uptime Warning Message</string>
+			<string>InfoButtonText</string>
+			<key>pfm_title</key>
+			<string>Info Button Text</string>
 			<key>pfm_type</key>
 			<string>string</string>
-			<key>pfm_title</key>
-			<string>Excessive Uptime Warning Message</string>
-			<key>pfm_description</key>
-			<string>Markdown-formatted text displayed in the dialog.</string>
+		</dict>
+		<dict>
 			<key>pfm_default</key>
 			<string>&lt;br&gt;&lt;br&gt;**Note:** Your Mac has been powered-on for **${uptimeHumanReadable}**. For more reliable results, please manually restart your Mac before proceeding.</string>
-		</dict>
-
-		<!-- Disk Space Warning Message -->
-		<dict>
-			<key>pfm_name</key>
-			<string>Disk Space Warning Message</string>
-			<key>pfm_type</key>
-			<string>string</string>
-			<key>pfm_title</key>
-			<string>Excessive Uptime Warning Message</string>
 			<key>pfm_description</key>
 			<string>Markdown-formatted text displayed in the dialog.</string>
-			<key>pfm_default</key>
-		<string>&lt;br&gt;&lt;br&gt;Sample **Note:** Your Mac has only **{diskSpaceHumanReadable}**, which may prevent this macOS {titleMessageUpdateOrUpgrade:l}.</string>
-		</dict>
-
-		<!-- Message -->
-		<dict>
 			<key>pfm_name</key>
-			<string>Message</string>
+			<string>Excessive Uptime Warning Message</string>
+			<key>pfm_title</key>
+			<string>Excessive Uptime Warning Message</string>
 			<key>pfm_type</key>
 			<string>string</string>
-			<key>pfm_title</key>
-			<string>Dialog Message</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>&lt;br&gt;&lt;br&gt;Sample **Note:** Your Mac has only **{diskSpaceHumanReadable}**, which may prevent this macOS {titleMessageUpdateOrUpgrade:l}.</string>
 			<key>pfm_description</key>
-			<string>Markdown-formatted message body displayed in the dialog.</string>
+			<string>Markdown-formatted text displayed in the dialog.</string>
+			<key>pfm_name</key>
+			<string>Disk Space Warning Message</string>
+			<key>pfm_title</key>
+			<string>Excessive Uptime Warning Message</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
 			<key>pfm_default</key>
 			<string>**A required macOS ${titleMessageUpdateOrUpgrade:l} is now available**&lt;br&gt;&lt;br&gt;Happy $( date +'%A' ), ${loggedInUserFirstname}!&lt;br&gt;&lt;br&gt;Please ${titleMessageUpdateOrUpgrade:l} to macOS **${ddmVersionString}** to ensure your Mac remains secure and compliant with organizational policies.&lt;br&gt;&lt;br&gt;To perform the ${titleMessageUpdateOrUpgrade:l} now, click **${button1text}**, review the on-screen instructions, then click **${softwareUpdateButtonText}**.&lt;br&gt;&lt;br&gt;If you are unable to perform this ${titleMessageUpdateOrUpgrade:l} now, click **${button2text}** to be reminded again later.&lt;br&gt;&lt;br&gt;However, your device **will automatically restart and ${titleMessageUpdateOrUpgrade:l}** on **${ddmEnforcedInstallDateHumanReadable}** if you have not ${titleMessageUpdateOrUpgrade:l}d before the deadline.${excessiveUptimeWarningMessage}&lt;br&gt;&lt;br&gt;For assistance, please contact **${supportTeamName}** by clicking the (?) button in the bottom, right-hand corner.</string>
-		</dict>
-
-		<!-- InfoBox -->
-		<dict>
+			<key>pfm_description</key>
+			<string>Markdown-formatted message body displayed in the dialog.</string>
 			<key>pfm_name</key>
-			<string>InfoBox</string>
+			<string>Message</string>
+			<key>pfm_title</key>
+			<string>Dialog Message</string>
 			<key>pfm_type</key>
 			<string>string</string>
-			<key>pfm_title</key>
-			<string>Info Box Content</string>
-			<key>pfm_description</key>
-			<string>Markdown-formatted info box content showing current and required versions and deadline.</string>
+		</dict>
+		<dict>
 			<key>pfm_default</key>
 			<string>**Current:** {installedmacOSVersion}&lt;br&gt;&lt;br&gt;**Required:** {ddmVersionString}&lt;br&gt;&lt;br&gt;**Deadline:** {ddmVersionStringDeadlineHumanReadable}&lt;br&gt;&lt;br&gt;**Day(s) Remaining:** {ddmVersionStringDaysRemaining}</string>
-		</dict>
-
-		<!-- HelpMessage -->
-		<dict>
+			<key>pfm_description</key>
+			<string>Markdown-formatted info box content showing current and required versions and deadline.</string>
 			<key>pfm_name</key>
-			<string>HelpMessage</string>
+			<string>InfoBox</string>
+			<key>pfm_title</key>
+			<string>Info Box Content</string>
 			<key>pfm_type</key>
 			<string>string</string>
-			<key>pfm_title</key>
-			<string>Help Message</string>
-			<key>pfm_description</key>
-			<string>Markdown-formatted help text including support, user, and computer information.</string>
+		</dict>
+		<dict>
 			<key>pfm_default</key>
 			<string>For assistance, please contact: **{supportTeamName}**&lt;br&gt;- **Telephone:** {supportTeamPhone}&lt;br&gt;- **Email:** {supportTeamEmail}&lt;br&gt;- **Website:** {supportTeamWebsite}&lt;br&gt;- **Knowledge Base Article:** {supportKBURL}&lt;br&gt;&lt;br&gt;**User Information:**&lt;br&gt;- **Full Name:** {userfullname}&lt;br&gt;- **User Name:** {username}&lt;br&gt;&lt;br&gt;**Computer Information:**&lt;br&gt;- **Computer Name:** {computername}&lt;br&gt;- **Serial Number:** {serialnumber}&lt;br&gt;- **macOS:** {osversion}&lt;br&gt;&lt;br&gt;**Script Information:**&lt;br&gt;- **Dialog:** {dialogVersion}&lt;br&gt;- **Script:** {scriptVersion}&lt;br&gt;</string>
-		</dict>
-
-		<!-- HelpImage -->
-		<dict>
+			<key>pfm_description</key>
+			<string>Markdown-formatted help text including support, user, and computer information.</string>
 			<key>pfm_name</key>
-			<string>HelpImage</string>
+			<string>HelpMessage</string>
+			<key>pfm_title</key>
+			<string>Help Message</string>
 			<key>pfm_type</key>
 			<string>string</string>
-			<key>pfm_title</key>
-			<string>Help Image</string>
-			<key>pfm_description</key>
-			<string>Help image configuration, such as QR code pointing to the info button action.</string>
+		</dict>
+		<dict>
 			<key>pfm_default</key>
 			<string>qr={infobuttonaction}</string>
+			<key>pfm_description</key>
+			<string>Help image configuration, such as QR code pointing to the info button action.</string>
+			<key>pfm_name</key>
+			<string>HelpImage</string>
+			<key>pfm_title</key>
+			<string>Help Image</string>
+			<key>pfm_type</key>
+			<string>string</string>
 		</dict>
-
 	</array>
+	<key>pfm_targets</key>
+	<array>
+		<string>system</string>
+	</array>
+	<key>pfm_title</key>
+	<string>DDM OS Reminder</string>
+	<key>pfm_unique</key>
+	<false/>
+	<key>pfm_version</key>
+	<integer>1</integer>
 </dict>
 </plist>
