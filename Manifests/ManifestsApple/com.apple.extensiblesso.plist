@@ -17,7 +17,7 @@
 	<key>pfm_ios_min</key>
 	<string>13.0</string>
 	<key>pfm_last_modified</key>
-	<date>2025-11-05T14:06:39Z</date>
+	<date>2025-12-16T09:08:35Z</date>
 	<key>pfm_macos_min</key>
 	<string>10.15</string>
 	<key>pfm_platforms</key>
@@ -2674,6 +2674,18 @@ kerberosDefault - The default Kerberos processes for selecting credentials is us
 					<string>string</string>
 				</dict>
 				<dict>
+					<key>pfm_description</key>
+					<string>The 'PayloadUUID' of a certificate payload for the issuer certificate of the `Terminal` identity of the access key. Other specifications refer to the key as the "Reader CA Public Key". The key must be an elliptic curve key. Required if `NewUserAuthenticationMethods` includes `AccessKey`. The issuer of the Terminal identity of the access key needs to match this certificate, otherwise the device fails the authentication.</string>
+					<key>pfm_macos_min</key>
+					<string>26.2</string>
+					<key>pfm_name</key>
+					<string>AccessKeyReaderIssuerCertificateUUID</string>
+					<key>pfm_title</key>
+					<string>Access Key Reader Issuer Certificate UUID</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+				<dict>
 					<key>pfm_default</key>
 					<false/>
 					<key>pfm_description</key>
@@ -2774,6 +2786,6 @@ kerberosDefault - The default Kerberos processes for selecting credentials is us
 	<key>pfm_user_approved</key>
 	<true/>
 	<key>pfm_version</key>
-	<integer>9</integer>
+	<integer>10</integer>
 </dict>
 </plist>
