@@ -1222,6 +1222,15 @@
 			<key>version</key>
 			<integer>4</integer>
 		</dict>
+		<key>org.churchofjesuschrist.dorm</key>
+		<dict>
+			<key>modified</key>
+			<date>2025-12-14T00:00:00Z</date>
+			<key>path</key>
+			<string>Manifests/ManagedPreferencesApplications/org.churchofjesuschrist.dorm.plist</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 		<key>org.mozilla.firefox</key>
 		<dict>
 			<key>modified</key>
@@ -2436,6 +2445,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2025-12-17T16:24:22Z</date>
+	<date>2025-12-18T22:01:05Z</date>
 </dict>
 </plist>
