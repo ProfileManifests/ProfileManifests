@@ -320,6 +320,8 @@ If the value contains 'Disabled', the Device Health page isn't displayed in Okta
 			<string>boolean</string>
 		</dict>
 		<dict>
+			<key>pfm_default</key>
+			<string>2</string>
 			<key>pfm_description</key>
 			<string>Admins can use this value to customize the osquery timeout value and fine-tune device posture checks</string>
 			<key>pfm_documentation_url</key>
@@ -330,8 +332,6 @@ If the value contains 'Disabled', the Device Health page isn't displayed in Okta
 			<string>OS Query Custom Checks Timeouts</string>
 			<key>pfm_type</key>
 			<string>string</string>
-			<key>pfm_value_placeholder</key>
-			<string>2</string>
 		</dict>
 		<dict>
 			<key>pfm_description</key>
