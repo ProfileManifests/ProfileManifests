@@ -805,6 +805,13 @@
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/nl.root3.support.png</string>
 		</dict>
+		<key>org.churchofjesuschrist.dorm</key>
+		<dict>
+			<key>hash</key>
+			<string>90065ad24694c60e86affbf835cb3143</string>
+			<key>path</key>
+			<string>Icons/ManagedPreferencesApplications/org.churchofjesuschrist.dorm.png</string>
+		</dict>
 		<key>org.mozilla.firefox</key>
 		<dict>
 			<key>hash</key>
@@ -1573,6 +1580,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2025-12-13T22:45:17Z</date>
+	<date>2025-12-19T09:31:23Z</date>
 </dict>
 </plist>
