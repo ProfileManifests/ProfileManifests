@@ -171,8 +171,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				</array>
 				<key>Content Settings</key>
 				<array>
-					<string>PFC_SegmentedControl_ContentSettings</string>
-					<string>PdfLocalFileAccessAllowedForDomains</string>
 					<string>AutoSelectCertificateForUrls</string>
 					<string>CookiesAllowedForUrls</string>
 					<string>CookiesBlockedForUrls</string>
@@ -187,6 +185,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<string>DefaultNotificationsSetting</string>
 					<string>DefaultPluginsSetting</string>
 					<string>DefaultPopupsSetting</string>
+					<string>DefaultThirdPartyStoragePartitioningSetting</string>
 					<string>DefaultWebBluetoothGuardSetting</string>
 					<string>DefaultWebUsbGuardSetting</string>
 					<string>ImagesAllowedForUrls</string>
@@ -199,17 +198,18 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<string>LegacySameSiteCookieBehaviorEnabledForDomainList</string>
 					<string>NotificationsAllowedForUrls</string>
 					<string>NotificationsBlockedForUrls</string>
+					<string>PFC_SegmentedControl_ContentSettings</string>
+					<string>PdfLocalFileAccessAllowedForDomains</string>
 					<string>PluginsAllowedForUrls</string>
 					<string>PluginsBlockedForUrls</string>
 					<string>PopupsAllowedForUrls</string>
 					<string>PopupsBlockedForUrls</string>
 					<string>RegisteredProtocolHandlers</string>
+					<string>ThirdPartyStoragePartitioningBlockedForOrigins</string>
 					<string>WebDriverOverridesIncompatiblePolicies</string>
 					<string>WebUsbAllowDevicesForUrls</string>
 					<string>WebUsbAskForUrls</string>
 					<string>WebUsbBlockedForUrls</string>
-					<string>DefaultThirdPartyStoragePartitioningSetting</string>
-					<string>ThirdPartyStoragePartitioningBlockedForOrigins</string>
 				</array>
 				<key>Default Search Provider</key>
 				<array>
@@ -229,7 +229,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				</array>
 				<key>Extensions</key>
 				<array>
-					<string>ExtensionUnpublishedAvailability</string>
 					<string>BlockExternalExtensions</string>
 					<string>ExtensionAllowInsecureUpdates</string>
 					<string>ExtensionAllowedTypes</string>
@@ -241,6 +240,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<string>ExtensionInstallWhitelist</string>
 					<string>ExtensionManifestV2Availability</string>
 					<string>ExtensionSettings</string>
+					<string>ExtensionUnpublishedAvailability</string>
 				</array>
 				<key>Google Cast</key>
 				<array>
@@ -281,15 +281,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				</array>
 				<key>Misc.</key>
 				<array>
-					<string>HttpsUpgradesEnabled</string>
-					<string>GoogleSearchSidePanelEnabled</string>
-					<string>FileOrDirectoryPickerWithoutGestureAllowedForOrigins</string>
-					<string>EnterpriseProfileCreationKeepBrowsingData</string>
-					<string>EncryptedClientHelloEnabled</string>
-					<string>DomainReliabilityAllowed</string>
-					<string>AllowWebAuthnWithBrokenTlsCerts</string>
-					<string>RemoteDebuggingAllowed</string>
-					<string>StrictMimetypeCheckForWorkerScriptsEnabled</string>
 					<string>AbusiveExperienceInterventionEnforce</string>
 					<string>AccessibilityImageLabelsEnabled</string>
 					<string>AdsSettingForIntrusiveAdsSites</string>
@@ -301,6 +292,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<string>AllowOutdatedPlugins</string>
 					<string>AllowPopupsDuringPageUnload</string>
 					<string>AllowSyncXHRInPageDismissal</string>
+					<string>AllowWebAuthnWithBrokenTlsCerts</string>
 					<string>AllowedDomainsForApps</string>
 					<string>AlternateErrorPagesEnabled</string>
 					<string>AlwaysOpenPdfExternally</string>
@@ -355,6 +347,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<string>DiskCacheSize</string>
 					<string>DnsOverHttpsMode</string>
 					<string>DnsOverHttpsTemplates</string>
+					<string>DomainReliabilityAllowed</string>
 					<string>DownloadDirectory</string>
 					<string>DownloadRestrictions</string>
 					<string>EditBookmarksEnabled</string>
@@ -362,9 +355,12 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<string>EnableExperimentalPolicies</string>
 					<string>EnableOnlineRevocationChecks</string>
 					<string>EnabledPlugins</string>
+					<string>EncryptedClientHelloEnabled</string>
 					<string>EnterpriseHardwarePlatformAPIEnabled</string>
+					<string>EnterpriseProfileCreationKeepBrowsingData</string>
 					<string>EnterpriseRealTimeUrlCheckMode</string>
 					<string>ExternalProtocolDialogShowAlwaysOpenCheckbox</string>
+					<string>FileOrDirectoryPickerWithoutGestureAllowedForOrigins</string>
 					<string>ForceBrowserSignin</string>
 					<string>ForceEphemeralProfiles</string>
 					<string>ForceGoogleSafeSearch</string>
@@ -373,10 +369,12 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<string>ForceYouTubeRestrict</string>
 					<string>ForceYouTubeSafetyMode</string>
 					<string>GloballyScopeHTTPAuthCacheEnabled</string>
-					<string>HSTSPolicyBypassList</string>
+					<string>GoogleSearchSidePanelEnabled</string>
 					<string>HardwareAccelerationModeEnabled</string>
 					<string>HideWebStoreIcon</string>
+					<string>HSTSPolicyBypassList</string>
 					<string>Http09OnNonDefaultPortsEnabled</string>
+					<string>HttpsUpgradesEnabled</string>
 					<string>ImportAutofillFormData</string>
 					<string>ImportBookmarks</string>
 					<string>ImportHistory</string>
@@ -397,9 +395,9 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<string>MediaRecommendationsEnabled</string>
 					<string>MediaRouterCastAllowAllIPs</string>
 					<string>MetricsReportingEnabled</string>
+					<string>NetworkPredictionOptions</string>
 					<string>NTPCardsVisible</string>
 					<string>NTPCustomBackgroundEnabled</string>
-					<string>NetworkPredictionOptions</string>
 					<string>OverrideSecurityRestrictionsOnInsecureOrigin</string>
 					<string>PaymentMethodQueryEnabled</string>
 					<string>PolicyAtomicGroupsEnabled</string>
@@ -412,11 +410,10 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<string>QuicAllowed</string>
 					<string>RelaunchNotification</string>
 					<string>RelaunchNotificationPeriod</string>
+					<string>RemoteDebuggingAllowed</string>
 					<string>RestrictSigninToPattern</string>
 					<string>RunAllFlashInAllowMode</string>
 					<string>SafeBrowsingForTrustedSourcesEnabled</string>
-					<string>SSLErrorOverrideAllowed</string>
-					<string>SSLVersionMin</string>
 					<string>SafeSitesFilterBehavior</string>
 					<string>SavingBrowserHistoryDisabled</string>
 					<string>ScreenCaptureAllowed</string>
@@ -432,13 +429,16 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<string>SitePerProcess</string>
 					<string>SpellCheckServiceEnabled</string>
 					<string>SpellcheckEnabled</string>
+					<string>SSLErrorOverrideAllowed</string>
+					<string>SSLVersionMin</string>
+					<string>StrictMimetypeCheckForWorkerScriptsEnabled</string>
 					<string>StricterMixedContentTreatmentEnabled</string>
 					<string>SuppressUnsupportedOSWarning</string>
 					<string>SyncDisabled</string>
 					<string>SyncTypesListDisabled</string>
-					<string>TLS13HardeningForLocalAnchorsEnabled</string>
 					<string>TargetBlankImpliesNoOpener</string>
 					<string>TaskManagerEndProcessEnabled</string>
+					<string>TLS13HardeningForLocalAnchorsEnabled</string>
 					<string>TotalMemoryLimitMb</string>
 					<string>TranslateEnabled</string>
 					<string>URLAllowlist</string>
@@ -453,7 +453,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<string>UserFeedbackAllowed</string>
 					<string>VideoCaptureAllowed</string>
 					<string>VideoCaptureAllowedUrls</string>
-					<string>WPADQuickCheckEnabled</string>
 					<string>WebAppInstallForceList</string>
 					<string>WebComponentsV0Enabled</string>
 					<string>WebDriverOverridesIncompatiblePolicies</string>
@@ -461,6 +460,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<string>WebRtcEventLogCollectionAllowed</string>
 					<string>WebRtcLocalIpsAllowedUrls</string>
 					<string>WebRtcUdpPortRange</string>
+					<string>WPADQuickCheckEnabled</string>
 				</array>
 				<key>Native Messaging</key>
 				<array>
@@ -483,11 +483,11 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<string>DisablePrintPreview</string>
 					<string>PrintHeaderFooter</string>
 					<string>PrintPreviewUseSystemDefaultPrinter</string>
+					<string>PrinterPaperSizeDefault</string>
 					<string>PrinterTypeDenyList</string>
 					<string>PrintingAllowedBackgroundGraphicsModes</string>
 					<string>PrintingBackgroundGraphicsDefault</string>
 					<string>PrintingEnabled</string>
-					<string>PrinterPaperSizeDefault</string>
 				</array>
 				<key>Privacy Sandbox</key>
 				<array>
@@ -498,12 +498,12 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				</array>
 				<key>Proxy Server</key>
 				<array>
-					<string>ProxySettings</string>
 					<string>ProxyBypassList</string>
 					<string>ProxyMode</string>
 					<string>ProxyPacUrl</string>
 					<string>ProxyServer</string>
 					<string>ProxyServerMode</string>
+					<string>ProxySettings</string>
 				</array>
 				<key>Remote Access</key>
 				<array>
