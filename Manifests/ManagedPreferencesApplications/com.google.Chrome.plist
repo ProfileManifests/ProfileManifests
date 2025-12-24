@@ -403,6 +403,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<string>RelaunchNotificationPeriod</string>
 					<string>RestrictSigninToPattern</string>
 					<string>RunAllFlashInAllowMode</string>
+					<string>SafeBrowsingForTrustedSourcesEnabled</string>
 					<string>SSLErrorOverrideAllowed</string>
 					<string>SSLVersionMin</string>
 					<string>SafeSitesFilterBehavior</string>
@@ -6997,6 +6998,26 @@ If this setting is disabled or not set, Flash content from other origins or smal
 			<string>RunAllFlashInAllowMode</string>
 			<key>pfm_title</key>
 			<string>Extend Flash content setting to all content</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>61</string>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>Setting the policy to Enabled or leaving it unset means downloaded files are sent to be analyzed by Safe Browsing, even when it's from a trusted source.
+Setting the policy to Disabled means downloaded files won't be sent to be analyzed by Safe Browsing when it's from a trusted source.
+			</string>
+			<key>pfm_description_reference</key>
+			<string>These restrictions apply to downloads triggered from webpage content, as well as the Download link menu option. These restrictions don't apply to the save or download of the currently displayed page or to saving as PDF from the printing options.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://cloud.google.com/docs/chrome-enterprise/policies/?policy=SafeBrowsingForTrustedSourcesEnabled</string>
+			<key>pfm_name</key>
+			<string>SafeBrowsingForTrustedSourcesEnabled</string>
+			<key>pfm_title</key>
+			<string>Safe Browsing checks</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 		</dict>
