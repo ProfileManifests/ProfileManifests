@@ -281,6 +281,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				</array>
 				<key>Misc.</key>
 				<array>
+					<string>FileOrDirectoryPickerWithoutGestureAllowedForOrigins</string>
 					<string>EnterpriseProfileCreationKeepBrowsingData</string>
 					<string>EncryptedClientHelloEnabled</string>
 					<string>DomainReliabilityAllowed</string>
@@ -3397,6 +3398,34 @@ For more information on Internet Explorer's SiteList policy: https://docs.micros
 			<string>string</string>
 			<key>pfm_value_placeholder</key>
 			<string>http://example.com/sitelist.xml</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>113</string>
+			<key>pfm_description</key>
+			<string>This policy will allow file picker APIs without user gesture for specified origins</string>
+			<key>pfm_description_reference</key>
+			<string>For security reasons, the showOpenFilePicker(), showSaveFilePicker() and showDirectoryPicker() web APIs require a prior user gesture ("transient activation") to be called or will otherwise fail. With this policy set, admins can specify origins on which these APIs can be called without prior user gesture. If this policy is unset, all origins will require a prior user gesture to call these APIs.
+			</string>
+			<key>pfm_documentation_url</key>
+			<string>https://chromeenterprise.google/policies/#FileOrDirectoryPickerWithoutGestureAllowedForOrigins</string>
+			<key>pfm_name</key>
+			<string>FileOrDirectoryPickerWithoutGestureAllowedForOrigins</string>
+			<key>pfm_note</key>
+			<string>For detailed information on valid url patterns, please see https://chromeenterprise.google/policies/url-patterns/. * is not an accepted value for this policy.</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_type</key>
+					<string>string</string>
+					<key>pfm_value_placeholder</key>
+					<string>https://www.example.com</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>Allow file or directory picker APIs to be called without prior user gesture</string>
+			<key>pfm_type</key>
+			<string>array</string>
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
