@@ -1534,7 +1534,7 @@ If this policy is left not set the global default value will be used for all sit
 			<key>pfm_description_reference</key>
 			<string>Setting this policy allows the domains listed to access file:// URLs in the PDF Viewer. Adding to the policy allows the domain to access file:// URLs in the PDF Viewer. Removing from the policy disallows the domain from accessing file:// URLs in the PDF Viewer. Leaving the policy unset disallows all domains from accessing file:// URLs in the PDF Viewer.</string>
 			<key>pfm_documentation_url</key>
-			<string>https://cloud.google.com/docs/chrome-enterprise/policies/?policy=PdfLocalFileAccessAllowedForDomains</string>
+			<string>https://chromeenterprise.google/policies/#PdfLocalFileAccessAllowedForDomains</string>
 			<key>pfm_name</key>
 			<string>PdfLocalFileAccessAllowedForDomains</string>
 			<key>pfm_subkeys</key>
@@ -7242,7 +7242,7 @@ Setting the policy to Disabled means downloaded files won't be sent to be analyz
 			<key>pfm_description_reference</key>
 			<string>These restrictions apply to downloads triggered from webpage content, as well as the Download link menu option. These restrictions don't apply to the save or download of the currently displayed page or to saving as PDF from the printing options.</string>
 			<key>pfm_documentation_url</key>
-			<string>https://cloud.google.com/docs/chrome-enterprise/policies/?policy=SafeBrowsingForTrustedSourcesEnabled</string>
+			<string>https://chromeenterprise.google/policies/#SafeBrowsingForTrustedSourcesEnabled</string>
 			<key>pfm_name</key>
 			<string>SafeBrowsingForTrustedSourcesEnabled</string>
 			<key>pfm_title</key>
