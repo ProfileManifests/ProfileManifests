@@ -280,6 +280,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				</array>
 				<key>Misc.</key>
 				<array>
+					<string>RemoteDebuggingAllowed</string>
 					<string>StrictMimetypeCheckForWorkerScriptsEnabled</string>
 					<string>AbusiveExperienceInterventionEnforce</string>
 					<string>AccessibilityImageLabelsEnabled</string>
@@ -3366,6 +3367,23 @@ For more information on Internet Explorer's SiteList policy: https://docs.micros
 			<string>string</string>
 			<key>pfm_value_placeholder</key>
 			<string>http://example.com/sitelist.xml</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>93</string>
+			<key>pfm_description</key>
+			<string>Controls whether users may use remote debugging.</string>
+			<key>pfm_description_reference</key>
+			<string>If this policy is set to Enabled or not set, users may use remote debugging by specifying --remote-debugging-port and --remote-debugging-pipe command line switches. If this policy is set to Disabled, users are not allowed to use remote debugging.
+			</string>
+			<key>pfm_documentation_url</key>
+			<string>https://chromeenterprise.google/policies/#RemoteDebuggingAllowed</string>
+			<key>pfm_name</key>
+			<string>RemoteDebuggingAllowed</string>
+			<key>pfm_title</key>
+			<string>Allow remote debugging</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
