@@ -630,7 +630,7 @@ This policy is only effective when the machine is enrolled with CloudManagementE
 This policy can be overridden for specific URL patterns using the ClipboardAllowedForUrls and ClipboardBlockedForUrls policies.
 			</string>
 			<key>pfm_documentation_url</key>
-			<string>hhttps://chromeenterprise.google/policies/#DefaultClipboardSetting</string>
+			<string>https://chromeenterprise.google/policies/#DefaultClipboardSetting</string>
 			<key>pfm_name</key>
 			<string>DefaultClipboardSetting</string>
 			<key>pfm_range_list</key>
