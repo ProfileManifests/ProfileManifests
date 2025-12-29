@@ -901,11 +901,11 @@
 		<key>com.microsoft.wdav</key>
 		<dict>
 			<key>modified</key>
-			<date>2024-09-18T17:57:55Z</date>
+			<date>2025-12-13T20:41:02Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.microsoft.wdav.plist</string>
 			<key>version</key>
-			<integer>3</integer>
+			<integer>4</integer>
 		</dict>
 		<key>com.northpolesec.santa</key>
 		<dict>
@@ -2445,6 +2445,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2025-12-19T09:31:23Z</date>
+	<date>2025-12-29T13:53:42Z</date>
 </dict>
 </plist>
