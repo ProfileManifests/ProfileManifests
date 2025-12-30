@@ -1795,6 +1795,8 @@ The configuration for each extension is another dictionary that can contain the 
 			<key>pfm_subkeys</key>
 			<array>
 				<dict>
+					<key>pfm_app_min</key>
+					<string>144</string>
 					<key>pfm_default</key>
 					<false/>
 					<key>pfm_description</key>
@@ -1807,6 +1809,8 @@ The configuration for each extension is another dictionary that can contain the 
 					<string>boolean</string>
 				</dict>
 				<dict>
+					<key>pfm_app_min</key>
+					<string>144</string>
 					<key>pfm_default</key>
 					<false/>
 					<key>pfm_description</key>
@@ -1847,6 +1851,8 @@ The configuration for each extension is another dictionary that can contain the 
 					<string>boolean</string>
 				</dict>
 				<dict>
+					<key>pfm_app_min</key>
+					<string>144</string>
 					<key>pfm_default</key>
 					<false/>
 					<key>pfm_description</key>
