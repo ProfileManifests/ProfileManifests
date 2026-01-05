@@ -379,7 +379,7 @@
 		<key>com.apple.Compressor</key>
 		<dict>
 			<key>modified</key>
-			<date>2020-04-11T16:59:00Z</date>
+			<date>2026-01-05T08:56:20Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.apple.Compressor.plist</string>
 			<key>version</key>
@@ -397,7 +397,7 @@
 		<key>com.apple.FinalCut</key>
 		<dict>
 			<key>modified</key>
-			<date>2023-08-15T08:00:00Z</date>
+			<date>2026-01-05T08:56:20Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.apple.FinalCut.plist</string>
 			<key>version</key>
@@ -406,7 +406,7 @@
 		<key>com.apple.TextEdit</key>
 		<dict>
 			<key>modified</key>
-			<date>2023-08-15T08:00:00Z</date>
+			<date>2026-01-05T08:56:20Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.apple.TextEdit.plist</string>
 			<key>version</key>
@@ -424,7 +424,7 @@
 		<key>com.apple.iMovieApp</key>
 		<dict>
 			<key>modified</key>
-			<date>2023-08-15T08:00:00Z</date>
+			<date>2026-01-05T08:56:20Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.apple.iMovieApp.plist</string>
 			<key>version</key>
@@ -442,7 +442,7 @@
 		<key>com.apple.motionapp</key>
 		<dict>
 			<key>modified</key>
-			<date>2019-09-09T19:00:00Z</date>
+			<date>2026-01-05T08:56:20Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.apple.motionapp.plist</string>
 			<key>version</key>
@@ -460,11 +460,11 @@
 		<key>com.brave.Browser</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-01-15T11:02:30Z</date>
+			<date>2025-12-13T20:54:35Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.brave.Browser.plist</string>
 			<key>version</key>
-			<integer>16</integer>
+			<integer>17</integer>
 		</dict>
 		<key>com.citrix.receiver.nomas</key>
 		<dict>
@@ -514,7 +514,7 @@
 		<key>com.fxfactory.FxFactory</key>
 		<dict>
 			<key>modified</key>
-			<date>2020-08-21T08:52:31Z</date>
+			<date>2026-01-05T08:56:20Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.fxfactory.FxFactory.plist</string>
 			<key>version</key>
@@ -568,11 +568,11 @@
 		<key>com.google.Chrome</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-10-14T00:00:00Z</date>
+			<date>2025-12-13T20:41:02Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.google.Chrome.plist</string>
 			<key>version</key>
-			<integer>17</integer>
+			<integer>18</integer>
 		</dict>
 		<key>com.google.Keystone</key>
 		<dict>
@@ -901,11 +901,11 @@
 		<key>com.microsoft.wdav</key>
 		<dict>
 			<key>modified</key>
-			<date>2024-09-18T17:57:55Z</date>
+			<date>2025-12-13T20:41:02Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.microsoft.wdav.plist</string>
 			<key>version</key>
-			<integer>3</integer>
+			<integer>4</integer>
 		</dict>
 		<key>com.northpolesec.santa</key>
 		<dict>
@@ -1180,7 +1180,7 @@
 		<key>menu.nomad.login.okta</key>
 		<dict>
 			<key>modified</key>
-			<date>2023-08-15T08:00:00Z</date>
+			<date>2026-01-05T08:56:20Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/menu.nomad.login.okta.plist</string>
 			<key>version</key>
@@ -1198,11 +1198,11 @@
 		<key>net.glencode.Particulars</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-03-14T13:00:00Z</date>
+			<date>2025-12-17T04:00:00Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/net.glencode.Particulars.plist</string>
 			<key>version</key>
-			<integer>5</integer>
+			<integer>6</integer>
 		</dict>
 		<key>net.glencode.Particulars.Widget</key>
 		<dict>
@@ -1234,11 +1234,11 @@
 		<key>org.mozilla.firefox</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-04-29T17:40:13Z</date>
+			<date>2025-12-30T12:58:24Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/org.mozilla.firefox.plist</string>
 			<key>version</key>
-			<integer>15</integer>
+			<integer>16</integer>
 		</dict>
 		<key>org.sveinbjorn.Platypus</key>
 		<dict>
@@ -2445,6 +2445,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2025-12-19T09:31:23Z</date>
+	<date>2026-01-05T15:50:33Z</date>
 </dict>
 </plist>
