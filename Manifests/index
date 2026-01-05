@@ -460,11 +460,11 @@
 		<key>com.brave.Browser</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-01-15T11:02:30Z</date>
+			<date>2025-12-13T20:54:35Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.brave.Browser.plist</string>
 			<key>version</key>
-			<integer>16</integer>
+			<integer>17</integer>
 		</dict>
 		<key>com.citrix.receiver.nomas</key>
 		<dict>
@@ -568,11 +568,11 @@
 		<key>com.google.Chrome</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-10-14T00:00:00Z</date>
+			<date>2025-12-13T20:41:02Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.google.Chrome.plist</string>
 			<key>version</key>
-			<integer>17</integer>
+			<integer>18</integer>
 		</dict>
 		<key>com.google.Keystone</key>
 		<dict>
@@ -2445,6 +2445,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2026-01-05T09:09:22Z</date>
+	<date>2026-01-05T09:16:09Z</date>
 </dict>
 </plist>
