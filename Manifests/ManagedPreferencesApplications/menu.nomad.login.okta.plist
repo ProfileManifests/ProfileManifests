@@ -6,14 +6,12 @@
 	<string></string>
 	<key>pfm_description</key>
 	<string>NoMAD Login+ settings</string>
-	<key>pfm_documentation_url</key>
-	<string></string>
 	<key>pfm_domain</key>
 	<string>menu.nomad.login.okta</string>
 	<key>pfm_format_version</key>
 	<integer>1</integer>
 	<key>pfm_last_modified</key>
-	<date>2025-08-04T08:25:08Z</date>
+	<date>2026-01-05T08:56:20Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
