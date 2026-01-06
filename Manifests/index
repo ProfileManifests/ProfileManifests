@@ -1234,7 +1234,7 @@
 		<key>org.mozilla.firefox</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-12-30T12:58:24Z</date>
+			<date>2026-01-06T08:59:08Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/org.mozilla.firefox.plist</string>
 			<key>version</key>
@@ -2445,6 +2445,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2026-01-05T15:50:33Z</date>
+	<date>2026-01-06T14:54:54Z</date>
 </dict>
 </plist>
