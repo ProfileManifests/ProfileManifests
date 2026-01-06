@@ -2419,7 +2419,7 @@
 		<key>com.apple.webcontent-filter</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-09-17T09:38:09Z</date>
+			<date>2026-01-06T15:02:45Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.webcontent-filter.plist</string>
 			<key>version</key>
@@ -2463,6 +2463,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2026-01-05T09:16:09Z</date>
+	<date>2026-01-06T15:03:20Z</date>
 </dict>
 </plist>
