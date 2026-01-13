@@ -13,7 +13,7 @@
 	<key>pfm_format_version</key>
 	<integer>1</integer>
 	<key>pfm_last_modified</key>
-	<date>2025-11-25T09:52:16Z</date>
+	<date>2025-12-22T18:35:23Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -160,6 +160,7 @@ During a profile replacement, the system updates payloads with the same `Payload
 					<string>MonthlyPatchingCadenceOrdinalValue</string>
 					<string>MonthlyPatchingCadenceWeekdayIndex</string>
 					<string>MonthlyPatchingCadenceStartTime</string>
+					<string>ZoomCallActiveCheck</string>
 				</array>
 				<key>Dialogs and Notifications</key>
 				<array>
@@ -206,6 +207,8 @@ During a profile replacement, the system updates payloads with the same `Payload
 					<string>WorkflowInstallNowPatchingStatusAction</string>
 					<string>SelfUpdateEnabled</string>
 					<string>SelfUpdateFrequency</string>
+					<string>versionComparisonMethod</string>
+					<string>VersionComparisonInstallomatorFallback</string>
 				</array>
 			</dict>
 			<key>pfm_type</key>
@@ -411,7 +414,7 @@ During a profile replacement, the system updates payloads with the same `Payload
 			<key>pfm_description</key>
 			<string></string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings</string>
+			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Monthly-Patching-Cadence</string>
 			<key>pfm_name</key>
 			<string>MonthlyPatchingCadenceEnabled</string>
 			<key>pfm_title</key>
@@ -425,7 +428,7 @@ During a profile replacement, the system updates payloads with the same `Payload
 			<key>pfm_description</key>
 			<string>Week of the month you want AAP to be scheduled</string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings</string>
+			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Monthly-Patching-Cadence</string>
 			<key>pfm_name</key>
 			<string>MonthlyPatchingCadenceOrdinalValue</string>
 			<key>pfm_range_list</key>
@@ -457,7 +460,7 @@ During a profile replacement, the system updates payloads with the same `Payload
 			<key>pfm_description</key>
 			<string>Day of the week you want AAP to be scheduled</string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings</string>
+			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Monthly-Patching-Cadence</string>
 			<key>pfm_name</key>
 			<string>MonthlyPatchingCadenceWeekdayIndex</string>
 			<key>pfm_range_list</key>
@@ -491,7 +494,7 @@ During a profile replacement, the system updates payloads with the same `Payload
 			<key>pfm_description</key>
 			<string>Local time you want AAP to be scheduled</string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings</string>
+			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Monthly-Patching-Cadence</string>
 			<key>pfm_name</key>
 			<string>MonthlyPatchingCadenceStartTime</string>
 			<key>pfm_title</key>
@@ -500,6 +503,20 @@ During a profile replacement, the system updates payloads with the same `Payload
 			<string>string</string>
 			<key>pfm_value_placeholder</key>
 			<string>09:00:00</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.5.0</string>
+			<key>pfm_description</key>
+			<string>When enabled, AAP will automatically skip updating Zoom if a call is active</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Zoom-Call-Active-Check</string>
+			<key>pfm_name</key>
+			<string>ZoomCallActiveCheck</string>
+			<key>pfm_title</key>
+			<string>Zoom Call Active Check</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
@@ -531,7 +548,7 @@ During a profile replacement, the system updates payloads with the same `Payload
 			<key>pfm_description</key>
 			<string>Time given to the user to respond to deferral prompt if enabled</string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings</string>
+			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings#dialogtimeoutdeferral</string>
 			<key>pfm_name</key>
 			<string>DialogTimeoutDeferral</string>
 			<key>pfm_title</key>
@@ -547,7 +564,7 @@ During a profile replacement, the system updates payloads with the same `Payload
 			<key>pfm_description</key>
 			<string>What happens when the deferral timer expires</string>
 			<key>pfm_description_reference</key>
-			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings</string>
+			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings#dialogtimeoutdeferralaction</string>
 			<key>pfm_name</key>
 			<string>DialogTimeoutDeferralAction</string>
 			<key>pfm_range_list</key>
@@ -571,7 +588,7 @@ During a profile replacement, the system updates payloads with the same `Payload
 			<key>pfm_description</key>
 			<string>Deterines if the Dialog should automatically close after completion if there is no response from the end-user</string>
 			<key>pfm_description_reference</key>
-			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings</string>
+			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings#unattendedexit</string>
 			<key>pfm_name</key>
 			<string>UnattendedExit</string>
 			<key>pfm_range_list</key>
@@ -595,7 +612,7 @@ During a profile replacement, the system updates payloads with the same `Payload
 			<key>pfm_description</key>
 			<string>The number of seconds the AAP dialog will automatically close if UnattendedExit is set to TRUE</string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings</string>
+			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings#unattendedexitseconds</string>
 			<key>pfm_name</key>
 			<string>UnattendedExitSeconds</string>
 			<key>pfm_title</key>
@@ -649,7 +666,7 @@ During a profile replacement, the system updates payloads with the same `Payload
 			<key>pfm_description</key>
 			<string>A space-separated list of Installomator labels to ignore for the AAP workflow. Supports wilddcards</string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings</string>
+			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Populating-App-Labels#ignored</string>
 			<key>pfm_name</key>
 			<string>IgnoredLabels</string>
 			<key>pfm_title</key>
@@ -665,7 +682,7 @@ During a profile replacement, the system updates payloads with the same `Payload
 			<key>pfm_description</key>
 			<string>a space-separated list of Installomator labels that are required, regardless if the app is installed or or the latest version. Supports wildcards.</string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings</string>
+			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Populating-App-Labels#required</string>
 			<key>pfm_name</key>
 			<string>RequiredLabels</string>
 			<key>pfm_title</key>
@@ -681,7 +698,7 @@ During a profile replacement, the system updates payloads with the same `Payload
 			<key>pfm_description</key>
 			<string>A space-separated list of optional Installomator labels. Labels in this category are only included if the app exists on the end-users device and will force install even if its the latest version. Does Not Support Wildcards</string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings</string>
+			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Populating-App-Labels#optional</string>
 			<key>pfm_name</key>
 			<string>OptionalLabels</string>
 			<key>pfm_title</key>
@@ -863,7 +880,7 @@ During a profile replacement, the system updates payloads with the same `Payload
 			<key>pfm_description</key>
 			<string>0 (Completely Silent) | 1 (Silent Discovery, Interactive Patching) | 2 (Full Interactive) (default)</string>
 			<key>pfm_description_reference</key>
-			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings</string>
+			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/End-User-Experience#interactive-mode</string>
 			<key>pfm_name</key>
 			<string>InteractiveMode</string>
 			<key>pfm_range_list</key>
@@ -1035,7 +1052,7 @@ During a profile replacement, the system updates payloads with the same `Payload
 			<key>pfm_description</key>
 			<string>Disables the discovery of applications that require patching. If a list of labels from a previous discovery exists, AAP will use that list for the workflow</string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings</string>
+			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Workflows#disable-app-discovery</string>
 			<key>pfm_name</key>
 			<string>WorkflowDisableAppDiscovery</string>
 			<key>pfm_range_list</key>
@@ -1061,7 +1078,7 @@ During a profile replacement, the system updates payloads with the same `Payload
 			<key>pfm_description</key>
 			<string>Disable the automatic relaunch of AAP after the current workflow successfully completes</string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings</string>
+			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Workflows#disable-automatic-relaunch</string>
 			<key>pfm_name</key>
 			<string>WorkflowDisableRelaunch</string>
 			<key>pfm_range_list</key>
@@ -1087,7 +1104,7 @@ During a profile replacement, the system updates payloads with the same `Payload
 			<key>pfm_description</key>
 			<string>Determines if the Patching Completion Status is set to true when using the --workflow-install-now trigger</string>
 			<key>pfm_description_reference</key>
-			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings</string>
+			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Workflows#workflow-install-now-patching-status-action</string>
 			<key>pfm_name</key>
 			<string>WorkflowInstallNowPatchingStatusAction</string>
 			<key>pfm_range_list</key>
@@ -1107,7 +1124,7 @@ During a profile replacement, the system updates payloads with the same `Payload
 			<key>pfm_description</key>
 			<string>Determines if the Self Update feature is enabled. this will automatically update App Auto-Patch if a new version is posted on github</string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings</string>
+			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Self-Update-Function</string>
 			<key>pfm_name</key>
 			<string>SelfUpdateEnabled</string>
 			<key>pfm_title</key>
@@ -1121,7 +1138,7 @@ During a profile replacement, the system updates payloads with the same `Payload
 			<key>pfm_description</key>
 			<string>The frequency to check for updates to the App Auto-Patch script</string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings</string>
+			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Self-Update-Function</string>
 			<key>pfm_name</key>
 			<string>SelfUpdateFrequency</string>
 			<key>pfm_range_list</key>
@@ -1143,6 +1160,46 @@ During a profile replacement, the system updates payloads with the same `Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
+			<string>3.5.0</string>
+			<key>pfm_description</key>
+			<string>Determines the version comparison method used when checking for updates</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Version-Comparison-Methods#version-comparison-method</string>
+			<key>pfm_name</key>
+			<string>versionComparisonMethod</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>IS_AT_LEAST</string>
+				<string>EQUAL_TO</string>
+			</array>
+			<key>pfm_range_list_titles</key>
+			<array>
+				<string>Is At Least</string>
+				<string>Equal To</string>
+			</array>
+			<key>pfm_title</key>
+			<string>Version Comparison Method</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.5.0</string>
+			<key>pfm_description</key>
+			<string>When enabled, if version comparison fails, AAP will fall back to using Installomator for version checking</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Version-Comparison-Methods#version-comparison-installomator-fallback</string>
+			<key>pfm_name</key>
+			<string>VersionComparisonInstallomatorFallback</string>
+			<key>pfm_title</key>
+			<string>Version Comparison Installomator Fallback</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+			<key>pfm_default</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
 			<string>3.2</string>
 			<key>pfm_description</key>
 			<string>All features related to how App Auto Patch defines the user interface.</string>
@@ -1156,7 +1213,7 @@ During a profile replacement, the system updates payloads with the same `Payload
 					<key>pfm_description</key>
 					<string>The individual buttons and text elements that can be customized. This includes per country localization.</string>
 					<key>pfm_documentation_url</key>
-					<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+					<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/User-Interface-%7C-Multi%E2%80%90Language-Support</string>
 					<key>pfm_name</key>
 					<string>dialogElements</string>
 					<key>pfm_subkeys</key>
@@ -1170,7 +1227,7 @@ During a profile replacement, the system updates payloads with the same `Payload
 									<key>pfm_description</key>
 									<string>The targeted language locale for the user interface. Note: For a list of locales, please run the following command in Terminal: /usr/bin/locale -a</string>
 									<key>pfm_documentation_url</key>
-									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/User-Interface-%7C-Multi%E2%80%90Language-Support</string>
 									<key>pfm_name</key>
 									<string>language</string>
 									<key>pfm_note</key>
@@ -1188,7 +1245,7 @@ During a profile replacement, the system updates payloads with the same `Payload
 									<key>pfm_description</key>
 									<string>Language for the defer button in dialogs when the deferral time is sometime today.</string>
 									<key>pfm_documentation_url</key>
-									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/User-Interface-%7C-Multi%E2%80%90Language-Support</string>
 									<key>pfm_name</key>
 									<string>display_string_defer_today_button</string>
 									<key>pfm_title</key>
@@ -1204,7 +1261,7 @@ During a profile replacement, the system updates payloads with the same `Payload
 									<key>pfm_description</key>
 									<string>Language for the defer button in dialogs when the deferral time is tomorrow</string>
 									<key>pfm_documentation_url</key>
-									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/User-Interface-%7C-Multi%E2%80%90Language-Support</string>
 									<key>pfm_name</key>
 									<string>display_string_defer_tomorrow_button</string>
 									<key>pfm_title</key>
@@ -1220,7 +1277,7 @@ During a profile replacement, the system updates payloads with the same `Payload
 									<key>pfm_description</key>
 									<string>Language for the defer button in dialogs when the deferral time is in the future.</string>
 									<key>pfm_documentation_url</key>
-									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/User-Interface-%7C-Multi%E2%80%90Language-Support</string>
 									<key>pfm_name</key>
 									<string>display_string_defer_future_button</string>
 									<key>pfm_title</key>
@@ -1236,7 +1293,7 @@ During a profile replacement, the system updates payloads with the same `Payload
 									<key>pfm_description</key>
 									<string>Language for deferral timer durations - Minutes</string>
 									<key>pfm_documentation_url</key>
-									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/User-Interface-%7C-Multi%E2%80%90Language-Support</string>
 									<key>pfm_name</key>
 									<string>display_string_minutes</string>
 									<key>pfm_title</key>
@@ -1252,7 +1309,7 @@ During a profile replacement, the system updates payloads with the same `Payload
 									<key>pfm_description</key>
 									<string>Language for deferral timer durations - Hour</string>
 									<key>pfm_documentation_url</key>
-									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/User-Interface-%7C-Multi%E2%80%90Language-Support</string>
 									<key>pfm_name</key>
 									<string>display_string_hour</string>
 									<key>pfm_title</key>
@@ -1268,7 +1325,7 @@ During a profile replacement, the system updates payloads with the same `Payload
 									<key>pfm_description</key>
 									<string>Language for deferral timer durations - Hours</string>
 									<key>pfm_documentation_url</key>
-									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/User-Interface-%7C-Multi%E2%80%90Language-Support</string>
 									<key>pfm_name</key>
 									<string>display_string_hours</string>
 									<key>pfm_title</key>
@@ -1284,7 +1341,7 @@ During a profile replacement, the system updates payloads with the same `Payload
 									<key>pfm_description</key>
 									<string>Language for deferral timer durations - and</string>
 									<key>pfm_documentation_url</key>
-									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/User-Interface-%7C-Multi%E2%80%90Language-Support</string>
 									<key>pfm_name</key>
 									<string>display_string_and</string>
 									<key>pfm_title</key>
@@ -1300,7 +1357,7 @@ During a profile replacement, the system updates payloads with the same `Payload
 									<key>pfm_description</key>
 									<string>Language for deferral timer durations - days</string>
 									<key>pfm_documentation_url</key>
-									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/User-Interface-%7C-Multi%E2%80%90Language-Support</string>
 									<key>pfm_name</key>
 									<string>display_string_days</string>
 									<key>pfm_title</key>
@@ -1316,7 +1373,7 @@ During a profile replacement, the system updates payloads with the same `Payload
 									<key>pfm_description</key>
 									<string>Language for deferral timer durations - times</string>
 									<key>pfm_documentation_url</key>
-									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/User-Interface-%7C-Multi%E2%80%90Language-Support</string>
 									<key>pfm_name</key>
 									<string>display_string_times</string>
 									<key>pfm_title</key>
@@ -1332,7 +1389,7 @@ During a profile replacement, the system updates payloads with the same `Payload
 									<key>pfm_description</key>
 									<string>Language for deferral timer durations - There are</string>
 									<key>pfm_documentation_url</key>
-									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/User-Interface-%7C-Multi%E2%80%90Language-Support</string>
 									<key>pfm_name</key>
 									<string>display_string_there_are</string>
 									<key>pfm_title</key>
@@ -1348,7 +1405,7 @@ During a profile replacement, the system updates payloads with the same `Payload
 									<key>pfm_description</key>
 									<string>Language for the message displayed during App Discovery</string>
 									<key>pfm_documentation_url</key>
-									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/User-Interface-%7C-Multi%E2%80%90Language-Support</string>
 									<key>pfm_name</key>
 									<string>display_string_discovery_message</string>
 									<key>pfm_title</key>
@@ -1364,7 +1421,7 @@ During a profile replacement, the system updates payloads with the same `Payload
 									<key>pfm_description</key>
 									<string>Language for the action message during App Discovery</string>
 									<key>pfm_documentation_url</key>
-									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/User-Interface-%7C-Multi%E2%80%90Language-Support</string>
 									<key>pfm_name</key>
 									<string>display_string_discovery_action_message</string>
 									<key>pfm_title</key>
@@ -1380,7 +1437,7 @@ During a profile replacement, the system updates payloads with the same `Payload
 									<key>pfm_description</key>
 									<string>Langauge for the progress message during App Discovery</string>
 									<key>pfm_documentation_url</key>
-									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/User-Interface-%7C-Multi%E2%80%90Language-Support</string>
 									<key>pfm_name</key>
 									<string>display_string_discovery_progress</string>
 									<key>pfm_title</key>
@@ -1396,7 +1453,7 @@ During a profile replacement, the system updates payloads with the same `Payload
 									<key>pfm_description</key>
 									<string>Language for Button1 of the Deferral Dialog</string>
 									<key>pfm_documentation_url</key>
-									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/User-Interface-%7C-Multi%E2%80%90Language-Support</string>
 									<key>pfm_name</key>
 									<string>display_string_deferral_button1</string>
 									<key>pfm_title</key>
@@ -1412,7 +1469,7 @@ During a profile replacement, the system updates payloads with the same `Payload
 									<key>pfm_description</key>
 									<string>Language for Button1 of the Deferral Dialog</string>
 									<key>pfm_documentation_url</key>
-									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/User-Interface-%7C-Multi%E2%80%90Language-Support</string>
 									<key>pfm_name</key>
 									<string>display_string_deferral_button2</string>
 									<key>pfm_title</key>
@@ -1428,7 +1485,7 @@ During a profile replacement, the system updates payloads with the same `Payload
 									<key>pfm_description</key>
 									<string>Langauge for part 1 of the infobox on the Deferral Dialog</string>
 									<key>pfm_documentation_url</key>
-									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/User-Interface-%7C-Multi%E2%80%90Language-Support</string>
 									<key>pfm_name</key>
 									<string>display_string_deferral_infobox1</string>
 									<key>pfm_title</key>
@@ -1444,7 +1501,7 @@ During a profile replacement, the system updates payloads with the same `Payload
 									<key>pfm_description</key>
 									<string>Langauge for part 2 of the infobox on the Deferral Dialog</string>
 									<key>pfm_documentation_url</key>
-									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/User-Interface-%7C-Multi%E2%80%90Language-Support</string>
 									<key>pfm_name</key>
 									<string>display_string_deferral_infobox2</string>
 									<key>pfm_title</key>
@@ -1460,7 +1517,7 @@ During a profile replacement, the system updates payloads with the same `Payload
 									<key>pfm_description</key>
 									<string>Langauge for part 3 of the infobox on the Deferral Dialog</string>
 									<key>pfm_documentation_url</key>
-									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/User-Interface-%7C-Multi%E2%80%90Language-Support</string>
 									<key>pfm_name</key>
 									<string>display_string_deferral_infobox3</string>
 									<key>pfm_title</key>
@@ -1476,7 +1533,7 @@ During a profile replacement, the system updates payloads with the same `Payload
 									<key>pfm_description</key>
 									<string>Langauge for part 1 of the message on the Deferral Dialog</string>
 									<key>pfm_documentation_url</key>
-									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/User-Interface-%7C-Multi%E2%80%90Language-Support</string>
 									<key>pfm_name</key>
 									<string>display_string_deferral_message_01</string>
 									<key>pfm_title</key>
@@ -1492,7 +1549,7 @@ During a profile replacement, the system updates payloads with the same `Payload
 									<key>pfm_description</key>
 									<string>Language for part 2 of the message on the Deferral Dialog</string>
 									<key>pfm_documentation_url</key>
-									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/User-Interface-%7C-Multi%E2%80%90Language-Support</string>
 									<key>pfm_name</key>
 									<string>display_string_deferral_message_02</string>
 									<key>pfm_title</key>
@@ -1508,7 +1565,7 @@ During a profile replacement, the system updates payloads with the same `Payload
 									<key>pfm_description</key>
 									<string>Langauge for unlimited deferrals</string>
 									<key>pfm_documentation_url</key>
-									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/User-Interface-%7C-Multi%E2%80%90Language-Support</string>
 									<key>pfm_name</key>
 									<string>display_string_deferral_unlimited</string>
 									<key>pfm_title</key>
@@ -1520,11 +1577,27 @@ During a profile replacement, the system updates payloads with the same `Payload
 								</dict>
 								<dict>
 									<key>pfm_app_min</key>
+									<string>3.5</string>
+									<key>pfm_description</key>
+									<string>Langauge for deferral select title</string>
+									<key>pfm_documentation_url</key>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/User-Interface-%7C-Multi%E2%80%90Language-Support</string>
+									<key>pfm_name</key>
+									<string>display_string_deferral_selecttitle</string>
+									<key>pfm_title</key>
+									<string>Deferral Dialog Select Title</string>
+									<key>pfm_type</key>
+									<string>string</string>
+									<key>pfm_value_placeholder</key>
+									<string>Defer updates for:</string>
+								</dict>
+								<dict>
+									<key>pfm_app_min</key>
 									<string>3.2</string>
 									<key>pfm_description</key>
 									<string>Deferral Deadline Dialog button1</string>
 									<key>pfm_documentation_url</key>
-									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/User-Interface-%7C-Multi%E2%80%90Language-Support</string>
 									<key>pfm_name</key>
 									<string>display_string_deferraldeadline_button1</string>
 									<key>pfm_title</key>
@@ -1540,7 +1613,7 @@ During a profile replacement, the system updates payloads with the same `Payload
 									<key>pfm_description</key>
 									<string>Deferral Deadline Dialog button2</string>
 									<key>pfm_documentation_url</key>
-									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/User-Interface-%7C-Multi%E2%80%90Language-Support</string>
 									<key>pfm_name</key>
 									<string>display_string_deferraldeadline_button2</string>
 									<key>pfm_title</key>
@@ -1556,7 +1629,7 @@ During a profile replacement, the system updates payloads with the same `Payload
 									<key>pfm_description</key>
 									<string>Deferral Deadline Dialog infbox</string>
 									<key>pfm_documentation_url</key>
-									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/User-Interface-%7C-Multi%E2%80%90Language-Support</string>
 									<key>pfm_name</key>
 									<string>display_string_deferraldeadline_infobox</string>
 									<key>pfm_title</key>
@@ -1564,9 +1637,7 @@ During a profile replacement, the system updates payloads with the same `Payload
 									<key>pfm_type</key>
 									<string>string</string>
 									<key>pfm_value_placeholder</key>
-									<string>Updates will automatically install after the timer expires.
-									
-#### No Deferrals Remaining ####</string>
+									<string>Updates will automatically install after the timer expires. \n\n #### No Deferrals Remaining ####</string>
 								</dict>
 								<dict>
 									<key>pfm_app_min</key>
@@ -1574,7 +1645,7 @@ During a profile replacement, the system updates payloads with the same `Payload
 									<key>pfm_description</key>
 									<string>Deferral Deadline Dialog Message</string>
 									<key>pfm_documentation_url</key>
-									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/User-Interface-%7C-Multi%E2%80%90Language-Support</string>
 									<key>pfm_name</key>
 									<string>display_string_deferraldeadline_message_deadline</string>
 									<key>pfm_title</key>
@@ -1582,9 +1653,7 @@ During a profile replacement, the system updates payloads with the same `Payload
 									<key>pfm_type</key>
 									<string>string</string>
 									<key>pfm_value_placeholder</key>
-									<string>application(s) that require updates
-
-You have deferred the maximum number of</string>
+									<string>application(s) that require updates\n\n You have deferred the maximum number of</string>
 								</dict>
 								<dict>
 									<key>pfm_app_min</key>
@@ -1592,7 +1661,7 @@ You have deferred the maximum number of</string>
 									<key>pfm_description</key>
 									<string>Patching Dialog button1</string>
 									<key>pfm_documentation_url</key>
-									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/User-Interface-%7C-Multi%E2%80%90Language-Support</string>
 									<key>pfm_name</key>
 									<string>display_string_patching_button1</string>
 									<key>pfm_title</key>
@@ -1608,7 +1677,7 @@ You have deferred the maximum number of</string>
 									<key>pfm_description</key>
 									<string>Patching Dialog Checking</string>
 									<key>pfm_documentation_url</key>
-									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/User-Interface-%7C-Multi%E2%80%90Language-Support</string>
 									<key>pfm_name</key>
 									<string>display_string_patching_checking</string>
 									<key>pfm_title</key>
@@ -1624,7 +1693,7 @@ You have deferred the maximum number of</string>
 									<key>pfm_description</key>
 									<string>Patching Dialog Progress</string>
 									<key>pfm_documentation_url</key>
-									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/User-Interface-%7C-Multi%E2%80%90Language-Support</string>
 									<key>pfm_name</key>
 									<string>display_string_patching_progress</string>
 									<key>pfm_title</key>
@@ -1640,7 +1709,7 @@ You have deferred the maximum number of</string>
 									<key>pfm_description</key>
 									<string>Patching Dialog Infobox Computer Name</string>
 									<key>pfm_documentation_url</key>
-									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/User-Interface-%7C-Multi%E2%80%90Language-Support</string>
 									<key>pfm_name</key>
 									<string>display_string_patching_infobox_computer_name</string>
 									<key>pfm_title</key>
@@ -1656,7 +1725,7 @@ You have deferred the maximum number of</string>
 									<key>pfm_description</key>
 									<string>Patching Dialog Infobox macOS Version</string>
 									<key>pfm_documentation_url</key>
-									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/User-Interface-%7C-Multi%E2%80%90Language-Support</string>
 									<key>pfm_name</key>
 									<string>display_string_patching_infobox_macos_version</string>
 									<key>pfm_title</key>
@@ -1672,7 +1741,7 @@ You have deferred the maximum number of</string>
 									<key>pfm_description</key>
 									<string>Patching Dialog infobox updates</string>
 									<key>pfm_documentation_url</key>
-									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/User-Interface-%7C-Multi%E2%80%90Language-Support</string>
 									<key>pfm_name</key>
 									<string>display_string_patching_infobox_updates</string>
 									<key>pfm_title</key>
@@ -1688,7 +1757,7 @@ You have deferred the maximum number of</string>
 									<key>pfm_description</key>
 									<string>Patching Dialog Message</string>
 									<key>pfm_documentation_url</key>
-									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/User-Interface-%7C-Multi%E2%80%90Language-Support</string>
 									<key>pfm_name</key>
 									<string>display_string_patching_message</string>
 									<key>pfm_title</key>
@@ -1704,7 +1773,7 @@ You have deferred the maximum number of</string>
 									<key>pfm_description</key>
 									<string>Patching Complete Progress Message</string>
 									<key>pfm_documentation_url</key>
-									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/User-Interface-%7C-Multi%E2%80%90Language-Support</string>
 									<key>pfm_name</key>
 									<string>display_string_complete_progress</string>
 									<key>pfm_title</key>
@@ -1720,7 +1789,7 @@ You have deferred the maximum number of</string>
 									<key>pfm_description</key>
 									<string>All Apps Up To Date Button 1</string>
 									<key>pfm_documentation_url</key>
-									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/User-Interface-%7C-Multi%E2%80%90Language-Support</string>
 									<key>pfm_name</key>
 									<string>display_string_uptodate_button1</string>
 									<key>pfm_title</key>
@@ -1736,7 +1805,7 @@ You have deferred the maximum number of</string>
 									<key>pfm_description</key>
 									<string>All Apps Up To Date Message</string>
 									<key>pfm_documentation_url</key>
-									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/User-Interface-%7C-Multi%E2%80%90Language-Support</string>
 									<key>pfm_name</key>
 									<string>display_string_uptodate_message</string>
 									<key>pfm_title</key>
@@ -1752,7 +1821,7 @@ You have deferred the maximum number of</string>
 									<key>pfm_description</key>
 									<string>Help Message - Intro</string>
 									<key>pfm_documentation_url</key>
-									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/User-Interface-%7C-Multi%E2%80%90Language-Support</string>
 									<key>pfm_name</key>
 									<string>display_string_help_message_intro</string>
 									<key>pfm_title</key>
@@ -1768,7 +1837,7 @@ You have deferred the maximum number of</string>
 									<key>pfm_description</key>
 									<string>Help Message - Telephone</string>
 									<key>pfm_documentation_url</key>
-									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/User-Interface-%7C-Multi%E2%80%90Language-Support</string>
 									<key>pfm_name</key>
 									<string>display_string_help_message_telephone</string>
 									<key>pfm_title</key>
@@ -1784,7 +1853,7 @@ You have deferred the maximum number of</string>
 									<key>pfm_description</key>
 									<string>Help Message - Email</string>
 									<key>pfm_documentation_url</key>
-									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/User-Interface-%7C-Multi%E2%80%90Language-Support</string>
 									<key>pfm_name</key>
 									<string>display_string_help_message_email</string>
 									<key>pfm_title</key>
@@ -1800,7 +1869,7 @@ You have deferred the maximum number of</string>
 									<key>pfm_description</key>
 									<string>Help Message - Help Website</string>
 									<key>pfm_documentation_url</key>
-									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/User-Interface-%7C-Multi%E2%80%90Language-Support</string>
 									<key>pfm_name</key>
 									<string>display_string_help_message_help_website</string>
 									<key>pfm_title</key>
@@ -1816,7 +1885,7 @@ You have deferred the maximum number of</string>
 									<key>pfm_description</key>
 									<string>Help Message - Computer Info</string>
 									<key>pfm_documentation_url</key>
-									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/User-Interface-%7C-Multi%E2%80%90Language-Support</string>
 									<key>pfm_name</key>
 									<string>display_string_help_message_computer_info</string>
 									<key>pfm_title</key>
@@ -1832,7 +1901,7 @@ You have deferred the maximum number of</string>
 									<key>pfm_description</key>
 									<string>Help Message - Operating System</string>
 									<key>pfm_documentation_url</key>
-									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/User-Interface-%7C-Multi%E2%80%90Language-Support</string>
 									<key>pfm_name</key>
 									<string>display_string_help_message_operating_system</string>
 									<key>pfm_title</key>
@@ -1848,7 +1917,7 @@ You have deferred the maximum number of</string>
 									<key>pfm_description</key>
 									<string>Help Message - Serial Number</string>
 									<key>pfm_documentation_url</key>
-									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/User-Interface-%7C-Multi%E2%80%90Language-Support</string>
 									<key>pfm_name</key>
 									<string>display_string_help_message_serial</string>
 									<key>pfm_title</key>
@@ -1864,7 +1933,7 @@ You have deferred the maximum number of</string>
 									<key>pfm_description</key>
 									<string>Help Message - Dialog</string>
 									<key>pfm_documentation_url</key>
-									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/User-Interface-%7C-Multi%E2%80%90Language-Support</string>
 									<key>pfm_name</key>
 									<string>display_string_help_message_dialog</string>
 									<key>pfm_title</key>
@@ -1880,7 +1949,7 @@ You have deferred the maximum number of</string>
 									<key>pfm_description</key>
 									<string>Help Message - Started</string>
 									<key>pfm_documentation_url</key>
-									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/User-Interface-%7C-Multi%E2%80%90Language-Support</string>
 									<key>pfm_name</key>
 									<string>display_string_help_message_started</string>
 									<key>pfm_title</key>
@@ -1896,7 +1965,7 @@ You have deferred the maximum number of</string>
 									<key>pfm_description</key>
 									<string>Help Message - Script Version</string>
 									<key>pfm_documentation_url</key>
-									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/</string>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/User-Interface-%7C-Multi%E2%80%90Language-Support</string>
 									<key>pfm_name</key>
 									<string>display_string_help_message_script_version</string>
 									<key>pfm_title</key>
@@ -1935,6 +2004,6 @@ You have deferred the maximum number of</string>
 	<key>pfm_unique</key>
 	<true/>
 	<key>pfm_version</key>
-	<integer>2</integer>
+	<integer>3</integer>
 </dict>
 </plist>
