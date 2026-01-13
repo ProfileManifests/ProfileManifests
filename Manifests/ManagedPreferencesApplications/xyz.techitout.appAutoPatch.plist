@@ -1195,6 +1195,8 @@ During a profile replacement, the system updates payloads with the same `Payload
 			<string>Version Comparison Installomator Fallback</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
+			<key>pfm_default</key>
+			<false/>
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
@@ -2002,6 +2004,6 @@ During a profile replacement, the system updates payloads with the same `Payload
 	<key>pfm_unique</key>
 	<true/>
 	<key>pfm_version</key>
-	<integer>2</integer>
+	<integer>3</integer>
 </dict>
 </plist>
