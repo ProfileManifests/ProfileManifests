@@ -3,17 +3,17 @@
 <plist version="1.0">
 <dict>
 	<key>pfm_app_url</key>
-	<string>https://github.com/mpanighetti/install-or-defer/releases</string>
+	<string>https://github.com/wavebirddash/install-or-defer/releases</string>
 	<key>pfm_description</key>
 	<string>Install or Defer settings</string>
 	<key>pfm_documentation_url</key>
-	<string>https://github.com/mpanighetti/install-or-defer#configuration-profile</string>
+	<string>https://github.com/wavebirddash/install-or-defer#configuration-profile</string>
 	<key>pfm_domain</key>
-	<string>com.github.mpanighetti.install-or-defer</string>
+	<string>com.github.wavebirddash.install-or-defer</string>
 	<key>pfm_format_version</key>
 	<integer>1</integer>
 	<key>pfm_last_modified</key>
-	<date>2023-08-09T09:13:53Z</date>
+	<date>2026-01-14T00:00:00Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -52,7 +52,7 @@
 		</dict>
 		<dict>
 			<key>pfm_default</key>
-			<string>com.github.mpanighetti.install-or-defer</string>
+			<string>com.github.wavebirddash.install-or-defer</string>
 			<key>pfm_description</key>
 			<string>The reverse-DNS-style identifier for the payload. This identifier is usually the same as the TopLevel value, with an additional appended component. This string must be unique within the profile.
 During a profile replacement, the system updates payloads with the same 'PayloadIdentifier' and 'PayloadUUID' in the old and new profiles.</string>
@@ -69,7 +69,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_default</key>
-			<string>com.github.mpanighetti.install-or-defer</string>
+			<string>com.github.wavebirddash.install-or-defer</string>
 			<key>pfm_description</key>
 			<string>The payload type, which each payload domain's reference page specifies.</string>
 			<key>pfm_description_reference</key>
@@ -141,7 +141,7 @@ A profile can consist of payloads with different version numbers. For example, c
 			<key>pfm_description_reference</key>
 			<string>The label of the install button. Defaults to "Install". Keep this string short since jamfHelper will cut off longer button labels.</string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/mpanighetti/install-or-defer#configuration-profile</string>
+			<string>https://github.com/wavebirddash/install-or-defer#configuration-profile</string>
 			<key>pfm_name</key>
 			<string>InstallButtonLabel</string>
 			<key>pfm_note</key>
@@ -163,7 +163,7 @@ A profile can consist of payloads with different version numbers. For example, c
 			<key>pfm_description_reference</key>
 			<string>The label of the defer button. Defaults to "Defer". Keep this string short since jamfHelper will cut off longer button labels.</string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/mpanighetti/install-or-defer#configuration-profile</string>
+			<string>https://github.com/wavebirddash/install-or-defer#configuration-profile</string>
 			<key>pfm_name</key>
 			<string>DeferButtonLabel</string>
 			<key>pfm_note</key>
@@ -185,7 +185,7 @@ A profile can consist of payloads with different version numbers. For example, c
 			<key>pfm_description_reference</key>
 			<string>Whether to suppress the persistent alert to run updates. Defaults to False. If set to True, clicking the install button will only launch the Software Update pane without displaying a persistent alert to upgrade, until the deadline date is reached.</string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/mpanighetti/install-or-defer#configuration-profile</string>
+			<string>https://github.com/wavebirddash/install-or-defer#configuration-profile</string>
 			<key>pfm_name</key>
 			<string>DisablePostInstallAlert</string>
 			<key>pfm_title</key>
@@ -201,7 +201,7 @@ A profile can consist of payloads with different version numbers. For example, c
 			<key>pfm_description_reference</key>
 			<string>File path to a logo that will be used in messaging. Defaults to the Software Update icon. Recommend 512px, PNG format.</string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/mpanighetti/install-or-defer#configuration-profile</string>
+			<string>https://github.com/wavebirddash/install-or-defer#configuration-profile</string>
 			<key>pfm_name</key>
 			<string>MessagingLogo</string>
 			<key>pfm_note</key>
@@ -221,7 +221,7 @@ A profile can consist of payloads with different version numbers. For example, c
 			<key>pfm_description_reference</key>
 			<string>Contact information for technical support included in messaging alerts. Defaults to "IT". Recommend using a team name (e.g. "Technical Support"), email address (e.g. "support@contoso.com"), or chat channel (e.g. "#technical-support").</string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/mpanighetti/install-or-defer#configuration-profile</string>
+			<string>https://github.com/wavebirddash/install-or-defer#configuration-profile</string>
 			<key>pfm_name</key>
 			<string>SupportContact</string>
 			<key>pfm_note</key>
@@ -241,7 +241,7 @@ A profile can consist of payloads with different version numbers. For example, c
 			<key>pfm_description_reference</key>
 			<string>Number of seconds between when the user clicks "Defer" and the next prompt appears. Defaults to 14400 (4 hours). This value must be less than the MaxDeferralTime value.</string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/mpanighetti/install-or-defer#configuration-profile</string>
+			<string>https://github.com/wavebirddash/install-or-defer#configuration-profile</string>
 			<key>pfm_name</key>
 			<string>DeferralPeriod</string>
 			<key>pfm_note</key>
@@ -263,7 +263,7 @@ A profile can consist of payloads with different version numbers. For example, c
 			<key>pfm_description_reference</key>
 			<string>Number of seconds to wait between attempting a soft restart and forcing a restart. Defaults to 300 (5 minutes).</string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/mpanighetti/install-or-defer#configuration-profile</string>
+			<string>https://github.com/wavebirddash/install-or-defer#configuration-profile</string>
 			<key>pfm_name</key>
 			<string>HardRestartDelay</string>
 			<key>pfm_title</key>
@@ -283,7 +283,7 @@ A profile can consist of payloads with different version numbers. For example, c
 			<key>pfm_description_reference</key>
 			<string>Number of seconds between the first script run and the updates being enforced. Defaults to 259200 (3 days).</string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/mpanighetti/install-or-defer#configuration-profile</string>
+			<string>https://github.com/wavebirddash/install-or-defer#configuration-profile</string>
 			<key>pfm_name</key>
 			<string>MaxDeferralTime</string>
 			<key>pfm_title</key>
@@ -303,7 +303,7 @@ A profile can consist of payloads with different version numbers. For example, c
 			<key>pfm_description_reference</key>
 			<string>Number of seconds to wait before timing out the Install or Defer prompt. Defaults to 3600 (1 hour). This value must be less than the DeferralPeriod value.</string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/mpanighetti/install-or-defer#configuration-profile</string>
+			<string>https://github.com/wavebirddash/install-or-defer#configuration-profile</string>
 			<key>pfm_name</key>
 			<string>PromptTimeout</string>
 			<key>pfm_note</key>
@@ -325,7 +325,7 @@ A profile can consist of payloads with different version numbers. For example, c
 			<key>pfm_description_reference</key>
 			<string>Whether to bypass deferral time entirely and skip straight to update enforcement (useful for script testing purposes). Defaults to false.</string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/mpanighetti/install-or-defer#configuration-profile</string>
+			<string>https://github.com/wavebirddash/install-or-defer#configuration-profile</string>
 			<key>pfm_name</key>
 			<string>SkipDeferral</string>
 			<key>pfm_title</key>
@@ -343,7 +343,7 @@ A profile can consist of payloads with different version numbers. For example, c
 			<key>pfm_description_reference</key>
 			<string>Number of seconds to wait between displaying the "install updates" message and applying updates, then attempting a soft restart. Defaults to 600 (10 minutes).</string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/mpanighetti/install-or-defer#configuration-profile</string>
+			<string>https://github.com/wavebirddash/install-or-defer#configuration-profile</string>
 			<key>pfm_name</key>
 			<string>UpdateDelay</string>
 			<key>pfm_note</key>
@@ -363,7 +363,7 @@ A profile can consist of payloads with different version numbers. For example, c
 			<key>pfm_description_reference</key>
 			<string>The hour that a workday starts in your organization. This value must be an integer between 0 and 22, and the end hour must be later than the start hour. If the update deadline falls within this window of time, it will be moved forward to occur at the end of the workday.</string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/mpanighetti/install-or-defer#configuration-profile</string>
+			<string>https://github.com/wavebirddash/install-or-defer#configuration-profile</string>
 			<key>pfm_name</key>
 			<string>WorkdayStartHour</string>
 			<key>pfm_note</key>
@@ -433,7 +433,7 @@ A profile can consist of payloads with different version numbers. For example, c
 			<key>pfm_description_reference</key>
 			<string>The hour that a workday ends in your organization. This value must be an integer between 1 and 23, and the end hour must be later than the start hour. If the update deadline falls within this window of time, it will be moved forward to occur at the end of the workday.</string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/mpanighetti/install-or-defer#configuration-profile</string>
+			<string>https://github.com/wavebirddash/install-or-defer#configuration-profile</string>
 			<key>pfm_name</key>
 			<string>WorkdayEndHour</string>
 			<key>pfm_note</key>
@@ -505,7 +505,7 @@ A profile can consist of payloads with different version numbers. For example, c
 			<key>pfm_description_reference</key>
 			<string>Whether to write to a persistent log file at /var/log/install-or-defer.log. If undefined or set to false, the script writes all output to the system log for live diagnostics.</string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/mpanighetti/install-or-defer#configuration-profile</string>
+			<string>https://github.com/wavebirddash/install-or-defer#configuration-profile</string>
 			<key>pfm_name</key>
 			<string>DiagnosticLog</string>
 			<key>pfm_title</key>
@@ -523,7 +523,7 @@ A profile can consist of payloads with different version numbers. For example, c
 			<key>pfm_description_reference</key>
 			<string>Whether to prompt users to run updates manually via System Preferences. This is always the behavior on Apple Silicon Macs and cannot be overridden. If undefined or set to false on Intel Macs, the script triggers updates via scripted softwareupdate commands.</string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/mpanighetti/install-or-defer#configuration-profile</string>
+			<string>https://github.com/wavebirddash/install-or-defer#configuration-profile</string>
 			<key>pfm_name</key>
 			<string>ManualUpdates</string>
 			<key>pfm_title</key>
