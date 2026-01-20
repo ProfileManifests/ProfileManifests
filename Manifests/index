@@ -1852,7 +1852,7 @@
 		<key>com.apple.familycontrols.contentfilter</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-09-17T09:38:09Z</date>
+			<date>2026-01-20T18:06:21Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.familycontrols.contentfilter.plist</string>
 			<key>version</key>
@@ -2472,6 +2472,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2026-01-20T17:46:22Z</date>
+	<date>2026-01-20T18:06:47Z</date>
 </dict>
 </plist>
