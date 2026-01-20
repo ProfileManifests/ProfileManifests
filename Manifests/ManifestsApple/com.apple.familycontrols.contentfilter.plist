@@ -13,7 +13,7 @@
 	<key>pfm_interaction</key>
 	<string>combined</string>
 	<key>pfm_last_modified</key>
-	<date>2025-09-17T09:38:09Z</date>
+	<date>2026-01-20T18:06:21Z</date>
 	<key>pfm_macos_min</key>
 	<string>10.7</string>
 	<key>pfm_platforms</key>
@@ -449,108 +449,6 @@ This key is required if 'allowlistEnabled' is 'true'.</string>
 					<string>15.2</string>
 				</dict>
 			</dict>
-		</dict>
-		<dict>
-			<key>pfm_default</key>
-			<false/>
-			<key>pfm_description</key>
-			<string>If 'true', enables web content filters.</string>
-			<key>pfm_macos_min</key>
-			<string>15.2</string>
-			<key>pfm_name</key>
-			<string>allowlistEnabled</string>
-			<key>pfm_type</key>
-			<string>boolean</string>
-		</dict>
-		<dict>
-			<key>pfm_description</key>
-			<string>An array of sites that defines an allow list. If specified, this defines additional allowed sites besides those in the automated allow list and deny list, including disallowed adult sites.
-
-This key is required if 'allowlistEnabled' is 'true'.</string>
-			<key>pfm_macos_min</key>
-			<string>15.2</string>
-			<key>pfm_name</key>
-			<string>siteAllowlist</string>
-			<key>pfm_subkeys</key>
-			<array>
-				<dict>
-					<key>pfm_description</key>
-					<string>A dictionary defining a site for the allow list.</string>
-					<key>pfm_name</key>
-					<string>siteAllowlistItem</string>
-					<key>pfm_subkeys</key>
-					<array>
-						<dict>
-							<key>pfm_description</key>
-							<string>The site prefix, including the 'http(s)' scheme.</string>
-							<key>pfm_name</key>
-							<string>address</string>
-							<key>pfm_require</key>
-							<string>always</string>
-							<key>pfm_type</key>
-							<string>string</string>
-						</dict>
-						<dict>
-							<key>pfm_description</key>
-							<string>The site page title.</string>
-							<key>pfm_name</key>
-							<string>pageTitle</string>
-							<key>pfm_type</key>
-							<string>string</string>
-						</dict>
-					</array>
-					<key>pfm_type</key>
-					<string>dictionary</string>
-				</dict>
-			</array>
-			<key>pfm_type</key>
-			<string>array</string>
-		</dict>
-		<dict>
-			<key>pfm_description</key>
-			<string>The array of URLs that defines an allow list. When 'restrictWeb' and 'useContentFilter' are enabled, only URLs in the allow list are available to the user.</string>
-			<key>pfm_macos_min</key>
-			<string>15.2</string>
-			<key>pfm_name</key>
-			<string>filterAllowlist</string>
-			<key>pfm_subkeys</key>
-			<array>
-				<dict>
-					<key>pfm_description</key>
-					<string>An allowed site.</string>
-					<key>pfm_name</key>
-					<string>filterAllowlistItem</string>
-					<key>pfm_require</key>
-					<string>always</string>
-					<key>pfm_type</key>
-					<string>string</string>
-				</dict>
-			</array>
-			<key>pfm_type</key>
-			<string>array</string>
-		</dict>
-		<dict>
-			<key>pfm_description</key>
-			<string>The array of URLs that defines a deny list. When 'restrictWeb' and 'useContentFilter' are enabled, no URLs in the deny list are available to the user.</string>
-			<key>pfm_macos_min</key>
-			<string>15.2</string>
-			<key>pfm_name</key>
-			<string>filterDenylist</string>
-			<key>pfm_subkeys</key>
-			<array>
-				<dict>
-					<key>pfm_description</key>
-					<string>A disallowed site.</string>
-					<key>pfm_name</key>
-					<string>filterDenylistItem</string>
-					<key>pfm_require</key>
-					<string>always</string>
-					<key>pfm_type</key>
-					<string>string</string>
-				</dict>
-			</array>
-			<key>pfm_type</key>
-			<string>array</string>
 		</dict>
 	</array>
 	<key>pfm_targets</key>
