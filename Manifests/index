@@ -1708,7 +1708,7 @@
 		<key>com.apple.carddav.account</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-12-10T12:16:57Z</date>
+			<date>2026-01-20T17:46:02Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.carddav.account.plist</string>
 			<key>version</key>
@@ -2472,6 +2472,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2026-01-16T11:14:15Z</date>
+	<date>2026-01-20T17:46:22Z</date>
 </dict>
 </plist>
