@@ -15,7 +15,7 @@
 	<key>pfm_format_version</key>
 	<integer>1</integer>
 	<key>pfm_last_modified</key>
-	<date>2025-09-02T13:46:19Z</date>
+	<date>2026-01-22T12:39:07Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -225,6 +225,8 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>Controls which extensions can be installed. The value of this policy is a JSON string that contains the allowed extensions.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://code.visualstudio.com/docs/setup/enterprise#_configure-allowed-extensions</string>
+			<key>pfm_imazing_control_type</key>
+			<string>text</string>
 			<key>pfm_name</key>
 			<string>AllowedExtensions</string>
 			<key>pfm_title</key>
