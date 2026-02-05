@@ -13,7 +13,7 @@
 	<key>pfm_format_version</key>
 	<integer>1</integer>
 	<key>pfm_last_modified</key>
-	<date>2025-12-14T00:00:00Z</date>
+	<date>2026-02-05T00:00:00Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -138,7 +138,7 @@
 		</dict>
 		<dict>
 			<key>pfm_default</key>
-			<integer>14</integer>
+			<integer>60</integer>
 			<key>pfm_description</key>
 			<string>Number of days before the deadline when reminders start being displayed.</string>
 			<key>pfm_name</key>
@@ -150,7 +150,7 @@
 		</dict>
 		<dict>
 			<key>pfm_default</key>
-			<integer>3</integer>
+			<integer>45</integer>
 			<key>pfm_description</key>
 			<string>Number of days before the deadline when blur-screen enforcement starts.</string>
 			<key>pfm_name</key>
@@ -162,7 +162,7 @@
 		</dict>
 		<dict>
 			<key>pfm_default</key>
-			<integer>1</integer>
+			<integer>21</integer>
 			<key>pfm_description</key>
 			<string>Number of days before the deadline when the secondary button is hidden.</string>
 			<key>pfm_name</key>
@@ -174,7 +174,7 @@
 		</dict>
 		<dict>
 			<key>pfm_default</key>
-			<integer>1</integer>
+			<integer>0</integer>
 			<key>pfm_description</key>
 			<string>Number of days of excessive uptime before warning the user.</string>
 			<key>pfm_name</key>
@@ -186,7 +186,7 @@
 		</dict>
 		<dict>
 			<key>pfm_default</key>
-			<integer>1</integer>
+			<integer>99</integer>
 			<key>pfm_description</key>
 			<string>Percent of free disk space required before warning the user.</string>
 			<key>pfm_name</key>
@@ -210,13 +210,37 @@
 		</dict>
 		<dict>
 			<key>pfm_default</key>
-			<string>https://usw2.ics.services.jamfcloud.com/icon/hash_4804203ac36cbd7c83607487f4719bd4707f2e283500f54428153af17da082e2</string>
+			<string>MSTeams zoom.us Webex</string>
+			<key>pfm_description</key>
+			<string>Space-delimited list of application name substrings used to allowlist display sleep assertions; matching assertions defer reminders up to the Meeting Delay.</string>
+			<key>pfm_name</key>
+			<string>AcceptableAssertionApplicationNames</string>
+			<key>pfm_title</key>
+			<string>Acceptable Assertion Application Names</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>https://use2.ics.services.jamfcloud.com/icon/hash_2d64ce7f0042ad68234a2515211adb067ad6714703dd8ebd6f33c1ab30354b1d</string>
 			<key>pfm_description</key>
 			<string>URL to the organization overlay icon image.</string>
 			<key>pfm_name</key>
 			<string>OrganizationOverlayIconURL</string>
 			<key>pfm_title</key>
 			<string>Organization Overlay Icon URL</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>https://use2.ics.services.jamfcloud.com/icon/hash_d3a3bc5e06d2db5f9697f9b4fa095bfecb2dc0d22c71aadea525eb38ff981d39</string>
+			<key>pfm_description</key>
+			<string>URL to the organization overlay icon image used when the interface is in Dark Mode. Falls back to OrganizationOverlayIconURL when unset.</string>
+			<key>pfm_name</key>
+			<string>OrganizationOverlayIconURLdark</string>
+			<key>pfm_title</key>
+			<string>Organization Overlay Icon URL (Dark Mode)</string>
 			<key>pfm_type</key>
 			<string>string</string>
 		</dict>
@@ -294,7 +318,7 @@
 		</dict>
 		<dict>
 			<key>pfm_default</key>
-			<string>KB8675309</string>
+			<string>Update macOS on Mac</string>
 			<key>pfm_description</key>
 			<string>Knowledge base article identifier.</string>
 			<key>pfm_name</key>
@@ -318,7 +342,7 @@
 		</dict>
 		<dict>
 			<key>pfm_default</key>
-			<string>[108382](https://support.apple.com/108382)</string>
+			<string>[Update macOS on Mac](https://support.apple.com/108382)</string>
 			<key>pfm_description</key>
 			<string>Markdown-formatted link to the support knowledge base article.</string>
 			<key>pfm_name</key>
@@ -366,7 +390,7 @@
 		</dict>
 		<dict>
 			<key>pfm_default</key>
-			<string>KB8675309</string>
+			<string>Update macOS on Mac</string>
 			<key>pfm_description</key>
 			<string>Label for the info button.</string>
 			<key>pfm_name</key>
@@ -378,7 +402,7 @@
 		</dict>
 		<dict>
 			<key>pfm_default</key>
-			<string>&lt;br&gt;&lt;br&gt;**Note:** Your Mac has been powered-on for **${uptimeHumanReadable}**. For more reliable results, please manually restart your Mac before proceeding.</string>
+			<string>&lt;br&gt;&lt;br&gt;**Note:** Your Mac has been powered-on for **{uptimeHumanReadable}**. For more reliable results, please manually restart your Mac before proceeding.</string>
 			<key>pfm_description</key>
 			<string>Markdown-formatted text displayed in the dialog.</string>
 			<key>pfm_name</key>
@@ -390,7 +414,7 @@
 		</dict>
 		<dict>
 			<key>pfm_default</key>
-			<string>&lt;br&gt;&lt;br&gt;Sample **Note:** Your Mac has only **{diskSpaceHumanReadable}**, which may prevent this macOS {titleMessageUpdateOrUpgrade:l}.</string>
+			<string>&lt;br&gt;&lt;br&gt;**Note:** Your Mac has only **{diskSpaceHumanReadable}**, which may prevent this macOS {titleMessageUpdateOrUpgrade:l}.</string>
 			<key>pfm_description</key>
 			<string>Markdown-formatted text displayed in the dialog.</string>
 			<key>pfm_name</key>
@@ -402,7 +426,7 @@
 		</dict>
 		<dict>
 			<key>pfm_default</key>
-			<string>&lt;br&gt;&lt;br&gt;Sample **Good news!** The macOS update has already been downloaded. When ready, click **{button1text}** to install.</string>
+			<string>&lt;br&gt;&lt;br&gt;**Good news!** The macOS {ddmVersionString} update has already been downloaded to your Mac and is ready to install. Installation will proceed quickly when you click **{button1text}**.</string>
 			<key>pfm_description</key>
 			<string>Markdown-formatted message displayed when the update is fully staged (downloaded and ready).</string>
 			<key>pfm_name</key>
@@ -414,7 +438,7 @@
 		</dict>
 		<dict>
 			<key>pfm_default</key>
-			<string>&lt;br&gt;&lt;br&gt;Sample Your Mac is currently preparing the required macOS update.</string>
+			<string>&lt;br&gt;&lt;br&gt;Your Mac has begun downloading and preparing required macOS update components. Installation will be quicker once all assets have finished staging.</string>
 			<key>pfm_description</key>
 			<string>Markdown-formatted message displayed when the update is partially staged (preparing).</string>
 			<key>pfm_name</key>
@@ -426,7 +450,7 @@
 		</dict>
 		<dict>
 			<key>pfm_default</key>
-			<string>&lt;br&gt;&lt;br&gt;Sample Your Mac will begin downloading the update shortly.</string>
+			<string>&lt;br&gt;&lt;br&gt;Your Mac will begin downloading the update shortly.</string>
 			<key>pfm_description</key>
 			<string>Markdown-formatted message displayed when the update download is pending.</string>
 			<key>pfm_name</key>
@@ -450,7 +474,7 @@
 		</dict>
 		<dict>
 			<key>pfm_default</key>
-			<string>**A required macOS ${titleMessageUpdateOrUpgrade:l} is now available**&lt;br&gt;&lt;br&gt;Happy $( date +'%A' ), ${loggedInUserFirstname}!&lt;br&gt;&lt;br&gt;Please ${titleMessageUpdateOrUpgrade:l} to macOS **${ddmVersionString}** to ensure your Mac remains secure and compliant with organizational policies.&lt;br&gt;&lt;br&gt;To perform the ${titleMessageUpdateOrUpgrade:l} now, click **${button1text}**, review the on-screen instructions, then click **${softwareUpdateButtonText}**.&lt;br&gt;&lt;br&gt;If you are unable to perform this ${titleMessageUpdateOrUpgrade:l} now, click **${button2text}** to be reminded again later.&lt;br&gt;&lt;br&gt;However, your device **will automatically restart and ${titleMessageUpdateOrUpgrade:l}** on **${ddmEnforcedInstallDateHumanReadable}** if you have not ${titleMessageUpdateOrUpgrade:l}d before the deadline.${excessiveUptimeWarningMessage}&lt;br&gt;&lt;br&gt;For assistance, please contact **${supportTeamName}** by clicking the (?) button in the bottom, right-hand corner.</string>
+			<string>**A required macOS {titleMessageUpdateOrUpgrade:l} is now available**&lt;br&gt;&lt;br&gt;Happy {weekday}, {loggedInUserFirstname}!&lt;br&gt;&lt;br&gt;Please {titleMessageUpdateOrUpgrade:l} to macOS **{ddmVersionString}** to ensure your Mac remains secure and compliant with organizational policies.{updateReadyMessage}&lt;br&gt;&lt;br&gt;To perform the {titleMessageUpdateOrUpgrade:l} now, click **{button1text}**, review the on-screen instructions, then click **{softwareUpdateButtonText}**.&lt;br&gt;&lt;br&gt;If you are unable to perform this {titleMessageUpdateOrUpgrade:l} now, click **{button2text}** to be reminded again later (which is disabled when the deadline is imminent).&lt;br&gt;&lt;br&gt;However, your device **will automatically restart and {titleMessageUpdateOrUpgrade:l}** on **{ddmEnforcedInstallDateHumanReadable}** if you have not {titleMessageUpdateOrUpgrade:l}d before the deadline.{excessiveUptimeWarningMessage}{diskSpaceWarningMessage}&lt;br&gt;&lt;br&gt;For assistance, please contact **{supportTeamName}** by clicking the (?) button in the bottom, right-hand corner.</string>
 			<key>pfm_description</key>
 			<string>Markdown-formatted message body displayed in the dialog.</string>
 			<key>pfm_name</key>
@@ -462,7 +486,7 @@
 		</dict>
 		<dict>
 			<key>pfm_default</key>
-			<string>**Current:** {installedmacOSVersion}&lt;br&gt;&lt;br&gt;**Required:** {ddmVersionString}&lt;br&gt;&lt;br&gt;**Deadline:** {ddmVersionStringDeadlineHumanReadable}&lt;br&gt;&lt;br&gt;**Day(s) Remaining:** {ddmVersionStringDaysRemaining}</string>
+			<string>**Current:** macOS {installedmacOSVersion}&lt;br&gt;&lt;br&gt;**Required:** macOS {ddmVersionString}&lt;br&gt;&lt;br&gt;**Deadline:** {ddmVersionStringDeadlineHumanReadable}&lt;br&gt;&lt;br&gt;**Day(s) Remaining:** {ddmVersionStringDaysRemaining}&lt;br&gt;&lt;br&gt;**Last Restart:** {uptimeHumanReadable}&lt;br&gt;&lt;br&gt;**Free Disk Space:** {diskSpaceHumanReadable}</string>
 			<key>pfm_description</key>
 			<string>Markdown-formatted info box content showing current and required versions and deadline.</string>
 			<key>pfm_name</key>
@@ -506,6 +530,6 @@
 	<key>pfm_unique</key>
 	<false/>
 	<key>pfm_version</key>
-	<integer>1</integer>
+	<integer>2</integer>
 </dict>
 </plist>
