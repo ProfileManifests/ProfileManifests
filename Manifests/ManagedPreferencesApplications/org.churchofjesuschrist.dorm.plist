@@ -3,11 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>pfm_app_url</key>
-	<string>https://github.com/erikberglund/ProfileCreator</string>
+	<string>https://github.com/dan-snelson/DDM-OS-Reminder/</string>
 	<key>pfm_description</key>
 	<string>Configures DDM OS Reminder message preferences</string>
 	<key>pfm_documentation_url</key>
-	<string>https://github.com/erikberglund/ProfileManifests/wiki/Manifest-Format</string>
+	<string>https://snelson.us/ddm</string>
 	<key>pfm_domain</key>
 	<string>org.churchofjesuschrist.dorm</string>
 	<key>pfm_format_version</key>
