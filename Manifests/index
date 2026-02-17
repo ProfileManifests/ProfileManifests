@@ -856,11 +856,11 @@
 		<key>com.microsoft.autoupdate2</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-08-04T08:25:08Z</date>
+			<date>2026-02-16T20:29:12Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.microsoft.autoupdate2.plist</string>
 			<key>version</key>
-			<integer>18</integer>
+			<integer>19</integer>
 		</dict>
 		<key>com.microsoft.errorreporting</key>
 		<dict>
@@ -2472,6 +2472,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2026-02-09T13:18:36Z</date>
+	<date>2026-02-17T10:19:51Z</date>
 </dict>
 </plist>
