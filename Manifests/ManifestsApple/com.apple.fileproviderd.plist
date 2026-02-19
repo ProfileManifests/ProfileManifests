@@ -157,8 +157,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<dict>
 				<key>macOS</key>
 				<dict>
-					<key>pfmx_device_channel</key>
-					<true/>
 					<key>pfmx_introduced</key>
 					<string>15.2</string>
 					<key>pfmx_user_channel</key>
@@ -198,6 +196,16 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			</array>
 			<key>pfm_type</key>
 			<string>array</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>macOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>15.2</string>
+					<key>pfmx_user_channel</key>
+					<false/>
+				</dict>
+			</dict>
 		</dict>
 		<dict>
 			<key>pfm_default</key>
@@ -214,6 +222,16 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			</array>
 			<key>pfm_type</key>
 			<string>boolean</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>macOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>26.4</string>
+					<key>pfmx_user_channel</key>
+					<false/>
+				</dict>
+			</dict>
 		</dict>
 		<dict>
 			<key>pfm_description</key>
@@ -247,6 +265,16 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			</array>
 			<key>pfm_type</key>
 			<string>array</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>macOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>26.4</string>
+					<key>pfmx_user_channel</key>
+					<false/>
+				</dict>
+			</dict>
 		</dict>
 		<dict>
 			<key>pfm_default</key>
@@ -263,6 +291,16 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			</array>
 			<key>pfm_type</key>
 			<string>boolean</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>macOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>26.4</string>
+					<key>pfmx_user_channel</key>
+					<false/>
+				</dict>
+			</dict>
 		</dict>
 		<dict>
 			<key>pfm_description</key>
@@ -296,6 +334,16 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			</array>
 			<key>pfm_type</key>
 			<string>array</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>macOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>26.4</string>
+					<key>pfmx_user_channel</key>
+					<false/>
+				</dict>
+			</dict>
 		</dict>
 		<dict>
 			<key>pfm_description</key>
@@ -333,10 +381,8 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<dict>
 				<key>macOS</key>
 				<dict>
-					<key>pfmx_device_channel</key>
-					<true/>
 					<key>pfmx_introduced</key>
-					<string>15.2</string>
+					<string>26.4</string>
 					<key>pfmx_user_channel</key>
 					<false/>
 				</dict>

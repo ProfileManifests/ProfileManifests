@@ -466,6 +466,48 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>Allowed Exceptions to Camera Restriction</string>
 			<key>pfm_type</key>
 			<string>array</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>iOS</key>
+				<dict>
+					<key>pfmx_allow_manual_install</key>
+					<false/>
+					<key>pfmx_introduced</key>
+					<string>26.0</string>
+					<key>pfmx_shared_ipad</key>
+					<dict>
+						<key>pfmx_mode</key>
+						<string>forbidden</string>
+					</dict>
+					<key>pfmx_supervised</key>
+					<true/>
+					<key>pfmx_user_enrollment</key>
+					<dict>
+						<key>pfmx_mode</key>
+						<string>forbidden</string>
+					</dict>
+				</dict>
+				<key>macOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>n/a</string>
+				</dict>
+				<key>tvOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>n/a</string>
+				</dict>
+				<key>visionOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>n/a</string>
+				</dict>
+				<key>watchOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>n/a</string>
+				</dict>
+			</dict>
 		</dict>
 		<dict>
 			<key>pfm_default</key>
@@ -1553,6 +1595,8 @@ However, if 'false', the system doesn't prevent AutoFill for contact info and cr
 			<dict>
 				<key>iOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>26.4</string>
 					<key>pfmx_introduced</key>
 					<string>8.1.3</string>
 					<key>pfmx_supervised</key>
@@ -1565,6 +1609,8 @@ However, if 'false', the system doesn't prevent AutoFill for contact info and cr
 				</dict>
 				<key>macOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>26.4</string>
 					<key>pfmx_introduced</key>
 					<string>10.11</string>
 					<key>pfmx_user_enrollment</key>
@@ -1998,11 +2044,15 @@ However, if 'false', the system doesn't prevent AutoFill for contact info and cr
 			<dict>
 				<key>iOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>26.4</string>
 					<key>pfmx_introduced</key>
 					<string>5.0</string>
 				</dict>
 				<key>macOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>26.4</string>
 					<key>pfmx_introduced</key>
 					<string>14.0</string>
 					<key>pfmx_user_enrollment</key>
@@ -2018,6 +2068,8 @@ However, if 'false', the system doesn't prevent AutoFill for contact info and cr
 				</dict>
 				<key>visionOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>26.4</string>
 					<key>pfmx_introduced</key>
 					<string>2.0</string>
 				</dict>
@@ -2047,6 +2099,8 @@ However, if 'false', the system doesn't prevent AutoFill for contact info and cr
 			<dict>
 				<key>iOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>26.4</string>
 					<key>pfmx_introduced</key>
 					<string>5.1</string>
 				</dict>
@@ -2064,6 +2118,11 @@ However, if 'false', the system doesn't prevent AutoFill for contact info and cr
 				<dict>
 					<key>pfmx_introduced</key>
 					<string>n/a</string>
+				</dict>
+				<key>watchOS</key>
+				<dict>
+					<key>pfmx_deprecated</key>
+					<string>26.4</string>
 				</dict>
 			</dict>
 		</dict>
@@ -2088,6 +2147,8 @@ However, if 'false', the system doesn't prevent AutoFill for contact info and cr
 			<dict>
 				<key>iOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>26.4</string>
 					<key>pfmx_introduced</key>
 					<string>5.0</string>
 					<key>pfmx_supervised</key>
@@ -2100,6 +2161,8 @@ However, if 'false', the system doesn't prevent AutoFill for contact info and cr
 				</dict>
 				<key>macOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>26.4</string>
 					<key>pfmx_introduced</key>
 					<string>10.13</string>
 					<key>pfmx_user_enrollment</key>
@@ -2146,6 +2209,8 @@ However, if 'false', the system doesn't prevent AutoFill for contact info and cr
 			<dict>
 				<key>iOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>26.4</string>
 					<key>pfmx_introduced</key>
 					<string>7.0</string>
 					<key>pfmx_supervised</key>
@@ -2173,6 +2238,8 @@ However, if 'false', the system doesn't prevent AutoFill for contact info and cr
 				</dict>
 				<key>watchOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>26.4</string>
 					<key>pfmx_supervised</key>
 					<true/>
 				</dict>
@@ -3215,8 +3282,6 @@ The system doesn't preserve eSIM if Find My initiates erasing the device.</strin
 				</dict>
 				<key>visionOS</key>
 				<dict>
-					<key>pfmx_introduced</key>
-					<string>1.1</string>
 					<key>pfmx_user_enrollment</key>
 					<dict>
 						<key>pfmx_mode</key>
@@ -5472,6 +5537,8 @@ Use MDM to install profiles that contain this restriction.</string>
 			<dict>
 				<key>iOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>26.4</string>
 					<key>pfmx_introduced</key>
 					<string>8.1.3</string>
 					<key>pfmx_supervised</key>
@@ -5525,6 +5592,8 @@ Use MDM to install profiles that contain this restriction.</string>
 			<dict>
 				<key>iOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>26.4</string>
 					<key>pfmx_introduced</key>
 					<string>9.0</string>
 					<key>pfmx_supervised</key>
@@ -5578,6 +5647,8 @@ Use MDM to install profiles that contain this restriction.</string>
 			<dict>
 				<key>iOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>26.4</string>
 					<key>pfmx_introduced</key>
 					<string>8.1.3</string>
 					<key>pfmx_supervised</key>
@@ -5631,6 +5702,8 @@ Use MDM to install profiles that contain this restriction.</string>
 			<dict>
 				<key>iOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>26.4</string>
 					<key>pfmx_introduced</key>
 					<string>13.0</string>
 					<key>pfmx_supervised</key>
@@ -5684,6 +5757,8 @@ Use MDM to install profiles that contain this restriction.</string>
 			<dict>
 				<key>iOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>26.4</string>
 					<key>pfmx_introduced</key>
 					<string>8.1.3</string>
 					<key>pfmx_supervised</key>
@@ -5793,6 +5868,8 @@ Use MDM to install profiles that contain this restriction.</string>
 			<dict>
 				<key>iOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>26.4</string>
 					<key>pfmx_introduced</key>
 					<string>10.3</string>
 					<key>pfmx_supervised</key>
@@ -5805,6 +5882,8 @@ Use MDM to install profiles that contain this restriction.</string>
 				</dict>
 				<key>macOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>26.4</string>
 					<key>pfmx_introduced</key>
 					<string>10.13</string>
 					<key>pfmx_user_enrollment</key>
@@ -5849,11 +5928,15 @@ Use MDM to install profiles that contain this restriction.</string>
 			<dict>
 				<key>iOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>26.4</string>
 					<key>pfmx_introduced</key>
 					<string>14.5</string>
 				</dict>
 				<key>macOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>26.4</string>
 					<key>pfmx_introduced</key>
 					<string>14.0</string>
 				</dict>
@@ -5864,8 +5947,15 @@ Use MDM to install profiles that contain this restriction.</string>
 				</dict>
 				<key>visionOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>26.4</string>
 					<key>pfmx_introduced</key>
 					<string>2.0</string>
+				</dict>
+				<key>watchOS</key>
+				<dict>
+					<key>pfmx_deprecated</key>
+					<string>26.4</string>
 				</dict>
 			</dict>
 		</dict>
@@ -5888,6 +5978,8 @@ Use MDM to install profiles that contain this restriction.</string>
 			<dict>
 				<key>iOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>26.4</string>
 					<key>pfmx_introduced</key>
 					<string>15.0</string>
 				</dict>
@@ -5905,6 +5997,11 @@ Use MDM to install profiles that contain this restriction.</string>
 				<dict>
 					<key>pfmx_introduced</key>
 					<string>n/a</string>
+				</dict>
+				<key>watchOS</key>
+				<dict>
+					<key>pfmx_deprecated</key>
+					<string>26.4</string>
 				</dict>
 			</dict>
 		</dict>
@@ -6043,7 +6140,12 @@ Use MDM to install profiles that contain this restriction.</string>
 				<key>macOS</key>
 				<dict>
 					<key>pfmx_introduced</key>
-					<string>n/a</string>
+					<string>26.0</string>
+					<key>pfmx_user_enrollment</key>
+					<dict>
+						<key>pfmx_mode</key>
+						<string>forbidden</string>
+					</dict>
 				</dict>
 				<key>tvOS</key>
 				<dict>
@@ -8070,6 +8172,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 					<string>17.4</string>
 					<key>pfmx_introduced</key>
 					<string>12.0</string>
+					<key>pfmx_removed</key>
+					<string>26.4</string>
 					<key>pfmx_supervised</key>
 					<true/>
 				</dict>
@@ -8106,6 +8210,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 			<dict>
 				<key>iOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>26.0</string>
 					<key>pfmx_introduced</key>
 					<string>11.3</string>
 					<key>pfmx_supervised</key>
@@ -8118,6 +8224,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 				</dict>
 				<key>macOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>26.0</string>
 					<key>pfmx_introduced</key>
 					<string>10.13</string>
 					<key>pfmx_user_enrollment</key>
@@ -8128,6 +8236,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 				</dict>
 				<key>tvOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>26.0</string>
 					<key>pfmx_introduced</key>
 					<string>12.2</string>
 					<key>pfmx_supervised</key>
@@ -8188,6 +8298,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 			<dict>
 				<key>iOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>26.0</string>
 					<key>pfmx_introduced</key>
 					<string>11.3</string>
 					<key>pfmx_supervised</key>
@@ -8200,6 +8312,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 				</dict>
 				<key>macOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>26.0</string>
 					<key>pfmx_introduced</key>
 					<string>10.13.4</string>
 					<key>pfmx_user_enrollment</key>
@@ -8210,6 +8324,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 				</dict>
 				<key>tvOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>26.0</string>
 					<key>pfmx_introduced</key>
 					<string>12.2</string>
 					<key>pfmx_supervised</key>
@@ -8248,6 +8364,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 			<dict>
 				<key>iOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>26.0</string>
 					<key>pfmx_introduced</key>
 					<string>16.0</string>
 					<key>pfmx_supervised</key>
@@ -8260,6 +8378,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 				</dict>
 				<key>macOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>26.0</string>
 					<key>pfmx_introduced</key>
 					<string>13.0</string>
 					<key>pfmx_user_enrollment</key>
@@ -8306,6 +8426,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 			<dict>
 				<key>iOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>26.0</string>
 					<key>pfmx_introduced</key>
 					<string>16.0</string>
 					<key>pfmx_supervised</key>
@@ -8318,6 +8440,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 				</dict>
 				<key>macOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>26.0</string>
 					<key>pfmx_introduced</key>
 					<string>13.0</string>
 					<key>pfmx_user_enrollment</key>
@@ -8595,6 +8719,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 			<dict>
 				<key>iOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>26.4</string>
 					<key>pfmx_introduced</key>
 					<string>18.0</string>
 					<key>pfmx_shared_ipad</key>
@@ -8612,6 +8738,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 				</dict>
 				<key>macOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>26.4</string>
 					<key>pfmx_introduced</key>
 					<string>15.0</string>
 					<key>pfmx_user_enrollment</key>
@@ -8627,6 +8755,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 				</dict>
 				<key>visionOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>26.4</string>
 					<key>pfmx_introduced</key>
 					<string>2.4</string>
 					<key>pfmx_supervised</key>
@@ -8665,6 +8795,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 			<dict>
 				<key>iOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>26.4</string>
 					<key>pfmx_introduced</key>
 					<string>18.0</string>
 					<key>pfmx_shared_ipad</key>
@@ -8682,6 +8814,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 				</dict>
 				<key>macOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>26.4</string>
 					<key>pfmx_introduced</key>
 					<string>15.0</string>
 					<key>pfmx_user_enrollment</key>
@@ -8697,6 +8831,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 				</dict>
 				<key>visionOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>26.4</string>
 					<key>pfmx_introduced</key>
 					<string>2.4</string>
 					<key>pfmx_supervised</key>
@@ -8735,6 +8871,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 			<dict>
 				<key>iOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>26.4</string>
 					<key>pfmx_introduced</key>
 					<string>18.0</string>
 					<key>pfmx_shared_ipad</key>
@@ -8762,6 +8900,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 				</dict>
 				<key>visionOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>26.4</string>
 					<key>pfmx_introduced</key>
 					<string>2.4</string>
 					<key>pfmx_supervised</key>
@@ -8861,6 +9001,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 			<dict>
 				<key>iOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>26.4</string>
 					<key>pfmx_introduced</key>
 					<string>18.0</string>
 					<key>pfmx_shared_ipad</key>
@@ -8919,6 +9061,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 			<dict>
 				<key>iOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>26.4</string>
 					<key>pfmx_introduced</key>
 					<string>18.0</string>
 					<key>pfmx_shared_ipad</key>
@@ -8936,6 +9080,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 				</dict>
 				<key>macOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>26.4</string>
 					<key>pfmx_introduced</key>
 					<string>15.0</string>
 					<key>pfmx_user_enrollment</key>
@@ -8951,6 +9097,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 				</dict>
 				<key>visionOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>26.4</string>
 					<key>pfmx_introduced</key>
 					<string>2.4</string>
 					<key>pfmx_supervised</key>
@@ -9005,7 +9153,12 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 				<key>macOS</key>
 				<dict>
 					<key>pfmx_introduced</key>
-					<string>n/a</string>
+					<string>26.0</string>
+					<key>pfmx_user_enrollment</key>
+					<dict>
+						<key>pfmx_mode</key>
+						<string>forbidden</string>
+					</dict>
 				</dict>
 				<key>tvOS</key>
 				<dict>
@@ -9043,6 +9196,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 			<dict>
 				<key>iOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>26.4</string>
 					<key>pfmx_introduced</key>
 					<string>18.1</string>
 					<key>pfmx_shared_ipad</key>
@@ -9060,6 +9215,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 				</dict>
 				<key>macOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>26.4</string>
 					<key>pfmx_introduced</key>
 					<string>15.1</string>
 					<key>pfmx_user_enrollment</key>
@@ -9075,6 +9232,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 				</dict>
 				<key>visionOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>26.4</string>
 					<key>pfmx_introduced</key>
 					<string>2.4</string>
 					<key>pfmx_supervised</key>
@@ -9111,6 +9270,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 			<dict>
 				<key>iOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>26.4</string>
 					<key>pfmx_introduced</key>
 					<string>18.4</string>
 					<key>pfmx_shared_ipad</key>
@@ -9128,6 +9289,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 				</dict>
 				<key>macOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>26.4</string>
 					<key>pfmx_introduced</key>
 					<string>15.4</string>
 					<key>pfmx_user_enrollment</key>
@@ -9143,6 +9306,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 				</dict>
 				<key>visionOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>26.4</string>
 					<key>pfmx_introduced</key>
 					<string>2.4</string>
 					<key>pfmx_supervised</key>
@@ -9251,14 +9416,7 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 				<key>visionOS</key>
 				<dict>
 					<key>pfmx_introduced</key>
-					<string>2.2</string>
-					<key>pfmx_supervised</key>
-					<true/>
-					<key>pfmx_user_enrollment</key>
-					<dict>
-						<key>pfmx_mode</key>
-						<string>forbidden</string>
-					</dict>
+					<string>n/a</string>
 				</dict>
 				<key>watchOS</key>
 				<dict>
@@ -9390,6 +9548,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 			<dict>
 				<key>iOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>26.4</string>
 					<key>pfmx_introduced</key>
 					<string>18.2</string>
 					<key>pfmx_shared_ipad</key>
@@ -9397,21 +9557,13 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 						<key>pfmx_mode</key>
 						<string>forbidden</string>
 					</dict>
-					<key>pfmx_user_enrollment</key>
-					<dict>
-						<key>pfmx_mode</key>
-						<string>allowed</string>
-					</dict>
 				</dict>
 				<key>macOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>26.4</string>
 					<key>pfmx_introduced</key>
 					<string>15.2</string>
-					<key>pfmx_user_enrollment</key>
-					<dict>
-						<key>pfmx_mode</key>
-						<string>allowed</string>
-					</dict>
 				</dict>
 				<key>tvOS</key>
 				<dict>
@@ -9420,13 +9572,10 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 				</dict>
 				<key>visionOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>26.4</string>
 					<key>pfmx_introduced</key>
 					<string>2.4</string>
-					<key>pfmx_user_enrollment</key>
-					<dict>
-						<key>pfmx_mode</key>
-						<string>allowed</string>
-					</dict>
 				</dict>
 				<key>watchOS</key>
 				<dict>
@@ -9456,6 +9605,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 			<dict>
 				<key>iOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>26.4</string>
 					<key>pfmx_introduced</key>
 					<string>18.2</string>
 					<key>pfmx_shared_ipad</key>
@@ -9463,21 +9614,13 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 						<key>pfmx_mode</key>
 						<string>forbidden</string>
 					</dict>
-					<key>pfmx_user_enrollment</key>
-					<dict>
-						<key>pfmx_mode</key>
-						<string>allowed</string>
-					</dict>
 				</dict>
 				<key>macOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>26.4</string>
 					<key>pfmx_introduced</key>
 					<string>15.2</string>
-					<key>pfmx_user_enrollment</key>
-					<dict>
-						<key>pfmx_mode</key>
-						<string>allowed</string>
-					</dict>
 				</dict>
 				<key>tvOS</key>
 				<dict>
@@ -9486,13 +9629,10 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 				</dict>
 				<key>visionOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>26.4</string>
 					<key>pfmx_introduced</key>
 					<string>2.4</string>
-					<key>pfmx_user_enrollment</key>
-					<dict>
-						<key>pfmx_mode</key>
-						<string>allowed</string>
-					</dict>
 				</dict>
 				<key>watchOS</key>
 				<dict>
@@ -9541,6 +9681,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 				<dict>
 					<key>pfmx_allow_manual_install</key>
 					<false/>
+					<key>pfmx_deprecated</key>
+					<string>26.4</string>
 					<key>pfmx_introduced</key>
 					<string>18.3</string>
 					<key>pfmx_shared_ipad</key>
@@ -9560,6 +9702,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 				<dict>
 					<key>pfmx_allow_manual_install</key>
 					<false/>
+					<key>pfmx_deprecated</key>
+					<string>26.4</string>
 					<key>pfmx_introduced</key>
 					<string>15.3</string>
 					<key>pfmx_user_enrollment</key>
@@ -9577,6 +9721,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 				<dict>
 					<key>pfmx_allow_manual_install</key>
 					<false/>
+					<key>pfmx_deprecated</key>
+					<string>26.4</string>
 					<key>pfmx_introduced</key>
 					<string>2.4</string>
 					<key>pfmx_supervised</key>
@@ -9613,6 +9759,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 			<dict>
 				<key>iOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>26.4</string>
 					<key>pfmx_introduced</key>
 					<string>18.3</string>
 					<key>pfmx_shared_ipad</key>
@@ -9630,6 +9778,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 				</dict>
 				<key>macOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>26.4</string>
 					<key>pfmx_introduced</key>
 					<string>15.3</string>
 					<key>pfmx_user_enrollment</key>
@@ -9674,6 +9824,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 			<dict>
 				<key>iOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>26.4</string>
 					<key>pfmx_introduced</key>
 					<string>18.4</string>
 					<key>pfmx_shared_ipad</key>
@@ -9691,6 +9843,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 				</dict>
 				<key>macOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>26.4</string>
 					<key>pfmx_introduced</key>
 					<string>15.4</string>
 					<key>pfmx_user_enrollment</key>
@@ -9737,6 +9891,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 			<dict>
 				<key>iOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>26.4</string>
 					<key>pfmx_introduced</key>
 					<string>18.3</string>
 					<key>pfmx_shared_ipad</key>
@@ -9851,6 +10007,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 			<dict>
 				<key>iOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>26.4</string>
 					<key>pfmx_introduced</key>
 					<string>18.4</string>
 					<key>pfmx_shared_ipad</key>
@@ -9868,6 +10026,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 				</dict>
 				<key>macOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>26.4</string>
 					<key>pfmx_introduced</key>
 					<string>15.4</string>
 					<key>pfmx_user_enrollment</key>
@@ -9912,6 +10072,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 			<dict>
 				<key>iOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>26.4</string>
 					<key>pfmx_introduced</key>
 					<string>18.4</string>
 					<key>pfmx_shared_ipad</key>
@@ -9929,6 +10091,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 				</dict>
 				<key>macOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>26.4</string>
 					<key>pfmx_introduced</key>
 					<string>15.4</string>
 					<key>pfmx_user_enrollment</key>
@@ -9944,6 +10108,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 				</dict>
 				<key>visionOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>26.4</string>
 					<key>pfmx_introduced</key>
 					<string>2.4</string>
 					<key>pfmx_supervised</key>
@@ -10016,94 +10182,6 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
-			<string>If 'false', the system disables the ability to clear browsing history in Safari. Available in iOS 26 and later, macOS 26 and later, and visionOS 26 and later.</string>
-			<key>pfm_ios_min</key>
-			<string>26.0</string>
-			<key>pfm_name</key>
-			<string>allowSafariHistoryClearing</string>
-			<key>pfm_supervised</key>
-			<true/>
-			<key>pfm_targets</key>
-			<array>
-				<string>system</string>
-				<string>user</string>
-			</array>
-			<key>pfm_type</key>
-			<string>boolean</string>
-		</dict>
-		<dict>
-			<key>pfm_default</key>
-			<true/>
-			<key>pfm_description</key>
-			<string>If 'false', the system disables the ability to use private browsing in Safari. Available in iOS 26 and later, macOS 26 and later, and visionOS 26 and later.</string>
-			<key>pfm_ios_min</key>
-			<string>26.0</string>
-			<key>pfm_name</key>
-			<string>allowSafariPrivateBrowsing</string>
-			<key>pfm_supervised</key>
-			<true/>
-			<key>pfm_targets</key>
-			<array>
-				<string>system</string>
-				<string>user</string>
-			</array>
-			<key>pfm_type</key>
-			<string>boolean</string>
-		</dict>
-		<dict>
-			<key>pfm_description</key>
-			<string>An array of strings representing ICCIDs of cellular plans. The device prevents use of any matching cellular networks in iMessage and FaceTime. The array must contain no more than 4 ICCID strings.</string>
-			<key>pfm_ios_min</key>
-			<string>26.0</string>
-			<key>pfm_name</key>
-			<string>deniedICCIDsForiMessageFaceTime</string>
-			<key>pfm_subkeys</key>
-			<array>
-				<dict>
-					<key>pfm_description</key>
-					<string>An ICCID.</string>
-					<key>pfm_name</key>
-					<string>deniedICCIDForiMessageFaceTime</string>
-					<key>pfm_title</key>
-					<string>Denied ICCID for iMessage and FaceTime</string>
-					<key>pfm_type</key>
-					<string>string</string>
-				</dict>
-			</array>
-			<key>pfm_supervised</key>
-			<true/>
-			<key>pfm_type</key>
-			<string>array</string>
-		</dict>
-		<dict>
-			<key>pfm_description</key>
-			<string>An array of strings representing ICCIDs of cellular plans. The device prevents use of any matching cellular networks with RCS messaging. The array must contain no more than 4 ICCID strings.</string>
-			<key>pfm_ios_min</key>
-			<string>26.0</string>
-			<key>pfm_name</key>
-			<string>deniedICCIDsForRCS</string>
-			<key>pfm_subkeys</key>
-			<array>
-				<dict>
-					<key>pfm_description</key>
-					<string>An ICCID.</string>
-					<key>pfm_name</key>
-					<string>deniedICCIDForRCS</string>
-					<key>pfm_title</key>
-					<string>Denied ICCID for RCS</string>
-					<key>pfm_type</key>
-					<string>string</string>
-				</dict>
-			</array>
-			<key>pfm_supervised</key>
-			<true/>
-			<key>pfm_type</key>
-			<string>array</string>
-		</dict>
-		<dict>
-			<key>pfm_default</key>
-			<true/>
-			<key>pfm_description</key>
 			<string>If 'false', the system disables the ability to clear browsing history in Safari.</string>
 			<key>pfm_ios_min</key>
 			<string>26.0</string>
@@ -10118,6 +10196,55 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 			</array>
 			<key>pfm_type</key>
 			<string>boolean</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>iOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>26.0</string>
+					<key>pfmx_supervised</key>
+					<true/>
+					<key>pfmx_user_enrollment</key>
+					<dict>
+						<key>pfmx_mode</key>
+						<string>forbidden</string>
+					</dict>
+				</dict>
+				<key>macOS</key>
+				<dict>
+					<key>pfmx_allow_manual_install</key>
+					<false/>
+					<key>pfmx_introduced</key>
+					<string>26.0</string>
+					<key>pfmx_user_enrollment</key>
+					<dict>
+						<key>pfmx_mode</key>
+						<string>forbidden</string>
+					</dict>
+				</dict>
+				<key>tvOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>n/a</string>
+				</dict>
+				<key>visionOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>26.0</string>
+					<key>pfmx_supervised</key>
+					<true/>
+					<key>pfmx_user_enrollment</key>
+					<dict>
+						<key>pfmx_mode</key>
+						<string>forbidden</string>
+					</dict>
+				</dict>
+				<key>watchOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>n/a</string>
+				</dict>
+			</dict>
 		</dict>
 		<dict>
 			<key>pfm_default</key>
@@ -10137,6 +10264,55 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 			</array>
 			<key>pfm_type</key>
 			<string>boolean</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>iOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>26.0</string>
+					<key>pfmx_supervised</key>
+					<true/>
+					<key>pfmx_user_enrollment</key>
+					<dict>
+						<key>pfmx_mode</key>
+						<string>forbidden</string>
+					</dict>
+				</dict>
+				<key>macOS</key>
+				<dict>
+					<key>pfmx_allow_manual_install</key>
+					<false/>
+					<key>pfmx_introduced</key>
+					<string>26.0</string>
+					<key>pfmx_user_enrollment</key>
+					<dict>
+						<key>pfmx_mode</key>
+						<string>forbidden</string>
+					</dict>
+				</dict>
+				<key>tvOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>n/a</string>
+				</dict>
+				<key>visionOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>26.0</string>
+					<key>pfmx_supervised</key>
+					<true/>
+					<key>pfmx_user_enrollment</key>
+					<dict>
+						<key>pfmx_mode</key>
+						<string>forbidden</string>
+					</dict>
+				</dict>
+				<key>watchOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>n/a</string>
+				</dict>
+			</dict>
 		</dict>
 		<dict>
 			<key>pfm_description</key>
@@ -10166,62 +10342,19 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 			<true/>
 			<key>pfm_type</key>
 			<string>array</string>
-		</dict>
-		<dict>
-			<key>pfm_description</key>
-			<string>An array of strings representing ICCIDs of cellular plans. The device prevents use of any matching cellular networks with RCS messaging. The array must contain no more than 4 ICCID strings.</string>
-			<key>pfm_ios_min</key>
-			<string>26.0</string>
-			<key>pfm_name</key>
-			<string>deniedICCIDsForRCS</string>
-			<key>pfm_subkeys</key>
-			<array>
-				<dict>
-					<key>pfm_description</key>
-					<string>An ICCID.</string>
-					<key>pfm_ios_min</key>
-					<string>26.0</string>
-					<key>pfm_name</key>
-					<string>deniedICCIDForRCS</string>
-					<key>pfm_supervised</key>
-					<true/>
-					<key>pfm_title</key>
-					<string>Denied ICCID for RCS</string>
-					<key>pfm_type</key>
-					<string>string</string>
-				</dict>
-			</array>
-			<key>pfm_supervised</key>
-			<true/>
-			<key>pfm_type</key>
-			<string>array</string>
-		</dict>
-		<dict>
-			<key>pfm_description</key>
-			<string>If present, the system exempts apps with bundle IDs in the array from age-based rating restrictions. The system uses intersection combine rules to combine multiple payloads and any exceptions that parental control apps provide, including ScreenTime.</string>
-			<key>pfm_ios_min</key>
-			<string>26.1</string>
-			<key>pfm_name</key>
-			<string>ratingAppsExemptedBundleIDs</string>
-			<key>pfm_subkeys</key>
-			<array>
-				<dict>
-					<key>pfm_ios_min</key>
-					<string>26.1</string>
-					<key>pfm_name</key>
-					<string>ratingAppsExemptedBundleID</string>
-					<key>pfm_title</key>
-					<string>Exempted App</string>
-					<key>pfm_type</key>
-					<string>string</string>
-				</dict>
-			</array>
 			<key>pfmx_supported_oses</key>
 			<dict>
 				<key>iOS</key>
 				<dict>
 					<key>pfmx_introduced</key>
-					<string>26.1</string>
+					<string>26.0</string>
+					<key>pfmx_supervised</key>
+					<true/>
+					<key>pfmx_user_enrollment</key>
+					<dict>
+						<key>pfmx_mode</key>
+						<string>forbidden</string>
+					</dict>
 				</dict>
 				<key>macOS</key>
 				<dict>
@@ -10244,10 +10377,130 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 					<string>n/a</string>
 				</dict>
 			</dict>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>An array of strings representing ICCIDs of cellular plans. The device prevents use of any matching cellular networks with RCS messaging. The array must contain no more than 4 ICCID strings.</string>
+			<key>pfm_ios_min</key>
+			<string>26.0</string>
+			<key>pfm_name</key>
+			<string>deniedICCIDsForRCS</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_description</key>
+					<string>An ICCID.</string>
+					<key>pfm_ios_min</key>
+					<string>26.0</string>
+					<key>pfm_name</key>
+					<string>deniedICCIDForRCS</string>
+					<key>pfm_supervised</key>
+					<true/>
+					<key>pfm_title</key>
+					<string>Denied ICCID for RCS</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+			</array>
+			<key>pfm_supervised</key>
+			<true/>
+			<key>pfm_type</key>
+			<string>array</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>iOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>26.0</string>
+					<key>pfmx_supervised</key>
+					<true/>
+					<key>pfmx_user_enrollment</key>
+					<dict>
+						<key>pfmx_mode</key>
+						<string>forbidden</string>
+					</dict>
+				</dict>
+				<key>macOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>n/a</string>
+				</dict>
+				<key>tvOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>n/a</string>
+				</dict>
+				<key>visionOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>n/a</string>
+				</dict>
+				<key>watchOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>n/a</string>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>If present, the system exempts apps with bundle IDs in the array from age-based rating restrictions. The system uses intersection combine rules to combine multiple payloads and any exceptions that parental control apps provide, including ScreenTime.</string>
+			<key>pfm_ios_min</key>
+			<string>26.1</string>
+			<key>pfm_name</key>
+			<string>ratingAppsExemptedBundleIDs</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_ios_min</key>
+					<string>26.1</string>
+					<key>pfm_name</key>
+					<string>ratingAppsExemptedBundleID</string>
+					<key>pfm_title</key>
+					<string>Exempted App</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+			</array>
 			<key>pfm_title</key>
 			<string>Apps Exempted from Rating Restrictions</string>
 			<key>pfm_type</key>
 			<string>array</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>iOS</key>
+				<dict>
+					<key>pfmx_allow_manual_install</key>
+					<false/>
+					<key>pfmx_introduced</key>
+					<string>26.1</string>
+					<key>pfmx_user_enrollment</key>
+					<dict>
+						<key>pfmx_mode</key>
+						<string>forbidden</string>
+					</dict>
+				</dict>
+				<key>macOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>n/a</string>
+				</dict>
+				<key>tvOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>n/a</string>
+				</dict>
+				<key>visionOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>n/a</string>
+				</dict>
+				<key>watchOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>n/a</string>
+				</dict>
+			</dict>
 		</dict>
 	</array>
 	<key>pfm_targets</key>

@@ -844,6 +844,8 @@ Denying system apps may disable other functionality. For example, denying the Ap
 			<dict>
 				<key>iOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>26.4</string>
 					<key>pfmx_introduced</key>
 					<string>5.0</string>
 					<key>pfmx_supervised</key>
@@ -856,6 +858,8 @@ Denying system apps may disable other functionality. For example, denying the Ap
 				</dict>
 				<key>macOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>26.4</string>
 					<key>pfmx_introduced</key>
 					<string>10.13</string>
 					<key>pfmx_user_enrollment</key>
@@ -1566,8 +1570,12 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 				</dict>
 				<key>tvOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>17.4</string>
 					<key>pfmx_introduced</key>
 					<string>12.0</string>
+					<key>pfmx_removed</key>
+					<string>26.4</string>
 					<key>pfmx_supervised</key>
 					<true/>
 				</dict>
@@ -1604,6 +1612,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 			<dict>
 				<key>iOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>26.0</string>
 					<key>pfmx_introduced</key>
 					<string>11.3</string>
 					<key>pfmx_supervised</key>
@@ -1616,6 +1626,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 				</dict>
 				<key>macOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>26.0</string>
 					<key>pfmx_introduced</key>
 					<string>10.13</string>
 					<key>pfmx_user_enrollment</key>
@@ -1626,6 +1638,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 				</dict>
 				<key>tvOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>26.0</string>
 					<key>pfmx_introduced</key>
 					<string>12.2</string>
 					<key>pfmx_supervised</key>
@@ -1686,6 +1700,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 			<dict>
 				<key>iOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>26.0</string>
 					<key>pfmx_introduced</key>
 					<string>11.3</string>
 					<key>pfmx_supervised</key>
@@ -1698,6 +1714,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 				</dict>
 				<key>macOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>26.0</string>
 					<key>pfmx_introduced</key>
 					<string>10.13.4</string>
 					<key>pfmx_user_enrollment</key>
@@ -1708,6 +1726,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 				</dict>
 				<key>tvOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>26.0</string>
 					<key>pfmx_introduced</key>
 					<string>12.2</string>
 					<key>pfmx_supervised</key>
