@@ -140,7 +140,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>Use 'allowlistEnabled' instead.</string>
+			<string>Use 'allowListEnabled' instead.</string>
 			<key>pfm_macos_deprecated</key>
 			<string>15.2</string>
 			<key>pfm_name</key>
@@ -178,7 +178,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				</dict>
 			</array>
 			<key>pfm_description</key>
-			<string>Use 'siteAllowlist' instead.</string>
+			<string>Use 'siteAllowList' instead.</string>
 			<key>pfm_macos_deprecated</key>
 			<string>15.2</string>
 			<key>pfm_name</key>
@@ -188,6 +188,8 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				<dict>
 					<key>pfm_description</key>
 					<string>A dictionary defining a site for the allow list.</string>
+					<key>pfm_macos_deprecated</key>
+					<string>15.2</string>
 					<key>pfm_name</key>
 					<string>siteWhitelistItem</string>
 					<key>pfm_subkeys</key>
@@ -195,6 +197,8 @@ During a profile replacement, the system updates payloads with the same 'Payload
 						<dict>
 							<key>pfm_description</key>
 							<string>The site prefix, including http(s) scheme.</string>
+							<key>pfm_macos_deprecated</key>
+							<string>15.2</string>
 							<key>pfm_name</key>
 							<string>address</string>
 							<key>pfm_require</key>
@@ -207,6 +211,8 @@ During a profile replacement, the system updates payloads with the same 'Payload
 						<dict>
 							<key>pfm_description</key>
 							<string>The site page title.</string>
+							<key>pfm_macos_deprecated</key>
+							<string>15.2</string>
 							<key>pfm_name</key>
 							<string>pageTitle</string>
 							<key>pfm_title</key>
@@ -248,7 +254,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_description</key>
-			<string>Use 'filterAllowlist' instead.</string>
+			<string>Use 'filterAllowList' instead.</string>
 			<key>pfm_macos_deprecated</key>
 			<string>15.2</string>
 			<key>pfm_name</key>
@@ -258,6 +264,8 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				<dict>
 					<key>pfm_description</key>
 					<string>An allowed site.</string>
+					<key>pfm_macos_deprecated</key>
+					<string>15.2</string>
 					<key>pfm_name</key>
 					<string>filterWhitelistItem</string>
 					<key>pfm_require</key>
@@ -283,7 +291,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_description</key>
-			<string>Use 'filterDenylist' instead.</string>
+			<string>Use 'filterDenyList' instead.</string>
 			<key>pfm_macos_deprecated</key>
 			<string>15.2</string>
 			<key>pfm_name</key>
@@ -293,6 +301,8 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				<dict>
 					<key>pfm_description</key>
 					<string>A disallowed site.</string>
+					<key>pfm_macos_deprecated</key>
+					<string>15.2</string>
 					<key>pfm_name</key>
 					<string>filterBlacklistItem</string>
 					<key>pfm_require</key>
@@ -324,7 +334,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_macos_min</key>
 			<string>15.2</string>
 			<key>pfm_name</key>
-			<string>allowlistEnabled</string>
+			<string>allowListEnabled</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 			<key>pfmx_supported_oses</key>
@@ -340,23 +350,27 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_description</key>
 			<string>An array of sites that defines an allow list. If specified, this defines additional allowed sites besides those in the automated allow list and deny list, including disallowed adult sites.
 
-This key is required if 'allowlistEnabled' is 'true'.</string>
+This key is required if 'allowListEnabled' is 'true'.</string>
 			<key>pfm_macos_min</key>
 			<string>15.2</string>
 			<key>pfm_name</key>
-			<string>siteAllowlist</string>
+			<string>siteAllowList</string>
 			<key>pfm_subkeys</key>
 			<array>
 				<dict>
 					<key>pfm_description</key>
 					<string>A dictionary defining a site for the allow list.</string>
+					<key>pfm_macos_min</key>
+					<string>15.2</string>
 					<key>pfm_name</key>
-					<string>siteAllowlistItem</string>
+					<string>siteAllowListItem</string>
 					<key>pfm_subkeys</key>
 					<array>
 						<dict>
 							<key>pfm_description</key>
 							<string>The site prefix, including the 'http(s)' scheme.</string>
+							<key>pfm_macos_min</key>
+							<string>15.2</string>
 							<key>pfm_name</key>
 							<string>address</string>
 							<key>pfm_require</key>
@@ -367,6 +381,8 @@ This key is required if 'allowlistEnabled' is 'true'.</string>
 						<dict>
 							<key>pfm_description</key>
 							<string>The site page title.</string>
+							<key>pfm_macos_min</key>
+							<string>15.2</string>
 							<key>pfm_name</key>
 							<string>pageTitle</string>
 							<key>pfm_type</key>
@@ -394,14 +410,16 @@ This key is required if 'allowlistEnabled' is 'true'.</string>
 			<key>pfm_macos_min</key>
 			<string>15.2</string>
 			<key>pfm_name</key>
-			<string>filterAllowlist</string>
+			<string>filterAllowList</string>
 			<key>pfm_subkeys</key>
 			<array>
 				<dict>
 					<key>pfm_description</key>
 					<string>An allowed site.</string>
+					<key>pfm_macos_min</key>
+					<string>15.2</string>
 					<key>pfm_name</key>
-					<string>filterAllowlistItem</string>
+					<string>filterAllowListItem</string>
 					<key>pfm_require</key>
 					<string>always</string>
 					<key>pfm_type</key>
@@ -425,14 +443,16 @@ This key is required if 'allowlistEnabled' is 'true'.</string>
 			<key>pfm_macos_min</key>
 			<string>15.2</string>
 			<key>pfm_name</key>
-			<string>filterDenylist</string>
+			<string>filterDenyList</string>
 			<key>pfm_subkeys</key>
 			<array>
 				<dict>
 					<key>pfm_description</key>
 					<string>A disallowed site.</string>
+					<key>pfm_macos_min</key>
+					<string>15.2</string>
 					<key>pfm_name</key>
-					<string>filterDenylistItem</string>
+					<string>filterDenyListItem</string>
 					<key>pfm_require</key>
 					<string>always</string>
 					<key>pfm_type</key>
@@ -459,6 +479,8 @@ This key is required if 'allowlistEnabled' is 'true'.</string>
 	<key>pfm_title</key>
 	<string>Parental Controls: Web Content Filter</string>
 	<key>pfm_unique</key>
+	<true/>
+	<key>pfm_user_approved</key>
 	<false/>
 	<key>pfm_version</key>
 	<integer>2</integer>

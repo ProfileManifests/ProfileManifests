@@ -18,6 +18,9 @@
 	<date>2025-11-05T14:06:39Z</date>
 	<key>pfm_macos_min</key>
 	<string>10.7</string>
+	<key>pfm_note</key>
+	<string>Important:
+The system allows multiple Restrictions payloads. However, don't attempt to manage the same restriction in different payloads. Doing so results in unexpected behavior.</string>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -232,6 +235,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<string>forceBypassScreenCaptureAlert</string>
 					<string>allowSafariHistoryClearing</string>
 					<string>allowSafariPrivateBrowsing</string>
+					<string>allowRosettaUsageAwareness</string>
 				</array>
 				<key>Media</key>
 				<array>
@@ -595,6 +599,10 @@ However, if 'false', the system doesn't prevent AutoFill for contact info and cr
 			<string>10.13</string>
 			<key>pfm_name</key>
 			<string>allowContentCaching</string>
+			<key>pfm_targets</key>
+			<array>
+				<string>system</string>
+			</array>
 			<key>pfm_title</key>
 			<string>Allow Content Caching</string>
 			<key>pfm_type</key>
@@ -2116,6 +2124,8 @@ However, if 'false', the system doesn't prevent AutoFill for contact info and cr
 			<true/>
 			<key>pfm_description</key>
 			<string>If 'false', the system disables definition lookup.</string>
+			<key>pfm_macos_deprecated</key>
+			<string>26.4</string>
 			<key>pfm_macos_min</key>
 			<string>10.11</string>
 			<key>pfm_name</key>
@@ -2566,21 +2576,11 @@ However, if 'false', the system doesn't prevent AutoFill for contact info and cr
 			<key>pfm_default</key>
 			<integer>1000</integer>
 			<key>pfm_description</key>
-			<string>The maximum level of app content allowed on the device. Preinstalled (first-party) apps ignore this restriction.
-
-Possible values, with the U.S. description of the rating level:
-
-- '1000': All
-- '600': 17+
-- '300': 12+
-- '200': 9+
-- '100': 4+
-- '0': None
+			<string>The maximum level of app content allowed on the device. Starting with iOS 26.2, this rating may apply to certain system apps.
 
 Age bands and the number of discrete age values vary by region, but the values are consistent across regions. For example, in a region that defines rating level 14+, its value is guaranteed to be larger than 300 (12+) and smaller than 600 (17+). Also, the value of rating level 15+ is guaranteed to be larger than the assigned value of rating level 14+. For more information about age ratings, see [Age ratings values and definitions](https://developer.apple.com/help/app-store-connect/reference/age-ratings-values-and-definitions).
 
-Examples of values in other regions include:
-
+Below is the complete list of age rating values used across all App Store regions.
 - '1000': All
 - '621': 21+
 - '620': 20+
@@ -3308,6 +3308,10 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 			<string>14.0</string>
 			<key>pfm_name</key>
 			<string>allowTimeMachineBackup</string>
+			<key>pfm_targets</key>
+			<array>
+				<string>system</string>
+			</array>
 			<key>pfm_title</key>
 			<string>Allow modifying Time Machine settings</string>
 			<key>pfm_type</key>
@@ -3960,6 +3964,10 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 			<string>allowUSBRestrictedMode</string>
 			<key>pfm_supervised</key>
 			<true/>
+			<key>pfm_targets</key>
+			<array>
+				<string>system</string>
+			</array>
 			<key>pfm_title</key>
 			<string>Allow USB Restricted Mode</string>
 			<key>pfm_type</key>
@@ -4012,6 +4020,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 			<true/>
 			<key>pfm_description</key>
 			<string>If 'false', the system disables Siri.</string>
+			<key>pfm_macos_deprecated</key>
+			<string>26.4</string>
 			<key>pfm_macos_min</key>
 			<string>14.0</string>
 			<key>pfm_name</key>
@@ -4059,6 +4069,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 			<false/>
 			<key>pfm_description</key>
 			<string>If 'true', the system forces the use of the profanity filter for Siri and dictation. Requires a supervised device in iOS.</string>
+			<key>pfm_macos_deprecated</key>
+			<string>26.4</string>
 			<key>pfm_macos_min</key>
 			<string>10.13</string>
 			<key>pfm_name</key>
@@ -4749,6 +4761,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 			<true/>
 			<key>pfm_description</key>
 			<string>If 'false', the system disallows dictation input.</string>
+			<key>pfm_macos_deprecated</key>
+			<string>26.4</string>
 			<key>pfm_macos_min</key>
 			<string>10.13</string>
 			<key>pfm_name</key>
@@ -4805,6 +4819,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 			<false/>
 			<key>pfm_description</key>
 			<string>If 'true', the system disables connections to Siri servers for the purposes of dictation.</string>
+			<key>pfm_macos_deprecated</key>
+			<string>26.4</string>
 			<key>pfm_macos_min</key>
 			<string>14.0</string>
 			<key>pfm_name</key>
@@ -5028,6 +5044,8 @@ The system still allows third-party password managers, and apps can use AutoFill
 			<true/>
 			<key>pfm_description</key>
 			<string>If 'false', prohibits creating new Genmoji.</string>
+			<key>pfm_macos_deprecated</key>
+			<string>26.4</string>
 			<key>pfm_macos_min</key>
 			<string>15.0</string>
 			<key>pfm_name</key>
@@ -5096,6 +5114,8 @@ The system still allows third-party password managers, and apps can use AutoFill
 			<true/>
 			<key>pfm_description</key>
 			<string>If 'false', prohibits the use of image generation.</string>
+			<key>pfm_macos_deprecated</key>
+			<string>26.4</string>
 			<key>pfm_macos_min</key>
 			<string>15.0</string>
 			<key>pfm_name</key>
@@ -5225,6 +5245,8 @@ The system still allows third-party password managers, and apps can use AutoFill
 			<true/>
 			<key>pfm_description</key>
 			<string>If 'false', disables Apple Intelligence writing tools.</string>
+			<key>pfm_macos_deprecated</key>
+			<string>26.4</string>
 			<key>pfm_macos_min</key>
 			<string>15.0</string>
 			<key>pfm_name</key>
@@ -5293,6 +5315,8 @@ The system still allows third-party password managers, and apps can use AutoFill
 			<true/>
 			<key>pfm_description</key>
 			<string>If 'false', disables the ability to create summaries of email messages manually. This doesn't affect automatic summary generation.</string>
+			<key>pfm_macos_deprecated</key>
+			<string>26.4</string>
 			<key>pfm_macos_min</key>
 			<string>15.1</string>
 			<key>pfm_name</key>
@@ -5361,6 +5385,8 @@ The system still allows third-party password managers, and apps can use AutoFill
 			<true/>
 			<key>pfm_description</key>
 			<string>If 'false', disables smart replies in Mail.</string>
+			<key>pfm_macos_deprecated</key>
+			<string>26.4</string>
 			<key>pfm_macos_min</key>
 			<string>15.4</string>
 			<key>pfm_name</key>
@@ -5518,6 +5544,8 @@ The system still allows third-party password managers, and apps can use AutoFill
 			<true/>
 			<key>pfm_description</key>
 			<string>If 'false', disables the use of external, cloud-based intelligence services with Siri. In iOS, this restriction is temporarily allowed on unsupervised and user enrollments. In a future release, this restriction will require supervision, and will be ignored on unsupervised devices.</string>
+			<key>pfm_macos_deprecated</key>
+			<string>26.4</string>
 			<key>pfm_macos_min</key>
 			<string>15.2</string>
 			<key>pfm_name</key>
@@ -5582,6 +5610,8 @@ The system still allows third-party password managers, and apps can use AutoFill
 			<true/>
 			<key>pfm_description</key>
 			<string>If 'false', forces external intelligence providers into anonymous mode. If a user is already signed in to an external intelligence provider, applying this restriction signs them out when attempting the next request.</string>
+			<key>pfm_macos_deprecated</key>
+			<string>26.4</string>
 			<key>pfm_macos_min</key>
 			<string>15.2</string>
 			<key>pfm_name</key>
@@ -5644,6 +5674,8 @@ The system still allows third-party password managers, and apps can use AutoFill
 		<dict>
 			<key>pfm_description</key>
 			<string>An array of strings, but currently restricted to a single element. If present, Apple Intelligence allows use of only the given external integration workspace ID, and requires a sign-in to make requests. The user is required to sign in to integrations that support signing in. Multiple payloads combine using an intersect operation. This means the allowed set of workspace IDs can become the empty set if multiple payloads specify conflicting values.</string>
+			<key>pfm_macos_deprecated</key>
+			<string>26.4</string>
 			<key>pfm_macos_min</key>
 			<string>15.3</string>
 			<key>pfm_name</key>
@@ -5651,10 +5683,16 @@ The system still allows third-party password managers, and apps can use AutoFill
 			<key>pfm_subkeys</key>
 			<array>
 				<dict>
+					<key>pfm_macos_deprecated</key>
+					<string>26.4</string>
+					<key>pfm_macos_min</key>
+					<string>15.3</string>
 					<key>pfm_name</key>
 					<string>allowedWorkspaceID</string>
 					<key>pfm_repetition_max</key>
 					<integer>1</integer>
+					<key>pfm_supervised</key>
+					<true/>
 					<key>pfm_title</key>
 					<string>Allowed Workspace ID</string>
 					<key>pfm_type</key>
@@ -5731,6 +5769,8 @@ The system still allows third-party password managers, and apps can use AutoFill
 			<true/>
 			<key>pfm_description</key>
 			<string>If 'false', disables transcription summarization in Notes.</string>
+			<key>pfm_macos_deprecated</key>
+			<string>26.4</string>
 			<key>pfm_macos_min</key>
 			<string>15.3</string>
 			<key>pfm_name</key>
@@ -5792,6 +5832,8 @@ The system still allows third-party password managers, and apps can use AutoFill
 			<true/>
 			<key>pfm_description</key>
 			<string>If 'false', disables transcription in Notes.</string>
+			<key>pfm_macos_deprecated</key>
+			<string>26.4</string>
 			<key>pfm_macos_min</key>
 			<string>15.4</string>
 			<key>pfm_name</key>
@@ -5851,6 +5893,8 @@ The system still allows third-party password managers, and apps can use AutoFill
 			<true/>
 			<key>pfm_description</key>
 			<string>If 'false', the system disables Apple Intelligence reports.</string>
+			<key>pfm_macos_deprecated</key>
+			<string>26.4</string>
 			<key>pfm_macos_min</key>
 			<string>15.4</string>
 			<key>pfm_name</key>
@@ -5912,6 +5956,8 @@ The system still allows third-party password managers, and apps can use AutoFill
 			<true/>
 			<key>pfm_description</key>
 			<string>If 'false', the system disables the ability to summarize content in Safari.</string>
+			<key>pfm_macos_deprecated</key>
+			<string>26.4</string>
 			<key>pfm_macos_min</key>
 			<string>15.4</string>
 			<key>pfm_name</key>
@@ -6083,6 +6129,20 @@ The system still allows third-party password managers, and apps can use AutoFill
 			<key>pfm_type</key>
 			<string>boolean</string>
 		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>If 'false', disables Rosetta usage awareness. When Rosetta usage awareness is active, a pop-up dialog is displayed to the user when an app that is using Rosetta is launched. The pop-up dialog indicates that Rosetta will be removed in a future version of the operating system so that the user can contact the app vendor regarding a replacement for the current app.</string>
+			<key>pfm_macos_min</key>
+			<string>26.4</string>
+			<key>pfm_name</key>
+			<string>allowRosettaUsageAwareness</string>
+			<key>pfm_title</key>
+			<string>Allow Rosetta Usage Awareness</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
 	</array>
 	<key>pfm_targets</key>
 	<array>
@@ -6093,8 +6153,10 @@ The system still allows third-party password managers, and apps can use AutoFill
 	<string>Restrictions (macOS)</string>
 	<key>pfm_unique</key>
 	<false/>
+	<key>pfm_user_approved</key>
+	<false/>
 	<key>pfm_version</key>
-	<integer>20</integer>
+	<integer>21</integer>
 	<key>pfmx_supported_oses</key>
 	<dict>
 		<key>iOS</key>

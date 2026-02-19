@@ -16,6 +16,9 @@
 	<string>combined</string>
 	<key>pfm_last_modified</key>
 	<date>2025-09-17T09:38:09Z</date>
+	<key>pfm_note</key>
+	<string>Important:
+The system allows multiple Restrictions payloads. However, don't attempt to manage the same restriction in different payloads. Doing so results in unexpected behavior.</string>
 	<key>pfm_platforms</key>
 	<array>
 		<string>tvOS</string>
@@ -324,6 +327,8 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>If 'false', the system disables Apple TV's automatic screen saver.</string>
 			<key>pfm_name</key>
 			<string>allowAutomaticScreenSaver</string>
+			<key>pfm_supervised</key>
+			<true/>
 			<key>pfm_title</key>
 			<string>Allow Automatic Screen Saver</string>
 			<key>pfm_tvos_min</key>
@@ -504,8 +509,12 @@ Denying system apps may disable other functionality. For example, denying the Ap
 				<dict>
 					<key>pfm_name</key>
 					<string>appBlockedBundleID</string>
+					<key>pfm_supervised</key>
+					<true/>
 					<key>pfm_title</key>
 					<string>Bundle ID</string>
+					<key>pfm_tvos_min</key>
+					<string>15.0</string>
 					<key>pfm_type</key>
 					<string>string</string>
 					<key>pfm_value_placeholder</key>
@@ -668,8 +677,12 @@ Denying system apps may disable other functionality. For example, denying the Ap
 				<dict>
 					<key>pfm_name</key>
 					<string>appAllowlistedBundleID</string>
+					<key>pfm_supervised</key>
+					<true/>
 					<key>pfm_title</key>
 					<string>Bundle ID</string>
+					<key>pfm_tvos_min</key>
+					<string>15.0</string>
 					<key>pfm_type</key>
 					<string>string</string>
 					<key>pfm_value_placeholder</key>
@@ -748,8 +761,14 @@ Denying system apps may disable other functionality. For example, denying the Ap
 				<dict>
 					<key>pfm_name</key>
 					<string>appWhitelistedBundleID</string>
+					<key>pfm_supervised</key>
+					<true/>
 					<key>pfm_title</key>
 					<string>iOS / tvOS Bundle ID</string>
+					<key>pfm_tvos_deprecated</key>
+					<string>15.0</string>
+					<key>pfm_tvos_min</key>
+					<string>11.0</string>
 					<key>pfm_type</key>
 					<string>string</string>
 					<key>pfm_value_placeholder</key>
@@ -960,21 +979,11 @@ Denying system apps may disable other functionality. For example, denying the Ap
 			<key>pfm_default</key>
 			<integer>1000</integer>
 			<key>pfm_description</key>
-			<string>The maximum level of app content allowed on the device. Preinstalled (first-party) apps ignore this restriction.
-
-Possible values, with the U.S. description of the rating level:
-
-- '1000': All
-- '600': 17+
-- '300': 12+
-- '200': 9+
-- '100': 4+
-- '0': None
+			<string>The maximum level of app content allowed on the device. Starting with iOS 26.2, this rating may apply to certain system apps.
 
 Age bands and the number of discrete age values vary by region, but the values are consistent across regions. For example, in a region that defines rating level 14+, its value is guaranteed to be larger than 300 (12+) and smaller than 600 (17+). Also, the value of rating level 15+ is guaranteed to be larger than the assigned value of rating level 14+. For more information about age ratings, see [Age ratings values and definitions](https://developer.apple.com/help/app-store-connect/reference/age-ratings-values-and-definitions).
 
-Examples of values in other regions include:
-
+Below is the complete list of age rating values used across all App Store regions.
 - '1000': All
 - '621': 21+
 - '620': 20+
@@ -1475,6 +1484,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 			<string>If 'false', the system disables pairing Apple TV for use with the Control Center widget.</string>
 			<key>pfm_name</key>
 			<string>allowRemoteAppPairing</string>
+			<key>pfm_supervised</key>
+			<true/>
 			<key>pfm_title</key>
 			<string>Allow pairing with Remote app</string>
 			<key>pfm_tvos_min</key>
@@ -1721,6 +1732,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 			<string>If 'false', the system prevents the device from automatically sleeping.</string>
 			<key>pfm_name</key>
 			<string>allowDeviceSleep</string>
+			<key>pfm_supervised</key>
+			<true/>
 			<key>pfm_title</key>
 			<string>Allow Device Sleep</string>
 			<key>pfm_tvos_min</key>
@@ -1769,6 +1782,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 	<key>pfm_tvos_min</key>
 	<string>9.0</string>
 	<key>pfm_unique</key>
+	<false/>
+	<key>pfm_user_approved</key>
 	<false/>
 	<key>pfm_version</key>
 	<integer>7</integer>
