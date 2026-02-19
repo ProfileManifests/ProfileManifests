@@ -1636,7 +1636,7 @@
 		<key>com.apple.applicationaccess-iOS</key>
 		<dict>
 			<key>modified</key>
-			<date>2026-01-16T11:12:52Z</date>
+			<date>2026-02-19T09:22:13Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.applicationaccess-iOS.plist</string>
 			<key>version</key>
@@ -1645,16 +1645,16 @@
 		<key>com.apple.applicationaccess-macOS</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-11-05T14:06:39Z</date>
+			<date>2026-02-19T09:22:13Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.applicationaccess-macOS.plist</string>
 			<key>version</key>
-			<integer>20</integer>
+			<integer>21</integer>
 		</dict>
 		<key>com.apple.applicationaccess-tvOS</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-09-17T09:38:09Z</date>
+			<date>2026-02-19T09:22:13Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.applicationaccess-tvOS.plist</string>
 			<key>version</key>
@@ -1852,7 +1852,7 @@
 		<key>com.apple.familycontrols.contentfilter</key>
 		<dict>
 			<key>modified</key>
-			<date>2026-01-20T18:06:21Z</date>
+			<date>2026-02-19T09:22:13Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.familycontrols.contentfilter.plist</string>
 			<key>version</key>
@@ -1870,11 +1870,11 @@
 		<key>com.apple.fileproviderd</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-09-17T09:38:09Z</date>
+			<date>2026-02-19T09:22:13Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.fileproviderd.plist</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<key>com.apple.finder</key>
 		<dict>
@@ -2472,6 +2472,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2026-02-17T10:19:51Z</date>
+	<date>2026-02-19T15:31:58Z</date>
 </dict>
 </plist>
