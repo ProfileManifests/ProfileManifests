@@ -17,7 +17,7 @@
 	<key>pfm_ios_min</key>
 	<string>4.0</string>
 	<key>pfm_last_modified</key>
-	<date>2026-01-16T11:12:52Z</date>
+	<date>2026-02-19T09:22:13Z</date>
 	<key>pfm_note</key>
 	<string>Important:
 The system allows multiple Restrictions payloads. However, don't attempt to manage the same restriction in different payloads. Doing so results in unexpected behavior.</string>
