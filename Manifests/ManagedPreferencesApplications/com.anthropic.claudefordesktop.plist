@@ -13,7 +13,7 @@
 	<key>pfm_format_version</key>
 	<integer>1</integer>
 	<key>pfm_last_modified</key>
-	<date>2026-02-24T10:10:12Z</date>
+	<date>2026-02-24T10:11:42Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -206,12 +206,36 @@
 			<key>pfm_type</key>
 			<string>boolean</string>
 		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>Enable Claude code access in desktop.</string>
+			<key>pfm_name</key>
+			<string>isClaudeCodeForDesktopEnabled</string>
+			<key>pfm_title</key>
+			<string>Enable Claude Code for Desktop</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>Enable Cowork access in desktop</string>
+			<key>pfm_name</key>
+			<string>secureVmFeaturesEnabled</string>
+			<key>pfm_title</key>
+			<string>Enable Secure VM Features</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
 	</array>
 	<key>pfm_title</key>
 	<string>Claude</string>
 	<key>pfm_unique</key>
 	<true/>
 	<key>pfm_version</key>
-	<integer>1</integer>
+	<integer>2</integer>
 </dict>
 </plist>
