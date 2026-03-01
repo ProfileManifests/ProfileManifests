@@ -56,7 +56,8 @@ macOS. The key AllowDockFixupOverride is supported on macOS 10.12 and later.</st
 			<key>pfm_default</key>
 			<string>com.apple.dock</string>
 			<key>pfm_description</key>
-			<string>The reverse-DNS-style identifier for the payload. This identifier is usually the same as the TopLevel value, with an additional appended component. This string must be unique within the profile.
+			<string>The reverse-DNS-style identifier for the payload. This identifier is usually the same as the 'TopLevel' value, with an additional appended component. This string must be unique within the profile.
+
 During a profile replacement, the system updates payloads with the same 'PayloadIdentifier' and 'PayloadUUID' in the old and new profiles.</string>
 			<key>pfm_name</key>
 			<string>PayloadIdentifier</string>
@@ -86,6 +87,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string></string>
 			<key>pfm_description</key>
 			<string>The globally unique identifier for the payload. The actual content is unimportant, but must be globally unique. In macOS, use 'uuidgen' to generate UUIDs.
+
 During a profile replacement, the system updates payloads with the same 'PayloadIdentifier' and 'PayloadUUID' in the old and new profiles.</string>
 			<key>pfm_format</key>
 			<string>^[0-9A-Za-z]{8}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{12}$</string>
@@ -198,8 +200,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								<dict>
 									<key>pfm_description</key>
 									<string>Display name in the profile GUI of a dock item.</string>
-									<key>pfm_description_reference</key>
-									<string></string>
 									<key>pfm_hidden</key>
 									<string>all</string>
 									<key>pfm_name</key>
@@ -253,8 +253,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 										<dict>
 											<key>pfm_description</key>
 											<string>Path to the application.</string>
-											<key>pfm_description_reference</key>
-											<string></string>
 											<key>pfm_name</key>
 											<string>_CFURLString</string>
 											<key>pfm_title</key>
@@ -265,8 +263,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 										<dict>
 											<key>pfm_description</key>
 											<string>Path type. 0 = /Path/to/item, 15 = file://Path/to/item</string>
-											<key>pfm_description_reference</key>
-											<string></string>
 											<key>pfm_hidden</key>
 											<string>all</string>
 											<key>pfm_name</key>
@@ -398,8 +394,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<string>static-others.StaticItem.tile-data.label</string>
 									<key>pfm_description</key>
 									<string>Display name in the profile GUI of a dock item.</string>
-									<key>pfm_description_reference</key>
-									<string></string>
 									<key>pfm_hidden</key>
 									<string>all</string>
 									<key>pfm_name</key>
@@ -492,8 +486,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 										<dict>
 											<key>pfm_description</key>
 											<string>Path to the file.</string>
-											<key>pfm_description_reference</key>
-											<string></string>
 											<key>pfm_name</key>
 											<string>_CFURLString</string>
 											<key>pfm_title</key>
@@ -504,8 +496,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 										<dict>
 											<key>pfm_description</key>
 											<string>Path type. 0 = /Path/to/item, 15 = file://Path/to/item</string>
-											<key>pfm_description_reference</key>
-											<string></string>
 											<key>pfm_hidden</key>
 											<string>all</string>
 											<key>pfm_name</key>
@@ -542,8 +532,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								<dict>
 									<key>pfm_description</key>
 									<string>Path to item relative to the current user's home directory.</string>
-									<key>pfm_description_reference</key>
-									<string></string>
 									<key>pfm_exclude</key>
 									<array>
 										<dict>
@@ -578,8 +566,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<integer>1</integer>
 									<key>pfm_description</key>
 									<string>Arrangement (sorting) of the directory contents.</string>
-									<key>pfm_description_reference</key>
-									<string></string>
 									<key>pfm_exclude</key>
 									<array>
 										<dict>
@@ -624,8 +610,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<integer>2</integer>
 									<key>pfm_description</key>
 									<string>Display directory as either a Folder or a Stack.</string>
-									<key>pfm_description_reference</key>
-									<string></string>
 									<key>pfm_exclude</key>
 									<array>
 										<dict>
@@ -664,8 +648,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<integer>4</integer>
 									<key>pfm_description</key>
 									<string>How to show directory contents.</string>
-									<key>pfm_description_reference</key>
-									<string></string>
 									<key>pfm_exclude</key>
 									<array>
 										<dict>
@@ -1501,6 +1483,14 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>Minimize windows into application icon Checkbox Disable</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>macOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>10.14</string>
+				</dict>
+			</dict>
 		</dict>
 		<dict>
 			<key>pfm_default</key>
@@ -1575,6 +1565,14 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>Show recent applications in Dock</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>macOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>10.14</string>
+				</dict>
+			</dict>
 		</dict>
 		<dict>
 			<key>pfm_default</key>
@@ -1627,6 +1625,14 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>Allow DockFixup override</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>macOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>10.12</string>
+				</dict>
+			</dict>
 		</dict>
 		<dict>
 			<key>pfm_description</key>
@@ -2064,6 +2070,14 @@ The "My Applications" item is only used for Simple Finder environments. The "Ori
 			<string>Prefer tabs when opening documents</string>
 			<key>pfm_type</key>
 			<string>string</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>macOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>10.15</string>
+				</dict>
+			</dict>
 		</dict>
 		<dict>
 			<key>pfm_default</key>
@@ -2078,6 +2092,14 @@ The "My Applications" item is only used for Simple Finder environments. The "Ori
 			<string>Prevent changing tabs preference</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>macOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>10.12</string>
+				</dict>
+			</dict>
 		</dict>
 		<dict>
 			<key>pfm_description</key>
@@ -2102,6 +2124,14 @@ The "My Applications" item is only used for Simple Finder environments. The "Ori
 			<string>Doubleclick behavior</string>
 			<key>pfm_type</key>
 			<string>string</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>macOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>10.15</string>
+				</dict>
+			</dict>
 		</dict>
 		<dict>
 			<key>pfm_default</key>
@@ -2116,6 +2146,14 @@ The "My Applications" item is only used for Simple Finder environments. The "Ori
 			<string>Prevent changing doubleclick behavior</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>macOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>10.14</string>
+				</dict>
+			</dict>
 		</dict>
 		<dict>
 			<key>pfm_default</key>
@@ -2142,6 +2180,14 @@ The "My Applications" item is only used for Simple Finder environments. The "Ori
 			<string>Prevent shanging recents display</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>macOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>10.15</string>
+				</dict>
+			</dict>
 		</dict>
 	</array>
 	<key>pfm_targets</key>
@@ -2155,5 +2201,32 @@ The "My Applications" item is only used for Simple Finder environments. The "Ori
 	<false/>
 	<key>pfm_version</key>
 	<integer>8</integer>
+	<key>pfmx_supported_oses</key>
+	<dict>
+		<key>macOS</key>
+		<dict>
+			<key>pfmx_allow_manual_install</key>
+			<true/>
+			<key>pfmx_device_channel</key>
+			<true/>
+			<key>pfmx_introduced</key>
+			<string>10.7</string>
+			<key>pfmx_multiple</key>
+			<false/>
+			<key>pfmx_requires_dep</key>
+			<false/>
+			<key>pfmx_supervised</key>
+			<false/>
+			<key>pfmx_user_approved_mdm</key>
+			<false/>
+			<key>pfmx_user_channel</key>
+			<true/>
+			<key>pfmx_user_enrollment</key>
+			<dict>
+				<key>pfmx_mode</key>
+				<string>forbidden</string>
+			</dict>
+		</dict>
+	</dict>
 </dict>
 </plist>

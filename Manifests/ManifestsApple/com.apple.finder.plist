@@ -144,6 +144,14 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>Finder Interface Level</string>
 			<key>pfm_type</key>
 			<string>string</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>macOS</key>
+				<dict>
+					<key>pfmx_removed</key>
+					<string>10.15</string>
+				</dict>
+			</dict>
 		</dict>
 		<dict>
 			<key>pfm_default</key>
@@ -155,7 +163,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_name</key>
 			<string>WarnOnEmptyTrash</string>
 			<key>pfm_title</key>
-			<string>Show warning before emptying the Trash</string>
+			<string>Show Warning Before Emptying the Trash</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 		</dict>
@@ -169,11 +177,9 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_name</key>
 			<string>ProhibitConnectTo</string>
 			<key>pfm_title</key>
-			<string>Allow Connect to Server</string>
+			<string>Disallow Connect to Server</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
-			<key>pfm_value_inverted</key>
-			<true/>
 		</dict>
 		<dict>
 			<key>pfm_default</key>
@@ -185,11 +191,9 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_name</key>
 			<string>ProhibitEject</string>
 			<key>pfm_title</key>
-			<string>Allow Eject</string>
+			<string>Disallow Eject</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
-			<key>pfm_value_inverted</key>
-			<true/>
 		</dict>
 		<dict>
 			<key>pfm_conditionals</key>
@@ -222,11 +226,9 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_name</key>
 			<string>ProhibitBurn</string>
 			<key>pfm_title</key>
-			<string>Allow Burn Disc</string>
+			<string>Disallow Burn Disc</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
-			<key>pfm_value_inverted</key>
-			<true/>
 		</dict>
 		<dict>
 			<key>pfm_default</key>
@@ -238,11 +240,9 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_name</key>
 			<string>ProhibitGoToFolder</string>
 			<key>pfm_title</key>
-			<string>Allow Go to Folder</string>
+			<string>Disallow Go to Folder</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
-			<key>pfm_value_inverted</key>
-			<true/>
 		</dict>
 		<dict>
 			<key>pfm_default</key>
@@ -254,7 +254,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_name</key>
 			<string>ShowHardDrivesOnDesktop</string>
 			<key>pfm_title</key>
-			<string>Show Hard disks</string>
+			<string>Show Internal Drives on Desktop</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 		</dict>
@@ -268,7 +268,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_name</key>
 			<string>ShowExternalHardDrivesOnDesktop</string>
 			<key>pfm_title</key>
-			<string>Show External disks</string>
+			<string>Show External Drives on Desktop</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 		</dict>
@@ -282,7 +282,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_name</key>
 			<string>ShowRemovableMediaOnDesktop</string>
 			<key>pfm_title</key>
-			<string>Show Removable media (CDs, DVDs, etc.)</string>
+			<string>Show Removable Media (CDs, DVDs, etc.) on Desktop</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 		</dict>
@@ -296,7 +296,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_name</key>
 			<string>ShowMountedServersOnDesktop</string>
 			<key>pfm_title</key>
-			<string>Show Connected servers</string>
+			<string>Show Connected Servers on Desktop</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 		</dict>
@@ -342,5 +342,32 @@ During a profile replacement, the system updates payloads with the same 'Payload
 	<false/>
 	<key>pfm_version</key>
 	<integer>4</integer>
+	<key>pfmx_supported_oses</key>
+	<dict>
+		<key>macOS</key>
+		<dict>
+			<key>pfmx_allow_manual_install</key>
+			<true/>
+			<key>pfmx_device_channel</key>
+			<true/>
+			<key>pfmx_introduced</key>
+			<string>10.7</string>
+			<key>pfmx_multiple</key>
+			<false/>
+			<key>pfmx_requires_dep</key>
+			<false/>
+			<key>pfmx_supervised</key>
+			<false/>
+			<key>pfmx_user_approved_mdm</key>
+			<false/>
+			<key>pfmx_user_channel</key>
+			<true/>
+			<key>pfmx_user_enrollment</key>
+			<dict>
+				<key>pfmx_mode</key>
+				<string>forbidden</string>
+			</dict>
+		</dict>
+	</dict>
 </dict>
 </plist>

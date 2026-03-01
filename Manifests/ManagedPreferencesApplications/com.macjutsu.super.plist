@@ -11,7 +11,7 @@
 	<key>pfm_format_version</key>
 	<integer>1</integer>
 	<key>pfm_last_modified</key>
-	<date>2025-01-13T20:14:56Z</date>
+	<date>2025-08-04T08:25:08Z</date>
 	<key>pfm_macos_min</key>
 	<string>11.0</string>
 	<key>pfm_platforms</key>
@@ -50,8 +50,9 @@
 			<key>pfm_default</key>
 			<string>com.macjutsu.super</string>
 			<key>pfm_description</key>
-			<string>The reverse-DNS-style identifier for the payload. This identifier is usually the same as the TopLevel value, with an additional appended component. This string must be unique within the profile.
-During a profile replacement, the system updates payloads with the same 'PayloadIdentifier' and 'PayloadUUID' in the old and new profiles.</string>
+			<string>The reverse-DNS-style identifier for the payload. This identifier is usually the same as the `TopLevel` value, with an additional appended component. This string must be unique within the profile.
+
+During a profile replacement, the system updates payloads with the same `PayloadIdentifier` and `PayloadUUID` in the old and new profiles.</string>
 			<key>pfm_name</key>
 			<string>PayloadIdentifier</string>
 			<key>pfm_require</key>
@@ -79,8 +80,9 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<string>com.macjutsu.super</string>
 			<key>pfm_description</key>
-			<string>The globally unique identifier for the payload. The actual content is unimportant, but must be globally unique. In macOS, use 'uuidgen' to generate UUIDs.
-During a profile replacement, the system updates payloads with the same 'PayloadIdentifier' and 'PayloadUUID' in the old and new profiles.</string>
+			<string>The globally unique identifier for the payload. The actual content is unimportant, but must be globally unique. In macOS, use `uuidgen` to generate UUIDs.
+
+During a profile replacement, the system updates payloads with the same `PayloadIdentifier` and `PayloadUUID` in the old and new profiles.</string>
 			<key>pfm_format</key>
 			<string>^[0-9A-Za-z]{8}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{12}$</string>
 			<key>pfm_name</key>
@@ -258,7 +260,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_app_min</key>
 			<string>4.0</string>
 			<key>pfm_default</key>
-			<true/>
+			<false/>
 			<key>pfm_description</key>
 			<string>If any managed automatic authentication method fails validation, then failover to local end user authentication</string>
 			<key>pfm_documentation_url</key>
@@ -469,6 +471,8 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		<dict>
 			<key>pfm_app_max</key>
 			<string>4.0.3</string>
+			<key>pfm_app_min</key>
+			<string>4.0</string>
 			<key>pfm_description</key>
 			<string>Sets an automatic timeout for the restart or defer dialog in seconds</string>
 			<key>pfm_documentation_url</key>
@@ -952,7 +956,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_app_min</key>
 			<string>5.0</string>
 			<key>pfm_default</key>
-			<true/>
+			<false/>
 			<key>pfm_description</key>
 			<string>Leverages the public MacAdmin's SOFA macOS machine readable JSON feed to discover release dates for use in workflows with deadline day options</string>
 			<key>pfm_documentation_url</key>
@@ -968,7 +972,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_app_min</key>
 			<string>5.0</string>
 			<key>pfm_default</key>
-			<true/>
+			<false/>
 			<key>pfm_description</key>
 			<string>Adds a Schedule button to the standard deferral dialog</string>
 			<key>pfm_documentation_url</key>
@@ -1127,22 +1131,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>string</string>
 			<key>pfm_value_placeholder</key>
 			<string>https://sofa.example.domain.com/v1/macos_data_feed.json</string>
-		</dict>
-		<dict>
-			<key>pfm_app_min</key>
-			<string>4.0</string>
-			<key>pfm_description</key>
-			<string>Sets an automatic timeout for the restart or defer dialog in seconds</string>
-			<key>pfm_documentation_url</key>
-			<string>https://github.com/Macjutsu/super/wiki/Dialog-Timeouts/3d44b40dc47dd940f5edda8bbabedfacbb79970b#restart-or-defer-dialog-timeout</string>
-			<key>pfm_name</key>
-			<string>DialogTimeoutRestartOrDefer</string>
-			<key>pfm_note</key>
-			<string>Timeouts less than 60 seconds or more than 86400 seconds (1 day) are rounded accordingly</string>
-			<key>pfm_title</key>
-			<string>Dialog Timeout Restart Or Defer</string>
-			<key>pfm_type</key>
-			<string>string</string>
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>

@@ -166,6 +166,34 @@ Requires a supervised device.</string>
 			<string>Prevent users from removing this profile</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>iOS</key>
+				<dict>
+					<key>pfmx_supervised</key>
+					<true/>
+					<key>pfmx_user_enrollment</key>
+					<dict>
+						<key>pfmx_mode</key>
+						<string>forbidden</string>
+					</dict>
+				</dict>
+				<key>tvOS</key>
+				<dict>
+					<key>pfmx_supervised</key>
+					<true/>
+				</dict>
+				<key>visionOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>n/a</string>
+				</dict>
+				<key>watchOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>n/a</string>
+				</dict>
+			</dict>
 		</dict>
 		<dict>
 			<key>pfm_description</key>
@@ -237,8 +265,6 @@ You should provide a default value if possible. No warning will be displayed if 
 				<dict>
 					<key>pfm_description</key>
 					<string>The IETF BCP 47 identifier for that language (for example, en or jp).</string>
-					<key>pfm_description_reference</key>
-					<string></string>
 					<key>pfm_name</key>
 					<string>{{key}}</string>
 					<key>pfm_title</key>
@@ -251,8 +277,6 @@ You should provide a default value if possible. No warning will be displayed if 
 				<dict>
 					<key>pfm_description</key>
 					<string>The agreement localized to that language.</string>
-					<key>pfm_description_reference</key>
-					<string></string>
 					<key>pfm_name</key>
 					<string>{{value}}</string>
 					<key>pfm_title</key>
@@ -263,8 +287,6 @@ You should provide a default value if possible. No warning will be displayed if 
 				<dict>
 					<key>pfm_description</key>
 					<string>The system chooses a localized version in the order of preference specified by the user (macOS) or based on the user's current language setting (iOS). If no exact match is found, the default localization is used. If there is no default localization, the en localization is used. If there is no en localization, then the first available localization is used.</string>
-					<key>pfm_description_reference</key>
-					<string></string>
 					<key>pfm_name</key>
 					<string>default</string>
 					<key>pfm_title</key>
@@ -307,6 +329,14 @@ You should provide a default value if possible. No warning will be displayed if 
 			<string>Expiration Date</string>
 			<key>pfm_type</key>
 			<string>date</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>watchOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>n/a</string>
+				</dict>
+			</dict>
 		</dict>
 		<dict>
 			<key>pfm_default</key>
@@ -330,6 +360,14 @@ You should provide a default value if possible. No warning will be displayed if 
 			<string>Payload Scope</string>
 			<key>pfm_type</key>
 			<string>string</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>macOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>10.8</string>
+				</dict>
+			</dict>
 		</dict>
 		<dict>
 			<key>pfm_default</key>
@@ -380,6 +418,34 @@ Allowed values:
 			<string>12.2</string>
 			<key>pfm_type</key>
 			<string>integer</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>iOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>12.2</string>
+				</dict>
+				<key>macOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>10.15</string>
+				</dict>
+				<key>tvOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>12.2</string>
+				</dict>
+				<key>visionOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>1.1</string>
+				</dict>
+				<key>watchOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>5.2</string>
+				</dict>
+			</dict>
 		</dict>
 	</array>
 	<key>pfm_targets</key>
@@ -395,5 +461,91 @@ Allowed values:
 	<true/>
 	<key>pfm_version</key>
 	<integer>8</integer>
+	<key>pfmx_supported_oses</key>
+	<dict>
+		<key>iOS</key>
+		<dict>
+			<key>pfmx_allow_manual_install</key>
+			<true/>
+			<key>pfmx_introduced</key>
+			<string>4.0</string>
+			<key>pfmx_multiple</key>
+			<false/>
+			<key>pfmx_shared_ipad</key>
+			<dict>
+				<key>pfmx_device_channel</key>
+				<true/>
+				<key>pfmx_mode</key>
+				<string>allowed</string>
+				<key>pfmx_user_channel</key>
+				<true/>
+			</dict>
+			<key>pfmx_supervised</key>
+			<false/>
+			<key>pfmx_user_enrollment</key>
+			<dict>
+				<key>pfmx_mode</key>
+				<string>allowed</string>
+			</dict>
+		</dict>
+		<key>macOS</key>
+		<dict>
+			<key>pfmx_allow_manual_install</key>
+			<true/>
+			<key>pfmx_device_channel</key>
+			<true/>
+			<key>pfmx_introduced</key>
+			<string>10.7</string>
+			<key>pfmx_multiple</key>
+			<false/>
+			<key>pfmx_requires_dep</key>
+			<false/>
+			<key>pfmx_user_approved_mdm</key>
+			<false/>
+			<key>pfmx_user_channel</key>
+			<true/>
+			<key>pfmx_user_enrollment</key>
+			<dict>
+				<key>pfmx_mode</key>
+				<string>allowed</string>
+			</dict>
+		</dict>
+		<key>tvOS</key>
+		<dict>
+			<key>pfmx_allow_manual_install</key>
+			<true/>
+			<key>pfmx_introduced</key>
+			<string>9.0</string>
+			<key>pfmx_multiple</key>
+			<false/>
+			<key>pfmx_supervised</key>
+			<false/>
+		</dict>
+		<key>visionOS</key>
+		<dict>
+			<key>pfmx_allow_manual_install</key>
+			<true/>
+			<key>pfmx_introduced</key>
+			<string>1.0</string>
+			<key>pfmx_multiple</key>
+			<false/>
+			<key>pfmx_supervised</key>
+			<false/>
+			<key>pfmx_user_enrollment</key>
+			<dict>
+				<key>pfmx_mode</key>
+				<string>allowed</string>
+			</dict>
+		</dict>
+		<key>watchOS</key>
+		<dict>
+			<key>pfmx_allow_manual_install</key>
+			<true/>
+			<key>pfmx_introduced</key>
+			<string>1.0</string>
+			<key>pfmx_multiple</key>
+			<false/>
+		</dict>
+	</dict>
 </dict>
 </plist>

@@ -13,7 +13,7 @@
 	<key>pfm_format_version</key>
 	<integer>1</integer>
 	<key>pfm_last_modified</key>
-	<date>2025-07-14T18:36:00Z</date>
+	<date>2025-08-04T08:25:08Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -50,8 +50,9 @@
 			<key>pfm_default</key>
 			<string>com.barebones.bbedit</string>
 			<key>pfm_description</key>
-			<string>The reverse-DNS-style identifier for the payload. This identifier is usually the same as the TopLevel value, with an additional appended component. This string must be unique within the profile.
-During a profile replacement, the system updates payloads with the same 'PayloadIdentifier' and 'PayloadUUID' in the old and new profiles.</string>
+			<string>The reverse-DNS-style identifier for the payload. This identifier is usually the same as the `TopLevel` value, with an additional appended component. This string must be unique within the profile.
+
+During a profile replacement, the system updates payloads with the same `PayloadIdentifier` and `PayloadUUID` in the old and new profiles.</string>
 			<key>pfm_name</key>
 			<string>PayloadIdentifier</string>
 			<key>pfm_require</key>
@@ -79,8 +80,9 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<string></string>
 			<key>pfm_description</key>
-			<string>The globally unique identifier for the payload. The actual content is unimportant, but must be globally unique. In macOS, use 'uuidgen' to generate UUIDs.
-During a profile replacement, the system updates payloads with the same 'PayloadIdentifier' and 'PayloadUUID' in the old and new profiles.</string>
+			<string>The globally unique identifier for the payload. The actual content is unimportant, but must be globally unique. In macOS, use `uuidgen` to generate UUIDs.
+
+During a profile replacement, the system updates payloads with the same `PayloadIdentifier` and `PayloadUUID` in the old and new profiles.</string>
 			<key>pfm_format</key>
 			<string>^[0-9A-Za-z]{8}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{12}$</string>
 			<key>pfm_name</key>
@@ -2000,7 +2002,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_app_min</key>
 			<string>12.0</string>
 			<key>pfm_default</key>
-			<real>1.1</real>
+			<real>1.1000000000000001</real>
 			<key>pfm_description</key>
 			<string>Adjust the amount of space between lines of text in editing views.</string>
 			<key>pfm_documentation_url</key>
@@ -2970,166 +2972,6 @@ To get the correct entry you will need to set the font in BBEdit first, then ope
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>12.0</string>
-			<key>pfm_default</key>
-			<string>text-file</string>
-			<key>pfm_description</key>
-			<string>If you like, you can set the default language for new untitled documents.</string>
-			<key>pfm_documentation_url</key>
-			<string>https://s3.amazonaws.com/BBSW-download/BBEdit_15.0.1_User_Manual.pdf#page=261</string>
-			<key>pfm_name</key>
-			<string>DefaultLanguageNameForNewDocuments</string>
-			<key>pfm_range_list</key>
-			<array>
-				<string>actionscript</string>
-				<string>ansi-c</string>
-				<string>arduino</string>
-				<string>c++</string>
-				<string>clojure</string>
-				<string>comma-separated-values</string>
-				<string>css</string>
-				<string>editorconfig</string>
-				<string>fortran</string>
-				<string>fortran-9x</string>
-				<string>go</string>
-				<string>html</string>
-				<string>ini-file</string>
-				<string>java</string>
-				<string>javascript</string>
-				<string>json</string>
-				<string>jsp</string>
-				<string>lasso</string>
-				<string>lisp</string>
-				<string>log-file</string>
-				<string>lua</string>
-				<string>make</string>
-				<string>markdown</string>
-				<string>object-pascal</string>
-				<string>objective-c</string>
-				<string>objective-c++</string>
-				<string>perl</string>
-				<string>php</string>
-				<string>php-in-html</string>
-				<string>python</string>
-				<string>r</string>
-				<string>racket</string>
-				<string>rez</string>
-				<string>ruby</string>
-				<string>ruby-in-html</string>
-				<string>rust</string>
-				<string>sandbox-profile</string>
-				<string>scheme</string>
-				<string>scss</string>
-				<string>setext</string>
-				<string>software-package-notes</string>
-				<string>solidity</string>
-				<string>sql-(generic)</string>
-				<string>sql-(ms-transact)</string>
-				<string>sql-(mysql)</string>
-				<string>sql-(pl/sql)</string>
-				<string>sql-(postgresql)</string>
-				<string>strings-file</string>
-				<string>svelte</string>
-				<string>swift</string>
-				<string>tab-separated-values</string>
-				<string>tcl</string>
-				<string>tex</string>
-				<string>text-file</string>
-				<string>textile</string>
-				<string>toml</string>
-				<string>typescript</string>
-				<string>unix-man-page</string>
-				<string>unix-shell-script</string>
-				<string>usda</string>
-				<string>vbscript</string>
-				<string>vectorscript</string>
-				<string>verilog-hdl</string>
-				<string>vhdl</string>
-				<string>vue.js</string>
-				<string>xcode-project</string>
-				<string>xml</string>
-				<string>yaml</string>
-			</array>
-			<key>pfm_range_list_titles</key>
-			<array>
-				<string>ActionScript</string>
-				<string>ANSI C</string>
-				<string>Arduino</string>
-				<string>C++</string>
-				<string>Clojure</string>
-				<string>Comma-separated Values</string>
-				<string>CSS</string>
-				<string>EditorConfig</string>
-				<string>Fortran</string>
-				<string>Fortran 9x</string>
-				<string>Go</string>
-				<string>HTML</string>
-				<string>INI File</string>
-				<string>Java</string>
-				<string>JavaScript</string>
-				<string>JSON</string>
-				<string>JSP</string>
-				<string>Lasso</string>
-				<string>Lisp</string>
-				<string>Log File</string>
-				<string>Lua</string>
-				<string>Make</string>
-				<string>Markdown</string>
-				<string>Object Pascal</string>
-				<string>Objective-C</string>
-				<string>Objective-C++</string>
-				<string>Perl</string>
-				<string>PHP</string>
-				<string>PHP in HTML</string>
-				<string>Python</string>
-				<string>R</string>
-				<string>Racket</string>
-				<string>Rez</string>
-				<string>Ruby</string>
-				<string>Ruby in HTML</string>
-				<string>Rust</string>
-				<string>Sandbox Profile</string>
-				<string>Scheme</string>
-				<string>SCSS</string>
-				<string>Setext</string>
-				<string>Software Package Notes</string>
-				<string>Solidity</string>
-				<string>SQL (Generic)</string>
-				<string>SQL (MS Transact)</string>
-				<string>SQL (MySQL)</string>
-				<string>SQL (PL/SQL)</string>
-				<string>SQL (PostgreSQL)</string>
-				<string>Strings File</string>
-				<string>Svelte</string>
-				<string>Swift</string>
-				<string>Tab-separated Values</string>
-				<string>Tcl</string>
-				<string>TeX</string>
-				<string>Text File</string>
-				<string>Textile</string>
-				<string>TOML</string>
-				<string>TypeScript</string>
-				<string>Unix man page</string>
-				<string>Unix Shell Script</string>
-				<string>USDA</string>
-				<string>VBScript</string>
-				<string>VectorScript</string>
-				<string>Verilog HDL</string>
-				<string>VHDL</string>
-				<string>Vue.js</string>
-				<string>Xcode Project</string>
-				<string>XML</string>
-				<string>YAML</string>
-			</array>
-			<key>pfm_title</key>
-			<string>Default Language for New Documents</string>
-			<key>pfm_type</key>
-			<string>string</string>
-			<key>pfm_value_placeholder</key>
-			<string>text-file</string>
-		</dict>
-		<dict>
-			<key>pfm_app_min</key>
 			<string>14.0</string>
 			<key>pfm_default</key>
 			<string>text-file</string>
@@ -3155,24 +2997,6 @@ To get the correct entry you will need to set the font in BBEdit first, then ope
 			</array>
 			<key>pfm_name</key>
 			<string>DefaultLanguageNameForNewDocuments</string>
-			<key>pfm_title</key>
-			<string>Custom Language for New Documents</string>
-			<key>pfm_type</key>
-			<string>string</string>
-			<key>pfm_value_placeholder</key>
-			<string>text-file</string>
-		</dict>
-		<dict>
-			<key>pfm_app_min</key>
-			<string>14.0</string>
-			<key>pfm_default</key>
-			<string>text-file</string>
-			<key>pfm_description</key>
-			<string>If you like, you can set the default language for unmapped documents.</string>
-			<key>pfm_documentation_url</key>
-			<string>https://s3.amazonaws.com/BBSW-download/BBEdit_15.0.1_User_Manual.pdf#page=261</string>
-			<key>pfm_name</key>
-			<string>DefaultLanguageNameForUnmappedFiles</string>
 			<key>pfm_range_list</key>
 			<array>
 				<string>actionscript</string>
@@ -3316,7 +3140,7 @@ To get the correct entry you will need to set the font in BBEdit first, then ope
 				<string>YAML</string>
 			</array>
 			<key>pfm_title</key>
-			<string>Default Language for Unmapped files</string>
+			<string>Custom Language for New Documents</string>
 			<key>pfm_type</key>
 			<string>string</string>
 			<key>pfm_value_placeholder</key>
@@ -3349,6 +3173,148 @@ To get the correct entry you will need to set the font in BBEdit first, then ope
 			</array>
 			<key>pfm_name</key>
 			<string>DefaultLanguageNameForUnmappedFiles</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>actionscript</string>
+				<string>ansi-c</string>
+				<string>arduino</string>
+				<string>c++</string>
+				<string>clojure</string>
+				<string>comma-separated-values</string>
+				<string>css</string>
+				<string>editorconfig</string>
+				<string>fortran</string>
+				<string>fortran-9x</string>
+				<string>go</string>
+				<string>html</string>
+				<string>ini-file</string>
+				<string>java</string>
+				<string>javascript</string>
+				<string>json</string>
+				<string>jsp</string>
+				<string>lasso</string>
+				<string>lisp</string>
+				<string>log-file</string>
+				<string>lua</string>
+				<string>make</string>
+				<string>markdown</string>
+				<string>object-pascal</string>
+				<string>objective-c</string>
+				<string>objective-c++</string>
+				<string>perl</string>
+				<string>php</string>
+				<string>php-in-html</string>
+				<string>python</string>
+				<string>r</string>
+				<string>racket</string>
+				<string>rez</string>
+				<string>ruby</string>
+				<string>ruby-in-html</string>
+				<string>rust</string>
+				<string>sandbox-profile</string>
+				<string>scheme</string>
+				<string>scss</string>
+				<string>setext</string>
+				<string>software-package-notes</string>
+				<string>solidity</string>
+				<string>sql-(generic)</string>
+				<string>sql-(ms-transact)</string>
+				<string>sql-(mysql)</string>
+				<string>sql-(pl/sql)</string>
+				<string>sql-(postgresql)</string>
+				<string>strings-file</string>
+				<string>svelte</string>
+				<string>swift</string>
+				<string>tab-separated-values</string>
+				<string>tcl</string>
+				<string>tex</string>
+				<string>text-file</string>
+				<string>textile</string>
+				<string>toml</string>
+				<string>typescript</string>
+				<string>unix-man-page</string>
+				<string>unix-shell-script</string>
+				<string>usda</string>
+				<string>vbscript</string>
+				<string>vectorscript</string>
+				<string>verilog-hdl</string>
+				<string>vhdl</string>
+				<string>vue.js</string>
+				<string>xcode-project</string>
+				<string>xml</string>
+				<string>yaml</string>
+			</array>
+			<key>pfm_range_list_titles</key>
+			<array>
+				<string>ActionScript</string>
+				<string>ANSI C</string>
+				<string>Arduino</string>
+				<string>C++</string>
+				<string>Clojure</string>
+				<string>Comma-separated Values</string>
+				<string>CSS</string>
+				<string>EditorConfig</string>
+				<string>Fortran</string>
+				<string>Fortran 9x</string>
+				<string>Go</string>
+				<string>HTML</string>
+				<string>INI File</string>
+				<string>Java</string>
+				<string>JavaScript</string>
+				<string>JSON</string>
+				<string>JSP</string>
+				<string>Lasso</string>
+				<string>Lisp</string>
+				<string>Log File</string>
+				<string>Lua</string>
+				<string>Make</string>
+				<string>Markdown</string>
+				<string>Object Pascal</string>
+				<string>Objective-C</string>
+				<string>Objective-C++</string>
+				<string>Perl</string>
+				<string>PHP</string>
+				<string>PHP in HTML</string>
+				<string>Python</string>
+				<string>R</string>
+				<string>Racket</string>
+				<string>Rez</string>
+				<string>Ruby</string>
+				<string>Ruby in HTML</string>
+				<string>Rust</string>
+				<string>Sandbox Profile</string>
+				<string>Scheme</string>
+				<string>SCSS</string>
+				<string>Setext</string>
+				<string>Software Package Notes</string>
+				<string>Solidity</string>
+				<string>SQL (Generic)</string>
+				<string>SQL (MS Transact)</string>
+				<string>SQL (MySQL)</string>
+				<string>SQL (PL/SQL)</string>
+				<string>SQL (PostgreSQL)</string>
+				<string>Strings File</string>
+				<string>Svelte</string>
+				<string>Swift</string>
+				<string>Tab-separated Values</string>
+				<string>Tcl</string>
+				<string>TeX</string>
+				<string>Text File</string>
+				<string>Textile</string>
+				<string>TOML</string>
+				<string>TypeScript</string>
+				<string>Unix man page</string>
+				<string>Unix Shell Script</string>
+				<string>USDA</string>
+				<string>VBScript</string>
+				<string>VectorScript</string>
+				<string>Verilog HDL</string>
+				<string>VHDL</string>
+				<string>Vue.js</string>
+				<string>Xcode Project</string>
+				<string>XML</string>
+				<string>YAML</string>
+			</array>
 			<key>pfm_title</key>
 			<string>Custom Language for Unmapped files</string>
 			<key>pfm_type</key>
@@ -5805,7 +5771,7 @@ The default required value is "Western (Mac OS Roman)".</string>
 			<key>pfm_name</key>
 			<string>BRIEFStateTimeout</string>
 			<key>pfm_range_min</key>
-			<real>0.1</real>
+			<real>0.10000000000000001</real>
 			<key>pfm_title</key>
 			<string>BRIEF State Timeout</string>
 			<key>pfm_type</key>
@@ -6984,7 +6950,7 @@ NEED FLOAT NUMBER MIN &amp; MAX</string>
 			<key>pfm_app_min</key>
 			<string>15.0</string>
 			<key>pfm_default</key>
-			<real>0.65</real>
+			<real>0.65000000000000002</real>
 			<key>pfm_name</key>
 			<string>GrayLevelForModifiedRingsInListWidgets</string>
 			<key>pfm_title</key>
@@ -7342,13 +7308,13 @@ Turning off the auto fill will cause the "gear" to appear in the markup panel, a
 			<key>pfm_app_min</key>
 			<string>15.0</string>
 			<key>pfm_default</key>
-			<integer>1</integer>
+			<false/>
 			<key>pfm_name</key>
 			<string>MinimumLinesForBlockFold</string>
 			<key>pfm_title</key>
-			<string>Minimum Lines For Block Fold</string>
+			<string>Move Modeless Window To Active Space</string>
 			<key>pfm_type</key>
-			<string>integer</string>
+			<string>boolean</string>
 			<key>pfm_value_placeholder</key>
 			<string>1</string>
 		</dict>
@@ -7383,18 +7349,6 @@ This preference sets the default behavior for any of the defined window types fo
 			<string>https://www.barebones.com/support/bbedit/ExpertPreferences.html#wind</string>
 			<key>pfm_name</key>
 			<string>MoveModelessWindowToActiveSpace</string>
-			<key>pfm_title</key>
-			<string>Move Modeless Window To Active Space</string>
-			<key>pfm_type</key>
-			<string>boolean</string>
-		</dict>
-		<dict>
-			<key>pfm_app_min</key>
-			<string>15.0</string>
-			<key>pfm_default</key>
-			<false/>
-			<key>pfm_name</key>
-			<string>MinimumLinesForBlockFold</string>
 			<key>pfm_title</key>
 			<string>Move Modeless Window To Active Space</string>
 			<key>pfm_type</key>

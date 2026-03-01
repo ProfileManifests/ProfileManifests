@@ -141,6 +141,14 @@ Removing a profile that set 'AutoActivation' to 'true' doesn't deactivate the Co
 			<string>Automatically activate content caching</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>macOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>10.13.4</string>
+				</dict>
+			</dict>
 		</dict>
 		<dict>
 			<key>pfm_default</key>
@@ -157,6 +165,14 @@ Removing a profile that set 'AutoActivation' to 'true' doesn't deactivate the Co
 			<string>integer</string>
 			<key>pfm_value_unit</key>
 			<string>bytes</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>macOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>10.13.4</string>
+				</dict>
+			</dict>
 		</dict>
 		<dict>
 			<key>pfm_conditionals</key>
@@ -190,10 +206,16 @@ At least one of the 'AllowPersonalCaching' or 'AllowSharedCaching' keys need to 
 			<string>Allow Personal iCloud Data Caching</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>macOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>10.13.4</string>
+				</dict>
+			</dict>
 		</dict>
 		<dict>
-			<key>pfm_description_reference</key>
-			<string>Limit how much disk space the content cache uses for cached iCloud data, in bytes. The PersonalCacheLimit must not exceed CacheLimit.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://support.apple.com/guide/mac-help/configure-advanced-content-caching-settings-mchl91e7141a/10.15/mac/10.15</string>
 			<key>pfm_name</key>
@@ -223,6 +245,14 @@ At least one of the 'AllowPersonalCaching' or 'AllowSharedCaching' keys need to 
 			<string>Allow non-iCloud Data Caching</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>macOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>10.13.4</string>
+				</dict>
+			</dict>
 		</dict>
 		<dict>
 			<key>pfm_default</key>
@@ -239,6 +269,14 @@ Available in macOS 10.15.4 and later.</string>
 			<string>Automatically activate Internet connection sharing</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>macOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>10.15.4</string>
+				</dict>
+			</dict>
 		</dict>
 		<dict>
 			<key>pfm_default</key>
@@ -257,6 +295,14 @@ Available in macOS 10.15.4 and later.</string>
 			<string>Port</string>
 			<key>pfm_type</key>
 			<string>integer</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>macOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>10.13.4</string>
+				</dict>
+			</dict>
 		</dict>
 		<dict>
 			<key>pfm_default</key>
@@ -273,6 +319,14 @@ The system creates a directory and its intermediates for the given data path if 
 			<string>Data Path</string>
 			<key>pfm_type</key>
 			<string>string</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>macOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>10.13.4</string>
+				</dict>
+			</dict>
 		</dict>
 		<dict>
 			<key>pfm_default</key>
@@ -287,8 +341,14 @@ The system creates a directory and its intermediates for the given data path if 
 			<string>Disable Caching Over Shared Internet Connection</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
-			<key>pfm_value_inverted</key>
-			<true/>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>macOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>10.13.4</string>
+				</dict>
+			</dict>
 		</dict>
 		<dict>
 			<key>pfm_default</key>
@@ -303,6 +363,14 @@ The system creates a directory and its intermediates for the given data path if 
 			<string>Log Client Details</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>macOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>10.13.4</string>
+				</dict>
+			</dict>
 		</dict>
 		<dict>
 			<key>pfm_description</key>
@@ -332,6 +400,14 @@ The system creates a directory and its intermediates for the given data path if 
 			<string>Parents IP Addresses</string>
 			<key>pfm_type</key>
 			<string>array</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>macOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>10.13.4</string>
+				</dict>
+			</dict>
 		</dict>
 		<dict>
 			<key>pfm_default</key>
@@ -368,6 +444,14 @@ The system creates a directory and its intermediates for the given data path if 
 			<string>Parent Selection Policy</string>
 			<key>pfm_type</key>
 			<string>string</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>macOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>10.13.4</string>
+				</dict>
+			</dict>
 		</dict>
 		<dict>
 			<key>pfm_description</key>
@@ -419,6 +503,14 @@ The system creates a directory and its intermediates for the given data path if 
 							<string>IP Address Type</string>
 							<key>pfm_type</key>
 							<string>string</string>
+							<key>pfmx_supported_oses</key>
+							<dict>
+								<key>macOS</key>
+								<dict>
+									<key>pfmx_introduced</key>
+									<string>10.13.4</string>
+								</dict>
+							</dict>
 						</dict>
 						<dict>
 							<key>pfm_description</key>
@@ -433,6 +525,14 @@ The system creates a directory and its intermediates for the given data path if 
 							<string>Start IP Address</string>
 							<key>pfm_type</key>
 							<string>string</string>
+							<key>pfmx_supported_oses</key>
+							<dict>
+								<key>macOS</key>
+								<dict>
+									<key>pfmx_introduced</key>
+									<string>10.13.4</string>
+								</dict>
+							</dict>
 						</dict>
 						<dict>
 							<key>pfm_description</key>
@@ -447,6 +547,14 @@ The system creates a directory and its intermediates for the given data path if 
 							<string>End IP Address</string>
 							<key>pfm_type</key>
 							<string>string</string>
+							<key>pfmx_supported_oses</key>
+							<dict>
+								<key>macOS</key>
+								<dict>
+									<key>pfmx_introduced</key>
+									<string>10.13.4</string>
+								</dict>
+							</dict>
 						</dict>
 					</array>
 					<key>pfm_title</key>
@@ -459,6 +567,14 @@ The system creates a directory and its intermediates for the given data path if 
 			<string>Public Ranges</string>
 			<key>pfm_type</key>
 			<string>array</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>macOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>10.13.4</string>
+				</dict>
+			</dict>
 		</dict>
 		<dict>
 			<key>pfm_conditionals</key>
@@ -489,6 +605,14 @@ The system creates a directory and its intermediates for the given data path if 
 			<string>Allow Cache Delete</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>macOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>10.15</string>
+				</dict>
+			</dict>
 		</dict>
 		<dict>
 			<key>pfm_default</key>
@@ -503,6 +627,14 @@ The system creates a directory and its intermediates for the given data path if 
 			<string>Display Content Caching Alerts</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>macOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>10.15</string>
+				</dict>
+			</dict>
 		</dict>
 		<dict>
 			<key>pfm_default</key>
@@ -517,12 +649,18 @@ The system creates a directory and its intermediates for the given data path if 
 			<string>Keep Awake for Content Caching</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>macOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>10.15</string>
+				</dict>
+			</dict>
 		</dict>
 		<dict>
 			<key>pfm_default</key>
 			<integer>30</integer>
-			<key>pfm_description_reference</key>
-			<string>When content is purged from the content cache because it's low on disk space, and the purged content was added to the content cache less than this many days ago, you receive a low space alert.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://support.apple.com/guide/mac-help/configure-advanced-content-caching-settings-mchl91e7141a/10.15/mac/10.15</string>
 			<key>pfm_name</key>
@@ -573,8 +711,6 @@ The system creates a directory and its intermediates for the given data path if 
 			</array>
 			<key>pfm_default</key>
 			<true/>
-			<key>pfm_description_reference</key>
-			<string>Allow import (upload) requests.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://support.apple.com/guide/mac-help/configure-advanced-content-caching-settings-mchl91e7141a/10.15/mac/10.15</string>
 			<key>pfm_name</key>
@@ -589,8 +725,6 @@ The system creates a directory and its intermediates for the given data path if 
 		<dict>
 			<key>pfm_default</key>
 			<true/>
-			<key>pfm_description_reference</key>
-			<string>Allow portable computers that have only Wi-Fi network connections to run content caching.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://support.apple.com/guide/mac-help/configure-advanced-content-caching-settings-mchl91e7141a/10.15/mac/10.15</string>
 			<key>pfm_name</key>
@@ -605,8 +739,6 @@ The system creates a directory and its intermediates for the given data path if 
 		<dict>
 			<key>pfm_default</key>
 			<integer>5</integer>
-			<key>pfm_description_reference</key>
-			<string>How often the content cache saves changes to its on-disk database. Raising the interval increases the risk of losing cached content after a power failure. The maximum is 3600 seconds (1 hour). An interval of 0 means always update the database immediately, with no delay, which decreases performance.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://support.apple.com/guide/mac-help/configure-advanced-content-caching-settings-mchl91e7141a/10.15/mac/10.15</string>
 			<key>pfm_name</key>
@@ -627,8 +759,6 @@ The system creates a directory and its intermediates for the given data path if 
 		<dict>
 			<key>pfm_default</key>
 			<integer>8000</integer>
-			<key>pfm_description_reference</key>
-			<string>The minimum number of bytes per second clients must sustain while downloading content from the content cache. The content cache stops downloads that transfer data slower than this rate. Clamped minimum is 1000 bytes per second.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://support.apple.com/guide/mac-help/configure-advanced-content-caching-settings-mchl91e7141a/10.15/mac/10.15</string>
 			<key>pfm_name</key>
@@ -647,8 +777,6 @@ The system creates a directory and its intermediates for the given data path if 
 		<dict>
 			<key>pfm_default</key>
 			<integer>180</integer>
-			<key>pfm_description_reference</key>
-			<string>How long, in seconds, to allow a download to a client to sit idle before giving up. Clamped minimum is 10 seconds.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://support.apple.com/guide/mac-help/configure-advanced-content-caching-settings-mchl91e7141a/10.15/mac/10.15</string>
 			<key>pfm_name</key>
@@ -667,8 +795,6 @@ The system creates a directory and its intermediates for the given data path if 
 		<dict>
 			<key>pfm_default</key>
 			<integer>0</integer>
-			<key>pfm_description_reference</key>
-			<string>The maximum number of bytes per second at which the content cache receives data from each client. A value of 0 indicates an unlimited number of bytes per second.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://support.apple.com/guide/mac-help/configure-advanced-content-caching-settings-mchl91e7141a/10.15/mac/10.15</string>
 			<key>pfm_name</key>
@@ -685,8 +811,6 @@ The system creates a directory and its intermediates for the given data path if 
 		<dict>
 			<key>pfm_default</key>
 			<integer>2000</integer>
-			<key>pfm_description_reference</key>
-			<string>The minimum number of bytes per second that clients must sustain while importing (uploading) content. The content cache stops imports that transfer data slower than this rate. The minimum rate is 100 bytes per second.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://support.apple.com/guide/mac-help/configure-advanced-content-caching-settings-mchl91e7141a/10.15/mac/10.15</string>
 			<key>pfm_name</key>
@@ -703,8 +827,6 @@ The system creates a directory and its intermediates for the given data path if 
 		<dict>
 			<key>pfm_default</key>
 			<real>0.20000000000000001</real>
-			<key>pfm_description_reference</key>
-			<string>The percentage of attenuation added to the upload time. Clamped minimum is 0% attenuation. Values too large will exceed the ImportTimeout and cause failures.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://support.apple.com/guide/mac-help/configure-advanced-content-caching-settings-mchl91e7141a/10.15/mac/10.15</string>
 			<key>pfm_exclude</key>
@@ -741,8 +863,6 @@ The system creates a directory and its intermediates for the given data path if 
 		<dict>
 			<key>pfm_default</key>
 			<integer>300</integer>
-			<key>pfm_description_reference</key>
-			<string>How long, in seconds, to allow an import (upload) from a client to sit idle before giving up. The minimum is 10 seconds.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://support.apple.com/guide/mac-help/configure-advanced-content-caching-settings-mchl91e7141a/10.15/mac/10.15</string>
 			<key>pfm_exclude</key>
@@ -775,8 +895,6 @@ The system creates a directory and its intermediates for the given data path if 
 		<dict>
 			<key>pfm_default</key>
 			<string>Listen on all interfaces</string>
-			<key>pfm_description_reference</key>
-			<string>The BSD name of a network interface to be used by the content cache.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://support.apple.com/guide/mac-help/configure-advanced-content-caching-settings-mchl91e7141a/10.15/mac/10.15</string>
 			<key>pfm_name</key>
@@ -812,6 +930,14 @@ The system creates a directory and its intermediates for the given data path if 
 			<string>Listen with Peers and Parents</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>macOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>10.13.4</string>
+				</dict>
+			</dict>
 		</dict>
 		<dict>
 			<key>pfm_default</key>
@@ -834,8 +960,6 @@ Requests that are too deep (forwarding chain is too long) are forced to the orig
 		<dict>
 			<key>pfm_default</key>
 			<integer>0</integer>
-			<key>pfm_description_reference</key>
-			<string>The maximum number of peer content caches to ask for content. 0 = unlimited</string>
 			<key>pfm_documentation_url</key>
 			<string>https://support.apple.com/guide/mac-help/configure-advanced-content-caching-settings-mchl91e7141a/10.15/mac/10.15</string>
 			<key>pfm_name</key>
@@ -878,8 +1002,6 @@ Clamped between 1-60 seconds, inclusive.</string>
 		<dict>
 			<key>pfm_default</key>
 			<integer>30</integer>
-			<key>pfm_description_reference</key>
-			<string>Metrics that are older than this are removed from the metrics database, once per day. Clamped minimum is 30 days.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://support.apple.com/guide/mac-help/configure-advanced-content-caching-settings-mchl91e7141a/10.15/mac/10.15</string>
 			<key>pfm_name</key>
@@ -898,8 +1020,6 @@ Clamped between 1-60 seconds, inclusive.</string>
 		<dict>
 			<key>pfm_default</key>
 			<integer>60</integer>
-			<key>pfm_description_reference</key>
-			<string>How long, in seconds, to allow a download from Apple's servers to sit idle before giving up (and possibly trying the download again). Clamped between 5 and 300 seconds, inclusive.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://support.apple.com/guide/mac-help/configure-advanced-content-caching-settings-mchl91e7141a/10.15/mac/10.15</string>
 			<key>pfm_name</key>
@@ -920,8 +1040,6 @@ Clamped between 1-60 seconds, inclusive.</string>
 		<dict>
 			<key>pfm_default</key>
 			<integer>600</integer>
-			<key>pfm_description_reference</key>
-			<string>How long, in seconds, to allow an upload to an origin server to sit idle before giving up. Clamped between 5 and 3600 seconds, inclusive.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://support.apple.com/guide/mac-help/configure-advanced-content-caching-settings-mchl91e7141a/10.15/mac/10.15</string>
 			<key>pfm_name</key>
@@ -942,8 +1060,6 @@ Clamped between 1-60 seconds, inclusive.</string>
 		<dict>
 			<key>pfm_default</key>
 			<integer>60</integer>
-			<key>pfm_description_reference</key>
-			<string>How long, in seconds, to allow a download from a parent content cache to sit idle before giving up (and possibly trying the download again). Clamped between 5-300 seconds, inclusive.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://support.apple.com/guide/mac-help/configure-advanced-content-caching-settings-mchl91e7141a/10.15/mac/10.15</string>
 			<key>pfm_name</key>
@@ -964,8 +1080,6 @@ Clamped between 1-60 seconds, inclusive.</string>
 		<dict>
 			<key>pfm_default</key>
 			<integer>600</integer>
-			<key>pfm_description_reference</key>
-			<string>How long, in seconds, to allow an upload to a parent content cache to sit idle before giving up. Clamped between 5-3600 seconds, inclusive.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://support.apple.com/guide/mac-help/configure-advanced-content-caching-settings-mchl91e7141a/10.15/mac/10.15</string>
 			<key>pfm_name</key>
@@ -986,8 +1100,6 @@ Clamped between 1-60 seconds, inclusive.</string>
 		<dict>
 			<key>pfm_default</key>
 			<integer>900</integer>
-			<key>pfm_description_reference</key>
-			<string>How long, in seconds, to ignore parent content caches after they have accrued five consecutive network failures or server errors. Clamped between 30-3600 seconds, inclusive.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://support.apple.com/guide/mac-help/configure-advanced-content-caching-settings-mchl91e7141a/10.15/mac/10.15</string>
 			<key>pfm_name</key>
@@ -1008,8 +1120,6 @@ Clamped between 1-60 seconds, inclusive.</string>
 		<dict>
 			<key>pfm_default</key>
 			<integer>30</integer>
-			<key>pfm_description_reference</key>
-			<string>User affinities older than this number of days are removed from the affinities cache automatically. User affinities provide hints to clients as to where their content is cached, for improved performance. Pruning user affinities has no effect on cached content. Clamped minimum is 7 days.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://support.apple.com/guide/mac-help/configure-advanced-content-caching-settings-mchl91e7141a/10.15/mac/10.15</string>
 			<key>pfm_name</key>
@@ -1028,8 +1138,6 @@ Clamped between 1-60 seconds, inclusive.</string>
 		<dict>
 			<key>pfm_default</key>
 			<integer>7</integer>
-			<key>pfm_description_reference</key>
-			<string>How often, in days, the content cache should scan for and remove user affinities older than PruneAffinitiesAge days. User affinities, used only by iCloud, provide hints to clients as to where their content is cached, for improved performance. Pruning user affinities has no effect on cached content. Clamped minimum is one day.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://support.apple.com/guide/mac-help/configure-advanced-content-caching-settings-mchl91e7141a/10.15/mac/10.15</string>
 			<key>pfm_name</key>
@@ -1048,8 +1156,6 @@ Clamped between 1-60 seconds, inclusive.</string>
 		<dict>
 			<key>pfm_default</key>
 			<integer>120</integer>
-			<key>pfm_description_reference</key>
-			<string>Content that has not been requested in this number of days is removed from the content cache automatically. Clamped minimum is 7 days.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://support.apple.com/guide/mac-help/configure-advanced-content-caching-settings-mchl91e7141a/10.15/mac/10.15</string>
 			<key>pfm_name</key>
@@ -1068,8 +1174,6 @@ Clamped between 1-60 seconds, inclusive.</string>
 		<dict>
 			<key>pfm_default</key>
 			<integer>7</integer>
-			<key>pfm_description_reference</key>
-			<string>How often, in days, the content cache should scan for and remove content older than PruneAssetsAge days. Clamped minimum is one day.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://support.apple.com/guide/mac-help/configure-advanced-content-caching-settings-mchl91e7141a/10.15/mac/10.15</string>
 			<key>pfm_name</key>
@@ -1088,8 +1192,6 @@ Clamped between 1-60 seconds, inclusive.</string>
 		<dict>
 			<key>pfm_default</key>
 			<integer>2000000000</integer>
-			<key>pfm_description_reference</key>
-			<string>The minimum number of bytes of free disk space to be maintained for the volume that stores the cached content.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://support.apple.com/guide/mac-help/configure-advanced-content-caching-settings-mchl91e7141a/10.15/mac/10.15</string>
 			<key>pfm_name</key>
@@ -1106,8 +1208,6 @@ Clamped between 1-60 seconds, inclusive.</string>
 		<dict>
 			<key>pfm_default</key>
 			<integer>10</integer>
-			<key>pfm_description_reference</key>
-			<string>How long, in seconds, the content cache should try to deregister when it is being stopped. Deregistering informs clients that the content cache is no longer available so they won't try to use that content cache anymore (or until the content cache is started again). Clamped between 1 and 60 seconds, inclusive.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://support.apple.com/guide/mac-help/configure-advanced-content-caching-settings-mchl91e7141a/10.15/mac/10.15</string>
 			<key>pfm_name</key>
@@ -1128,8 +1228,6 @@ Clamped between 1-60 seconds, inclusive.</string>
 		<dict>
 			<key>pfm_default</key>
 			<false/>
-			<key>pfm_description_reference</key>
-			<string>When Verbose=true the content cache logs a little more information about its activities. The increased logging can reduce performance. This setting is not recommended for long-term use.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://support.apple.com/guide/mac-help/configure-advanced-content-caching-settings-mchl91e7141a/10.15/mac/10.15</string>
 			<key>pfm_name</key>
@@ -1185,6 +1283,14 @@ Clamped between 1-60 seconds, inclusive.</string>
 			<string>Restrict Clients To Local Network</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>macOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>10.13.4</string>
+				</dict>
+			</dict>
 		</dict>
 		<dict>
 			<key>pfm_default</key>
@@ -1226,6 +1332,14 @@ Clamped between 1-60 seconds, inclusive.</string>
 			<string>Restrict To Client Listen Ranges</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>macOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>10.13.4</string>
+				</dict>
+			</dict>
 		</dict>
 		<dict>
 			<key>pfm_description</key>
@@ -1277,6 +1391,14 @@ Clamped between 1-60 seconds, inclusive.</string>
 							<string>IP Address Type</string>
 							<key>pfm_type</key>
 							<string>string</string>
+							<key>pfmx_supported_oses</key>
+							<dict>
+								<key>macOS</key>
+								<dict>
+									<key>pfmx_introduced</key>
+									<string>10.13.4</string>
+								</dict>
+							</dict>
 						</dict>
 						<dict>
 							<key>pfm_description</key>
@@ -1291,6 +1413,14 @@ Clamped between 1-60 seconds, inclusive.</string>
 							<string>Start IP Address</string>
 							<key>pfm_type</key>
 							<string>string</string>
+							<key>pfmx_supported_oses</key>
+							<dict>
+								<key>macOS</key>
+								<dict>
+									<key>pfmx_introduced</key>
+									<string>10.13.4</string>
+								</dict>
+							</dict>
 						</dict>
 						<dict>
 							<key>pfm_description</key>
@@ -1305,6 +1435,14 @@ Clamped between 1-60 seconds, inclusive.</string>
 							<string>End IP Address</string>
 							<key>pfm_type</key>
 							<string>string</string>
+							<key>pfmx_supported_oses</key>
+							<dict>
+								<key>macOS</key>
+								<dict>
+									<key>pfmx_introduced</key>
+									<string>10.13.4</string>
+								</dict>
+							</dict>
 						</dict>
 					</array>
 					<key>pfm_title</key>
@@ -1317,12 +1455,18 @@ Clamped between 1-60 seconds, inclusive.</string>
 			<string>Client Listen Ranges</string>
 			<key>pfm_type</key>
 			<string>array</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>macOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>10.13.4</string>
+				</dict>
+			</dict>
 		</dict>
 		<dict>
 			<key>pfm_default</key>
 			<integer>3400</integer>
-			<key>pfm_description_reference</key>
-			<string>This limit is to prevent content caching from running out of file descriptors. Apple does not guarantee that a content cache can achieve 3400 concurrent clients.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://support.apple.com/guide/mac-help/configure-advanced-content-caching-settings-mchl91e7141a/10.15/mac/10.15</string>
 			<key>pfm_name</key>
@@ -1349,6 +1493,14 @@ Clamped between 1-60 seconds, inclusive.</string>
 			<string>Restrict Peers To Local Network</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>macOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>10.13.4</string>
+				</dict>
+			</dict>
 		</dict>
 		<dict>
 			<key>pfm_description</key>
@@ -1400,6 +1552,14 @@ Clamped between 1-60 seconds, inclusive.</string>
 							<string>IP Address Type</string>
 							<key>pfm_type</key>
 							<string>string</string>
+							<key>pfmx_supported_oses</key>
+							<dict>
+								<key>macOS</key>
+								<dict>
+									<key>pfmx_introduced</key>
+									<string>10.13.4</string>
+								</dict>
+							</dict>
 						</dict>
 						<dict>
 							<key>pfm_description</key>
@@ -1414,6 +1574,14 @@ Clamped between 1-60 seconds, inclusive.</string>
 							<string>Start IP Address</string>
 							<key>pfm_type</key>
 							<string>string</string>
+							<key>pfmx_supported_oses</key>
+							<dict>
+								<key>macOS</key>
+								<dict>
+									<key>pfmx_introduced</key>
+									<string>10.13.4</string>
+								</dict>
+							</dict>
 						</dict>
 						<dict>
 							<key>pfm_description</key>
@@ -1428,6 +1596,14 @@ Clamped between 1-60 seconds, inclusive.</string>
 							<string>End IP Address</string>
 							<key>pfm_type</key>
 							<string>string</string>
+							<key>pfmx_supported_oses</key>
+							<dict>
+								<key>macOS</key>
+								<dict>
+									<key>pfmx_introduced</key>
+									<string>10.13.4</string>
+								</dict>
+							</dict>
 						</dict>
 					</array>
 					<key>pfm_title</key>
@@ -1440,6 +1616,14 @@ Clamped between 1-60 seconds, inclusive.</string>
 			<string>Peer Filter Ranges</string>
 			<key>pfm_type</key>
 			<string>array</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>macOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>10.13.4</string>
+				</dict>
+			</dict>
 		</dict>
 		<dict>
 			<key>pfm_description</key>
@@ -1491,6 +1675,14 @@ Clamped between 1-60 seconds, inclusive.</string>
 							<string>IP Address Type</string>
 							<key>pfm_type</key>
 							<string>string</string>
+							<key>pfmx_supported_oses</key>
+							<dict>
+								<key>macOS</key>
+								<dict>
+									<key>pfmx_introduced</key>
+									<string>10.13.4</string>
+								</dict>
+							</dict>
 						</dict>
 						<dict>
 							<key>pfm_description</key>
@@ -1505,6 +1697,14 @@ Clamped between 1-60 seconds, inclusive.</string>
 							<string>Start IP Address</string>
 							<key>pfm_type</key>
 							<string>string</string>
+							<key>pfmx_supported_oses</key>
+							<dict>
+								<key>macOS</key>
+								<dict>
+									<key>pfmx_introduced</key>
+									<string>10.13.4</string>
+								</dict>
+							</dict>
 						</dict>
 						<dict>
 							<key>pfm_description</key>
@@ -1519,6 +1719,14 @@ Clamped between 1-60 seconds, inclusive.</string>
 							<string>End IP Address</string>
 							<key>pfm_type</key>
 							<string>string</string>
+							<key>pfmx_supported_oses</key>
+							<dict>
+								<key>macOS</key>
+								<dict>
+									<key>pfmx_introduced</key>
+									<string>10.13.4</string>
+								</dict>
+							</dict>
 						</dict>
 					</array>
 					<key>pfm_title</key>
@@ -1531,12 +1739,18 @@ Clamped between 1-60 seconds, inclusive.</string>
 			<string>Peer Listen Ranges</string>
 			<key>pfm_type</key>
 			<string>array</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>macOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>10.13.4</string>
+				</dict>
+			</dict>
 		</dict>
 		<dict>
 			<key>pfm_default</key>
 			<integer>30</integer>
-			<key>pfm_description_reference</key>
-			<string>How long, in seconds, to allow a download from a peer content cache to sit idle before giving up (and possibly trying the download again). Clamped between 5 and 300 seconds, inclusive.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://support.apple.com/guide/mac-help/configure-advanced-content-caching-settings-mchl91e7141a/10.15/mac/10.15</string>
 			<key>pfm_name</key>
@@ -1557,8 +1771,6 @@ Clamped between 1-60 seconds, inclusive.</string>
 		<dict>
 			<key>pfm_default</key>
 			<integer>30</integer>
-			<key>pfm_description_reference</key>
-			<string>How long, in seconds, to wait for replies from peer content caches when pinging them on startup. Clamped between 5 and 300 seconds, inclusive.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://support.apple.com/guide/mac-help/configure-advanced-content-caching-settings-mchl91e7141a/10.15/mac/10.15</string>
 			<key>pfm_name</key>
@@ -1579,8 +1791,6 @@ Clamped between 1-60 seconds, inclusive.</string>
 		<dict>
 			<key>pfm_default</key>
 			<integer>5</integer>
-			<key>pfm_description_reference</key>
-			<string>How long, in seconds, to wait for replies from peer content caches when asking them about content in their caches. Clamped between 1 and 60 seconds, inclusive.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://support.apple.com/guide/mac-help/configure-advanced-content-caching-settings-mchl91e7141a/10.15/mac/10.15</string>
 			<key>pfm_name</key>
@@ -1601,8 +1811,6 @@ Clamped between 1-60 seconds, inclusive.</string>
 		<dict>
 			<key>pfm_default</key>
 			<integer>900</integer>
-			<key>pfm_description_reference</key>
-			<string>How long, in seconds, to ignore peer content caches after they have accrued three consecutive notify or query failures. After the retry interval has passed, peer content caches are restored to the list of peers to query for content. Clamped between 30 and 3600 seconds, inclusive.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://support.apple.com/guide/mac-help/configure-advanced-content-caching-settings-mchl91e7141a/10.15/mac/10.15</string>
 			<key>pfm_name</key>
@@ -1631,5 +1839,30 @@ Clamped between 1-60 seconds, inclusive.</string>
 	<false/>
 	<key>pfm_version</key>
 	<integer>4</integer>
+	<key>pfmx_supported_oses</key>
+	<dict>
+		<key>macOS</key>
+		<dict>
+			<key>pfmx_allow_manual_install</key>
+			<true/>
+			<key>pfmx_device_channel</key>
+			<true/>
+			<key>pfmx_introduced</key>
+			<string>10.13.4</string>
+			<key>pfmx_multiple</key>
+			<false/>
+			<key>pfmx_requires_dep</key>
+			<false/>
+			<key>pfmx_user_approved_mdm</key>
+			<false/>
+			<key>pfmx_user_channel</key>
+			<false/>
+			<key>pfmx_user_enrollment</key>
+			<dict>
+				<key>pfmx_mode</key>
+				<string>forbidden</string>
+			</dict>
+		</dict>
+	</dict>
 </dict>
 </plist>

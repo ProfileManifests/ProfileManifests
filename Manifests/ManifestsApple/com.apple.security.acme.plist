@@ -54,7 +54,8 @@
 			<key>pfm_default</key>
 			<string>com.apple.security.acme</string>
 			<key>pfm_description</key>
-			<string>The reverse-DNS-style identifier for the payload. This identifier is usually the same as the TopLevel value, with an additional appended component. This string must be unique within the profile.
+			<string>The reverse-DNS-style identifier for the payload. This identifier is usually the same as the 'TopLevel' value, with an additional appended component. This string must be unique within the profile.
+
 During a profile replacement, the system updates payloads with the same 'PayloadIdentifier' and 'PayloadUUID' in the old and new profiles.</string>
 			<key>pfm_name</key>
 			<string>PayloadIdentifier</string>
@@ -82,6 +83,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		<dict>
 			<key>pfm_description</key>
 			<string>The globally unique identifier for the payload. The actual content is unimportant, but must be globally unique. In macOS, use 'uuidgen' to generate UUIDs.
+
 During a profile replacement, the system updates payloads with the same 'PayloadIdentifier' and 'PayloadUUID' in the old and new profiles.</string>
 			<key>pfm_format</key>
 			<string>^[0-9A-Za-z]{8}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{12}$</string>
@@ -251,6 +253,8 @@ Dotted numbers can represent OIDs , with shortcuts for country (C), locality (L)
 			<string>Subject</string>
 			<key>pfm_type</key>
 			<string>array</string>
+			<key>pfm_value_placeholder</key>
+			<string>/C=US/O=ACME Corp./CN=ACME-Anvils/1.2.0.42=Anvils Dept</string>
 		</dict>
 		<dict>
 			<key>pfm_description</key>
@@ -356,6 +360,14 @@ Setting this key to 'true' is supported as of macOS 14. Older macOS versions req
 			<string>Attest</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>watchOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>10.0</string>
+				</dict>
+			</dict>
 		</dict>
 		<dict>
 			<key>pfm_default</key>
@@ -372,6 +384,29 @@ Setting this key to 'true' is supported as of macOS 14. Older macOS versions req
 			<string>Key Is Extractable</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>iOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>n/a</string>
+				</dict>
+				<key>tvOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>n/a</string>
+				</dict>
+				<key>visionOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>n/a</string>
+				</dict>
+				<key>watchOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>n/a</string>
+				</dict>
+			</dict>
 		</dict>
 		<dict>
 			<key>pfm_default</key>
@@ -388,6 +423,29 @@ Setting this key to 'true' is supported as of macOS 14. Older macOS versions req
 			<string>Allow All Apps Access</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>iOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>n/a</string>
+				</dict>
+				<key>tvOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>n/a</string>
+				</dict>
+				<key>visionOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>n/a</string>
+				</dict>
+				<key>watchOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>n/a</string>
+				</dict>
+			</dict>
 		</dict>
 	</array>
 	<key>pfm_targets</key>
@@ -403,5 +461,95 @@ Setting this key to 'true' is supported as of macOS 14. Older macOS versions req
 	<false/>
 	<key>pfm_version</key>
 	<integer>2</integer>
+	<key>pfmx_supported_oses</key>
+	<dict>
+		<key>iOS</key>
+		<dict>
+			<key>pfmx_allow_manual_install</key>
+			<true/>
+			<key>pfmx_introduced</key>
+			<string>16.0</string>
+			<key>pfmx_multiple</key>
+			<true/>
+			<key>pfmx_shared_ipad</key>
+			<dict>
+				<key>pfmx_device_channel</key>
+				<true/>
+				<key>pfmx_mode</key>
+				<string>allowed</string>
+				<key>pfmx_user_channel</key>
+				<false/>
+			</dict>
+			<key>pfmx_supervised</key>
+			<false/>
+			<key>pfmx_user_enrollment</key>
+			<dict>
+				<key>pfmx_mode</key>
+				<string>allowed</string>
+			</dict>
+		</dict>
+		<key>macOS</key>
+		<dict>
+			<key>pfmx_allow_manual_install</key>
+			<true/>
+			<key>pfmx_device_channel</key>
+			<true/>
+			<key>pfmx_introduced</key>
+			<string>13.1</string>
+			<key>pfmx_multiple</key>
+			<true/>
+			<key>pfmx_requires_dep</key>
+			<false/>
+			<key>pfmx_supervised</key>
+			<false/>
+			<key>pfmx_user_approved_mdm</key>
+			<false/>
+			<key>pfmx_user_channel</key>
+			<true/>
+			<key>pfmx_user_enrollment</key>
+			<dict>
+				<key>pfmx_mode</key>
+				<string>allowed</string>
+			</dict>
+		</dict>
+		<key>tvOS</key>
+		<dict>
+			<key>pfmx_allow_manual_install</key>
+			<true/>
+			<key>pfmx_introduced</key>
+			<string>16.0</string>
+			<key>pfmx_multiple</key>
+			<true/>
+			<key>pfmx_supervised</key>
+			<false/>
+		</dict>
+		<key>visionOS</key>
+		<dict>
+			<key>pfmx_allow_manual_install</key>
+			<true/>
+			<key>pfmx_introduced</key>
+			<string>1.0</string>
+			<key>pfmx_multiple</key>
+			<true/>
+			<key>pfmx_supervised</key>
+			<false/>
+			<key>pfmx_user_enrollment</key>
+			<dict>
+				<key>pfmx_mode</key>
+				<string>allowed</string>
+			</dict>
+		</dict>
+		<key>watchOS</key>
+		<dict>
+			<key>pfmx_allow_manual_install</key>
+			<true/>
+			<key>pfmx_introduced</key>
+			<string>9.0</string>
+			<key>pfmx_multiple</key>
+			<true/>
+			<key>pfmx_supervised</key>
+			<false/>
+		</dict>
+	</dict>
 </dict>
 </plist>

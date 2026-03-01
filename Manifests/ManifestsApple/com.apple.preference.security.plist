@@ -13,7 +13,7 @@
 	<key>pfm_interaction</key>
 	<string>combined</string>
 	<key>pfm_last_modified</key>
-	<date>2025-09-17T09:38:09Z</date>
+	<date>2026-01-27T19:19:42Z</date>
 	<key>pfm_macos_min</key>
 	<string>10.10</string>
 	<key>pfm_platforms</key>
@@ -132,11 +132,9 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_name</key>
 			<string>dontAllowPasswordResetUI</string>
 			<key>pfm_title</key>
-			<string>Allow user to change password</string>
+			<string>Disallow user to change password</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
-			<key>pfm_value_inverted</key>
-			<true/>
 		</dict>
 		<dict>
 			<key>pfm_default</key>
@@ -146,11 +144,9 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_name</key>
 			<string>dontAllowLockMessageUI</string>
 			<key>pfm_title</key>
-			<string>Allow user to set lock message</string>
+			<string>Disallow user to set lock message</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
-			<key>pfm_value_inverted</key>
-			<true/>
 		</dict>
 		<dict>
 			<key>pfm_default</key>
@@ -176,5 +172,32 @@ During a profile replacement, the system updates payloads with the same 'Payload
 	<false/>
 	<key>pfm_version</key>
 	<integer>2</integer>
+	<key>pfmx_supported_oses</key>
+	<dict>
+		<key>macOS</key>
+		<dict>
+			<key>pfmx_allow_manual_install</key>
+			<true/>
+			<key>pfmx_device_channel</key>
+			<true/>
+			<key>pfmx_introduced</key>
+			<string>10.10</string>
+			<key>pfmx_multiple</key>
+			<false/>
+			<key>pfmx_requires_dep</key>
+			<false/>
+			<key>pfmx_supervised</key>
+			<false/>
+			<key>pfmx_user_approved_mdm</key>
+			<false/>
+			<key>pfmx_user_channel</key>
+			<true/>
+			<key>pfmx_user_enrollment</key>
+			<dict>
+				<key>pfmx_mode</key>
+				<string>forbidden</string>
+			</dict>
+		</dict>
+	</dict>
 </dict>
 </plist>

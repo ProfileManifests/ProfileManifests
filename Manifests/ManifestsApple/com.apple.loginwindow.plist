@@ -263,11 +263,9 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_name</key>
 			<string>HideLocalUsers</string>
 			<key>pfm_title</key>
-			<string>Show local users</string>
+			<string>Hide local users</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
-			<key>pfm_value_inverted</key>
-			<true/>
 		</dict>
 		<dict>
 			<key>pfm_default</key>
@@ -293,11 +291,9 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_name</key>
 			<string>HideMobileAccounts</string>
 			<key>pfm_title</key>
-			<string>Show mobile accounts</string>
+			<string>Hide mobile accounts</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
-			<key>pfm_value_inverted</key>
-			<true/>
 		</dict>
 		<dict>
 			<key>pfm_default</key>
@@ -351,11 +347,9 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_name</key>
 			<string>HideAdminUsers</string>
 			<key>pfm_title</key>
-			<string>Show Mac computer's administrator accounts</string>
+			<string>Hide Mac computer's administrator accounts</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
-			<key>pfm_value_inverted</key>
-			<true/>
 		</dict>
 		<dict>
 			<key>pfm_default</key>
@@ -393,11 +387,9 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_name</key>
 			<string>SleepDisabled</string>
 			<key>pfm_title</key>
-			<string>Show the Sleep button</string>
+			<string>Hide the Sleep button</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
-			<key>pfm_value_inverted</key>
-			<true/>
 		</dict>
 		<dict>
 			<key>pfm_default</key>
@@ -407,11 +399,9 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_name</key>
 			<string>RestartDisabled</string>
 			<key>pfm_title</key>
-			<string>Show the Restart button</string>
+			<string>Hide the Restart button</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
-			<key>pfm_value_inverted</key>
-			<true/>
 		</dict>
 		<dict>
 			<key>pfm_default</key>
@@ -421,11 +411,9 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_name</key>
 			<string>ShutDownDisabled</string>
 			<key>pfm_title</key>
-			<string>Show the Shut Down button</string>
+			<string>Hide the Shut Down button</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
-			<key>pfm_value_inverted</key>
-			<true/>
 		</dict>
 		<dict>
 			<key>pfm_default</key>
@@ -476,6 +464,14 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>Disable the Log Out menu item while logged in</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>macOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>10.13</string>
+				</dict>
+			</dict>
 		</dict>
 		<dict>
 			<key>pfm_default</key>
@@ -490,14 +486,20 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>Disable the immediate Screen Lock function</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>macOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>10.13</string>
+				</dict>
+			</dict>
 		</dict>
 		<dict>
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
 			<string>A loginwindow password will be required to login.</string>
-			<key>pfm_description_reference</key>
-			<string></string>
 			<key>pfm_name</key>
 			<string>com.apple.login.mcx.DisableAutoLoginClient</string>
 			<key>pfm_title</key>
@@ -514,6 +516,16 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>AutologinUsername</string>
 			<key>pfm_type</key>
 			<string>string</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>macOS</key>
+				<dict>
+					<key>pfmx_allow_manual_install</key>
+					<false/>
+					<key>pfmx_introduced</key>
+					<string>14.0</string>
+				</dict>
+			</dict>
 		</dict>
 		<dict>
 			<key>pfm_description</key>
@@ -524,6 +536,16 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>AutologinPassword</string>
 			<key>pfm_type</key>
 			<string>string</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>macOS</key>
+				<dict>
+					<key>pfmx_allow_manual_install</key>
+					<false/>
+					<key>pfmx_introduced</key>
+					<string>14.0</string>
+				</dict>
+			</dict>
 		</dict>
 		<dict>
 			<key>pfm_default</key>
@@ -538,6 +560,14 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>Disable automatic login if FileVault is enabled</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>macOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>10.9</string>
+				</dict>
+			</dict>
 		</dict>
 		<dict>
 			<key>pfm_default</key>
@@ -547,19 +577,15 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_name</key>
 			<string>DisableConsoleAccess</string>
 			<key>pfm_title</key>
-			<string>Enable &gt;console login</string>
+			<string>Disable &gt;console login</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
-			<key>pfm_value_inverted</key>
-			<true/>
 		</dict>
 		<dict>
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
 			<string>Allows external accounts to log in.</string>
-			<key>pfm_description_reference</key>
-			<string></string>
 			<key>pfm_name</key>
 			<string>EnableExternalAccounts</string>
 			<key>pfm_title</key>
@@ -572,8 +598,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<true/>
 			<key>pfm_description</key>
 			<string>Allows Mac administrators on the computer to refresh or disable the management features.</string>
-			<key>pfm_description_reference</key>
-			<string></string>
 			<key>pfm_name</key>
 			<string>AdminMayDisableMCX</string>
 			<key>pfm_title</key>
@@ -598,8 +622,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<true/>
 			<key>pfm_description</key>
 			<string>Forces the name of the Mac to be set as the computer record name.</string>
-			<key>pfm_description_reference</key>
-			<string></string>
 			<key>pfm_name</key>
 			<string>UseComputerNameForComputerRecordName</string>
 			<key>pfm_title</key>
@@ -668,8 +690,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		<dict>
 			<key>pfm_description</key>
 			<string>Permit only local users to log in. Network users won't be allowed to log in.</string>
-			<key>pfm_description_reference</key>
-			<string></string>
 			<key>pfm_name</key>
 			<string>LocalUserLoginEnabled</string>
 			<key>pfm_title</key>
@@ -680,8 +700,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		<dict>
 			<key>pfm_description</key>
 			<string>Local users are forced to use any available workgroup settings.</string>
-			<key>pfm_description_reference</key>
-			<string></string>
 			<key>pfm_name</key>
 			<string>LocalUsersHaveWorkgroups</string>
 			<key>pfm_title</key>
@@ -692,8 +710,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		<dict>
 			<key>pfm_description</key>
 			<string>If users are part of a nested workgroup, only the settings of the user's workgroup are enforced.</string>
-			<key>pfm_description_reference</key>
-			<string></string>
 			<key>pfm_name</key>
 			<string>FlattenUserWorkgroups</string>
 			<key>pfm_title</key>
@@ -704,8 +720,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		<dict>
 			<key>pfm_description</key>
 			<string>If users are part of a nested workgroup, all nested workgroup settings are enforced.</string>
-			<key>pfm_description_reference</key>
-			<string></string>
 			<key>pfm_name</key>
 			<string>CombineUserWorkgroups</string>
 			<key>pfm_title</key>
@@ -716,8 +730,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		<dict>
 			<key>pfm_description</key>
 			<string>If the workgroup has a specific dialog, that dialog is shown when users log in.</string>
-			<key>pfm_description_reference</key>
-			<string></string>
 			<key>pfm_name</key>
 			<string>AlwaysShowWorkgroupDialog</string>
 			<key>pfm_title</key>
@@ -728,22 +740,16 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		<dict>
 			<key>pfm_description</key>
 			<string>Enable or disable the "Change Password…" button in the Users &amp; Groups preference pane.</string>
-			<key>pfm_description_reference</key>
-			<string></string>
 			<key>pfm_name</key>
 			<string>ChangePasswordDisabled</string>
 			<key>pfm_title</key>
-			<string>Allow user to change password</string>
+			<string>Disallow user to change password</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
-			<key>pfm_value_inverted</key>
-			<true/>
 		</dict>
 		<dict>
 			<key>pfm_description</key>
 			<string>Number of tries until password hint is shown (0 = disable password hints).</string>
-			<key>pfm_description_reference</key>
-			<string></string>
 			<key>pfm_name</key>
 			<string>RetriesUntilHint</string>
 			<key>pfm_title</key>
@@ -764,12 +770,18 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>Show input menu in login window</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>macOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>10.8</string>
+				</dict>
+			</dict>
 		</dict>
 		<dict>
 			<key>pfm_description</key>
 			<string>Hides users defined in the list from the login window under the Other button</string>
-			<key>pfm_description_reference</key>
-			<string>Optional. Users defined are hidden from the login list.</string>
 			<key>pfm_name</key>
 			<string>HiddenUsersList</string>
 			<key>pfm_subkeys</key>
@@ -805,5 +817,30 @@ During a profile replacement, the system updates payloads with the same 'Payload
 	<false/>
 	<key>pfm_version</key>
 	<integer>7</integer>
+	<key>pfmx_supported_oses</key>
+	<dict>
+		<key>macOS</key>
+		<dict>
+			<key>pfmx_allow_manual_install</key>
+			<true/>
+			<key>pfmx_device_channel</key>
+			<true/>
+			<key>pfmx_introduced</key>
+			<string>10.7</string>
+			<key>pfmx_multiple</key>
+			<true/>
+			<key>pfmx_requires_dep</key>
+			<false/>
+			<key>pfmx_user_approved_mdm</key>
+			<false/>
+			<key>pfmx_user_channel</key>
+			<false/>
+			<key>pfmx_user_enrollment</key>
+			<dict>
+				<key>pfmx_mode</key>
+				<string>forbidden</string>
+			</dict>
+		</dict>
+	</dict>
 </dict>
 </plist>

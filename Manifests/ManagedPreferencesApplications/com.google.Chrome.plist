@@ -56,8 +56,9 @@
 			<key>pfm_default</key>
 			<string>com.google.Chrome</string>
 			<key>pfm_description</key>
-			<string>The reverse-DNS-style identifier for the payload. This identifier is usually the same as the TopLevel value, with an additional appended component. This string must be unique within the profile.
-During a profile replacement, the system updates payloads with the same 'PayloadIdentifier' and 'PayloadUUID' in the old and new profiles.</string>
+			<string>The reverse-DNS-style identifier for the payload. This identifier is usually the same as the `TopLevel` value, with an additional appended component. This string must be unique within the profile.
+
+During a profile replacement, the system updates payloads with the same `PayloadIdentifier` and `PayloadUUID` in the old and new profiles.</string>
 			<key>pfm_description_reference</key>
 			<string>A reverse-DNS-style identifier for the specific payload. It is usually the same identifier as the root-level PayloadIdentifier value with an additional component appended.</string>
 			<key>pfm_name</key>
@@ -89,8 +90,9 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<string></string>
 			<key>pfm_description</key>
-			<string>The globally unique identifier for the payload. The actual content is unimportant, but must be globally unique. In macOS, use 'uuidgen' to generate UUIDs.
-During a profile replacement, the system updates payloads with the same 'PayloadIdentifier' and 'PayloadUUID' in the old and new profiles.</string>
+			<string>The globally unique identifier for the payload. The actual content is unimportant, but must be globally unique. In macOS, use `uuidgen` to generate UUIDs.
+
+During a profile replacement, the system updates payloads with the same `PayloadIdentifier` and `PayloadUUID` in the old and new profiles.</string>
 			<key>pfm_description_reference</key>
 			<string>A globally unique identifier for the payload. The actual content is unimportant, but it must be globally unique. In macOS, you can use uuidgen to generate reasonable UUIDs.</string>
 			<key>pfm_format</key>
@@ -6126,8 +6128,6 @@ Managed bookmarks are not synced to the user account and can't be modified by ex
 			<key>pfm_subkeys</key>
 			<array>
 				<dict>
-					<key>pfm_description</key>
-					<string></string>
 					<key>pfm_name</key>
 					<string>ManagedBookmark</string>
 					<key>pfm_subkeys</key>
@@ -6145,29 +6145,35 @@ Managed bookmarks are not synced to the user account and can't be modified by ex
 						<dict>
 							<key>pfm_description</key>
 							<string>URL for the bookmark.</string>
-							<key>pfm_description_reference</key>
-							<string></string>
 							<key>pfm_name</key>
 							<string>url</string>
 							<key>pfm_type</key>
 							<string>string</string>
 						</dict>
+						<dict>
+							<key>pfm_name</key>
+							<string>children</string>
+							<key>pfm_title</key>
+							<string>Subfolder</string>
+							<key>pfm_type</key>
+							<string>array</string>
+						</dict>
 					</array>
-					<key>pfm_title</key>
-					<string></string>
 					<key>pfm_type</key>
 					<string>dictionary</string>
 				</dict>
 				<dict>
 					<key>pfm_description</key>
 					<string>The top-level managed bookmarks folder name.</string>
+					<key>pfm_repetition_max</key>
+					<integer>1</integer>
 					<key>pfm_subkeys</key>
 					<array>
 						<dict>
 							<key>pfm_name</key>
 							<string>toplevel_name</string>
 							<key>pfm_title</key>
-							<string>Top Level Name</string>
+							<string>Managed Bookmarks Folder Name</string>
 							<key>pfm_type</key>
 							<string>string</string>
 						</dict>

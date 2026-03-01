@@ -56,7 +56,8 @@
 			<key>pfm_default</key>
 			<string>com.apple.wifi.managed</string>
 			<key>pfm_description</key>
-			<string>The reverse-DNS-style identifier for the payload. This identifier is usually the same as the TopLevel value, with an additional appended component. This string must be unique within the profile.
+			<string>The reverse-DNS-style identifier for the payload. This identifier is usually the same as the 'TopLevel' value, with an additional appended component. This string must be unique within the profile.
+
 During a profile replacement, the system updates payloads with the same 'PayloadIdentifier' and 'PayloadUUID' in the old and new profiles.</string>
 			<key>pfm_name</key>
 			<string>PayloadIdentifier</string>
@@ -86,6 +87,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string></string>
 			<key>pfm_description</key>
 			<string>The globally unique identifier for the payload. The actual content is unimportant, but must be globally unique. In macOS, use 'uuidgen' to generate UUIDs.
+
 During a profile replacement, the system updates payloads with the same 'PayloadIdentifier' and 'PayloadUUID' in the old and new profiles.</string>
 			<key>pfm_format</key>
 			<string>^[0-9A-Za-z]{8}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{12}$</string>
@@ -203,6 +205,19 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>Is Hotspot</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>iOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>7.0</string>
+				</dict>
+				<key>macOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>10.9</string>
+				</dict>
+			</dict>
 		</dict>
 		<dict>
 			<key>pfm_conditionals</key>
@@ -263,6 +278,14 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>Service Set Identifier (SSID)</string>
 			<key>pfm_type</key>
 			<string>string</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>iOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>7.0</string>
+				</dict>
+			</dict>
 		</dict>
 		<dict>
 			<key>pfm_default</key>
@@ -293,6 +316,14 @@ If 'false', the user must tap the network name to join it.</string>
 			<string>Auto Join</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>iOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>5.0</string>
+				</dict>
+			</dict>
 		</dict>
 		<dict>
 			<key>pfm_default</key>
@@ -312,6 +343,19 @@ If 'false', the user must tap the network name to join it.</string>
 			<string>Disable Captive Network Detection</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>iOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>10.0</string>
+				</dict>
+				<key>macOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>n/a</string>
+				</dict>
+			</dict>
 		</dict>
 		<dict>
 			<key>pfm_default</key>
@@ -337,6 +381,47 @@ This value is only locked when MDM installs the profile. If the profile is manua
 			<string>Disable MAC address randomization during association</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>iOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>14.0</string>
+					<key>pfmx_user_enrollment</key>
+					<dict>
+						<key>pfmx_mode</key>
+						<string>forbidden</string>
+					</dict>
+				</dict>
+				<key>macOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>15.0</string>
+					<key>pfmx_user_enrollment</key>
+					<dict>
+						<key>pfmx_mode</key>
+						<string>forbidden</string>
+					</dict>
+				</dict>
+				<key>tvOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>n/a</string>
+				</dict>
+				<key>visionOS</key>
+				<dict>
+					<key>pfmx_user_enrollment</key>
+					<dict>
+						<key>pfmx_mode</key>
+						<string>forbidden</string>
+					</dict>
+				</dict>
+				<key>watchOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>7.0</string>
+				</dict>
+			</dict>
 		</dict>
 		<dict>
 			<key>pfm_default</key>
@@ -369,6 +454,25 @@ This value is only locked when MDM installs the profile. If the profile is manua
 			<string>Proxy Type</string>
 			<key>pfm_type</key>
 			<string>string</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>iOS</key>
+				<dict>
+					<key>pfmx_user_enrollment</key>
+					<dict>
+						<key>pfmx_mode</key>
+						<string>forbidden</string>
+					</dict>
+				</dict>
+				<key>visionOS</key>
+				<dict>
+					<key>pfmx_user_enrollment</key>
+					<dict>
+						<key>pfmx_mode</key>
+						<string>forbidden</string>
+					</dict>
+				</dict>
+			</dict>
 		</dict>
 		<dict>
 			<key>pfm_conditionals</key>
@@ -419,6 +523,33 @@ This value is only locked when MDM installs the profile. If the profile is manua
 			<string>Proxy Server</string>
 			<key>pfm_type</key>
 			<string>string</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>iOS</key>
+				<dict>
+					<key>pfmx_user_enrollment</key>
+					<dict>
+						<key>pfmx_mode</key>
+						<string>forbidden</string>
+					</dict>
+				</dict>
+				<key>macOS</key>
+				<dict>
+					<key>pfmx_user_enrollment</key>
+					<dict>
+						<key>pfmx_mode</key>
+						<string>forbidden</string>
+					</dict>
+				</dict>
+				<key>visionOS</key>
+				<dict>
+					<key>pfmx_user_enrollment</key>
+					<dict>
+						<key>pfmx_mode</key>
+						<string>forbidden</string>
+					</dict>
+				</dict>
+			</dict>
 		</dict>
 		<dict>
 			<key>pfm_conditionals</key>
@@ -473,6 +604,33 @@ This value is only locked when MDM installs the profile. If the profile is manua
 			<string>Proxy Server Port</string>
 			<key>pfm_type</key>
 			<string>integer</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>iOS</key>
+				<dict>
+					<key>pfmx_user_enrollment</key>
+					<dict>
+						<key>pfmx_mode</key>
+						<string>forbidden</string>
+					</dict>
+				</dict>
+				<key>macOS</key>
+				<dict>
+					<key>pfmx_user_enrollment</key>
+					<dict>
+						<key>pfmx_mode</key>
+						<string>forbidden</string>
+					</dict>
+				</dict>
+				<key>visionOS</key>
+				<dict>
+					<key>pfmx_user_enrollment</key>
+					<dict>
+						<key>pfmx_mode</key>
+						<string>forbidden</string>
+					</dict>
+				</dict>
+			</dict>
 		</dict>
 		<dict>
 			<key>pfm_description</key>
@@ -499,6 +657,33 @@ This value is only locked when MDM installs the profile. If the profile is manua
 			<string>Proxy Username</string>
 			<key>pfm_type</key>
 			<string>string</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>iOS</key>
+				<dict>
+					<key>pfmx_user_enrollment</key>
+					<dict>
+						<key>pfmx_mode</key>
+						<string>forbidden</string>
+					</dict>
+				</dict>
+				<key>macOS</key>
+				<dict>
+					<key>pfmx_user_enrollment</key>
+					<dict>
+						<key>pfmx_mode</key>
+						<string>forbidden</string>
+					</dict>
+				</dict>
+				<key>visionOS</key>
+				<dict>
+					<key>pfmx_user_enrollment</key>
+					<dict>
+						<key>pfmx_mode</key>
+						<string>forbidden</string>
+					</dict>
+				</dict>
+			</dict>
 		</dict>
 		<dict>
 			<key>pfm_description</key>
@@ -527,6 +712,25 @@ This value is only locked when MDM installs the profile. If the profile is manua
 			<string>Proxy Password</string>
 			<key>pfm_type</key>
 			<string>string</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>iOS</key>
+				<dict>
+					<key>pfmx_user_enrollment</key>
+					<dict>
+						<key>pfmx_mode</key>
+						<string>forbidden</string>
+					</dict>
+				</dict>
+				<key>visionOS</key>
+				<dict>
+					<key>pfmx_user_enrollment</key>
+					<dict>
+						<key>pfmx_mode</key>
+						<string>forbidden</string>
+					</dict>
+				</dict>
+			</dict>
 		</dict>
 		<dict>
 			<key>pfm_description</key>
@@ -553,6 +757,33 @@ This value is only locked when MDM installs the profile. If the profile is manua
 			<string>Proxy PAC URL</string>
 			<key>pfm_type</key>
 			<string>string</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>iOS</key>
+				<dict>
+					<key>pfmx_user_enrollment</key>
+					<dict>
+						<key>pfmx_mode</key>
+						<string>forbidden</string>
+					</dict>
+				</dict>
+				<key>macOS</key>
+				<dict>
+					<key>pfmx_user_enrollment</key>
+					<dict>
+						<key>pfmx_mode</key>
+						<string>forbidden</string>
+					</dict>
+				</dict>
+				<key>visionOS</key>
+				<dict>
+					<key>pfmx_user_enrollment</key>
+					<dict>
+						<key>pfmx_mode</key>
+						<string>forbidden</string>
+					</dict>
+				</dict>
+			</dict>
 		</dict>
 		<dict>
 			<key>pfm_default</key>
@@ -581,6 +812,33 @@ This value is only locked when MDM installs the profile. If the profile is manua
 			<string>Proxy PAC Fallback Allowed</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>iOS</key>
+				<dict>
+					<key>pfmx_user_enrollment</key>
+					<dict>
+						<key>pfmx_mode</key>
+						<string>forbidden</string>
+					</dict>
+				</dict>
+				<key>macOS</key>
+				<dict>
+					<key>pfmx_user_enrollment</key>
+					<dict>
+						<key>pfmx_mode</key>
+						<string>forbidden</string>
+					</dict>
+				</dict>
+				<key>visionOS</key>
+				<dict>
+					<key>pfmx_user_enrollment</key>
+					<dict>
+						<key>pfmx_mode</key>
+						<string>forbidden</string>
+					</dict>
+				</dict>
+			</dict>
 		</dict>
 		<dict>
 			<key>pfm_default</key>
@@ -721,6 +979,19 @@ Prior to macOS 13, the encryption type, if specified explicitly, needed to match
 			<string>Displayed Operator Name</string>
 			<key>pfm_type</key>
 			<string>string</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>iOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>7.0</string>
+				</dict>
+				<key>macOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>10.9</string>
+				</dict>
+			</dict>
 		</dict>
 		<dict>
 			<key>pfm_conditionals</key>
@@ -777,6 +1048,19 @@ Prior to macOS 13, the encryption type, if specified explicitly, needed to match
 			<string>Domain Name</string>
 			<key>pfm_type</key>
 			<string>string</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>iOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>7.0</string>
+				</dict>
+				<key>macOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>10.9</string>
+				</dict>
+			</dict>
 		</dict>
 		<dict>
 			<key>pfm_default</key>
@@ -823,6 +1107,19 @@ Prior to macOS 13, the encryption type, if specified explicitly, needed to match
 			<string>Roaming Enable</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>iOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>7.0</string>
+				</dict>
+				<key>macOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>10.9</string>
+				</dict>
+			</dict>
 		</dict>
 		<dict>
 			<key>pfm_description</key>
@@ -878,6 +1175,19 @@ Prior to macOS 13, the encryption type, if specified explicitly, needed to match
 			<string>Roaming OIs</string>
 			<key>pfm_type</key>
 			<string>array</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>iOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>7.0</string>
+				</dict>
+				<key>macOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>10.9</string>
+				</dict>
+			</dict>
 		</dict>
 		<dict>
 			<key>pfm_description</key>
@@ -931,6 +1241,19 @@ Prior to macOS 13, the encryption type, if specified explicitly, needed to match
 			<string>Realm Names</string>
 			<key>pfm_type</key>
 			<string>array</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>iOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>7.0</string>
+				</dict>
+				<key>macOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>10.9</string>
+				</dict>
+			</dict>
 		</dict>
 		<dict>
 			<key>pfm_description</key>
@@ -989,6 +1312,19 @@ Prior to macOS 13, the encryption type, if specified explicitly, needed to match
 			<string>MCC/MNCs</string>
 			<key>pfm_type</key>
 			<string>array</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>iOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>7.0</string>
+				</dict>
+				<key>macOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>n/a</string>
+				</dict>
+			</dict>
 		</dict>
 		<dict>
 			<key>pfm_description</key>
@@ -1031,6 +1367,14 @@ Prior to macOS 13, the encryption type, if specified explicitly, needed to match
 			<string>Homogenous Extended Service Set Identifier (HESSID)</string>
 			<key>pfm_type</key>
 			<string>string</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>iOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>7.0</string>
+				</dict>
+			</dict>
 		</dict>
 		<dict>
 			<key>pfm_description</key>
@@ -1088,6 +1432,34 @@ Prior to macOS 13, the encryption type, if specified explicitly, needed to match
 			<string>array</string>
 			<key>pfm_type_input</key>
 			<string>boolean</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>iOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>n/a</string>
+				</dict>
+				<key>macOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>10.7</string>
+				</dict>
+				<key>tvOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>n/a</string>
+				</dict>
+				<key>visionOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>n/a</string>
+				</dict>
+				<key>watchOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>n/a</string>
+				</dict>
+			</dict>
 		</dict>
 		<dict>
 			<key>pfm_description</key>
@@ -1320,6 +1692,24 @@ For EAP-TLS authentication without a network payload, install the necessary iden
 					<string>9.0</string>
 					<key>pfm_type</key>
 					<string>boolean</string>
+					<key>pfmx_supported_oses</key>
+					<dict>
+						<key>iOS</key>
+						<dict>
+							<key>pfmx_introduced</key>
+							<string>8.0</string>
+						</dict>
+						<key>macOS</key>
+						<dict>
+							<key>pfmx_introduced</key>
+							<string>10.8</string>
+						</dict>
+						<key>tvOS</key>
+						<dict>
+							<key>pfmx_introduced</key>
+							<string>9.0</string>
+						</dict>
+					</dict>
 				</dict>
 				<dict>
 					<key>pfm_description</key>
@@ -1410,6 +1800,19 @@ As of iOS 8, Apple no longer supports this key.</string>
 					<string>Allow Trust Exceptions</string>
 					<key>pfm_type</key>
 					<string>boolean</string>
+					<key>pfmx_supported_oses</key>
+					<dict>
+						<key>iOS</key>
+						<dict>
+							<key>pfmx_removed</key>
+							<string>8.0</string>
+						</dict>
+						<key>visionOS</key>
+						<dict>
+							<key>pfmx_introduced</key>
+							<string>n/a</string>
+						</dict>
+					</dict>
 				</dict>
 				<dict>
 					<key>pfm_conditionals</key>
@@ -1555,6 +1958,24 @@ This field is required if 'TLSMinimumVersion' is '1.3'.</string>
 					<string>11.0</string>
 					<key>pfm_type</key>
 					<string>string</string>
+					<key>pfmx_supported_oses</key>
+					<dict>
+						<key>iOS</key>
+						<dict>
+							<key>pfmx_introduced</key>
+							<string>11.0</string>
+						</dict>
+						<key>macOS</key>
+						<dict>
+							<key>pfmx_introduced</key>
+							<string>10.13</string>
+						</dict>
+						<key>tvOS</key>
+						<dict>
+							<key>pfmx_introduced</key>
+							<string>11.0</string>
+						</dict>
+					</dict>
 				</dict>
 				<dict>
 					<key>pfm_default</key>
@@ -1598,6 +2019,24 @@ This field is required if 'TLSMinimumVersion' is '1.3'.</string>
 					<string>11.0</string>
 					<key>pfm_type</key>
 					<string>string</string>
+					<key>pfmx_supported_oses</key>
+					<dict>
+						<key>iOS</key>
+						<dict>
+							<key>pfmx_introduced</key>
+							<string>11.0</string>
+						</dict>
+						<key>macOS</key>
+						<dict>
+							<key>pfmx_introduced</key>
+							<string>10.13</string>
+						</dict>
+						<key>tvOS</key>
+						<dict>
+							<key>pfmx_introduced</key>
+							<string>11.0</string>
+						</dict>
+					</dict>
 				</dict>
 				<dict>
 					<key>pfm_default</key>
@@ -1772,6 +2211,14 @@ For use with EAP-SIM only.</string>
 					<string>Allow Two RANDs</string>
 					<key>pfm_type</key>
 					<string>integer</string>
+					<key>pfmx_supported_oses</key>
+					<dict>
+						<key>iOS</key>
+						<dict>
+							<key>pfmx_introduced</key>
+							<string>8.0</string>
+						</dict>
+					</dict>
 				</dict>
 				<dict>
 					<key>pfm_description</key>
@@ -1900,6 +2347,14 @@ If you don't specify a value, the default is 'true' for EAP-TLS, and 'false' for
 					<string>TLSCertificateIsRequired</string>
 					<key>pfm_type</key>
 					<string>boolean</string>
+					<key>pfmx_supported_oses</key>
+					<dict>
+						<key>iOS</key>
+						<dict>
+							<key>pfmx_introduced</key>
+							<string>7.0</string>
+						</dict>
+					</dict>
 				</dict>
 			</array>
 			<key>pfm_title</key>
@@ -1970,6 +2425,19 @@ If 'false', the system behaves as if Wi-Fi doesn't have an association with a Ci
 					<string>Allowlisted App Identifiers</string>
 					<key>pfm_type</key>
 					<string>array</string>
+					<key>pfmx_supported_oses</key>
+					<dict>
+						<key>iOS</key>
+						<dict>
+							<key>pfmx_introduced</key>
+							<string>14.5</string>
+						</dict>
+						<key>macOS</key>
+						<dict>
+							<key>pfmx_introduced</key>
+							<string>14.0</string>
+						</dict>
+					</dict>
 				</dict>
 				<dict>
 					<key>pfm_description</key>
@@ -1995,12 +2463,43 @@ If 'false', the system behaves as if Wi-Fi doesn't have an association with a Ci
 					<string>Whitelisted App Identifiers</string>
 					<key>pfm_type</key>
 					<string>array</string>
+					<key>pfmx_supported_oses</key>
+					<dict>
+						<key>iOS</key>
+						<dict>
+							<key>pfmx_deprecated</key>
+							<string>14.5</string>
+						</dict>
+						<key>macOS</key>
+						<dict>
+							<key>pfmx_deprecated</key>
+							<string>14.0</string>
+						</dict>
+						<key>visionOS</key>
+						<dict>
+							<key>pfmx_introduced</key>
+							<string>n/a</string>
+						</dict>
+					</dict>
 				</dict>
 			</array>
 			<key>pfm_title</key>
 			<string>QoS Marking Policy</string>
 			<key>pfm_type</key>
 			<string>dictionary</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>iOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>10.0</string>
+				</dict>
+				<key>macOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>10.13</string>
+				</dict>
+			</dict>
 		</dict>
 		<dict>
 			<key>pfm_conditionals</key>
@@ -2084,6 +2583,121 @@ If 'false', the system behaves as if Wi-Fi doesn't have an association with a Ci
 			<key>pfm_type</key>
 			<string>boolean</string>
 		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>If 'true', the device makes this network available for joining before the device is unlocked for the first time following a reboot, on a device configured for return to service. Any network credentials are placed into Class D storage within the keychain, and information about the network is stored on disk in Class D.
+
+There are several restrictions on the use of this flag:
+
+- This property is only available in the return to service mode.
+- Only one network can be designated as available before first unlock.
+- 'EAPClientConfiguration' must not be present.
+- If 'IsHotspot' is present, it must be set to 'false'.
+- 'QoSMarkingPolicy' must not be present.
+- If 'ProxyType' is present, it must be set to 'None'.
+
+The device fails to install the profile payload if any of these conditions are not met.</string>
+			<key>pfm_exclude</key>
+			<array>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_present</key>
+							<true/>
+							<key>pfm_target</key>
+							<string>EAPClientConfiguration</string>
+						</dict>
+					</array>
+				</dict>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_range_list</key>
+							<array>
+								<true/>
+							</array>
+							<key>pfm_target</key>
+							<string>IsHotspot</string>
+						</dict>
+					</array>
+				</dict>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_present</key>
+							<true/>
+							<key>pfm_target</key>
+							<string>QoSMarkingPolicy</string>
+						</dict>
+					</array>
+				</dict>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_present</key>
+							<true/>
+							<key>pfm_target</key>
+							<string>ProxyType</string>
+						</dict>
+						<dict>
+							<key>pfm_n_range_list</key>
+							<array>
+								<string>None</string>
+							</array>
+							<key>pfm_target</key>
+							<string>ProxyType</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+			<key>pfm_name</key>
+			<string>AllowJoinBeforeFirstUnlock</string>
+			<key>pfm_title</key>
+			<string>Allow Join Before First Unlock</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>iOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>n/a</string>
+				</dict>
+				<key>macOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>n/a</string>
+				</dict>
+				<key>tvOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>n/a</string>
+				</dict>
+				<key>visionOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>26.0</string>
+					<key>pfmx_supervised</key>
+					<true/>
+					<key>pfmx_user_enrollment</key>
+					<dict>
+						<key>pfmx_mode</key>
+						<string>forbidden</string>
+					</dict>
+				</dict>
+				<key>watchOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>n/a</string>
+				</dict>
+			</dict>
+		</dict>
 	</array>
 	<key>pfm_targets</key>
 	<array>
@@ -2098,5 +2712,93 @@ If 'false', the system behaves as if Wi-Fi doesn't have an association with a Ci
 	<false/>
 	<key>pfm_version</key>
 	<integer>13</integer>
+	<key>pfmx_supported_oses</key>
+	<dict>
+		<key>iOS</key>
+		<dict>
+			<key>pfmx_allow_manual_install</key>
+			<true/>
+			<key>pfmx_introduced</key>
+			<string>4.0</string>
+			<key>pfmx_multiple</key>
+			<true/>
+			<key>pfmx_shared_ipad</key>
+			<dict>
+				<key>pfmx_device_channel</key>
+				<true/>
+				<key>pfmx_mode</key>
+				<string>allowed</string>
+				<key>pfmx_user_channel</key>
+				<false/>
+			</dict>
+			<key>pfmx_supervised</key>
+			<false/>
+			<key>pfmx_user_enrollment</key>
+			<dict>
+				<key>pfmx_mode</key>
+				<string>allowed</string>
+			</dict>
+		</dict>
+		<key>macOS</key>
+		<dict>
+			<key>pfmx_allow_manual_install</key>
+			<true/>
+			<key>pfmx_device_channel</key>
+			<true/>
+			<key>pfmx_introduced</key>
+			<string>10.7</string>
+			<key>pfmx_multiple</key>
+			<true/>
+			<key>pfmx_requires_dep</key>
+			<false/>
+			<key>pfmx_supervised</key>
+			<false/>
+			<key>pfmx_user_approved_mdm</key>
+			<false/>
+			<key>pfmx_user_channel</key>
+			<true/>
+			<key>pfmx_user_enrollment</key>
+			<dict>
+				<key>pfmx_mode</key>
+				<string>allowed</string>
+			</dict>
+		</dict>
+		<key>tvOS</key>
+		<dict>
+			<key>pfmx_allow_manual_install</key>
+			<true/>
+			<key>pfmx_introduced</key>
+			<string>9.0</string>
+			<key>pfmx_multiple</key>
+			<true/>
+			<key>pfmx_supervised</key>
+			<false/>
+		</dict>
+		<key>visionOS</key>
+		<dict>
+			<key>pfmx_allow_manual_install</key>
+			<true/>
+			<key>pfmx_introduced</key>
+			<string>1.0</string>
+			<key>pfmx_multiple</key>
+			<true/>
+			<key>pfmx_supervised</key>
+			<false/>
+			<key>pfmx_user_enrollment</key>
+			<dict>
+				<key>pfmx_mode</key>
+				<string>allowed</string>
+			</dict>
+		</dict>
+		<key>watchOS</key>
+		<dict>
+			<key>pfmx_allow_manual_install</key>
+			<true/>
+			<key>pfmx_introduced</key>
+			<string>3.2</string>
+			<key>pfmx_multiple</key>
+			<true/>
+		</dict>
+	</dict>
 </dict>
 </plist>
