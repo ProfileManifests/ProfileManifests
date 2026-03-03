@@ -549,6 +549,8 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>array</string>
 		</dict>
 		<dict>
+			<key>pfm_app_min</key>
+			<string>2.4.0</string>
 			<key>pfm_default</key>
 			<integer>0</integer>
 			<key>pfm_description</key>
@@ -565,6 +567,8 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>0</string>
 		</dict>
 		<dict>
+			<key>pfm_app_min</key>
+			<string>2.4.0</string>
 			<key>pfm_description</key>
 			<string>Elevate24 2.4+ Only. Specify the full file path to a script that will be executed automatically when a user's session is elevated to admin. This can be used to perform actions such as logging, launching tools, or configuring the environment at the point of elevation.</string>
 			<key>pfm_name</key>
@@ -577,6 +581,8 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>/path/to/elevate_script.sh</string>
 		</dict>
 		<dict>
+			<key>pfm_app_min</key>
+			<string>2.4.0</string>
 			<key>pfm_description</key>
 			<string>Elevate24 2.4+ Only. Optionally provide the SHA256 hash of the elevation script specified in ElevateScriptPath. When configured, Elevate24 will verify the script's integrity before execution and refuse to run it if the hash does not match, protecting against unauthorised modification of the script.</string>
 			<key>pfm_name</key>
@@ -589,6 +595,8 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>SHA256 hash</string>
 		</dict>
 		<dict>
+			<key>pfm_app_min</key>
+			<string>2.4.0</string>
 			<key>pfm_description</key>
 			<string>Elevate24 2.4+ Only. Specify the full file path to a script that will be executed automatically when a user's elevated session ends and they are demoted back to a standard user. This can be used to perform clean-up tasks, revoke temporary access, or audit the end of an elevated session.</string>
 			<key>pfm_name</key>
@@ -601,6 +609,8 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>/path/to/demote_script.sh</string>
 		</dict>
 		<dict>
+			<key>pfm_app_min</key>
+			<string>2.4.0</string>
 			<key>pfm_description</key>
 			<string>Elevate24 2.4+ Only. Optionally provide the SHA256 hash of the demotion script specified in DemoteScriptPath. When configured, Elevate24 will verify the script's integrity before execution and refuse to run it if the hash does not match, protecting against unauthorised modification of the script.</string>
 			<key>pfm_name</key>
@@ -613,6 +623,8 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>SHA256 hash</string>
 		</dict>
 		<dict>
+			<key>pfm_app_min</key>
+			<string>2.4.0</string>
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
@@ -997,6 +1009,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 	<key>pfm_unique</key>
 	<true/>
 	<key>pfm_version</key>
-	<integer>4</integer>
+	<integer>5</integer>
 </dict>
 </plist>

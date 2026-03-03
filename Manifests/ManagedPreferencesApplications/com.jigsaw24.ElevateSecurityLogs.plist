@@ -952,6 +952,6 @@ Multiple arguments can be specified by seperating them with a comma.</string>
 	<key>pfm_unique</key>
 	<true/>
 	<key>pfm_version</key>
-	<integer>4</integer>
+	<integer>5</integer>
 </dict>
 </plist>
