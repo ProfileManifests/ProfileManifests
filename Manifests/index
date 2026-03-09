@@ -946,11 +946,11 @@
 		<key>com.parallels.desktop.managedprefs</key>
 		<dict>
 			<key>modified</key>
-			<date>2026-02-09T10:00:00Z</date>
+			<date>2026-03-09T10:00:00Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.parallels.dektop.managedprefs.plist</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<key>com.pratikkumar.airserver-mac</key>
 		<dict>
@@ -2472,6 +2472,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2026-03-04T09:31:09Z</date>
+	<date>2026-03-09T10:03:31Z</date>
 </dict>
 </plist>
