@@ -13,7 +13,7 @@
 	<key>pfm_interaction</key>
 	<string>combined</string>
 	<key>pfm_last_modified</key>
-	<date>2026-03-11T11:02:13Z</date>
+	<date>2026-03-23T14:59:41Z</date>
 	<key>pfm_macos_min</key>
 	<string>10.14</string>
 	<key>pfm_platforms</key>
@@ -234,7 +234,7 @@ Available in macOS 11 and later.</string>
 									</array>
 									<key>pfm_range_list_titles</key>
 									<array>
-										<string>Allow (Deprecated 26.2, removed 27.0)</string>
+										<string>Allow (deprecated 26.2, removed 27.0)</string>
 										<string>Deny</string>
 									</array>
 									<key>pfm_type</key>
