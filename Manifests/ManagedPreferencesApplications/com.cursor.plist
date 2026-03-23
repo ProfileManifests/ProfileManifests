@@ -133,6 +133,8 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>Controls which extensions can be installed.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://cursor.com/docs/enterprise/deployment-patterns#string-policies</string>
+			<key>pfm_value_placeholder</key>
+			<string>{"anysphere": true, "github": true}</string>
 		</dict>
 		<dict>
 			<key>pfm_name</key>
@@ -147,6 +149,8 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>Controls which team IDs are allowed to log in. Users with unauthorized team IDs are forcefully logged out.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://cursor.com/docs/enterprise/deployment-patterns#string-policies</string>
+			<key>pfm_value_placeholder</key>
+			<string>1,3,7</string>
 		</dict>
 		<dict>
 			<key>pfm_name</key>
@@ -161,6 +165,8 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>Configures a custom extension marketplace URL.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://cursor.com/docs/enterprise/deployment-patterns#extensiongalleryserviceurl-policy</string>
+			<key>pfm_value_placeholder</key>
+			<string>https://marketplace.example.com</string>
 		</dict>
 		<dict>
 			<key>pfm_name</key>
