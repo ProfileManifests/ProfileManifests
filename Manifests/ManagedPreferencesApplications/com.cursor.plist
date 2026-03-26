@@ -181,6 +181,8 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>Disables HTTP/2 for all requests, using HTTP/1.1 instead.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://cursor.com/docs/enterprise/deployment-patterns#boolean-policies</string>
+			<key>pfm_default</key>
+			<string>false</string>
 		</dict>
 		<dict>
 			<key>pfm_name</key>
