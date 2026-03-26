@@ -205,11 +205,11 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			</array>
 			<key>pfm_range_list_titles</key>
 			<array>
-				<string>none - Disables all automatic updates</string>
-				<string>manual - Users can manually check for updates</string>
-				<string>start - Check for updates when Cursor starts</string>
-				<string>default - Default behavior (same as start)</string>
-				<string>silentlyApplyOnQuit - Download updates in the background and apply when Cursor quits</string>
+				<string>Disable all automatic updates</string>
+				<string>Users can manually check for updates</string>
+				<string>Check for updates when Cursor starts</string>
+				<string>Default behavior (same as start)</string>
+				<string>Download updates in the background and apply when Cursor quits</string>
 			</array>
 		</dict>
 		<dict>
