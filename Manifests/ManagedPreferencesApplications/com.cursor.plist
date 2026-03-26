@@ -227,6 +227,8 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>Controls whether Workspace Trust is enabled.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://cursor.com/docs/enterprise/deployment-patterns#workspacetrustenabled-policy</string>
+			<key>pfm_default</key>
+			<string>false</string>
 		</dict>
 	</array>
 	<key>pfm_targets</key>
