@@ -673,15 +673,15 @@ During a profile replacement, the system updates payloads with the same `Payload
 			<string>DesktopInfoBackgroundOpacity</string>
 			<key>pfm_range_list</key>
 			<array>
-				<real>0.10000000000000001</real>
-				<real>0.20000000000000001</real>
-				<real>0.29999999999999999</real>
-				<real>0.40000000000000002</real>
+				<real>0.1</real>
+				<real>0.2</real>
+				<real>0.3</real>
+				<real>0.4</real>
 				<real>0.5</real>
-				<real>0.59999999999999998</real>
-				<real>0.69999999999999996</real>
-				<real>0.80000000000000004</real>
-				<real>0.90000000000000002</real>
+				<real>0.6</real>
+				<real>0.7</real>
+				<real>0.8</real>
+				<real>0.9</real>
 				<real>1</real>
 			</array>
 			<key>pfm_range_list_titles</key>
