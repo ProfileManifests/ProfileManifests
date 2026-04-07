@@ -277,8 +277,6 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>integer</string>
 						</dict>
 						<dict>
-							<key>pfm_default</key>
-							<false/>
 							<key>pfm_description</key>
 							<string>Custom Curl Options to used when downloading this script.</string>
 							<key>pfm_name</key>
@@ -571,8 +569,6 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>boolean</string>
 						</dict>
 						<dict>
-							<key>pfm_default</key>
-							<false/>
 							<key>pfm_description</key>
 							<string>Custom Curl Options to used when downloading this package.</string>
 							<key>pfm_name</key>
@@ -751,8 +747,6 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>boolean</string>
 						</dict>
 						<dict>
-							<key>pfm_default</key>
-							<false/>
 							<key>pfm_description</key>
 							<string>Custom Curl Options to used when downloading this script.</string>
 							<key>pfm_name</key>
@@ -919,8 +913,6 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>integer</string>
 						</dict>
 						<dict>
-							<key>pfm_default</key>
-							<false/>
 							<key>pfm_description</key>
 							<string>Custom Curl Options to used when downloading this script.</string>
 							<key>pfm_name</key>
