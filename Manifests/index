@@ -973,11 +973,11 @@
 		<key>com.secondsonconsulting.baseline</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-04-23T00:00:00Z</date>
+			<date>2026-04-07T00:00:00Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.secondsonconsulting.baseline.plist</string>
 			<key>version</key>
-			<integer>5</integer>
+			<integer>6</integer>
 		</dict>
 		<key>com.secondsonconsulting.renew</key>
 		<dict>
@@ -2463,6 +2463,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2026-04-08T22:51:30Z</date>
+	<date>2026-04-08T22:54:31Z</date>
 </dict>
 </plist>
