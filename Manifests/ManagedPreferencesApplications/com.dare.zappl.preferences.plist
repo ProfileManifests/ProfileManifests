@@ -2402,7 +2402,7 @@ A profile can consist of payloads with different version numbers. For example, c
 		<string>system</string>
 	</array>
 	<key>pfm_title</key>
-	<string>Zappl Custom Preferences</string>
+	<string>Zappl</string>
 	<key>pfm_unique</key>
 	<true/>
 	<key>pfm_version</key>
