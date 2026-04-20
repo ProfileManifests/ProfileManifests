@@ -12,12 +12,10 @@
 	<string>com.apple.systempreferences</string>
 	<key>pfm_format_version</key>
 	<integer>1</integer>
-	<key>pfm_imazing_last_modification</key>
-	<date>2024-09-20T08:59:58Z</date>
 	<key>pfm_interaction</key>
 	<string>combined</string>
 	<key>pfm_last_modified</key>
-	<date>2025-12-10T12:16:57Z</date>
+	<date>2026-04-20T20:30:50Z</date>
 	<key>pfm_macos_deprecated</key>
 	<string>13.0</string>
 	<key>pfm_macos_min</key>
