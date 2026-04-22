@@ -172,7 +172,7 @@ A profile can consist of payloads with different version numbers. For example, c
 					<key>pfm_require</key>
 					<string>always</string>
 					<key>pfm_title</key>
-					<string>Zappl Activation Token</string>
+					<string>Activation Token</string>
 					<key>pfm_type</key>
 					<string>string</string>
 					<key>pfm_value_placeholder</key>
@@ -190,7 +190,7 @@ A profile can consist of payloads with different version numbers. For example, c
 					<key>pfm_require</key>
 					<string>always</string>
 					<key>pfm_title</key>
-					<string>Zappl Public Key</string>
+					<string>Public Key</string>
 					<key>pfm_type</key>
 					<string>string</string>
 					<key>pfm_value_placeholder</key>
