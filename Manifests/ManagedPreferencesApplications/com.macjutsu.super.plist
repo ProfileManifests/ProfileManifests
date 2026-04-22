@@ -1459,7 +1459,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_note</key>
 			<string>This option overrides the InstallRapidSecurityResponses option</string>
 			<key>pfm_title</key>
-			<string>Install MacOS BSI Update</string>
+			<string>Install macOS BSI Update</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 		</dict>
