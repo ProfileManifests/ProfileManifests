@@ -1349,7 +1349,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_name</key>
 			<string>InstallMacOSMajorUpgrades</string>
 			<key>pfm_title</key>
-			<string>Install Major macOS Upgrades</string>
+			<string>Install macOS Major Upgrades</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 		</dict>
