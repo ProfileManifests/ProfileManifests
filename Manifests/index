@@ -748,11 +748,11 @@
 		<key>com.macjutsu.super</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-01-13T20:14:56Z</date>
+			<date>2026-04-22T02:35:40Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.macjutsu.super.plist</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<key>com.macpaw.site.theunarchiver</key>
 		<dict>
@@ -2463,6 +2463,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2026-04-08T22:54:31Z</date>
+	<date>2026-04-22T09:01:46Z</date>
 </dict>
 </plist>
