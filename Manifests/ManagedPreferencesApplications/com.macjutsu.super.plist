@@ -199,11 +199,11 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				<array>
 					<string>InstallJamfPolicyTriggers</string>
 					<string>InstallJamfPolicyTriggersWithoutRestarting</string>
+					<string>InstallMacOSBSIUpdates</string>
 					<string>InstallMacOSMajorUpgrades</string>
 					<string>InstallMacOSMajorVersionTarget</string>
 					<string>InstallNonSystemUpdatesWithoutRestarting</string>
 					<string>InstallRapidSecurityResponses</string>
-					<string>InstallMacOSBSIUpdates</string>
 				</array>
 				<key>Scheduling</key>
 				<array>
