@@ -1568,13 +1568,15 @@ A profile can consist of payloads with different version numbers. For example, c
 					<key>pfm_default</key>
 					<integer>60</integer>
 					<key>pfm_description</key>
-					<string>Note: These values were updated in v2.0.0 of Zappl, from the minimum of 10s and a default of 20s. The amount of time in seconds the user prompts refresh. The prompts require a refresh to pull focus if the user swipes away to ignore the prompt and ensures they either select defer or update. The default value is 60 seconds. The minimum allowed value is 30 seconds.</string>
+					<string>The amount of time in seconds the user prompts refresh. The prompts require a refresh to pull focus if the user swipes away to ignore the prompt and ensures they either select defer or update. The default value is 60 seconds. The minimum allowed value is 30 seconds.</string>
 					<key>pfm_documentation_url</key>
 					<string>https://docs.zappl.co/customise/preferences#prompt-refresh-interval</string>
 					<key>pfm_enabled</key>
 					<false/>
 					<key>pfm_name</key>
 					<string>refreshInterval</string>
+					<key>pfm_note</key>
+					<string>The default and minimum values of this property were updated in version 2.0.0 of Zappl, from a minimum of 10s and a default of 20s.</string>
 					<key>pfm_range_min</key>
 					<integer>30</integer>
 					<key>pfm_title</key>
@@ -2439,6 +2441,8 @@ A profile can consist of payloads with different version numbers. For example, c
 					<false/>
 					<key>pfm_name</key>
 					<string>refreshInterval</string>
+					<key>pfm_note</key>
+					<string>The default and minimum values of this property were updated in version 2.0.0 of Zappl, from a minimum of 10s and a default of 20s.</string>
 					<key>pfm_range_min</key>
 					<integer>30</integer>
 					<key>pfm_title</key>
