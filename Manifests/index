@@ -160,29 +160,29 @@
 		<key>com.apple.iWork.Keynote</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-08-04T08:25:08Z</date>
+			<date>2026-04-27T21:13:21Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApple/com.apple.iWork.Keynote.plist</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<key>com.apple.iWork.Numbers</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-08-04T08:25:08Z</date>
+			<date>2026-04-27T21:13:21Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApple/com.apple.iWork.Numbers.plist</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<key>com.apple.iWork.Pages</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-08-04T08:25:08Z</date>
+			<date>2026-04-27T21:13:21Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApple/com.apple.iWork.Pages.plist</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<key>com.apple.icloud.managed</key>
 		<dict>
@@ -2481,6 +2481,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2026-04-24T10:36:16Z</date>
+	<date>2026-04-27T23:33:31Z</date>
 </dict>
 </plist>
