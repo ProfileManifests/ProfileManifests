@@ -316,11 +316,11 @@
 		<key>com.1password.1password</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-08-04T08:25:08Z</date>
+			<date>2026-04-29T08:21:26Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.1password.1password.plist</string>
 			<key>version</key>
-			<integer>3</integer>
+			<integer>4</integer>
 		</dict>
 		<key>com.ThomsonResearchSoft.EndNote</key>
 		<dict>
@@ -2481,6 +2481,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2026-04-27T23:33:31Z</date>
+	<date>2026-04-29T08:45:57Z</date>
 </dict>
 </plist>
