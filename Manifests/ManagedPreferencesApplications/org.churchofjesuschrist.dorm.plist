@@ -13,7 +13,7 @@
 	<key>pfm_format_version</key>
 	<integer>1</integer>
 	<key>pfm_last_modified</key>
-	<date>2026-03-03T00:00:00Z</date>
+	<date>2026-03-29T00:00:00Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -300,6 +300,28 @@
 		</dict>
 		<dict>
 			<key>pfm_default</key>
+			<string>auto</string>
+			<key>pfm_description</key>
+			<string>Forces a specific language for the reminder dialog. Set to 'auto' to match the system locale.</string>
+			<key>pfm_name</key>
+			<string>LanguageOverride</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>auto</string>
+				<string>en</string>
+				<string>de</string>
+				<string>fr</string>
+				<string>es</string>
+				<string>pt</string>
+				<string>ja</string>
+			</array>
+			<key>pfm_title</key>
+			<string>Language Override</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
 			<string>IT Support</string>
 			<key>pfm_description</key>
 			<string>Display name of the support team.</string>
@@ -396,6 +418,78 @@
 		</dict>
 		<dict>
 			<key>pfm_default</key>
+			<string>&lt;br&gt;&lt;br&gt;For assistance, please contact **{supportTeamName}** by clicking the (?) button in the bottom, right-hand corner.</string>
+			<key>pfm_description</key>
+			<string>Overrides SupportAssistanceMessage when the resolved language is 'en'.</string>
+			<key>pfm_name</key>
+			<string>SupportAssistanceMessageLocalized_en</string>
+			<key>pfm_title</key>
+			<string>Support Assistance Message (English)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>&lt;br&gt;&lt;br&gt;Bei Fragen wenden Sie sich ueber die (?) Schaltflaeche unten rechts an **{supportTeamName}**.</string>
+			<key>pfm_description</key>
+			<string>Overrides SupportAssistanceMessage when the resolved language is 'de'.</string>
+			<key>pfm_name</key>
+			<string>SupportAssistanceMessageLocalized_de</string>
+			<key>pfm_title</key>
+			<string>Support Assistance Message (German)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>&lt;br&gt;&lt;br&gt;Pour obtenir de l&apos;aide, contactez **{supportTeamName}** via le bouton (?) en bas a droite.</string>
+			<key>pfm_description</key>
+			<string>Overrides SupportAssistanceMessage when the resolved language is 'fr'.</string>
+			<key>pfm_name</key>
+			<string>SupportAssistanceMessageLocalized_fr</string>
+			<key>pfm_title</key>
+			<string>Support Assistance Message (French)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>&lt;br&gt;&lt;br&gt;Para obtener ayuda, contacte con **{supportTeamName}** haciendo clic en el botón (?) de la esquina inferior derecha.</string>
+			<key>pfm_description</key>
+			<string>Overrides SupportAssistanceMessage when the resolved language is 'es'.</string>
+			<key>pfm_name</key>
+			<string>SupportAssistanceMessageLocalized_es</string>
+			<key>pfm_title</key>
+			<string>Support Assistance Message (Spanish)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>&lt;br&gt;&lt;br&gt;Para obter assistência, contacte a equipa **{supportTeamName}** clicando no botão (?) no canto inferior direito.</string>
+			<key>pfm_description</key>
+			<string>Overrides SupportAssistanceMessage when the resolved language is 'pt'.</string>
+			<key>pfm_name</key>
+			<string>SupportAssistanceMessageLocalized_pt</string>
+			<key>pfm_title</key>
+			<string>Support Assistance Message (Portuguese)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>&lt;br&gt;&lt;br&gt;サポートが必要な場合は、右下の (?) ボタンをクリックして **{supportTeamName}** にお問い合わせください。</string>
+			<key>pfm_description</key>
+			<string>Overrides SupportAssistanceMessage when the resolved language is 'ja'.</string>
+			<key>pfm_name</key>
+			<string>SupportAssistanceMessageLocalized_ja</string>
+			<key>pfm_title</key>
+			<string>Support Assistance Message (Japanese)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
 			<string>macOS {titleMessageUpdateOrUpgrade} Required</string>
 			<key>pfm_description</key>
 			<string>Title text displayed at the top of the DDM dialog.</string>
@@ -403,6 +497,78 @@
 			<string>Title</string>
 			<key>pfm_title</key>
 			<string>Dialog Title</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>macOS {titleMessageUpdateOrUpgrade} Required</string>
+			<key>pfm_description</key>
+			<string>Overrides Title when the resolved language is 'en'.</string>
+			<key>pfm_name</key>
+			<string>TitleLocalized_en</string>
+			<key>pfm_title</key>
+			<string>Dialog Title (English)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>macOS {titleMessageUpdateOrUpgrade} erforderlich</string>
+			<key>pfm_description</key>
+			<string>Overrides Title when the resolved language is 'de'.</string>
+			<key>pfm_name</key>
+			<string>TitleLocalized_de</string>
+			<key>pfm_title</key>
+			<string>Dialog Title (German)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>mise a jour macOS obligatoire</string>
+			<key>pfm_description</key>
+			<string>Overrides Title when the resolved language is 'fr'.</string>
+			<key>pfm_name</key>
+			<string>TitleLocalized_fr</string>
+			<key>pfm_title</key>
+			<string>Dialog Title (French)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>{titleMessageUpdateOrUpgrade} obligatoria de macOS</string>
+			<key>pfm_description</key>
+			<string>Overrides Title when the resolved language is 'es'.</string>
+			<key>pfm_name</key>
+			<string>TitleLocalized_es</string>
+			<key>pfm_title</key>
+			<string>Dialog Title (Spanish)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>{titleMessageUpdateOrUpgrade} obrigatória do macOS</string>
+			<key>pfm_description</key>
+			<string>Overrides Title when the resolved language is 'pt'.</string>
+			<key>pfm_name</key>
+			<string>TitleLocalized_pt</string>
+			<key>pfm_title</key>
+			<string>Dialog Title (Portuguese)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>macOSの{titleMessageUpdateOrUpgrade}が必要です</string>
+			<key>pfm_description</key>
+			<string>Overrides Title when the resolved language is 'ja'.</string>
+			<key>pfm_name</key>
+			<string>TitleLocalized_ja</string>
+			<key>pfm_title</key>
+			<string>Dialog Title (Japanese)</string>
 			<key>pfm_type</key>
 			<string>string</string>
 		</dict>
@@ -420,6 +586,78 @@
 		</dict>
 		<dict>
 			<key>pfm_default</key>
+			<string>Open Software Update</string>
+			<key>pfm_description</key>
+			<string>Overrides Button1Text when the resolved language is 'en'.</string>
+			<key>pfm_name</key>
+			<string>Button1TextLocalized_en</string>
+			<key>pfm_title</key>
+			<string>Primary Button Text (English)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Softwareupdate oeffnen</string>
+			<key>pfm_description</key>
+			<string>Overrides Button1Text when the resolved language is 'de'.</string>
+			<key>pfm_name</key>
+			<string>Button1TextLocalized_de</string>
+			<key>pfm_title</key>
+			<string>Primary Button Text (German)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Ouvrir Mise a jour de logiciels</string>
+			<key>pfm_description</key>
+			<string>Overrides Button1Text when the resolved language is 'fr'.</string>
+			<key>pfm_name</key>
+			<string>Button1TextLocalized_fr</string>
+			<key>pfm_title</key>
+			<string>Primary Button Text (French)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Abrir Actualización de software</string>
+			<key>pfm_description</key>
+			<string>Overrides Button1Text when the resolved language is 'es'.</string>
+			<key>pfm_name</key>
+			<string>Button1TextLocalized_es</string>
+			<key>pfm_title</key>
+			<string>Primary Button Text (Spanish)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Abrir Atualização de software</string>
+			<key>pfm_description</key>
+			<string>Overrides Button1Text when the resolved language is 'pt'.</string>
+			<key>pfm_name</key>
+			<string>Button1TextLocalized_pt</string>
+			<key>pfm_title</key>
+			<string>Primary Button Text (Portuguese)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>ソフトウェア・アップデートを開く</string>
+			<key>pfm_description</key>
+			<string>Overrides Button1Text when the resolved language is 'ja'.</string>
+			<key>pfm_name</key>
+			<string>Button1TextLocalized_ja</string>
+			<key>pfm_title</key>
+			<string>Primary Button Text (Japanese)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
 			<string>Remind Me Later</string>
 			<key>pfm_description</key>
 			<string>Label for the secondary (remind later) button.</string>
@@ -427,6 +665,78 @@
 			<string>Button2Text</string>
 			<key>pfm_title</key>
 			<string>Secondary Button Text</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Remind Me Later</string>
+			<key>pfm_description</key>
+			<string>Overrides Button2Text when the resolved language is 'en'.</string>
+			<key>pfm_name</key>
+			<string>Button2TextLocalized_en</string>
+			<key>pfm_title</key>
+			<string>Secondary Button Text (English)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Spaeter erinnern</string>
+			<key>pfm_description</key>
+			<string>Overrides Button2Text when the resolved language is 'de'.</string>
+			<key>pfm_name</key>
+			<string>Button2TextLocalized_de</string>
+			<key>pfm_title</key>
+			<string>Secondary Button Text (German)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Me le rappeler plus tard</string>
+			<key>pfm_description</key>
+			<string>Overrides Button2Text when the resolved language is 'fr'.</string>
+			<key>pfm_name</key>
+			<string>Button2TextLocalized_fr</string>
+			<key>pfm_title</key>
+			<string>Secondary Button Text (French)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Recordármelo más tarde</string>
+			<key>pfm_description</key>
+			<string>Overrides Button2Text when the resolved language is 'es'.</string>
+			<key>pfm_name</key>
+			<string>Button2TextLocalized_es</string>
+			<key>pfm_title</key>
+			<string>Secondary Button Text (Spanish)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Lembrar-me mais tarde</string>
+			<key>pfm_description</key>
+			<string>Overrides Button2Text when the resolved language is 'pt'.</string>
+			<key>pfm_name</key>
+			<string>Button2TextLocalized_pt</string>
+			<key>pfm_title</key>
+			<string>Secondary Button Text (Portuguese)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>後で通知</string>
+			<key>pfm_description</key>
+			<string>Overrides Button2Text when the resolved language is 'ja'.</string>
+			<key>pfm_name</key>
+			<string>Button2TextLocalized_ja</string>
+			<key>pfm_title</key>
+			<string>Secondary Button Text (Japanese)</string>
 			<key>pfm_type</key>
 			<string>string</string>
 		</dict>
@@ -444,6 +754,78 @@
 		</dict>
 		<dict>
 			<key>pfm_default</key>
+			<string>Update macOS on Mac</string>
+			<key>pfm_description</key>
+			<string>Overrides InfoButtonText when the resolved language is 'en'.</string>
+			<key>pfm_name</key>
+			<string>InfoButtonTextLocalized_en</string>
+			<key>pfm_title</key>
+			<string>Info Button Text (English)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>macOS auf Mac aktualisieren</string>
+			<key>pfm_description</key>
+			<string>Overrides InfoButtonText when the resolved language is 'de'.</string>
+			<key>pfm_name</key>
+			<string>InfoButtonTextLocalized_de</string>
+			<key>pfm_title</key>
+			<string>Info Button Text (German)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Mettre a jour macOS sur Mac</string>
+			<key>pfm_description</key>
+			<string>Overrides InfoButtonText when the resolved language is 'fr'.</string>
+			<key>pfm_name</key>
+			<string>InfoButtonTextLocalized_fr</string>
+			<key>pfm_title</key>
+			<string>Info Button Text (French)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Actualizar macOS en el Mac</string>
+			<key>pfm_description</key>
+			<string>Overrides InfoButtonText when the resolved language is 'es'.</string>
+			<key>pfm_name</key>
+			<string>InfoButtonTextLocalized_es</string>
+			<key>pfm_title</key>
+			<string>Info Button Text (Spanish)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Atualizar macOS no Mac</string>
+			<key>pfm_description</key>
+			<string>Overrides InfoButtonText when the resolved language is 'pt'.</string>
+			<key>pfm_name</key>
+			<string>InfoButtonTextLocalized_pt</string>
+			<key>pfm_title</key>
+			<string>Info Button Text (Portuguese)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>MacでmacOSをアップデート</string>
+			<key>pfm_description</key>
+			<string>Overrides InfoButtonText when the resolved language is 'ja'.</string>
+			<key>pfm_name</key>
+			<string>InfoButtonTextLocalized_ja</string>
+			<key>pfm_title</key>
+			<string>Info Button Text (Japanese)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
 			<string>&lt;br&gt;&lt;br&gt;**Note:** Your Mac has been powered-on for **{uptimeHumanReadable}**. For more reliable results, please manually restart your Mac before proceeding.</string>
 			<key>pfm_description</key>
 			<string>Markdown-formatted text displayed in the dialog.</string>
@@ -451,6 +833,78 @@
 			<string>ExcessiveUptimeWarningMessage</string>
 			<key>pfm_title</key>
 			<string>Excessive Uptime Warning Message</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>&lt;br&gt;&lt;br&gt;**Note:** Your Mac has been powered-on for **{uptimeHumanReadable}**. For more reliable results, please manually restart your Mac before proceeding.</string>
+			<key>pfm_description</key>
+			<string>Overrides ExcessiveUptimeWarningMessage when the resolved language is 'en'.</string>
+			<key>pfm_name</key>
+			<string>ExcessiveUptimeWarningMessageLocalized_en</string>
+			<key>pfm_title</key>
+			<string>Excessive Uptime Warning Message (English)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>&lt;br&gt;&lt;br&gt;**Hinweis:** Ihr Mac laeuft seit **{uptimeHumanReadable}**. Starten Sie ihn fuer zuverlaessigere Ergebnisse bitte manuell neu.</string>
+			<key>pfm_description</key>
+			<string>Overrides ExcessiveUptimeWarningMessage when the resolved language is 'de'.</string>
+			<key>pfm_name</key>
+			<string>ExcessiveUptimeWarningMessageLocalized_de</string>
+			<key>pfm_title</key>
+			<string>Excessive Uptime Warning Message (German)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>&lt;br&gt;&lt;br&gt;**Note :** Votre Mac est allume depuis **{uptimeHumanReadable}**. Redemarrez-le manuellement pour de meilleurs resultats.</string>
+			<key>pfm_description</key>
+			<string>Overrides ExcessiveUptimeWarningMessage when the resolved language is 'fr'.</string>
+			<key>pfm_name</key>
+			<string>ExcessiveUptimeWarningMessageLocalized_fr</string>
+			<key>pfm_title</key>
+			<string>Excessive Uptime Warning Message (French)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>&lt;br&gt;&lt;br&gt;**Nota:** Su Mac lleva **{uptimeHumanReadable}** encendido. Para obtener resultados más fiables, reíniícielo manualmente antes de continuar.</string>
+			<key>pfm_description</key>
+			<string>Overrides ExcessiveUptimeWarningMessage when the resolved language is 'es'.</string>
+			<key>pfm_name</key>
+			<string>ExcessiveUptimeWarningMessageLocalized_es</string>
+			<key>pfm_title</key>
+			<string>Excessive Uptime Warning Message (Spanish)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>&lt;br&gt;&lt;br&gt;**Nota:** O seu Mac está ligado há **{uptimeHumanReadable}**. Para resultados mais fiáveis, reinicie-o manualmente antes de continuar.</string>
+			<key>pfm_description</key>
+			<string>Overrides ExcessiveUptimeWarningMessage when the resolved language is 'pt'.</string>
+			<key>pfm_name</key>
+			<string>ExcessiveUptimeWarningMessageLocalized_pt</string>
+			<key>pfm_title</key>
+			<string>Excessive Uptime Warning Message (Portuguese)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>&lt;br&gt;&lt;br&gt;**注意:** このMacは **{uptimeHumanReadable}** の間、再起動されていません。より確実に実行するため、続行前に手動で再起動してください。</string>
+			<key>pfm_description</key>
+			<string>Overrides ExcessiveUptimeWarningMessage when the resolved language is 'ja'.</string>
+			<key>pfm_name</key>
+			<string>ExcessiveUptimeWarningMessageLocalized_ja</string>
+			<key>pfm_title</key>
+			<string>Excessive Uptime Warning Message (Japanese)</string>
 			<key>pfm_type</key>
 			<string>string</string>
 		</dict>
@@ -468,6 +922,78 @@
 		</dict>
 		<dict>
 			<key>pfm_default</key>
+			<string>&lt;br&gt;&lt;br&gt;**Note:** Your Mac has only **{diskSpaceHumanReadable}**, which may prevent this macOS {titleMessageUpdateOrUpgrade:l}.</string>
+			<key>pfm_description</key>
+			<string>Overrides DiskSpaceWarningMessage when the resolved language is 'en'.</string>
+			<key>pfm_name</key>
+			<string>DiskSpaceWarningMessageLocalized_en</string>
+			<key>pfm_title</key>
+			<string>Disk Space Warning Message (English)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>&lt;br&gt;&lt;br&gt;**Hinweis:** Ihr Mac hat nur **{diskSpaceHumanReadable}** frei. Dadurch kann dieses macOS-{titleMessageUpdateOrUpgrade:l} scheitern.</string>
+			<key>pfm_description</key>
+			<string>Overrides DiskSpaceWarningMessage when the resolved language is 'de'.</string>
+			<key>pfm_name</key>
+			<string>DiskSpaceWarningMessageLocalized_de</string>
+			<key>pfm_title</key>
+			<string>Disk Space Warning Message (German)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>&lt;br&gt;&lt;br&gt;**Note :** Votre Mac ne dispose que de **{diskSpaceHumanReadable}**, ce qui peut empecher cette {titleMessageUpdateOrUpgrade:l} macOS.</string>
+			<key>pfm_description</key>
+			<string>Overrides DiskSpaceWarningMessage when the resolved language is 'fr'.</string>
+			<key>pfm_name</key>
+			<string>DiskSpaceWarningMessageLocalized_fr</string>
+			<key>pfm_title</key>
+			<string>Disk Space Warning Message (French)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>&lt;br&gt;&lt;br&gt;**Nota:** Su Mac solo dispone de **{diskSpaceHumanReadable}**, lo que puede impedir esta {titleMessageUpdateOrUpgrade:l} de macOS.</string>
+			<key>pfm_description</key>
+			<string>Overrides DiskSpaceWarningMessage when the resolved language is 'es'.</string>
+			<key>pfm_name</key>
+			<string>DiskSpaceWarningMessageLocalized_es</string>
+			<key>pfm_title</key>
+			<string>Disk Space Warning Message (Spanish)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>&lt;br&gt;&lt;br&gt;**Nota:** O seu Mac tem apenas **{diskSpaceHumanReadable}** livres, o que pode impedir esta {titleMessageUpdateOrUpgrade:l} do macOS.</string>
+			<key>pfm_description</key>
+			<string>Overrides DiskSpaceWarningMessage when the resolved language is 'pt'.</string>
+			<key>pfm_name</key>
+			<string>DiskSpaceWarningMessageLocalized_pt</string>
+			<key>pfm_title</key>
+			<string>Disk Space Warning Message (Portuguese)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>&lt;br&gt;&lt;br&gt;**注意:** このMacの空き容量は **{diskSpaceHumanReadable}** しかないため、このmacOS {titleMessageUpdateOrUpgrade:l}を実行できない可能性があります。</string>
+			<key>pfm_description</key>
+			<string>Overrides DiskSpaceWarningMessage when the resolved language is 'ja'.</string>
+			<key>pfm_name</key>
+			<string>DiskSpaceWarningMessageLocalized_ja</string>
+			<key>pfm_title</key>
+			<string>Disk Space Warning Message (Japanese)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
 			<string>&lt;br&gt;&lt;br&gt;**Good news!** The macOS {ddmVersionString} update has already been downloaded to your Mac and is ready to install. Installation will proceed quickly when you click **{button1text}**.</string>
 			<key>pfm_description</key>
 			<string>Markdown-formatted message displayed when the update is fully staged (downloaded and ready).</string>
@@ -475,6 +1001,78 @@
 			<string>StagedUpdateMessage</string>
 			<key>pfm_title</key>
 			<string>Staged Update Message</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>&lt;br&gt;&lt;br&gt;**Good news!** The macOS {ddmVersionString} update has already been downloaded to your Mac and is ready to install. Installation will proceed quickly when you click **{button1text}**.</string>
+			<key>pfm_description</key>
+			<string>Overrides StagedUpdateMessage when the resolved language is 'en'.</string>
+			<key>pfm_name</key>
+			<string>StagedUpdateMessageLocalized_en</string>
+			<key>pfm_title</key>
+			<string>Staged Update Message (English)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>&lt;br&gt;&lt;br&gt;**Gute Nachricht!** Das macOS-{ddmVersionString}-Update wurde bereits geladen. Die Installation startet schnell, wenn Sie **{button1text}** klicken.</string>
+			<key>pfm_description</key>
+			<string>Overrides StagedUpdateMessage when the resolved language is 'de'.</string>
+			<key>pfm_name</key>
+			<string>StagedUpdateMessageLocalized_de</string>
+			<key>pfm_title</key>
+			<string>Staged Update Message (German)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>&lt;br&gt;&lt;br&gt;**Bonne nouvelle !** La mise a jour macOS {ddmVersionString} est deja telechargee. L&apos;installation sera rapide apres clic sur **{button1text}**.</string>
+			<key>pfm_description</key>
+			<string>Overrides StagedUpdateMessage when the resolved language is 'fr'.</string>
+			<key>pfm_name</key>
+			<string>StagedUpdateMessageLocalized_fr</string>
+			<key>pfm_title</key>
+			<string>Staged Update Message (French)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>&lt;br&gt;&lt;br&gt;**¡Buenas noticias!** La actualización de macOS {ddmVersionString} ya se ha descargado en su Mac y está lista para instalarse. La instalación será más rápida cuando haga clic en **{button1text}**.</string>
+			<key>pfm_description</key>
+			<string>Overrides StagedUpdateMessage when the resolved language is 'es'.</string>
+			<key>pfm_name</key>
+			<string>StagedUpdateMessageLocalized_es</string>
+			<key>pfm_title</key>
+			<string>Staged Update Message (Spanish)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>&lt;br&gt;&lt;br&gt;**Boas notícias!** A atualização do macOS {ddmVersionString} já foi descarregada para o seu Mac e está pronta para instalar. A instalação será mais rápida quando clicar em **{button1text}**.</string>
+			<key>pfm_description</key>
+			<string>Overrides StagedUpdateMessage when the resolved language is 'pt'.</string>
+			<key>pfm_name</key>
+			<string>StagedUpdateMessageLocalized_pt</string>
+			<key>pfm_title</key>
+			<string>Staged Update Message (Portuguese)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>&lt;br&gt;&lt;br&gt;**お知らせ:** macOS {ddmVersionString} アップデートはすでにこのMacにダウンロードされており、インストールの準備ができています。**{button1text}** をクリックすると、すばやくインストールできます。</string>
+			<key>pfm_description</key>
+			<string>Overrides StagedUpdateMessage when the resolved language is 'ja'.</string>
+			<key>pfm_name</key>
+			<string>StagedUpdateMessageLocalized_ja</string>
+			<key>pfm_title</key>
+			<string>Staged Update Message (Japanese)</string>
 			<key>pfm_type</key>
 			<string>string</string>
 		</dict>
@@ -492,6 +1090,78 @@
 		</dict>
 		<dict>
 			<key>pfm_default</key>
+			<string>&lt;br&gt;&lt;br&gt;Your Mac has begun downloading and preparing required macOS update components. Installation will be quicker once all assets have finished staging.</string>
+			<key>pfm_description</key>
+			<string>Overrides PartiallyStagedUpdateMessage when the resolved language is 'en'.</string>
+			<key>pfm_name</key>
+			<string>PartiallyStagedUpdateMessageLocalized_en</string>
+			<key>pfm_title</key>
+			<string>Partially Staged Update Message (English)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>&lt;br&gt;&lt;br&gt;Ihr Mac laedt bereits erforderliche macOS-Update-Komponenten herunter und bereitet sie vor. Die Installation wird danach schneller sein.</string>
+			<key>pfm_description</key>
+			<string>Overrides PartiallyStagedUpdateMessage when the resolved language is 'de'.</string>
+			<key>pfm_name</key>
+			<string>PartiallyStagedUpdateMessageLocalized_de</string>
+			<key>pfm_title</key>
+			<string>Partially Staged Update Message (German)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>&lt;br&gt;&lt;br&gt;Votre Mac a commence a telecharger et preparer les composants requis de mise a jour macOS. L&apos;installation sera ensuite plus rapide.</string>
+			<key>pfm_description</key>
+			<string>Overrides PartiallyStagedUpdateMessage when the resolved language is 'fr'.</string>
+			<key>pfm_name</key>
+			<string>PartiallyStagedUpdateMessageLocalized_fr</string>
+			<key>pfm_title</key>
+			<string>Partially Staged Update Message (French)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>&lt;br&gt;&lt;br&gt;Su Mac ha comenzado a descargar y preparar los componentes necesarios de actualización de macOS. La instalación será más rápida cuando finalice la preparación de todos los recursos.</string>
+			<key>pfm_description</key>
+			<string>Overrides PartiallyStagedUpdateMessage when the resolved language is 'es'.</string>
+			<key>pfm_name</key>
+			<string>PartiallyStagedUpdateMessageLocalized_es</string>
+			<key>pfm_title</key>
+			<string>Partially Staged Update Message (Spanish)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>&lt;br&gt;&lt;br&gt;O seu Mac começou a descarregar e a preparar os componentes necessários da atualização do macOS. A instalação será mais rápida quando todos os recursos estiverem preparados.</string>
+			<key>pfm_description</key>
+			<string>Overrides PartiallyStagedUpdateMessage when the resolved language is 'pt'.</string>
+			<key>pfm_name</key>
+			<string>PartiallyStagedUpdateMessageLocalized_pt</string>
+			<key>pfm_title</key>
+			<string>Partially Staged Update Message (Portuguese)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>&lt;br&gt;&lt;br&gt;このMacでは、必要なmacOSアップデートコンポーネントのダウンロードと準備が進行中です。すべての項目の準備が完了すると、インストールはより短時間で完了します。</string>
+			<key>pfm_description</key>
+			<string>Overrides PartiallyStagedUpdateMessage when the resolved language is 'ja'.</string>
+			<key>pfm_name</key>
+			<string>PartiallyStagedUpdateMessageLocalized_ja</string>
+			<key>pfm_title</key>
+			<string>Partially Staged Update Message (Japanese)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
 			<string>&lt;br&gt;&lt;br&gt;Your Mac will begin downloading the update shortly.</string>
 			<key>pfm_description</key>
 			<string>Markdown-formatted message displayed when the update download is pending.</string>
@@ -499,6 +1169,78 @@
 			<string>PendingDownloadMessage</string>
 			<key>pfm_title</key>
 			<string>Pending Download Message</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>&lt;br&gt;&lt;br&gt;Your Mac will begin downloading the update shortly.</string>
+			<key>pfm_description</key>
+			<string>Overrides PendingDownloadMessage when the resolved language is 'en'.</string>
+			<key>pfm_name</key>
+			<string>PendingDownloadMessageLocalized_en</string>
+			<key>pfm_title</key>
+			<string>Pending Download Message (English)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>&lt;br&gt;&lt;br&gt;Ihr Mac beginnt in Kuerze mit dem Download des Updates.</string>
+			<key>pfm_description</key>
+			<string>Overrides PendingDownloadMessage when the resolved language is 'de'.</string>
+			<key>pfm_name</key>
+			<string>PendingDownloadMessageLocalized_de</string>
+			<key>pfm_title</key>
+			<string>Pending Download Message (German)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>&lt;br&gt;&lt;br&gt;Votre Mac commencera bientot a telecharger la mise a jour.</string>
+			<key>pfm_description</key>
+			<string>Overrides PendingDownloadMessage when the resolved language is 'fr'.</string>
+			<key>pfm_name</key>
+			<string>PendingDownloadMessageLocalized_fr</string>
+			<key>pfm_title</key>
+			<string>Pending Download Message (French)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>&lt;br&gt;&lt;br&gt;Su Mac comenzará a descargar la actualización en breve.</string>
+			<key>pfm_description</key>
+			<string>Overrides PendingDownloadMessage when the resolved language is 'es'.</string>
+			<key>pfm_name</key>
+			<string>PendingDownloadMessageLocalized_es</string>
+			<key>pfm_title</key>
+			<string>Pending Download Message (Spanish)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>&lt;br&gt;&lt;br&gt;O seu Mac irá começar a descarregar a atualização em breve.</string>
+			<key>pfm_description</key>
+			<string>Overrides PendingDownloadMessage when the resolved language is 'pt'.</string>
+			<key>pfm_name</key>
+			<string>PendingDownloadMessageLocalized_pt</string>
+			<key>pfm_title</key>
+			<string>Pending Download Message (Portuguese)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>&lt;br&gt;&lt;br&gt;このMacはまもなくアップデートのダウンロードを開始します。</string>
+			<key>pfm_description</key>
+			<string>Overrides PendingDownloadMessage when the resolved language is 'ja'.</string>
+			<key>pfm_name</key>
+			<string>PendingDownloadMessageLocalized_ja</string>
+			<key>pfm_title</key>
+			<string>Pending Download Message (Japanese)</string>
 			<key>pfm_type</key>
 			<string>string</string>
 		</dict>
@@ -528,6 +1270,78 @@
 		</dict>
 		<dict>
 			<key>pfm_default</key>
+			<string>**A required macOS {titleMessageUpdateOrUpgrade:l} is now available**&lt;br&gt;&lt;br&gt;Greetings, {loggedInUserFirstname}!&lt;br&gt;&lt;br&gt;Please {titleMessageUpdateOrUpgrade:l} to macOS **{ddmVersionString}** to ensure your Mac remains secure and compliant with organizational policies.{updateReadyMessage}&lt;br&gt;&lt;br&gt;To perform the {titleMessageUpdateOrUpgrade:l} now, click **{button1text}**, review the on-screen instructions, then click **{softwareUpdateButtonText}**.&lt;br&gt;&lt;br&gt;If you are unable to perform this {titleMessageUpdateOrUpgrade:l} now, click **{button2text}** to be reminded again later (which is disabled when the deadline is imminent).&lt;br&gt;&lt;br&gt;{deadlineEnforcementMessage}{excessiveUptimeWarningMessage}{diskSpaceWarningMessage}{supportAssistanceMessage}</string>
+			<key>pfm_description</key>
+			<string>Overrides Message when the resolved language is 'en'.</string>
+			<key>pfm_name</key>
+			<string>MessageLocalized_en</string>
+			<key>pfm_title</key>
+			<string>Dialog Message (English)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>**Ein erforderliches macOS-{titleMessageUpdateOrUpgrade:l} ist jetzt verfuegbar**&lt;br&gt;&lt;br&gt;Hallo, {loggedInUserFirstname}!&lt;br&gt;&lt;br&gt;Bitte {titleMessageUpdateOrUpgrade:l} Sie auf macOS **{ddmVersionString}**, damit Ihr Mac sicher bleibt und den organisatorischen Richtlinien entspricht.{updateReadyMessage}&lt;br&gt;&lt;br&gt;Um die {titleMessageUpdateOrUpgrade:l} jetzt durchzufuehren, klicken Sie auf **{button1text}**, folgen Sie den Anweisungen auf dem Bildschirm und klicken Sie dann auf **{softwareUpdateButtonText}**.&lt;br&gt;&lt;br&gt;Wenn Sie diese {titleMessageUpdateOrUpgrade:l} jetzt nicht durchfuehren koennen, klicken Sie auf **{button2text}**, um spaeter erneut erinnert zu werden (diese Option wird deaktiviert, wenn die Frist unmittelbar bevorsteht).&lt;br&gt;&lt;br&gt;{deadlineEnforcementMessage}{excessiveUptimeWarningMessage}{diskSpaceWarningMessage}{supportAssistanceMessage}</string>
+			<key>pfm_description</key>
+			<string>Overrides Message when the resolved language is 'de'.</string>
+			<key>pfm_name</key>
+			<string>MessageLocalized_de</string>
+			<key>pfm_title</key>
+			<string>Dialog Message (German)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>**Une {titleMessageUpdateOrUpgrade:l} macOS requise est maintenant disponible**&lt;br&gt;&lt;br&gt;Bonjour, {loggedInUserFirstname}!&lt;br&gt;&lt;br&gt;Veuillez effectuer la {titleMessageUpdateOrUpgrade:l} vers macOS **{ddmVersionString}** afin de maintenir la securite et la conformite de votre Mac aux politiques de votre organisation.{updateReadyMessage}&lt;br&gt;&lt;br&gt;Pour effectuer la {titleMessageUpdateOrUpgrade:l} maintenant, cliquez sur **{button1text}**, suivez les instructions a l&apos;ecran, puis cliquez sur **{softwareUpdateButtonText}**.&lt;br&gt;&lt;br&gt;Si vous ne pouvez pas effectuer cette {titleMessageUpdateOrUpgrade:l} maintenant, cliquez sur **{button2text}** pour recevoir un nouveau rappel plus tard (ce bouton est desactive lorsque l&apos;echeance est imminente).&lt;br&gt;&lt;br&gt;{deadlineEnforcementMessage}{excessiveUptimeWarningMessage}{diskSpaceWarningMessage}{supportAssistanceMessage}</string>
+			<key>pfm_description</key>
+			<string>Overrides Message when the resolved language is 'fr'.</string>
+			<key>pfm_name</key>
+			<string>MessageLocalized_fr</string>
+			<key>pfm_title</key>
+			<string>Dialog Message (French)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>**Ya está disponible una {titleMessageUpdateOrUpgrade:l} obligatoria de macOS**&lt;br&gt;&lt;br&gt;¡Feliz {weekday}, {loggedInUserFirstname}!&lt;br&gt;&lt;br&gt;Realice la {titleMessageUpdateOrUpgrade:l} a macOS **{ddmVersionString}** para mantener su Mac seguro y en cumplimiento con las políticas de la organización.{updateReadyMessage}&lt;br&gt;&lt;br&gt;Para realizar la {titleMessageUpdateOrUpgrade:l} ahora, haga clic en **{button1text}**, revise las instrucciones en pantalla y luego haga clic en **{softwareUpdateButtonText}**.&lt;br&gt;&lt;br&gt;Si no puede realizar esta {titleMessageUpdateOrUpgrade:l} ahora, haga clic en **{button2text}** para recibir otro recordatorio más tarde (esta opción se desactiva cuando se acerca la fecha límite).&lt;br&gt;&lt;br&gt;{deadlineEnforcementMessage}{excessiveUptimeWarningMessage}{diskSpaceWarningMessage}{supportAssistanceMessage}</string>
+			<key>pfm_description</key>
+			<string>Overrides Message when the resolved language is 'es'.</string>
+			<key>pfm_name</key>
+			<string>MessageLocalized_es</string>
+			<key>pfm_title</key>
+			<string>Dialog Message (Spanish)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>**Já está disponível uma {titleMessageUpdateOrUpgrade:l} obrigatória do macOS**&lt;br&gt;&lt;br&gt;Feliz {weekday}, {loggedInUserFirstname}!&lt;br&gt;&lt;br&gt;Efetue a {titleMessageUpdateOrUpgrade:l} para o macOS **{ddmVersionString}** para manter o seu Mac seguro e em conformidade com as políticas da organização.{updateReadyMessage}&lt;br&gt;&lt;br&gt;Para efetuar a {titleMessageUpdateOrUpgrade:l} agora, clique em **{button1text}**, siga as instruções no ecrã e depois clique em **{softwareUpdateButtonText}**.&lt;br&gt;&lt;br&gt;Se não puder efetuar esta {titleMessageUpdateOrUpgrade:l} agora, clique em **{button2text}** para receber outro lembrete mais tarde (esta opção fica desativada quando o prazo se aproxima).&lt;br&gt;&lt;br&gt;{deadlineEnforcementMessage}{excessiveUptimeWarningMessage}{diskSpaceWarningMessage}{supportAssistanceMessage}</string>
+			<key>pfm_description</key>
+			<string>Overrides Message when the resolved language is 'pt'.</string>
+			<key>pfm_name</key>
+			<string>MessageLocalized_pt</string>
+			<key>pfm_title</key>
+			<string>Dialog Message (Portuguese)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>**必須のmacOS {titleMessageUpdateOrUpgrade:l}を利用できます**&lt;br&gt;&lt;br&gt;{loggedInUserFirstname}さん、{weekday}もお疲れさまです。&lt;br&gt;&lt;br&gt;Macを安全に保ち、組織のポリシーに準拠するため、macOS **{ddmVersionString}** へ {titleMessageUpdateOrUpgrade:l}してください。{updateReadyMessage}&lt;br&gt;&lt;br&gt;今すぐ {titleMessageUpdateOrUpgrade:l} するには、**{button1text}** をクリックし、画面の案内を確認したあと **{softwareUpdateButtonText}** をクリックしてください。&lt;br&gt;&lt;br&gt;今すぐ実行できない場合は、**{button2text}** をクリックして後で再通知を受けてください（期限が近づくとこのオプションは無効になります）。&lt;br&gt;&lt;br&gt;{deadlineEnforcementMessage}{excessiveUptimeWarningMessage}{diskSpaceWarningMessage}{supportAssistanceMessage}</string>
+			<key>pfm_description</key>
+			<string>Overrides Message when the resolved language is 'ja'.</string>
+			<key>pfm_name</key>
+			<string>MessageLocalized_ja</string>
+			<key>pfm_title</key>
+			<string>Dialog Message (Japanese)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
 			<string>**Current:** macOS {installedmacOSVersion}&lt;br&gt;&lt;br&gt;**Required:** macOS {ddmVersionString}&lt;br&gt;&lt;br&gt;**Deadline:** {infoboxDeadlineDisplay}&lt;br&gt;&lt;br&gt;**Day(s) Remaining:** {infoboxDaysRemainingDisplay}&lt;br&gt;&lt;br&gt;**Last Restart:** {infoboxLastRestartDisplay}&lt;br&gt;&lt;br&gt;**Free Disk Space:** {diskSpaceHumanReadable}</string>
 			<key>pfm_description</key>
 			<string>Markdown-formatted info box content showing current and required versions and deadline.</string>
@@ -547,6 +1361,78 @@
 			<string>HelpMessage</string>
 			<key>pfm_title</key>
 			<string>Help Message</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>For assistance, please contact: **{supportTeamName}**&lt;br&gt;- **Telephone:** {supportTeamPhone}&lt;br&gt;- **Email:** {supportTeamEmail}&lt;br&gt;- **Website:** {supportTeamWebsite}&lt;br&gt;- **Knowledge Base Article:** {supportKBURL}&lt;br&gt;&lt;br&gt;**User Information:**&lt;br&gt;- **Full Name:** {userfullname}&lt;br&gt;- **User Name:** {username}&lt;br&gt;&lt;br&gt;**Computer Information:**&lt;br&gt;- **Computer Name:** {computername}&lt;br&gt;- **Serial Number:** {serialnumber}&lt;br&gt;- **macOS:** {osversion}&lt;br&gt;&lt;br&gt;**Script Information:**&lt;br&gt;- **Dialog:** {dialogVersion}&lt;br&gt;- **Script:** {scriptVersion}&lt;br&gt;</string>
+			<key>pfm_description</key>
+			<string>Overrides HelpMessage when the resolved language is 'en'.</string>
+			<key>pfm_name</key>
+			<string>HelpMessageLocalized_en</string>
+			<key>pfm_title</key>
+			<string>Help Message (English)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Bei Fragen wenden Sie sich bitte an: **{supportTeamName}**&lt;br&gt;- **Telefon:** {supportTeamPhone}&lt;br&gt;- **E-Mail:** {supportTeamEmail}&lt;br&gt;- **Webseite:** {supportTeamWebsite}&lt;br&gt;- **Knowledge-Base-Artikel:** {supportKBURL}&lt;br&gt;&lt;br&gt;**Benutzerinformationen:**&lt;br&gt;- **Vollstaendiger Name:** {userfullname}&lt;br&gt;- **Benutzername:** {username}&lt;br&gt;&lt;br&gt;**Computerinformationen:**&lt;br&gt;- **Computername:** {computername}&lt;br&gt;- **Seriennummer:** {serialnumber}&lt;br&gt;- **macOS:** {osversion}&lt;br&gt;&lt;br&gt;**Skriptinformationen:**&lt;br&gt;- **Dialog:** {dialogVersion}&lt;br&gt;- **Skript:** {scriptVersion}&lt;br&gt;</string>
+			<key>pfm_description</key>
+			<string>Overrides HelpMessage when the resolved language is 'de'.</string>
+			<key>pfm_name</key>
+			<string>HelpMessageLocalized_de</string>
+			<key>pfm_title</key>
+			<string>Help Message (German)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Pour obtenir de l&apos;aide, veuillez contacter : **{supportTeamName}**&lt;br&gt;- **Telephone :** {supportTeamPhone}&lt;br&gt;- **E-mail :** {supportTeamEmail}&lt;br&gt;- **Site web :** {supportTeamWebsite}&lt;br&gt;- **Article de la base de connaissances :** {supportKBURL}&lt;br&gt;&lt;br&gt;**Informations utilisateur :**&lt;br&gt;- **Nom complet :** {userfullname}&lt;br&gt;- **Nom d&apos;utilisateur :** {username}&lt;br&gt;&lt;br&gt;**Informations de l&apos;ordinateur :**&lt;br&gt;- **Nom de l&apos;ordinateur :** {computername}&lt;br&gt;- **Numero de serie :** {serialnumber}&lt;br&gt;- **macOS :** {osversion}&lt;br&gt;&lt;br&gt;**Informations du script :**&lt;br&gt;- **Dialog :** {dialogVersion}&lt;br&gt;- **Script :** {scriptVersion}&lt;br&gt;</string>
+			<key>pfm_description</key>
+			<string>Overrides HelpMessage when the resolved language is 'fr'.</string>
+			<key>pfm_name</key>
+			<string>HelpMessageLocalized_fr</string>
+			<key>pfm_title</key>
+			<string>Help Message (French)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Para obtener ayuda, contacte con: **{supportTeamName}**&lt;br&gt;- **Teléfono:** {supportTeamPhone}&lt;br&gt;- **Correo electrónico:** {supportTeamEmail}&lt;br&gt;- **Sitio web:** {supportTeamWebsite}&lt;br&gt;- **Artículo de la base de conocimiento:** {supportKBURL}&lt;br&gt;&lt;br&gt;**Información del usuario:**&lt;br&gt;- **Nombre completo:** {userfullname}&lt;br&gt;- **Nombre de usuario:** {username}&lt;br&gt;&lt;br&gt;**Información del ordenador:**&lt;br&gt;- **Nombre del ordenador:** {computername}&lt;br&gt;- **Número de serie:** {serialnumber}&lt;br&gt;- **macOS:** {osversion}&lt;br&gt;&lt;br&gt;**Información del script:**&lt;br&gt;- **Dialog:** {dialogVersion}&lt;br&gt;- **Script:** {scriptVersion}&lt;br&gt;</string>
+			<key>pfm_description</key>
+			<string>Overrides HelpMessage when the resolved language is 'es'.</string>
+			<key>pfm_name</key>
+			<string>HelpMessageLocalized_es</string>
+			<key>pfm_title</key>
+			<string>Help Message (Spanish)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Para obter assistência, contacte: **{supportTeamName}**&lt;br&gt;- **Telefone:** {supportTeamPhone}&lt;br&gt;- **Email:** {supportTeamEmail}&lt;br&gt;- **Site web:** {supportTeamWebsite}&lt;br&gt;- **Artigo da base de conhecimento:** {supportKBURL}&lt;br&gt;&lt;br&gt;**Informações do utilizador:**&lt;br&gt;- **Nome completo:** {userfullname}&lt;br&gt;- **Nome de utilizador:** {username}&lt;br&gt;&lt;br&gt;**Informações do computador:**&lt;br&gt;- **Nome do computador:** {computername}&lt;br&gt;- **Número de série:** {serialnumber}&lt;br&gt;- **macOS:** {osversion}&lt;br&gt;&lt;br&gt;**Informações do script:**&lt;br&gt;- **Dialog:** {dialogVersion}&lt;br&gt;- **Script:** {scriptVersion}&lt;br&gt;</string>
+			<key>pfm_description</key>
+			<string>Overrides HelpMessage when the resolved language is 'pt'.</string>
+			<key>pfm_name</key>
+			<string>HelpMessageLocalized_pt</string>
+			<key>pfm_title</key>
+			<string>Help Message (Portuguese)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>サポートが必要な場合は次までご連絡ください: **{supportTeamName}**&lt;br&gt;- **電話:** {supportTeamPhone}&lt;br&gt;- **メール:** {supportTeamEmail}&lt;br&gt;- **Webサイト:** {supportTeamWebsite}&lt;br&gt;- **ナレッジベース記事:** {supportKBURL}&lt;br&gt;&lt;br&gt;**ユーザー情報:**&lt;br&gt;- **氏名:** {userfullname}&lt;br&gt;- **ユーザー名:** {username}&lt;br&gt;&lt;br&gt;**コンピュータ情報:**&lt;br&gt;- **コンピュータ名:** {computername}&lt;br&gt;- **シリアル番号:** {serialnumber}&lt;br&gt;- **macOS:** {osversion}&lt;br&gt;&lt;br&gt;**スクリプト情報:**&lt;br&gt;- **Dialog:** {dialogVersion}&lt;br&gt;- **Script:** {scriptVersion}&lt;br&gt;</string>
+			<key>pfm_description</key>
+			<string>Overrides HelpMessage when the resolved language is 'ja'.</string>
+			<key>pfm_name</key>
+			<string>HelpMessageLocalized_ja</string>
+			<key>pfm_title</key>
+			<string>Help Message (Japanese)</string>
 			<key>pfm_type</key>
 			<string>string</string>
 		</dict>
@@ -572,6 +1458,6 @@
 	<key>pfm_unique</key>
 	<false/>
 	<key>pfm_version</key>
-	<integer>3</integer>
+	<integer>4</integer>
 </dict>
 </plist>
