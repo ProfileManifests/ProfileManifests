@@ -11,9 +11,9 @@
 	<key>pfm_format_version</key>
 	<integer>1</integer>
 	<key>pfm_interaction</key>
-	<string>exlusive</string>
+	<string>exclusive</string>
 	<key>pfm_last_modified</key>
-	<date>2023-08-15T08:00:00Z</date>
+	<date>2026-05-03T00:58:27Z</date>
 	<key>pfm_macos_min</key>
 	<string>12.0</string>
 	<key>pfm_platforms</key>
@@ -224,6 +224,6 @@ The payload organization for a payload need not match the payload organization i
 	<key>pfm_unique</key>
 	<true/>
 	<key>pfm_version</key>
-	<integer>1</integer>
+	<integer>2</integer>
 </dict>
 </plist>
