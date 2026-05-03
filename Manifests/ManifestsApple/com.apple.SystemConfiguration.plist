@@ -13,7 +13,7 @@
 	<key>pfm_interaction</key>
 	<string>exclusive</string>
 	<key>pfm_last_modified</key>
-	<date>2025-09-17T09:38:09Z</date>
+	<date>2026-05-02T00:00:00Z</date>
 	<key>pfm_macos_min</key>
 	<string>10.7</string>
 	<key>pfm_platforms</key>
@@ -478,7 +478,7 @@ For managed devices, if not supplied, the default is '0'.</string>
 				</dict>
 				<dict>
 					<key>pfm_default</key>
-					<false/>
+					<integer>0</integer>
 					<key>pfm_description</key>
 					<string>If 1, allows client to log into captive portal network.</string>
 					<key>pfm_macos_min</key>
@@ -516,6 +516,6 @@ For managed devices, if not supplied, the default is '0'.</string>
 	<key>pfm_unique</key>
 	<false/>
 	<key>pfm_version</key>
-	<integer>4</integer>
+	<integer>5</integer>
 </dict>
 </plist>
