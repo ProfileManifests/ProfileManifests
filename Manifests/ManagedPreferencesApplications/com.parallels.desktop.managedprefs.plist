@@ -121,7 +121,7 @@
 	<key>pfm_interaction</key>
 	<string>exclusive</string>
 	<key>pfm_last_modified</key>
-	<date>2026-03-09T10:00:00Z</date>
+	<date>2026-05-02T00:00:00Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -403,6 +403,6 @@ During a profile replacement, the system updates payloads with the same `Payload
 	<key>pfm_unique</key>
 	<true/>
 	<key>pfm_version</key>
-	<integer>3</integer>
+	<integer>4</integer>
 </dict>
 </plist>
