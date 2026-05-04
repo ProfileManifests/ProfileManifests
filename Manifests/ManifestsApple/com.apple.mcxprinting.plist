@@ -442,6 +442,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 	<key>pfm_unique</key>
 	<false/>
 	<key>pfm_version</key>
-	<integer>2</integer>
+	<integer>1</integer>
 </dict>
 </plist>
