@@ -955,9 +955,9 @@
 		<key>com.parallels.desktop.managedprefs</key>
 		<dict>
 			<key>modified</key>
-			<date>2026-03-09T10:00:00Z</date>
+			<date>2026-05-02T00:00:00Z</date>
 			<key>path</key>
-			<string>Manifests/ManagedPreferencesApplications/com.parallels.dektop.managedprefs.plist</string>
+			<string>Manifests/ManagedPreferencesApplications/com.parallels.desktop.managedprefs.plist</string>
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
@@ -2463,6 +2463,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2026-05-04T09:41:29Z</date>
+	<date>2026-05-04T09:44:57Z</date>
 </dict>
 </plist>
