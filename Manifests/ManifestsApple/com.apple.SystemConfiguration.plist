@@ -516,6 +516,6 @@ For managed devices, if not supplied, the default is '0'.</string>
 	<key>pfm_unique</key>
 	<false/>
 	<key>pfm_version</key>
-	<integer>5</integer>
+	<integer>4</integer>
 </dict>
 </plist>
