@@ -11,9 +11,9 @@
 	<key>pfm_format_version</key>
 	<integer>1</integer>
 	<key>pfm_interaction</key>
-	<string>exlusive</string>
+	<string>exclusive</string>
 	<key>pfm_last_modified</key>
-	<date>2025-08-04T08:25:08Z</date>
+	<date>2026-05-03T00:58:27Z</date>
 	<key>pfm_macos_min</key>
 	<string>12.0</string>
 	<key>pfm_platforms</key>
