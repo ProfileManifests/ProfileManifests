@@ -489,12 +489,42 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		<dict>
 			<key>pfm_app_min</key>
 			<string>7.1</string>
+			<key>pfm_conditionals</key>
+			<array>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_contains_any</key>
+							<array>
+								<true/>
+							</array>
+							<key>pfm_target</key>
+							<string>MSCOfferToQuitBlockingApps</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
 			<string>If this (and MSCOfferToQuitBlockingApps) is true, if a "polite" attempt to quit an application fails, a button to force quit the application will be displayed.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://github.com/munki/munki/wiki/Munki-7.1-Assisted-App-Quit</string>
+			<key>pfm_exclude</key>
+			<array>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_present</key>
+							<false/>
+							<key>pfm_target</key>
+							<string>MSCOfferToQuitBlockingApps</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
 			<key>pfm_name</key>
 			<string>MSCOfferToForceQuitBlockingApps</string>
 			<key>pfm_title</key>
@@ -505,12 +535,42 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		<dict>
 			<key>pfm_app_min</key>
 			<string>7.1</string>
+			<key>pfm_conditionals</key>
+			<array>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_contains_any</key>
+							<array>
+								<true/>
+							</array>
+							<key>pfm_target</key>
+							<string>MSCOfferToQuitBlockingApps</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
 			<string>If there is a mix of pending updates, some of which are blocked by open applications, and some that are not, and this preference is true (and so is MSCOfferToQuitBlockingApps), a button will be shown to allow users to proceed with updating the non-blocked updates.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://github.com/munki/munki/wiki/Munki-7.1-Assisted-App-Quit</string>
+			<key>pfm_exclude</key>
+			<array>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_present</key>
+							<false/>
+							<key>pfm_target</key>
+							<string>MSCOfferToQuitBlockingApps</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
 			<key>pfm_name</key>
 			<string>MSCOfferToUpdateOthers</string>
 			<key>pfm_title</key>
@@ -612,12 +672,40 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		<dict>
 			<key>pfm_app_min</key>
 			<string>7.1</string>
+			<key>pfm_conditionals</key>
+			<array>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_range_min</key>
+							<integer>1</integer>
+							<key>pfm_target</key>
+							<string>DownloadRetries</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
 			<key>pfm_default</key>
 			<integer>10</integer>
 			<key>pfm_description</key>
 			<string>How many seconds to wait between download retries. Valid values are 1-30.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://github.com/munki/munki/wiki/Munki-7.1-download-retries</string>
+			<key>pfm_exclude</key>
+			<array>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_present</key>
+							<false/>
+							<key>pfm_target</key>
+							<string>DownloadRetries</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
 			<key>pfm_name</key>
 			<string>DownloadRetrySleepSeconds</string>
 			<key>pfm_range_max</key>
