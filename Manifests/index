@@ -973,7 +973,7 @@
 		<key>com.secondsonconsulting.baseline</key>
 		<dict>
 			<key>modified</key>
-			<date>2026-04-07T00:00:00Z</date>
+			<date>2026-05-02T00:00:00Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.secondsonconsulting.baseline.plist</string>
 			<key>version</key>
@@ -2463,6 +2463,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2026-05-04T12:09:53Z</date>
+	<date>2026-05-06T09:57:06Z</date>
 </dict>
 </plist>
