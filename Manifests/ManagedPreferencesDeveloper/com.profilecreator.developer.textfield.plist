@@ -224,7 +224,7 @@
 			</dict>
 			<dict>
 				<key>pfm_default</key>
-				<string>AA:BB:CC:DD:11:22</string>
+				<string>AA:BB:CC:DD:11:22deletethis</string>
 				<key>pfm_description</key>
 				<string>TextField with a required format of a MAC address: ^([0-9A-Fa-f]{2}:){5}([0-9A-Fa-f]{2})$</string>
 				<key>pfm_enabled</key>
@@ -263,6 +263,6 @@
 		<key>pfm_unique</key>
 		<true/>
 		<key>pfm_version</key>
-		<integer>2</integer>
+		<integer>1</integer>
 	</dict>
 </plist>
