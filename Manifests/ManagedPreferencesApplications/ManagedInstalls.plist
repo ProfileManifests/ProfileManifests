@@ -492,10 +492,12 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_conditionals</key>
 			<array>
 				<dict>
+					<key>pfm_require</key>
+					<string>always</string>
 					<key>pfm_target_conditions</key>
 					<array>
 						<dict>
-							<key>pfm_contains_any</key>
+							<key>pfm_range_list</key>
 							<array>
 								<true/>
 							</array>
@@ -517,8 +519,10 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<key>pfm_target_conditions</key>
 					<array>
 						<dict>
-							<key>pfm_present</key>
-							<false/>
+							<key>pfm_range_list</key>
+							<array>
+								<false/>
+							</array>
 							<key>pfm_target</key>
 							<string>MSCOfferToQuitBlockingApps</string>
 						</dict>
@@ -538,10 +542,12 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_conditionals</key>
 			<array>
 				<dict>
+					<key>pfm_require</key>
+					<string>always</string>
 					<key>pfm_target_conditions</key>
 					<array>
 						<dict>
-							<key>pfm_contains_any</key>
+							<key>pfm_range_list</key>
 							<array>
 								<true/>
 							</array>
@@ -563,8 +569,10 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<key>pfm_target_conditions</key>
 					<array>
 						<dict>
-							<key>pfm_present</key>
-							<false/>
+							<key>pfm_range_list</key>
+							<array>
+								<false/>
+							</array>
 							<key>pfm_target</key>
 							<string>MSCOfferToQuitBlockingApps</string>
 						</dict>
@@ -675,11 +683,15 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_conditionals</key>
 			<array>
 				<dict>
+					<key>pfm_require</key>
+					<string>always</string>
 					<key>pfm_target_conditions</key>
 					<array>
 						<dict>
-							<key>pfm_range_min</key>
-							<integer>1</integer>
+							<key>pfm_n_range_list</key>
+							<array>
+								<integer>0</integer>
+							</array>
 							<key>pfm_target</key>
 							<string>DownloadRetries</string>
 						</dict>
@@ -698,8 +710,10 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<key>pfm_target_conditions</key>
 					<array>
 						<dict>
-							<key>pfm_present</key>
-							<false/>
+							<key>pfm_range_list</key>
+							<array>
+								<integer>0</integer>
+							</array>
 							<key>pfm_target</key>
 							<string>DownloadRetries</string>
 						</dict>
