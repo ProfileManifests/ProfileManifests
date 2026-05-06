@@ -13,7 +13,7 @@
 	<key>pfm_format_version</key>
 	<integer>1</integer>
 	<key>pfm_last_modified</key>
-	<date>2026-03-03T00:00:00Z</date>
+	<date>2026-04-30T00:00:00Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -302,7 +302,7 @@
 			<key>pfm_default</key>
 			<string>IT Support</string>
 			<key>pfm_description</key>
-			<string>Display name of the support team.</string>
+			<string>Display name of the support team shown in the dialog and help message.</string>
 			<key>pfm_name</key>
 			<string>SupportTeamName</string>
 			<key>pfm_title</key>
@@ -324,6 +324,18 @@
 		</dict>
 		<dict>
 			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>When enabled, hide the support phone row and blank the corresponding placeholder.</string>
+			<key>pfm_name</key>
+			<string>HideSupportTeamPhone</string>
+			<key>pfm_title</key>
+			<string>Hide Support Team Phone</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
 			<string>rescue@domain.org</string>
 			<key>pfm_description</key>
 			<string>Email address for support.</string>
@@ -333,6 +345,18 @@
 			<string>Support Team Email</string>
 			<key>pfm_type</key>
 			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>When enabled, hide the support email row and blank the corresponding placeholder.</string>
+			<key>pfm_name</key>
+			<string>HideSupportTeamEmail</string>
+			<key>pfm_title</key>
+			<string>Hide Support Team Email</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
 		</dict>
 		<dict>
 			<key>pfm_default</key>
@@ -348,15 +372,39 @@
 		</dict>
 		<dict>
 			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>When enabled, hide the support website row and blank the corresponding placeholder.</string>
+			<key>pfm_name</key>
+			<string>HideSupportTeamWebsite</string>
+			<key>pfm_title</key>
+			<string>Hide Support Team Website</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
 			<string>Update macOS on Mac</string>
 			<key>pfm_description</key>
-			<string>Knowledge base article identifier.</string>
+			<string>Display text for the support knowledge base article link.</string>
 			<key>pfm_name</key>
 			<string>SupportKB</string>
 			<key>pfm_title</key>
 			<string>Support KB Identifier</string>
 			<key>pfm_type</key>
 			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>When enabled, hide the support knowledge base row and blank the corresponding placeholders.</string>
+			<key>pfm_name</key>
+			<string>HideSupportKB</string>
+			<key>pfm_title</key>
+			<string>Hide Support KB</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
 		</dict>
 		<dict>
 			<key>pfm_default</key>
@@ -384,13 +432,145 @@
 		</dict>
 		<dict>
 			<key>pfm_default</key>
-			<string>&lt;br&gt;&lt;br&gt;For assistance, please contact **{supportTeamName}** by clicking the (?) button in the bottom right-hand corner.</string>
+			<string>&lt;br&gt;&lt;br&gt;For assistance, please contact **{supportTeamName}** by clicking the (?) button in the bottom, right-hand corner.</string>
 			<key>pfm_description</key>
-			<string>Optional support sentence appended to message body.</string>
+			<string>Optional support sentence appended to the dialog message body.</string>
 			<key>pfm_name</key>
 			<string>SupportAssistanceMessage</string>
 			<key>pfm_title</key>
 			<string>Support Assistance Message</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>When enabled, suppress the support assistance sentence in the main dialog body.</string>
+			<key>pfm_name</key>
+			<string>HideSupportAssistanceMessage</string>
+			<key>pfm_title</key>
+			<string>Hide Support Assistance Message</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>&lt;br&gt;&lt;br&gt;For assistance, please contact **{supportTeamName}** by clicking the (?) button in the bottom, right-hand corner.</string>
+			<key>pfm_description</key>
+			<string>Localized support assistance message for English.</string>
+			<key>pfm_name</key>
+			<string>SupportAssistanceMessageLocalized_en</string>
+			<key>pfm_title</key>
+			<string>Support Assistance Message (English)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>&lt;br&gt;&lt;br&gt;Bei Fragen kontaktiere **{supportTeamName}** über die (?) Schaltfläche unten rechts.</string>
+			<key>pfm_description</key>
+			<string>Localized support assistance message for German.</string>
+			<key>pfm_name</key>
+			<string>SupportAssistanceMessageLocalized_de</string>
+			<key>pfm_title</key>
+			<string>Support Assistance Message (German)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>&lt;br&gt;&lt;br&gt;Pour obtenir de l&apos;aide, contactez **{supportTeamName}** via le bouton (?) en bas à droite.</string>
+			<key>pfm_description</key>
+			<string>Localized support assistance message for French.</string>
+			<key>pfm_name</key>
+			<string>SupportAssistanceMessageLocalized_fr</string>
+			<key>pfm_title</key>
+			<string>Support Assistance Message (French)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>&lt;br&gt;&lt;br&gt;Para obtener ayuda, contacte con **{supportTeamName}** haciendo clic en el botón (?) de la esquina inferior derecha.</string>
+			<key>pfm_description</key>
+			<string>Localized support assistance message for Spanish.</string>
+			<key>pfm_name</key>
+			<string>SupportAssistanceMessageLocalized_es</string>
+			<key>pfm_title</key>
+			<string>Support Assistance Message (Spanish)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>&lt;br&gt;&lt;br&gt;Per assistenza, contatta **{supportTeamName}** facendo clic sul pulsante (?) nell&apos;angolo in basso a destra.</string>
+			<key>pfm_description</key>
+			<string>Localized support assistance message for Italian.</string>
+			<key>pfm_name</key>
+			<string>SupportAssistanceMessageLocalized_it</string>
+			<key>pfm_title</key>
+			<string>Support Assistance Message (Italian)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>&lt;br&gt;&lt;br&gt;Voor hulp kunt u contact opnemen met **{supportTeamName}** door op de (?) knop rechtsonder in de hoek te klikken.</string>
+			<key>pfm_description</key>
+			<string>Localized support assistance message for Dutch.</string>
+			<key>pfm_name</key>
+			<string>SupportAssistanceMessageLocalized_nl</string>
+			<key>pfm_title</key>
+			<string>Support Assistance Message (Dutch)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>&lt;br&gt;&lt;br&gt;Para obter assistência, contacte a equipa **{supportTeamName}** clicando no botão (?) no canto inferior direito.</string>
+			<key>pfm_description</key>
+			<string>Localized support assistance message for Portuguese.</string>
+			<key>pfm_name</key>
+			<string>SupportAssistanceMessageLocalized_pt</string>
+			<key>pfm_title</key>
+			<string>Support Assistance Message (Portuguese)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>&lt;br&gt;&lt;br&gt;サポートが必要な場合は、右下の (?) ボタンをクリックして **{supportTeamName}** にお問い合わせください。</string>
+			<key>pfm_description</key>
+			<string>Localized support assistance message for Japanese.</string>
+			<key>pfm_name</key>
+			<string>SupportAssistanceMessageLocalized_ja</string>
+			<key>pfm_title</key>
+			<string>Support Assistance Message (Japanese)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>auto</string>
+			<key>pfm_description</key>
+			<string>Language code to force for dialog content. Use auto to detect the logged-in user language.</string>
+			<key>pfm_name</key>
+			<string>LanguageOverride</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>auto</string>
+				<string>en</string>
+				<string>de</string>
+				<string>fr</string>
+				<string>es</string>
+				<string>it</string>
+				<string>nl</string>
+				<string>pt</string>
+				<string>ja</string>
+			</array>
+			<key>pfm_title</key>
+			<string>Language Override</string>
 			<key>pfm_type</key>
 			<string>string</string>
 		</dict>
@@ -408,6 +588,102 @@
 		</dict>
 		<dict>
 			<key>pfm_default</key>
+			<string>macOS {titleMessageUpdateOrUpgrade} Required</string>
+			<key>pfm_description</key>
+			<string>Localized title text displayed at the top of the ddm dialog. for English.</string>
+			<key>pfm_name</key>
+			<string>TitleLocalized_en</string>
+			<key>pfm_title</key>
+			<string>Dialog Title (English)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>macOS {titleMessageUpdateOrUpgrade} erforderlich</string>
+			<key>pfm_description</key>
+			<string>Localized title text displayed at the top of the ddm dialog. for German.</string>
+			<key>pfm_name</key>
+			<string>TitleLocalized_de</string>
+			<key>pfm_title</key>
+			<string>Dialog Title (German)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>{titleMessageUpdateOrUpgrade} macOS obligatoire</string>
+			<key>pfm_description</key>
+			<string>Localized title text displayed at the top of the ddm dialog. for French.</string>
+			<key>pfm_name</key>
+			<string>TitleLocalized_fr</string>
+			<key>pfm_title</key>
+			<string>Dialog Title (French)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>{titleMessageUpdateOrUpgrade} obligatoria de macOS</string>
+			<key>pfm_description</key>
+			<string>Localized title text displayed at the top of the ddm dialog. for Spanish.</string>
+			<key>pfm_name</key>
+			<string>TitleLocalized_es</string>
+			<key>pfm_title</key>
+			<string>Dialog Title (Spanish)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>{titleMessageUpdateOrUpgrade} di macOS richiesto</string>
+			<key>pfm_description</key>
+			<string>Localized title text displayed at the top of the ddm dialog. for Italian.</string>
+			<key>pfm_name</key>
+			<string>TitleLocalized_it</string>
+			<key>pfm_title</key>
+			<string>Dialog Title (Italian)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>macOS {titleMessageUpdateOrUpgrade} vereist</string>
+			<key>pfm_description</key>
+			<string>Localized title text displayed at the top of the ddm dialog. for Dutch.</string>
+			<key>pfm_name</key>
+			<string>TitleLocalized_nl</string>
+			<key>pfm_title</key>
+			<string>Dialog Title (Dutch)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>{titleMessageUpdateOrUpgrade} obrigatória do macOS</string>
+			<key>pfm_description</key>
+			<string>Localized title text displayed at the top of the ddm dialog. for Portuguese.</string>
+			<key>pfm_name</key>
+			<string>TitleLocalized_pt</string>
+			<key>pfm_title</key>
+			<string>Dialog Title (Portuguese)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>macOSの{titleMessageUpdateOrUpgrade}が必要です</string>
+			<key>pfm_description</key>
+			<string>Localized title text displayed at the top of the ddm dialog. for Japanese.</string>
+			<key>pfm_name</key>
+			<string>TitleLocalized_ja</string>
+			<key>pfm_title</key>
+			<string>Dialog Title (Japanese)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
 			<string>Open Software Update</string>
 			<key>pfm_description</key>
 			<string>Label for the primary action button.</string>
@@ -415,6 +691,102 @@
 			<string>Button1Text</string>
 			<key>pfm_title</key>
 			<string>Primary Button Text</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Open Software Update</string>
+			<key>pfm_description</key>
+			<string>Localized label for the primary action button. for English.</string>
+			<key>pfm_name</key>
+			<string>Button1TextLocalized_en</string>
+			<key>pfm_title</key>
+			<string>Primary Button Text (English)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Softwareupdate öffnen</string>
+			<key>pfm_description</key>
+			<string>Localized label for the primary action button. for German.</string>
+			<key>pfm_name</key>
+			<string>Button1TextLocalized_de</string>
+			<key>pfm_title</key>
+			<string>Primary Button Text (German)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Ouvrir Mise à jour de logiciels</string>
+			<key>pfm_description</key>
+			<string>Localized label for the primary action button. for French.</string>
+			<key>pfm_name</key>
+			<string>Button1TextLocalized_fr</string>
+			<key>pfm_title</key>
+			<string>Primary Button Text (French)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Abrir Actualización de software</string>
+			<key>pfm_description</key>
+			<string>Localized label for the primary action button. for Spanish.</string>
+			<key>pfm_name</key>
+			<string>Button1TextLocalized_es</string>
+			<key>pfm_title</key>
+			<string>Primary Button Text (Spanish)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Apri Aggiornamento Software</string>
+			<key>pfm_description</key>
+			<string>Localized label for the primary action button. for Italian.</string>
+			<key>pfm_name</key>
+			<string>Button1TextLocalized_it</string>
+			<key>pfm_title</key>
+			<string>Primary Button Text (Italian)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Open Software-update</string>
+			<key>pfm_description</key>
+			<string>Localized label for the primary action button. for Dutch.</string>
+			<key>pfm_name</key>
+			<string>Button1TextLocalized_nl</string>
+			<key>pfm_title</key>
+			<string>Primary Button Text (Dutch)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Abrir Atualização de software</string>
+			<key>pfm_description</key>
+			<string>Localized label for the primary action button. for Portuguese.</string>
+			<key>pfm_name</key>
+			<string>Button1TextLocalized_pt</string>
+			<key>pfm_title</key>
+			<string>Primary Button Text (Portuguese)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>ソフトウェア・アップデートを開く</string>
+			<key>pfm_description</key>
+			<string>Localized label for the primary action button. for Japanese.</string>
+			<key>pfm_name</key>
+			<string>Button1TextLocalized_ja</string>
+			<key>pfm_title</key>
+			<string>Primary Button Text (Japanese)</string>
 			<key>pfm_type</key>
 			<string>string</string>
 		</dict>
@@ -432,6 +804,102 @@
 		</dict>
 		<dict>
 			<key>pfm_default</key>
+			<string>Remind Me Later</string>
+			<key>pfm_description</key>
+			<string>Localized label for the secondary (remind later) button. for English.</string>
+			<key>pfm_name</key>
+			<string>Button2TextLocalized_en</string>
+			<key>pfm_title</key>
+			<string>Secondary Button Text (English)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Später erinnern</string>
+			<key>pfm_description</key>
+			<string>Localized label for the secondary (remind later) button. for German.</string>
+			<key>pfm_name</key>
+			<string>Button2TextLocalized_de</string>
+			<key>pfm_title</key>
+			<string>Secondary Button Text (German)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Me rappeler plus tard</string>
+			<key>pfm_description</key>
+			<string>Localized label for the secondary (remind later) button. for French.</string>
+			<key>pfm_name</key>
+			<string>Button2TextLocalized_fr</string>
+			<key>pfm_title</key>
+			<string>Secondary Button Text (French)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Recordármelo más tarde</string>
+			<key>pfm_description</key>
+			<string>Localized label for the secondary (remind later) button. for Spanish.</string>
+			<key>pfm_name</key>
+			<string>Button2TextLocalized_es</string>
+			<key>pfm_title</key>
+			<string>Secondary Button Text (Spanish)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Ricordamelo più tardi</string>
+			<key>pfm_description</key>
+			<string>Localized label for the secondary (remind later) button. for Italian.</string>
+			<key>pfm_name</key>
+			<string>Button2TextLocalized_it</string>
+			<key>pfm_title</key>
+			<string>Secondary Button Text (Italian)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Herinner me later</string>
+			<key>pfm_description</key>
+			<string>Localized label for the secondary (remind later) button. for Dutch.</string>
+			<key>pfm_name</key>
+			<string>Button2TextLocalized_nl</string>
+			<key>pfm_title</key>
+			<string>Secondary Button Text (Dutch)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Lembrar-me mais tarde</string>
+			<key>pfm_description</key>
+			<string>Localized label for the secondary (remind later) button. for Portuguese.</string>
+			<key>pfm_name</key>
+			<string>Button2TextLocalized_pt</string>
+			<key>pfm_title</key>
+			<string>Secondary Button Text (Portuguese)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>後で通知</string>
+			<key>pfm_description</key>
+			<string>Localized label for the secondary (remind later) button. for Japanese.</string>
+			<key>pfm_name</key>
+			<string>Button2TextLocalized_ja</string>
+			<key>pfm_title</key>
+			<string>Secondary Button Text (Japanese)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
 			<string>Update macOS on Mac</string>
 			<key>pfm_description</key>
 			<string>Label for the info button.</string>
@@ -444,9 +912,105 @@
 		</dict>
 		<dict>
 			<key>pfm_default</key>
+			<string>Update macOS on Mac</string>
+			<key>pfm_description</key>
+			<string>Localized label for the info button. for English.</string>
+			<key>pfm_name</key>
+			<string>InfoButtonTextLocalized_en</string>
+			<key>pfm_title</key>
+			<string>Info Button Text (English)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>macOS auf dem Mac aktualisieren</string>
+			<key>pfm_description</key>
+			<string>Localized label for the info button. for German.</string>
+			<key>pfm_name</key>
+			<string>InfoButtonTextLocalized_de</string>
+			<key>pfm_title</key>
+			<string>Info Button Text (German)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Mettre à jour macOS sur Mac</string>
+			<key>pfm_description</key>
+			<string>Localized label for the info button. for French.</string>
+			<key>pfm_name</key>
+			<string>InfoButtonTextLocalized_fr</string>
+			<key>pfm_title</key>
+			<string>Info Button Text (French)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Actualizar macOS en el Mac</string>
+			<key>pfm_description</key>
+			<string>Localized label for the info button. for Spanish.</string>
+			<key>pfm_name</key>
+			<string>InfoButtonTextLocalized_es</string>
+			<key>pfm_title</key>
+			<string>Info Button Text (Spanish)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Aggiorna macOS su Mac</string>
+			<key>pfm_description</key>
+			<string>Localized label for the info button. for Italian.</string>
+			<key>pfm_name</key>
+			<string>InfoButtonTextLocalized_it</string>
+			<key>pfm_title</key>
+			<string>Info Button Text (Italian)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Werk macOS bij op Mac</string>
+			<key>pfm_description</key>
+			<string>Localized label for the info button. for Dutch.</string>
+			<key>pfm_name</key>
+			<string>InfoButtonTextLocalized_nl</string>
+			<key>pfm_title</key>
+			<string>Info Button Text (Dutch)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Atualizar macOS no Mac</string>
+			<key>pfm_description</key>
+			<string>Localized label for the info button. for Portuguese.</string>
+			<key>pfm_name</key>
+			<string>InfoButtonTextLocalized_pt</string>
+			<key>pfm_title</key>
+			<string>Info Button Text (Portuguese)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>MacでmacOSをアップデート</string>
+			<key>pfm_description</key>
+			<string>Localized label for the info button. for Japanese.</string>
+			<key>pfm_name</key>
+			<string>InfoButtonTextLocalized_ja</string>
+			<key>pfm_title</key>
+			<string>Info Button Text (Japanese)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
 			<string>&lt;br&gt;&lt;br&gt;**Note:** Your Mac has been powered-on for **{uptimeHumanReadable}**. For more reliable results, please manually restart your Mac before proceeding.</string>
 			<key>pfm_description</key>
-			<string>Markdown-formatted text displayed in the dialog.</string>
+			<string>Markdown-formatted warning shown when system uptime exceeds the configured threshold.</string>
 			<key>pfm_name</key>
 			<string>ExcessiveUptimeWarningMessage</string>
 			<key>pfm_title</key>
@@ -456,9 +1020,105 @@
 		</dict>
 		<dict>
 			<key>pfm_default</key>
+			<string>&lt;br&gt;&lt;br&gt;**Note:** Your Mac has been powered-on for **{uptimeHumanReadable}**. For more reliable results, please manually restart your Mac before proceeding.</string>
+			<key>pfm_description</key>
+			<string>Localized markdown-formatted warning shown when system uptime exceeds the configured threshold. for English.</string>
+			<key>pfm_name</key>
+			<string>ExcessiveUptimeWarningMessageLocalized_en</string>
+			<key>pfm_title</key>
+			<string>Excessive Uptime Warning Message (English)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>&lt;br&gt;&lt;br&gt;**Hinweis:** Dein Mac läuft seit **{uptimeHumanReadable}**. Starte ihn für zuverlässigere Ergebnisse bitte manuell neu.</string>
+			<key>pfm_description</key>
+			<string>Localized markdown-formatted warning shown when system uptime exceeds the configured threshold. for German.</string>
+			<key>pfm_name</key>
+			<string>ExcessiveUptimeWarningMessageLocalized_de</string>
+			<key>pfm_title</key>
+			<string>Excessive Uptime Warning Message (German)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>&lt;br&gt;&lt;br&gt;**Note :** Votre Mac est allumé depuis **{uptimeHumanReadable}**. Redémarrez-le manuellement pour de meilleurs résultats.</string>
+			<key>pfm_description</key>
+			<string>Localized markdown-formatted warning shown when system uptime exceeds the configured threshold. for French.</string>
+			<key>pfm_name</key>
+			<string>ExcessiveUptimeWarningMessageLocalized_fr</string>
+			<key>pfm_title</key>
+			<string>Excessive Uptime Warning Message (French)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>&lt;br&gt;&lt;br&gt;**Nota:** Su Mac lleva **{uptimeHumanReadable}** encendido. Para obtener resultados más fiables, reinícielo manualmente antes de continuar.</string>
+			<key>pfm_description</key>
+			<string>Localized markdown-formatted warning shown when system uptime exceeds the configured threshold. for Spanish.</string>
+			<key>pfm_name</key>
+			<string>ExcessiveUptimeWarningMessageLocalized_es</string>
+			<key>pfm_title</key>
+			<string>Excessive Uptime Warning Message (Spanish)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>&lt;br&gt;&lt;br&gt;**Nota:** Il tuo Mac è acceso da **{uptimeHumanReadable}**. Per risultati più affidabili, riavvia manualmente il Mac prima di procedere.</string>
+			<key>pfm_description</key>
+			<string>Localized markdown-formatted warning shown when system uptime exceeds the configured threshold. for Italian.</string>
+			<key>pfm_name</key>
+			<string>ExcessiveUptimeWarningMessageLocalized_it</string>
+			<key>pfm_title</key>
+			<string>Excessive Uptime Warning Message (Italian)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>&lt;br&gt;&lt;br&gt;**Opmerking:** Uw Mac is al **{uptimeHumanReadable}** ingeschakeld. Voor betrouwbaardere resultaten wordt aanbevolen uw Mac handmatig opnieuw op te starten voordat u verdergaat.</string>
+			<key>pfm_description</key>
+			<string>Localized markdown-formatted warning shown when system uptime exceeds the configured threshold. for Dutch.</string>
+			<key>pfm_name</key>
+			<string>ExcessiveUptimeWarningMessageLocalized_nl</string>
+			<key>pfm_title</key>
+			<string>Excessive Uptime Warning Message (Dutch)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>&lt;br&gt;&lt;br&gt;**Nota:** O seu Mac está ligado há **{uptimeHumanReadable}**. Para resultados mais fiáveis, reinicie-o manualmente antes de continuar.</string>
+			<key>pfm_description</key>
+			<string>Localized markdown-formatted warning shown when system uptime exceeds the configured threshold. for Portuguese.</string>
+			<key>pfm_name</key>
+			<string>ExcessiveUptimeWarningMessageLocalized_pt</string>
+			<key>pfm_title</key>
+			<string>Excessive Uptime Warning Message (Portuguese)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>&lt;br&gt;&lt;br&gt;**注意:** このMacは **{uptimeHumanReadable}** の間、再起動されていません。より確実に実行するため、続行前に手動で再起動してください。</string>
+			<key>pfm_description</key>
+			<string>Localized markdown-formatted warning shown when system uptime exceeds the configured threshold. for Japanese.</string>
+			<key>pfm_name</key>
+			<string>ExcessiveUptimeWarningMessageLocalized_ja</string>
+			<key>pfm_title</key>
+			<string>Excessive Uptime Warning Message (Japanese)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
 			<string>&lt;br&gt;&lt;br&gt;**Note:** Your Mac has only **{diskSpaceHumanReadable}**, which may prevent this macOS {titleMessageUpdateOrUpgrade:l}.</string>
 			<key>pfm_description</key>
-			<string>Markdown-formatted text displayed in the dialog.</string>
+			<string>Markdown-formatted warning shown when free disk space falls below the configured threshold.</string>
 			<key>pfm_name</key>
 			<string>DiskSpaceWarningMessage</string>
 			<key>pfm_title</key>
@@ -468,9 +1128,105 @@
 		</dict>
 		<dict>
 			<key>pfm_default</key>
+			<string>&lt;br&gt;&lt;br&gt;**Note:** Your Mac has only **{diskSpaceHumanReadable}**, which may prevent this macOS {titleMessageUpdateOrUpgrade:l}.</string>
+			<key>pfm_description</key>
+			<string>Localized markdown-formatted warning shown when free disk space falls below the configured threshold. for English.</string>
+			<key>pfm_name</key>
+			<string>DiskSpaceWarningMessageLocalized_en</string>
+			<key>pfm_title</key>
+			<string>Disk Space Warning Message (English)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>&lt;br&gt;&lt;br&gt;**Hinweis:** Dein Mac hat nur **{diskSpaceHumanReadable}** frei. Dadurch kann dieses macOS-{titleMessageUpdateOrUpgrade:l} scheitern.</string>
+			<key>pfm_description</key>
+			<string>Localized markdown-formatted warning shown when free disk space falls below the configured threshold. for German.</string>
+			<key>pfm_name</key>
+			<string>DiskSpaceWarningMessageLocalized_de</string>
+			<key>pfm_title</key>
+			<string>Disk Space Warning Message (German)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>&lt;br&gt;&lt;br&gt;**Note :** Votre Mac ne dispose que de **{diskSpaceHumanReadable}**, ce qui peut empêcher cette {titleMessageUpdateOrUpgrade:l} macOS.</string>
+			<key>pfm_description</key>
+			<string>Localized markdown-formatted warning shown when free disk space falls below the configured threshold. for French.</string>
+			<key>pfm_name</key>
+			<string>DiskSpaceWarningMessageLocalized_fr</string>
+			<key>pfm_title</key>
+			<string>Disk Space Warning Message (French)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>&lt;br&gt;&lt;br&gt;**Nota:** Su Mac solo dispone de **{diskSpaceHumanReadable}**, lo que puede impedir esta {titleMessageUpdateOrUpgrade:l} de macOS.</string>
+			<key>pfm_description</key>
+			<string>Localized markdown-formatted warning shown when free disk space falls below the configured threshold. for Spanish.</string>
+			<key>pfm_name</key>
+			<string>DiskSpaceWarningMessageLocalized_es</string>
+			<key>pfm_title</key>
+			<string>Disk Space Warning Message (Spanish)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>&lt;br&gt;&lt;br&gt;**Nota:** Il tuo Mac ha solo **{diskSpaceHumanReadable}** disponibili, il che potrebbe impedire questo {titleMessageUpdateOrUpgrade:l} di macOS.</string>
+			<key>pfm_description</key>
+			<string>Localized markdown-formatted warning shown when free disk space falls below the configured threshold. for Italian.</string>
+			<key>pfm_name</key>
+			<string>DiskSpaceWarningMessageLocalized_it</string>
+			<key>pfm_title</key>
+			<string>Disk Space Warning Message (Italian)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>&lt;br&gt;&lt;br&gt;**Opmerking:** Uw Mac heeft slechts **{diskSpaceHumanReadable}** beschikbaar, wat deze macOS {titleMessageUpdateOrUpgrade:l} kan verhinderen.</string>
+			<key>pfm_description</key>
+			<string>Localized markdown-formatted warning shown when free disk space falls below the configured threshold. for Dutch.</string>
+			<key>pfm_name</key>
+			<string>DiskSpaceWarningMessageLocalized_nl</string>
+			<key>pfm_title</key>
+			<string>Disk Space Warning Message (Dutch)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>&lt;br&gt;&lt;br&gt;**Nota:** O seu Mac tem apenas **{diskSpaceHumanReadable}** livres, o que pode impedir esta {titleMessageUpdateOrUpgrade:l} do macOS.</string>
+			<key>pfm_description</key>
+			<string>Localized markdown-formatted warning shown when free disk space falls below the configured threshold. for Portuguese.</string>
+			<key>pfm_name</key>
+			<string>DiskSpaceWarningMessageLocalized_pt</string>
+			<key>pfm_title</key>
+			<string>Disk Space Warning Message (Portuguese)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>&lt;br&gt;&lt;br&gt;**注意:** このMacの空き容量は **{diskSpaceHumanReadable}** しかないため、このmacOS {titleMessageUpdateOrUpgrade:l} を実行できない可能性があります。</string>
+			<key>pfm_description</key>
+			<string>Localized markdown-formatted warning shown when free disk space falls below the configured threshold. for Japanese.</string>
+			<key>pfm_name</key>
+			<string>DiskSpaceWarningMessageLocalized_ja</string>
+			<key>pfm_title</key>
+			<string>Disk Space Warning Message (Japanese)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
 			<string>&lt;br&gt;&lt;br&gt;**Good news!** The macOS {ddmVersionString} update has already been downloaded to your Mac and is ready to install. Installation will proceed quickly when you click **{button1text}**.</string>
 			<key>pfm_description</key>
-			<string>Markdown-formatted message displayed when the update is fully staged (downloaded and ready).</string>
+			<string>Markdown-formatted message displayed when the update is fully staged.</string>
 			<key>pfm_name</key>
 			<string>StagedUpdateMessage</string>
 			<key>pfm_title</key>
@@ -480,13 +1236,205 @@
 		</dict>
 		<dict>
 			<key>pfm_default</key>
+			<string>&lt;br&gt;&lt;br&gt;**Good news!** The macOS {ddmVersionString} update has already been downloaded to your Mac and is ready to install. Installation will proceed quickly when you click **{button1text}**.</string>
+			<key>pfm_description</key>
+			<string>Localized markdown-formatted message displayed when the update is fully staged. for English.</string>
+			<key>pfm_name</key>
+			<string>StagedUpdateMessageLocalized_en</string>
+			<key>pfm_title</key>
+			<string>Staged Update Message (English)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>&lt;br&gt;&lt;br&gt;**Gute Nachricht!** Das macOS-{ddmVersionString}-Update wurde bereits auf deinen Mac geladen und ist bereit zur Installation. Die Installation geht schneller, wenn du auf **{button1text}** klickst.</string>
+			<key>pfm_description</key>
+			<string>Localized markdown-formatted message displayed when the update is fully staged. for German.</string>
+			<key>pfm_name</key>
+			<string>StagedUpdateMessageLocalized_de</string>
+			<key>pfm_title</key>
+			<string>Staged Update Message (German)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>&lt;br&gt;&lt;br&gt;**Bonne nouvelle !** La mise à jour macOS {ddmVersionString} est déjà téléchargée. L&apos;installation démarrera rapidement après avoir cliqué sur **{button1text}**.</string>
+			<key>pfm_description</key>
+			<string>Localized markdown-formatted message displayed when the update is fully staged. for French.</string>
+			<key>pfm_name</key>
+			<string>StagedUpdateMessageLocalized_fr</string>
+			<key>pfm_title</key>
+			<string>Staged Update Message (French)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>&lt;br&gt;&lt;br&gt;**¡Buenas noticias!** La actualización de macOS {ddmVersionString} ya se ha descargado en su Mac y está lista para instalarse. La instalación será más rápida cuando haga clic en **{button1text}**.</string>
+			<key>pfm_description</key>
+			<string>Localized markdown-formatted message displayed when the update is fully staged. for Spanish.</string>
+			<key>pfm_name</key>
+			<string>StagedUpdateMessageLocalized_es</string>
+			<key>pfm_title</key>
+			<string>Staged Update Message (Spanish)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>&lt;br&gt;&lt;br&gt;**Buone notizie!** L&apos;aggiornamento di macOS {ddmVersionString} è già stato scaricato sul tuo Mac ed è pronto per l&apos;installazione. L&apos;installazione procederà rapidamente quando fai clic su **{button1text}**.</string>
+			<key>pfm_description</key>
+			<string>Localized markdown-formatted message displayed when the update is fully staged. for Italian.</string>
+			<key>pfm_name</key>
+			<string>StagedUpdateMessageLocalized_it</string>
+			<key>pfm_title</key>
+			<string>Staged Update Message (Italian)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>&lt;br&gt;&lt;br&gt;**Goed nieuws!** De macOS {ddmVersionString}-update is al gedownload op uw Mac en is klaar om te worden geïnstalleerd. De installatie verloopt snel zodra u op **{button1text}** klikt.</string>
+			<key>pfm_description</key>
+			<string>Localized markdown-formatted message displayed when the update is fully staged. for Dutch.</string>
+			<key>pfm_name</key>
+			<string>StagedUpdateMessageLocalized_nl</string>
+			<key>pfm_title</key>
+			<string>Staged Update Message (Dutch)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>&lt;br&gt;&lt;br&gt;**Boas notícias!** A atualização do macOS {ddmVersionString} já foi descarregada para o seu Mac e está pronta para instalar. A instalação será mais rápida quando clicar em **{button1text}**.</string>
+			<key>pfm_description</key>
+			<string>Localized markdown-formatted message displayed when the update is fully staged. for Portuguese.</string>
+			<key>pfm_name</key>
+			<string>StagedUpdateMessageLocalized_pt</string>
+			<key>pfm_title</key>
+			<string>Staged Update Message (Portuguese)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>&lt;br&gt;&lt;br&gt;**お知らせ:** macOS {ddmVersionString} アップデートはすでにこのMacにダウンロードされており、インストールの準備ができています。**{button1text}** をクリックすると、すばやくインストールできます。</string>
+			<key>pfm_description</key>
+			<string>Localized markdown-formatted message displayed when the update is fully staged. for Japanese.</string>
+			<key>pfm_name</key>
+			<string>StagedUpdateMessageLocalized_ja</string>
+			<key>pfm_title</key>
+			<string>Staged Update Message (Japanese)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
 			<string>&lt;br&gt;&lt;br&gt;Your Mac has begun downloading and preparing required macOS update components. Installation will be quicker once all assets have finished staging.</string>
 			<key>pfm_description</key>
-			<string>Markdown-formatted message displayed when the update is partially staged (preparing).</string>
+			<string>Markdown-formatted message displayed when the update is partially staged.</string>
 			<key>pfm_name</key>
 			<string>PartiallyStagedUpdateMessage</string>
 			<key>pfm_title</key>
 			<string>Partially Staged Update Message</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>&lt;br&gt;&lt;br&gt;Your Mac has begun downloading and preparing required macOS update components. Installation will be quicker once all assets have finished staging.</string>
+			<key>pfm_description</key>
+			<string>Localized markdown-formatted message displayed when the update is partially staged. for English.</string>
+			<key>pfm_name</key>
+			<string>PartiallyStagedUpdateMessageLocalized_en</string>
+			<key>pfm_title</key>
+			<string>Partially Staged Update Message (English)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>&lt;br&gt;&lt;br&gt;Dein Mac lädt bereits erforderliche macOS-Update-Komponenten herunter und bereitet sie vor. Die Installation wird schneller, sobald alle Inhalte bereitstehen.</string>
+			<key>pfm_description</key>
+			<string>Localized markdown-formatted message displayed when the update is partially staged. for German.</string>
+			<key>pfm_name</key>
+			<string>PartiallyStagedUpdateMessageLocalized_de</string>
+			<key>pfm_title</key>
+			<string>Partially Staged Update Message (German)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>&lt;br&gt;&lt;br&gt;Votre Mac a commencé à télécharger et à préparer les composants requis de mise à jour macOS. L&apos;installation sera ensuite plus rapide.</string>
+			<key>pfm_description</key>
+			<string>Localized markdown-formatted message displayed when the update is partially staged. for French.</string>
+			<key>pfm_name</key>
+			<string>PartiallyStagedUpdateMessageLocalized_fr</string>
+			<key>pfm_title</key>
+			<string>Partially Staged Update Message (French)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>&lt;br&gt;&lt;br&gt;Su Mac ha comenzado a descargar y preparar los componentes necesarios de actualización de macOS. La instalación será más rápida cuando finalice la preparación de todos los recursos.</string>
+			<key>pfm_description</key>
+			<string>Localized markdown-formatted message displayed when the update is partially staged. for Spanish.</string>
+			<key>pfm_name</key>
+			<string>PartiallyStagedUpdateMessageLocalized_es</string>
+			<key>pfm_title</key>
+			<string>Partially Staged Update Message (Spanish)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>&lt;br&gt;&lt;br&gt;Il tuo Mac ha iniziato a scaricare e preparare i componenti necessari per l&apos;aggiornamento di macOS. L&apos;installazione sarà più rapida una volta completata la preparazione di tutti i componenti.</string>
+			<key>pfm_description</key>
+			<string>Localized markdown-formatted message displayed when the update is partially staged. for Italian.</string>
+			<key>pfm_name</key>
+			<string>PartiallyStagedUpdateMessageLocalized_it</string>
+			<key>pfm_title</key>
+			<string>Partially Staged Update Message (Italian)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>&lt;br&gt;&lt;br&gt;Uw Mac is begonnen met het downloaden en voorbereiden van de vereiste macOS-updateonderdelen. De installatie zal sneller verlopen zodra alle onderdelen volledig zijn voorbereid.</string>
+			<key>pfm_description</key>
+			<string>Localized markdown-formatted message displayed when the update is partially staged. for Dutch.</string>
+			<key>pfm_name</key>
+			<string>PartiallyStagedUpdateMessageLocalized_nl</string>
+			<key>pfm_title</key>
+			<string>Partially Staged Update Message (Dutch)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>&lt;br&gt;&lt;br&gt;O seu Mac começou a descarregar e a preparar os componentes necessários da atualização do macOS. A instalação será mais rápida quando todos os recursos estiverem preparados.</string>
+			<key>pfm_description</key>
+			<string>Localized markdown-formatted message displayed when the update is partially staged. for Portuguese.</string>
+			<key>pfm_name</key>
+			<string>PartiallyStagedUpdateMessageLocalized_pt</string>
+			<key>pfm_title</key>
+			<string>Partially Staged Update Message (Portuguese)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>&lt;br&gt;&lt;br&gt;このMacでは、必要なmacOSアップデートコンポーネントのダウンロードと準備が進行中です。すべての項目の準備が完了すると、インストールはより短時間で完了します。</string>
+			<key>pfm_description</key>
+			<string>Localized markdown-formatted message displayed when the update is partially staged. for Japanese.</string>
+			<key>pfm_name</key>
+			<string>PartiallyStagedUpdateMessageLocalized_ja</string>
+			<key>pfm_title</key>
+			<string>Partially Staged Update Message (Japanese)</string>
 			<key>pfm_type</key>
 			<string>string</string>
 		</dict>
@@ -504,15 +1452,2163 @@
 		</dict>
 		<dict>
 			<key>pfm_default</key>
+			<string>&lt;br&gt;&lt;br&gt;Your Mac will begin downloading the update shortly.</string>
+			<key>pfm_description</key>
+			<string>Localized markdown-formatted message displayed when the update download is pending. for English.</string>
+			<key>pfm_name</key>
+			<string>PendingDownloadMessageLocalized_en</string>
+			<key>pfm_title</key>
+			<string>Pending Download Message (English)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>&lt;br&gt;&lt;br&gt;Dein Mac beginnt in Kürze mit dem Download des Updates.</string>
+			<key>pfm_description</key>
+			<string>Localized markdown-formatted message displayed when the update download is pending. for German.</string>
+			<key>pfm_name</key>
+			<string>PendingDownloadMessageLocalized_de</string>
+			<key>pfm_title</key>
+			<string>Pending Download Message (German)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>&lt;br&gt;&lt;br&gt;Votre Mac commencera bientôt à télécharger la mise à jour.</string>
+			<key>pfm_description</key>
+			<string>Localized markdown-formatted message displayed when the update download is pending. for French.</string>
+			<key>pfm_name</key>
+			<string>PendingDownloadMessageLocalized_fr</string>
+			<key>pfm_title</key>
+			<string>Pending Download Message (French)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>&lt;br&gt;&lt;br&gt;Su Mac comenzará a descargar la actualización en breve.</string>
+			<key>pfm_description</key>
+			<string>Localized markdown-formatted message displayed when the update download is pending. for Spanish.</string>
+			<key>pfm_name</key>
+			<string>PendingDownloadMessageLocalized_es</string>
+			<key>pfm_title</key>
+			<string>Pending Download Message (Spanish)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>&lt;br&gt;&lt;br&gt;Il tuo Mac inizierà a scaricare l&apos;aggiornamento a breve.</string>
+			<key>pfm_description</key>
+			<string>Localized markdown-formatted message displayed when the update download is pending. for Italian.</string>
+			<key>pfm_name</key>
+			<string>PendingDownloadMessageLocalized_it</string>
+			<key>pfm_title</key>
+			<string>Pending Download Message (Italian)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>&lt;br&gt;&lt;br&gt;Uw Mac zal binnenkort beginnen met het downloaden van de update.</string>
+			<key>pfm_description</key>
+			<string>Localized markdown-formatted message displayed when the update download is pending. for Dutch.</string>
+			<key>pfm_name</key>
+			<string>PendingDownloadMessageLocalized_nl</string>
+			<key>pfm_title</key>
+			<string>Pending Download Message (Dutch)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>&lt;br&gt;&lt;br&gt;O seu Mac irá começar a descarregar a atualização em breve.</string>
+			<key>pfm_description</key>
+			<string>Localized markdown-formatted message displayed when the update download is pending. for Portuguese.</string>
+			<key>pfm_name</key>
+			<string>PendingDownloadMessageLocalized_pt</string>
+			<key>pfm_title</key>
+			<string>Pending Download Message (Portuguese)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>&lt;br&gt;&lt;br&gt;このMacはまもなくアップデートのダウンロードを開始します。</string>
+			<key>pfm_description</key>
+			<string>Localized markdown-formatted message displayed when the update download is pending. for Japanese.</string>
+			<key>pfm_name</key>
+			<string>PendingDownloadMessageLocalized_ja</string>
+			<key>pfm_title</key>
+			<string>Pending Download Message (Japanese)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>Whether to hide staged update information (e.g., staged/partial/pending messages) in the UI.</string>
+			<string>Whether to hide staged update information in the UI.</string>
 			<key>pfm_name</key>
 			<string>HideStagedUpdateInfo</string>
 			<key>pfm_title</key>
 			<string>Hide Staged Update Info</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Today</string>
+			<key>pfm_description</key>
+			<string>Relative deadline phrase used when enforcement occurs on the current day.</string>
+			<key>pfm_name</key>
+			<string>RelativeDeadlineToday</string>
+			<key>pfm_title</key>
+			<string>Relative Deadline Today</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Today</string>
+			<key>pfm_description</key>
+			<string>Localized relative deadline phrase used when enforcement occurs on the current day. for English.</string>
+			<key>pfm_name</key>
+			<string>RelativeDeadlineTodayLocalized_en</string>
+			<key>pfm_title</key>
+			<string>Relative Deadline Today (English)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Heute</string>
+			<key>pfm_description</key>
+			<string>Localized relative deadline phrase used when enforcement occurs on the current day. for German.</string>
+			<key>pfm_name</key>
+			<string>RelativeDeadlineTodayLocalized_de</string>
+			<key>pfm_title</key>
+			<string>Relative Deadline Today (German)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Aujourd&apos;hui</string>
+			<key>pfm_description</key>
+			<string>Localized relative deadline phrase used when enforcement occurs on the current day. for French.</string>
+			<key>pfm_name</key>
+			<string>RelativeDeadlineTodayLocalized_fr</string>
+			<key>pfm_title</key>
+			<string>Relative Deadline Today (French)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Hoy</string>
+			<key>pfm_description</key>
+			<string>Localized relative deadline phrase used when enforcement occurs on the current day. for Spanish.</string>
+			<key>pfm_name</key>
+			<string>RelativeDeadlineTodayLocalized_es</string>
+			<key>pfm_title</key>
+			<string>Relative Deadline Today (Spanish)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Oggi</string>
+			<key>pfm_description</key>
+			<string>Localized relative deadline phrase used when enforcement occurs on the current day. for Italian.</string>
+			<key>pfm_name</key>
+			<string>RelativeDeadlineTodayLocalized_it</string>
+			<key>pfm_title</key>
+			<string>Relative Deadline Today (Italian)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Vandaag</string>
+			<key>pfm_description</key>
+			<string>Localized relative deadline phrase used when enforcement occurs on the current day. for Dutch.</string>
+			<key>pfm_name</key>
+			<string>RelativeDeadlineTodayLocalized_nl</string>
+			<key>pfm_title</key>
+			<string>Relative Deadline Today (Dutch)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Hoje</string>
+			<key>pfm_description</key>
+			<string>Localized relative deadline phrase used when enforcement occurs on the current day. for Portuguese.</string>
+			<key>pfm_name</key>
+			<string>RelativeDeadlineTodayLocalized_pt</string>
+			<key>pfm_title</key>
+			<string>Relative Deadline Today (Portuguese)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>今日</string>
+			<key>pfm_description</key>
+			<string>Localized relative deadline phrase used when enforcement occurs on the current day. for Japanese.</string>
+			<key>pfm_name</key>
+			<string>RelativeDeadlineTodayLocalized_ja</string>
+			<key>pfm_title</key>
+			<string>Relative Deadline Today (Japanese)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Tomorrow</string>
+			<key>pfm_description</key>
+			<string>Relative deadline phrase used when enforcement occurs on the following day.</string>
+			<key>pfm_name</key>
+			<string>RelativeDeadlineTomorrow</string>
+			<key>pfm_title</key>
+			<string>Relative Deadline Tomorrow</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Tomorrow</string>
+			<key>pfm_description</key>
+			<string>Localized relative deadline phrase used when enforcement occurs on the following day. for English.</string>
+			<key>pfm_name</key>
+			<string>RelativeDeadlineTomorrowLocalized_en</string>
+			<key>pfm_title</key>
+			<string>Relative Deadline Tomorrow (English)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Morgen</string>
+			<key>pfm_description</key>
+			<string>Localized relative deadline phrase used when enforcement occurs on the following day. for German.</string>
+			<key>pfm_name</key>
+			<string>RelativeDeadlineTomorrowLocalized_de</string>
+			<key>pfm_title</key>
+			<string>Relative Deadline Tomorrow (German)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Demain</string>
+			<key>pfm_description</key>
+			<string>Localized relative deadline phrase used when enforcement occurs on the following day. for French.</string>
+			<key>pfm_name</key>
+			<string>RelativeDeadlineTomorrowLocalized_fr</string>
+			<key>pfm_title</key>
+			<string>Relative Deadline Tomorrow (French)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Mañana</string>
+			<key>pfm_description</key>
+			<string>Localized relative deadline phrase used when enforcement occurs on the following day. for Spanish.</string>
+			<key>pfm_name</key>
+			<string>RelativeDeadlineTomorrowLocalized_es</string>
+			<key>pfm_title</key>
+			<string>Relative Deadline Tomorrow (Spanish)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Domani</string>
+			<key>pfm_description</key>
+			<string>Localized relative deadline phrase used when enforcement occurs on the following day. for Italian.</string>
+			<key>pfm_name</key>
+			<string>RelativeDeadlineTomorrowLocalized_it</string>
+			<key>pfm_title</key>
+			<string>Relative Deadline Tomorrow (Italian)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Morgen</string>
+			<key>pfm_description</key>
+			<string>Localized relative deadline phrase used when enforcement occurs on the following day. for Dutch.</string>
+			<key>pfm_name</key>
+			<string>RelativeDeadlineTomorrowLocalized_nl</string>
+			<key>pfm_title</key>
+			<string>Relative Deadline Tomorrow (Dutch)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Amanha</string>
+			<key>pfm_description</key>
+			<string>Localized relative deadline phrase used when enforcement occurs on the following day. for Portuguese.</string>
+			<key>pfm_name</key>
+			<string>RelativeDeadlineTomorrowLocalized_pt</string>
+			<key>pfm_title</key>
+			<string>Relative Deadline Tomorrow (Portuguese)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>明日</string>
+			<key>pfm_description</key>
+			<string>Localized relative deadline phrase used when enforcement occurs on the following day. for Japanese.</string>
+			<key>pfm_name</key>
+			<string>RelativeDeadlineTomorrowLocalized_ja</string>
+			<key>pfm_title</key>
+			<string>Relative Deadline Tomorrow (Japanese)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Update</string>
+			<key>pfm_description</key>
+			<string>Localized word used when the enforced action is an update.</string>
+			<key>pfm_name</key>
+			<string>UpdateWord</string>
+			<key>pfm_title</key>
+			<string>Update Word</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Update</string>
+			<key>pfm_description</key>
+			<string>Localized localized word used when the enforced action is an update. for English.</string>
+			<key>pfm_name</key>
+			<string>UpdateWordLocalized_en</string>
+			<key>pfm_title</key>
+			<string>Update Word (English)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Aktualisierung</string>
+			<key>pfm_description</key>
+			<string>Localized localized word used when the enforced action is an update. for German.</string>
+			<key>pfm_name</key>
+			<string>UpdateWordLocalized_de</string>
+			<key>pfm_title</key>
+			<string>Update Word (German)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Mise à jour</string>
+			<key>pfm_description</key>
+			<string>Localized localized word used when the enforced action is an update. for French.</string>
+			<key>pfm_name</key>
+			<string>UpdateWordLocalized_fr</string>
+			<key>pfm_title</key>
+			<string>Update Word (French)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Actualización</string>
+			<key>pfm_description</key>
+			<string>Localized localized word used when the enforced action is an update. for Spanish.</string>
+			<key>pfm_name</key>
+			<string>UpdateWordLocalized_es</string>
+			<key>pfm_title</key>
+			<string>Update Word (Spanish)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>aggiornamento</string>
+			<key>pfm_description</key>
+			<string>Localized localized word used when the enforced action is an update. for Italian.</string>
+			<key>pfm_name</key>
+			<string>UpdateWordLocalized_it</string>
+			<key>pfm_title</key>
+			<string>Update Word (Italian)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>update</string>
+			<key>pfm_description</key>
+			<string>Localized localized word used when the enforced action is an update. for Dutch.</string>
+			<key>pfm_name</key>
+			<string>UpdateWordLocalized_nl</string>
+			<key>pfm_title</key>
+			<string>Update Word (Dutch)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Atualização</string>
+			<key>pfm_description</key>
+			<string>Localized localized word used when the enforced action is an update. for Portuguese.</string>
+			<key>pfm_name</key>
+			<string>UpdateWordLocalized_pt</string>
+			<key>pfm_title</key>
+			<string>Update Word (Portuguese)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>アップデート</string>
+			<key>pfm_description</key>
+			<string>Localized localized word used when the enforced action is an update. for Japanese.</string>
+			<key>pfm_name</key>
+			<string>UpdateWordLocalized_ja</string>
+			<key>pfm_title</key>
+			<string>Update Word (Japanese)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Upgrade</string>
+			<key>pfm_description</key>
+			<string>Localized word used when the enforced action is an upgrade.</string>
+			<key>pfm_name</key>
+			<string>UpgradeWord</string>
+			<key>pfm_title</key>
+			<string>Upgrade Word</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Upgrade</string>
+			<key>pfm_description</key>
+			<string>Localized localized word used when the enforced action is an upgrade. for English.</string>
+			<key>pfm_name</key>
+			<string>UpgradeWordLocalized_en</string>
+			<key>pfm_title</key>
+			<string>Upgrade Word (English)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Upgrade</string>
+			<key>pfm_description</key>
+			<string>Localized localized word used when the enforced action is an upgrade. for German.</string>
+			<key>pfm_name</key>
+			<string>UpgradeWordLocalized_de</string>
+			<key>pfm_title</key>
+			<string>Upgrade Word (German)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Mise à niveau</string>
+			<key>pfm_description</key>
+			<string>Localized localized word used when the enforced action is an upgrade. for French.</string>
+			<key>pfm_name</key>
+			<string>UpgradeWordLocalized_fr</string>
+			<key>pfm_title</key>
+			<string>Upgrade Word (French)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Actualización</string>
+			<key>pfm_description</key>
+			<string>Localized localized word used when the enforced action is an upgrade. for Spanish.</string>
+			<key>pfm_name</key>
+			<string>UpgradeWordLocalized_es</string>
+			<key>pfm_title</key>
+			<string>Upgrade Word (Spanish)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>upgrade</string>
+			<key>pfm_description</key>
+			<string>Localized localized word used when the enforced action is an upgrade. for Italian.</string>
+			<key>pfm_name</key>
+			<string>UpgradeWordLocalized_it</string>
+			<key>pfm_title</key>
+			<string>Upgrade Word (Italian)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>upgrade</string>
+			<key>pfm_description</key>
+			<string>Localized localized word used when the enforced action is an upgrade. for Dutch.</string>
+			<key>pfm_name</key>
+			<string>UpgradeWordLocalized_nl</string>
+			<key>pfm_title</key>
+			<string>Upgrade Word (Dutch)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Atualização</string>
+			<key>pfm_description</key>
+			<string>Localized localized word used when the enforced action is an upgrade. for Portuguese.</string>
+			<key>pfm_name</key>
+			<string>UpgradeWordLocalized_pt</string>
+			<key>pfm_title</key>
+			<string>Upgrade Word (Portuguese)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>アップグレード</string>
+			<key>pfm_description</key>
+			<string>Localized localized word used when the enforced action is an upgrade. for Japanese.</string>
+			<key>pfm_name</key>
+			<string>UpgradeWordLocalized_ja</string>
+			<key>pfm_title</key>
+			<string>Upgrade Word (Japanese)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Restart Now</string>
+			<key>pfm_description</key>
+			<string>Text users are told to click in Software Update for point-release updates.</string>
+			<key>pfm_name</key>
+			<string>SoftwareUpdateButtonTextUpdate</string>
+			<key>pfm_title</key>
+			<string>Software Update Button Text (Update)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Restart Now</string>
+			<key>pfm_description</key>
+			<string>Localized text users are told to click in software update for point-release updates. for English.</string>
+			<key>pfm_name</key>
+			<string>SoftwareUpdateButtonTextUpdateLocalized_en</string>
+			<key>pfm_title</key>
+			<string>Software Update Button Text (Update) (English)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Jetzt neu starten</string>
+			<key>pfm_description</key>
+			<string>Localized text users are told to click in software update for point-release updates. for German.</string>
+			<key>pfm_name</key>
+			<string>SoftwareUpdateButtonTextUpdateLocalized_de</string>
+			<key>pfm_title</key>
+			<string>Software Update Button Text (Update) (German)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Redémarrer maintenant</string>
+			<key>pfm_description</key>
+			<string>Localized text users are told to click in software update for point-release updates. for French.</string>
+			<key>pfm_name</key>
+			<string>SoftwareUpdateButtonTextUpdateLocalized_fr</string>
+			<key>pfm_title</key>
+			<string>Software Update Button Text (Update) (French)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Reiniciar ahora</string>
+			<key>pfm_description</key>
+			<string>Localized text users are told to click in software update for point-release updates. for Spanish.</string>
+			<key>pfm_name</key>
+			<string>SoftwareUpdateButtonTextUpdateLocalized_es</string>
+			<key>pfm_title</key>
+			<string>Software Update Button Text (Update) (Spanish)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Riavvia ora</string>
+			<key>pfm_description</key>
+			<string>Localized text users are told to click in software update for point-release updates. for Italian.</string>
+			<key>pfm_name</key>
+			<string>SoftwareUpdateButtonTextUpdateLocalized_it</string>
+			<key>pfm_title</key>
+			<string>Software Update Button Text (Update) (Italian)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Start nu opnieuw op</string>
+			<key>pfm_description</key>
+			<string>Localized text users are told to click in software update for point-release updates. for Dutch.</string>
+			<key>pfm_name</key>
+			<string>SoftwareUpdateButtonTextUpdateLocalized_nl</string>
+			<key>pfm_title</key>
+			<string>Software Update Button Text (Update) (Dutch)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Reiniciar agora</string>
+			<key>pfm_description</key>
+			<string>Localized text users are told to click in software update for point-release updates. for Portuguese.</string>
+			<key>pfm_name</key>
+			<string>SoftwareUpdateButtonTextUpdateLocalized_pt</string>
+			<key>pfm_title</key>
+			<string>Software Update Button Text (Update) (Portuguese)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>今すぐ再起動</string>
+			<key>pfm_description</key>
+			<string>Localized text users are told to click in software update for point-release updates. for Japanese.</string>
+			<key>pfm_name</key>
+			<string>SoftwareUpdateButtonTextUpdateLocalized_ja</string>
+			<key>pfm_title</key>
+			<string>Software Update Button Text (Update) (Japanese)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Upgrade Now</string>
+			<key>pfm_description</key>
+			<string>Text users are told to click in Software Update for major upgrades.</string>
+			<key>pfm_name</key>
+			<string>SoftwareUpdateButtonTextUpgrade</string>
+			<key>pfm_title</key>
+			<string>Software Update Button Text (Upgrade)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Upgrade Now</string>
+			<key>pfm_description</key>
+			<string>Localized text users are told to click in software update for major upgrades. for English.</string>
+			<key>pfm_name</key>
+			<string>SoftwareUpdateButtonTextUpgradeLocalized_en</string>
+			<key>pfm_title</key>
+			<string>Software Update Button Text (Upgrade) (English)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Upgrade jetzt</string>
+			<key>pfm_description</key>
+			<string>Localized text users are told to click in software update for major upgrades. for German.</string>
+			<key>pfm_name</key>
+			<string>SoftwareUpdateButtonTextUpgradeLocalized_de</string>
+			<key>pfm_title</key>
+			<string>Software Update Button Text (Upgrade) (German)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Mettre à niveau maintenant</string>
+			<key>pfm_description</key>
+			<string>Localized text users are told to click in software update for major upgrades. for French.</string>
+			<key>pfm_name</key>
+			<string>SoftwareUpdateButtonTextUpgradeLocalized_fr</string>
+			<key>pfm_title</key>
+			<string>Software Update Button Text (Upgrade) (French)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Actualizar ahora</string>
+			<key>pfm_description</key>
+			<string>Localized text users are told to click in software update for major upgrades. for Spanish.</string>
+			<key>pfm_name</key>
+			<string>SoftwareUpdateButtonTextUpgradeLocalized_es</string>
+			<key>pfm_title</key>
+			<string>Software Update Button Text (Upgrade) (Spanish)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Esegui upgrade ora</string>
+			<key>pfm_description</key>
+			<string>Localized text users are told to click in software update for major upgrades. for Italian.</string>
+			<key>pfm_name</key>
+			<string>SoftwareUpdateButtonTextUpgradeLocalized_it</string>
+			<key>pfm_title</key>
+			<string>Software Update Button Text (Upgrade) (Italian)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Voer nu de upgrade uit</string>
+			<key>pfm_description</key>
+			<string>Localized text users are told to click in software update for major upgrades. for Dutch.</string>
+			<key>pfm_name</key>
+			<string>SoftwareUpdateButtonTextUpgradeLocalized_nl</string>
+			<key>pfm_title</key>
+			<string>Software Update Button Text (Upgrade) (Dutch)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Atualizar agora</string>
+			<key>pfm_description</key>
+			<string>Localized text users are told to click in software update for major upgrades. for Portuguese.</string>
+			<key>pfm_name</key>
+			<string>SoftwareUpdateButtonTextUpgradeLocalized_pt</string>
+			<key>pfm_title</key>
+			<string>Software Update Button Text (Upgrade) (Portuguese)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>今すぐアップグレード</string>
+			<key>pfm_description</key>
+			<string>Localized text users are told to click in software update for major upgrades. for Japanese.</string>
+			<key>pfm_name</key>
+			<string>SoftwareUpdateButtonTextUpgradeLocalized_ja</string>
+			<key>pfm_title</key>
+			<string>Software Update Button Text (Upgrade) (Japanese)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Restart Now</string>
+			<key>pfm_description</key>
+			<string>Button label used in past-deadline restart dialogs.</string>
+			<key>pfm_name</key>
+			<string>RestartNowButtonText</string>
+			<key>pfm_title</key>
+			<string>Restart Now Button Text</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Restart Now</string>
+			<key>pfm_description</key>
+			<string>Localized button label used in past-deadline restart dialogs. for English.</string>
+			<key>pfm_name</key>
+			<string>RestartNowButtonTextLocalized_en</string>
+			<key>pfm_title</key>
+			<string>Restart Now Button Text (English)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Jetzt neu starten</string>
+			<key>pfm_description</key>
+			<string>Localized button label used in past-deadline restart dialogs. for German.</string>
+			<key>pfm_name</key>
+			<string>RestartNowButtonTextLocalized_de</string>
+			<key>pfm_title</key>
+			<string>Restart Now Button Text (German)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Redémarrer maintenant</string>
+			<key>pfm_description</key>
+			<string>Localized button label used in past-deadline restart dialogs. for French.</string>
+			<key>pfm_name</key>
+			<string>RestartNowButtonTextLocalized_fr</string>
+			<key>pfm_title</key>
+			<string>Restart Now Button Text (French)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Reiniciar ahora</string>
+			<key>pfm_description</key>
+			<string>Localized button label used in past-deadline restart dialogs. for Spanish.</string>
+			<key>pfm_name</key>
+			<string>RestartNowButtonTextLocalized_es</string>
+			<key>pfm_title</key>
+			<string>Restart Now Button Text (Spanish)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Riavvia ora</string>
+			<key>pfm_description</key>
+			<string>Localized button label used in past-deadline restart dialogs. for Italian.</string>
+			<key>pfm_name</key>
+			<string>RestartNowButtonTextLocalized_it</string>
+			<key>pfm_title</key>
+			<string>Restart Now Button Text (Italian)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Start nu opnieuw op</string>
+			<key>pfm_description</key>
+			<string>Localized button label used in past-deadline restart dialogs. for Dutch.</string>
+			<key>pfm_name</key>
+			<string>RestartNowButtonTextLocalized_nl</string>
+			<key>pfm_title</key>
+			<string>Restart Now Button Text (Dutch)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Reiniciar agora</string>
+			<key>pfm_description</key>
+			<string>Localized button label used in past-deadline restart dialogs. for Portuguese.</string>
+			<key>pfm_name</key>
+			<string>RestartNowButtonTextLocalized_pt</string>
+			<key>pfm_title</key>
+			<string>Restart Now Button Text (Portuguese)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>今すぐ再起動</string>
+			<key>pfm_description</key>
+			<string>Localized button label used in past-deadline restart dialogs. for Japanese.</string>
+			<key>pfm_name</key>
+			<string>RestartNowButtonTextLocalized_ja</string>
+			<key>pfm_title</key>
+			<string>Restart Now Button Text (Japanese)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Current</string>
+			<key>pfm_description</key>
+			<string>Label shown for the current macOS version in the info box.</string>
+			<key>pfm_name</key>
+			<string>InfoboxLabelCurrent</string>
+			<key>pfm_title</key>
+			<string>Info Box Label: Current</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Current</string>
+			<key>pfm_description</key>
+			<string>Localized label shown for the current macos version in the info box. for English.</string>
+			<key>pfm_name</key>
+			<string>InfoboxLabelCurrentLocalized_en</string>
+			<key>pfm_title</key>
+			<string>Info Box Label: Current (English)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Aktuell</string>
+			<key>pfm_description</key>
+			<string>Localized label shown for the current macos version in the info box. for German.</string>
+			<key>pfm_name</key>
+			<string>InfoboxLabelCurrentLocalized_de</string>
+			<key>pfm_title</key>
+			<string>Info Box Label: Current (German)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Version actuelle</string>
+			<key>pfm_description</key>
+			<string>Localized label shown for the current macos version in the info box. for French.</string>
+			<key>pfm_name</key>
+			<string>InfoboxLabelCurrentLocalized_fr</string>
+			<key>pfm_title</key>
+			<string>Info Box Label: Current (French)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Actual</string>
+			<key>pfm_description</key>
+			<string>Localized label shown for the current macos version in the info box. for Spanish.</string>
+			<key>pfm_name</key>
+			<string>InfoboxLabelCurrentLocalized_es</string>
+			<key>pfm_title</key>
+			<string>Info Box Label: Current (Spanish)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Corrente</string>
+			<key>pfm_description</key>
+			<string>Localized label shown for the current macos version in the info box. for Italian.</string>
+			<key>pfm_name</key>
+			<string>InfoboxLabelCurrentLocalized_it</string>
+			<key>pfm_title</key>
+			<string>Info Box Label: Current (Italian)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Huidig</string>
+			<key>pfm_description</key>
+			<string>Localized label shown for the current macos version in the info box. for Dutch.</string>
+			<key>pfm_name</key>
+			<string>InfoboxLabelCurrentLocalized_nl</string>
+			<key>pfm_title</key>
+			<string>Info Box Label: Current (Dutch)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Atual</string>
+			<key>pfm_description</key>
+			<string>Localized label shown for the current macos version in the info box. for Portuguese.</string>
+			<key>pfm_name</key>
+			<string>InfoboxLabelCurrentLocalized_pt</string>
+			<key>pfm_title</key>
+			<string>Info Box Label: Current (Portuguese)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>現在</string>
+			<key>pfm_description</key>
+			<string>Localized label shown for the current macos version in the info box. for Japanese.</string>
+			<key>pfm_name</key>
+			<string>InfoboxLabelCurrentLocalized_ja</string>
+			<key>pfm_title</key>
+			<string>Info Box Label: Current (Japanese)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Required</string>
+			<key>pfm_description</key>
+			<string>Label shown for the required macOS version in the info box.</string>
+			<key>pfm_name</key>
+			<string>InfoboxLabelRequired</string>
+			<key>pfm_title</key>
+			<string>Info Box Label: Required</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Required</string>
+			<key>pfm_description</key>
+			<string>Localized label shown for the required macos version in the info box. for English.</string>
+			<key>pfm_name</key>
+			<string>InfoboxLabelRequiredLocalized_en</string>
+			<key>pfm_title</key>
+			<string>Info Box Label: Required (English)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Erforderlich</string>
+			<key>pfm_description</key>
+			<string>Localized label shown for the required macos version in the info box. for German.</string>
+			<key>pfm_name</key>
+			<string>InfoboxLabelRequiredLocalized_de</string>
+			<key>pfm_title</key>
+			<string>Info Box Label: Required (German)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Version requise</string>
+			<key>pfm_description</key>
+			<string>Localized label shown for the required macos version in the info box. for French.</string>
+			<key>pfm_name</key>
+			<string>InfoboxLabelRequiredLocalized_fr</string>
+			<key>pfm_title</key>
+			<string>Info Box Label: Required (French)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Requerido</string>
+			<key>pfm_description</key>
+			<string>Localized label shown for the required macos version in the info box. for Spanish.</string>
+			<key>pfm_name</key>
+			<string>InfoboxLabelRequiredLocalized_es</string>
+			<key>pfm_title</key>
+			<string>Info Box Label: Required (Spanish)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Richiesto</string>
+			<key>pfm_description</key>
+			<string>Localized label shown for the required macos version in the info box. for Italian.</string>
+			<key>pfm_name</key>
+			<string>InfoboxLabelRequiredLocalized_it</string>
+			<key>pfm_title</key>
+			<string>Info Box Label: Required (Italian)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Vereist</string>
+			<key>pfm_description</key>
+			<string>Localized label shown for the required macos version in the info box. for Dutch.</string>
+			<key>pfm_name</key>
+			<string>InfoboxLabelRequiredLocalized_nl</string>
+			<key>pfm_title</key>
+			<string>Info Box Label: Required (Dutch)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Obrigatório</string>
+			<key>pfm_description</key>
+			<string>Localized label shown for the required macos version in the info box. for Portuguese.</string>
+			<key>pfm_name</key>
+			<string>InfoboxLabelRequiredLocalized_pt</string>
+			<key>pfm_title</key>
+			<string>Info Box Label: Required (Portuguese)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>必要</string>
+			<key>pfm_description</key>
+			<string>Localized label shown for the required macos version in the info box. for Japanese.</string>
+			<key>pfm_name</key>
+			<string>InfoboxLabelRequiredLocalized_ja</string>
+			<key>pfm_title</key>
+			<string>Info Box Label: Required (Japanese)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Deadline</string>
+			<key>pfm_description</key>
+			<string>Label shown for the enforcement deadline in the info box.</string>
+			<key>pfm_name</key>
+			<string>InfoboxLabelDeadline</string>
+			<key>pfm_title</key>
+			<string>Info Box Label: Deadline</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Deadline</string>
+			<key>pfm_description</key>
+			<string>Localized label shown for the enforcement deadline in the info box. for English.</string>
+			<key>pfm_name</key>
+			<string>InfoboxLabelDeadlineLocalized_en</string>
+			<key>pfm_title</key>
+			<string>Info Box Label: Deadline (English)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Frist</string>
+			<key>pfm_description</key>
+			<string>Localized label shown for the enforcement deadline in the info box. for German.</string>
+			<key>pfm_name</key>
+			<string>InfoboxLabelDeadlineLocalized_de</string>
+			<key>pfm_title</key>
+			<string>Info Box Label: Deadline (German)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Échéance</string>
+			<key>pfm_description</key>
+			<string>Localized label shown for the enforcement deadline in the info box. for French.</string>
+			<key>pfm_name</key>
+			<string>InfoboxLabelDeadlineLocalized_fr</string>
+			<key>pfm_title</key>
+			<string>Info Box Label: Deadline (French)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Fecha límite</string>
+			<key>pfm_description</key>
+			<string>Localized label shown for the enforcement deadline in the info box. for Spanish.</string>
+			<key>pfm_name</key>
+			<string>InfoboxLabelDeadlineLocalized_es</string>
+			<key>pfm_title</key>
+			<string>Info Box Label: Deadline (Spanish)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Scadenza</string>
+			<key>pfm_description</key>
+			<string>Localized label shown for the enforcement deadline in the info box. for Italian.</string>
+			<key>pfm_name</key>
+			<string>InfoboxLabelDeadlineLocalized_it</string>
+			<key>pfm_title</key>
+			<string>Info Box Label: Deadline (Italian)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Deadline</string>
+			<key>pfm_description</key>
+			<string>Localized label shown for the enforcement deadline in the info box. for Dutch.</string>
+			<key>pfm_name</key>
+			<string>InfoboxLabelDeadlineLocalized_nl</string>
+			<key>pfm_title</key>
+			<string>Info Box Label: Deadline (Dutch)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Prazo</string>
+			<key>pfm_description</key>
+			<string>Localized label shown for the enforcement deadline in the info box. for Portuguese.</string>
+			<key>pfm_name</key>
+			<string>InfoboxLabelDeadlineLocalized_pt</string>
+			<key>pfm_title</key>
+			<string>Info Box Label: Deadline (Portuguese)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>期限</string>
+			<key>pfm_description</key>
+			<string>Localized label shown for the enforcement deadline in the info box. for Japanese.</string>
+			<key>pfm_name</key>
+			<string>InfoboxLabelDeadlineLocalized_ja</string>
+			<key>pfm_title</key>
+			<string>Info Box Label: Deadline (Japanese)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Day(s) Remaining</string>
+			<key>pfm_description</key>
+			<string>Label shown for remaining days in the info box.</string>
+			<key>pfm_name</key>
+			<string>InfoboxLabelDaysRemaining</string>
+			<key>pfm_title</key>
+			<string>Info Box Label: Days Remaining</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Day(s) Remaining</string>
+			<key>pfm_description</key>
+			<string>Localized label shown for remaining days in the info box. for English.</string>
+			<key>pfm_name</key>
+			<string>InfoboxLabelDaysRemainingLocalized_en</string>
+			<key>pfm_title</key>
+			<string>Info Box Label: Days Remaining (English)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Verbleibende Tage</string>
+			<key>pfm_description</key>
+			<string>Localized label shown for remaining days in the info box. for German.</string>
+			<key>pfm_name</key>
+			<string>InfoboxLabelDaysRemainingLocalized_de</string>
+			<key>pfm_title</key>
+			<string>Info Box Label: Days Remaining (German)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Jours restants</string>
+			<key>pfm_description</key>
+			<string>Localized label shown for remaining days in the info box. for French.</string>
+			<key>pfm_name</key>
+			<string>InfoboxLabelDaysRemainingLocalized_fr</string>
+			<key>pfm_title</key>
+			<string>Info Box Label: Days Remaining (French)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Días restantes</string>
+			<key>pfm_description</key>
+			<string>Localized label shown for remaining days in the info box. for Spanish.</string>
+			<key>pfm_name</key>
+			<string>InfoboxLabelDaysRemainingLocalized_es</string>
+			<key>pfm_title</key>
+			<string>Info Box Label: Days Remaining (Spanish)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Giorno/i rimanenti</string>
+			<key>pfm_description</key>
+			<string>Localized label shown for remaining days in the info box. for Italian.</string>
+			<key>pfm_name</key>
+			<string>InfoboxLabelDaysRemainingLocalized_it</string>
+			<key>pfm_title</key>
+			<string>Info Box Label: Days Remaining (Italian)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Resterende dagen</string>
+			<key>pfm_description</key>
+			<string>Localized label shown for remaining days in the info box. for Dutch.</string>
+			<key>pfm_name</key>
+			<string>InfoboxLabelDaysRemainingLocalized_nl</string>
+			<key>pfm_title</key>
+			<string>Info Box Label: Days Remaining (Dutch)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Dias restantes</string>
+			<key>pfm_description</key>
+			<string>Localized label shown for remaining days in the info box. for Portuguese.</string>
+			<key>pfm_name</key>
+			<string>InfoboxLabelDaysRemainingLocalized_pt</string>
+			<key>pfm_title</key>
+			<string>Info Box Label: Days Remaining (Portuguese)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>残り日数</string>
+			<key>pfm_description</key>
+			<string>Localized label shown for remaining days in the info box. for Japanese.</string>
+			<key>pfm_name</key>
+			<string>InfoboxLabelDaysRemainingLocalized_ja</string>
+			<key>pfm_title</key>
+			<string>Info Box Label: Days Remaining (Japanese)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Last Restart</string>
+			<key>pfm_description</key>
+			<string>Label shown for the last restart value in the info box.</string>
+			<key>pfm_name</key>
+			<string>InfoboxLabelLastRestart</string>
+			<key>pfm_title</key>
+			<string>Info Box Label: Last Restart</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Last Restart</string>
+			<key>pfm_description</key>
+			<string>Localized label shown for the last restart value in the info box. for English.</string>
+			<key>pfm_name</key>
+			<string>InfoboxLabelLastRestartLocalized_en</string>
+			<key>pfm_title</key>
+			<string>Info Box Label: Last Restart (English)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Letzter Neustart</string>
+			<key>pfm_description</key>
+			<string>Localized label shown for the last restart value in the info box. for German.</string>
+			<key>pfm_name</key>
+			<string>InfoboxLabelLastRestartLocalized_de</string>
+			<key>pfm_title</key>
+			<string>Info Box Label: Last Restart (German)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Dernier redémarrage</string>
+			<key>pfm_description</key>
+			<string>Localized label shown for the last restart value in the info box. for French.</string>
+			<key>pfm_name</key>
+			<string>InfoboxLabelLastRestartLocalized_fr</string>
+			<key>pfm_title</key>
+			<string>Info Box Label: Last Restart (French)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Último reinicio</string>
+			<key>pfm_description</key>
+			<string>Localized label shown for the last restart value in the info box. for Spanish.</string>
+			<key>pfm_name</key>
+			<string>InfoboxLabelLastRestartLocalized_es</string>
+			<key>pfm_title</key>
+			<string>Info Box Label: Last Restart (Spanish)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Ultimo riavvio</string>
+			<key>pfm_description</key>
+			<string>Localized label shown for the last restart value in the info box. for Italian.</string>
+			<key>pfm_name</key>
+			<string>InfoboxLabelLastRestartLocalized_it</string>
+			<key>pfm_title</key>
+			<string>Info Box Label: Last Restart (Italian)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Laatste herstart</string>
+			<key>pfm_description</key>
+			<string>Localized label shown for the last restart value in the info box. for Dutch.</string>
+			<key>pfm_name</key>
+			<string>InfoboxLabelLastRestartLocalized_nl</string>
+			<key>pfm_title</key>
+			<string>Info Box Label: Last Restart (Dutch)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Último reinício</string>
+			<key>pfm_description</key>
+			<string>Localized label shown for the last restart value in the info box. for Portuguese.</string>
+			<key>pfm_name</key>
+			<string>InfoboxLabelLastRestartLocalized_pt</string>
+			<key>pfm_title</key>
+			<string>Info Box Label: Last Restart (Portuguese)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>最終再起動</string>
+			<key>pfm_description</key>
+			<string>Localized label shown for the last restart value in the info box. for Japanese.</string>
+			<key>pfm_name</key>
+			<string>InfoboxLabelLastRestartLocalized_ja</string>
+			<key>pfm_title</key>
+			<string>Info Box Label: Last Restart (Japanese)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Free Disk Space</string>
+			<key>pfm_description</key>
+			<string>Label shown for free disk space in the info box.</string>
+			<key>pfm_name</key>
+			<string>InfoboxLabelFreeDiskSpace</string>
+			<key>pfm_title</key>
+			<string>Info Box Label: Free Disk Space</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Free Disk Space</string>
+			<key>pfm_description</key>
+			<string>Localized label shown for free disk space in the info box. for English.</string>
+			<key>pfm_name</key>
+			<string>InfoboxLabelFreeDiskSpaceLocalized_en</string>
+			<key>pfm_title</key>
+			<string>Info Box Label: Free Disk Space (English)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Freier Festplattenspeicher</string>
+			<key>pfm_description</key>
+			<string>Localized label shown for free disk space in the info box. for German.</string>
+			<key>pfm_name</key>
+			<string>InfoboxLabelFreeDiskSpaceLocalized_de</string>
+			<key>pfm_title</key>
+			<string>Info Box Label: Free Disk Space (German)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Espace disque libre</string>
+			<key>pfm_description</key>
+			<string>Localized label shown for free disk space in the info box. for French.</string>
+			<key>pfm_name</key>
+			<string>InfoboxLabelFreeDiskSpaceLocalized_fr</string>
+			<key>pfm_title</key>
+			<string>Info Box Label: Free Disk Space (French)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Espacio libre en disco</string>
+			<key>pfm_description</key>
+			<string>Localized label shown for free disk space in the info box. for Spanish.</string>
+			<key>pfm_name</key>
+			<string>InfoboxLabelFreeDiskSpaceLocalized_es</string>
+			<key>pfm_title</key>
+			<string>Info Box Label: Free Disk Space (Spanish)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Spazio libero su disco</string>
+			<key>pfm_description</key>
+			<string>Localized label shown for free disk space in the info box. for Italian.</string>
+			<key>pfm_name</key>
+			<string>InfoboxLabelFreeDiskSpaceLocalized_it</string>
+			<key>pfm_title</key>
+			<string>Info Box Label: Free Disk Space (Italian)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Vrije schijfruimte</string>
+			<key>pfm_description</key>
+			<string>Localized label shown for free disk space in the info box. for Dutch.</string>
+			<key>pfm_name</key>
+			<string>InfoboxLabelFreeDiskSpaceLocalized_nl</string>
+			<key>pfm_title</key>
+			<string>Info Box Label: Free Disk Space (Dutch)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Espaço livre em disco</string>
+			<key>pfm_description</key>
+			<string>Localized label shown for free disk space in the info box. for Portuguese.</string>
+			<key>pfm_name</key>
+			<string>InfoboxLabelFreeDiskSpaceLocalized_pt</string>
+			<key>pfm_title</key>
+			<string>Info Box Label: Free Disk Space (Portuguese)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>空きディスク容量</string>
+			<key>pfm_description</key>
+			<string>Localized label shown for free disk space in the info box. for Japanese.</string>
+			<key>pfm_name</key>
+			<string>InfoboxLabelFreeDiskSpaceLocalized_ja</string>
+			<key>pfm_title</key>
+			<string>Info Box Label: Free Disk Space (Japanese)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>However, your Mac **will automatically restart and {titleMessageUpdateOrUpgrade:l}** on **{deadlineDisplay}** if you have not {titleMessageUpdateOrUpgrade:l}d before the deadline.</string>
+			<key>pfm_description</key>
+			<string>Sentence appended to the main message when the deadline renders as a full date.</string>
+			<key>pfm_name</key>
+			<string>DeadlineEnforcementMessageAbsolute</string>
+			<key>pfm_title</key>
+			<string>Deadline Enforcement Message (Absolute)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>However, your Mac **will automatically restart and {titleMessageUpdateOrUpgrade:l}** on **{deadlineDisplay}** if you have not {titleMessageUpdateOrUpgrade:l}d before the deadline.</string>
+			<key>pfm_description</key>
+			<string>Localized sentence appended to the main message when the deadline renders as a full date. for English.</string>
+			<key>pfm_name</key>
+			<string>DeadlineEnforcementMessageAbsoluteLocalized_en</string>
+			<key>pfm_title</key>
+			<string>Deadline Enforcement Message (Absolute) (English)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Andernfalls **wird dein Mac am {deadlineDisplay} automatisch neu gestartet, um das erforderliche macOS-{titleMessageUpdateOrUpgrade:l} zu installieren**.</string>
+			<key>pfm_description</key>
+			<string>Localized sentence appended to the main message when the deadline renders as a full date. for German.</string>
+			<key>pfm_name</key>
+			<string>DeadlineEnforcementMessageAbsoluteLocalized_de</string>
+			<key>pfm_title</key>
+			<string>Deadline Enforcement Message (Absolute) (German)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Sinon, votre Mac **redémarrera automatiquement et appliquera la {titleMessageUpdateOrUpgrade:l}** le **{deadlineDisplay}**.</string>
+			<key>pfm_description</key>
+			<string>Localized sentence appended to the main message when the deadline renders as a full date. for French.</string>
+			<key>pfm_name</key>
+			<string>DeadlineEnforcementMessageAbsoluteLocalized_fr</string>
+			<key>pfm_title</key>
+			<string>Deadline Enforcement Message (Absolute) (French)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>De lo contrario, su Mac **se reiniciará automáticamente y aplicará la {titleMessageUpdateOrUpgrade:l}** el **{deadlineDisplay}**.</string>
+			<key>pfm_description</key>
+			<string>Localized sentence appended to the main message when the deadline renders as a full date. for Spanish.</string>
+			<key>pfm_name</key>
+			<string>DeadlineEnforcementMessageAbsoluteLocalized_es</string>
+			<key>pfm_title</key>
+			<string>Deadline Enforcement Message (Absolute) (Spanish)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Tuttavia, il tuo Mac **si riavvierà automaticamente ed eseguirà l&apos;{titleMessageUpdateOrUpgrade:l}** il **{deadlineDisplay}** se non hai completato l&apos;{titleMessageUpdateOrUpgrade:l} entro la scadenza.</string>
+			<key>pfm_description</key>
+			<string>Localized sentence appended to the main message when the deadline renders as a full date. for Italian.</string>
+			<key>pfm_name</key>
+			<string>DeadlineEnforcementMessageAbsoluteLocalized_it</string>
+			<key>pfm_title</key>
+			<string>Deadline Enforcement Message (Absolute) (Italian)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Anders wordt uw Mac **automatisch opnieuw opgestart en wordt de {titleMessageUpdateOrUpgrade:l} uitgevoerd** op **{deadlineDisplay}**.</string>
+			<key>pfm_description</key>
+			<string>Localized sentence appended to the main message when the deadline renders as a full date. for Dutch.</string>
+			<key>pfm_name</key>
+			<string>DeadlineEnforcementMessageAbsoluteLocalized_nl</string>
+			<key>pfm_title</key>
+			<string>Deadline Enforcement Message (Absolute) (Dutch)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Caso contrario, o seu Mac **reiniciará automaticamente e aplicará a {titleMessageUpdateOrUpgrade:l}** em **{deadlineDisplay}**.</string>
+			<key>pfm_description</key>
+			<string>Localized sentence appended to the main message when the deadline renders as a full date. for Portuguese.</string>
+			<key>pfm_name</key>
+			<string>DeadlineEnforcementMessageAbsoluteLocalized_pt</string>
+			<key>pfm_title</key>
+			<string>Deadline Enforcement Message (Absolute) (Portuguese)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>期限の **{deadlineDisplay}** までに実行されない場合、Macは**自動的に再起動して {titleMessageUpdateOrUpgrade:l} を適用**します。</string>
+			<key>pfm_description</key>
+			<string>Localized sentence appended to the main message when the deadline renders as a full date. for Japanese.</string>
+			<key>pfm_name</key>
+			<string>DeadlineEnforcementMessageAbsoluteLocalized_ja</string>
+			<key>pfm_title</key>
+			<string>Deadline Enforcement Message (Absolute) (Japanese)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>However, your Mac **will automatically restart and {titleMessageUpdateOrUpgrade:l}** **{deadlineDisplay}** if you have not {titleMessageUpdateOrUpgrade:l}d before the deadline.</string>
+			<key>pfm_description</key>
+			<string>Sentence appended to the main message when the deadline renders as Today or Tomorrow.</string>
+			<key>pfm_name</key>
+			<string>DeadlineEnforcementMessageRelative</string>
+			<key>pfm_title</key>
+			<string>Deadline Enforcement Message (Relative)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>However, your Mac **will automatically restart and {titleMessageUpdateOrUpgrade:l}** **{deadlineDisplay}** if you have not {titleMessageUpdateOrUpgrade:l}d before the deadline.</string>
+			<key>pfm_description</key>
+			<string>Localized sentence appended to the main message when the deadline renders as today or tomorrow. for English.</string>
+			<key>pfm_name</key>
+			<string>DeadlineEnforcementMessageRelativeLocalized_en</string>
+			<key>pfm_title</key>
+			<string>Deadline Enforcement Message (Relative) (English)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Andernfalls **wird dein Mac {deadlineDisplay} automatisch neu gestartet, um das erforderliche macOS-{titleMessageUpdateOrUpgrade:l} zu installieren**.</string>
+			<key>pfm_description</key>
+			<string>Localized sentence appended to the main message when the deadline renders as today or tomorrow. for German.</string>
+			<key>pfm_name</key>
+			<string>DeadlineEnforcementMessageRelativeLocalized_de</string>
+			<key>pfm_title</key>
+			<string>Deadline Enforcement Message (Relative) (German)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Sinon, votre Mac **redémarrera automatiquement et appliquera la {titleMessageUpdateOrUpgrade:l}** **{deadlineDisplay}**.</string>
+			<key>pfm_description</key>
+			<string>Localized sentence appended to the main message when the deadline renders as today or tomorrow. for French.</string>
+			<key>pfm_name</key>
+			<string>DeadlineEnforcementMessageRelativeLocalized_fr</string>
+			<key>pfm_title</key>
+			<string>Deadline Enforcement Message (Relative) (French)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>De lo contrario, su Mac **se reiniciará automáticamente y aplicará la {titleMessageUpdateOrUpgrade:l}** **{deadlineDisplay}**.</string>
+			<key>pfm_description</key>
+			<string>Localized sentence appended to the main message when the deadline renders as today or tomorrow. for Spanish.</string>
+			<key>pfm_name</key>
+			<string>DeadlineEnforcementMessageRelativeLocalized_es</string>
+			<key>pfm_title</key>
+			<string>Deadline Enforcement Message (Relative) (Spanish)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Tuttavia, il tuo Mac **si riavvierà automaticamente ed eseguirà l&apos;{titleMessageUpdateOrUpgrade:l}** **{deadlineDisplay}** se non hai completato l&apos;{titleMessageUpdateOrUpgrade:l} entro la scadenza.</string>
+			<key>pfm_description</key>
+			<string>Localized sentence appended to the main message when the deadline renders as today or tomorrow. for Italian.</string>
+			<key>pfm_name</key>
+			<string>DeadlineEnforcementMessageRelativeLocalized_it</string>
+			<key>pfm_title</key>
+			<string>Deadline Enforcement Message (Relative) (Italian)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Anders wordt uw Mac **automatisch opnieuw opgestart en wordt de {titleMessageUpdateOrUpgrade:l} uitgevoerd** **{deadlineDisplay}**.</string>
+			<key>pfm_description</key>
+			<string>Localized sentence appended to the main message when the deadline renders as today or tomorrow. for Dutch.</string>
+			<key>pfm_name</key>
+			<string>DeadlineEnforcementMessageRelativeLocalized_nl</string>
+			<key>pfm_title</key>
+			<string>Deadline Enforcement Message (Relative) (Dutch)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Caso contrario, o seu Mac **reiniciará automaticamente e aplicará a {titleMessageUpdateOrUpgrade:l}** **{deadlineDisplay}**.</string>
+			<key>pfm_description</key>
+			<string>Localized sentence appended to the main message when the deadline renders as today or tomorrow. for Portuguese.</string>
+			<key>pfm_name</key>
+			<string>DeadlineEnforcementMessageRelativeLocalized_pt</string>
+			<key>pfm_title</key>
+			<string>Deadline Enforcement Message (Relative) (Portuguese)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>期限の **{deadlineDisplay}** までに実行されない場合、Macは**自動的に再起動して {titleMessageUpdateOrUpgrade:l} を適用**します。</string>
+			<key>pfm_description</key>
+			<string>Localized sentence appended to the main message when the deadline renders as today or tomorrow. for Japanese.</string>
+			<key>pfm_name</key>
+			<string>DeadlineEnforcementMessageRelativeLocalized_ja</string>
+			<key>pfm_title</key>
+			<string>Deadline Enforcement Message (Relative) (Japanese)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Restart Your Mac</string>
+			<key>pfm_description</key>
+			<string>Title shown when past-deadline restart behavior is Prompt.</string>
+			<key>pfm_name</key>
+			<string>PastDeadlinePromptTitle</string>
+			<key>pfm_title</key>
+			<string>Past Deadline Prompt Title</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Restart Your Mac</string>
+			<key>pfm_description</key>
+			<string>Localized title shown when past-deadline restart behavior is prompt. for English.</string>
+			<key>pfm_name</key>
+			<string>PastDeadlinePromptTitleLocalized_en</string>
+			<key>pfm_title</key>
+			<string>Past Deadline Prompt Title (English)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Starte deinen Mac neu</string>
+			<key>pfm_description</key>
+			<string>Localized title shown when past-deadline restart behavior is prompt. for German.</string>
+			<key>pfm_name</key>
+			<string>PastDeadlinePromptTitleLocalized_de</string>
+			<key>pfm_title</key>
+			<string>Past Deadline Prompt Title (German)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Redémarrez votre Mac</string>
+			<key>pfm_description</key>
+			<string>Localized title shown when past-deadline restart behavior is prompt. for French.</string>
+			<key>pfm_name</key>
+			<string>PastDeadlinePromptTitleLocalized_fr</string>
+			<key>pfm_title</key>
+			<string>Past Deadline Prompt Title (French)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Reinicie su Mac</string>
+			<key>pfm_description</key>
+			<string>Localized title shown when past-deadline restart behavior is prompt. for Spanish.</string>
+			<key>pfm_name</key>
+			<string>PastDeadlinePromptTitleLocalized_es</string>
+			<key>pfm_title</key>
+			<string>Past Deadline Prompt Title (Spanish)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Riavvia il tuo Mac</string>
+			<key>pfm_description</key>
+			<string>Localized title shown when past-deadline restart behavior is prompt. for Italian.</string>
+			<key>pfm_name</key>
+			<string>PastDeadlinePromptTitleLocalized_it</string>
+			<key>pfm_title</key>
+			<string>Past Deadline Prompt Title (Italian)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Start uw Mac opnieuw op</string>
+			<key>pfm_description</key>
+			<string>Localized title shown when past-deadline restart behavior is prompt. for Dutch.</string>
+			<key>pfm_name</key>
+			<string>PastDeadlinePromptTitleLocalized_nl</string>
+			<key>pfm_title</key>
+			<string>Past Deadline Prompt Title (Dutch)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Reinicie o seu Mac</string>
+			<key>pfm_description</key>
+			<string>Localized title shown when past-deadline restart behavior is prompt. for Portuguese.</string>
+			<key>pfm_name</key>
+			<string>PastDeadlinePromptTitleLocalized_pt</string>
+			<key>pfm_title</key>
+			<string>Past Deadline Prompt Title (Portuguese)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Macを再起動してください</string>
+			<key>pfm_description</key>
+			<string>Localized title shown when past-deadline restart behavior is prompt. for Japanese.</string>
+			<key>pfm_name</key>
+			<string>PastDeadlinePromptTitleLocalized_ja</string>
+			<key>pfm_title</key>
+			<string>Past Deadline Prompt Title (Japanese)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>**Please restart your Mac now**&lt;br&gt;&lt;br&gt;Happy {weekday}, {loggedInUserFirstname}!&lt;br&gt;&lt;br&gt;Your Mac is past the **{ddmVersionStringDeadlineHumanReadable}** deadline to {titleMessageUpdateOrUpgrade:l} to macOS {ddmVersionString}.&lt;br&gt;&lt;br&gt;Click **{button1text}** to restart now to help complete the required {titleMessageUpdateOrUpgrade:l}.&lt;br&gt;&lt;br&gt;(This reminder will persist until your Mac has been restarted.)</string>
+			<key>pfm_description</key>
+			<string>Message shown when past-deadline restart behavior is Prompt.</string>
+			<key>pfm_name</key>
+			<string>PastDeadlinePromptMessage</string>
+			<key>pfm_title</key>
+			<string>Past Deadline Prompt Message</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>**Please restart your Mac now**&lt;br&gt;&lt;br&gt;Happy {weekday}, {loggedInUserFirstname}!&lt;br&gt;&lt;br&gt;Your Mac is past the **{ddmVersionStringDeadlineHumanReadable}** deadline to {titleMessageUpdateOrUpgrade:l} to macOS {ddmVersionString}.&lt;br&gt;&lt;br&gt;Click **{button1text}** to restart now to help complete the required {titleMessageUpdateOrUpgrade:l}.&lt;br&gt;&lt;br&gt;(This reminder will persist until your Mac has been restarted.)</string>
+			<key>pfm_description</key>
+			<string>Localized message shown when past-deadline restart behavior is prompt. for English.</string>
+			<key>pfm_name</key>
+			<string>PastDeadlinePromptMessageLocalized_en</string>
+			<key>pfm_title</key>
+			<string>Past Deadline Prompt Message (English)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>**Bitte starte deinen Mac jetzt neu**&lt;br&gt;&lt;br&gt;Hallo {loggedInUserFirstname}!&lt;br&gt;&lt;br&gt;Dein Mac hat die Frist **{ddmVersionStringDeadlineHumanReadable}** für die Installation von macOS {ddmVersionString} überschritten.&lt;br&gt;&lt;br&gt;Klicke auf **{button1text}**, um den Neustart jetzt durchzuführen und die erforderliche Installation abzuschließen.&lt;br&gt;&lt;br&gt;(Diese Erinnerung bleibt sichtbar, bis dein Mac neu gestartet wurde.)</string>
+			<key>pfm_description</key>
+			<string>Localized message shown when past-deadline restart behavior is prompt. for German.</string>
+			<key>pfm_name</key>
+			<string>PastDeadlinePromptMessageLocalized_de</string>
+			<key>pfm_title</key>
+			<string>Past Deadline Prompt Message (German)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>**Veuillez redémarrer votre Mac maintenant**&lt;br&gt;&lt;br&gt;Bonjour {loggedInUserFirstname}!&lt;br&gt;&lt;br&gt;Votre Mac a dépassé l&apos;échéance **{ddmVersionStringDeadlineHumanReadable}** pour la {titleMessageUpdateOrUpgrade:l} vers macOS {ddmVersionString}.&lt;br&gt;&lt;br&gt;Cliquez sur **{button1text}** pour redémarrer maintenant et terminer la {titleMessageUpdateOrUpgrade:l} requise.&lt;br&gt;&lt;br&gt;(Ce rappel restera affiché jusqu&apos;au redémarrage de votre Mac.)</string>
+			<key>pfm_description</key>
+			<string>Localized message shown when past-deadline restart behavior is prompt. for French.</string>
+			<key>pfm_name</key>
+			<string>PastDeadlinePromptMessageLocalized_fr</string>
+			<key>pfm_title</key>
+			<string>Past Deadline Prompt Message (French)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>**Reinicie su Mac ahora**&lt;br&gt;&lt;br&gt;Hola {loggedInUserFirstname}.&lt;br&gt;&lt;br&gt;Su Mac ha superado la fecha límite de **{ddmVersionStringDeadlineHumanReadable}** para aplicar la {titleMessageUpdateOrUpgrade:l} a macOS {ddmVersionString}.&lt;br&gt;&lt;br&gt;Haga clic en **{button1text}** para reiniciar ahora y ayudar a completar la {titleMessageUpdateOrUpgrade:l} requerida.&lt;br&gt;&lt;br&gt;(Este recordatorio permanecerá visible hasta que se reinicie su Mac.)</string>
+			<key>pfm_description</key>
+			<string>Localized message shown when past-deadline restart behavior is prompt. for Spanish.</string>
+			<key>pfm_name</key>
+			<string>PastDeadlinePromptMessageLocalized_es</string>
+			<key>pfm_title</key>
+			<string>Past Deadline Prompt Message (Spanish)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>**Riavvia subito il tuo Mac**&lt;br&gt;&lt;br&gt;Buon {weekday}, {loggedInUserFirstname}!&lt;br&gt;&lt;br&gt;Il tuo Mac ha superato la scadenza del **{ddmVersionStringDeadlineHumanReadable}** per eseguire l&apos;{titleMessageUpdateOrUpgrade:l} a macOS {ddmVersionString}.&lt;br&gt;&lt;br&gt;Fai clic su **{button1text}** per riavviare ora e completare l&apos;{titleMessageUpdateOrUpgrade:l} richiesto.&lt;br&gt;&lt;br&gt;(Questo promemoria rimarrà visibile fino al riavvio del Mac.)</string>
+			<key>pfm_description</key>
+			<string>Localized message shown when past-deadline restart behavior is prompt. for Italian.</string>
+			<key>pfm_name</key>
+			<string>PastDeadlinePromptMessageLocalized_it</string>
+			<key>pfm_title</key>
+			<string>Past Deadline Prompt Message (Italian)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>**Start uw Mac nu opnieuw op**&lt;br&gt;&lt;br&gt;Hallo {loggedInUserFirstname}!&lt;br&gt;&lt;br&gt;Uw Mac heeft de deadline van **{ddmVersionStringDeadlineHumanReadable}** overschreden om de {titleMessageUpdateOrUpgrade:l} naar macOS {ddmVersionString} uit te voeren.&lt;br&gt;&lt;br&gt;Klik op **{button1text}** om nu opnieuw op te starten en de vereiste {titleMessageUpdateOrUpgrade:l} te helpen voltooien.&lt;br&gt;&lt;br&gt;(Deze herinnering blijft zichtbaar totdat uw Mac opnieuw is opgestart.)</string>
+			<key>pfm_description</key>
+			<string>Localized message shown when past-deadline restart behavior is prompt. for Dutch.</string>
+			<key>pfm_name</key>
+			<string>PastDeadlinePromptMessageLocalized_nl</string>
+			<key>pfm_title</key>
+			<string>Past Deadline Prompt Message (Dutch)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>**Reinicie o seu Mac agora**&lt;br&gt;&lt;br&gt;Ola {loggedInUserFirstname}.&lt;br&gt;&lt;br&gt;O seu Mac ultrapassou o prazo de **{ddmVersionStringDeadlineHumanReadable}** para aplicar a {titleMessageUpdateOrUpgrade:l} para o macOS {ddmVersionString}.&lt;br&gt;&lt;br&gt;Clique em **{button1text}** para reiniciar agora e ajudar a concluir a {titleMessageUpdateOrUpgrade:l} obrigatória.&lt;br&gt;&lt;br&gt;(Este lembrete permanecerá visível até o seu Mac ser reiniciado.)</string>
+			<key>pfm_description</key>
+			<string>Localized message shown when past-deadline restart behavior is prompt. for Portuguese.</string>
+			<key>pfm_name</key>
+			<string>PastDeadlinePromptMessageLocalized_pt</string>
+			<key>pfm_title</key>
+			<string>Past Deadline Prompt Message (Portuguese)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>**今すぐMacを再起動してください**&lt;br&gt;&lt;br&gt;{loggedInUserFirstname}さん、{weekday}もお疲れさまです。&lt;br&gt;&lt;br&gt;このMacは、macOS {ddmVersionString} への {titleMessageUpdateOrUpgrade:l} の期限 **{ddmVersionStringDeadlineHumanReadable}** を過ぎています。&lt;br&gt;&lt;br&gt;必須の {titleMessageUpdateOrUpgrade:l} を完了するため、**{button1text}** をクリックして今すぐ再起動してください。&lt;br&gt;&lt;br&gt;（この通知はMacが再起動されるまで表示されます。）</string>
+			<key>pfm_description</key>
+			<string>Localized message shown when past-deadline restart behavior is prompt. for Japanese.</string>
+			<key>pfm_name</key>
+			<string>PastDeadlinePromptMessageLocalized_ja</string>
+			<key>pfm_title</key>
+			<string>Past Deadline Prompt Message (Japanese)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Your Mac is restarting</string>
+			<key>pfm_description</key>
+			<string>Title shown when past-deadline restart behavior is Force.</string>
+			<key>pfm_name</key>
+			<string>PastDeadlineForceTitle</string>
+			<key>pfm_title</key>
+			<string>Past Deadline Force Title</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Your Mac is restarting</string>
+			<key>pfm_description</key>
+			<string>Localized title shown when past-deadline restart behavior is force. for English.</string>
+			<key>pfm_name</key>
+			<string>PastDeadlineForceTitleLocalized_en</string>
+			<key>pfm_title</key>
+			<string>Past Deadline Force Title (English)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Dein Mac wird neu gestartet</string>
+			<key>pfm_description</key>
+			<string>Localized title shown when past-deadline restart behavior is force. for German.</string>
+			<key>pfm_name</key>
+			<string>PastDeadlineForceTitleLocalized_de</string>
+			<key>pfm_title</key>
+			<string>Past Deadline Force Title (German)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Votre Mac redémarrera</string>
+			<key>pfm_description</key>
+			<string>Localized title shown when past-deadline restart behavior is force. for French.</string>
+			<key>pfm_name</key>
+			<string>PastDeadlineForceTitleLocalized_fr</string>
+			<key>pfm_title</key>
+			<string>Past Deadline Force Title (French)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Su Mac se está reiniciando</string>
+			<key>pfm_description</key>
+			<string>Localized title shown when past-deadline restart behavior is force. for Spanish.</string>
+			<key>pfm_name</key>
+			<string>PastDeadlineForceTitleLocalized_es</string>
+			<key>pfm_title</key>
+			<string>Past Deadline Force Title (Spanish)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Il tuo Mac si sta riavviando</string>
+			<key>pfm_description</key>
+			<string>Localized title shown when past-deadline restart behavior is force. for Italian.</string>
+			<key>pfm_name</key>
+			<string>PastDeadlineForceTitleLocalized_it</string>
+			<key>pfm_title</key>
+			<string>Past Deadline Force Title (Italian)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Uw Mac wordt opnieuw opgestart</string>
+			<key>pfm_description</key>
+			<string>Localized title shown when past-deadline restart behavior is force. for Dutch.</string>
+			<key>pfm_name</key>
+			<string>PastDeadlineForceTitleLocalized_nl</string>
+			<key>pfm_title</key>
+			<string>Past Deadline Force Title (Dutch)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>O seu Mac está a reiniciar</string>
+			<key>pfm_description</key>
+			<string>Localized title shown when past-deadline restart behavior is force. for Portuguese.</string>
+			<key>pfm_name</key>
+			<string>PastDeadlineForceTitleLocalized_pt</string>
+			<key>pfm_title</key>
+			<string>Past Deadline Force Title (Portuguese)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Macを再起動しています</string>
+			<key>pfm_description</key>
+			<string>Localized title shown when past-deadline restart behavior is force. for Japanese.</string>
+			<key>pfm_name</key>
+			<string>PastDeadlineForceTitleLocalized_ja</string>
+			<key>pfm_title</key>
+			<string>Past Deadline Force Title (Japanese)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>**Your Mac will restart when the timer below expires.**&lt;br&gt;&lt;br&gt;Happy {weekday}, {loggedInUserFirstname}!&lt;br&gt;&lt;br&gt;Your Mac is past the **{ddmVersionStringDeadlineHumanReadable}** deadline to install macOS {ddmVersionString} and needs to be restarted to help the {titleMessageUpdateOrUpgrade:l} process to complete, or you can click **{button1text}**.&lt;br&gt;&lt;br&gt;(This reminder will persist until your Mac has been restarted.)</string>
+			<key>pfm_description</key>
+			<string>Message shown when past-deadline restart behavior is Force.</string>
+			<key>pfm_name</key>
+			<string>PastDeadlineForceMessage</string>
+			<key>pfm_title</key>
+			<string>Past Deadline Force Message</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>**Your Mac will restart when the timer below expires.**&lt;br&gt;&lt;br&gt;Happy {weekday}, {loggedInUserFirstname}!&lt;br&gt;&lt;br&gt;Your Mac is past the **{ddmVersionStringDeadlineHumanReadable}** deadline to install macOS {ddmVersionString} and needs to be restarted to help the {titleMessageUpdateOrUpgrade:l} process to complete, or you can click **{button1text}**.&lt;br&gt;&lt;br&gt;(This reminder will persist until your Mac has been restarted.)</string>
+			<key>pfm_description</key>
+			<string>Localized message shown when past-deadline restart behavior is force. for English.</string>
+			<key>pfm_name</key>
+			<string>PastDeadlineForceMessageLocalized_en</string>
+			<key>pfm_title</key>
+			<string>Past Deadline Force Message (English)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>**Dein Mac wird neu gestartet, wenn der Timer unten abläuft.**&lt;br&gt;&lt;br&gt;Hallo {loggedInUserFirstname}!&lt;br&gt;&lt;br&gt;Die Frist **{ddmVersionStringDeadlineHumanReadable}** für macOS {ddmVersionString} wurde überschritten. Ein Neustart ist erforderlich, um die Installation abzuschließen. Du kannst auch auf **{button1text}** klicken.&lt;br&gt;&lt;br&gt;(Diese Erinnerung bleibt sichtbar, bis dein Mac neu gestartet wurde.)</string>
+			<key>pfm_description</key>
+			<string>Localized message shown when past-deadline restart behavior is force. for German.</string>
+			<key>pfm_name</key>
+			<string>PastDeadlineForceMessageLocalized_de</string>
+			<key>pfm_title</key>
+			<string>Past Deadline Force Message (German)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>**Votre Mac redémarrera lorsque le minuteur ci-dessous expirera.**&lt;br&gt;&lt;br&gt;Bonjour {loggedInUserFirstname}!&lt;br&gt;&lt;br&gt;Votre Mac a dépassé l&apos;échéance **{ddmVersionStringDeadlineHumanReadable}** pour macOS {ddmVersionString}. Un redémarrage est requis pour terminer la {titleMessageUpdateOrUpgrade:l} ; vous pouvez aussi cliquer sur **{button1text}**.&lt;br&gt;&lt;br&gt;(Ce rappel restera affiché jusqu&apos;au redémarrage de votre Mac.)</string>
+			<key>pfm_description</key>
+			<string>Localized message shown when past-deadline restart behavior is force. for French.</string>
+			<key>pfm_name</key>
+			<string>PastDeadlineForceMessageLocalized_fr</string>
+			<key>pfm_title</key>
+			<string>Past Deadline Force Message (French)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>**Su Mac se reiniciará cuando expire el temporizador de abajo.**&lt;br&gt;&lt;br&gt;Hola {loggedInUserFirstname}.&lt;br&gt;&lt;br&gt;Su Mac ha superado la fecha límite de **{ddmVersionStringDeadlineHumanReadable}** para instalar macOS {ddmVersionString} y debe reiniciarse para ayudar a completar la {titleMessageUpdateOrUpgrade:l}, o bien puede hacer clic en **{button1text}**.&lt;br&gt;&lt;br&gt;(Este recordatorio permanecerá visible hasta que se reinicie su Mac.)</string>
+			<key>pfm_description</key>
+			<string>Localized message shown when past-deadline restart behavior is force. for Spanish.</string>
+			<key>pfm_name</key>
+			<string>PastDeadlineForceMessageLocalized_es</string>
+			<key>pfm_title</key>
+			<string>Past Deadline Force Message (Spanish)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>**Il tuo Mac si riavvierà allo scadere del timer sottostante.**&lt;br&gt;&lt;br&gt;Buon {weekday}, {loggedInUserFirstname}!&lt;br&gt;&lt;br&gt;Il tuo Mac ha superato la scadenza del **{ddmVersionStringDeadlineHumanReadable}** per installare macOS {ddmVersionString} e deve essere riavviato per completare il processo di {titleMessageUpdateOrUpgrade:l}, oppure puoi fare clic su **{button1text}**.&lt;br&gt;&lt;br&gt;(Questo promemoria rimarrà visibile fino al riavvio del Mac.)</string>
+			<key>pfm_description</key>
+			<string>Localized message shown when past-deadline restart behavior is force. for Italian.</string>
+			<key>pfm_name</key>
+			<string>PastDeadlineForceMessageLocalized_it</string>
+			<key>pfm_title</key>
+			<string>Past Deadline Force Message (Italian)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>**Uw Mac wordt opnieuw opgestart wanneer de timer hieronder afloopt.**&lt;br&gt;&lt;br&gt;Hallo {loggedInUserFirstname}!&lt;br&gt;&lt;br&gt;Uw Mac heeft de deadline van **{ddmVersionStringDeadlineHumanReadable}** overschreden om macOS {ddmVersionString} te installeren en moet opnieuw worden opgestart om het {titleMessageUpdateOrUpgrade:l}-proces te helpen voltooien, of u kunt op **{button1text}** klikken.&lt;br&gt;&lt;br&gt;(Deze herinnering blijft zichtbaar totdat uw Mac opnieuw is opgestart.)</string>
+			<key>pfm_description</key>
+			<string>Localized message shown when past-deadline restart behavior is force. for Dutch.</string>
+			<key>pfm_name</key>
+			<string>PastDeadlineForceMessageLocalized_nl</string>
+			<key>pfm_title</key>
+			<string>Past Deadline Force Message (Dutch)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>**O seu Mac será reiniciado quando o temporizador abaixo terminar.**&lt;br&gt;&lt;br&gt;Ola {loggedInUserFirstname}.&lt;br&gt;&lt;br&gt;O seu Mac ultrapassou o prazo de **{ddmVersionStringDeadlineHumanReadable}** para instalar o macOS {ddmVersionString} e precisa de ser reiniciado para ajudar a concluir a {titleMessageUpdateOrUpgrade:l}, ou pode clicar em **{button1text}**.&lt;br&gt;&lt;br&gt;(Este lembrete permanecerá visível até o seu Mac ser reiniciado.)</string>
+			<key>pfm_description</key>
+			<string>Localized message shown when past-deadline restart behavior is force. for Portuguese.</string>
+			<key>pfm_name</key>
+			<string>PastDeadlineForceMessageLocalized_pt</string>
+			<key>pfm_title</key>
+			<string>Past Deadline Force Message (Portuguese)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>**下のタイマーが切れるとMacが再起動します。**&lt;br&gt;&lt;br&gt;{loggedInUserFirstname}さん、{weekday}もお疲れさまです。&lt;br&gt;&lt;br&gt;このMacは、macOS {ddmVersionString} のインストール期限 **{ddmVersionStringDeadlineHumanReadable}** を過ぎています。{titleMessageUpdateOrUpgrade:l} を完了しやすくするため再起動が必要です。すぐに実行するには **{button1text}** をクリックしてください。&lt;br&gt;&lt;br&gt;（この通知はMacが再起動されるまで表示されます。）</string>
+			<key>pfm_description</key>
+			<string>Localized message shown when past-deadline restart behavior is force. for Japanese.</string>
+			<key>pfm_name</key>
+			<string>PastDeadlineForceMessageLocalized_ja</string>
+			<key>pfm_title</key>
+			<string>Past Deadline Force Message (Japanese)</string>
+			<key>pfm_type</key>
+			<string>string</string>
 		</dict>
 		<dict>
 			<key>pfm_default</key>
@@ -528,9 +3624,105 @@
 		</dict>
 		<dict>
 			<key>pfm_default</key>
-			<string>**Current:** macOS {installedmacOSVersion}&lt;br&gt;&lt;br&gt;**Required:** macOS {ddmVersionString}&lt;br&gt;&lt;br&gt;**Deadline:** {infoboxDeadlineDisplay}&lt;br&gt;&lt;br&gt;**Day(s) Remaining:** {infoboxDaysRemainingDisplay}&lt;br&gt;&lt;br&gt;**Last Restart:** {infoboxLastRestartDisplay}&lt;br&gt;&lt;br&gt;**Free Disk Space:** {diskSpaceHumanReadable}</string>
+			<string>**A required macOS {titleMessageUpdateOrUpgrade:l} is now available**&lt;br&gt;&lt;br&gt;Happy {weekday}, {loggedInUserFirstname}!&lt;br&gt;&lt;br&gt;Please {titleMessageUpdateOrUpgrade:l} to macOS **{ddmVersionString}** to ensure your Mac remains secure and compliant with organizational policies.{updateReadyMessage}&lt;br&gt;&lt;br&gt;To perform the {titleMessageUpdateOrUpgrade:l} now, click **{button1text}**, review the on-screen instructions, then click **{softwareUpdateButtonText}**.&lt;br&gt;&lt;br&gt;If you are unable to perform this {titleMessageUpdateOrUpgrade:l} now, click **{button2text}** to be reminded again later (which is disabled when the deadline is imminent).&lt;br&gt;&lt;br&gt;{deadlineEnforcementMessage}{excessiveUptimeWarningMessage}{diskSpaceWarningMessage}{supportAssistanceMessage}</string>
 			<key>pfm_description</key>
-			<string>Markdown-formatted info box content showing current and required versions and deadline.</string>
+			<string>Localized markdown-formatted message body displayed in the dialog. for English.</string>
+			<key>pfm_name</key>
+			<string>MessageLocalized_en</string>
+			<key>pfm_title</key>
+			<string>Dialog Message (English)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>**Ein erforderliches macOS-{titleMessageUpdateOrUpgrade:l} ist jetzt verfügbar**&lt;br&gt;&lt;br&gt;Hallo {loggedInUserFirstname}!&lt;br&gt;&lt;br&gt;Bitte installiere macOS **{ddmVersionString}**, damit dein Mac sicher bleibt und den Richtlinien entspricht.{updateReadyMessage}&lt;br&gt;&lt;br&gt;Um jetzt zu beginnen, klicke auf **{button1text}**, folge den Hinweisen auf dem Bildschirm und klicke anschließend auf **{softwareUpdateButtonText}**.&lt;br&gt;&lt;br&gt;Wenn du das jetzt nicht durchführen kannst, klicke auf **{button2text}**, um später erinnert zu werden (diese Option ist kurz vor der Frist deaktiviert).&lt;br&gt;&lt;br&gt;{deadlineEnforcementMessage}{excessiveUptimeWarningMessage}{diskSpaceWarningMessage}{supportAssistanceMessage}</string>
+			<key>pfm_description</key>
+			<string>Localized markdown-formatted message body displayed in the dialog. for German.</string>
+			<key>pfm_name</key>
+			<string>MessageLocalized_de</string>
+			<key>pfm_title</key>
+			<string>Dialog Message (German)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>**Une {titleMessageUpdateOrUpgrade:l} macOS requise est maintenant disponible**&lt;br&gt;&lt;br&gt;Bonjour, {loggedInUserFirstname}!&lt;br&gt;&lt;br&gt;Veuillez effectuer la {titleMessageUpdateOrUpgrade:l} vers macOS **{ddmVersionString}** afin de maintenir la sécurité et la conformité de votre Mac aux politiques de votre organisation.{updateReadyMessage}&lt;br&gt;&lt;br&gt;Pour effectuer la {titleMessageUpdateOrUpgrade:l} maintenant, cliquez sur **{button1text}**, suivez les instructions à l&apos;écran, puis cliquez sur **{softwareUpdateButtonText}**.&lt;br&gt;&lt;br&gt;Si vous ne pouvez pas effectuer cette {titleMessageUpdateOrUpgrade:l} maintenant, cliquez sur **{button2text}** pour recevoir un nouveau rappel plus tard (ce bouton est désactivé lorsque l&apos;échéance est imminente).&lt;br&gt;&lt;br&gt;{deadlineEnforcementMessage}{excessiveUptimeWarningMessage}{diskSpaceWarningMessage}{supportAssistanceMessage}</string>
+			<key>pfm_description</key>
+			<string>Localized markdown-formatted message body displayed in the dialog. for French.</string>
+			<key>pfm_name</key>
+			<string>MessageLocalized_fr</string>
+			<key>pfm_title</key>
+			<string>Dialog Message (French)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>**Ya está disponible una {titleMessageUpdateOrUpgrade:l} obligatoria de macOS**&lt;br&gt;&lt;br&gt;¡Feliz {weekday}, {loggedInUserFirstname}!&lt;br&gt;&lt;br&gt;Realice la {titleMessageUpdateOrUpgrade:l} a macOS **{ddmVersionString}** para mantener su Mac seguro y en cumplimiento con las políticas de la organización.{updateReadyMessage}&lt;br&gt;&lt;br&gt;Para realizar la {titleMessageUpdateOrUpgrade:l} ahora, haga clic en **{button1text}**, revise las instrucciones en pantalla y luego haga clic en **{softwareUpdateButtonText}**.&lt;br&gt;&lt;br&gt;Si no puede realizar esta {titleMessageUpdateOrUpgrade:l} ahora, haga clic en **{button2text}** para recibir otro recordatorio más tarde (esta opción se desactiva cuando se acerca la fecha límite).&lt;br&gt;&lt;br&gt;{deadlineEnforcementMessage}{excessiveUptimeWarningMessage}{diskSpaceWarningMessage}{supportAssistanceMessage}</string>
+			<key>pfm_description</key>
+			<string>Localized markdown-formatted message body displayed in the dialog. for Spanish.</string>
+			<key>pfm_name</key>
+			<string>MessageLocalized_es</string>
+			<key>pfm_title</key>
+			<string>Dialog Message (Spanish)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>**È ora disponibile un {titleMessageUpdateOrUpgrade:l} obbligatorio di macOS**&lt;br&gt;&lt;br&gt;Salve, {loggedInUserFirstname}!&lt;br&gt;&lt;br&gt;Esegui l&apos;{titleMessageUpdateOrUpgrade:l} a macOS **{ddmVersionString}** per garantire che il tuo Mac rimanga sicuro e conforme alle politiche organizzative.{updateReadyMessage}&lt;br&gt;&lt;br&gt;Per eseguire l&apos;{titleMessageUpdateOrUpgrade:l} ora, fai clic su **{button1text}**, segui le istruzioni sullo schermo, quindi fai clic su **{softwareUpdateButtonText}**.&lt;br&gt;&lt;br&gt;Se non puoi eseguire l&apos;{titleMessageUpdateOrUpgrade:l} ora, fai clic su **{button2text}** per ricevere un promemoria in seguito (disabilitato quando la scadenza è imminente).&lt;br&gt;&lt;br&gt;{deadlineEnforcementMessage}{excessiveUptimeWarningMessage}{diskSpaceWarningMessage}{supportAssistanceMessage}</string>
+			<key>pfm_description</key>
+			<string>Localized markdown-formatted message body displayed in the dialog. for Italian.</string>
+			<key>pfm_name</key>
+			<string>MessageLocalized_it</string>
+			<key>pfm_title</key>
+			<string>Dialog Message (Italian)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>**Een vereiste macOS {titleMessageUpdateOrUpgrade:l} is nu beschikbaar**&lt;br&gt;&lt;br&gt;Hallo, {loggedInUserFirstname}!&lt;br&gt;&lt;br&gt;Voer de macOS {titleMessageUpdateOrUpgrade:l} naar macOS **{ddmVersionString}** uit om ervoor te zorgen dat uw Mac veilig blijft en voldoet aan de beleidsregels van de organisatie.{updateReadyMessage}&lt;br&gt;&lt;br&gt;Om de {titleMessageUpdateOrUpgrade:l} nu uit te voeren, klikt u op **{button1text}**, volgt u de instructies op het scherm en klikt u vervolgens op **{softwareUpdateButtonText}**.&lt;br&gt;&lt;br&gt;Als u deze {titleMessageUpdateOrUpgrade:l} nu niet kunt uitvoeren, klikt u op **{button2text}** om later opnieuw te worden herinnerd (deze optie is niet beschikbaar wanneer de deadline nadert).&lt;br&gt;&lt;br&gt;{deadlineEnforcementMessage}{excessiveUptimeWarningMessage}{diskSpaceWarningMessage}{supportAssistanceMessage}</string>
+			<key>pfm_description</key>
+			<string>Localized markdown-formatted message body displayed in the dialog. for Dutch.</string>
+			<key>pfm_name</key>
+			<string>MessageLocalized_nl</string>
+			<key>pfm_title</key>
+			<string>Dialog Message (Dutch)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>**Já está disponível uma {titleMessageUpdateOrUpgrade:l} obrigatória do macOS**&lt;br&gt;&lt;br&gt;Feliz {weekday}, {loggedInUserFirstname}!&lt;br&gt;&lt;br&gt;Efetue a {titleMessageUpdateOrUpgrade:l} para o macOS **{ddmVersionString}** para manter o seu Mac seguro e em conformidade com as políticas da organização.{updateReadyMessage}&lt;br&gt;&lt;br&gt;Para efetuar a {titleMessageUpdateOrUpgrade:l} agora, clique em **{button1text}**, siga as instruções no ecrã e depois clique em **{softwareUpdateButtonText}**.&lt;br&gt;&lt;br&gt;Se não puder efetuar esta {titleMessageUpdateOrUpgrade:l} agora, clique em **{button2text}** para receber outro lembrete mais tarde (esta opção fica desativada quando o prazo se aproxima).&lt;br&gt;&lt;br&gt;{deadlineEnforcementMessage}{excessiveUptimeWarningMessage}{diskSpaceWarningMessage}{supportAssistanceMessage}</string>
+			<key>pfm_description</key>
+			<string>Localized markdown-formatted message body displayed in the dialog. for Portuguese.</string>
+			<key>pfm_name</key>
+			<string>MessageLocalized_pt</string>
+			<key>pfm_title</key>
+			<string>Dialog Message (Portuguese)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>**必須のmacOS {titleMessageUpdateOrUpgrade:l} を利用できます**&lt;br&gt;&lt;br&gt;{loggedInUserFirstname}さん、{weekday}もお疲れさまです。&lt;br&gt;&lt;br&gt;Macを安全に保ち、組織のポリシーに準拠するため、macOS **{ddmVersionString}** へ {titleMessageUpdateOrUpgrade:l} してください。{updateReadyMessage}&lt;br&gt;&lt;br&gt;今すぐ {titleMessageUpdateOrUpgrade:l} するには、**{button1text}** をクリックし、画面の案内を確認したあと **{softwareUpdateButtonText}** をクリックしてください。&lt;br&gt;&lt;br&gt;今すぐ実行できない場合は、**{button2text}** をクリックして後で再通知を受けてください（期限が近づくとこのオプションは無効になります）。&lt;br&gt;&lt;br&gt;{deadlineEnforcementMessage}{excessiveUptimeWarningMessage}{diskSpaceWarningMessage}{supportAssistanceMessage}</string>
+			<key>pfm_description</key>
+			<string>Localized markdown-formatted message body displayed in the dialog. for Japanese.</string>
+			<key>pfm_name</key>
+			<string>MessageLocalized_ja</string>
+			<key>pfm_title</key>
+			<string>Dialog Message (Japanese)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>**{infoboxLabelCurrent}:** macOS {installedmacOSVersion}&lt;br&gt;&lt;br&gt;**{infoboxLabelRequired}:** macOS {ddmVersionString}&lt;br&gt;&lt;br&gt;**{infoboxLabelDeadline}:** {infoboxDeadlineDisplay}&lt;br&gt;&lt;br&gt;**{infoboxLabelDaysRemaining}:** {infoboxDaysRemainingDisplay}&lt;br&gt;&lt;br&gt;**{infoboxLabelLastRestart}:** {infoboxLastRestartDisplay}&lt;br&gt;&lt;br&gt;**{infoboxLabelFreeDiskSpace}:** {diskSpaceHumanReadable}</string>
+			<key>pfm_description</key>
+			<string>Markdown-formatted info box content showing current state, deadline, and disk space.</string>
 			<key>pfm_name</key>
 			<string>InfoBox</string>
 			<key>pfm_title</key>
@@ -552,9 +3744,105 @@
 		</dict>
 		<dict>
 			<key>pfm_default</key>
+			<string>For assistance, please contact: **{supportTeamName}**&lt;br&gt;- **Telephone:** {supportTeamPhone}&lt;br&gt;- **Email:** {supportTeamEmail}&lt;br&gt;- **Website:** {supportTeamWebsite}&lt;br&gt;- **Knowledge Base Article:** {supportKBURL}&lt;br&gt;&lt;br&gt;**User Information:**&lt;br&gt;- **Full Name:** {userfullname}&lt;br&gt;- **User Name:** {username}&lt;br&gt;&lt;br&gt;**Computer Information:**&lt;br&gt;- **Computer Name:** {computername}&lt;br&gt;- **Serial Number:** {serialnumber}&lt;br&gt;- **macOS:** {osversion}&lt;br&gt;&lt;br&gt;**Script Information:**&lt;br&gt;- **Dialog:** {dialogVersion}&lt;br&gt;- **Script:** {scriptVersion}&lt;br&gt;</string>
+			<key>pfm_description</key>
+			<string>Localized help message for English.</string>
+			<key>pfm_name</key>
+			<string>HelpMessageLocalized_en</string>
+			<key>pfm_title</key>
+			<string>Help Message (English)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Bei Fragen kontaktiere bitte **{supportTeamName}**:&lt;br&gt;- **Telefon:** {supportTeamPhone}&lt;br&gt;- **E-Mail:** {supportTeamEmail}&lt;br&gt;- **Webseite:** {supportTeamWebsite}&lt;br&gt;- **Knowledge-Base-Artikel:** {supportKBURL}&lt;br&gt;&lt;br&gt;**Benutzerinformationen:**&lt;br&gt;- **Vollständiger Name:** {userfullname}&lt;br&gt;- **Benutzername:** {username}&lt;br&gt;&lt;br&gt;**Computerinformationen:**&lt;br&gt;- **Computername:** {computername}&lt;br&gt;- **Seriennummer:** {serialnumber}&lt;br&gt;- **macOS:** {osversion}&lt;br&gt;&lt;br&gt;**Skriptinformationen:**&lt;br&gt;- **Dialog:** {dialogVersion}&lt;br&gt;- **Skript:** {scriptVersion}&lt;br&gt;</string>
+			<key>pfm_description</key>
+			<string>Localized help message for German.</string>
+			<key>pfm_name</key>
+			<string>HelpMessageLocalized_de</string>
+			<key>pfm_title</key>
+			<string>Help Message (German)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Pour obtenir de l&apos;aide, veuillez contacter : **{supportTeamName}**&lt;br&gt;- **Téléphone :** {supportTeamPhone}&lt;br&gt;- **E-mail :** {supportTeamEmail}&lt;br&gt;- **Site web :** {supportTeamWebsite}&lt;br&gt;- **Article de la base de connaissances :** {supportKBURL}&lt;br&gt;&lt;br&gt;**Informations utilisateur :**&lt;br&gt;- **Nom complet :** {userfullname}&lt;br&gt;- **Nom d&apos;utilisateur :** {username}&lt;br&gt;&lt;br&gt;**Informations de l&apos;ordinateur :**&lt;br&gt;- **Nom de l&apos;ordinateur :** {computername}&lt;br&gt;- **Numéro de série :** {serialnumber}&lt;br&gt;- **macOS :** {osversion}&lt;br&gt;&lt;br&gt;**Informations du script :**&lt;br&gt;- **Dialog :** {dialogVersion}&lt;br&gt;- **Script :** {scriptVersion}&lt;br&gt;</string>
+			<key>pfm_description</key>
+			<string>Localized help message for French.</string>
+			<key>pfm_name</key>
+			<string>HelpMessageLocalized_fr</string>
+			<key>pfm_title</key>
+			<string>Help Message (French)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Para obtener ayuda, contacte con: **{supportTeamName}**&lt;br&gt;- **Teléfono:** {supportTeamPhone}&lt;br&gt;- **Correo electrónico:** {supportTeamEmail}&lt;br&gt;- **Sitio web:** {supportTeamWebsite}&lt;br&gt;- **Artículo de la base de conocimiento:** {supportKBURL}&lt;br&gt;&lt;br&gt;**Información del usuario:**&lt;br&gt;- **Nombre completo:** {userfullname}&lt;br&gt;- **Nombre de usuario:** {username}&lt;br&gt;&lt;br&gt;**Información del ordenador:**&lt;br&gt;- **Nombre del ordenador:** {computername}&lt;br&gt;- **Número de serie:** {serialnumber}&lt;br&gt;- **macOS:** {osversion}&lt;br&gt;&lt;br&gt;**Información del script:**&lt;br&gt;- **Dialog:** {dialogVersion}&lt;br&gt;- **Script:** {scriptVersion}&lt;br&gt;</string>
+			<key>pfm_description</key>
+			<string>Localized help message for Spanish.</string>
+			<key>pfm_name</key>
+			<string>HelpMessageLocalized_es</string>
+			<key>pfm_title</key>
+			<string>Help Message (Spanish)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Per assistenza, contatta: **{supportTeamName}**&lt;br&gt;- **Telefono:** {supportTeamPhone}&lt;br&gt;- **Email:** {supportTeamEmail}&lt;br&gt;- **Sito web:** {supportTeamWebsite}&lt;br&gt;- **Articolo della knowledge base:** {supportKBURL}&lt;br&gt;&lt;br&gt;**Informazioni utente:**&lt;br&gt;- **Nome completo:** {userfullname}&lt;br&gt;- **Nome utente:** {username}&lt;br&gt;&lt;br&gt;**Informazioni computer:**&lt;br&gt;- **Nome computer:** {computername}&lt;br&gt;- **Numero di serie:** {serialnumber}&lt;br&gt;- **macOS:** {osversion}&lt;br&gt;&lt;br&gt;**Informazioni script:**&lt;br&gt;- **Dialog:** {dialogVersion}&lt;br&gt;- **Script:** {scriptVersion}&lt;br&gt;</string>
+			<key>pfm_description</key>
+			<string>Localized help message for Italian.</string>
+			<key>pfm_name</key>
+			<string>HelpMessageLocalized_it</string>
+			<key>pfm_title</key>
+			<string>Help Message (Italian)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Voor hulp kunt u contact opnemen met: **{supportTeamName}**&lt;br&gt;- **Telefoon:** {supportTeamPhone}&lt;br&gt;- **Email:** {supportTeamEmail}&lt;br&gt;- **Website:** {supportTeamWebsite}&lt;br&gt;- **Kennisbankartikel:** {supportKBURL}&lt;br&gt;&lt;br&gt;**Gebruikersinformatie:**&lt;br&gt;- **Volledige naam:** {userfullname}&lt;br&gt;- **Gebruikersnaam:** {username}&lt;br&gt;&lt;br&gt;**Computerinformatie:**&lt;br&gt;- **Computernaam:** {computername}&lt;br&gt;- **Serienummer:** {serialnumber}&lt;br&gt;- **macOS:** {osversion}&lt;br&gt;&lt;br&gt;**Scriptinformatie:**&lt;br&gt;- **Dialog:** {dialogVersion}&lt;br&gt;- **Script:** {scriptVersion}&lt;br&gt;</string>
+			<key>pfm_description</key>
+			<string>Localized help message for Dutch.</string>
+			<key>pfm_name</key>
+			<string>HelpMessageLocalized_nl</string>
+			<key>pfm_title</key>
+			<string>Help Message (Dutch)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Para obter assistência, contacte: **{supportTeamName}**&lt;br&gt;- **Telefone:** {supportTeamPhone}&lt;br&gt;- **Email:** {supportTeamEmail}&lt;br&gt;- **Site web:** {supportTeamWebsite}&lt;br&gt;- **Artigo da base de conhecimento:** {supportKBURL}&lt;br&gt;&lt;br&gt;**Informações do utilizador:**&lt;br&gt;- **Nome completo:** {userfullname}&lt;br&gt;- **Nome de utilizador:** {username}&lt;br&gt;&lt;br&gt;**Informações do computador:**&lt;br&gt;- **Nome do computador:** {computername}&lt;br&gt;- **Número de série:** {serialnumber}&lt;br&gt;- **macOS:** {osversion}&lt;br&gt;&lt;br&gt;**Informações do script:**&lt;br&gt;- **Dialog:** {dialogVersion}&lt;br&gt;- **Script:** {scriptVersion}&lt;br&gt;</string>
+			<key>pfm_description</key>
+			<string>Localized help message for Portuguese.</string>
+			<key>pfm_name</key>
+			<string>HelpMessageLocalized_pt</string>
+			<key>pfm_title</key>
+			<string>Help Message (Portuguese)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>サポートが必要な場合は次までご連絡ください: **{supportTeamName}**&lt;br&gt;- **電話:** {supportTeamPhone}&lt;br&gt;- **メール:** {supportTeamEmail}&lt;br&gt;- **Webサイト:** {supportTeamWebsite}&lt;br&gt;- **ナレッジベース記事:** {supportKBURL}&lt;br&gt;&lt;br&gt;**ユーザー情報:**&lt;br&gt;- **氏名:** {userfullname}&lt;br&gt;- **ユーザー名:** {username}&lt;br&gt;&lt;br&gt;**コンピュータ情報:**&lt;br&gt;- **コンピュータ名:** {computername}&lt;br&gt;- **シリアル番号:** {serialnumber}&lt;br&gt;- **macOS:** {osversion}&lt;br&gt;&lt;br&gt;**スクリプト情報:**&lt;br&gt;- **Dialog:** {dialogVersion}&lt;br&gt;- **Script:** {scriptVersion}&lt;br&gt;</string>
+			<key>pfm_description</key>
+			<string>Localized help message for Japanese.</string>
+			<key>pfm_name</key>
+			<string>HelpMessageLocalized_ja</string>
+			<key>pfm_title</key>
+			<string>Help Message (Japanese)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
 			<string>qr={infobuttonaction}</string>
 			<key>pfm_description</key>
-			<string>Help image configuration, such as QR code pointing to the info button action.</string>
+			<string>Help image configuration, such as a QR code that points to the info button action.</string>
 			<key>pfm_name</key>
 			<string>HelpImage</string>
 			<key>pfm_title</key>
@@ -572,6 +3860,6 @@
 	<key>pfm_unique</key>
 	<false/>
 	<key>pfm_version</key>
-	<integer>3</integer>
+	<integer>4</integer>
 </dict>
 </plist>
