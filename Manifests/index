@@ -370,7 +370,7 @@
 		<key>com.anthropic.claudefordesktop</key>
 		<dict>
 			<key>modified</key>
-			<date>2026-05-01T19:54:38Z</date>
+			<date>2026-05-02T00:00:00Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.anthropic.claudefordesktop.plist</string>
 			<key>version</key>
@@ -748,7 +748,7 @@
 		<key>com.macjutsu.super</key>
 		<dict>
 			<key>modified</key>
-			<date>2026-04-22T02:35:40Z</date>
+			<date>2026-05-02T00:00:00Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.macjutsu.super.plist</string>
 			<key>version</key>
@@ -2463,6 +2463,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2026-05-06T09:57:06Z</date>
+	<date>2026-05-07T09:47:12Z</date>
 </dict>
 </plist>
