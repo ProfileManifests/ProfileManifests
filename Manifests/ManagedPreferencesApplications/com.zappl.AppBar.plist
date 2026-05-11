@@ -206,6 +206,8 @@ A profile can consist of payloads with different version numbers. For example, c
 		<dict>
 			<key>pfm_description</key>
 			<string>Custom colour to be used for buttons and highlighting. Accepts hex colour codes (e.g., #0000FF). Defaults to macOS system accent colour if not specified</string>
+			<key>pfm_format</key>
+			<string>^#[0-9A-Fa-f]{6}$</string>
 			<key>pfm_name</key>
 			<string>AccentColor</string>
 			<key>pfm_title</key>
