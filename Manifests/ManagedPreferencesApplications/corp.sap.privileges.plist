@@ -200,24 +200,6 @@ A profile can consist of payloads with different version numbers. For example, c
 		<dict>
 			<key>pfm_app_min</key>
 			<string>2.1.0</string>
-			<key>pfm_conditionals</key>
-			<array>
-				<dict>
-					<key>pfm_require</key>
-					<string>always</string>
-					<key>pfm_target_conditions</key>
-					<array>
-						<dict>
-							<key>pfm_range_list</key>
-							<array>
-								<true/>
-							</array>
-							<key>pfm_target</key>
-							<string>AllowPrivilegeRenewal</string>
-						</dict>
-					</array>
-				</dict>
-			</array>
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
@@ -230,8 +212,10 @@ A profile can consist of payloads with different version numbers. For example, c
 					<key>pfm_target_conditions</key>
 					<array>
 						<dict>
-							<key>pfm_present</key>
-							<false/>
+							<key>pfm_n_range_list</key>
+							<array>
+								<true/>
+							</array>
 							<key>pfm_target</key>
 							<string>AllowPrivilegeRenewal</string>
 						</dict>
@@ -282,20 +266,6 @@ A profile can consist of payloads with different version numbers. For example, c
 		<dict>
 			<key>pfm_app_min</key>
 			<string>2.0.0</string>
-			<key>pfm_conditionals</key>
-			<array>
-				<dict>
-					<key>pfm_target_conditions</key>
-					<array>
-						<dict>
-							<key>pfm_present</key>
-							<true/>
-							<key>pfm_target</key>
-							<string>PostChangeExecutablePath</string>
-						</dict>
-					</array>
-				</dict>
-			</array>
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
@@ -326,22 +296,6 @@ A profile can consist of payloads with different version numbers. For example, c
 		<dict>
 			<key>pfm_app_min</key>
 			<string>2.1.0</string>
-			<key>pfm_conditionals</key>
-			<array>
-				<dict>
-					<key>pfm_require</key>
-					<string>always</string>
-					<key>pfm_target_conditions</key>
-					<array>
-						<dict>
-							<key>pfm_present</key>
-							<true/>
-							<key>pfm_target</key>
-							<string>PostChangeExecutablePath</string>
-						</dict>
-					</array>
-				</dict>
-			</array>
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
@@ -388,24 +342,6 @@ A profile can consist of payloads with different version numbers. For example, c
 		<dict>
 			<key>pfm_app_min</key>
 			<string>2.1.0</string>
-			<key>pfm_conditionals</key>
-			<array>
-				<dict>
-					<key>pfm_require</key>
-					<string>always</string>
-					<key>pfm_target_conditions</key>
-					<array>
-						<dict>
-							<key>pfm_range_list</key>
-							<array>
-								<true/>
-							</array>
-							<key>pfm_target</key>
-							<string>RevokePrivilegesAtLogin</string>
-						</dict>
-					</array>
-				</dict>
-			</array>
 			<key>pfm_description</key>
 			<string>If RevokePrivilegesAtLogin is set to true, the specified users are excluded from privilege revocation at login. Provide an array of strings containing the short names of the users.</string>
 			<key>pfm_documentation_url</key>
@@ -416,8 +352,10 @@ A profile can consist of payloads with different version numbers. For example, c
 					<key>pfm_target_conditions</key>
 					<array>
 						<dict>
-							<key>pfm_present</key>
-							<false/>
+							<key>pfm_n_range_list</key>
+							<array>
+								<true/>
+							</array>
 							<key>pfm_target</key>
 							<string>RevokePrivilegesAtLogin</string>
 						</dict>
@@ -901,30 +839,19 @@ A profile can consist of payloads with different version numbers. For example, c
 		<dict>
 			<key>pfm_app_min</key>
 			<string>2.1.0</string>
-			<key>pfm_conditionals</key>
+			<key>pfm_description</key>
+			<string>If specified, this URL is opened instead of the Privileges GitHub URL when the user clicks the help button. Must use http:// or https://.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/SAP/macOS-enterprise-privileges/wiki/Managing-Privileges#HelpButtonCustomURL</string>
+			<key>pfm_exclude</key>
 			<array>
 				<dict>
-					<key>pfm_require</key>
-					<string>always</string>
-					<key>pfm_target_conditions</key>
-					<array>
-						<dict>
-							<key>pfm_present</key>
-							<false/>
-							<key>pfm_target</key>
-							<string>HideHelpButton</string>
-						</dict>
-					</array>
-				</dict>
-				<dict>
-					<key>pfm_require</key>
-					<string>always</string>
 					<key>pfm_target_conditions</key>
 					<array>
 						<dict>
 							<key>pfm_range_list</key>
 							<array>
-								<false/>
+								<true/>
 							</array>
 							<key>pfm_target</key>
 							<string>HideHelpButton</string>
@@ -932,10 +859,6 @@ A profile can consist of payloads with different version numbers. For example, c
 					</array>
 				</dict>
 			</array>
-			<key>pfm_description</key>
-			<string>If specified, this URL is opened instead of the Privileges GitHub URL when the user clicks the help button. Must use http:// or https://.</string>
-			<key>pfm_documentation_url</key>
-			<string>https://github.com/SAP/macOS-enterprise-privileges/wiki/Managing-Privileges#HelpButtonCustomURL</string>
 			<key>pfm_format</key>
 			<string>^https?://.+</string>
 			<key>pfm_name</key>
@@ -1075,15 +998,17 @@ A profile can consist of payloads with different version numbers. For example, c
 				<dict>
 					<key>pfm_app_min</key>
 					<string>2.1.0</string>
-					<key>pfm_conditionals</key>
+					<key>pfm_description</key>
+					<string>A dictionary of custom data (such as machine name or serial number) that is added to the webhook's JSON payload as the custom_data field.</string>
+					<key>pfm_documentation_url</key>
+					<string>https://github.com/SAP/macOS-enterprise-privileges/wiki/Managing-Privileges#WebhookCustomData</string>
+					<key>pfm_exclude</key>
 					<array>
 						<dict>
-							<key>pfm_require</key>
-							<string>always</string>
 							<key>pfm_target_conditions</key>
 							<array>
 								<dict>
-									<key>pfm_range_list</key>
+									<key>pfm_n_range_list</key>
 									<array>
 										<string>webhook</string>
 									</array>
@@ -1093,10 +1018,6 @@ A profile can consist of payloads with different version numbers. For example, c
 							</array>
 						</dict>
 					</array>
-					<key>pfm_description</key>
-					<string>A dictionary of custom data (such as machine name or serial number) that is added to the webhook's JSON payload as the custom_data field.</string>
-					<key>pfm_documentation_url</key>
-					<string>https://github.com/SAP/macOS-enterprise-privileges/wiki/Managing-Privileges#WebhookCustomData</string>
 					<key>pfm_name</key>
 					<string>WebhookCustomData</string>
 					<key>pfm_title</key>
