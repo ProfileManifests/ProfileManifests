@@ -602,12 +602,12 @@
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.papercut.printdeploy.client.png</string>
 		</dict>
-		<key>com.parallels.dektop.managedprefs</key>
+		<key>com.parallels.desktop.managedprefs</key>
 		<dict>
 			<key>hash</key>
 			<string>191fc0997bb18d49770e151c7c605b73</string>
 			<key>path</key>
-			<string>Icons/ManagedPreferencesApplications/com.parallels.dektop.managedprefs.png</string>
+			<string>Icons/ManagedPreferencesApplications/com.parallels.desktop.managedprefs.png</string>
 		</dict>
 		<key>com.pratikkumar.airserver-mac</key>
 		<dict>
@@ -1580,6 +1580,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2026-03-30T10:44:56Z</date>
+	<date>2026-05-11T13:49:48Z</date>
 </dict>
 </plist>
