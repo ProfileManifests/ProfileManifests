@@ -577,11 +577,11 @@
 		<key>com.google.Chrome</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-12-13T20:41:02Z</date>
+			<date>2026-05-11T15:30:00Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.google.Chrome.plist</string>
 			<key>version</key>
-			<integer>18</integer>
+			<integer>19</integer>
 		</dict>
 		<key>com.google.Keystone</key>
 		<dict>
@@ -1066,6 +1066,15 @@
 			<date>2025-08-04T08:25:08Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.vpntracker.365mac-config.plist</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<key>com.zappl.AppBar</key>
+		<dict>
+			<key>modified</key>
+			<date>2026-05-08T00:00:00Z</date>
+			<key>path</key>
+			<string>Manifests/ManagedPreferencesApplications/com.zappl.AppBar.plist</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -2481,6 +2490,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2026-05-11T13:49:48Z</date>
+	<date>2026-05-19T12:09:17Z</date>
 </dict>
 </plist>
