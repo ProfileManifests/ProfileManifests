@@ -693,6 +693,13 @@
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.vpntracker.365.png</string>
 		</dict>
+		<key>com.zappl.AppBar</key>
+		<dict>
+			<key>hash</key>
+			<string>fa74799167951411ff1cf7b3a15d3549</string>
+			<key>path</key>
+			<string>Icons/ManagedPreferencesApplications/com.zappl.AppBar.png</string>
+		</dict>
 		<key>com.zscaler.installparams</key>
 		<dict>
 			<key>hash</key>
@@ -1580,6 +1587,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2026-05-11T13:49:48Z</date>
+	<date>2026-05-19T11:30:32Z</date>
 </dict>
 </plist>
