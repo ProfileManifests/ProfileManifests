@@ -766,7 +766,7 @@
 		<key>com.microsoft.Excel</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-08-04T08:25:08Z</date>
+			<date>2026-05-20T09:05:42Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.microsoft.Excel.plist</string>
 			<key>version</key>
@@ -802,7 +802,7 @@
 		<key>com.microsoft.Outlook</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-10-13T09:08:01Z</date>
+			<date>2026-05-20T09:05:42Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.microsoft.Outlook.plist</string>
 			<key>version</key>
@@ -811,7 +811,7 @@
 		<key>com.microsoft.Powerpoint</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-08-04T08:25:08Z</date>
+			<date>2026-05-20T09:05:42Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.microsoft.Powerpoint.plist</string>
 			<key>version</key>
@@ -838,7 +838,7 @@
 		<key>com.microsoft.Word</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-08-04T08:25:08Z</date>
+			<date>2026-05-20T09:05:42Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.microsoft.Word.plist</string>
 			<key>version</key>
@@ -856,7 +856,7 @@
 		<key>com.microsoft.autoupdate2</key>
 		<dict>
 			<key>modified</key>
-			<date>2026-02-16T20:29:12Z</date>
+			<date>2026-05-20T09:05:42Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.microsoft.autoupdate2.plist</string>
 			<key>version</key>
@@ -874,7 +874,7 @@
 		<key>com.microsoft.office</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-08-04T08:25:08Z</date>
+			<date>2026-05-20T09:05:42Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.microsoft.office.plist</string>
 			<key>version</key>
@@ -883,7 +883,7 @@
 		<key>com.microsoft.onenote.mac</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-08-04T08:25:08Z</date>
+			<date>2026-05-20T09:05:42Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.microsoft.onenote.mac.plist</string>
 			<key>version</key>
@@ -2490,6 +2490,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2026-05-19T12:09:17Z</date>
+	<date>2026-05-20T14:10:18Z</date>
 </dict>
 </plist>
