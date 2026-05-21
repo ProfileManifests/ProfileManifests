@@ -791,6 +791,13 @@
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/menu.nomad.shares.png</string>
 		</dict>
+		<key>mm.DockPilot</key>
+		<dict>
+			<key>hash</key>
+			<string>5b967c3090147122a3b037477d6aa607</string>
+			<key>path</key>
+			<string>Icons/ManagedPreferencesApplications/mm.DockPilot.png</string>
+		</dict>
 		<key>net.glencode.Particulars</key>
 		<dict>
 			<key>hash</key>
@@ -1587,6 +1594,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2026-05-21T10:14:34Z</date>
+	<date>2026-05-21T21:14:42Z</date>
 </dict>
 </plist>
