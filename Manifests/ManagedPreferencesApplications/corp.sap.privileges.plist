@@ -13,7 +13,7 @@
 	<key>pfm_format_version</key>
 	<integer>1</integer>
 	<key>pfm_last_modified</key>
-	<date>2025-08-25T11:45:50Z</date>
+	<date>2026-05-05T00:00:00Z</date>
 	<key>pfm_macos_min</key>
 	<string>10.12</string>
 	<key>pfm_platforms</key>
@@ -183,6 +183,54 @@ A profile can consist of payloads with different version numbers. For example, c
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
+			<string>2.1.0</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>Specifies whether expiring administrator privileges can be renewed. When set to true, the user receives a notification one minute before administrator privileges expire and can renew them.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/SAP/macOS-enterprise-privileges/wiki/Managing-Privileges#AllowPrivilegeRenewal</string>
+			<key>pfm_name</key>
+			<string>AllowPrivilegeRenewal</string>
+			<key>pfm_title</key>
+			<string>Allow Privilege Renewal</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2.1.0</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>When set to true, renewing privileges requires the same kind of authentication as initially requesting administrator privileges (for example, Touch ID or password).</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/SAP/macOS-enterprise-privileges/wiki/Managing-Privileges#RenewalFollowsAuthSetting</string>
+			<key>pfm_exclude</key>
+			<array>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_n_range_list</key>
+							<array>
+								<true/>
+							</array>
+							<key>pfm_target</key>
+							<string>AllowPrivilegeRenewal</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+			<key>pfm_name</key>
+			<string>RenewalFollowsAuthSetting</string>
+			<key>pfm_title</key>
+			<string>Renewal Follows Auth Setting</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
 			<string>2.0.0</string>
 			<key>pfm_default</key>
 			<false/>
@@ -218,20 +266,6 @@ A profile can consist of payloads with different version numbers. For example, c
 		<dict>
 			<key>pfm_app_min</key>
 			<string>2.0.0</string>
-			<key>pfm_conditionals</key>
-			<array>
-				<dict>
-					<key>pfm_target_conditions</key>
-					<array>
-						<dict>
-							<key>pfm_present</key>
-							<true/>
-							<key>pfm_target</key>
-							<string>PostChangeExecutablePath</string>
-						</dict>
-					</array>
-				</dict>
-			</array>
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
@@ -261,6 +295,36 @@ A profile can consist of payloads with different version numbers. For example, c
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
+			<string>2.1.0</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>Specifies whether the reason that the user entered when requesting administrator privileges should be passed to the executable configured with the PostChangeExecutablePath key. The reason is passed as the third launch argument ($3).</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/SAP/macOS-enterprise-privileges/wiki/Managing-Privileges#PassReasonToExecutable</string>
+			<key>pfm_exclude</key>
+			<array>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_present</key>
+							<false/>
+							<key>pfm_target</key>
+							<string>PostChangeExecutablePath</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+			<key>pfm_name</key>
+			<string>PassReasonToExecutable</string>
+			<key>pfm_title</key>
+			<string>Pass Reason To Executable</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
 			<string>2.0.0</string>
 			<key>pfm_default</key>
 			<false/>
@@ -274,6 +338,49 @@ A profile can consist of payloads with different version numbers. For example, c
 			<string>Revoke Privileges at Login</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2.1.0</string>
+			<key>pfm_description</key>
+			<string>If RevokePrivilegesAtLogin is set to true, the specified users are excluded from privilege revocation at login. Provide an array of strings containing the short names of the users.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/SAP/macOS-enterprise-privileges/wiki/Managing-Privileges#RevokeAtLoginExcludedUsers</string>
+			<key>pfm_exclude</key>
+			<array>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_n_range_list</key>
+							<array>
+								<true/>
+							</array>
+							<key>pfm_target</key>
+							<string>RevokePrivilegesAtLogin</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+			<key>pfm_name</key>
+			<string>RevokeAtLoginExcludedUsers</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_description</key>
+					<string>The short name of a user to exclude from privilege revocation at login.</string>
+					<key>pfm_name</key>
+					<string>RevokeAtLoginExcludedUsersItem</string>
+					<key>pfm_title</key>
+					<string>User Short Name</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>Revoke At Login Excluded Users</string>
+			<key>pfm_type</key>
+			<string>array</string>
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
@@ -715,6 +822,56 @@ A profile can consist of payloads with different version numbers. For example, c
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
+			<string>2.1.0</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>If set to true, the Help (?) button is no longer displayed in the app.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/SAP/macOS-enterprise-privileges/wiki/Managing-Privileges#HideHelpButton</string>
+			<key>pfm_name</key>
+			<string>HideHelpButton</string>
+			<key>pfm_title</key>
+			<string>Hide Help Button</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2.1.0</string>
+			<key>pfm_description</key>
+			<string>If specified, this URL is opened instead of the Privileges GitHub URL when the user clicks the help button. Must use http:// or https://.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/SAP/macOS-enterprise-privileges/wiki/Managing-Privileges#HelpButtonCustomURL</string>
+			<key>pfm_exclude</key>
+			<array>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_range_list</key>
+							<array>
+								<true/>
+							</array>
+							<key>pfm_target</key>
+							<string>HideHelpButton</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+			<key>pfm_format</key>
+			<string>^https?://.+</string>
+			<key>pfm_name</key>
+			<string>HelpButtonCustomURL</string>
+			<key>pfm_title</key>
+			<string>Help Button Custom URL</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>https://example.com/help</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
 			<string>2.0.0</string>
 			<key>pfm_default</key>
 			<false/>
@@ -837,6 +994,36 @@ A profile can consist of payloads with different version numbers. For example, c
 					<string>Enable TCP</string>
 					<key>pfm_type</key>
 					<string>boolean</string>
+				</dict>
+				<dict>
+					<key>pfm_app_min</key>
+					<string>2.1.0</string>
+					<key>pfm_description</key>
+					<string>A dictionary of custom data (such as machine name or serial number) that is added to the webhook's JSON payload as the custom_data field.</string>
+					<key>pfm_documentation_url</key>
+					<string>https://github.com/SAP/macOS-enterprise-privileges/wiki/Managing-Privileges#WebhookCustomData</string>
+					<key>pfm_exclude</key>
+					<array>
+						<dict>
+							<key>pfm_target_conditions</key>
+							<array>
+								<dict>
+									<key>pfm_n_range_list</key>
+									<array>
+										<string>webhook</string>
+									</array>
+									<key>pfm_target</key>
+									<string>RemoteLogging.ServerType</string>
+								</dict>
+							</array>
+						</dict>
+					</array>
+					<key>pfm_name</key>
+					<string>WebhookCustomData</string>
+					<key>pfm_title</key>
+					<string>Webhook Custom Data</string>
+					<key>pfm_type</key>
+					<string>dictionary</string>
 				</dict>
 				<dict>
 					<key>pfm_app_min</key>
@@ -1033,6 +1220,6 @@ A profile can consist of payloads with different version numbers. For example, c
 	<key>pfm_unique</key>
 	<true/>
 	<key>pfm_version</key>
-	<integer>6</integer>
+	<integer>7</integer>
 </dict>
 </plist>
