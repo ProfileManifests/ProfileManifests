@@ -1,0 +1,1024 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>pfm_app_url</key>
+	<string>https://www.dockpilot.io</string>
+	<key>pfm_description</key>
+	<string>DockPilot Dock policy configuration. This manifest configures the DockPilot managed Dock payload only; enterprise licensing and enrolment keys are intentionally not included.</string>
+	<key>pfm_documentation_url</key>
+	<string>https://www.dockpilot.io/docs/mobileconfig-reference</string>
+	<key>pfm_domain</key>
+	<string>mm.DockPilot</string>
+	<key>pfm_format_version</key>
+	<integer>1</integer>
+	<key>pfm_last_modified</key>
+	<date>2026-05-21T19:55:04Z</date>
+	<key>pfm_macos_min</key>
+	<string>13.0</string>
+	<key>pfm_platforms</key>
+	<array>
+		<string>macOS</string>
+	</array>
+	<key>pfm_subkeys</key>
+	<array>
+		<dict>
+			<key>pfm_name</key>
+			<string>PayloadDescription</string>
+			<key>pfm_title</key>
+			<string>Payload Description</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_description</key>
+			<string>The human-readable description of this payload. This description appears on the Detail screen.</string>
+			<key>pfm_default</key>
+			<string>Configures DockPilot Dock policy settings</string>
+		</dict>
+		<dict>
+			<key>pfm_name</key>
+			<string>PayloadDisplayName</string>
+			<key>pfm_title</key>
+			<string>Payload Display Name</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_description</key>
+			<string>The human-readable name for the profile payload. The name appears on the Detail screen and does not need to be unique.</string>
+			<key>pfm_default</key>
+			<string>DockPilot</string>
+			<key>pfm_require</key>
+			<string>always</string>
+		</dict>
+		<dict>
+			<key>pfm_name</key>
+			<string>PayloadIdentifier</string>
+			<key>pfm_title</key>
+			<string>Payload Identifier</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_description</key>
+			<string>The reverse-DNS-style identifier for the payload. This string must be unique within the profile.</string>
+			<key>pfm_default</key>
+			<string>mm.DockPilot</string>
+			<key>pfm_require</key>
+			<string>always</string>
+		</dict>
+		<dict>
+			<key>pfm_name</key>
+			<string>PayloadType</string>
+			<key>pfm_title</key>
+			<string>Payload Type</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_description</key>
+			<string>The payload type for this managed preferences domain.</string>
+			<key>pfm_default</key>
+			<string>mm.DockPilot</string>
+			<key>pfm_require</key>
+			<string>always</string>
+		</dict>
+		<dict>
+			<key>pfm_name</key>
+			<string>PayloadUUID</string>
+			<key>pfm_title</key>
+			<string>Payload UUID</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_description</key>
+			<string>The globally unique identifier for the payload. In macOS, use uuidgen to generate UUIDs.</string>
+			<key>pfm_format</key>
+			<string>^[0-9A-Za-z]{8}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{12}$</string>
+			<key>pfm_require</key>
+			<string>always</string>
+		</dict>
+		<dict>
+			<key>pfm_name</key>
+			<string>PayloadVersion</string>
+			<key>pfm_title</key>
+			<string>Payload Version</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+			<key>pfm_description</key>
+			<string>The version of this specific payload.</string>
+			<key>pfm_default</key>
+			<integer>1</integer>
+			<key>pfm_range_list</key>
+			<array>
+				<integer>1</integer>
+			</array>
+			<key>pfm_require</key>
+			<string>always</string>
+		</dict>
+		<dict>
+			<key>pfm_name</key>
+			<string>PayloadOrganization</string>
+			<key>pfm_title</key>
+			<string>Payload Organization</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_description</key>
+			<string>The human-readable name of the organization that provides the profile.</string>
+		</dict>
+		<dict>
+			<key>pfm_name</key>
+			<string>PFC_SegmentedControl_0</string>
+			<key>pfm_title</key>
+			<string>DockPilot Settings</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_require</key>
+			<string>always</string>
+			<key>pfm_range_list_titles</key>
+			<array>
+				<string>Payload</string>
+				<string>Policy</string>
+				<string>Dock Appearance</string>
+				<string>Managed Apps</string>
+				<string>Right-Side Items</string>
+			</array>
+			<key>pfm_segments</key>
+			<dict>
+				<key>Payload</key>
+				<array>
+					<string>PayloadDescription</string>
+					<string>PayloadDisplayName</string>
+					<string>PayloadIdentifier</string>
+					<string>PayloadType</string>
+					<string>PayloadUUID</string>
+					<string>PayloadVersion</string>
+					<string>PayloadOrganization</string>
+				</array>
+				<key>Policy</key>
+				<array>
+					<string>ConfigVersion</string>
+					<string>Mode</string>
+					<string>Scope</string>
+					<string>AllowUserDockItems</string>
+					<string>PreserveUserItems</string>
+					<string>RefreshOnAppChange</string>
+					<string>RestartDock</string>
+				</array>
+				<key>Dock Appearance</key>
+				<array>
+					<string>DockSize</string>
+					<string>Magnification</string>
+					<string>MagnificationSize</string>
+					<string>Orientation</string>
+					<string>AutoHide</string>
+					<string>ShowRecentApps</string>
+				</array>
+				<key>Managed Apps</key>
+				<array>
+					<string>Apps</string>
+					<string>Remove</string>
+					<string>Replacements</string>
+				</array>
+				<key>Right-Side Items</key>
+				<array>
+					<string>Stacks</string>
+					<string>Folders</string>
+					<string>NetworkShares</string>
+					<string>WebLinks</string>
+				</array>
+			</dict>
+		</dict>
+		<dict>
+			<key>pfm_name</key>
+			<string>ConfigVersion</string>
+			<key>pfm_title</key>
+			<string>Config Version</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+			<key>pfm_description</key>
+			<string>DockPilot configuration schema version. Leave at 1 unless DockPilot documentation says otherwise.</string>
+			<key>pfm_default</key>
+			<integer>1</integer>
+			<key>pfm_range_min</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>pfm_name</key>
+			<string>Mode</string>
+			<key>pfm_title</key>
+			<string>Mode</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_description</key>
+			<string>Choose how strongly DockPilot manages the Dock.</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>baseline</string>
+				<string>mandated</string>
+				<string>managed-core</string>
+			</array>
+			<key>pfm_range_list_titles</key>
+			<array>
+				<string>Baseline</string>
+				<string>Mandated</string>
+				<string>Managed Core</string>
+			</array>
+			<key>pfm_default</key>
+			<string>mandated</string>
+		</dict>
+		<dict>
+			<key>pfm_name</key>
+			<string>Scope</string>
+			<key>pfm_title</key>
+			<string>Scope</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_description</key>
+			<string>Choose whether this payload is intended for machine-level or user-level deployment. Machine-level profiles can still resolve per-user folder variables at runtime.</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>machine</string>
+				<string>user</string>
+			</array>
+			<key>pfm_range_list_titles</key>
+			<array>
+				<string>Machine</string>
+				<string>User</string>
+			</array>
+			<key>pfm_default</key>
+			<string>machine</string>
+		</dict>
+		<dict>
+			<key>pfm_name</key>
+			<string>AllowUserDockItems</string>
+			<key>pfm_title</key>
+			<string>Allow User Dock Items</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+			<key>pfm_description</key>
+			<string>When enabled, DockPilot preserves user-added Dock items while managing the configured items.</string>
+			<key>pfm_default</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>pfm_name</key>
+			<string>PreserveUserItems</string>
+			<key>pfm_title</key>
+			<string>Preserve User Items</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+			<key>pfm_description</key>
+			<string>Compatibility option for preserving existing user Dock items. Prefer Allow User Dock Items for new profiles.</string>
+			<key>pfm_default</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>pfm_name</key>
+			<string>RefreshOnAppChange</string>
+			<key>pfm_title</key>
+			<string>Refresh On App Change</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+			<key>pfm_description</key>
+			<string>When enabled, DockPilot watches application and policy changes and refreshes managed Dock items when needed.</string>
+			<key>pfm_default</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>pfm_name</key>
+			<string>RestartDock</string>
+			<key>pfm_title</key>
+			<string>Restart Dock</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+			<key>pfm_description</key>
+			<string>Restart the Dock process after DockPilot applies a change so users see the updated Dock.</string>
+			<key>pfm_default</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>pfm_name</key>
+			<string>DockSize</string>
+			<key>pfm_title</key>
+			<string>Dock Size</string>
+			<key>pfm_type</key>
+			<string>real</string>
+			<key>pfm_description</key>
+			<string>Optional Dock tile size from 0.0 to 1.0.</string>
+			<key>pfm_range_min</key>
+			<real>0.0</real>
+			<key>pfm_range_max</key>
+			<real>1.0</real>
+		</dict>
+		<dict>
+			<key>pfm_name</key>
+			<string>Magnification</string>
+			<key>pfm_title</key>
+			<string>Magnification</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+			<key>pfm_description</key>
+			<string>Enable Dock magnification.</string>
+		</dict>
+		<dict>
+			<key>pfm_name</key>
+			<string>MagnificationSize</string>
+			<key>pfm_title</key>
+			<string>Magnification Size</string>
+			<key>pfm_type</key>
+			<string>real</string>
+			<key>pfm_description</key>
+			<string>Optional Dock magnification size from 0.0 to 1.0.</string>
+			<key>pfm_range_min</key>
+			<real>0.0</real>
+			<key>pfm_range_max</key>
+			<real>1.0</real>
+		</dict>
+		<dict>
+			<key>pfm_name</key>
+			<string>Orientation</string>
+			<key>pfm_title</key>
+			<string>Orientation</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_description</key>
+			<string>Dock screen edge.</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>bottom</string>
+				<string>left</string>
+				<string>right</string>
+			</array>
+			<key>pfm_range_list_titles</key>
+			<array>
+				<string>Bottom</string>
+				<string>Left</string>
+				<string>Right</string>
+			</array>
+			<key>pfm_default</key>
+			<string>bottom</string>
+		</dict>
+		<dict>
+			<key>pfm_name</key>
+			<string>AutoHide</string>
+			<key>pfm_title</key>
+			<string>Auto Hide</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+			<key>pfm_description</key>
+			<string>Automatically hide and show the Dock.</string>
+		</dict>
+		<dict>
+			<key>pfm_name</key>
+			<string>ShowRecentApps</string>
+			<key>pfm_title</key>
+			<string>Show Recent Apps</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+			<key>pfm_description</key>
+			<string>Show recent applications in the Dock.</string>
+			<key>pfm_default</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>pfm_name</key>
+			<string>Apps</string>
+			<key>pfm_title</key>
+			<string>Managed Apps</string>
+			<key>pfm_type</key>
+			<string>array</string>
+			<key>pfm_description</key>
+			<string>Applications that DockPilot should manage in the Dock. App items are added only when the configured path exists if Only If Installed is enabled.</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_name</key>
+					<string>App</string>
+					<key>pfm_title</key>
+					<string>Managed App</string>
+					<key>pfm_type</key>
+					<string>dictionary</string>
+					<key>pfm_description</key>
+					<string>A Dock item managed by DockPilot.</string>
+					<key>pfm_subkeys</key>
+					<array>
+						<dict>
+							<key>pfm_name</key>
+							<string>Label</string>
+							<key>pfm_title</key>
+							<string>Label</string>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_description</key>
+							<string>Display name used by DockPilot status and diagnostics.</string>
+							<key>pfm_value_placeholder</key>
+							<string>Microsoft Outlook</string>
+						</dict>
+						<dict>
+							<key>pfm_name</key>
+							<string>Path</string>
+							<key>pfm_title</key>
+							<string>Application Path</string>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_description</key>
+							<string>Full application path. Use %home%, %desktop%, %documents%, %downloads%, or %username% for user-specific paths where needed.</string>
+							<key>pfm_value_placeholder</key>
+							<string>/Applications/Microsoft Outlook.app</string>
+						</dict>
+						<dict>
+							<key>pfm_name</key>
+							<string>Required</string>
+							<key>pfm_title</key>
+							<string>Required</string>
+							<key>pfm_type</key>
+							<string>boolean</string>
+							<key>pfm_description</key>
+							<string>If enabled, DockPilot treats this app as required in the managed Dock policy.</string>
+							<key>pfm_default</key>
+							<false/>
+						</dict>
+						<dict>
+							<key>pfm_name</key>
+							<string>OnlyIfInstalled</string>
+							<key>pfm_title</key>
+							<string>Only If Installed</string>
+							<key>pfm_type</key>
+							<string>boolean</string>
+							<key>pfm_description</key>
+							<string>Only add this item when the application exists on the Mac.</string>
+							<key>pfm_default</key>
+							<true/>
+						</dict>
+						<dict>
+							<key>pfm_name</key>
+							<string>Position</string>
+							<key>pfm_title</key>
+							<string>Position</string>
+							<key>pfm_type</key>
+							<string>integer</string>
+							<key>pfm_description</key>
+							<string>Preferred order for this app in the managed Dock set.</string>
+							<key>pfm_default</key>
+							<integer>0</integer>
+							<key>pfm_range_min</key>
+							<integer>0</integer>
+						</dict>
+						<dict>
+							<key>pfm_name</key>
+							<string>Managed</string>
+							<key>pfm_title</key>
+							<string>Managed</string>
+							<key>pfm_type</key>
+							<string>boolean</string>
+							<key>pfm_description</key>
+							<string>If enabled, DockPilot can remove this item when the app is no longer installed or no longer matches policy.</string>
+							<key>pfm_default</key>
+							<true/>
+						</dict>
+					</array>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>pfm_name</key>
+			<string>Remove</string>
+			<key>pfm_title</key>
+			<string>Remove Apps</string>
+			<key>pfm_type</key>
+			<string>array</string>
+			<key>pfm_description</key>
+			<string>Application names or labels that DockPilot should remove from the managed Dock set.</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_name</key>
+					<string>AppName</string>
+					<key>pfm_title</key>
+					<string>App Name</string>
+					<key>pfm_type</key>
+					<string>string</string>
+					<key>pfm_description</key>
+					<string>Name of an app to remove from the Dock.</string>
+					<key>pfm_value_placeholder</key>
+					<string>Mail</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>pfm_name</key>
+			<string>Replacements</string>
+			<key>pfm_title</key>
+			<string>Smart Replacements</string>
+			<key>pfm_type</key>
+			<string>array</string>
+			<key>pfm_description</key>
+			<string>Replace one app with another when the replacement is installed. Example: Mail to Outlook, Safari to Chrome.</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_name</key>
+					<string>Replacement</string>
+					<key>pfm_title</key>
+					<string>Replacement</string>
+					<key>pfm_type</key>
+					<string>dictionary</string>
+					<key>pfm_description</key>
+					<string>A DockPilot smart app replacement rule.</string>
+					<key>pfm_subkeys</key>
+					<array>
+						<dict>
+							<key>pfm_name</key>
+							<string>Remove</string>
+							<key>pfm_title</key>
+							<string>Remove</string>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_description</key>
+							<string>App name or label to replace.</string>
+							<key>pfm_value_placeholder</key>
+							<string>Mail</string>
+						</dict>
+						<dict>
+							<key>pfm_name</key>
+							<string>WithPath</string>
+							<key>pfm_title</key>
+							<string>With Path</string>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_description</key>
+							<string>Application path to add when installed.</string>
+							<key>pfm_value_placeholder</key>
+							<string>/Applications/Microsoft Outlook.app</string>
+						</dict>
+						<dict>
+							<key>pfm_name</key>
+							<string>OnlyIfInstalled</string>
+							<key>pfm_title</key>
+							<string>Only If Installed</string>
+							<key>pfm_type</key>
+							<string>boolean</string>
+							<key>pfm_description</key>
+							<string>Only apply this replacement when the replacement app exists.</string>
+							<key>pfm_default</key>
+							<true/>
+						</dict>
+					</array>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>pfm_name</key>
+			<string>Stacks</string>
+			<key>pfm_title</key>
+			<string>Stacks</string>
+			<key>pfm_type</key>
+			<string>array</string>
+			<key>pfm_description</key>
+			<string>Right-side Dock stacks managed by DockPilot.</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_name</key>
+					<string>Stack</string>
+					<key>pfm_title</key>
+					<string>Stack</string>
+					<key>pfm_type</key>
+					<string>dictionary</string>
+					<key>pfm_description</key>
+					<string>A right-side Dock stack.</string>
+					<key>pfm_subkeys</key>
+					<array>
+						<dict>
+							<key>pfm_name</key>
+							<string>Label</string>
+							<key>pfm_title</key>
+							<string>Label</string>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_description</key>
+							<string>Display name used by DockPilot status and diagnostics.</string>
+							<key>pfm_value_placeholder</key>
+							<string>Documents</string>
+						</dict>
+						<dict>
+							<key>pfm_name</key>
+							<string>Path</string>
+							<key>pfm_title</key>
+							<string>Path</string>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_description</key>
+							<string>Folder path. User variables such as %home%, %desktop%, %documents%, %downloads%, and %username% are resolved per logged-in user.</string>
+							<key>pfm_value_placeholder</key>
+							<string>%documents%</string>
+						</dict>
+						<dict>
+							<key>pfm_name</key>
+							<string>View</string>
+							<key>pfm_title</key>
+							<string>View</string>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_description</key>
+							<string>Dock stack view style.</string>
+							<key>pfm_range_list</key>
+							<array>
+								<string>automatic</string>
+								<string>fan</string>
+								<string>grid</string>
+								<string>list</string>
+							</array>
+							<key>pfm_range_list_titles</key>
+							<array>
+								<string>Automatic</string>
+								<string>Fan</string>
+								<string>Grid</string>
+								<string>List</string>
+							</array>
+							<key>pfm_default</key>
+							<string>automatic</string>
+						</dict>
+						<dict>
+							<key>pfm_name</key>
+							<string>DisplayAs</string>
+							<key>pfm_title</key>
+							<string>Display As</string>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_description</key>
+							<string>Dock display style for the item.</string>
+							<key>pfm_range_list</key>
+							<array>
+								<string>stack</string>
+								<string>folder</string>
+							</array>
+							<key>pfm_range_list_titles</key>
+							<array>
+								<string>Stack</string>
+								<string>Folder</string>
+							</array>
+							<key>pfm_default</key>
+							<string>folder</string>
+						</dict>
+						<dict>
+							<key>pfm_name</key>
+							<string>SortBy</string>
+							<key>pfm_title</key>
+							<string>Sort By</string>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_description</key>
+							<string>Sort order for the stack or folder.</string>
+							<key>pfm_range_list</key>
+							<array>
+								<string>name</string>
+								<string>dateadded</string>
+								<string>datemodified</string>
+								<string>datecreated</string>
+								<string>kind</string>
+							</array>
+							<key>pfm_range_list_titles</key>
+							<array>
+								<string>Name</string>
+								<string>Date Added</string>
+								<string>Date Modified</string>
+								<string>Date Created</string>
+								<string>Kind</string>
+							</array>
+							<key>pfm_default</key>
+							<string>name</string>
+						</dict>
+						<dict>
+							<key>pfm_name</key>
+							<string>OnlyIfExists</string>
+							<key>pfm_title</key>
+							<string>Only If Exists</string>
+							<key>pfm_type</key>
+							<string>boolean</string>
+							<key>pfm_description</key>
+							<string>Only add this item when the folder path exists.</string>
+							<key>pfm_default</key>
+							<true/>
+						</dict>
+						<dict>
+							<key>pfm_name</key>
+							<string>IconPath</string>
+							<key>pfm_title</key>
+							<string>Custom Icon Path</string>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_description</key>
+							<string>Optional path to a custom icon file already deployed to the Mac.</string>
+							<key>pfm_value_placeholder</key>
+							<string>/Library/Application Support/DockPilot/Icons/Documents.png</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>pfm_name</key>
+			<string>Folders</string>
+			<key>pfm_title</key>
+			<string>Folders</string>
+			<key>pfm_type</key>
+			<string>array</string>
+			<key>pfm_description</key>
+			<string>Right-side Dock folders managed by DockPilot. User variables resolve for the logged-in user without probing protected folders.</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_name</key>
+					<string>Folder</string>
+					<key>pfm_title</key>
+					<string>Folder</string>
+					<key>pfm_type</key>
+					<string>dictionary</string>
+					<key>pfm_description</key>
+					<string>A right-side Dock folder.</string>
+					<key>pfm_subkeys</key>
+					<array>
+						<dict>
+							<key>pfm_name</key>
+							<string>Label</string>
+							<key>pfm_title</key>
+							<string>Label</string>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_description</key>
+							<string>Display name used by DockPilot status and diagnostics.</string>
+							<key>pfm_value_placeholder</key>
+							<string>Documents</string>
+						</dict>
+						<dict>
+							<key>pfm_name</key>
+							<string>Path</string>
+							<key>pfm_title</key>
+							<string>Path</string>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_description</key>
+							<string>Folder path. User variables such as %home%, %desktop%, %documents%, %downloads%, and %username% are resolved per logged-in user.</string>
+							<key>pfm_value_placeholder</key>
+							<string>%documents%</string>
+						</dict>
+						<dict>
+							<key>pfm_name</key>
+							<string>View</string>
+							<key>pfm_title</key>
+							<string>View</string>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_description</key>
+							<string>Dock stack view style.</string>
+							<key>pfm_range_list</key>
+							<array>
+								<string>automatic</string>
+								<string>fan</string>
+								<string>grid</string>
+								<string>list</string>
+							</array>
+							<key>pfm_range_list_titles</key>
+							<array>
+								<string>Automatic</string>
+								<string>Fan</string>
+								<string>Grid</string>
+								<string>List</string>
+							</array>
+							<key>pfm_default</key>
+							<string>automatic</string>
+						</dict>
+						<dict>
+							<key>pfm_name</key>
+							<string>DisplayAs</string>
+							<key>pfm_title</key>
+							<string>Display As</string>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_description</key>
+							<string>Dock display style for the item.</string>
+							<key>pfm_range_list</key>
+							<array>
+								<string>stack</string>
+								<string>folder</string>
+							</array>
+							<key>pfm_range_list_titles</key>
+							<array>
+								<string>Stack</string>
+								<string>Folder</string>
+							</array>
+							<key>pfm_default</key>
+							<string>folder</string>
+						</dict>
+						<dict>
+							<key>pfm_name</key>
+							<string>SortBy</string>
+							<key>pfm_title</key>
+							<string>Sort By</string>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_description</key>
+							<string>Sort order for the stack or folder.</string>
+							<key>pfm_range_list</key>
+							<array>
+								<string>name</string>
+								<string>dateadded</string>
+								<string>datemodified</string>
+								<string>datecreated</string>
+								<string>kind</string>
+							</array>
+							<key>pfm_range_list_titles</key>
+							<array>
+								<string>Name</string>
+								<string>Date Added</string>
+								<string>Date Modified</string>
+								<string>Date Created</string>
+								<string>Kind</string>
+							</array>
+							<key>pfm_default</key>
+							<string>name</string>
+						</dict>
+						<dict>
+							<key>pfm_name</key>
+							<string>OnlyIfExists</string>
+							<key>pfm_title</key>
+							<string>Only If Exists</string>
+							<key>pfm_type</key>
+							<string>boolean</string>
+							<key>pfm_description</key>
+							<string>Only add this item when the folder path exists.</string>
+							<key>pfm_default</key>
+							<true/>
+						</dict>
+						<dict>
+							<key>pfm_name</key>
+							<string>IconPath</string>
+							<key>pfm_title</key>
+							<string>Custom Icon Path</string>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_description</key>
+							<string>Optional path to a custom icon file already deployed to the Mac.</string>
+							<key>pfm_value_placeholder</key>
+							<string>/Library/Application Support/DockPilot/Icons/Documents.png</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>pfm_name</key>
+			<string>NetworkShares</string>
+			<key>pfm_title</key>
+			<string>Network Shares</string>
+			<key>pfm_type</key>
+			<string>array</string>
+			<key>pfm_description</key>
+			<string>Network share shortcuts managed on the right side of the Dock.</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_name</key>
+					<string>NetworkShare</string>
+					<key>pfm_title</key>
+					<string>Network Share</string>
+					<key>pfm_type</key>
+					<string>dictionary</string>
+					<key>pfm_description</key>
+					<string>A DockPilot network share shortcut.</string>
+					<key>pfm_subkeys</key>
+					<array>
+						<dict>
+							<key>pfm_name</key>
+							<string>Label</string>
+							<key>pfm_title</key>
+							<string>Label</string>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_description</key>
+							<string>Display name used by DockPilot status and diagnostics.</string>
+							<key>pfm_value_placeholder</key>
+							<string>Shared Drive</string>
+						</dict>
+						<dict>
+							<key>pfm_name</key>
+							<string>URL</string>
+							<key>pfm_title</key>
+							<string>URL</string>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_description</key>
+							<string>Network share URL.</string>
+							<key>pfm_value_placeholder</key>
+							<string>smb://server/share</string>
+						</dict>
+						<dict>
+							<key>pfm_name</key>
+							<string>MountPath</string>
+							<key>pfm_title</key>
+							<string>Mount Path</string>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_description</key>
+							<string>Optional local mount path.</string>
+							<key>pfm_value_placeholder</key>
+							<string>/Volumes/Shared Drive</string>
+						</dict>
+						<dict>
+							<key>pfm_name</key>
+							<string>Persistent</string>
+							<key>pfm_title</key>
+							<string>Persistent</string>
+							<key>pfm_type</key>
+							<string>boolean</string>
+							<key>pfm_description</key>
+							<string>Keep the share visible as a persistent Dock shortcut.</string>
+							<key>pfm_default</key>
+							<true/>
+						</dict>
+						<dict>
+							<key>pfm_name</key>
+							<string>IconPath</string>
+							<key>pfm_title</key>
+							<string>Custom Icon Path</string>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_description</key>
+							<string>Optional path to a custom icon file already deployed to the Mac.</string>
+							<key>pfm_value_placeholder</key>
+							<string>/Library/Application Support/DockPilot/Icons/SharedDrive.png</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>pfm_name</key>
+			<string>WebLinks</string>
+			<key>pfm_title</key>
+			<string>Web Links</string>
+			<key>pfm_type</key>
+			<string>array</string>
+			<key>pfm_description</key>
+			<string>Web link shortcuts managed on the right side of the Dock.</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_name</key>
+					<string>WebLink</string>
+					<key>pfm_title</key>
+					<string>Web Link</string>
+					<key>pfm_type</key>
+					<string>dictionary</string>
+					<key>pfm_description</key>
+					<string>A DockPilot web link shortcut.</string>
+					<key>pfm_subkeys</key>
+					<array>
+						<dict>
+							<key>pfm_name</key>
+							<string>Label</string>
+							<key>pfm_title</key>
+							<string>Label</string>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_description</key>
+							<string>Display name used by DockPilot status and diagnostics.</string>
+							<key>pfm_value_placeholder</key>
+							<string>Self Service</string>
+						</dict>
+						<dict>
+							<key>pfm_name</key>
+							<string>URL</string>
+							<key>pfm_title</key>
+							<string>URL</string>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_description</key>
+							<string>Web address for the shortcut.</string>
+							<key>pfm_value_placeholder</key>
+							<string>https://selfservice.example.org</string>
+						</dict>
+						<dict>
+							<key>pfm_name</key>
+							<string>IconPath</string>
+							<key>pfm_title</key>
+							<string>Custom Icon Path</string>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_description</key>
+							<string>Optional path to a custom icon file already deployed to the Mac.</string>
+							<key>pfm_value_placeholder</key>
+							<string>/Library/Application Support/DockPilot/Icons/SelfService.png</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+		</dict>
+	</array>
+	<key>pfm_targets</key>
+	<array>
+		<string>system</string>
+		<string>user</string>
+	</array>
+	<key>pfm_title</key>
+	<string>DockPilot</string>
+	<key>pfm_unique</key>
+	<true/>
+	<key>pfm_version</key>
+	<integer>1</integer>
+</dict>
+</plist>
