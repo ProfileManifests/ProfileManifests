@@ -13,7 +13,7 @@
 	<key>pfm_format_version</key>
 	<integer>1</integer>
 	<key>pfm_last_modified</key>
-	<date>2026-04-30T00:00:00Z</date>
+	<date>2026-05-21T00:00:00Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -608,9 +608,9 @@ A profile can consist of payloads with different version numbers. For example, c
 									<key>pfm_target_conditions</key>
 									<array>
 										<dict>
-											<key>pfm_range_list</key>
+											<key>pfm_n_range_list</key>
 											<array>
-												<string>specifyFrequency</string>
+												<string>specifyPatchDay</string>
 											</array>
 											<key>pfm_target</key>
 											<string>ScheduledUpdates.runFrequency.runType</string>
@@ -662,9 +662,9 @@ A profile can consist of payloads with different version numbers. For example, c
 									<key>pfm_target_conditions</key>
 									<array>
 										<dict>
-											<key>pfm_range_list</key>
+											<key>pfm_n_range_list</key>
 											<array>
-												<string>specifyFrequency</string>
+												<string>specifyPatchDay</string>
 											</array>
 											<key>pfm_target</key>
 											<string>ScheduledUpdates.runFrequency.runType</string>
@@ -757,9 +757,9 @@ A profile can consist of payloads with different version numbers. For example, c
 									<key>pfm_target_conditions</key>
 									<array>
 										<dict>
-											<key>pfm_range_list</key>
+											<key>pfm_n_range_list</key>
 											<array>
-												<string>specifyFrequency</string>
+												<string>specifyPatchDay</string>
 											</array>
 											<key>pfm_target</key>
 											<string>ScheduledUpdates.runFrequency.runType</string>
@@ -801,9 +801,9 @@ A profile can consist of payloads with different version numbers. For example, c
 									<key>pfm_target_conditions</key>
 									<array>
 										<dict>
-											<key>pfm_range_list</key>
+											<key>pfm_n_range_list</key>
 											<array>
-												<string>specifyFrequency</string>
+												<string>specifyPatchDay</string>
 											</array>
 											<key>pfm_target</key>
 											<string>ScheduledUpdates.runFrequency.runType</string>
@@ -814,9 +814,9 @@ A profile can consist of payloads with different version numbers. For example, c
 									<key>pfm_target_conditions</key>
 									<array>
 										<dict>
-											<key>pfm_range_list</key>
+											<key>pfm_n_range_list</key>
 											<array>
-												<string>singlePromptMode</string>
+												<string>recurringPromptMode</string>
 											</array>
 											<key>pfm_target</key>
 											<string>ScheduledUpdates.runFrequency.patchDayFrequency</string>
@@ -848,9 +848,9 @@ A profile can consist of payloads with different version numbers. For example, c
 									<key>pfm_target_conditions</key>
 									<array>
 										<dict>
-											<key>pfm_range_list</key>
+											<key>pfm_n_range_list</key>
 											<array>
-												<string>specifyFrequency</string>
+												<string>specifyPatchDay</string>
 											</array>
 											<key>pfm_target</key>
 											<string>ScheduledUpdates.runFrequency.runType</string>
@@ -903,22 +903,8 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>If you allowed updates on Mondays, use to define the time on a Monday Zappl is permitted to start prompting users to install pending updates. This should be in 24 hour format, e.g., 09:00 for 9am, or 21:00 for 9pm.</string>
 							<key>pfm_documentation_url</key>
 							<string>https://docs.zappl.co/customise/preferences#run-limitation-options</string>
-							<key>pfm_exclude</key>
-							<array>
-								<dict>
-									<key>pfm_target_conditions</key>
-									<array>
-										<dict>
-											<key>pfm_range_list</key>
-											<array>
-												<false/>
-											</array>
-											<key>pfm_target</key>
-											<string>ScheduledUpdates.runLimitations.monday</string>
-										</dict>
-									</array>
-								</dict>
-							</array>
+							<key>pfm_enabled</key>
+							<true/>
 							<key>pfm_exclude</key>
 							<array>
 								<dict>
