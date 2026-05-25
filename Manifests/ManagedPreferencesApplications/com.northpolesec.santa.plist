@@ -5,13 +5,13 @@
 	<key>pfm_description</key>
 	<string>Santa settings</string>
 	<key>pfm_documentation_url</key>
-	<string>https://northpole.dev/deployment/configuration.html</string>
+	<string>https://northpole.dev/configuration/keys/</string>
 	<key>pfm_domain</key>
 	<string>com.northpolesec.santa</string>
 	<key>pfm_format_version</key>
 	<integer>1</integer>
 	<key>pfm_last_modified</key>
-	<date>2025-01-26T23:49:44Z</date>
+	<date>2026-05-25T00:40:03Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -138,10 +138,11 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_range_list_titles</key>
 			<array>
 				<string>General</string>
-				<string>Customisation</string>
-				<string>Sync Server</string>
+				<string>Sync</string>
+				<string>GUI</string>
 				<string>FAA</string>
-				<string>Event Logging</string>
+				<string>Rules</string>
+				<string>Telemetry</string>
 				<string>Removable Media</string>
 				<string>Metrics</string>
 			</array>
@@ -149,7 +150,15 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>always</string>
 			<key>pfm_segments</key>
 			<dict>
-				<key>Customisation</key>
+				<key>FAA</key>
+				<array>
+					<string>FileAccessPolicyPlist</string>
+					<string>FileAccessPolicyUpdateIntervalSec</string>
+					<string>OverrideFileAccessAction</string>
+					<string>FileAccessGlobalLogsPerSec</string>
+					<string>FileAccessGlobalWindowSizeSec</string>
+				</array>
+				<key>GUI</key>
 				<array>
 					<string>EnableSilentMode</string>
 					<string>EnableSilentTTYMode</string>
@@ -165,6 +174,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<string>BannedBlockMessage</string>
 					<string>ModeNotificationMonitor</string>
 					<string>ModeNotificationLockdown</string>
+					<string>ModeNotificationStandalone</string>
 					<string>BannedUSBBlockMessage</string>
 					<string>RemountUSBBlockMessage</string>
 					<string>FileAccessBlockMessage</string>
@@ -174,39 +184,10 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<string>BrandingCompanyLogoDark</string>
 					<string>FunFontsOnSpecificDays</string>
 				</array>
-				<key>Event Logging</key>
-				<array>
-					<string>FileChangesPrefixFilters</string>
-					<string>Telemetry</string>
-					<string>EventLogType</string>
-					<string>EventLogPath</string>
-					<string>SpoolDirectory</string>
-					<string>SpoolDirectoryFileSizeThresholdKB</string>
-					<string>SpoolDirectorySizeThresholdMB</string>
-					<string>SpoolDirectoryEventMaxFlushTimeSec</string>
-					<string>EnableMachineIDDecoration</string>
-					<string>EntitlementsPrefixFilter</string>
-					<string>EntitlementsTeamIDFilter</string>
-					<string>TelemetryFilterExpressions</string>
-				</array>
-				<key>FAA</key>
-				<array>
-					<string>FileAccessPolicyPlist</string>
-					<string>FileAccessPolicyUpdateIntervalSec</string>
-					<string>OverrideFileAccessAction</string>
-					<string>FileAccessGlobalLogsPerSec</string>
-					<string>FileAccessGlobalWindowSizeSec</string>
-				</array>
 				<key>General</key>
 				<array>
 					<string>ClientMode</string>
 					<string>FailClosed</string>
-					<string>FileChangesRegex</string>
-					<string>AllowedPathRegex</string>
-					<string>BlockedPathRegex</string>
-					<string>EnableBadSignatureProtection</string>
-					<string>EnablePageZeroProtection</string>
-					<string>EnableTransitiveRules</string>
 					<string>EnableStandalonePasswordFallback</string>
 					<string>IgnoreOtherEndpointSecurityClients</string>
 					<string>EnableStatsCollection</string>
@@ -231,7 +212,15 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<string>EncryptedRemovableMediaRemountFlags</string>
 					<string>OnStartUSBOptions</string>
 				</array>
-				<key>Sync Server</key>
+				<key>Rules</key>
+				<array>
+					<string>AllowedPathRegex</string>
+					<string>BlockedPathRegex</string>
+					<string>EnableBadSignatureProtection</string>
+					<string>EnablePageZeroProtection</string>
+					<string>EnableTransitiveRules</string>
+				</array>
+				<key>Sync</key>
 				<array>
 					<string>SyncBaseURL</string>
 					<string>SyncEnableProtoTransfer</string>
@@ -254,6 +243,22 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<string>DisableUnknownEventUpload</string>
 					<string>SyncClientContentEncoding</string>
 					<string>SyncExtraHeaders</string>
+				</array>
+				<key>Telemetry</key>
+				<array>
+					<string>FileChangesRegex</string>
+					<string>FileChangesPrefixFilters</string>
+					<string>Telemetry</string>
+					<string>EventLogType</string>
+					<string>EventLogPath</string>
+					<string>SpoolDirectory</string>
+					<string>SpoolDirectoryFileSizeThresholdKB</string>
+					<string>SpoolDirectorySizeThresholdMB</string>
+					<string>SpoolDirectoryEventMaxFlushTimeSec</string>
+					<string>EnableMachineIDDecoration</string>
+					<string>EntitlementsPrefixFilter</string>
+					<string>EntitlementsTeamIDFilter</string>
+					<string>TelemetryFilterExpressions</string>
 				</array>
 			</dict>
 			<key>pfm_type</key>
@@ -692,7 +697,7 @@ For example: https://sync-server-hostname/%machine_id%/%file_sha%</string>
 			<key>pfm_description</key>
 			<string>Custom message when an unknown binary is blocked.</string>
 			<key>pfm_description_reference</key>
-			<string>In Lockdown mode this is the message shown to the user when an unknown binary is blocked. If this message is not configured a reasonable default is provided.</string>
+			<string>In Lockdown/Standalone mode this is the message shown to the user when an unknown binary is blocked. If this message is not configured a reasonable default is provided.</string>
 			<key>pfm_exclude</key>
 			<array>
 				<dict>
@@ -702,6 +707,7 @@ For example: https://sync-server-hostname/%machine_id%/%file_sha%</string>
 							<key>pfm_n_range_list</key>
 							<array>
 								<integer>2</integer>
+								<integer>3</integer>
 							</array>
 							<key>pfm_present</key>
 							<false/>
@@ -735,6 +741,8 @@ For example: https://sync-server-hostname/%machine_id%/%file_sha%</string>
 			<string>Dismiss Text</string>
 			<key>pfm_type</key>
 			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>Dismiss</string>
 		</dict>
 		<dict>
 			<key>pfm_description</key>
@@ -764,7 +772,7 @@ For example: https://sync-server-hostname/%machine_id%/%file_sha%</string>
 			<key>pfm_type</key>
 			<string>string</string>
 			<key>pfm_value_placeholder</key>
-			<string>Entering Monitor mode&lt;br/&gt;Please be careful!</string>
+			<string>Switching into Monitor mode</string>
 		</dict>
 		<dict>
 			<key>pfm_default</key>
@@ -780,7 +788,25 @@ For example: https://sync-server-hostname/%machine_id%/%file_sha%</string>
 			<key>pfm_type</key>
 			<string>string</string>
 			<key>pfm_value_placeholder</key>
-			<string>Entering Lockdown mode</string>
+			<string>Switching into Lockdown mode</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Switching into Standalone mode</string>
+			<key>pfm_description</key>
+			<string>Custom message when entering STANDALONE mode. (undocumented)</string>
+			<key>pfm_description_reference</key>
+			<string>The notification text to display when the client goes into Standalone mode. Defaults to "Switching into Standalone mode".</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/northpolesec/santa/blob/cb2c6c4b7db7b6aa94c78264e84856075ac06925/Source/common/SNTConfigurator.h#L639</string>
+			<key>pfm_name</key>
+			<string>ModeNotificationStandalone</string>
+			<key>pfm_title</key>
+			<string>Standalone Notification Text</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>Switching into Standalone mode</string>
 		</dict>
 		<dict>
 			<key>pfm_description</key>
@@ -1225,8 +1251,10 @@ For example: https://sync-server-hostname/%machine_id%/%file_sha%</string>
 			<key>pfm_subkeys</key>
 			<array>
 				<dict>
-					<key>pfm_name</key>
-					<string>*</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+				<dict>
 					<key>pfm_type</key>
 					<string>string</string>
 				</dict>
@@ -1302,6 +1330,8 @@ For example: https://sync-server-hostname/%machine_id%/%file_sha%</string>
 			<string>Event Log Path</string>
 			<key>pfm_type</key>
 			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>/var/db/santa/santa.log</string>
 		</dict>
 		<dict>
 			<key>pfm_default</key>
@@ -1336,6 +1366,8 @@ For example: https://sync-server-hostname/%machine_id%/%file_sha%</string>
 			<string>Spool Directory</string>
 			<key>pfm_type</key>
 			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>/var/db/santa/spool</string>
 		</dict>
 		<dict>
 			<key>pfm_default</key>
@@ -1370,6 +1402,8 @@ For example: https://sync-server-hostname/%machine_id%/%file_sha%</string>
 			<string>Spool Max File Size</string>
 			<key>pfm_type</key>
 			<string>integer</string>
+			<key>pfm_value_placeholder</key>
+			<string>250</string>
 			<key>pfm_value_unit</key>
 			<string>KB</string>
 		</dict>
@@ -1406,6 +1440,8 @@ For example: https://sync-server-hostname/%machine_id%/%file_sha%</string>
 			<string>Spool Max Size</string>
 			<key>pfm_type</key>
 			<string>integer</string>
+			<key>pfm_value_placeholder</key>
+			<string>100</string>
 			<key>pfm_value_unit</key>
 			<string>MB</string>
 		</dict>
@@ -1442,6 +1478,8 @@ For example: https://sync-server-hostname/%machine_id%/%file_sha%</string>
 			<string>Spool Max Event Buffer</string>
 			<key>pfm_type</key>
 			<string>integer</string>
+			<key>pfm_value_placeholder</key>
+			<string>15</string>
 			<key>pfm_value_unit</key>
 			<string>seconds</string>
 		</dict>
@@ -1615,6 +1653,8 @@ For example: https://sync-server-hostname/%machine_id%/%file_sha%</string>
 			<string>Metric Export Interval</string>
 			<key>pfm_type</key>
 			<string>integer</string>
+			<key>pfm_value_placeholder</key>
+			<string>30</string>
 			<key>pfm_value_unit</key>
 			<string>seconds</string>
 		</dict>
@@ -1631,6 +1671,8 @@ For example: https://sync-server-hostname/%machine_id%/%file_sha%</string>
 			<string>Metric Export Timeout</string>
 			<key>pfm_type</key>
 			<string>integer</string>
+			<key>pfm_value_placeholder</key>
+			<string>30</string>
 			<key>pfm_value_unit</key>
 			<string>seconds</string>
 		</dict>
@@ -1646,8 +1688,10 @@ For example: https://sync-server-hostname/%machine_id%/%file_sha%</string>
 			<key>pfm_subkeys</key>
 			<array>
 				<dict>
-					<key>pfm_name</key>
-					<string>*</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+				<dict>
 					<key>pfm_type</key>
 					<string>string</string>
 				</dict>
@@ -1838,6 +1882,8 @@ For example: https://sync-server-hostname/%machine_id%/%file_sha%</string>
 			<string>File Access Policy Update Interval</string>
 			<key>pfm_type</key>
 			<string>integer</string>
+			<key>pfm_value_placeholder</key>
+			<string>600</string>
 			<key>pfm_value_unit</key>
 			<string>seconds</string>
 		</dict>
@@ -1886,6 +1932,8 @@ For example: https://sync-server-hostname/%machine_id%/%file_sha%</string>
 			<string>File Access Global Logs Per Second</string>
 			<key>pfm_type</key>
 			<string>integer</string>
+			<key>pfm_value_placeholder</key>
+			<string>60</string>
 		</dict>
 		<dict>
 			<key>pfm_default</key>
@@ -1904,6 +1952,8 @@ For example: https://sync-server-hostname/%machine_id%/%file_sha%</string>
 			<string>File Access Global Window Size</string>
 			<key>pfm_type</key>
 			<string>integer</string>
+			<key>pfm_value_placeholder</key>
+			<string>15</string>
 			<key>pfm_value_unit</key>
 			<string>seconds</string>
 		</dict>
@@ -2097,6 +2147,6 @@ For example: https://sync-server-hostname/%machine_id%/%file_sha%</string>
 	<key>pfm_unique</key>
 	<true/>
 	<key>pfm_version</key>
-	<integer>1</integer>
+	<integer>2</integer>
 </dict>
 </plist>
