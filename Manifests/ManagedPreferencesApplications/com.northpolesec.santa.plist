@@ -11,7 +11,7 @@
 	<key>pfm_format_version</key>
 	<integer>1</integer>
 	<key>pfm_last_modified</key>
-	<date>2026-05-25T00:40:03Z</date>
+	<date>2026-05-26T00:00:00Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -153,6 +153,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				<key>FAA</key>
 				<array>
 					<string>FileAccessPolicyPlist</string>
+					<string>FileAccessPolicy</string>
 					<string>FileAccessPolicyUpdateIntervalSec</string>
 					<string>OverrideFileAccessAction</string>
 					<string>FileAccessGlobalLogsPerSec</string>
@@ -219,11 +220,13 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<string>EnableBadSignatureProtection</string>
 					<string>EnablePageZeroProtection</string>
 					<string>EnableTransitiveRules</string>
+					<string>StaticRules</string>
 				</array>
 				<key>Sync</key>
 				<array>
 					<string>SyncBaseURL</string>
 					<string>SyncEnableProtoTransfer</string>
+					<string>SyncProxyConfiguration</string>
 					<string>SyncEnableCleanSyncEventUpload</string>
 					<string>ClientAuthCertificateFile</string>
 					<string>ClientAuthCertificatePassword</string>
@@ -485,6 +488,190 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>Enable Transitive Rules</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>A static set of rules that always apply to the host, taking precedence over any rules configured by a sync server. The intended use-case is a small hardcoded set of rules that every host needs, such as management tools — not as a general-purpose rule database.
+
+Setting this key (even to an empty array) also prevents local rule management via the santactl rule command.</string>
+			<key>pfm_description_reference</key>
+			<string>A static set of rules that should always apply. These can be used as a fallback set of rules for management tools that should always be allowed to run even if a sync server does something unexpected. It can also be used as the sole source of rules, distributed with an MDM. Having this key set will also prevent local configuration of rules using the santactl rule command. Within the set of rules configured as StaticRules, the normal rule precedence order applies.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://northpole.dev/features/binary-authorization/#rule-dictionary-format</string>
+			<key>pfm_name</key>
+			<string>StaticRules</string>
+			<key>pfm_note</key>
+			<string>Setting this key — even to an empty array — disables local rule management via santactl rule.</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_name</key>
+					<string>Rule</string>
+					<key>pfm_subkeys</key>
+					<array>
+						<dict>
+							<key>pfm_description</key>
+							<string>The identifier for this rule. The required format depends on rule_type:
+• BINARY / CERTIFICATE — SHA-256 hash (64 hex characters)
+• TEAMID — 10-character alphanumeric Team ID (e.g. ZMCG7MLDV9)
+• SIGNINGID — TeamID:SigningID (e.g. EQHXZ8M8AV:com.google.Chrome), or platform:SigningID for Apple platform binaries (e.g. platform:com.apple.curl)
+• CDHASH — Code Directory Hash (40 hex characters)</string>
+							<key>pfm_description_reference</key>
+							<string>The identifier for the rule. The format depends on the rule_type.</string>
+							<key>pfm_name</key>
+							<string>identifier</string>
+							<key>pfm_require</key>
+							<string>always</string>
+							<key>pfm_title</key>
+							<string>Identifier</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+						<dict>
+							<key>pfm_description</key>
+							<string>The type of rule. Also determines the required format of the identifier and the rule's evaluation precedence: CDHash → Binary → SigningID → Certificate → TeamID.</string>
+							<key>pfm_description_reference</key>
+							<string>The type of rule.</string>
+							<key>pfm_name</key>
+							<string>rule_type</string>
+							<key>pfm_range_list</key>
+							<array>
+								<string>BINARY</string>
+								<string>CERTIFICATE</string>
+								<string>TEAMID</string>
+								<string>SIGNINGID</string>
+								<string>CDHASH</string>
+							</array>
+							<key>pfm_range_list_titles</key>
+							<array>
+								<string>Binary (SHA-256)</string>
+								<string>Certificate (SHA-256)</string>
+								<string>Team ID</string>
+								<string>Signing ID</string>
+								<string>CDHash</string>
+							</array>
+							<key>pfm_require</key>
+							<string>always</string>
+							<key>pfm_title</key>
+							<string>Rule Type</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+						<dict>
+							<key>pfm_description</key>
+							<string>The action to take when this rule matches an execution. ALLOWLIST_COMPILER rules create transitive allow rules for files written by the matched process; if EnableTransitiveRules is false they are treated as ALLOWLIST. CEL rules evaluate the expression in cel_expr to make their decision.</string>
+							<key>pfm_description_reference</key>
+							<string>The action to take when the rule matches.</string>
+							<key>pfm_name</key>
+							<string>policy</string>
+							<key>pfm_note</key>
+							<string>CEL policy requires Santa 2025.6 or later.</string>
+							<key>pfm_range_list</key>
+							<array>
+								<string>ALLOWLIST</string>
+								<string>ALLOWLIST_COMPILER</string>
+								<string>BLOCKLIST</string>
+								<string>SILENT_BLOCKLIST</string>
+								<string>CEL</string>
+							</array>
+							<key>pfm_range_list_titles</key>
+							<array>
+								<string>Allowlist</string>
+								<string>Allowlist Compiler</string>
+								<string>Blocklist</string>
+								<string>Silent Blocklist</string>
+								<string>CEL</string>
+							</array>
+							<key>pfm_require</key>
+							<string>always</string>
+							<key>pfm_title</key>
+							<string>Policy</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+						<dict>
+							<key>pfm_description</key>
+							<string>A CEL (Common Expression Language) expression to evaluate when this rule matches. Required when policy is CEL. The expression receives an ExecutionContext and must return either a ReturnValue or a bool (true = ALLOWLIST, false = BLOCKLIST).</string>
+							<key>pfm_description_reference</key>
+							<string>A CEL expression for the rule. Required if policy is CEL.</string>
+							<key>pfm_documentation_url</key>
+							<string>https://northpole.dev/features/binary-authorization/#cel</string>
+							<key>pfm_exclude</key>
+							<array>
+								<dict>
+									<key>pfm_target_conditions</key>
+									<array>
+										<dict>
+											<key>pfm_n_range_list</key>
+											<array>
+												<string>CEL</string>
+											</array>
+											<key>pfm_present</key>
+											<true/>
+											<key>pfm_target</key>
+											<string>policy</string>
+										</dict>
+									</array>
+								</dict>
+							</array>
+							<key>pfm_name</key>
+							<string>cel_expr</string>
+							<key>pfm_title</key>
+							<string>CEL Expression</string>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_value_placeholder</key>
+							<string>target.signing_time &gt;= timestamp('2025-01-01T00:00:00Z')</string>
+						</dict>
+						<dict>
+							<key>pfm_description</key>
+							<string>Custom message to display in the block notification when this rule blocks an execution. Overrides the global BannedBlockMessage for this specific rule. Only applies to BLOCKLIST and SILENT_BLOCKLIST policies.</string>
+							<key>pfm_description_reference</key>
+							<string>A custom message displayed in the block notification when this rule blocks execution.</string>
+							<key>pfm_name</key>
+							<string>custom_msg</string>
+							<key>pfm_title</key>
+							<string>Custom Message</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+						<dict>
+							<key>pfm_description</key>
+							<string>A custom URL for the block notification button, overriding the global EventDetailURL for this specific rule. Supports the same substitution placeholders as EventDetailURL (e.g. %file_identifier%, %machine_id%, %username%). Only applies to BLOCKLIST policies.</string>
+							<key>pfm_description_reference</key>
+							<string>A custom URL the user can visit for more information when blocked. Supports the same placeholders as EventDetailURL.</string>
+							<key>pfm_name</key>
+							<string>custom_url</string>
+							<key>pfm_title</key>
+							<string>Custom URL</string>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_value_placeholder</key>
+							<string>https://sync-server-hostname/blockables/%file_identifier%</string>
+						</dict>
+						<dict>
+							<key>pfm_description</key>
+							<string>A freeform comment or note about this rule for documentation purposes. Ignored by Santa at runtime.</string>
+							<key>pfm_description_reference</key>
+							<string>A comment or note about the rule (for documentation purposes).</string>
+							<key>pfm_name</key>
+							<string>comment</string>
+							<key>pfm_title</key>
+							<string>Comment</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+					</array>
+					<key>pfm_title</key>
+					<string>Rule</string>
+					<key>pfm_type</key>
+					<string>dictionary</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>Static Rules</string>
+			<key>pfm_type</key>
+			<string>array</string>
 		</dict>
 		<dict>
 			<key>pfm_default</key>
@@ -967,6 +1154,20 @@ For example: https://sync-server-hostname/%machine_id%/%file_sha%</string>
 			<string>boolean</string>
 		</dict>
 		<dict>
+			<key>pfm_description</key>
+			<string>Proxy configuration applied to all network requests made during syncing. This dictionary is passed directly to NSURLSessionConfiguration.connectionProxyDictionary. Keys are the kCFNetworkProxies* CFNetwork constants (e.g. HTTPEnable, HTTPProxy, HTTPPort, SOCKSEnable, ProxyAutoConfigURLString).</string>
+			<key>pfm_description_reference</key>
+			<string>The proxy configuration to use when syncing. See the Apple Documentation for details on the keys that can be used in this dictionary.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://developer.apple.com/documentation/cfnetwork/global-proxy-settings-constants</string>
+			<key>pfm_name</key>
+			<string>SyncProxyConfiguration</string>
+			<key>pfm_title</key>
+			<string>Sync Proxy Configuration</string>
+			<key>pfm_type</key>
+			<string>dictionary</string>
+		</dict>
+		<dict>
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
@@ -1159,9 +1360,9 @@ For example: https://sync-server-hostname/%machine_id%/%file_sha%</string>
 		</dict>
 		<dict>
 			<key>pfm_description</key>
-			<string>The path to a plist that contains the MachineOwnerKey / value pair.</string>
+			<string>The path to a plist that contains the MachineIDKey / value pair.</string>
 			<key>pfm_description_reference</key>
-			<string>The path to a plist that contains the MachineOwnerKey / value pair.</string>
+			<string>The path to a plist that contains the MachineIDKey / value pair.</string>
 			<key>pfm_name</key>
 			<string>MachineIDPlist</string>
 			<key>pfm_title</key>
@@ -1251,10 +1452,22 @@ For example: https://sync-server-hostname/%machine_id%/%file_sha%</string>
 			<key>pfm_subkeys</key>
 			<array>
 				<dict>
+					<key>pfm_description</key>
+					<string></string>
+					<key>pfm_name</key>
+					<string>{{key}}</string>
+					<key>pfm_title</key>
+					<string>Header Key</string>
 					<key>pfm_type</key>
 					<string>string</string>
 				</dict>
 				<dict>
+					<key>pfm_description</key>
+					<string></string>
+					<key>pfm_name</key>
+					<string>{{value}}</string>
+					<key>pfm_title</key>
+					<string>Header Value</string>
 					<key>pfm_type</key>
 					<string>string</string>
 				</dict>
@@ -1688,10 +1901,18 @@ For example: https://sync-server-hostname/%machine_id%/%file_sha%</string>
 			<key>pfm_subkeys</key>
 			<array>
 				<dict>
+					<key>pfm_description</key>
+					<string></string>
+					<key>pfm_name</key>
+					<string>{{key}}</string>
 					<key>pfm_type</key>
 					<string>string</string>
 				</dict>
 				<dict>
+					<key>pfm_description</key>
+					<string></string>
+					<key>pfm_name</key>
+					<string>{{value}}</string>
 					<key>pfm_type</key>
 					<string>string</string>
 				</dict>
@@ -1864,6 +2085,22 @@ For example: https://sync-server-hostname/%machine_id%/%file_sha%</string>
 			<string>string</string>
 			<key>pfm_value_placeholder</key>
 			<string>/etc/santa/file_access_policy.plist</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2023.1</string>
+			<key>pfm_description</key>
+			<string>A complete file access policy embedded directly in the Santa configuration. When set, FileAccessPolicyPlist is ignored.</string>
+			<key>pfm_description_reference</key>
+			<string>A complete file access configuration policy embedded in the main Santa config. If set, FileAccessPolicyPlist will be ignored. See File Access Authorization for configuration details.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://northpole.dev/configuration/faa/</string>
+			<key>pfm_name</key>
+			<string>FileAccessPolicy</string>
+			<key>pfm_title</key>
+			<string>File Access Policy</string>
+			<key>pfm_type</key>
+			<string>dictionary</string>
 		</dict>
 		<dict>
 			<key>pfm_default</key>
