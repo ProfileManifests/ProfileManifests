@@ -623,6 +623,8 @@ This policy is only effective when the machine is enrolled with CloudManagementE
 		<dict>
 			<key>pfm_app_min</key>
 			<string>103</string>
+			<key>pfm_default</key>
+			<integer>3</integer>
 			<key>pfm_description</key>
 			<string>This policy only affects clipboard operations controlled by the clipboard site permission, and does not affect sanitized clipboard writes or trusted copy and paste operations.</string>
 			<key>pfm_description_reference</key>
@@ -2653,6 +2655,8 @@ For a full description of possible settings and structure of this policy please 
 						<dict>
 							<key>pfm_app_min</key>
 							<string>115</string>
+							<key>pfm_default</key>
+							<integer>0</integer>
 							<key>pfm_description</key>
 							<string>If this policy is enabled, extensions that are unpublished on the Chrome Web Store will be disabled in Google Chrome</string>
 							<key>pfm_description_reference</key>
@@ -3871,6 +3875,8 @@ See https://www.chromestatus.com/feature/4664843055398912 .</string>
 		<dict>
 			<key>pfm_app_min</key>
 			<string>110</string>
+			<key>pfm_default</key>
+			<false/>
 			<key>pfm_description</key>
 			<string>This policy will allow WebAuthn on sites with invalid TLS certificates.</string>
 			<key>pfm_description_reference</key>
@@ -5542,6 +5548,8 @@ If this policy is left not set the user can disable any plugin installed on the 
 		<dict>
 			<key>pfm_app_min</key>
 			<string>105</string>
+			<key>pfm_default</key>
+			<true/>
 			<key>pfm_description</key>
 			<string>This policy will allow encryption of TLS ClientHello for enhanced privacy.</string>
 			<key>pfm_description_reference</key>
@@ -5579,6 +5587,8 @@ If this policy is left not set the user can disable any plugin installed on the 
 		<dict>
 			<key>pfm_app_min</key>
 			<string>106</string>
+			<key>pfm_default</key>
+			<false/>
 			<key>pfm_description</key>
 			<string>This policy will allow keeping browsing data in new enterprise profiles</string>
 			<key>pfm_description_reference</key>
@@ -5831,6 +5841,8 @@ This policy is intended to give enterprises depending on the legacy behavior a c
 		<dict>
 			<key>pfm_app_min</key>
 			<string>115</string>
+			<key>pfm_default</key>
+			<true/>
 			<key>pfm_description</key>
 			<string>This policy will allow Google Search Side Panel.</string>
 			<key>pfm_description_reference</key>
@@ -6008,6 +6020,8 @@ If this policy is not set, HTTP/0.9 will be disabled on non-default ports.</stri
 		<dict>
 			<key>pfm_app_min</key>
 			<string>112</string>
+			<key>pfm_default</key>
+			<true/>
 			<key>pfm_description</key>
 			<string>This policy will allow automatic HTTPS upgrades.</string>
 			<key>pfm_description_reference</key>
@@ -6991,6 +7005,8 @@ If not set, the default period of 345600000 milliseconds (four days) is used for
 		<dict>
 			<key>pfm_app_min</key>
 			<string>93</string>
+			<key>pfm_default</key>
+			<true/>
 			<key>pfm_description</key>
 			<string>Controls whether users may use remote debugging.</string>
 			<key>pfm_description_reference</key>
@@ -7464,6 +7480,8 @@ Otherwise it may be set to one of the following values: "tls1", "tls1.1" or "tls
 		<dict>
 			<key>pfm_app_min</key>
 			<string>107</string>
+			<key>pfm_default</key>
+			<true/>
 			<key>pfm_description</key>
 			<string>This policy enables strict MIME type checking for worker scripts.</string>
 			<key>pfm_description_reference</key>
