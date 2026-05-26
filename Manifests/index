@@ -7,11 +7,11 @@
 		<key>.GlobalPreferences</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-08-15T19:32:34Z</date>
+			<date>2026-03-25T16:49:34Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApple/com.apple.GlobalPreferences.plist</string>
 			<key>version</key>
-			<integer>8</integer>
+			<integer>9</integer>
 		</dict>
 		<key>com.apple.AdLib</key>
 		<dict>
@@ -88,7 +88,7 @@
 		<key>com.apple.controlcenter</key>
 		<dict>
 			<key>modified</key>
-			<date>2023-08-15T08:00:00Z</date>
+			<date>2026-05-03T00:58:27Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApple/com.apple.controlcenter.plist</string>
 			<key>version</key>
@@ -160,29 +160,29 @@
 		<key>com.apple.iWork.Keynote</key>
 		<dict>
 			<key>modified</key>
-			<date>2023-08-15T08:00:00Z</date>
+			<date>2026-04-27T21:13:21Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApple/com.apple.iWork.Keynote.plist</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<key>com.apple.iWork.Numbers</key>
 		<dict>
 			<key>modified</key>
-			<date>2023-08-15T08:00:00Z</date>
+			<date>2026-04-27T21:13:21Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApple/com.apple.iWork.Numbers.plist</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<key>com.apple.iWork.Pages</key>
 		<dict>
 			<key>modified</key>
-			<date>2023-08-15T08:00:00Z</date>
+			<date>2026-04-27T21:13:21Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApple/com.apple.iWork.Pages.plist</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<key>com.apple.icloud.managed</key>
 		<dict>
@@ -205,7 +205,7 @@
 		<key>com.apple.preferences.sharing.SharingPrefsExtension</key>
 		<dict>
 			<key>modified</key>
-			<date>2023-08-15T08:00:00Z</date>
+			<date>2026-05-03T00:58:27Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApple/com.apple.preferences.sharing.SharingPrefsExtension.plist</string>
 			<key>version</key>
@@ -289,11 +289,11 @@
 		<key>ManagedInstalls</key>
 		<dict>
 			<key>modified</key>
-			<date>2024-08-29T07:55:25Z</date>
+			<date>2026-05-05T00:00:00Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/ManagedInstalls.plist</string>
 			<key>version</key>
-			<integer>11</integer>
+			<integer>12</integer>
 		</dict>
 		<key>MunkiReport</key>
 		<dict>
@@ -316,11 +316,11 @@
 		<key>com.1password.1password</key>
 		<dict>
 			<key>modified</key>
-			<date>2024-12-20T13:41:48Z</date>
+			<date>2026-04-29T08:21:26Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.1password.1password.plist</string>
 			<key>version</key>
-			<integer>3</integer>
+			<integer>4</integer>
 		</dict>
 		<key>com.ThomsonResearchSoft.EndNote</key>
 		<dict>
@@ -370,11 +370,11 @@
 		<key>com.anthropic.claudefordesktop</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-10-21T00:00:00Z</date>
+			<date>2026-05-18T00:00:00Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.anthropic.claudefordesktop.plist</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>4</integer>
 		</dict>
 		<key>com.apple.Compressor</key>
 		<dict>
@@ -496,11 +496,11 @@
 		<key>com.dare.zappl.preferences</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-04-25T15:30:48Z</date>
+			<date>2026-04-22T00:00:00Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.dare.zappl.preferences.plist</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<key>com.docker.config</key>
 		<dict>
@@ -565,14 +565,23 @@
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
+		<key>com.github.wavebirddash.install-or-defer</key>
+		<dict>
+			<key>modified</key>
+			<date>2026-01-14T00:00:00Z</date>
+			<key>path</key>
+			<string>Manifests/ManagedPreferencesApplications/com.github.wavebirddash.install-or-defer.plist</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
 		<key>com.google.Chrome</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-12-13T20:41:02Z</date>
+			<date>2026-05-11T15:30:00Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.google.Chrome.plist</string>
 			<key>version</key>
-			<integer>18</integer>
+			<integer>19</integer>
 		</dict>
 		<key>com.google.Keystone</key>
 		<dict>
@@ -685,11 +694,11 @@
 		<key>com.jamf.setupmanager</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-12-06T03:00:00Z</date>
+			<date>2026-02-04T16:00:00Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.jamf.setupmanager.plist</string>
 			<key>version</key>
-			<integer>6</integer>
+			<integer>7</integer>
 		</dict>
 		<key>com.jamf.trust</key>
 		<dict>
@@ -712,20 +721,20 @@
 		<key>com.jigsaw24.Elevate24</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-09-11T12:00:00Z</date>
+			<date>2026-02-26T12:00:00Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.jigsaw24.Elevate24.plist</string>
 			<key>version</key>
-			<integer>4</integer>
+			<integer>5</integer>
 		</dict>
 		<key>com.jigsaw24.Elevate24SecurityExtension</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-11-25T09:52:16Z</date>
+			<date>2026-02-26T12:00:00Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.jigsaw24.ElevateSecurityLogs.plist</string>
 			<key>version</key>
-			<integer>4</integer>
+			<integer>5</integer>
 		</dict>
 		<key>com.keepersecurity.passwordmanager</key>
 		<dict>
@@ -739,11 +748,11 @@
 		<key>com.macjutsu.super</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-01-13T20:14:56Z</date>
+			<date>2026-05-02T00:00:00Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.macjutsu.super.plist</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<key>com.macpaw.site.theunarchiver</key>
 		<dict>
@@ -856,11 +865,11 @@
 		<key>com.microsoft.autoupdate2</key>
 		<dict>
 			<key>modified</key>
-			<date>2024-12-16T19:42:12Z</date>
+			<date>2026-02-16T20:29:12Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.microsoft.autoupdate2.plist</string>
 			<key>version</key>
-			<integer>18</integer>
+			<integer>19</integer>
 		</dict>
 		<key>com.microsoft.errorreporting</key>
 		<dict>
@@ -946,11 +955,11 @@
 		<key>com.parallels.desktop.managedprefs</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-01-08T13:34:39Z</date>
+			<date>2026-05-02T00:00:00Z</date>
 			<key>path</key>
-			<string>Manifests/ManagedPreferencesApplications/com.parallels.dektop.managedprefs.plist</string>
+			<string>Manifests/ManagedPreferencesApplications/com.parallels.desktop.managedprefs.plist</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>3</integer>
 		</dict>
 		<key>com.pratikkumar.airserver-mac</key>
 		<dict>
@@ -964,11 +973,11 @@
 		<key>com.secondsonconsulting.baseline</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-04-23T00:00:00Z</date>
+			<date>2026-05-02T00:00:00Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.secondsonconsulting.baseline.plist</string>
 			<key>version</key>
-			<integer>5</integer>
+			<integer>6</integer>
 		</dict>
 		<key>com.secondsonconsulting.renew</key>
 		<dict>
@@ -1015,6 +1024,15 @@
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
+		<key>com.todesktop.230313mzl4w4u92</key>
+		<dict>
+			<key>modified</key>
+			<date>2026-03-23T11:30:00Z</date>
+			<key>path</key>
+			<string>Manifests/ManagedPreferencesApplications/com.todesktop.230313mzl4w4u92.plist</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 		<key>com.trusourcelabs.NoMAD</key>
 		<dict>
 			<key>modified</key>
@@ -1036,11 +1054,11 @@
 		<key>com.twocanoes.xcreds</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-12-05T20:00:13Z</date>
+			<date>2026-04-02T16:11:13Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.twocanoes.xcreds.plist</string>
 			<key>version</key>
-			<integer>15</integer>
+			<integer>16</integer>
 		</dict>
 		<key>com.unity3d.UnityEditor5.x</key>
 		<dict>
@@ -1060,6 +1078,15 @@
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
+		<key>com.zappl.AppBar</key>
+		<dict>
+			<key>modified</key>
+			<date>2026-05-08T00:00:00Z</date>
+			<key>path</key>
+			<string>Manifests/ManagedPreferencesApplications/com.zappl.AppBar.plist</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 		<key>com.zscaler.installparams</key>
 		<dict>
 			<key>modified</key>
@@ -1072,11 +1099,11 @@
 		<key>corp.sap.privileges</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-08-25T11:45:50Z</date>
+			<date>2026-05-05T00:00:00Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/corp.sap.privileges.plist</string>
 			<key>version</key>
-			<integer>6</integer>
+			<integer>7</integer>
 		</dict>
 		<key>cx.c3.theunarchiver</key>
 		<dict>
@@ -1225,16 +1252,16 @@
 		<key>org.churchofjesuschrist.dorm</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-12-14T00:00:00Z</date>
+			<date>2026-03-03T00:00:00Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/org.churchofjesuschrist.dorm.plist</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>3</integer>
 		</dict>
 		<key>org.mozilla.firefox</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-12-30T12:58:24Z</date>
+			<date>2026-01-06T08:59:08Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/org.mozilla.firefox.plist</string>
 			<key>version</key>
@@ -1279,11 +1306,11 @@
 		<key>xyz.techitout.appAutoPatch</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-11-25T09:52:16Z</date>
+			<date>2026-01-13T16:59:22Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/xyz.techitout.appAutoPatch.plist</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 	</dict>
 	<key>ManagedPreferencesDeveloper</key>
@@ -1537,7 +1564,7 @@
 		<key>com.apple.SetupAssistant.managed</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-12-16T09:08:35Z</date>
+			<date>2026-03-25T16:05:45Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.SetupAssistant.managed.plist</string>
 			<key>version</key>
@@ -1573,7 +1600,7 @@
 		<key>com.apple.SystemConfiguration</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-09-17T09:38:09Z</date>
+			<date>2026-05-02T00:00:00Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.SystemConfiguration.plist</string>
 			<key>version</key>
@@ -1627,7 +1654,7 @@
 		<key>com.apple.applicationaccess-iOS</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-11-05T14:06:39Z</date>
+			<date>2026-02-19T09:22:13Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.applicationaccess-iOS.plist</string>
 			<key>version</key>
@@ -1636,16 +1663,16 @@
 		<key>com.apple.applicationaccess-macOS</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-11-05T14:06:39Z</date>
+			<date>2026-02-19T09:22:13Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.applicationaccess-macOS.plist</string>
 			<key>version</key>
-			<integer>20</integer>
+			<integer>21</integer>
 		</dict>
 		<key>com.apple.applicationaccess-tvOS</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-09-17T09:38:09Z</date>
+			<date>2026-02-19T09:22:13Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.applicationaccess-tvOS.plist</string>
 			<key>version</key>
@@ -1843,7 +1870,7 @@
 		<key>com.apple.familycontrols.contentfilter</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-09-17T09:38:09Z</date>
+			<date>2026-02-19T09:22:13Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.familycontrols.contentfilter.plist</string>
 			<key>version</key>
@@ -1861,11 +1888,11 @@
 		<key>com.apple.fileproviderd</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-09-17T09:38:09Z</date>
+			<date>2026-02-19T09:22:13Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.fileproviderd.plist</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<key>com.apple.finder</key>
 		<dict>
@@ -2005,7 +2032,7 @@
 		<key>com.apple.mcxprinting</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-09-17T09:38:09Z</date>
+			<date>2026-05-03T00:58:27Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.mcxprinting.plist</string>
 			<key>version</key>
@@ -2445,6 +2472,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2026-01-05T15:50:33Z</date>
+	<date>2026-05-21T10:14:34Z</date>
 </dict>
 </plist>

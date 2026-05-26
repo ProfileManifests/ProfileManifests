@@ -602,12 +602,12 @@
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.papercut.printdeploy.client.png</string>
 		</dict>
-		<key>com.parallels.dektop.managedprefs</key>
+		<key>com.parallels.desktop.managedprefs</key>
 		<dict>
 			<key>hash</key>
 			<string>191fc0997bb18d49770e151c7c605b73</string>
 			<key>path</key>
-			<string>Icons/ManagedPreferencesApplications/com.parallels.dektop.managedprefs.png</string>
+			<string>Icons/ManagedPreferencesApplications/com.parallels.desktop.managedprefs.png</string>
 		</dict>
 		<key>com.pratikkumar.airserver-mac</key>
 		<dict>
@@ -692,6 +692,13 @@
 			<string>aec5bcae37a371e157141c82c07f5e55</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.vpntracker.365.png</string>
+		</dict>
+		<key>com.zappl.AppBar</key>
+		<dict>
+			<key>hash</key>
+			<string>fa74799167951411ff1cf7b3a15d3549</string>
+			<key>path</key>
+			<string>Icons/ManagedPreferencesApplications/com.zappl.AppBar.png</string>
 		</dict>
 		<key>com.zscaler.installparams</key>
 		<dict>
@@ -1580,6 +1587,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2026-01-05T15:50:33Z</date>
+	<date>2026-05-21T10:14:34Z</date>
 </dict>
 </plist>

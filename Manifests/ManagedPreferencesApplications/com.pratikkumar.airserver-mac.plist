@@ -322,10 +322,10 @@ A profile can consist of payloads with different version numbers. For example, c
 			</array>
 			<key>pfm_name</key>
 			<string>UserLosslessAudioReceiverName</string>
-			<key>pfm_type</key>
-			<string>string</string>
 			<key>pfm_title</key>
 			<string>User-Visible Lossless Recevier Device Name</string>
+			<key>pfm_type</key>
+			<string>string</string>
 			<key>pfm_value_placeholder</key>
 			<string>Lossless Quality Receiver Name</string>
 		</dict>
