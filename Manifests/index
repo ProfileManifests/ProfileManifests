@@ -577,7 +577,7 @@
 		<key>com.google.Chrome</key>
 		<dict>
 			<key>modified</key>
-			<date>2026-05-11T15:30:00Z</date>
+			<date>2026-05-26T15:42:00Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.google.Chrome.plist</string>
 			<key>version</key>
@@ -2490,6 +2490,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2026-05-21T10:14:34Z</date>
+	<date>2026-05-26T15:34:05Z</date>
 </dict>
 </plist>
