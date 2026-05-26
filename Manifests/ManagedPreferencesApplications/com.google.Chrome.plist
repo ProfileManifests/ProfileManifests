@@ -630,8 +630,7 @@ This policy is only effective when the machine is enrolled with CloudManagementE
 			<key>pfm_description_reference</key>
 			<string>Setting the policy to 2 blocks sites from using the clipboard site permission. Setting the policy to 3 or leaving it unset lets the user change the setting and decide if the clipboard APIs are available when a site wants to use one.
 
-This policy can be overridden for specific URL patterns using the ClipboardAllowedForUrls and ClipboardBlockedForUrls policies.
-			</string>
+This policy can be overridden for specific URL patterns using the ClipboardAllowedForUrls and ClipboardBlockedForUrls policies.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://chromeenterprise.google/policies/#DefaultClipboardSetting</string>
 			<key>pfm_name</key>
@@ -3880,8 +3879,7 @@ See https://www.chromestatus.com/feature/4664843055398912 .</string>
 			<key>pfm_description</key>
 			<string>This policy will allow WebAuthn on sites with invalid TLS certificates.</string>
 			<key>pfm_description_reference</key>
-			<string>If set to Enabled, Google Chrome will allow Web Authentication requests on websites that have TLS certificates with errors (i.e. websites considered not secure). If the policy is set to Disabled or left unset, the default behavior of blocking such requests will apply.
-			</string>
+			<string>If set to Enabled, Google Chrome will allow Web Authentication requests on websites that have TLS certificates with errors (i.e. websites considered not secure). If the policy is set to Disabled or left unset, the default behavior of blocking such requests will apply.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://chromeenterprise.google/policies/#AllowWebAuthnWithBrokenTlsCerts</string>
 			<key>pfm_name</key>
@@ -5311,8 +5309,7 @@ Incorrectly formatted templates will be ignored.</string>
 			<key>pfm_description</key>
 			<string>This policy will allow sending domain reliability data to Google</string>
 			<key>pfm_description_reference</key>
-			<string>If this policy is set false, domain reliability diagnostic data reporting is disabled and no data is sent to Google. If this policy is set true or not set, domain reliability diagnostic data reporting will follow the behavior of MetricsReportingEnabled for Google Chrome or DeviceMetricsReportingEnabled for Google ChromeOS.
-			</string>
+			<string>If this policy is set false, domain reliability diagnostic data reporting is disabled and no data is sent to Google. If this policy is set true or not set, domain reliability diagnostic data reporting will follow the behavior of MetricsReportingEnabled for Google Chrome or DeviceMetricsReportingEnabled for Google ChromeOS.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://chromeenterprise.google/policies/#DomainReliabilityAllowed</string>
 			<key>pfm_name</key>
@@ -5553,8 +5550,7 @@ If this policy is left not set the user can disable any plugin installed on the 
 			<key>pfm_description</key>
 			<string>This policy will allow encryption of TLS ClientHello for enhanced privacy.</string>
 			<key>pfm_description_reference</key>
-			<string>Encrypted ClientHello (ECH) is an extension to TLS to encrypt sensitive fields of the ClientHello and improve privacy. If this policy is not configured, or is set to enabled, Google Chrome will follow the default rollout process for ECH. If it is disabled, Google Chrome will not enable ECH. When the feature is enabled, Google Chrome may or may not use ECH depending on server support, availability of the HTTPS DNS record, or rollout status.
-			</string>
+			<string>Encrypted ClientHello (ECH) is an extension to TLS to encrypt sensitive fields of the ClientHello and improve privacy. If this policy is not configured, or is set to enabled, Google Chrome will follow the default rollout process for ECH. If it is disabled, Google Chrome will not enable ECH. When the feature is enabled, Google Chrome may or may not use ECH depending on server support, availability of the HTTPS DNS record, or rollout status.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://chromeenterprise.google/policies/#EncryptedClientHelloEnabled</string>
 			<key>pfm_name</key>
@@ -5592,8 +5588,7 @@ If this policy is left not set the user can disable any plugin installed on the 
 			<key>pfm_description</key>
 			<string>This policy will allow keeping browsing data in new enterprise profiles</string>
 			<key>pfm_description_reference</key>
-			<string>If this policy is Enabled, the option to keep any existing browsing data when creating an enterprise profile will be checked by default. If this policy is unset or Disabled, the option to keep any existing browsing data when creating an enterprise profile will not be checked by default.
-			</string>
+			<string>If this policy is Enabled, the option to keep any existing browsing data when creating an enterprise profile will be checked by default. If this policy is unset or Disabled, the option to keep any existing browsing data when creating an enterprise profile will not be checked by default.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://chromeenterprise.google/policies/#EnterpriseProfileCreationKeepBrowsingData</string>
 			<key>pfm_name</key>
@@ -5668,8 +5663,7 @@ If this policy is set to False, the "Always allow" checkbox is not displayed and
 			<key>pfm_description</key>
 			<string>This policy will allow file picker APIs without user gesture for specified origins</string>
 			<key>pfm_description_reference</key>
-			<string>For security reasons, the showOpenFilePicker(), showSaveFilePicker() and showDirectoryPicker() web APIs require a prior user gesture ("transient activation") to be called or will otherwise fail. With this policy set, admins can specify origins on which these APIs can be called without prior user gesture. If this policy is unset, all origins will require a prior user gesture to call these APIs.
-			</string>
+			<string>For security reasons, the showOpenFilePicker(), showSaveFilePicker() and showDirectoryPicker() web APIs require a prior user gesture ("transient activation") to be called or will otherwise fail. With this policy set, admins can specify origins on which these APIs can be called without prior user gesture. If this policy is unset, all origins will require a prior user gesture to call these APIs.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://chromeenterprise.google/policies/#FileOrDirectoryPickerWithoutGestureAllowedForOrigins</string>
 			<key>pfm_name</key>
@@ -5846,8 +5840,7 @@ This policy is intended to give enterprises depending on the legacy behavior a c
 			<key>pfm_description</key>
 			<string>This policy will allow Google Search Side Panel.</string>
 			<key>pfm_description_reference</key>
-			<string> If set to Enabled or not set, Google Search Side Panel is allowed on all web pages.If set to Disabled, Google Search Side Panel is not available on any webpage.
-			</string>
+			<string>If set to Enabled or not set, Google Search Side Panel is allowed on all web pages.If set to Disabled, Google Search Side Panel is not available on any webpage.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://chromeenterprise.google/policies/#GoogleSearchSidePanelEnabled</string>
 			<key>pfm_name</key>
@@ -6025,8 +6018,7 @@ If this policy is not set, HTTP/0.9 will be disabled on non-default ports.</stri
 			<key>pfm_description</key>
 			<string>This policy will allow automatic HTTPS upgrades.</string>
 			<key>pfm_description_reference</key>
-			<string>Google Chrome attempts to upgrade some navigations from HTTP to HTTPS, when possible. This policy can be used to disable this behavior. If set to "true" or left unset, this feature will be enabled by default. The separate HttpAllowlist policy can be used to exempt specific hostnames or hostname patterns from being upgraded to HTTPS by this feature.
-			</string>
+			<string>Google Chrome attempts to upgrade some navigations from HTTP to HTTPS, when possible. This policy can be used to disable this behavior. If set to "true" or left unset, this feature will be enabled by default. The separate HttpAllowlist policy can be used to exempt specific hostnames or hostname patterns from being upgraded to HTTPS by this feature.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://chromeenterprise.google/policies/#HttpsUpgradesEnabled</string>
 			<key>pfm_name</key>
@@ -7010,8 +7002,7 @@ If not set, the default period of 345600000 milliseconds (four days) is used for
 			<key>pfm_description</key>
 			<string>Controls whether users may use remote debugging.</string>
 			<key>pfm_description_reference</key>
-			<string>If this policy is set to Enabled or not set, users may use remote debugging by specifying --remote-debugging-port and --remote-debugging-pipe command line switches. If this policy is set to Disabled, users are not allowed to use remote debugging.
-			</string>
+			<string>If this policy is set to Enabled or not set, users may use remote debugging by specifying --remote-debugging-port and --remote-debugging-pipe command line switches. If this policy is set to Disabled, users are not allowed to use remote debugging.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://chromeenterprise.google/policies/#RemoteDebuggingAllowed</string>
 			<key>pfm_name</key>
@@ -7072,8 +7063,7 @@ If this setting is disabled or not set, Flash content from other origins or smal
 			<true/>
 			<key>pfm_description</key>
 			<string>Setting the policy to Enabled or leaving it unset means downloaded files are sent to be analyzed by Safe Browsing, even when it's from a trusted source.
-Setting the policy to Disabled means downloaded files won't be sent to be analyzed by Safe Browsing when it's from a trusted source.
-			</string>
+Setting the policy to Disabled means downloaded files won't be sent to be analyzed by Safe Browsing when it's from a trusted source.</string>
 			<key>pfm_description_reference</key>
 			<string>These restrictions apply to downloads triggered from webpage content, as well as the Download link menu option. These restrictions don't apply to the save or download of the currently displayed page or to saving as PDF from the printing options.</string>
 			<key>pfm_documentation_url</key>
@@ -7488,8 +7478,7 @@ Otherwise it may be set to one of the following values: "tls1", "tls1.1" or "tls
 			<string>This policy controls Google Chrome cloud reporting which uploads information about the browser operation to Google Admin console.
 When enabled or unset, then worker scripts will use strict MIME type checking for JavaScript, which is the new default behaviour. Worker scripts with legacy MIME types will be rejected.
 
-When disabled, then worker scripts will use lax MIME type checking, so that worker scripts with legacy MIME types, e.g. text/ascii, will continue to be loaded and executed.
-			</string>
+When disabled, then worker scripts will use lax MIME type checking, so that worker scripts with legacy MIME types, e.g. text/ascii, will continue to be loaded and executed.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://chromeenterprise.google/policies/#StrictMimetypeCheckForWorkerScriptsEnabled</string>
 			<key>pfm_name</key>
