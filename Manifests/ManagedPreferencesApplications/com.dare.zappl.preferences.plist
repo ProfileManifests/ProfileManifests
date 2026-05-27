@@ -13,7 +13,7 @@
 	<key>pfm_format_version</key>
 	<integer>1</integer>
 	<key>pfm_last_modified</key>
-	<date>2026-04-22T00:00:00Z</date>
+	<date>2026-05-21T00:00:00Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -229,6 +229,8 @@ A profile can consist of payloads with different version numbers. For example, c
 					<string>https://docs.zappl.co/customise/preferences#allow-background-updates</string>
 					<key>pfm_name</key>
 					<string>hourlyCheck</string>
+					<key>pfm_note</key>
+					<string>Enable this setting to configure the 'Background Update Stagger Window' (backgroundUpdateWindow) preference.</string>
 					<key>pfm_title</key>
 					<string>Allow Background Updates</string>
 					<key>pfm_type</key>
@@ -243,6 +245,22 @@ A profile can consist of payloads with different version numbers. For example, c
 					<string>Sets a stagger window in minutes that spreads background update checks across your devices. Each device will randomly pick a time within this window to check for and download new updates after they are released. Increasing this value is recommended for large sites to reduce network load. The default and minimum value is 60 minutes and the maximum is 360 minutes (6 hours).</string>
 					<key>pfm_documentation_url</key>
 					<string>https://docs.zappl.co/customise/preferences#background-update-stagger-window</string>
+					<key>pfm_exclude</key>
+					<array>
+						<dict>
+							<key>pfm_target_conditions</key>
+							<array>
+								<dict>
+									<key>pfm_range_list</key>
+									<array>
+										<false/>
+									</array>
+									<key>pfm_target</key>
+									<string>GeneralOptions.hourlyCheck</string>
+								</dict>
+							</array>
+						</dict>
+					</array>
 					<key>pfm_name</key>
 					<string>backgroundUpdateWindow</string>
 					<key>pfm_range_max</key>
@@ -429,6 +447,8 @@ A profile can consist of payloads with different version numbers. For example, c
 							<true/>
 							<key>pfm_name</key>
 							<string>runType</string>
+							<key>pfm_note</key>
+							<string>When set to 'Specify Patch Frequency', the following preferences are available: 'Frequency to prompt users' (frequencyOption), 'Frequency Elapsed Behaviour' (frequencyElapsedMode), and 'Recurring Prompt Mode Deferral Window (Patch Frequency)' (deferralWindow). When set to 'Specify Recurring Patch Day', the following preferences are available: 'Patch Day' (patchDay), 'Week(s) of Month' (patchDayWeeks), 'Patch Day Prompt Frequency' (patchDayFrequency), 'Recurring Prompt Mode Deferral Window (Patch Day)' (patchDayDeferralWindow), and 'Missed Update Prompts' (missedUpdatePrompt).</string>
 							<key>pfm_range_list</key>
 							<array>
 								<string>specifyFrequency</string>
@@ -451,6 +471,22 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>A recurring update frequency time window which determines how often users are prompted to install pending updates, e.g. Once every week.</string>
 							<key>pfm_documentation_url</key>
 							<string>https://docs.zappl.co/customise/preferences#specific-patch-frequency-preferences</string>
+							<key>pfm_exclude</key>
+							<array>
+								<dict>
+									<key>pfm_target_conditions</key>
+									<array>
+										<dict>
+											<key>pfm_range_list</key>
+											<array>
+												<string>specifyPatchDay</string>
+											</array>
+											<key>pfm_target</key>
+											<string>ScheduledUpdates.runFrequency.runType</string>
+										</dict>
+									</array>
+								</dict>
+							</array>
 							<key>pfm_name</key>
 							<string>frequencyOption</string>
 							<key>pfm_range_list</key>
@@ -483,8 +519,26 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>https://docs.zappl.co/customise/preferences#specific-patch-frequency-preferences</string>
 							<key>pfm_enabled</key>
 							<true/>
+							<key>pfm_exclude</key>
+							<array>
+								<dict>
+									<key>pfm_target_conditions</key>
+									<array>
+										<dict>
+											<key>pfm_range_list</key>
+											<array>
+												<string>specifyPatchDay</string>
+											</array>
+											<key>pfm_target</key>
+											<string>ScheduledUpdates.runFrequency.runType</string>
+										</dict>
+									</array>
+								</dict>
+							</array>
 							<key>pfm_name</key>
 							<string>frequencyElapsedMode</string>
+							<key>pfm_note</key>
+							<string>Set to 'Recurring Prompt Mode' to configure the 'Recurring Prompt Mode Deferral Window (Patch Frequency)' (deferralWindow) preference.</string>
 							<key>pfm_range_list</key>
 							<array>
 								<string>singlePromptMode</string>
@@ -509,6 +563,35 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>https://docs.zappl.co/customise/preferences#specific-patch-day-preferences</string>
 							<key>pfm_enabled</key>
 							<true/>
+							<key>pfm_exclude</key>
+							<array>
+								<dict>
+									<key>pfm_target_conditions</key>
+									<array>
+										<dict>
+											<key>pfm_range_list</key>
+											<array>
+												<string>specifyPatchDay</string>
+											</array>
+											<key>pfm_target</key>
+											<string>ScheduledUpdates.runFrequency.runType</string>
+										</dict>
+									</array>
+								</dict>
+								<dict>
+									<key>pfm_target_conditions</key>
+									<array>
+										<dict>
+											<key>pfm_n_contains_any</key>
+											<array>
+												<string>recurringPromptMode</string>
+											</array>
+											<key>pfm_target</key>
+											<string>ScheduledUpdates.runFrequency.frequencyElapsedMode</string>
+										</dict>
+									</array>
+								</dict>
+							</array>
 							<key>pfm_name</key>
 							<string>deferralWindow</string>
 							<key>pfm_title</key>
@@ -527,6 +610,22 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>https://docs.zappl.co/customise/preferences#specific-patch-day-preferences</string>
 							<key>pfm_enabled</key>
 							<true/>
+							<key>pfm_exclude</key>
+							<array>
+								<dict>
+									<key>pfm_target_conditions</key>
+									<array>
+										<dict>
+											<key>pfm_n_range_list</key>
+											<array>
+												<string>specifyPatchDay</string>
+											</array>
+											<key>pfm_target</key>
+											<string>ScheduledUpdates.runFrequency.runType</string>
+										</dict>
+									</array>
+								</dict>
+							</array>
 							<key>pfm_name</key>
 							<string>patchDay</string>
 							<key>pfm_range_list</key>
@@ -565,6 +664,22 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>https://docs.zappl.co/customise/preferences#specific-patch-day-preferences</string>
 							<key>pfm_enabled</key>
 							<true/>
+							<key>pfm_exclude</key>
+							<array>
+								<dict>
+									<key>pfm_target_conditions</key>
+									<array>
+										<dict>
+											<key>pfm_n_range_list</key>
+											<array>
+												<string>specifyPatchDay</string>
+											</array>
+											<key>pfm_target</key>
+											<string>ScheduledUpdates.runFrequency.runType</string>
+										</dict>
+									</array>
+								</dict>
+							</array>
 							<key>pfm_name</key>
 							<string>patchDayWeeks</string>
 							<key>pfm_subkeys</key>
@@ -644,8 +759,26 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>https://docs.zappl.co/customise/preferences#specific-patch-day-preferences</string>
 							<key>pfm_enabled</key>
 							<true/>
+							<key>pfm_exclude</key>
+							<array>
+								<dict>
+									<key>pfm_target_conditions</key>
+									<array>
+										<dict>
+											<key>pfm_n_range_list</key>
+											<array>
+												<string>specifyPatchDay</string>
+											</array>
+											<key>pfm_target</key>
+											<string>ScheduledUpdates.runFrequency.runType</string>
+										</dict>
+									</array>
+								</dict>
+							</array>
 							<key>pfm_name</key>
 							<string>patchDayFrequency</string>
+							<key>pfm_note</key>
+							<string>Set to 'Recurring Prompt Mode' to configure the 'Recurring Prompt Mode Deferral Window (Patch Day)' (patchDayDeferralWindow) preference.</string>
 							<key>pfm_range_list</key>
 							<array>
 								<string>singlePromptMode</string>
@@ -670,6 +803,35 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>https://docs.zappl.co/customise/preferences#specific-patch-frequency-preferences</string>
 							<key>pfm_enabled</key>
 							<true/>
+							<key>pfm_exclude</key>
+							<array>
+								<dict>
+									<key>pfm_target_conditions</key>
+									<array>
+										<dict>
+											<key>pfm_n_range_list</key>
+											<array>
+												<string>specifyPatchDay</string>
+											</array>
+											<key>pfm_target</key>
+											<string>ScheduledUpdates.runFrequency.runType</string>
+										</dict>
+									</array>
+								</dict>
+								<dict>
+									<key>pfm_target_conditions</key>
+									<array>
+										<dict>
+											<key>pfm_n_range_list</key>
+											<array>
+												<string>recurringPromptMode</string>
+											</array>
+											<key>pfm_target</key>
+											<string>ScheduledUpdates.runFrequency.patchDayFrequency</string>
+										</dict>
+									</array>
+								</dict>
+							</array>
 							<key>pfm_name</key>
 							<string>patchDayDeferralWindow</string>
 							<key>pfm_title</key>
@@ -688,6 +850,22 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>https://docs.zappl.co/customise/preferences#specific-patch-day-preferences</string>
 							<key>pfm_enabled</key>
 							<true/>
+							<key>pfm_exclude</key>
+							<array>
+								<dict>
+									<key>pfm_target_conditions</key>
+									<array>
+										<dict>
+											<key>pfm_n_range_list</key>
+											<array>
+												<string>specifyPatchDay</string>
+											</array>
+											<key>pfm_target</key>
+											<string>ScheduledUpdates.runFrequency.runType</string>
+										</dict>
+									</array>
+								</dict>
+							</array>
 							<key>pfm_name</key>
 							<string>missedUpdatePrompt</string>
 							<key>pfm_title</key>
@@ -719,6 +897,8 @@ A profile can consist of payloads with different version numbers. For example, c
 							<true/>
 							<key>pfm_name</key>
 							<string>monday</string>
+							<key>pfm_note</key>
+							<string>Enable this setting to configure the 'Monday Start Time' (mondayStartTime) and 'Monday End Time' (mondayEndTime) preferences.</string>
 							<key>pfm_title</key>
 							<string>Monday</string>
 							<key>pfm_type</key>
@@ -731,6 +911,24 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>If you allowed updates on Mondays, use to define the time on a Monday Zappl is permitted to start prompting users to install pending updates. This should be in 24 hour format, e.g., 09:00 for 9am, or 21:00 for 9pm.</string>
 							<key>pfm_documentation_url</key>
 							<string>https://docs.zappl.co/customise/preferences#run-limitation-options</string>
+							<key>pfm_enabled</key>
+							<true/>
+							<key>pfm_exclude</key>
+							<array>
+								<dict>
+									<key>pfm_target_conditions</key>
+									<array>
+										<dict>
+											<key>pfm_range_list</key>
+											<array>
+												<false/>
+											</array>
+											<key>pfm_target</key>
+											<string>ScheduledUpdates.runLimitations.monday</string>
+										</dict>
+									</array>
+								</dict>
+							</array>
 							<key>pfm_format</key>
 							<string>^$|^(?:[01]\d|2[0-3]):[0-5]\d$</string>
 							<key>pfm_name</key>
@@ -751,6 +949,22 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>https://docs.zappl.co/customise/preferences#run-limitation-options</string>
 							<key>pfm_enabled</key>
 							<true/>
+							<key>pfm_exclude</key>
+							<array>
+								<dict>
+									<key>pfm_target_conditions</key>
+									<array>
+										<dict>
+											<key>pfm_range_list</key>
+											<array>
+												<false/>
+											</array>
+											<key>pfm_target</key>
+											<string>ScheduledUpdates.runLimitations.monday</string>
+										</dict>
+									</array>
+								</dict>
+							</array>
 							<key>pfm_format</key>
 							<string>^$|^(?:[01]\d|2[0-3]):[0-5]\d$</string>
 							<key>pfm_name</key>
@@ -773,6 +987,8 @@ A profile can consist of payloads with different version numbers. For example, c
 							<true/>
 							<key>pfm_name</key>
 							<string>tuesday</string>
+							<key>pfm_note</key>
+							<string>Enable this setting to configure the 'Tuesday Start Time' (tuesdayStartTime) and 'Tuesday End Time' (tuesdayEndTime) preferences.</string>
 							<key>pfm_title</key>
 							<string>Tuesday</string>
 							<key>pfm_type</key>
@@ -787,6 +1003,22 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>https://docs.zappl.co/customise/preferences#run-limitation-options</string>
 							<key>pfm_enabled</key>
 							<true/>
+							<key>pfm_exclude</key>
+							<array>
+								<dict>
+									<key>pfm_target_conditions</key>
+									<array>
+										<dict>
+											<key>pfm_range_list</key>
+											<array>
+												<false/>
+											</array>
+											<key>pfm_target</key>
+											<string>ScheduledUpdates.runLimitations.tuesday</string>
+										</dict>
+									</array>
+								</dict>
+							</array>
 							<key>pfm_format</key>
 							<string>^$|^(?:[01]\d|2[0-3]):[0-5]\d$</string>
 							<key>pfm_name</key>
@@ -807,6 +1039,22 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>https://docs.zappl.co/customise/preferences#run-limitation-options</string>
 							<key>pfm_enabled</key>
 							<true/>
+							<key>pfm_exclude</key>
+							<array>
+								<dict>
+									<key>pfm_target_conditions</key>
+									<array>
+										<dict>
+											<key>pfm_range_list</key>
+											<array>
+												<false/>
+											</array>
+											<key>pfm_target</key>
+											<string>ScheduledUpdates.runLimitations.tuesday</string>
+										</dict>
+									</array>
+								</dict>
+							</array>
 							<key>pfm_format</key>
 							<string>^$|^(?:[01]\d|2[0-3]):[0-5]\d$</string>
 							<key>pfm_name</key>
@@ -829,6 +1077,8 @@ A profile can consist of payloads with different version numbers. For example, c
 							<true/>
 							<key>pfm_name</key>
 							<string>wednesday</string>
+							<key>pfm_note</key>
+							<string>Enable this setting to configure the 'Wednesday Start Time' (wednesdayStartTime) and 'Wednesday End Time' (wednesdayEndTime) preferences.</string>
 							<key>pfm_title</key>
 							<string>Wednesday</string>
 							<key>pfm_type</key>
@@ -843,6 +1093,22 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>https://docs.zappl.co/customise/preferences#run-limitation-options</string>
 							<key>pfm_enabled</key>
 							<true/>
+							<key>pfm_exclude</key>
+							<array>
+								<dict>
+									<key>pfm_target_conditions</key>
+									<array>
+										<dict>
+											<key>pfm_range_list</key>
+											<array>
+												<false/>
+											</array>
+											<key>pfm_target</key>
+											<string>ScheduledUpdates.runLimitations.wednesday</string>
+										</dict>
+									</array>
+								</dict>
+							</array>
 							<key>pfm_format</key>
 							<string>^$|^(?:[01]\d|2[0-3]):[0-5]\d$</string>
 							<key>pfm_name</key>
@@ -863,6 +1129,22 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>https://docs.zappl.co/customise/preferences#run-limitation-options</string>
 							<key>pfm_enabled</key>
 							<true/>
+							<key>pfm_exclude</key>
+							<array>
+								<dict>
+									<key>pfm_target_conditions</key>
+									<array>
+										<dict>
+											<key>pfm_range_list</key>
+											<array>
+												<false/>
+											</array>
+											<key>pfm_target</key>
+											<string>ScheduledUpdates.runLimitations.wednesday</string>
+										</dict>
+									</array>
+								</dict>
+							</array>
 							<key>pfm_format</key>
 							<string>^$|^(?:[01]\d|2[0-3]):[0-5]\d$</string>
 							<key>pfm_name</key>
@@ -885,6 +1167,8 @@ A profile can consist of payloads with different version numbers. For example, c
 							<true/>
 							<key>pfm_name</key>
 							<string>thursday</string>
+							<key>pfm_note</key>
+							<string>Enable this setting to configure the 'Thursday Start Time' (thursdayStartTime) and 'Thursday End Time' (thursdayEndTime) preferences.</string>
 							<key>pfm_title</key>
 							<string>Thursday</string>
 							<key>pfm_type</key>
@@ -899,6 +1183,22 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>https://docs.zappl.co/customise/preferences#run-limitation-options</string>
 							<key>pfm_enabled</key>
 							<true/>
+							<key>pfm_exclude</key>
+							<array>
+								<dict>
+									<key>pfm_target_conditions</key>
+									<array>
+										<dict>
+											<key>pfm_range_list</key>
+											<array>
+												<false/>
+											</array>
+											<key>pfm_target</key>
+											<string>ScheduledUpdates.runLimitations.thursday</string>
+										</dict>
+									</array>
+								</dict>
+							</array>
 							<key>pfm_format</key>
 							<string>^$|^(?:[01]\d|2[0-3]):[0-5]\d$</string>
 							<key>pfm_name</key>
@@ -919,6 +1219,22 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>https://docs.zappl.co/customise/preferences#run-limitation-options</string>
 							<key>pfm_enabled</key>
 							<true/>
+							<key>pfm_exclude</key>
+							<array>
+								<dict>
+									<key>pfm_target_conditions</key>
+									<array>
+										<dict>
+											<key>pfm_range_list</key>
+											<array>
+												<false/>
+											</array>
+											<key>pfm_target</key>
+											<string>ScheduledUpdates.runLimitations.thursday</string>
+										</dict>
+									</array>
+								</dict>
+							</array>
 							<key>pfm_format</key>
 							<string>^$|^(?:[01]\d|2[0-3]):[0-5]\d$</string>
 							<key>pfm_name</key>
@@ -941,6 +1257,8 @@ A profile can consist of payloads with different version numbers. For example, c
 							<true/>
 							<key>pfm_name</key>
 							<string>friday</string>
+							<key>pfm_note</key>
+							<string>Enable this setting to configure the 'Friday Start Time' (fridayStartTime) and 'Friday End Time' (fridayEndTime) preferences.</string>
 							<key>pfm_title</key>
 							<string>Friday</string>
 							<key>pfm_type</key>
@@ -955,6 +1273,22 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>https://docs.zappl.co/customise/preferences#run-limitation-options</string>
 							<key>pfm_enabled</key>
 							<true/>
+							<key>pfm_exclude</key>
+							<array>
+								<dict>
+									<key>pfm_target_conditions</key>
+									<array>
+										<dict>
+											<key>pfm_range_list</key>
+											<array>
+												<false/>
+											</array>
+											<key>pfm_target</key>
+											<string>ScheduledUpdates.runLimitations.friday</string>
+										</dict>
+									</array>
+								</dict>
+							</array>
 							<key>pfm_format</key>
 							<string>^$|^(?:[01]\d|2[0-3]):[0-5]\d$</string>
 							<key>pfm_name</key>
@@ -975,6 +1309,22 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>https://docs.zappl.co/customise/preferences#run-limitation-options</string>
 							<key>pfm_enabled</key>
 							<true/>
+							<key>pfm_exclude</key>
+							<array>
+								<dict>
+									<key>pfm_target_conditions</key>
+									<array>
+										<dict>
+											<key>pfm_range_list</key>
+											<array>
+												<false/>
+											</array>
+											<key>pfm_target</key>
+											<string>ScheduledUpdates.runLimitations.friday</string>
+										</dict>
+									</array>
+								</dict>
+							</array>
 							<key>pfm_format</key>
 							<string>^$|^(?:[01]\d|2[0-3]):[0-5]\d$</string>
 							<key>pfm_name</key>
@@ -997,6 +1347,8 @@ A profile can consist of payloads with different version numbers. For example, c
 							<true/>
 							<key>pfm_name</key>
 							<string>saturday</string>
+							<key>pfm_note</key>
+							<string>Enable this setting to configure the 'Saturday Start Time' (saturdayStartTime) and 'Saturday End Time' (saturdayEndTime) preferences.</string>
 							<key>pfm_title</key>
 							<string>Saturday</string>
 							<key>pfm_type</key>
@@ -1011,6 +1363,22 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>https://docs.zappl.co/customise/preferences#run-limitation-options</string>
 							<key>pfm_enabled</key>
 							<true/>
+							<key>pfm_exclude</key>
+							<array>
+								<dict>
+									<key>pfm_target_conditions</key>
+									<array>
+										<dict>
+											<key>pfm_range_list</key>
+											<array>
+												<false/>
+											</array>
+											<key>pfm_target</key>
+											<string>ScheduledUpdates.runLimitations.saturday</string>
+										</dict>
+									</array>
+								</dict>
+							</array>
 							<key>pfm_format</key>
 							<string>^$|^(?:[01]\d|2[0-3]):[0-5]\d$</string>
 							<key>pfm_name</key>
@@ -1031,6 +1399,22 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>https://docs.zappl.co/customise/preferences#run-limitation-options</string>
 							<key>pfm_enabled</key>
 							<true/>
+							<key>pfm_exclude</key>
+							<array>
+								<dict>
+									<key>pfm_target_conditions</key>
+									<array>
+										<dict>
+											<key>pfm_range_list</key>
+											<array>
+												<false/>
+											</array>
+											<key>pfm_target</key>
+											<string>ScheduledUpdates.runLimitations.saturday</string>
+										</dict>
+									</array>
+								</dict>
+							</array>
 							<key>pfm_format</key>
 							<string>^$|^(?:[01]\d|2[0-3]):[0-5]\d$</string>
 							<key>pfm_name</key>
@@ -1053,6 +1437,8 @@ A profile can consist of payloads with different version numbers. For example, c
 							<true/>
 							<key>pfm_name</key>
 							<string>sunday</string>
+							<key>pfm_note</key>
+							<string>Enable this setting to configure the 'Sunday Start Time' (sundayStartTime) and 'Sunday End Time' (sundayEndTime) preferences.</string>
 							<key>pfm_title</key>
 							<string>Sunday</string>
 							<key>pfm_type</key>
@@ -1067,6 +1453,22 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>https://docs.zappl.co/customise/preferences#run-limitation-options</string>
 							<key>pfm_enabled</key>
 							<true/>
+							<key>pfm_exclude</key>
+							<array>
+								<dict>
+									<key>pfm_target_conditions</key>
+									<array>
+										<dict>
+											<key>pfm_range_list</key>
+											<array>
+												<false/>
+											</array>
+											<key>pfm_target</key>
+											<string>ScheduledUpdates.runLimitations.sunday</string>
+										</dict>
+									</array>
+								</dict>
+							</array>
 							<key>pfm_format</key>
 							<string>^$|^(?:[01]\d|2[0-3]):[0-5]\d$</string>
 							<key>pfm_name</key>
@@ -1087,6 +1489,22 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>https://docs.zappl.co/customise/preferences#run-limitation-options</string>
 							<key>pfm_enabled</key>
 							<true/>
+							<key>pfm_exclude</key>
+							<array>
+								<dict>
+									<key>pfm_target_conditions</key>
+									<array>
+										<dict>
+											<key>pfm_range_list</key>
+											<array>
+												<false/>
+											</array>
+											<key>pfm_target</key>
+											<string>ScheduledUpdates.runLimitations.sunday</string>
+										</dict>
+									</array>
+								</dict>
+							</array>
 							<key>pfm_format</key>
 							<string>^$|^(?:[01]\d|2[0-3]):[0-5]\d$</string>
 							<key>pfm_name</key>
@@ -1122,6 +1540,8 @@ A profile can consist of payloads with different version numbers. For example, c
 							<true/>
 							<key>pfm_name</key>
 							<string>deferralOption</string>
+							<key>pfm_note</key>
+							<string>Set to 'Specify Deferral Limit' to configure the 'Deferral Limit' (specifyLimit) preference. Setting to 'Disable Deferral Limit' or 'Disable Deferrals' will hide the 'Deferral Limit' preference.</string>
 							<key>pfm_range_list</key>
 							<array>
 								<string>disableDeferralLimit</string>
@@ -1148,6 +1568,35 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>https://docs.zappl.co/customise/preferences#deferral-options</string>
 							<key>pfm_enabled</key>
 							<true/>
+							<key>pfm_exclude</key>
+							<array>
+								<dict>
+									<key>pfm_target_conditions</key>
+									<array>
+										<dict>
+											<key>pfm_range_list</key>
+											<array>
+												<string>disableDeferralLimit</string>
+											</array>
+											<key>pfm_target</key>
+											<string>ScheduledUpdates.deferralConfiguration.deferralOption</string>
+										</dict>
+									</array>
+								</dict>
+								<dict>
+									<key>pfm_target_conditions</key>
+									<array>
+										<dict>
+											<key>pfm_range_list</key>
+											<array>
+												<string>disableDeferrals</string>
+											</array>
+											<key>pfm_target</key>
+											<string>ScheduledUpdates.deferralConfiguration.deferralOption</string>
+										</dict>
+									</array>
+								</dict>
+							</array>
 							<key>pfm_name</key>
 							<string>specifyLimit</string>
 							<key>pfm_title</key>
@@ -1833,6 +2282,8 @@ A profile can consist of payloads with different version numbers. For example, c
 							<true/>
 							<key>pfm_name</key>
 							<string>monday</string>
+							<key>pfm_note</key>
+							<string>Enable this setting to configure the 'Monday Start Time' (mondayStartTime) and 'Monday End Time' (mondayEndTime) preferences.</string>
 							<key>pfm_title</key>
 							<string>Monday</string>
 							<key>pfm_type</key>
@@ -1847,6 +2298,22 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>https://docs.zappl.co/customise/preferences#run-limitation-options</string>
 							<key>pfm_enabled</key>
 							<true/>
+							<key>pfm_exclude</key>
+							<array>
+								<dict>
+									<key>pfm_target_conditions</key>
+									<array>
+										<dict>
+											<key>pfm_range_list</key>
+											<array>
+												<false/>
+											</array>
+											<key>pfm_target</key>
+											<string>ForcedUpdates.runLimitations.monday</string>
+										</dict>
+									</array>
+								</dict>
+							</array>
 							<key>pfm_format</key>
 							<string>^$|^(?:[01]\d|2[0-3]):[0-5]\d$</string>
 							<key>pfm_name</key>
@@ -1867,6 +2334,22 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>https://docs.zappl.co/customise/preferences#run-limitation-options</string>
 							<key>pfm_enabled</key>
 							<true/>
+							<key>pfm_exclude</key>
+							<array>
+								<dict>
+									<key>pfm_target_conditions</key>
+									<array>
+										<dict>
+											<key>pfm_range_list</key>
+											<array>
+												<false/>
+											</array>
+											<key>pfm_target</key>
+											<string>ForcedUpdates.runLimitations.monday</string>
+										</dict>
+									</array>
+								</dict>
+							</array>
 							<key>pfm_format</key>
 							<string>^$|^(?:[01]\d|2[0-3]):[0-5]\d$</string>
 							<key>pfm_name</key>
@@ -1889,6 +2372,8 @@ A profile can consist of payloads with different version numbers. For example, c
 							<true/>
 							<key>pfm_name</key>
 							<string>tuesday</string>
+							<key>pfm_note</key>
+							<string>Enable this setting to configure the 'Tuesday Start Time' (tuesdayStartTime) and 'Tuesday End Time' (tuesdayEndTime) preferences.</string>
 							<key>pfm_title</key>
 							<string>Tuesday</string>
 							<key>pfm_type</key>
@@ -1903,6 +2388,22 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>https://docs.zappl.co/customise/preferences#run-limitation-options</string>
 							<key>pfm_enabled</key>
 							<true/>
+							<key>pfm_exclude</key>
+							<array>
+								<dict>
+									<key>pfm_target_conditions</key>
+									<array>
+										<dict>
+											<key>pfm_range_list</key>
+											<array>
+												<false/>
+											</array>
+											<key>pfm_target</key>
+											<string>ForcedUpdates.runLimitations.tuesday</string>
+										</dict>
+									</array>
+								</dict>
+							</array>
 							<key>pfm_format</key>
 							<string>^$|^(?:[01]\d|2[0-3]):[0-5]\d$</string>
 							<key>pfm_name</key>
@@ -1923,6 +2424,22 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>https://docs.zappl.co/customise/preferences#run-limitation-options</string>
 							<key>pfm_enabled</key>
 							<true/>
+							<key>pfm_exclude</key>
+							<array>
+								<dict>
+									<key>pfm_target_conditions</key>
+									<array>
+										<dict>
+											<key>pfm_range_list</key>
+											<array>
+												<false/>
+											</array>
+											<key>pfm_target</key>
+											<string>ForcedUpdates.runLimitations.tuesday</string>
+										</dict>
+									</array>
+								</dict>
+							</array>
 							<key>pfm_format</key>
 							<string>^$|^(?:[01]\d|2[0-3]):[0-5]\d$</string>
 							<key>pfm_name</key>
@@ -1945,6 +2462,8 @@ A profile can consist of payloads with different version numbers. For example, c
 							<true/>
 							<key>pfm_name</key>
 							<string>wednesday</string>
+							<key>pfm_note</key>
+							<string>Enable this setting to configure the 'Wednesday Start Time' (wednesdayStartTime) and 'Wednesday End Time' (wednesdayEndTime) preferences.</string>
 							<key>pfm_title</key>
 							<string>Wednesday</string>
 							<key>pfm_type</key>
@@ -1959,6 +2478,22 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>https://docs.zappl.co/customise/preferences#run-limitation-options</string>
 							<key>pfm_enabled</key>
 							<true/>
+							<key>pfm_exclude</key>
+							<array>
+								<dict>
+									<key>pfm_target_conditions</key>
+									<array>
+										<dict>
+											<key>pfm_range_list</key>
+											<array>
+												<false/>
+											</array>
+											<key>pfm_target</key>
+											<string>ForcedUpdates.runLimitations.wednesday</string>
+										</dict>
+									</array>
+								</dict>
+							</array>
 							<key>pfm_format</key>
 							<string>^$|^(?:[01]\d|2[0-3]):[0-5]\d$</string>
 							<key>pfm_name</key>
@@ -1979,6 +2514,22 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>https://docs.zappl.co/customise/preferences#run-limitation-options</string>
 							<key>pfm_enabled</key>
 							<true/>
+							<key>pfm_exclude</key>
+							<array>
+								<dict>
+									<key>pfm_target_conditions</key>
+									<array>
+										<dict>
+											<key>pfm_range_list</key>
+											<array>
+												<false/>
+											</array>
+											<key>pfm_target</key>
+											<string>ForcedUpdates.runLimitations.wednesday</string>
+										</dict>
+									</array>
+								</dict>
+							</array>
 							<key>pfm_format</key>
 							<string>^$|^(?:[01]\d|2[0-3]):[0-5]\d$</string>
 							<key>pfm_name</key>
@@ -2001,6 +2552,8 @@ A profile can consist of payloads with different version numbers. For example, c
 							<true/>
 							<key>pfm_name</key>
 							<string>thursday</string>
+							<key>pfm_note</key>
+							<string>Enable this setting to configure the 'Thursday Start Time' (thursdayStartTime) and 'Thursday End Time' (thursdayEndTime) preferences.</string>
 							<key>pfm_title</key>
 							<string>Thursday</string>
 							<key>pfm_type</key>
@@ -2015,6 +2568,22 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>https://docs.zappl.co/customise/preferences#run-limitation-options</string>
 							<key>pfm_enabled</key>
 							<true/>
+							<key>pfm_exclude</key>
+							<array>
+								<dict>
+									<key>pfm_target_conditions</key>
+									<array>
+										<dict>
+											<key>pfm_range_list</key>
+											<array>
+												<false/>
+											</array>
+											<key>pfm_target</key>
+											<string>ForcedUpdates.runLimitations.thursday</string>
+										</dict>
+									</array>
+								</dict>
+							</array>
 							<key>pfm_format</key>
 							<string>^$|^(?:[01]\d|2[0-3]):[0-5]\d$</string>
 							<key>pfm_name</key>
@@ -2035,6 +2604,22 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>https://docs.zappl.co/customise/preferences#run-limitation-options</string>
 							<key>pfm_enabled</key>
 							<true/>
+							<key>pfm_exclude</key>
+							<array>
+								<dict>
+									<key>pfm_target_conditions</key>
+									<array>
+										<dict>
+											<key>pfm_range_list</key>
+											<array>
+												<false/>
+											</array>
+											<key>pfm_target</key>
+											<string>ForcedUpdates.runLimitations.thursday</string>
+										</dict>
+									</array>
+								</dict>
+							</array>
 							<key>pfm_format</key>
 							<string>^$|^(?:[01]\d|2[0-3]):[0-5]\d$</string>
 							<key>pfm_name</key>
@@ -2057,6 +2642,8 @@ A profile can consist of payloads with different version numbers. For example, c
 							<true/>
 							<key>pfm_name</key>
 							<string>friday</string>
+							<key>pfm_note</key>
+							<string>Enable this setting to configure the 'Friday Start Time' (fridayStartTime) and 'Friday End Time' (fridayEndTime) preferences.</string>
 							<key>pfm_title</key>
 							<string>Friday</string>
 							<key>pfm_type</key>
@@ -2071,6 +2658,22 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>https://docs.zappl.co/customise/preferences#run-limitation-options</string>
 							<key>pfm_enabled</key>
 							<true/>
+							<key>pfm_exclude</key>
+							<array>
+								<dict>
+									<key>pfm_target_conditions</key>
+									<array>
+										<dict>
+											<key>pfm_range_list</key>
+											<array>
+												<false/>
+											</array>
+											<key>pfm_target</key>
+											<string>ForcedUpdates.runLimitations.friday</string>
+										</dict>
+									</array>
+								</dict>
+							</array>
 							<key>pfm_format</key>
 							<string>^$|^(?:[01]\d|2[0-3]):[0-5]\d$</string>
 							<key>pfm_name</key>
@@ -2091,6 +2694,22 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>https://docs.zappl.co/customise/preferences#run-limitation-options</string>
 							<key>pfm_enabled</key>
 							<true/>
+							<key>pfm_exclude</key>
+							<array>
+								<dict>
+									<key>pfm_target_conditions</key>
+									<array>
+										<dict>
+											<key>pfm_range_list</key>
+											<array>
+												<false/>
+											</array>
+											<key>pfm_target</key>
+											<string>ForcedUpdates.runLimitations.friday</string>
+										</dict>
+									</array>
+								</dict>
+							</array>
 							<key>pfm_format</key>
 							<string>^$|^(?:[01]\d|2[0-3]):[0-5]\d$</string>
 							<key>pfm_name</key>
@@ -2113,6 +2732,8 @@ A profile can consist of payloads with different version numbers. For example, c
 							<true/>
 							<key>pfm_name</key>
 							<string>saturday</string>
+							<key>pfm_note</key>
+							<string>Enable this setting to configure the 'Saturday Start Time' (saturdayStartTime) and 'Saturday End Time' (saturdayEndTime) preferences.</string>
 							<key>pfm_title</key>
 							<string>Saturday</string>
 							<key>pfm_type</key>
@@ -2127,6 +2748,22 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>https://docs.zappl.co/customise/preferences#run-limitation-options</string>
 							<key>pfm_enabled</key>
 							<true/>
+							<key>pfm_exclude</key>
+							<array>
+								<dict>
+									<key>pfm_target_conditions</key>
+									<array>
+										<dict>
+											<key>pfm_range_list</key>
+											<array>
+												<false/>
+											</array>
+											<key>pfm_target</key>
+											<string>ForcedUpdates.runLimitations.saturday</string>
+										</dict>
+									</array>
+								</dict>
+							</array>
 							<key>pfm_format</key>
 							<string>^$|^(?:[01]\d|2[0-3]):[0-5]\d$</string>
 							<key>pfm_name</key>
@@ -2147,6 +2784,22 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>https://docs.zappl.co/customise/preferences#run-limitation-options</string>
 							<key>pfm_enabled</key>
 							<true/>
+							<key>pfm_exclude</key>
+							<array>
+								<dict>
+									<key>pfm_target_conditions</key>
+									<array>
+										<dict>
+											<key>pfm_range_list</key>
+											<array>
+												<false/>
+											</array>
+											<key>pfm_target</key>
+											<string>ForcedUpdates.runLimitations.saturday</string>
+										</dict>
+									</array>
+								</dict>
+							</array>
 							<key>pfm_format</key>
 							<string>^$|^(?:[01]\d|2[0-3]):[0-5]\d$</string>
 							<key>pfm_name</key>
@@ -2169,6 +2822,8 @@ A profile can consist of payloads with different version numbers. For example, c
 							<true/>
 							<key>pfm_name</key>
 							<string>sunday</string>
+							<key>pfm_note</key>
+							<string>Enable this setting to configure the 'Sunday Start Time' (sundayStartTime) and 'Sunday End Time' (sundayEndTime) preferences.</string>
 							<key>pfm_title</key>
 							<string>Sunday</string>
 							<key>pfm_type</key>
@@ -2183,6 +2838,22 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>https://docs.zappl.co/customise/preferences#run-limitation-options</string>
 							<key>pfm_enabled</key>
 							<true/>
+							<key>pfm_exclude</key>
+							<array>
+								<dict>
+									<key>pfm_target_conditions</key>
+									<array>
+										<dict>
+											<key>pfm_range_list</key>
+											<array>
+												<false/>
+											</array>
+											<key>pfm_target</key>
+											<string>ForcedUpdates.runLimitations.sunday</string>
+										</dict>
+									</array>
+								</dict>
+							</array>
 							<key>pfm_format</key>
 							<string>^$|^(?:[01]\d|2[0-3]):[0-5]\d$</string>
 							<key>pfm_name</key>
@@ -2203,6 +2874,22 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>https://docs.zappl.co/customise/preferences#run-limitation-options</string>
 							<key>pfm_enabled</key>
 							<true/>
+							<key>pfm_exclude</key>
+							<array>
+								<dict>
+									<key>pfm_target_conditions</key>
+									<array>
+										<dict>
+											<key>pfm_range_list</key>
+											<array>
+												<false/>
+											</array>
+											<key>pfm_target</key>
+											<string>ForcedUpdates.runLimitations.sunday</string>
+										</dict>
+									</array>
+								</dict>
+							</array>
 							<key>pfm_format</key>
 							<string>^$|^(?:[01]\d|2[0-3]):[0-5]\d$</string>
 							<key>pfm_name</key>
