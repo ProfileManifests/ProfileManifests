@@ -1240,6 +1240,15 @@
 			<key>version</key>
 			<integer>4</integer>
 		</dict>
+		<key>notion.id</key>
+		<dict>
+			<key>modified</key>
+			<date>2026-05-28T13:00:23Z</date>
+			<key>path</key>
+			<string>Manifests/ManagedPreferencesApplications/notion.id.plist</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 		<key>org.churchofjesuschrist.dorm</key>
 		<dict>
 			<key>modified</key>
@@ -2490,6 +2499,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2026-05-27T06:56:19Z</date>
+	<date>2026-05-28T13:13:54Z</date>
 </dict>
 </plist>
