@@ -254,7 +254,6 @@ A profile can consist of payloads with different version numbers. For example, c
 				<key>Authorisation Rules</key>
 				<array>
 			    	<string>HideBlockedEventHistory</string>
-					<string>silentBlock</string>
 					<string>FileOperationRules</string>
 					<string>ExecuteProcessRules</string>
 				</array>
@@ -524,20 +523,6 @@ A profile can consist of payloads with different version numbers. For example, c
 			<string>boolean</string>
 		</dict>
 		<dict>
-			<key>pfm_default</key>
-			<false/>
-			<key>pfm_description</key>
-			<string>When enabled, hides the end user notifcation when a rule is triggered.</string>
-			<key>pfm_documentation_url</key>
-			<string>https://docs.jigsaw24.com/Elevate24/Documentation/Elevate24%20Monitoring/5%20Elevate24%20Session%20Monitoring%20-%20Authorisation%20Rules.html#monitoring-authorisation-rules</string>
-			<key>pfm_name</key>
-			<string>silentBlock</string>
-			<key>pfm_title</key>
-			<string>Silent Block</string>
-			<key>pfm_type</key>
-			<string>boolean</string>
-		</dict>
-		<dict>
 			<key>pfm_description</key>
 			<string>Rules to restrict file operations. Allow rules can be used in conjunction with block rules to allow a process to execute under the specified conditions.
 			
@@ -706,6 +691,14 @@ Multiple arguments can be specified by seperating them with a comma.</string>
 							<string>alwaysActive</string>
 							<key>pfm_title</key>
 							<string>Always Active</string>
+							<key>pfm_type</key>
+							<string>boolean</string>
+						</dict>
+						<dict>
+							<key>pfm_name</key>
+							<string>silentBlock</string>
+							<key>pfm_title</key>
+							<string>Silent Block</string>
 							<key>pfm_type</key>
 							<string>boolean</string>
 						</dict>
