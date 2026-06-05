@@ -496,7 +496,7 @@
 		<key>com.dare.zappl.preferences</key>
 		<dict>
 			<key>modified</key>
-			<date>2026-04-22T00:00:00Z</date>
+			<date>2026-05-21T00:00:00Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.dare.zappl.preferences.plist</string>
 			<key>version</key>
@@ -577,7 +577,7 @@
 		<key>com.google.Chrome</key>
 		<dict>
 			<key>modified</key>
-			<date>2026-05-11T15:30:00Z</date>
+			<date>2026-05-26T15:42:00Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.google.Chrome.plist</string>
 			<key>version</key>
@@ -784,7 +784,7 @@
 		<key>com.microsoft.Excel</key>
 		<dict>
 			<key>modified</key>
-			<date>2023-08-15T08:00:00Z</date>
+			<date>2026-05-20T09:05:42Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.microsoft.Excel.plist</string>
 			<key>version</key>
@@ -820,7 +820,7 @@
 		<key>com.microsoft.Outlook</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-10-13T09:08:01Z</date>
+			<date>2026-05-20T09:05:42Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.microsoft.Outlook.plist</string>
 			<key>version</key>
@@ -829,7 +829,7 @@
 		<key>com.microsoft.Powerpoint</key>
 		<dict>
 			<key>modified</key>
-			<date>2019-09-17T08:52:31Z</date>
+			<date>2026-05-20T09:05:42Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.microsoft.Powerpoint.plist</string>
 			<key>version</key>
@@ -847,7 +847,7 @@
 		<key>com.microsoft.Word</key>
 		<dict>
 			<key>modified</key>
-			<date>2019-09-17T08:52:31Z</date>
+			<date>2026-05-20T09:05:42Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.microsoft.Word.plist</string>
 			<key>version</key>
@@ -865,7 +865,7 @@
 		<key>com.microsoft.autoupdate2</key>
 		<dict>
 			<key>modified</key>
-			<date>2026-02-16T20:29:12Z</date>
+			<date>2026-05-20T09:05:42Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.microsoft.autoupdate2.plist</string>
 			<key>version</key>
@@ -883,7 +883,7 @@
 		<key>com.microsoft.office</key>
 		<dict>
 			<key>modified</key>
-			<date>2024-09-10T08:31:41Z</date>
+			<date>2026-05-20T09:05:42Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.microsoft.office.plist</string>
 			<key>version</key>
@@ -892,7 +892,7 @@
 		<key>com.microsoft.onenote.mac</key>
 		<dict>
 			<key>modified</key>
-			<date>2019-09-17T08:52:31Z</date>
+			<date>2026-05-20T09:05:42Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.microsoft.onenote.mac.plist</string>
 			<key>version</key>
@@ -1222,15 +1222,6 @@
 			<key>version</key>
 			<integer>4</integer>
 		</dict>
-		<key>mm.DockPilot</key>
-		<dict>
-			<key>modified</key>
-			<date>2026-05-21T21:14:42Z</date>
-			<key>path</key>
-			<string>Manifests/ManagedPreferencesApplications/mm.DockPilot.plist</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
 		<key>net.glencode.Particulars</key>
 		<dict>
 			<key>modified</key>
@@ -1257,6 +1248,15 @@
 			<string>Manifests/ManagedPreferencesApplications/nl.root3.support.plist</string>
 			<key>version</key>
 			<integer>4</integer>
+		</dict>
+		<key>notion.id</key>
+		<dict>
+			<key>modified</key>
+			<date>2026-05-28T13:00:23Z</date>
+			<key>path</key>
+			<string>Manifests/ManagedPreferencesApplications/notion.id.plist</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<key>org.churchofjesuschrist.dorm</key>
 		<dict>
@@ -2481,6 +2481,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2026-05-21T21:14:42Z</date>
+	<date>2026-06-05T04:03:31Z</date>
 </dict>
 </plist>
