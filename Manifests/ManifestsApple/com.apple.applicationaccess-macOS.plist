@@ -191,8 +191,10 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<string>allowAccountModification</string>
 					<string>allowApplePersonalizedAdvertising</string>
 					<string>allowActivityContinuation</string>
+					<string>allowDiagnosticSubmission</string>
 					<string>allowAddingGameCenterFriends</string>
 					<string>allowARDRemoteManagementModification</string>
+					<string>allowBluetoothModification</string>
 					<string>allowBluetoothSharingModification</string>
 					<string>allowCamera</string>
 					<string>allowContentCaching</string>
