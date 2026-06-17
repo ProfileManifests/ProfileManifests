@@ -113,7 +113,7 @@
 	RK5CYII=
 	</data>
 	<key>pfm_last_modified</key>
-	<date>2026-02-26T12:00:00Z</date>
+	<date>2026-06-03T12:00:00Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -297,16 +297,18 @@ During a profile replacement, the system updates payloads with the same `Payload
 				<array>
 					<string>enableReason</string>
 					<string>Enabletimelist</string>
-					<string>Block Extend</string>
+					<string>blockExtend</string>
+					<string>AllowCliElevation</string>
+					<string>DisableUserElevation</string>
 					<string>Sessiontime</string>
 					<string>times</string>
 					<string>reasons</string>
 					<string>sessionExpiryReminder</string>
+					<string>AllowUserDefinedScripts</string>
 					<string>ElevateScriptPath</string>
 					<string>ElevateScriptHash</string>
 					<string>DemoteScriptPath</string>
 					<string>DemoteScriptHash</string>
-					<string>AllowUserDefinedScripts</string>
 				</array>
 			</dict>
 			<key>pfm_type</key>
@@ -449,6 +451,38 @@ During a profile replacement, the system updates payloads with the same `Payload
 			<string>boolean</string>
 		</dict>
 		<dict>
+			<key>pfm_app_min</key>
+			<string>2.5.0</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>Elevate24 2.5+ Only. When enabled, the Elevate24 menubar UI is hidden and cannot be launched manually from /Applications. End users will have no visible way to request elevation, view their session status, or interact with Elevate24 directly. The underlying agent continues to run in the background, enforcing session policies and authorisation rules as normal.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://docs.jigsaw24.com/Elevate24/Documentation/Elevate24%20Configuration/4%20Elevate24%20-%20Customisation.html#session-customisation</string>
+			<key>pfm_name</key>
+			<string>DisableUserElevation</string>
+			<key>pfm_title</key>
+			<string>Disable User Elevation</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2.5.0</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>Elevate24 2.5+ Only. When enabled, allows user to elevate from the command-line.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://docs.jigsaw24.com/Elevate24/Documentation/Elevate24%20Configuration/4%20Elevate24%20-%20Customisation.html#session-customisation</string>
+			<key>pfm_name</key>
+			<string>AllowCliElevation</string>
+			<key>pfm_title</key>
+			<string>Allow CLI Elevation</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
@@ -571,6 +605,20 @@ During a profile replacement, the system updates payloads with the same `Payload
 		<dict>
 			<key>pfm_app_min</key>
 			<string>2.4.0</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>Elevate24 2.4+ Only. When enabled, allows users to specify their own elevation and demotion script paths in addition to any admin-defined scripts. If scripts are configured at both the admin and user level, all scripts will execute. When disabled, only admin-defined scripts (ElevateScriptPath and DemoteScriptPath) will be used.</string>
+			<key>pfm_name</key>
+			<string>AllowUserDefinedScripts</string>
+			<key>pfm_title</key>
+			<string>Allow User Defined Scripts</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2.4.0</string>
 			<key>pfm_description</key>
 			<string>Elevate24 2.4+ Only. Specify the full file path to a script that will be executed automatically when a user's session is elevated to admin. This can be used to perform actions such as logging, launching tools, or configuring the environment at the point of elevation.</string>
 			<key>pfm_name</key>
@@ -623,20 +671,6 @@ During a profile replacement, the system updates payloads with the same `Payload
 			<string>string</string>
 			<key>pfm_value_placeholder</key>
 			<string>SHA256 hash</string>
-		</dict>
-		<dict>
-			<key>pfm_app_min</key>
-			<string>2.4.0</string>
-			<key>pfm_default</key>
-			<false/>
-			<key>pfm_description</key>
-			<string>Elevate24 2.4+ Only. When enabled, allows users to specify their own elevation and demotion script paths in addition to any admin-defined scripts. If scripts are configured at both the admin and user level, all scripts will execute. When disabled, only admin-defined scripts (ElevateScriptPath and DemoteScriptPath) will be used.</string>
-			<key>pfm_name</key>
-			<string>AllowUserDefinedScripts</string>
-			<key>pfm_title</key>
-			<string>Allow User Defined Scripts</string>
-			<key>pfm_type</key>
-			<string>boolean</string>
 		</dict>
 		<dict>
 			<key>pfm_default</key>
@@ -1011,6 +1045,6 @@ During a profile replacement, the system updates payloads with the same `Payload
 	<key>pfm_unique</key>
 	<true/>
 	<key>pfm_version</key>
-	<integer>5</integer>
+	<integer>6</integer>
 </dict>
 </plist>
