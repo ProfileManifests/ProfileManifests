@@ -2162,7 +2162,7 @@
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.screensaver.plist</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<key>com.apple.screensaver.user</key>
 		<dict>
@@ -2499,6 +2499,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2026-06-18T17:24:15Z</date>
+	<date>2026-06-18T17:25:02Z</date>
 </dict>
 </plist>
