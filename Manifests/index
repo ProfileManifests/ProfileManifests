@@ -460,11 +460,11 @@
 		<key>com.brave.Browser</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-12-13T20:54:35Z</date>
+			<date>2026-06-14T20:44:22Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.brave.Browser.plist</string>
 			<key>version</key>
-			<integer>17</integer>
+			<integer>19</integer>
 		</dict>
 		<key>com.citrix.receiver.nomas</key>
 		<dict>
@@ -508,6 +508,15 @@
 			<date>2026-03-24T12:45:24Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.docker.config.plist</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<key>com.frontapp.Front</key>
+		<dict>
+			<key>modified</key>
+			<date>2026-06-18T12:57:50Z</date>
+			<key>path</key>
+			<string>Manifests/ManagedPreferencesApplications/com.frontapp.Front.plist</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -2144,7 +2153,7 @@
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.screensaver.plist</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<key>com.apple.screensaver.user</key>
 		<dict>
@@ -2499,6 +2508,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2026-06-18T11:29:27Z</date>
+	<date>2026-06-18T17:25:02Z</date>
 </dict>
 </plist>
