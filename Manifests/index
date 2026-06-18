@@ -460,11 +460,11 @@
 		<key>com.brave.Browser</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-12-13T20:54:35Z</date>
+			<date>2026-06-14T20:44:22Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.brave.Browser.plist</string>
 			<key>version</key>
-			<integer>17</integer>
+			<integer>19</integer>
 		</dict>
 		<key>com.citrix.receiver.nomas</key>
 		<dict>
@@ -2490,6 +2490,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2026-06-18T11:29:27Z</date>
+	<date>2026-06-18T14:48:07Z</date>
 </dict>
 </plist>
