@@ -928,11 +928,11 @@
 		<key>com.northpolesec.santa</key>
 		<dict>
 			<key>modified</key>
-			<date>2025-01-26T23:49:44Z</date>
+			<date>2026-05-26T00:00:00Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.northpolesec.santa.plist</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<key>com.okta.mobile</key>
 		<dict>
@@ -2490,6 +2490,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2026-06-12T09:44:51Z</date>
+	<date>2026-06-18T11:29:27Z</date>
 </dict>
 </plist>
