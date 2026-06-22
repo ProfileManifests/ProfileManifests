@@ -370,11 +370,11 @@
 		<key>com.anthropic.claudefordesktop</key>
 		<dict>
 			<key>modified</key>
-			<date>2026-05-18T00:00:00Z</date>
+			<date>2026-06-06T00:00:00Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.anthropic.claudefordesktop.plist</string>
 			<key>version</key>
-			<integer>4</integer>
+			<integer>6</integer>
 		</dict>
 		<key>com.apple.Compressor</key>
 		<dict>
