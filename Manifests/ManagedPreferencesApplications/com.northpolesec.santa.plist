@@ -5,13 +5,13 @@
 	<key>pfm_description</key>
 	<string>Santa settings</string>
 	<key>pfm_documentation_url</key>
-	<string>https://northpole.dev/deployment/configuration.html</string>
+	<string>https://northpole.dev/configuration/keys/</string>
 	<key>pfm_domain</key>
 	<string>com.northpolesec.santa</string>
 	<key>pfm_format_version</key>
 	<integer>1</integer>
 	<key>pfm_last_modified</key>
-	<date>2025-01-26T23:49:44Z</date>
+	<date>2026-05-26T00:00:00Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -138,46 +138,64 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_range_list_titles</key>
 			<array>
 				<string>General</string>
-				<string>Customisation</string>
-				<string>Sync Server</string>
-				<string>Event Logging</string>
+				<string>Sync</string>
+				<string>GUI</string>
+				<string>FAA</string>
+				<string>Rules</string>
+				<string>Telemetry</string>
+				<string>Removable Media</string>
 				<string>Metrics</string>
 			</array>
 			<key>pfm_require</key>
 			<string>always</string>
 			<key>pfm_segments</key>
 			<dict>
-				<key>Customisation</key>
+				<key>FAA</key>
 				<array>
+					<string>FileAccessPolicyPlist</string>
+					<string>FileAccessPolicy</string>
+					<string>FileAccessPolicyUpdateIntervalSec</string>
+					<string>OverrideFileAccessAction</string>
+					<string>FileAccessGlobalLogsPerSec</string>
+					<string>FileAccessGlobalWindowSizeSec</string>
+				</array>
+				<key>GUI</key>
+				<array>
+					<string>EnableSilentMode</string>
+					<string>EnableSilentTTYMode</string>
+					<string>EnableMenuItem</string>
 					<string>AboutText</string>
 					<string>MoreInfoURL</string>
 					<string>EventDetailURL</string>
 					<string>EventDetailText</string>
+					<string>FileAccessEventDetailURL</string>
+					<string>FileAccessEventDetailText</string>
+					<string>DismissText</string>
 					<string>UnknownBlockMessage</string>
 					<string>BannedBlockMessage</string>
 					<string>ModeNotificationMonitor</string>
 					<string>ModeNotificationLockdown</string>
-				</array>
-				<key>Event Logging</key>
-				<array>
-					<string>EventLogType</string>
-					<string>EventLogPath</string>
-					<string>MailDirectory</string>
-					<string>MailDirectoryFileSizeThresholdKB</string>
-					<string>MailDirectorySizeThresholdMB</string>
-					<string>MailDirectoryEventMaxFlushTimeSec</string>
-					<string>EnableMachineIDDecoration</string>
+					<string>ModeNotificationStandalone</string>
+					<string>BannedUSBBlockMessage</string>
+					<string>RemountUSBBlockMessage</string>
+					<string>FileAccessBlockMessage</string>
+					<string>EnableNotificationSilences</string>
+					<string>BrandingCompanyName</string>
+					<string>BrandingCompanyLogo</string>
+					<string>BrandingCompanyLogoDark</string>
+					<string>FunFontsOnSpecificDays</string>
 				</array>
 				<key>General</key>
 				<array>
 					<string>ClientMode</string>
 					<string>FailClosed</string>
-					<string>FileChangesRegex</string>
-					<string>AllowedPathRegex</string>
-					<string>BlockedPathRegex</string>
-					<string>EnableBadSignatureProtection</string>
-					<string>EnablePageZeroProtection</string>
-					<string>EnableSysxCache</string>
+					<string>EnableStandalonePasswordFallback</string>
+					<string>IgnoreOtherEndpointSecurityClients</string>
+					<string>EnableStatsCollection</string>
+					<string>StatsOrganizationID</string>
+					<string>AntiSuspendSigningIDs</string>
+					<string>AllowedSantaCommands</string>
+					<string>AllowDelegatedSignals</string>
 				</array>
 				<key>Metrics</key>
 				<array>
@@ -187,9 +205,28 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<string>MetricExportTimeout</string>
 					<string>MetricExtraLabels</string>
 				</array>
-				<key>SyncServer</key>
+				<key>Removable Media</key>
+				<array>
+					<string>RemovableMediaAction</string>
+					<string>RemovableMediaRemountFlags</string>
+					<string>EncryptedRemovableMediaAction</string>
+					<string>EncryptedRemovableMediaRemountFlags</string>
+					<string>OnStartUSBOptions</string>
+				</array>
+				<key>Rules</key>
+				<array>
+					<string>AllowedPathRegex</string>
+					<string>BlockedPathRegex</string>
+					<string>EnableBadSignatureProtection</string>
+					<string>EnablePageZeroProtection</string>
+					<string>EnableTransitiveRules</string>
+					<string>StaticRules</string>
+				</array>
+				<key>Sync</key>
 				<array>
 					<string>SyncBaseURL</string>
+					<string>SyncEnableProtoTransfer</string>
+					<string>SyncProxyConfiguration</string>
 					<string>SyncEnableCleanSyncEventUpload</string>
 					<string>ClientAuthCertificateFile</string>
 					<string>ClientAuthCertificatePassword</string>
@@ -198,13 +235,33 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<string>ServerAuthRootsData</string>
 					<string>ServerAuthRootsFile</string>
 					<string>MachineOwner</string>
+					<string>MachineOwnerGroups</string>
 					<string>MachineID</string>
 					<string>MachineOwnerPlist</string>
 					<string>MachineOwnerKey</string>
+					<string>MachineOwnerGroupsKey</string>
 					<string>MachineIDPlist</string>
 					<string>MachineIDKey</string>
 					<string>EnableAllEventUpload</string>
 					<string>DisableUnknownEventUpload</string>
+					<string>SyncClientContentEncoding</string>
+					<string>SyncExtraHeaders</string>
+				</array>
+				<key>Telemetry</key>
+				<array>
+					<string>FileChangesRegex</string>
+					<string>FileChangesPrefixFilters</string>
+					<string>Telemetry</string>
+					<string>EventLogType</string>
+					<string>EventLogPath</string>
+					<string>SpoolDirectory</string>
+					<string>SpoolDirectoryFileSizeThresholdKB</string>
+					<string>SpoolDirectorySizeThresholdMB</string>
+					<string>SpoolDirectoryEventMaxFlushTimeSec</string>
+					<string>EnableMachineIDDecoration</string>
+					<string>EntitlementsPrefixFilter</string>
+					<string>EntitlementsTeamIDFilter</string>
+					<string>TelemetryFilterExpressions</string>
 				</array>
 			</dict>
 			<key>pfm_type</key>
@@ -214,20 +271,24 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<integer>1</integer>
 			<key>pfm_description</key>
-			<string></string>
+			<string>The client mode that Santa should operate in.</string>
 			<key>pfm_description_reference</key>
-			<string>1 = MONITOR, 2 = LOCKDOWN, defaults to MONITOR</string>
+			<string>1 = MONITOR, 2 = LOCKDOWN, 3 = STANDALONE, defaults to MONITOR</string>
+			<key>pfm_documentation_url</key>
+			<string>https://northpole.dev/configuration/keys/#ClientMode</string>
 			<key>pfm_name</key>
 			<string>ClientMode</string>
 			<key>pfm_range_list</key>
 			<array>
 				<integer>1</integer>
 				<integer>2</integer>
+				<integer>3</integer>
 			</array>
 			<key>pfm_range_list_titles</key>
 			<array>
 				<string>Monitor</string>
 				<string>Lockdown</string>
+				<string>Standalone</string>
 			</array>
 			<key>pfm_title</key>
 			<string>Client Mode</string>
@@ -279,6 +340,86 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>string</string>
 			<key>pfm_value_placeholder</key>
 			<string>^/(?!(?:private/tmp|Library/(?:Caches|Managed Installs/Logs|(?:Managed )?Preferences))/)</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Path prefixes to exclude from file change logging.</string>
+			<key>pfm_description_reference</key>
+			<string>Array of path prefix strings. When an event is logged, if the target path (e.g. the file being written/removed/etc) matches a prefix it will not be logged.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://northpole.dev/configuration/keys/#FileChangesPrefixFilters</string>
+			<key>pfm_name</key>
+			<string>FileChangesPrefixFilters</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_title</key>
+					<string>Path Prefix</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>File Changes Prefix Filters</string>
+			<key>pfm_type</key>
+			<string>array</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2024.11</string>
+			<key>pfm_default</key>
+			<array>
+				<string>Everything</string>
+			</array>
+			<key>pfm_description</key>
+			<string>Types of telemetry events that should be logged.</string>
+			<key>pfm_description_reference</key>
+			<string>Array of strings for events that should be logged.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://northpole.dev/configuration/keys/#Telemetry</string>
+			<key>pfm_name</key>
+			<string>Telemetry</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_range_list</key>
+					<array>
+						<string>Everything</string>
+						<string>Execution</string>
+						<string>Fork</string>
+						<string>Exit</string>
+						<string>Close</string>
+						<string>Rename</string>
+						<string>Unlink</string>
+						<string>Link</string>
+						<string>ExchangeData</string>
+						<string>Disk</string>
+						<string>Bundle</string>
+						<string>Allowlist</string>
+						<string>FileAccess</string>
+						<string>CodesigningInvalidated</string>
+						<string>LoginWindowSession</string>
+						<string>LoginLogout</string>
+						<string>ScreenSharing</string>
+						<string>OpenSSH</string>
+						<string>Authentication</string>
+						<string>Clone</string>
+						<string>Copyfile</string>
+						<string>GatekeeperOverride</string>
+						<string>LaunchItem</string>
+						<string>TCCModification</string>
+						<string>XProtect</string>
+						<string>ProcSuspendResume</string>
+						<string>None</string>
+					</array>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>Telemetry</string>
+			<key>pfm_type</key>
+			<string>array</string>
 		</dict>
 		<dict>
 			<key>pfm_description</key>
@@ -334,15 +475,251 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>Allow transitive rules created by compiler-type rules.</string>
+			<key>pfm_description_reference</key>
+			<string>If true, Santa will respect compiler rule types and create transitive allow rules for the executables they produce. If false, ALLOWLIST_COMPILER rules will be treated as ALLOWLIST rules.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://northpole.dev/configuration/keys/#EnableTransitiveRules</string>
+			<key>pfm_name</key>
+			<string>EnableTransitiveRules</string>
+			<key>pfm_title</key>
+			<string>Enable Transitive Rules</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>A static set of rules that always apply to the host, taking precedence over any rules configured by a sync server. The intended use-case is a small hardcoded set of rules that every host needs, such as management tools — not as a general-purpose rule database.
+
+Setting this key (even to an empty array) also prevents local rule management via the santactl rule command.</string>
+			<key>pfm_description_reference</key>
+			<string>A static set of rules that should always apply. These can be used as a fallback set of rules for management tools that should always be allowed to run even if a sync server does something unexpected. It can also be used as the sole source of rules, distributed with an MDM. Having this key set will also prevent local configuration of rules using the santactl rule command. Within the set of rules configured as StaticRules, the normal rule precedence order applies.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://northpole.dev/features/binary-authorization/#rule-dictionary-format</string>
+			<key>pfm_name</key>
+			<string>StaticRules</string>
+			<key>pfm_note</key>
+			<string>Setting this key — even to an empty array — disables local rule management via santactl rule.</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_name</key>
+					<string>Rule</string>
+					<key>pfm_subkeys</key>
+					<array>
+						<dict>
+							<key>pfm_description</key>
+							<string>The identifier for this rule. The required format depends on rule_type:
+• BINARY / CERTIFICATE — SHA-256 hash (64 hex characters)
+• TEAMID — 10-character alphanumeric Team ID (e.g. ZMCG7MLDV9)
+• SIGNINGID — TeamID:SigningID (e.g. EQHXZ8M8AV:com.google.Chrome), or platform:SigningID for Apple platform binaries (e.g. platform:com.apple.curl)
+• CDHASH — Code Directory Hash (40 hex characters)</string>
+							<key>pfm_description_reference</key>
+							<string>The identifier for the rule. The format depends on the rule_type.</string>
+							<key>pfm_name</key>
+							<string>identifier</string>
+							<key>pfm_require</key>
+							<string>always</string>
+							<key>pfm_title</key>
+							<string>Identifier</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+						<dict>
+							<key>pfm_description</key>
+							<string>The type of rule. Also determines the required format of the identifier and the rule's evaluation precedence: CDHash → Binary → SigningID → Certificate → TeamID.</string>
+							<key>pfm_description_reference</key>
+							<string>The type of rule.</string>
+							<key>pfm_name</key>
+							<string>rule_type</string>
+							<key>pfm_range_list</key>
+							<array>
+								<string>BINARY</string>
+								<string>CERTIFICATE</string>
+								<string>TEAMID</string>
+								<string>SIGNINGID</string>
+								<string>CDHASH</string>
+							</array>
+							<key>pfm_range_list_titles</key>
+							<array>
+								<string>Binary (SHA-256)</string>
+								<string>Certificate (SHA-256)</string>
+								<string>Team ID</string>
+								<string>Signing ID</string>
+								<string>CDHash</string>
+							</array>
+							<key>pfm_require</key>
+							<string>always</string>
+							<key>pfm_title</key>
+							<string>Rule Type</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+						<dict>
+							<key>pfm_description</key>
+							<string>The action to take when this rule matches an execution. ALLOWLIST_COMPILER rules create transitive allow rules for files written by the matched process; if EnableTransitiveRules is false they are treated as ALLOWLIST. CEL rules evaluate the expression in cel_expr to make their decision.</string>
+							<key>pfm_description_reference</key>
+							<string>The action to take when the rule matches.</string>
+							<key>pfm_name</key>
+							<string>policy</string>
+							<key>pfm_note</key>
+							<string>CEL policy requires Santa 2025.6 or later.</string>
+							<key>pfm_range_list</key>
+							<array>
+								<string>ALLOWLIST</string>
+								<string>ALLOWLIST_COMPILER</string>
+								<string>BLOCKLIST</string>
+								<string>SILENT_BLOCKLIST</string>
+								<string>CEL</string>
+							</array>
+							<key>pfm_range_list_titles</key>
+							<array>
+								<string>Allowlist</string>
+								<string>Allowlist Compiler</string>
+								<string>Blocklist</string>
+								<string>Silent Blocklist</string>
+								<string>CEL</string>
+							</array>
+							<key>pfm_require</key>
+							<string>always</string>
+							<key>pfm_title</key>
+							<string>Policy</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+						<dict>
+							<key>pfm_description</key>
+							<string>A CEL (Common Expression Language) expression to evaluate when this rule matches. Required when policy is CEL. The expression receives an ExecutionContext and must return either a ReturnValue or a bool (true = ALLOWLIST, false = BLOCKLIST).</string>
+							<key>pfm_description_reference</key>
+							<string>A CEL expression for the rule. Required if policy is CEL.</string>
+							<key>pfm_documentation_url</key>
+							<string>https://northpole.dev/features/binary-authorization/#cel</string>
+							<key>pfm_exclude</key>
+							<array>
+								<dict>
+									<key>pfm_target_conditions</key>
+									<array>
+										<dict>
+											<key>pfm_n_range_list</key>
+											<array>
+												<string>CEL</string>
+											</array>
+											<key>pfm_present</key>
+											<true/>
+											<key>pfm_target</key>
+											<string>policy</string>
+										</dict>
+									</array>
+								</dict>
+							</array>
+							<key>pfm_name</key>
+							<string>cel_expr</string>
+							<key>pfm_title</key>
+							<string>CEL Expression</string>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_value_placeholder</key>
+							<string>target.signing_time &gt;= timestamp('2025-01-01T00:00:00Z')</string>
+						</dict>
+						<dict>
+							<key>pfm_description</key>
+							<string>Custom message to display in the block notification when this rule blocks an execution. Overrides the global BannedBlockMessage for this specific rule. Only applies to BLOCKLIST and SILENT_BLOCKLIST policies.</string>
+							<key>pfm_description_reference</key>
+							<string>A custom message displayed in the block notification when this rule blocks execution.</string>
+							<key>pfm_name</key>
+							<string>custom_msg</string>
+							<key>pfm_title</key>
+							<string>Custom Message</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+						<dict>
+							<key>pfm_description</key>
+							<string>A custom URL for the block notification button, overriding the global EventDetailURL for this specific rule. Supports the same substitution placeholders as EventDetailURL (e.g. %file_identifier%, %machine_id%, %username%). Only applies to BLOCKLIST policies.</string>
+							<key>pfm_description_reference</key>
+							<string>A custom URL the user can visit for more information when blocked. Supports the same placeholders as EventDetailURL.</string>
+							<key>pfm_name</key>
+							<string>custom_url</string>
+							<key>pfm_title</key>
+							<string>Custom URL</string>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_value_placeholder</key>
+							<string>https://sync-server-hostname/blockables/%file_identifier%</string>
+						</dict>
+						<dict>
+							<key>pfm_description</key>
+							<string>A freeform comment or note about this rule for documentation purposes. Ignored by Santa at runtime.</string>
+							<key>pfm_description_reference</key>
+							<string>A comment or note about the rule (for documentation purposes).</string>
+							<key>pfm_name</key>
+							<string>comment</string>
+							<key>pfm_title</key>
+							<string>Comment</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+					</array>
+					<key>pfm_title</key>
+					<string>Rule</string>
+					<key>pfm_type</key>
+					<string>dictionary</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>Static Rules</string>
+			<key>pfm_type</key>
+			<string>array</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>Disable all GUI notifications.</string>
+			<key>pfm_description_reference</key>
+			<string>If true, Santa will not post any GUI notifications. This can be a very confusing experience for users, use with caution.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://northpole.dev/configuration/keys/#EnableSilentMode</string>
+			<key>pfm_name</key>
+			<string>EnableSilentMode</string>
+			<key>pfm_title</key>
+			<string>Enable Silent Mode</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>Disable all TTY (terminal) notifications.</string>
+			<key>pfm_description_reference</key>
+			<string>If true, Santa will not post any TTY notifications. This can be a very confusing experience for users, use with caution.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://northpole.dev/configuration/keys/#EnableSilentTTYMode</string>
+			<key>pfm_name</key>
+			<string>EnableSilentTTYMode</string>
+			<key>pfm_title</key>
+			<string>Enable Silent TTY Mode</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2026.1</string>
+			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
-			<string>Enable secondary cache. Improves performance when multiple EndpointSecurity system extensions are installed.</string>
+			<string>Show the Santa menu bar item.</string>
 			<key>pfm_description_reference</key>
-			<string>Enables a secondary cache that ensures better performance when multiple EndpointSecurity system extensions are installed. Defaults to YES in 2021.8, defaults to NO in earlier versions.</string>
+			<string>If true, Santa will show an item in the macOS menu bar to allow syncing and management of temporary monitor mode by default. Users are able to show/hide the menu item from the About window.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://northpole.dev/configuration/keys/#EnableMenuItem</string>
 			<key>pfm_name</key>
-			<string>EnableSysxCache</string>
+			<string>EnableMenuItem</string>
 			<key>pfm_title</key>
-			<string>Enable Sysx Cache</string>
+			<string>Enable Menu Item</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 		</dict>
@@ -432,10 +809,82 @@ For example: https://sync-server-hostname/%machine_id%/%file_sha%</string>
 			<string>Open sync server</string>
 		</dict>
 		<dict>
+			<key>pfm_app_min</key>
+			<string>2026.2</string>
+			<key>pfm_description</key>
+			<string>The URL to open when the user gets a file access block notification. If unset, the button will not be displayed. Can include the following variables for substitution:
+%rule_version% - Version of the rule that was violated
+%rule_name% - Name of the rule that was violated
+%accessed_path% - The path accessed by the binary
+%file_identifier% - SHA-256 of the binary that performed the access
+%username% - The executing user
+%team_id% - The Team ID that signed the binary, if any
+%signing_id% - The Signing ID of the binary, if any
+%cdhash% - The binary's CDHash, if any
+%machine_id% - ID of the machine
+%hostname% - System's full hostname
+%uuid% - System's UUID
+%serial% - System's serial number</string>
+			<key>pfm_description_reference</key>
+			<string>When the user gets a file access block notification, a button can be displayed which will take them to a web page with more information about that event. This URL will be used for all file access rules unless overridden by a rule-specific option. This property supports several placeholders in the string that will be replaced before the URL is constructed. The following sequences will be replaced in the final URL:
+%rule_version% - Version of the rule that was violated
+%rule_name% - Name of the rule that was violated
+%accessed_path% - The path accessed by the binary
+%file_identifier% - SHA-256 of the binary that performed the access
+%username% - The executing user
+%team_id% - The Team ID that signed the binary, if any
+%signing_id% - The Signing ID of the binary, if any
+%cdhash% - The binary's CDHash, if any
+%machine_id% - ID of the machine
+%hostname% - System's full hostname
+%uuid% - System's UUID
+%serial% - System's serial number</string>
+			<key>pfm_documentation_url</key>
+			<string>https://northpole.dev/configuration/keys/#FileAccessEventDetailURL</string>
+			<key>pfm_name</key>
+			<string>FileAccessEventDetailURL</string>
+			<key>pfm_title</key>
+			<string>File Access Event Detail URL</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>https://sync-server-hostname/%machine_id%/%rule_name%/%rule_version%</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2026.2</string>
+			<key>pfm_description</key>
+			<string>The text of the button for File Access Event Detail URL.</string>
+			<key>pfm_description_reference</key>
+			<string>Related to the FileAccessEventDetailURL property, this string represents the text to show on the button.</string>
+			<key>pfm_exclude</key>
+			<array>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_present</key>
+							<false/>
+							<key>pfm_target</key>
+							<string>FileAccessEventDetailURL</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+			<key>pfm_name</key>
+			<string>FileAccessEventDetailText</string>
+			<key>pfm_title</key>
+			<string>File Access Event Detail Text</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>Open sync server</string>
+		</dict>
+		<dict>
 			<key>pfm_description</key>
 			<string>Custom message when an unknown binary is blocked.</string>
 			<key>pfm_description_reference</key>
-			<string>In Lockdown mode this is the message shown to the user when an unknown binary is blocked. If this message is not configured a reasonable default is provided.</string>
+			<string>In Lockdown/Standalone mode this is the message shown to the user when an unknown binary is blocked. If this message is not configured a reasonable default is provided.</string>
 			<key>pfm_exclude</key>
 			<array>
 				<dict>
@@ -445,6 +894,7 @@ For example: https://sync-server-hostname/%machine_id%/%file_sha%</string>
 							<key>pfm_n_range_list</key>
 							<array>
 								<integer>2</integer>
+								<integer>3</integer>
 							</array>
 							<key>pfm_present</key>
 							<false/>
@@ -464,6 +914,24 @@ For example: https://sync-server-hostname/%machine_id%/%file_sha%</string>
 			<string>This application has been blocked from executing.</string>
 		</dict>
 		<dict>
+			<key>pfm_default</key>
+			<string>Dismiss</string>
+			<key>pfm_description</key>
+			<string>The text to display on the button that dismisses the binary block dialog.</string>
+			<key>pfm_description_reference</key>
+			<string>The text to display on the button that dismisses the binary block dialog. The default text is "Dismiss".</string>
+			<key>pfm_documentation_url</key>
+			<string>https://northpole.dev/configuration/keys/#DismissText</string>
+			<key>pfm_name</key>
+			<string>DismissText</string>
+			<key>pfm_title</key>
+			<string>Dismiss Text</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>Dismiss</string>
+		</dict>
+		<dict>
 			<key>pfm_description</key>
 			<string>Custom message when a binary is blocked by a rule.</string>
 			<key>pfm_description_reference</key>
@@ -478,6 +946,8 @@ For example: https://sync-server-hostname/%machine_id%/%file_sha%</string>
 			<string>This application has been banned</string>
 		</dict>
 		<dict>
+			<key>pfm_default</key>
+			<string>Switching into Monitor mode</string>
 			<key>pfm_description</key>
 			<string>Custom message when entering MONITOR mode.</string>
 			<key>pfm_description_reference</key>
@@ -489,9 +959,11 @@ For example: https://sync-server-hostname/%machine_id%/%file_sha%</string>
 			<key>pfm_type</key>
 			<string>string</string>
 			<key>pfm_value_placeholder</key>
-			<string>Entering Monitor mode&lt;br/&gt;Please be careful!</string>
+			<string>Switching into Monitor mode</string>
 		</dict>
 		<dict>
+			<key>pfm_default</key>
+			<string>Switching into Lockdown mode</string>
 			<key>pfm_description</key>
 			<string>Custom message when entering LOCKDOWN mode.</string>
 			<key>pfm_description_reference</key>
@@ -503,7 +975,153 @@ For example: https://sync-server-hostname/%machine_id%/%file_sha%</string>
 			<key>pfm_type</key>
 			<string>string</string>
 			<key>pfm_value_placeholder</key>
-			<string>Entering Lockdown mode</string>
+			<string>Switching into Lockdown mode</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Switching into Standalone mode</string>
+			<key>pfm_description</key>
+			<string>Custom message when entering STANDALONE mode. (undocumented)</string>
+			<key>pfm_description_reference</key>
+			<string>The notification text to display when the client goes into Standalone mode. Defaults to "Switching into Standalone mode".</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/northpolesec/santa/blob/cb2c6c4b7db7b6aa94c78264e84856075ac06925/Source/common/SNTConfigurator.h#L639</string>
+			<key>pfm_name</key>
+			<string>ModeNotificationStandalone</string>
+			<key>pfm_title</key>
+			<string>Standalone Notification Text</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>Switching into Standalone mode</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Custom message when a Removable Media (e.g. USB device) is prevented from being mounted.</string>
+			<key>pfm_description_reference</key>
+			<string>Message to display when a Removable Media (e.g. USB device) is prevented from being mounted.</string>
+			<key>pfm_name</key>
+			<string>BannedUSBBlockMessage</string>
+			<key>pfm_title</key>
+			<string>Banned USB Block Message</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Custom message when a Removable Media (e.g. USB device) is allowed to be mounted with a subset of the requested flags as defined by RemountUSBMode.</string>
+			<key>pfm_description_reference</key>
+			<string>Message to display when a Removable Media (e.g. USB device) is allowed to be mounted with a subset of the requested flags as defined by RemountUSBMode.</string>
+			<key>pfm_name</key>
+			<string>RemountUSBBlockMessage</string>
+			<key>pfm_title</key>
+			<string>Remount USB Block Message</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Custom message when a file access is blocked by a rule.</string>
+			<key>pfm_description_reference</key>
+			<string>This is the message shown to the user when access to a file is blocked because of a rule defined by FileAccessPolicy if that rule doesn't provide a custom message. If this is not configured a reasonable default is provided.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://northpole.dev/configuration/keys/#FileAccessBlockMessage</string>
+			<key>pfm_name</key>
+			<string>FileAccessBlockMessage</string>
+			<key>pfm_title</key>
+			<string>File Access Block Message</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>Access to a file has been denied</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2025.2</string>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>Allow users to silence notifications.</string>
+			<key>pfm_description_reference</key>
+			<string>If false, the user will not be presented with an option to silence notifications.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://northpole.dev/configuration/keys/#EnableNotificationSilences</string>
+			<key>pfm_name</key>
+			<string>EnableNotificationSilences</string>
+			<key>pfm_title</key>
+			<string>Enable Notification Silences</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2026.1</string>
+			<key>pfm_description</key>
+			<string>Company name displayed in Santa UI. For GUI windows, this setting is ignored if BrandingCompanyLogo is set.</string>
+			<key>pfm_description_reference</key>
+			<string>The company name to display on Santa GUIs as well as in messages written to the TTY. For GUI windows, this setting is ignored if BrandingCompanyLogo is set.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://northpole.dev/configuration/keys/#BrandingCompanyName</string>
+			<key>pfm_name</key>
+			<string>BrandingCompanyName</string>
+			<key>pfm_title</key>
+			<string>Branding Company Name</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>Your Organisation Name</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2026.1</string>
+			<key>pfm_description</key>
+			<string>A URL referencing a logo image to display on Santa UIs. The image will be scaled down appropriately to fit within image bounds (currently 84x28 pixels). If set, this overrides BrandingCompanyName. Supported URL schemes: file:// and data:. HTTP/HTTPS URLs are not supported.</string>
+			<key>pfm_description_reference</key>
+			<string>A URL referencing a logo image to display on Santa UIs. The image will be scaled down appropriately to fit within image bounds (currently 84x28 pixels). If set, this overrides BrandingCompanyName. Supported URL schemes: file:// and data:. HTTP/HTTPS URLs are not supported.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://northpole.dev/configuration/keys/#BrandingCompanyLogo</string>
+			<key>pfm_name</key>
+			<string>BrandingCompanyLogo</string>
+			<key>pfm_title</key>
+			<string>Branding Company Logo</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>file:///Library/Application Support/YourOrg/logo.png</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2026.1</string>
+			<key>pfm_description</key>
+			<string>A URL referencing a logo image to display on Santa UIs. When the UI is displayed in dark mode and this is set, it overrides both BrandingCompanyLogo and BrandingCompanyName. Supported URL schemes: file:// and data:. HTTP/HTTPS URLs are not supported.</string>
+			<key>pfm_description_reference</key>
+			<string>A URL referencing a logo image to display on Santa UIs. When the UI is displayed in dark mode and this is set, it overrides both BrandingCompanyLogo and BrandingCompanyName. Supported URL schemes: file:// and data:. HTTP/HTTPS URLs are not supported.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://northpole.dev/configuration/keys/#BrandingCompanyLogoDark</string>
+			<key>pfm_name</key>
+			<string>BrandingCompanyLogoDark</string>
+			<key>pfm_title</key>
+			<string>Branding Company Logo (Dark Mode)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>file:///Library/Application Support/YourOrg/logo-dark.png</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>Enable themed fonts and images on April 1, May 4 and October 31.</string>
+			<key>pfm_description_reference</key>
+			<string>If true, the Santa UI will use special images/fonts on certain holidays.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://northpole.dev/configuration/keys/#FunFontsOnSpecificDays</string>
+			<key>pfm_name</key>
+			<string>FunFontsOnSpecificDays</string>
+			<key>pfm_title</key>
+			<string>Fun Fonts On Specific Days</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
 		</dict>
 		<dict>
 			<key>pfm_description</key>
@@ -518,6 +1136,36 @@ For example: https://sync-server-hostname/%machine_id%/%file_sha%</string>
 			<string>string</string>
 			<key>pfm_value_placeholder</key>
 			<string>https://sync-server-hostname/api/santa/</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>Enable binary proto transfer for sync instead of JSON.</string>
+			<key>pfm_description_reference</key>
+			<string>If true, sync will happen using binary protos instead of JSON.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://northpole.dev/configuration/keys/#SyncEnableProtoTransfer</string>
+			<key>pfm_name</key>
+			<string>SyncEnableProtoTransfer</string>
+			<key>pfm_title</key>
+			<string>Enable Proto Transfer</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Proxy configuration applied to all network requests made during syncing. This dictionary is passed directly to NSURLSessionConfiguration.connectionProxyDictionary. Keys are the kCFNetworkProxies* CFNetwork constants (e.g. HTTPEnable, HTTPProxy, HTTPPort, SOCKSEnable, ProxyAutoConfigURLString).</string>
+			<key>pfm_description_reference</key>
+			<string>The proxy configuration to use when syncing. See the Apple Documentation for details on the keys that can be used in this dictionary.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://developer.apple.com/documentation/cfnetwork/global-proxy-settings-constants</string>
+			<key>pfm_name</key>
+			<string>SyncProxyConfiguration</string>
+			<key>pfm_title</key>
+			<string>Sync Proxy Configuration</string>
+			<key>pfm_type</key>
+			<string>dictionary</string>
 		</dict>
 		<dict>
 			<key>pfm_default</key>
@@ -630,6 +1278,29 @@ For example: https://sync-server-hostname/%machine_id%/%file_sha%</string>
 			<string>string</string>
 		</dict>
 		<dict>
+			<key>pfm_app_min</key>
+			<string>2025.6</string>
+			<key>pfm_description</key>
+			<string>Groups the machine owner is a member of.</string>
+			<key>pfm_description_reference</key>
+			<string>Groups the machine owner is a member of.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://northpole.dev/configuration/keys/#MachineOwnerGroups</string>
+			<key>pfm_name</key>
+			<string>MachineOwnerGroups</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>Machine Owner Groups</string>
+			<key>pfm_type</key>
+			<string>array</string>
+		</dict>
+		<dict>
 			<key>pfm_description</key>
 			<string></string>
 			<key>pfm_description_reference</key>
@@ -670,10 +1341,28 @@ For example: https://sync-server-hostname/%machine_id%/%file_sha%</string>
 			<string>Owner</string>
 		</dict>
 		<dict>
+			<key>pfm_app_min</key>
+			<string>2025.6</string>
 			<key>pfm_description</key>
-			<string>The path to a plist that contains the MachineOwnerKey / value pair.</string>
+			<string>The key to use on MachineOwnerPlist to access defined groups.</string>
 			<key>pfm_description_reference</key>
-			<string>The path to a plist that contains the MachineOwnerKey / value pair.</string>
+			<string>The key to use on MachineOwnerPlist to access defined groups.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://northpole.dev/configuration/keys/#MachineOwnerGroupsKey</string>
+			<key>pfm_name</key>
+			<string>MachineOwnerGroupsKey</string>
+			<key>pfm_title</key>
+			<string>Machine Owner Groups Key</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>Groups</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>The path to a plist that contains the MachineIDKey / value pair.</string>
+			<key>pfm_description_reference</key>
+			<string>The path to a plist that contains the MachineIDKey / value pair.</string>
 			<key>pfm_name</key>
 			<string>MachineIDPlist</string>
 			<key>pfm_title</key>
@@ -699,25 +1388,120 @@ For example: https://sync-server-hostname/%machine_id%/%file_sha%</string>
 		</dict>
 		<dict>
 			<key>pfm_default</key>
-			<string>filelog</string>
+			<false/>
 			<key>pfm_description</key>
-			<string>syslog: Sent to ASL or ULS (if built with the 10.12 SDK or later); filelog: Sent to a file on disk. Use EventLogPath to specify a path.</string>
+			<string>Upload all execution events to the sync server, including those explicitly allowed.</string>
 			<key>pfm_description_reference</key>
-			<string>Defines how event logs are stored. Options are 1) syslog: Sent to ASL or ULS (if built with the 10.12 SDK or later). 2) filelog: Sent to a file on disk. Use EventLogPath to specify a path. 3) protobuf (BETA): Sent to file on disk using maildir format. 4) null: Don't output any event logs. Defaults to filelog.</string>
+			<string>If true, the client will upload all execution events to the sync server, including those that were explicitly allowed.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://northpole.dev/configuration/keys/#EnableAllEventUpload</string>
+			<key>pfm_name</key>
+			<string>EnableAllEventUpload</string>
+			<key>pfm_title</key>
+			<string>Enable All Event Upload</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>Do not upload events for executions of unknown binaries allowed in monitor mode.</string>
+			<key>pfm_description_reference</key>
+			<string>If true, the client will not upload events for executions of unknown binaries allowed in monitor mode.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://northpole.dev/configuration/keys/#DisableUnknownEventUpload</string>
+			<key>pfm_name</key>
+			<string>DisableUnknownEventUpload</string>
+			<key>pfm_title</key>
+			<string>Disable Unknown Event Upload</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>deflate</string>
+			<key>pfm_description</key>
+			<string>Content encoding used for sync requests.</string>
+			<key>pfm_description_reference</key>
+			<string>Sets the Content-Encoding header for requests sent to the sync service.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://northpole.dev/configuration/keys/#SyncClientContentEncoding</string>
+			<key>pfm_name</key>
+			<string>SyncClientContentEncoding</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>deflate</string>
+				<string>gzip</string>
+				<string>none</string>
+			</array>
+			<key>pfm_title</key>
+			<string>Sync Client Content Encoding</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Dictionary of additional headers to include in all requests made to the sync server. System-managed headers such as Content-Length, Host, and WWW-Authenticate will be ignored.</string>
+			<key>pfm_description_reference</key>
+			<string>Dictionary of additional headers to include in all requests made to the sync server. System managed headers such as Content-Length, Host, WWW-Authenticate etc will be ignored.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://northpole.dev/configuration/keys/#SyncExtraHeaders</string>
+			<key>pfm_name</key>
+			<string>SyncExtraHeaders</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_description</key>
+					<string></string>
+					<key>pfm_name</key>
+					<string>{{key}}</string>
+					<key>pfm_title</key>
+					<string>Header Key</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string></string>
+					<key>pfm_name</key>
+					<string>{{value}}</string>
+					<key>pfm_title</key>
+					<string>Header Value</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>Sync Extra Headers</string>
+			<key>pfm_type</key>
+			<string>dictionary</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>file</string>
+			<key>pfm_description</key>
+			<string>Defines how event logs are stored. Allowed values: syslog, file, protobuf, json, null. Note: the protobuf and JSON formats are in BETA and subject to change.</string>
+			<key>pfm_description_reference</key>
+			<string>Defines how event logs are stored. Allowed values: syslog, file, protobuf, json, null. Note: the protobuf and JSON formats are in BETA and subject to change.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://northpole.dev/configuration/keys/#EventLogType</string>
 			<key>pfm_name</key>
 			<string>EventLogType</string>
 			<key>pfm_range_list</key>
 			<array>
 				<string>syslog</string>
-				<string>filelog</string>
+				<string>file</string>
 				<string>protobuf</string>
-				<string></string>
+				<string>json</string>
+				<string>null</string>
 			</array>
 			<key>pfm_range_list_titles</key>
 			<array>
-				<string>System log</string>
+				<string>System Log</string>
 				<string>File</string>
-				<string>Mail</string>
+				<string>Protobuf</string>
+				<string>JSON</string>
 				<string>None</string>
 			</array>
 			<key>pfm_title</key>
@@ -726,30 +1510,14 @@ For example: https://sync-server-hostname/%machine_id%/%file_sha%</string>
 			<string>string</string>
 		</dict>
 		<dict>
-			<key>pfm_conditionals</key>
-			<array>
-				<dict>
-					<key>pfm_require</key>
-					<string>always</string>
-					<key>pfm_target_conditions</key>
-					<array>
-						<dict>
-							<key>pfm_range_list</key>
-							<array>
-								<string>filelog</string>
-							</array>
-							<key>pfm_target</key>
-							<string>EventLogType</string>
-						</dict>
-					</array>
-				</dict>
-			</array>
 			<key>pfm_default</key>
 			<string>/var/db/santa/santa.log</string>
 			<key>pfm_description</key>
-			<string></string>
+			<string>Path to the event log file (used for file/json logging).</string>
 			<key>pfm_description_reference</key>
-			<string>If EventLogType is set to filelog, EventLogPath will provide the path to save logs. Defaults to /var/db/santa/santa.log. If you change this value ensure you also update com.northpolesec.santa.newsyslog.conf with the new path.</string>
+			<string>If EventLogType is set to file or json, EventLogPath will provide the path to save logs. If you change this value ensure you also update com.northpolesec.santa.newsyslog.conf with the new path.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://northpole.dev/configuration/keys/#EventLogPath</string>
 			<key>pfm_exclude</key>
 			<array>
 				<dict>
@@ -758,10 +1526,11 @@ For example: https://sync-server-hostname/%machine_id%/%file_sha%</string>
 						<dict>
 							<key>pfm_n_range_list</key>
 							<array>
-								<string>filelog</string>
+								<string>file</string>
+								<string>json</string>
 							</array>
 							<key>pfm_present</key>
-							<false/>
+							<true/>
 							<key>pfm_target</key>
 							<string>EventLogType</string>
 						</dict>
@@ -770,38 +1539,22 @@ For example: https://sync-server-hostname/%machine_id%/%file_sha%</string>
 			</array>
 			<key>pfm_name</key>
 			<string>EventLogPath</string>
-			<key>pfm_note</key>
-			<string>If you change this value ensure you also update com.northpolesec.santa.newsyslog.conf with the new path.</string>
 			<key>pfm_title</key>
 			<string>Event Log Path</string>
 			<key>pfm_type</key>
 			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>/var/db/santa/santa.log</string>
 		</dict>
 		<dict>
-			<key>pfm_conditionals</key>
-			<array>
-				<dict>
-					<key>pfm_require</key>
-					<string>always</string>
-					<key>pfm_target_conditions</key>
-					<array>
-						<dict>
-							<key>pfm_range_list</key>
-							<array>
-								<string>protobuf</string>
-							</array>
-							<key>pfm_target</key>
-							<string>EventLogType</string>
-						</dict>
-					</array>
-				</dict>
-			</array>
 			<key>pfm_default</key>
-			<string>/var/db/santa/mail</string>
+			<string>/var/db/santa/spool</string>
 			<key>pfm_description</key>
-			<string>The base directory used to save mail files.</string>
+			<string>Base directory for protobuf maildir-like logs.</string>
 			<key>pfm_description_reference</key>
-			<string>If EventLogType is set to protobuf, MailDirectory will provide the the base directory used to save files according to the maildir format. Defaults to /var/db/santa/mail.</string>
+			<string>If EventLogType is set to protobuf, SpoolDirectory will provide the base directory used to save files according to a maildir-like format.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://northpole.dev/configuration/keys/#SpoolDirectory</string>
 			<key>pfm_exclude</key>
 			<array>
 				<dict>
@@ -813,7 +1566,7 @@ For example: https://sync-server-hostname/%machine_id%/%file_sha%</string>
 								<string>protobuf</string>
 							</array>
 							<key>pfm_present</key>
-							<false/>
+							<true/>
 							<key>pfm_target</key>
 							<string>EventLogType</string>
 						</dict>
@@ -821,19 +1574,23 @@ For example: https://sync-server-hostname/%machine_id%/%file_sha%</string>
 				</dict>
 			</array>
 			<key>pfm_name</key>
-			<string>MailDirectory</string>
+			<string>SpoolDirectory</string>
 			<key>pfm_title</key>
-			<string>Mail Directory</string>
+			<string>Spool Directory</string>
 			<key>pfm_type</key>
 			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>/var/db/santa/spool</string>
 		</dict>
 		<dict>
 			<key>pfm_default</key>
-			<integer>100</integer>
+			<integer>250</integer>
 			<key>pfm_description</key>
-			<string>Per-file size limit (KB) for files stored in the event log mail directory.</string>
+			<string>Per-file size limit (KB) for protobuf spool files.</string>
 			<key>pfm_description_reference</key>
-			<string>If EventLogType is set to protobuf, MailDirectoryFileSizeThresholdKB defines the per-file size limit for files stored in the mail directory. Events are buffered in memory until this threshold would be exceeded (or MailDirectoryEventMaxFlushTimeSec is exceeded). Defaults to 100.</string>
+			<string>If EventLogType is set to protobuf, SpoolDirectoryFileSizeThresholdKB defines the per-file size limit for files stored in the spool directory. Events are buffered in memory until this threshold would be exceeded (or SpoolDirectoryEventMaxFlushTimeSec is exceeded).</string>
+			<key>pfm_documentation_url</key>
+			<string>https://northpole.dev/configuration/keys/#SpoolDirectoryFileSizeThresholdKB</string>
 			<key>pfm_exclude</key>
 			<array>
 				<dict>
@@ -845,7 +1602,7 @@ For example: https://sync-server-hostname/%machine_id%/%file_sha%</string>
 								<string>protobuf</string>
 							</array>
 							<key>pfm_present</key>
-							<false/>
+							<true/>
 							<key>pfm_target</key>
 							<string>EventLogType</string>
 						</dict>
@@ -853,21 +1610,25 @@ For example: https://sync-server-hostname/%machine_id%/%file_sha%</string>
 				</dict>
 			</array>
 			<key>pfm_name</key>
-			<string>MailDirectoryFileSizeThresholdKB</string>
+			<string>SpoolDirectoryFileSizeThresholdKB</string>
 			<key>pfm_title</key>
-			<string>Mail Max File Size</string>
+			<string>Spool Max File Size</string>
 			<key>pfm_type</key>
 			<string>integer</string>
+			<key>pfm_value_placeholder</key>
+			<string>250</string>
 			<key>pfm_value_unit</key>
 			<string>KB</string>
 		</dict>
 		<dict>
 			<key>pfm_default</key>
-			<integer>500</integer>
+			<integer>100</integer>
 			<key>pfm_description</key>
-			<string>Total file size limit (MB) for all files stored in the event log mail directory.</string>
+			<string>Total size limit (MB) for protobuf spool directory.</string>
 			<key>pfm_description_reference</key>
-			<string>If EventLogType is set to protobuf, MailDirectorySizeThresholdMB defines the total combined size limit of all files in the mail directory. Once the threshold is met, no more events will be saved. Defaults to 500.</string>
+			<string>If EventLogType is set to protobuf, SpoolDirectorySizeThresholdMB defines the total combined size limit of all files in the spool directory. Once the threshold is met, no more events will be saved.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://northpole.dev/configuration/keys/#SpoolDirectorySizeThresholdMB</string>
 			<key>pfm_exclude</key>
 			<array>
 				<dict>
@@ -879,7 +1640,7 @@ For example: https://sync-server-hostname/%machine_id%/%file_sha%</string>
 								<string>protobuf</string>
 							</array>
 							<key>pfm_present</key>
-							<false/>
+							<true/>
 							<key>pfm_target</key>
 							<string>EventLogType</string>
 						</dict>
@@ -887,21 +1648,25 @@ For example: https://sync-server-hostname/%machine_id%/%file_sha%</string>
 				</dict>
 			</array>
 			<key>pfm_name</key>
-			<string>MailDirectorySizeThresholdMB</string>
+			<string>SpoolDirectorySizeThresholdMB</string>
 			<key>pfm_title</key>
-			<string>Mail Max Size</string>
+			<string>Spool Max Size</string>
 			<key>pfm_type</key>
 			<string>integer</string>
+			<key>pfm_value_placeholder</key>
+			<string>100</string>
 			<key>pfm_value_unit</key>
 			<string>MB</string>
 		</dict>
 		<dict>
 			<key>pfm_default</key>
-			<integer>5</integer>
+			<integer>15</integer>
 			<key>pfm_description</key>
-			<string>Maximum time (seconds) events will stay buffered in memory before being flushed to disk.</string>
+			<string>Maximum time (seconds) events are buffered before flushing to disk.</string>
 			<key>pfm_description_reference</key>
-			<string>If EventLogType is set to protobuf, MailDirectoryEventMaxFlushTimeSec defines the maximum amount of time events will stay buffered in memory before being flushed to disk, regardless of whether or not MailDirectoryFileSizeThresholdKB would be exceeded. Defaults to 5.</string>
+			<string>If EventLogType is set to protobuf, SpoolDirectoryEventMaxFlushTimeSec defines the maximum amount of time events will stay buffered in memory before being flushed to disk, regardless of whether or not SpoolDirectoryFileSizeThresholdKB would be exceeded.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://northpole.dev/configuration/keys/#SpoolDirectoryEventMaxFlushTimeSec</string>
 			<key>pfm_exclude</key>
 			<array>
 				<dict>
@@ -913,7 +1678,7 @@ For example: https://sync-server-hostname/%machine_id%/%file_sha%</string>
 								<string>protobuf</string>
 							</array>
 							<key>pfm_present</key>
-							<false/>
+							<true/>
 							<key>pfm_target</key>
 							<string>EventLogType</string>
 						</dict>
@@ -921,11 +1686,13 @@ For example: https://sync-server-hostname/%machine_id%/%file_sha%</string>
 				</dict>
 			</array>
 			<key>pfm_name</key>
-			<string>MailDirectoryEventMaxFlushTimeSec</string>
+			<string>SpoolDirectoryEventMaxFlushTimeSec</string>
 			<key>pfm_title</key>
-			<string>Mail Max Event Buffer</string>
+			<string>Spool Max Event Buffer</string>
 			<key>pfm_type</key>
 			<string>integer</string>
+			<key>pfm_value_placeholder</key>
+			<string>15</string>
 			<key>pfm_value_unit</key>
 			<string>seconds</string>
 		</dict>
@@ -944,25 +1711,130 @@ For example: https://sync-server-hostname/%machine_id%/%file_sha%</string>
 			<string>boolean</string>
 		</dict>
 		<dict>
-			<key>pfm_default</key>
-			<string></string>
 			<key>pfm_description</key>
-			<string>The key to use on Machine ID Plist.</string>
+			<string>Filters entitlements from execution telemetry by prefix. Entitlements are only logged when EventLogType is set to protobuf or json.</string>
 			<key>pfm_description_reference</key>
-			<string>Format to export metrics as, supported formats are "rawjson" for a single JSON blob and "monarchjson" for a format consumable by Google's Monarch tooling. Defaults to "".</string>
+			<string>Filters entitlements from execution telemetry based on prefix (for example: com.apple.private). Entitlements matching a prefix in this list will be omitted from the logged event. Entitlements are only logged when EventLogType is set to protobuf or json.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://northpole.dev/configuration/keys/#EntitlementsPrefixFilter</string>
+			<key>pfm_exclude</key>
+			<array>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_n_range_list</key>
+							<array>
+								<string>protobuf</string>
+								<string>json</string>
+							</array>
+							<key>pfm_present</key>
+							<true/>
+							<key>pfm_target</key>
+							<string>EventLogType</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+			<key>pfm_name</key>
+			<string>EntitlementsPrefixFilter</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>Entitlements Prefix Filter</string>
+			<key>pfm_type</key>
+			<string>array</string>
+			<key>pfm_value_placeholder</key>
+			<string>com.apple.private</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Filters entitlements from execution telemetry by Team ID. Entitlements are only logged when EventLogType is set to protobuf or json.</string>
+			<key>pfm_description_reference</key>
+			<string>Filters entitlements from execution telemetry based on the process's TeamID. When a process's code signature has a TeamID matching an entry in this list, its entitlements will be omitted from the logged event. Entitlements are only logged when EventLogType is set to protobuf or json. Use the value platform to filter entitlements from platform binaries.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://northpole.dev/configuration/keys/#EntitlementsTeamIDFilter</string>
+			<key>pfm_exclude</key>
+			<array>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_n_range_list</key>
+							<array>
+								<string>protobuf</string>
+								<string>json</string>
+							</array>
+							<key>pfm_present</key>
+							<true/>
+							<key>pfm_target</key>
+							<string>EventLogType</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+			<key>pfm_name</key>
+			<string>EntitlementsTeamIDFilter</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>Entitlements Team ID Filter</string>
+			<key>pfm_type</key>
+			<string>array</string>
+			<key>pfm_value_placeholder</key>
+			<string>platform</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2026.2</string>
+			<key>pfm_description</key>
+			<string>CEL expressions for filtering or redacting telemetry before upload. Only useful for Workshop customers.</string>
+			<key>pfm_description_reference</key>
+			<string>A list of CEL expressions for filtering/redacting rows before upload. Only useful for Workshop customers.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://northpole.dev/configuration/keys/#TelemetryFilterExpressions</string>
+			<key>pfm_name</key>
+			<string>TelemetryFilterExpressions</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>Telemetry Filter Expressions</string>
+			<key>pfm_type</key>
+			<string>array</string>
+			<key>pfm_value_placeholder</key>
+			<string>event_type == "Execution"</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Format to export metrics as, supported formats are "rawjson" for a single JSON blob and "monarchjson" for a format consumable by Google's Monarch tooling.</string>
+			<key>pfm_description_reference</key>
+			<string>Format to export metrics as. Allowed values: rawjson: A single JSON blob containing all metrics. monarchjson: A format consumable by Google's internal Monarch tooling</string>
 			<key>pfm_name</key>
 			<string>MetricFormat</string>
 			<key>pfm_range_list</key>
 			<array>
 				<string>rawjson</string>
 				<string>monarchjson</string>
-				<string></string>
 			</array>
 			<key>pfm_range_list_titles</key>
 			<array>
 				<string>Raw JSON</string>
 				<string>Monarch JSON</string>
-				<string>None</string>
 			</array>
 			<key>pfm_title</key>
 			<string>Metric Format</string>
@@ -994,6 +1866,8 @@ For example: https://sync-server-hostname/%machine_id%/%file_sha%</string>
 			<string>Metric Export Interval</string>
 			<key>pfm_type</key>
 			<string>integer</string>
+			<key>pfm_value_placeholder</key>
+			<string>30</string>
 			<key>pfm_value_unit</key>
 			<string>seconds</string>
 		</dict>
@@ -1010,8 +1884,495 @@ For example: https://sync-server-hostname/%machine_id%/%file_sha%</string>
 			<string>Metric Export Timeout</string>
 			<key>pfm_type</key>
 			<string>integer</string>
+			<key>pfm_value_placeholder</key>
+			<string>30</string>
 			<key>pfm_value_unit</key>
 			<string>seconds</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>A map of key value pairs to add to all metric root labels. If a previously set key (e.g. host_name) is set to "" then the key is removed from the metric root labels. Alternatively if a value is set for an existing key then the new value will override the old.</string>
+			<key>pfm_description_reference</key>
+			<string>A map of key value pairs to add to all metric root labels. If a previously set key (e.g. host_name) is set to "" then the key is removed from the metric root labels. Alternatively if a value is set for an existing key then the new value will override the old.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://northpole.dev/configuration/keys/#MetricExtraLabels</string>
+			<key>pfm_name</key>
+			<string>MetricExtraLabels</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_description</key>
+					<string></string>
+					<key>pfm_name</key>
+					<string>{{key}}</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string></string>
+					<key>pfm_name</key>
+					<string>{{value}}</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>Metric Extra Labels</string>
+			<key>pfm_type</key>
+			<string>dictionary</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>Enable password authorization fallback for Standalone mode.</string>
+			<key>pfm_description_reference</key>
+			<string>If true, Santa will fallback to password authorization for Standalone mode.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://northpole.dev/configuration/keys/#EnableStandalonePasswordFallback</string>
+			<key>pfm_name</key>
+			<string>EnableStandalonePasswordFallback</string>
+			<key>pfm_title</key>
+			<string>Enable Standalone Password Fallback</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>Ignore events generated by other EndpointSecurity clients.</string>
+			<key>pfm_description_reference</key>
+			<string>If true, Santa will not process events that are generated by other EndpointSecurity clients that may be installed on the system</string>
+			<key>pfm_documentation_url</key>
+			<string>https://northpole.dev/configuration/keys/#IgnoreOtherEndpointSecurityClients</string>
+			<key>pfm_name</key>
+			<string>IgnoreOtherEndpointSecurityClients</string>
+			<key>pfm_title</key>
+			<string>Ignore Other Endpoint Security Clients</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>Send basic stats to North Pole Security</string>
+			<key>pfm_description_reference</key>
+			<string>If true, Santa will periodically collect and send basic, non-identifying stats to the maintainers at North Pole Security to help better support Santa. See Stats documentation for complete details</string>
+			<key>pfm_documentation_url</key>
+			<string>https://northpole.dev/features/stats/</string>
+			<key>pfm_name</key>
+			<string>EnableStatsCollection</string>
+			<key>pfm_title</key>
+			<string>Enable Stats Collection</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>North Pole Security customer ID for stats collection.</string>
+			<key>pfm_description_reference</key>
+			<string>This key should only be set for organizations that have a contract with North Pole Security. See Stats documentation for complete details.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://northpole.dev/features/stats/</string>
+			<key>pfm_name</key>
+			<string>StatsOrganizationID</string>
+			<key>pfm_title</key>
+			<string>Stats Organization ID</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2026.3</string>
+			<key>pfm_description</key>
+			<string>A list of Signing IDs to protect from `pid_suspend` calls.</string>
+			<key>pfm_description_reference</key>
+			<string>A list of Signing IDs to protect from `pid_suspend` calls.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://northpole.dev/configuration/keys/#AntiSuspendSigningIDs</string>
+			<key>pfm_name</key>
+			<string>AntiSuspendSigningIDs</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>Anti Suspend Signing IDs</string>
+			<key>pfm_type</key>
+			<string>array</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2026.3</string>
+			<key>pfm_description</key>
+			<string>Array of allowed Santa commands. If unset, all commands are allowed; if set to an empty array, no commands are allowed.</string>
+			<key>pfm_description_reference</key>
+			<string>Array of allowed Santa Commands. If the key AllowedSantaCommands is unset (nil), all commands are allowed. If AllowedSantaCommands is an empty array, none of the commands are allowed.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://northpole.dev/configuration/keys/#AllowedSantaCommands</string>
+			<key>pfm_name</key>
+			<string>AllowedSantaCommands</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_range_list</key>
+					<array>
+						<string>kill</string>
+						<string>ping</string>
+						<string>eventupload</string>
+					</array>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>Allowed Santa Commands</string>
+			<key>pfm_type</key>
+			<string>array</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2026.4</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>Allow signals delegated by launchd on behalf of Apple platform binaries targeting santad.</string>
+			<key>pfm_description_reference</key>
+			<string>If true, signals delegated by 'launchd' on behalf of any Apple platform binary targeting 'santad' are allowed.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://northpole.dev/configuration/keys/#AllowDelegatedSignals</string>
+			<key>pfm_name</key>
+			<string>AllowDelegatedSignals</string>
+			<key>pfm_title</key>
+			<string>Allow Delegated Signals</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2023.1</string>
+			<key>pfm_description</key>
+			<string>Path to a file access configuration plist.</string>
+			<key>pfm_description_reference</key>
+			<string>Path to a file access configuration plist. This is ignored if FileAccessPolicy is also set. See File Access Authorization for configuration details.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://northpole.dev/configuration/keys/#FileAccessPolicyPlist</string>
+			<key>pfm_exclude</key>
+			<array>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_present</key>
+							<true/>
+							<key>pfm_target</key>
+							<string>FileAccessPolicy</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+			<key>pfm_name</key>
+			<string>FileAccessPolicyPlist</string>
+			<key>pfm_title</key>
+			<string>File Access Policy Plist</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>/etc/santa/file_access_policy.plist</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2023.1</string>
+			<key>pfm_description</key>
+			<string>A complete file access policy embedded directly in the Santa configuration. When set, FileAccessPolicyPlist is ignored.</string>
+			<key>pfm_description_reference</key>
+			<string>A complete file access configuration policy embedded in the main Santa config. If set, FileAccessPolicyPlist will be ignored. See File Access Authorization for configuration details.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://northpole.dev/configuration/faa/</string>
+			<key>pfm_name</key>
+			<string>FileAccessPolicy</string>
+			<key>pfm_title</key>
+			<string>File Access Policy</string>
+			<key>pfm_type</key>
+			<string>dictionary</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<integer>600</integer>
+			<key>pfm_description</key>
+			<string>How often (in seconds) to re-read the file access policy config.</string>
+			<key>pfm_description_reference</key>
+			<string>Number of seconds between re-reading the file access policy config and policies/monitored paths being updated. The minimum value is 15 seconds.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://northpole.dev/configuration/keys/#FileAccessPolicyUpdateIntervalSec</string>
+			<key>pfm_name</key>
+			<string>FileAccessPolicyUpdateIntervalSec</string>
+			<key>pfm_range_min</key>
+			<integer>15</integer>
+			<key>pfm_title</key>
+			<string>File Access Policy Update Interval</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+			<key>pfm_value_placeholder</key>
+			<string>600</string>
+			<key>pfm_value_unit</key>
+			<string>seconds</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>none</string>
+			<key>pfm_description</key>
+			<string>Global override for the enforcement of all file access policy rules.</string>
+			<key>pfm_description_reference</key>
+			<string>Defines a global override policy that applies to the enforcement of all FileAccessPolicy rules. AUDIT_ONLY: no access will be blocked, only logged. DISABLE: no access will be blocked or logged. none: enforce policy as defined in each rule.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://northpole.dev/configuration/keys/#OverrideFileAccessAction</string>
+			<key>pfm_name</key>
+			<string>OverrideFileAccessAction</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>AUDIT_ONLY</string>
+				<string>DISABLE</string>
+				<string>none</string>
+			</array>
+			<key>pfm_range_list_titles</key>
+			<array>
+				<string>Audit Only</string>
+				<string>Disable</string>
+				<string>None</string>
+			</array>
+			<key>pfm_title</key>
+			<string>Override File Access Action</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<integer>60</integer>
+			<key>pfm_description</key>
+			<string>Average number of file access logs per second. Set to 0 to disable rate limiting.</string>
+			<key>pfm_description_reference</key>
+			<string>Sets the average logs per second that will be emitted by File Access Authorization rule violations. Setting to 0 will disable log rate limiting. Rate limiting only applies to logging. FAA rules that are not audit only will still block operations that violate the rule.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://northpole.dev/configuration/keys/#FileAccessGlobalLogsPerSec</string>
+			<key>pfm_name</key>
+			<string>FileAccessGlobalLogsPerSec</string>
+			<key>pfm_range_min</key>
+			<integer>0</integer>
+			<key>pfm_title</key>
+			<string>File Access Global Logs Per Second</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+			<key>pfm_value_placeholder</key>
+			<string>60</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<integer>15</integer>
+			<key>pfm_description</key>
+			<string>Window size over which the log rate limit is applied. Set to 0 to disable rate limiting.</string>
+			<key>pfm_description_reference</key>
+			<string>Sets the window size over which the FileAccessGlobalLogsPerSec setting is applied in order to allow for bursts of logs. Setting to 0 will disable log rate limiting. Rate limiting only applies to logging. FAA rules that are not audit only will still block operations that violate the rule.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://northpole.dev/configuration/keys/#FileAccessGlobalWindowSizeSec</string>
+			<key>pfm_name</key>
+			<string>FileAccessGlobalWindowSizeSec</string>
+			<key>pfm_range_min</key>
+			<integer>0</integer>
+			<key>pfm_title</key>
+			<string>File Access Global Window Size</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+			<key>pfm_value_placeholder</key>
+			<string>15</string>
+			<key>pfm_value_unit</key>
+			<string>seconds</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Action applied to all removable media devices.</string>
+			<key>pfm_description_reference</key>
+			<string>Action for all removable media. Allowed values: Allow, Block, Remount. If unset, falls back to deprecated BlockUSBMount and RemountUSBMode.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://northpole.dev/configuration/keys/#RemovableMediaAction</string>
+			<key>pfm_name</key>
+			<string>RemovableMediaAction</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>Allow</string>
+				<string>Block</string>
+				<string>Remount</string>
+			</array>
+			<key>pfm_range_list_titles</key>
+			<array>
+				<string>Allow</string>
+				<string>Block</string>
+				<string>Remount with Restrictions</string>
+			</array>
+			<key>pfm_title</key>
+			<string>Removable Media Action</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Mount flags applied when removable media is remounted.</string>
+			<key>pfm_description_reference</key>
+			<string>Array of mount flag arguments when RemovableMediaAction is Remount. Allowed values: rdonly, noexec, nosuid, nobrowse, noowners, nodev, async, -j.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://northpole.dev/configuration/keys/#RemovableMediaRemountFlags</string>
+			<key>pfm_exclude</key>
+			<array>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_n_range_list</key>
+							<array>
+								<string>Remount</string>
+							</array>
+							<key>pfm_present</key>
+							<true/>
+							<key>pfm_target</key>
+							<string>RemovableMediaAction</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+			<key>pfm_name</key>
+			<string>RemovableMediaRemountFlags</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_range_list</key>
+					<array>
+						<string>rdonly</string>
+						<string>noexec</string>
+						<string>nosuid</string>
+						<string>nobrowse</string>
+						<string>noowners</string>
+						<string>nodev</string>
+						<string>async</string>
+						<string>-j</string>
+					</array>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>Removable Media Remount Flags</string>
+			<key>pfm_type</key>
+			<string>array</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Action applied to encrypted removable media devices.</string>
+			<key>pfm_description_reference</key>
+			<string>Action for encrypted removable media. Allowed values: Allow, Block, Remount. If unset, encrypted volumes use the baseline policy.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://northpole.dev/configuration/keys/#EncryptedRemovableMediaAction</string>
+			<key>pfm_name</key>
+			<string>EncryptedRemovableMediaAction</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>Allow</string>
+				<string>Block</string>
+				<string>Remount</string>
+			</array>
+			<key>pfm_range_list_titles</key>
+			<array>
+				<string>Allow</string>
+				<string>Block</string>
+				<string>Remount with Restrictions</string>
+			</array>
+			<key>pfm_title</key>
+			<string>Encrypted Removable Media Action</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Mount flags applied when encrypted removable media is remounted.</string>
+			<key>pfm_description_reference</key>
+			<string>Array of mount flag arguments for encrypted removable media when EncryptedRemovableMediaAction is Remount. Allowed values: rdonly, noexec, nosuid, nobrowse, noowners, nodev, async, -j.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://northpole.dev/configuration/keys/#EncryptedRemovableMediaRemountFlags</string>
+			<key>pfm_exclude</key>
+			<array>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_n_range_list</key>
+							<array>
+								<string>Remount</string>
+							</array>
+							<key>pfm_present</key>
+							<true/>
+							<key>pfm_target</key>
+							<string>EncryptedRemovableMediaAction</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+			<key>pfm_name</key>
+			<string>EncryptedRemovableMediaRemountFlags</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_range_list</key>
+					<array>
+						<string>rdonly</string>
+						<string>noexec</string>
+						<string>nosuid</string>
+						<string>nobrowse</string>
+						<string>noowners</string>
+						<string>nodev</string>
+						<string>async</string>
+						<string>-j</string>
+					</array>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>Encrypted Removable Media Remount Flags</string>
+			<key>pfm_type</key>
+			<string>array</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Action applied to existing removable media when Santa starts.</string>
+			<key>pfm_description_reference</key>
+			<string>Defines the action that should be taken on existing removable media mounts when Santa starts. Allowed values: Unmount, ForceUnmount, Remount, ForceRemount.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://northpole.dev/configuration/keys/#OnStartUSBOptions</string>
+			<key>pfm_name</key>
+			<string>OnStartUSBOptions</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>Unmount</string>
+				<string>ForceUnmount</string>
+				<string>Remount</string>
+				<string>ForceRemount</string>
+			</array>
+			<key>pfm_range_list_titles</key>
+			<array>
+				<string>Unmount</string>
+				<string>Force Unmount</string>
+				<string>Remount</string>
+				<string>Force Remount</string>
+			</array>
+			<key>pfm_title</key>
+			<string>On Start USB Options</string>
+			<key>pfm_type</key>
+			<string>string</string>
 		</dict>
 	</array>
 	<key>pfm_targets</key>
@@ -1023,6 +2384,6 @@ For example: https://sync-server-hostname/%machine_id%/%file_sha%</string>
 	<key>pfm_unique</key>
 	<true/>
 	<key>pfm_version</key>
-	<integer>1</integer>
+	<integer>2</integer>
 </dict>
 </plist>

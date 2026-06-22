@@ -7,133 +7,133 @@
 		<key>com.apple.NetworkBrowser</key>
 		<dict>
 			<key>hash</key>
-			<string>e9ed362b31c46d9719d8a5ba17ffdf8b</string>
+			<string>fd0987aa83efad84563e5ecda6649010</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApple/com.apple.NetworkBrowser.png</string>
 		</dict>
 		<key>com.apple.Safari</key>
 		<dict>
 			<key>hash</key>
-			<string>aea76c68f36e64533d6712958dbb2d5f</string>
+			<string>8a4fed53652aeaa519aa87eb4b1d60c1</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApple/com.apple.Safari.png</string>
 		</dict>
 		<key>com.apple.Safari.SandboxBroker</key>
 		<dict>
 			<key>hash</key>
-			<string>aea76c68f36e64533d6712958dbb2d5f</string>
+			<string>8a4fed53652aeaa519aa87eb4b1d60c1</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApple/com.apple.Safari.SandboxBroker.png</string>
 		</dict>
 		<key>com.apple.Siri</key>
 		<dict>
 			<key>hash</key>
-			<string>21c70e40b93738f4fddef33f6534eec5</string>
+			<string>01954ee40c10d2a78a2d58ad3ed57362</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApple/com.apple.Siri.png</string>
 		</dict>
 		<key>com.apple.Spotlight</key>
 		<dict>
 			<key>hash</key>
-			<string>e4737128985c2874616344c403bbbd1b</string>
+			<string>623f12ac07ebe0dce9c1effc2db61a07</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApple/com.apple.Spotlight.png</string>
 		</dict>
 		<key>com.apple.TimeMachine</key>
 		<dict>
 			<key>hash</key>
-			<string>96e6b16b938ca3e3bd00c46ce30c827c</string>
+			<string>283080dcc15aba03b9ba49bb0a8f3b2f</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApple/com.apple.TimeMachine.png</string>
 		</dict>
 		<key>com.apple.dt.Xcode</key>
 		<dict>
 			<key>hash</key>
-			<string>568946afec7773f3d6c0187d83357b64</string>
+			<string>150a1a9d1c26da6251ffe7542215cc1a</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApple/com.apple.dt.Xcode.png</string>
 		</dict>
 		<key>com.apple.finder</key>
 		<dict>
 			<key>hash</key>
-			<string>7b7425145502036f37c5609b2ae98586</string>
+			<string>35f07c8b61e5cd7137794e0e88614c88</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApple/com.apple.finder.png</string>
 		</dict>
 		<key>com.apple.freeform</key>
 		<dict>
 			<key>hash</key>
-			<string>6a6552725c45814f293ec0f1ebcf5f62</string>
+			<string>a614e0b147d07d5df72b8e179fd6e27f</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApple/com.apple.freeform.png</string>
 		</dict>
 		<key>com.apple.iBooksX</key>
 		<dict>
 			<key>hash</key>
-			<string>0af3adcf7ba70f53bd46a36f271079ae</string>
+			<string>3035e59b512f090939dd1b26c690f1f7</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApple/com.apple.iBooksX.png</string>
 		</dict>
 		<key>com.apple.iTunes</key>
 		<dict>
 			<key>hash</key>
-			<string>c1f10d1e887edb33fb041185ac8c4f87</string>
+			<string>a6b0f66db66b8e329f70ba56e3063d54</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApple/com.apple.iTunes.png</string>
 		</dict>
 		<key>com.apple.iWork.Keynote</key>
 		<dict>
 			<key>hash</key>
-			<string>fdad2a24ad21ff40c2000ba1f1a80028</string>
+			<string>7352d07d4f5fb41100c0bf41eeed44ed</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApple/com.apple.iWork.Keynote.png</string>
 		</dict>
 		<key>com.apple.iWork.Numbers</key>
 		<dict>
 			<key>hash</key>
-			<string>471adfbd2cc13a5e3fdd039681d037c3</string>
+			<string>d024c33de5431778272c906726e4ad64</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApple/com.apple.iWork.Numbers.png</string>
 		</dict>
 		<key>com.apple.iWork.Pages</key>
 		<dict>
 			<key>hash</key>
-			<string>aeb05e1b691e75c03cbf8907dc3bfa7d</string>
+			<string>e1d21d8c3bafce1eb4daf3619a2553fb</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApple/com.apple.iWork.Pages.png</string>
 		</dict>
 		<key>com.apple.icloud.managed</key>
 		<dict>
 			<key>hash</key>
-			<string>dd8b57b9299235f1ff5902272714c97b</string>
+			<string>4df8ede685706290811cfd3f5d1bc4cf</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApple/com.apple.icloud.managed.png</string>
 		</dict>
 		<key>com.apple.mDNSResponder</key>
 		<dict>
 			<key>hash</key>
-			<string>9ecf8a2cad500557d943e6e08f3e1419</string>
+			<string>1ae608d3a72eb47568f04c0d91a2d1d1</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApple/com.apple.mDNSResponder.png</string>
 		</dict>
 		<key>com.apple.print.add</key>
 		<dict>
 			<key>hash</key>
-			<string>d11c8bc923a6ff4709d871a9684e0d44</string>
+			<string>238566ad33b2e5e658d8e3548ec01219</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApple/com.apple.print.add.png</string>
 		</dict>
 		<key>com.apple.screencapture</key>
 		<dict>
 			<key>hash</key>
-			<string>3759131437912a0495a26a405b507b4b</string>
+			<string>1ab031ce6b0a9864d4641de974ef8187</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApple/com.apple.screencapture.png</string>
 		</dict>
 		<key>com.apple.sharingd</key>
 		<dict>
 			<key>hash</key>
-			<string>e9ed362b31c46d9719d8a5ba17ffdf8b</string>
+			<string>fd0987aa83efad84563e5ecda6649010</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApple/com.apple.sharingd.png</string>
 		</dict>
@@ -143,546 +143,553 @@
 		<key>ManagedInstalls</key>
 		<dict>
 			<key>hash</key>
-			<string>f71db0372406b97fe16d8b89b6cacf49</string>
+			<string>4142c7c8e4a45c8be69942bf30157290</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/ManagedInstalls.png</string>
 		</dict>
 		<key>MunkiReport</key>
 		<dict>
 			<key>hash</key>
-			<string>3aae09b5a7265cef33c92f878c3aeeb6</string>
+			<string>24436c7d366eabacd8ebdaacc578e175</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/MunkiReport.png</string>
 		</dict>
 		<key>SupportCompanion</key>
 		<dict>
 			<key>hash</key>
-			<string>498c7bdee3ea3e09cf77288442ab8740</string>
+			<string>acb6d2df07c96624da9f1bc9dd6bb7d5</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/SupportCompanion.png</string>
 		</dict>
 		<key>com.1password.1password</key>
 		<dict>
 			<key>hash</key>
-			<string>5947bdd7b8eba82f7e771af7464746ae</string>
+			<string>eb2bfa1511ac6965f384434112907780</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.1password.1password.png</string>
 		</dict>
 		<key>com.ThomsonResearchSoft.EndNote</key>
 		<dict>
 			<key>hash</key>
-			<string>53705fb5d097136ff1eb0e20812c56f1</string>
+			<string>af52ef634aa1e9a4a538f664780cec91</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.ThomsonResearchSoft.EndNote.png</string>
 		</dict>
 		<key>com.agilebits.onepassword7</key>
 		<dict>
 			<key>hash</key>
-			<string>5274f3335092e6c8fbf7ad90990346bb</string>
+			<string>b0d1833d413f5326ea144e9e65670812</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.agilebits.onepassword7.png</string>
 		</dict>
 		<key>com.alectrona.patch</key>
 		<dict>
 			<key>hash</key>
-			<string>5e94e30ded722510d96bf9e5a6827974</string>
+			<string>332a916da6aa3000fe11bb7ad60d20f7</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.alectrona.patch.png</string>
 		</dict>
 		<key>com.anthropic.claudefordesktop</key>
 		<dict>
 			<key>hash</key>
-			<string>09acc3c1d9036c7678f40be5f19383ef</string>
+			<string>b6e1a665a3c3dfcc5c5a711b7adb97d1</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.anthropic.claudefordesktop.png</string>
 		</dict>
 		<key>com.apple.Compressor</key>
 		<dict>
 			<key>hash</key>
-			<string>4aa34ba00885095f50694a16e8cd5707</string>
+			<string>45aa2a68bf9dc8f70332f98a2b6d8bc1</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.apple.Compressor.png</string>
 		</dict>
 		<key>com.apple.Enterprise-Connect</key>
 		<dict>
 			<key>hash</key>
-			<string>83c55a4a9f229a2a48c267f2b13c6448</string>
+			<string>b74bcecdadb2731ccdd2171b1b5d9a46</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.apple.Enterprise-Connect.png</string>
 		</dict>
 		<key>com.apple.FinalCut</key>
 		<dict>
 			<key>hash</key>
-			<string>85361417f2491f74c6514fa9203a2925</string>
+			<string>18cf96365c91506d4629a2058460b376</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.apple.FinalCut.png</string>
 		</dict>
 		<key>com.apple.TextEdit</key>
 		<dict>
 			<key>hash</key>
-			<string>50f73f3a06e2d9485211c06224e6e53b</string>
+			<string>56f6a1f153b8fb206a926716b37f0c63</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.apple.TextEdit.png</string>
 		</dict>
 		<key>com.apple.garageband10</key>
 		<dict>
 			<key>hash</key>
-			<string>7a6227d0a1d388d9844101fdc3c0c2ff</string>
+			<string>1bd2cdf9568668ade3051697615978b2</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.apple.garageband10.png</string>
 		</dict>
 		<key>com.apple.iMovieApp</key>
 		<dict>
 			<key>hash</key>
-			<string>5f0989ab2133da62578712e83983bbf5</string>
+			<string>276a5f6d8ab89f80f9c93304391f33c9</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.apple.iMovieApp.png</string>
 		</dict>
 		<key>com.apple.logic10</key>
 		<dict>
 			<key>hash</key>
-			<string>446aae593ab99a2db4a191f40ca5b735</string>
+			<string>fc73e161d4d9970283f019ffb7302d9e</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.apple.logic10.png</string>
 		</dict>
 		<key>com.apple.motionapp</key>
 		<dict>
 			<key>hash</key>
-			<string>870286f44bf163b6e74def9a02df8e85</string>
+			<string>bc8d7660c07f5c7f512862cef88a967e</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.apple.motionapp.png</string>
 		</dict>
 		<key>com.barebones.bbedit</key>
 		<dict>
 			<key>hash</key>
-			<string>cd7bdafd945592cfb873688fd743e8fa</string>
+			<string>57a2874d258ad5121d3c7fc74bb6a653</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.barebones.bbedit.png</string>
 		</dict>
 		<key>com.brave.Browser</key>
 		<dict>
 			<key>hash</key>
-			<string>909daf8f5cadadbe164bd241c5079e1c</string>
+			<string>debb7ec625d2132ec7cac260078cbeba</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.brave.Browser.png</string>
 		</dict>
 		<key>com.citrix.receiver.nomas</key>
 		<dict>
 			<key>hash</key>
-			<string>b7064dbcea25940a036f7b1e02316526</string>
+			<string>5495d0e5295f929df422c5e6f98adb56</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.citrix.receiver.nomas.png</string>
 		</dict>
 		<key>com.cloudflare.warp</key>
 		<dict>
 			<key>hash</key>
-			<string>0dd232c944c2269a3ff036363a721ef3</string>
+			<string>100913a12d80b0e1ded0ff5c09777b49</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.cloudflare.warp.png</string>
 		</dict>
 		<key>com.crowdstrike.falcon</key>
 		<dict>
 			<key>hash</key>
-			<string>d99e68aa00f1f23c0148d45877a101fb</string>
+			<string>4045c3eb37bee8d9ef1bf6b1e55f6e39</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.crowdstrike.falcon.png</string>
 		</dict>
 		<key>com.dare.zappl.preferences</key>
 		<dict>
 			<key>hash</key>
-			<string>1460392e387160d72e9d4e2374dfe73b</string>
+			<string>54293994c1af7194d412d7ecc24fad51</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.dare.zappl.preferences.png</string>
 		</dict>
 		<key>com.docker.config</key>
 		<dict>
 			<key>hash</key>
-			<string>616f5b55d742801f43522d96d79470a3</string>
+			<string>8b5fc4146a7685cddd028ed92756a043</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.docker.config.png</string>
 		</dict>
 		<key>com.fxfactory.FxFactory</key>
 		<dict>
 			<key>hash</key>
-			<string>5966ce91f2f84176a6b4fe8f5943a7cf</string>
+			<string>b6cfdd8616646e642b565be47a9a1852</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.fxfactory.FxFactory.png</string>
 		</dict>
 		<key>com.github.ants-framework</key>
 		<dict>
 			<key>hash</key>
-			<string>71cdc8d71c64588ca960a76961688557</string>
+			<string>22d9a37172fd6fa47bb49ebf19842125</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.github.ants-framework.png</string>
 		</dict>
 		<key>com.github.macadmins.Nudge</key>
 		<dict>
 			<key>hash</key>
-			<string>e2c186723732a1e8fbfc6957f91d9da6</string>
+			<string>ad6dbaca82c677b8a7368e9cf0fde04f</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.github.macadmins.Nudge.png</string>
 		</dict>
 		<key>com.github.macadmins.SupportCompanion</key>
 		<dict>
 			<key>hash</key>
-			<string>6adb81680df09c2b2cfd243113b2396f</string>
+			<string>fa537e839b782631d8c7bdecdeea2a10</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.github.macadmins.SupportCompanion.png</string>
 		</dict>
 		<key>com.google.Chrome</key>
 		<dict>
 			<key>hash</key>
-			<string>ddc05489bf8c3f2627e2d425f88a0932</string>
+			<string>3793e04ce4ccf4bae1004ca626f44c08</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.google.Chrome.png</string>
 		</dict>
 		<key>com.google.Keystone</key>
 		<dict>
 			<key>hash</key>
-			<string>1282580173a49373a52d68d4b6732df3</string>
+			<string>664f9cdf3b231b5318c6c924881ef825</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.google.Keystone.png</string>
 		</dict>
 		<key>com.google.drivefs.settings</key>
 		<dict>
 			<key>hash</key>
-			<string>2ecef41ed6d57fe8c08a9be1c706dcbb</string>
+			<string>88defafba7bf211700340cf8e32792d5</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.google.drivefs.settings.png</string>
 		</dict>
 		<key>com.google.santa</key>
 		<dict>
 			<key>hash</key>
-			<string>229c06fecc8127d74d3607ad7c70ef5f</string>
+			<string>b309af53b61bea0325c89c4dac44822d</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.google.santa.png</string>
 		</dict>
 		<key>com.grammarly.ProjectLlama</key>
 		<dict>
 			<key>hash</key>
-			<string>dd00051f20031d2287fbea0fe691ecff</string>
+			<string>c938b2520434547d3ab1c0b764d96c72</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.grammarly.ProjectLlama.png</string>
 		</dict>
 		<key>com.hjuutilainen.MunkiAdmin</key>
 		<dict>
 			<key>hash</key>
-			<string>922d44cd97afe4017c724d131f059a26</string>
+			<string>1e5a3e296747ba8f0949b186c279aec1</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.hjuutilainen.MunkiAdmin.png</string>
 		</dict>
 		<key>com.hjuutilainen.bigsurblocker</key>
 		<dict>
 			<key>hash</key>
-			<string>7126c6923299cc8c37dc09c29f6aa635</string>
+			<string>bec4567b2d4e82c54c23960541347640</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.hjuutilainen.bigsurblocker.png</string>
 		</dict>
 		<key>com.jamf.connect.login</key>
 		<dict>
 			<key>hash</key>
-			<string>f21be82184129ab82155f45e0f4a7308</string>
+			<string>fcfde0a89ab93c56c37b352ac01f5ca7</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.jamf.connect.login.png</string>
 		</dict>
 		<key>com.jamf.connect.shares</key>
 		<dict>
 			<key>hash</key>
-			<string>f21be82184129ab82155f45e0f4a7308</string>
+			<string>bd334164fae51390592ab6f03273aa96</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.jamf.connect.shares.png</string>
 		</dict>
 		<key>com.jamf.connect.sync</key>
 		<dict>
 			<key>hash</key>
-			<string>f21be82184129ab82155f45e0f4a7308</string>
+			<string>bd334164fae51390592ab6f03273aa96</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.jamf.connect.sync.png</string>
 		</dict>
 		<key>com.jamf.connect.verify</key>
 		<dict>
 			<key>hash</key>
-			<string>f21be82184129ab82155f45e0f4a7308</string>
+			<string>fcfde0a89ab93c56c37b352ac01f5ca7</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.jamf.connect.verify.png</string>
 		</dict>
 		<key>com.jamf.setupmanager</key>
 		<dict>
 			<key>hash</key>
-			<string>eba222ef5713a8a2187d0f4d759bd63e</string>
+			<string>3532bab5377c1a3ad6bd11ba90138cc5</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.jamf.setupmanager.png</string>
 		</dict>
 		<key>com.jamf.trust</key>
 		<dict>
 			<key>hash</key>
-			<string>e6e1dfa5cad0c9a7f4204d6c182dddc9</string>
+			<string>37501bba4ec40d2ce67bc08cee042a73</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.jamf.trust.png</string>
 		</dict>
 		<key>com.jelockwood.pinpoint</key>
 		<dict>
 			<key>hash</key>
-			<string>5d9bf852011e1bd392c799659ba64823</string>
+			<string>9cad8224ad248d7880c08ed77ef79b3b</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.jelockwood.pinpoint.png</string>
 		</dict>
 		<key>com.jigsaw24.Elevate24</key>
 		<dict>
 			<key>hash</key>
-			<string>7ef64e6871762fe05774e0d2926da68f</string>
+			<string>63a7c5cd34e2ecfca6a6efae8b20b4c4</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.jigsaw24.Elevate24.png</string>
 		</dict>
 		<key>com.jigsaw24.ElevateSecurityLogs</key>
 		<dict>
 			<key>hash</key>
-			<string>7ef64e6871762fe05774e0d2926da68f</string>
+			<string>63a7c5cd34e2ecfca6a6efae8b20b4c4</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.jigsaw24.ElevateSecurityLogs.png</string>
 		</dict>
 		<key>com.keepersecurity.passwordmanager</key>
 		<dict>
 			<key>hash</key>
-			<string>e08ab12bbac5703ff8e2946f4481682e</string>
+			<string>b4b90570517378d90b55b8f166b71957</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.keepersecurity.passwordmanager.png</string>
 		</dict>
 		<key>com.macpaw.site.theunarchiver</key>
 		<dict>
 			<key>hash</key>
-			<string>87293d907d83edccb4e1af5db9ef3982</string>
+			<string>16f087ab6447dfed0d320d1fecd69ea3</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.macpaw.site.theunarchiver.png</string>
 		</dict>
 		<key>com.mcneel.rhinoceros</key>
 		<dict>
 			<key>hash</key>
-			<string>57739d7e2d8e032196a8029ab75189ea</string>
+			<string>f9c070bb181a86772dac7317f28a132d</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.mcneel.rhinoceros.png</string>
 		</dict>
 		<key>com.microsoft.Edge</key>
 		<dict>
 			<key>hash</key>
-			<string>9630d59198a4373b685f7af536a6facf</string>
+			<string>ab0a703424928efef391bd431278a7fe</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.microsoft.Edge.png</string>
 		</dict>
 		<key>com.microsoft.Excel</key>
 		<dict>
 			<key>hash</key>
-			<string>f5042428fa4e12dfdf19795cb9d92417</string>
+			<string>ff35276639643f8597c014351b1a996f</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.microsoft.Excel.png</string>
 		</dict>
 		<key>com.microsoft.Office365ServiceV2</key>
 		<dict>
 			<key>hash</key>
-			<string>da735aedccab01312b62579bfb75b84a</string>
+			<string>43c06c9e144b8fba42103ccd15246768</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.microsoft.Office365ServiceV2.png</string>
 		</dict>
 		<key>com.microsoft.OneDrive</key>
 		<dict>
 			<key>hash</key>
-			<string>a1f75a0e0cc58c9cfafd9612790f2d2e</string>
+			<string>6843e28e5bb43fa399321e62edb26da6</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.microsoft.OneDrive.png</string>
 		</dict>
 		<key>com.microsoft.OneDriveUpdater</key>
 		<dict>
 			<key>hash</key>
-			<string>a1f75a0e0cc58c9cfafd9612790f2d2e</string>
+			<string>6843e28e5bb43fa399321e62edb26da6</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.microsoft.OneDriveUpdater.png</string>
 		</dict>
 		<key>com.microsoft.Outlook</key>
 		<dict>
 			<key>hash</key>
-			<string>d9d217c226918ae06a6233d95a45834c</string>
+			<string>3d5418027e3dec96bca81a0271ecfff4</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.microsoft.Outlook.png</string>
 		</dict>
 		<key>com.microsoft.Powerpoint</key>
 		<dict>
 			<key>hash</key>
-			<string>db2af7009065898e2bc6dbd1efd1bd72</string>
+			<string>d71d3324a5dd2f47cd2929a05b88b5d7</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.microsoft.Powerpoint.png</string>
 		</dict>
 		<key>com.microsoft.SkypeForBusiness</key>
 		<dict>
 			<key>hash</key>
-			<string>881ea0a139b1d06f9073eee0946d7a8f</string>
+			<string>e15b2769d62228af714b006c85c61dc5</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.microsoft.SkypeForBusiness.png</string>
 		</dict>
 		<key>com.microsoft.Word</key>
 		<dict>
 			<key>hash</key>
-			<string>2b31fb86a4e2753456a8bdb159bcd3e5</string>
+			<string>a5b033451ca100dae87c06e3f373ce2b</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.microsoft.Word.png</string>
 		</dict>
 		<key>com.microsoft.autoupdate.fba</key>
 		<dict>
 			<key>hash</key>
-			<string>e0a35d1fe765b9b2d6b3ca59b87c5dd0</string>
+			<string>6814e16c3a48250e309bc7da361ac267</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.microsoft.autoupdate.fba.png</string>
 		</dict>
 		<key>com.microsoft.autoupdate2</key>
 		<dict>
 			<key>hash</key>
-			<string>e0a35d1fe765b9b2d6b3ca59b87c5dd0</string>
+			<string>6814e16c3a48250e309bc7da361ac267</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.microsoft.autoupdate2.png</string>
 		</dict>
 		<key>com.microsoft.errorreporting</key>
 		<dict>
 			<key>hash</key>
-			<string>8f11eeae8694602e29621cb06e4a97e6</string>
+			<string>c67c8834b3c6b2b65d83d23da881f22b</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.microsoft.errorreporting.png</string>
 		</dict>
 		<key>com.microsoft.office</key>
 		<dict>
 			<key>hash</key>
-			<string>da735aedccab01312b62579bfb75b84a</string>
+			<string>43c06c9e144b8fba42103ccd15246768</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.microsoft.office.png</string>
 		</dict>
 		<key>com.microsoft.onenote.mac</key>
 		<dict>
 			<key>hash</key>
-			<string>dbc9288b0aa0ae264afe37b71976fea6</string>
+			<string>1cf136454e7dde0fcc5a984d8130b205</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.microsoft.onenote.mac.png</string>
 		</dict>
 		<key>com.microsoft.rdc.macos</key>
 		<dict>
 			<key>hash</key>
-			<string>e0ff10d4b0372823a024a88dae404be2</string>
+			<string>110958cc7c32260634ec6d8b6d82d300</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.microsoft.rdc.macos.png</string>
 		</dict>
 		<key>com.microsoft.wdav</key>
 		<dict>
 			<key>hash</key>
-			<string>46b36aac9b7fbfe30a5cbe844ed42c24</string>
+			<string>8d740bb5299f27642880a69100964786</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.microsoft.wdav.png</string>
 		</dict>
 		<key>com.northpolesec.santa</key>
 		<dict>
 			<key>hash</key>
-			<string>2121b19796cc9342602853f7d5f9f341</string>
+			<string>b309af53b61bea0325c89c4dac44822d</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.northpolesec.santa.png</string>
 		</dict>
 		<key>com.okta.mobile</key>
 		<dict>
 			<key>hash</key>
-			<string>4ddf4b38aa64491a463bed5ab2081aa3</string>
+			<string>3dab3be0adce6e962544983c8dca9d66</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.okta.mobile.png</string>
 		</dict>
 		<key>com.okta.mobile.auth-service-extension</key>
 		<dict>
 			<key>hash</key>
-			<string>4ddf4b38aa64491a463bed5ab2081aa3</string>
+			<string>3dab3be0adce6e962544983c8dca9d66</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.okta.mobile.auth-service-extension.png</string>
 		</dict>
 		<key>com.papercut.printdeploy.client</key>
 		<dict>
 			<key>hash</key>
-			<string>4371bef74b4a7366c923e5d3f2997f77</string>
+			<string>23033ccf1560336858cb45f0dc2e3b82</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.papercut.printdeploy.client.png</string>
 		</dict>
 		<key>com.parallels.desktop.managedprefs</key>
 		<dict>
 			<key>hash</key>
-			<string>191fc0997bb18d49770e151c7c605b73</string>
+			<string>1040041d59422030358598302813a2ea</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.parallels.desktop.managedprefs.png</string>
 		</dict>
 		<key>com.pratikkumar.airserver-mac</key>
 		<dict>
 			<key>hash</key>
-			<string>204503eb071bf33f9f2373ca0e25e02b</string>
+			<string>b5c8ceda5c67ef5df7304f9ed18375c4</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.pratikkumar.airserver-mac.png</string>
 		</dict>
 		<key>com.secondsonconsulting.baseline</key>
 		<dict>
 			<key>hash</key>
-			<string>2240f5a4178e4850fbdefafef45fc5e4</string>
+			<string>dfd02f0ccb974cd120bf68273b94c9a7</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.secondsonconsulting.baseline.png</string>
 		</dict>
 		<key>com.secondsonconsulting.renew</key>
 		<dict>
 			<key>hash</key>
-			<string>d13d3cae4e07554257681e2f3ffbc9e8</string>
+			<string>6680b3e3c3375cc0420707bd74f859bf</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.secondsonconsulting.renew.png</string>
 		</dict>
 		<key>com.sentinelone.registration-token</key>
 		<dict>
 			<key>hash</key>
-			<string>a535fe654940ecc3cb56b25d916a48ce</string>
+			<string>4e843369e2a23474cd98067212e64807</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.sentinelone.registration-token.png</string>
 		</dict>
 		<key>com.skype.skype</key>
 		<dict>
 			<key>hash</key>
-			<string>6c71ce09e0116de537233def2104978c</string>
+			<string>d60984f1810dc9877452f5b73a119876</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.skype.skype.png</string>
 		</dict>
 		<key>com.sqwarq.DetectX-Swift</key>
 		<dict>
 			<key>hash</key>
-			<string>f197d034268f3c76a9369fdb892cf267</string>
+			<string>fe083ef88e8cabf4a2723f3019311f4c</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.sqwarq.DetectX-Swift.png</string>
 		</dict>
 		<key>com.tinyspeck.slackmacgap</key>
 		<dict>
 			<key>hash</key>
-			<string>ac3f6249e4ee3f0f856a5782de27fdcb</string>
+			<string>1375212d62e7bd6b92bd0548a9503f00</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.tinyspeck.slackmacgap.png</string>
+		</dict>
+		<key>com.todesktop.230313mzl4w4u92</key>
+		<dict>
+			<key>hash</key>
+			<string>eb5a36a5b21e9867956d7fc9b63a2b61</string>
+			<key>path</key>
+			<string>Icons/ManagedPreferencesApplications/com.todesktop.230313mzl4w4u92.png</string>
 		</dict>
 		<key>com.trusourcelabs.NoMAD</key>
 		<dict>
 			<key>hash</key>
-			<string>ec2f5fd344592d4289b60674e1587b8a</string>
+			<string>e8ef866eacae4e1777e3549e6627e1d2</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.trusourcelabs.NoMAD.png</string>
 		</dict>
 		<key>com.twingate.macos</key>
 		<dict>
 			<key>hash</key>
-			<string>0472dc8a8ab0d84b40711c09cd8911ed</string>
+			<string>bdc02ea844b74ff6e3a0a52a5f4e1629</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.twingate.macos.png</string>
 		</dict>
 		<key>com.twocanoes.xcreds</key>
 		<dict>
 			<key>hash</key>
-			<string>a3eb40cc11826a76d200ec74654f2b6a</string>
+			<string>24f4740546d051d4dd45265b3174a397</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.twocanoes.xcreds.png</string>
 		</dict>
 		<key>com.unity3d.UnityEditor5.x</key>
 		<dict>
 			<key>hash</key>
-			<string>ba8165593ac4ee7a33e526b786e95e13</string>
+			<string>e2dea0a70ba08a6b064116c860b1b7be</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.unity3d.UnityEditor5.x.png</string>
 		</dict>
@@ -696,168 +703,168 @@
 		<key>com.zappl.AppBar</key>
 		<dict>
 			<key>hash</key>
-			<string>fa74799167951411ff1cf7b3a15d3549</string>
+			<string>7988b541615a30cae90ef1dca090edcf</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.zappl.AppBar.png</string>
 		</dict>
 		<key>com.zscaler.installparams</key>
 		<dict>
 			<key>hash</key>
-			<string>32090e00826f74d7e0d5252ada42eb44</string>
+			<string>4de2aee3358de5ab082154b3d89660eb</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.zscaler.installparams.png</string>
 		</dict>
 		<key>corp.sap.privileges</key>
 		<dict>
 			<key>hash</key>
-			<string>e44e0b1fbfc3e36bc0607369705f3f5e</string>
+			<string>5b2eb655d98fc718b6a83c5e079ee897</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/corp.sap.privileges.png</string>
 		</dict>
 		<key>cx.c3.theunarchiver</key>
 		<dict>
 			<key>hash</key>
-			<string>87293d907d83edccb4e1af5db9ef3982</string>
+			<string>16f087ab6447dfed0d320d1fecd69ea3</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/cx.c3.theunarchiver.png</string>
 		</dict>
 		<key>de.fau.rrze.NetworkShareMounter</key>
 		<dict>
 			<key>hash</key>
-			<string>121689f6a8bf1b90c7ef1f6079722ae9</string>
+			<string>3624f542ecc7c489574d1405da71aaf3</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/de.fau.rrze.NetworkShareMounter.png</string>
 		</dict>
 		<key>dev.firezone.firezone</key>
 		<dict>
 			<key>hash</key>
-			<string>11fe3f94e6e55da26d3821e38660a58c</string>
+			<string>8c4beb59421585983b43b9e35e2e6eaa</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/dev.firezone.firezone.png</string>
 		</dict>
 		<key>fr.handbrake.HandBrake</key>
 		<dict>
 			<key>hash</key>
-			<string>adc42d6f928b3be696bf0739ea9dfa04</string>
+			<string>d417d70c3fd535a97803e8d344a93c90</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/fr.handbrake.HandBrake.png</string>
 		</dict>
 		<key>io.macadmins.Outset</key>
 		<dict>
 			<key>hash</key>
-			<string>145257bc26fc8fc22ab4ddff84f727ba</string>
+			<string>7328caf646952595494b626988f6c59f</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/io.macadmins.Outset.png</string>
 		</dict>
 		<key>io.tailscale.ipn.macos</key>
 		<dict>
 			<key>hash</key>
-			<string>8421305dde20b00c4f9980873d7151cf</string>
+			<string>4bbae4bebd1cf8f98b3429706adfcf34</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/io.tailscale.ipn.macos.png</string>
 		</dict>
 		<key>io.tailscale.ipn.macsys</key>
 		<dict>
 			<key>hash</key>
-			<string>8421305dde20b00c4f9980873d7151cf</string>
+			<string>4bbae4bebd1cf8f98b3429706adfcf34</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/io.tailscale.ipn.macsys.png</string>
 		</dict>
 		<key>menu.nomad.NoMADPro</key>
 		<dict>
 			<key>hash</key>
-			<string>55eaed6c5b367f2366f41b9df96eb7f3</string>
+			<string>249d1bd63e92d8742d9911415653024d</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/menu.nomad.NoMADPro.png</string>
 		</dict>
 		<key>menu.nomad.login.ad</key>
 		<dict>
 			<key>hash</key>
-			<string>b5c5954882a3fd27f045c74ad0985b68</string>
+			<string>8bb10d6380a4a90198fbffa16913a64e</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/menu.nomad.login.ad.png</string>
 		</dict>
 		<key>menu.nomad.login.okta</key>
 		<dict>
 			<key>hash</key>
-			<string>b5c5954882a3fd27f045c74ad0985b68</string>
+			<string>be4bf347d1bb3481eaf86a26cc4bd712</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/menu.nomad.login.okta.png</string>
 		</dict>
 		<key>menu.nomad.shares</key>
 		<dict>
 			<key>hash</key>
-			<string>ec2f5fd344592d4289b60674e1587b8a</string>
+			<string>467f7843968b210817cb5213f2eafc6b</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/menu.nomad.shares.png</string>
 		</dict>
 		<key>net.glencode.Particulars</key>
 		<dict>
 			<key>hash</key>
-			<string>116635ebd4aeea09bd1964bf0e69d352</string>
+			<string>5220272e55189db1954767d9aa8d228c</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/net.glencode.Particulars.png</string>
 		</dict>
 		<key>net.glencode.Particulars.Widget</key>
 		<dict>
 			<key>hash</key>
-			<string>3268e02bc8b8aa87012fa71adb3be12b</string>
+			<string>8059f2fcee2ef1a1c990cd24af4b2587</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/net.glencode.Particulars.Widget.png</string>
 		</dict>
 		<key>nl.root3.support</key>
 		<dict>
 			<key>hash</key>
-			<string>faa2c889206936123cb38617dccb0b9f</string>
+			<string>7becbbe783d32964198102bc855817be</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/nl.root3.support.png</string>
 		</dict>
 		<key>org.churchofjesuschrist.dorm</key>
 		<dict>
 			<key>hash</key>
-			<string>90065ad24694c60e86affbf835cb3143</string>
+			<string>cc90e7cd254fa08a7431cd16d0d5f614</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/org.churchofjesuschrist.dorm.png</string>
 		</dict>
 		<key>org.mozilla.firefox</key>
 		<dict>
 			<key>hash</key>
-			<string>8256d967982c09cd6ba44272b19639c5</string>
+			<string>ec8265639f7b625282a05fa4cd10a9a1</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/org.mozilla.firefox.png</string>
 		</dict>
 		<key>org.sveinbjorn.Platypus</key>
 		<dict>
 			<key>hash</key>
-			<string>af410af2018eacbd3b2f9c232c3f394c</string>
+			<string>e5f9fea7b0c691257a0a5b9687f317fd</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/org.sveinbjorn.Platypus.png</string>
 		</dict>
 		<key>org.videolan.vlc</key>
 		<dict>
 			<key>hash</key>
-			<string>fc61a3802b3937103e9481ce3edb4e73</string>
+			<string>3973ae87aecc38c02f7b5687383462f0</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/org.videolan.vlc.png</string>
 		</dict>
 		<key>uk.co.dataJAR.jamJAR</key>
 		<dict>
 			<key>hash</key>
-			<string>b04f15a751e4437ed5ecb9931beb056c</string>
+			<string>65986bf84447da6a696bcc0224492ed6</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/uk.co.dataJAR.jamJAR.png</string>
 		</dict>
 		<key>us.zoom.config</key>
 		<dict>
 			<key>hash</key>
-			<string>2ac53860411c773f9e99a0ec64a853a3</string>
+			<string>56c92edc2c747ee5342ef0acc0e99077</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/us.zoom.config.png</string>
 		</dict>
 		<key>xyz.techitout.appAutoPatch</key>
 		<dict>
 			<key>hash</key>
-			<string>83b95c01ac58055f30258269cede421f</string>
+			<string>db0848f28ab77d7439fcf62bc7849de8</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/xyz.techitout.appAutoPatch.png</string>
 		</dict>
@@ -867,726 +874,726 @@
 		<key>Configuration</key>
 		<dict>
 			<key>hash</key>
-			<string>d0ba6cae0d9b6887ec50efb0addff6ff</string>
+			<string>e5fd7951d9209dea2438d79a52773dcf</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/Configuration.png</string>
 		</dict>
 		<key>ParentalControls</key>
 		<dict>
 			<key>hash</key>
-			<string>223377a77f70951e5f81abd8b771dffc</string>
+			<string>c6e417d351cf609735cd688ce36fa168</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/ParentalControls.png</string>
 		</dict>
 		<key>com.apple.ADCertificate.managed</key>
 		<dict>
 			<key>hash</key>
-			<string>b68c7b206b8c61f7e69342e4b1364f8e</string>
+			<string>7722f6b27e95cc0933a1ed7176a40dab</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.ADCertificate.managed.png</string>
 		</dict>
 		<key>com.apple.AIM.account</key>
 		<dict>
 			<key>hash</key>
-			<string>874aedc111c63507058eece27b28fd60</string>
+			<string>8583f708798d4134b107479b4e227b49</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.AIM.account.png</string>
 		</dict>
 		<key>com.apple.AssetCache.managed</key>
 		<dict>
 			<key>hash</key>
-			<string>69e26331a8d6fda259366076285053d3</string>
+			<string>83e05c98fab7977e68122509c406ccf9</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.AssetCache.managed.png</string>
 		</dict>
 		<key>com.apple.DirectoryService.managed</key>
 		<dict>
 			<key>hash</key>
-			<string>0d8eabe4d0c54549c035e0f89fc773d7</string>
+			<string>9a880b4edc4714f66f671c4bc5b2c014</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.DirectoryService.managed.png</string>
 		</dict>
 		<key>com.apple.DiscRecording</key>
 		<dict>
 			<key>hash</key>
-			<string>2dcbc98f1fda427ee527ecd8032f347b</string>
+			<string>4f7ec168eef67fc63b6feb7c9bfe8d7b</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.DiscRecording.png</string>
 		</dict>
 		<key>com.apple.MCX</key>
 		<dict>
 			<key>hash</key>
-			<string>c1acd0bce467b8cdaf1d5d19ba7edf3e</string>
+			<string>03802666299038c8c0727098b16e1b7b</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.MCX.png</string>
 		</dict>
 		<key>com.apple.MCX-EnergySaver</key>
 		<dict>
 			<key>hash</key>
-			<string>c1acd0bce467b8cdaf1d5d19ba7edf3e</string>
+			<string>03802666299038c8c0727098b16e1b7b</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.MCX-EnergySaver.png</string>
 		</dict>
 		<key>com.apple.MCX-FileVaultOptions</key>
 		<dict>
 			<key>hash</key>
-			<string>b136bc5f2012155967231ec80c3cf465</string>
+			<string>b23474065a3dfa854137d33c9ea1fd00</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.MCX-FileVaultOptions.png</string>
 		</dict>
 		<key>com.apple.MCX-MobileAccounts</key>
 		<dict>
 			<key>hash</key>
-			<string>77a5d42c5f11e853b2e4b35a9c07ef2d</string>
+			<string>0060402774469643aa3022dd1f92339f</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.MCX-MobileAccounts.png</string>
 		</dict>
 		<key>com.apple.MCX-TimeServer</key>
 		<dict>
 			<key>hash</key>
-			<string>f0cd9730d359c704ee2c6d2736db0093</string>
+			<string>83f9bee79ebfbfe70fc740ab649fcbc9</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.MCX-TimeServer.png</string>
 		</dict>
 		<key>com.apple.MCX.FileVault2</key>
 		<dict>
 			<key>hash</key>
-			<string>b136bc5f2012155967231ec80c3cf465</string>
+			<string>b23474065a3dfa854137d33c9ea1fd00</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.MCX.FileVault2.png</string>
 		</dict>
 		<key>com.apple.MCX.TimeMachine</key>
 		<dict>
 			<key>hash</key>
-			<string>43c457809139c047bbc32aa497436baa</string>
+			<string>283080dcc15aba03b9ba49bb0a8f3b2f</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.MCX.TimeMachine.png</string>
 		</dict>
 		<key>com.apple.MCX.WiFi</key>
 		<dict>
 			<key>hash</key>
-			<string>f41821b823a4af5db754ac0c3eb48958</string>
+			<string>921e86a99adec4fdd7e66b8e28175fe1</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.MCX.WiFi.png</string>
 		</dict>
 		<key>com.apple.NSExtension</key>
 		<dict>
 			<key>hash</key>
-			<string>88da0d0ea0649e83563353bcb52ebdbb</string>
+			<string>ac445d97abc660230ca629aae9c4a151</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.NSExtension.png</string>
 		</dict>
 		<key>com.apple.SetupAssistant.managed</key>
 		<dict>
 			<key>hash</key>
-			<string>56d6456bd2ef1a69360663ba6113ec12</string>
+			<string>ac8faf4e16e4590ad3aca0938584d759</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.SetupAssistant.managed.png</string>
 		</dict>
 		<key>com.apple.SoftwareUpdate</key>
 		<dict>
 			<key>hash</key>
-			<string>b3ef2cf0567969548e5d76d191228853</string>
+			<string>395d2d8eb7306f48368f86110a8ccfc1</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.SoftwareUpdate.png</string>
 		</dict>
 		<key>com.apple.SubmitDiagInfo</key>
 		<dict>
 			<key>hash</key>
-			<string>9f0b2c46cdaf46d4d04b1fb3da386f27</string>
+			<string>5567d0221593c8dcca1ae5dc78c7889a</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.SubmitDiagInfo.png</string>
 		</dict>
 		<key>com.apple.SystemConfiguration</key>
 		<dict>
 			<key>hash</key>
-			<string>e124eb43e7fe6141a4d8c836c5ea447f</string>
+			<string>41a3d241bd49e1f23eb90808f2a4d85c</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.SystemConfiguration.png</string>
 		</dict>
 		<key>com.apple.TCC.configuration-profile-policy</key>
 		<dict>
 			<key>hash</key>
-			<string>b136bc5f2012155967231ec80c3cf465</string>
+			<string>b23474065a3dfa854137d33c9ea1fd00</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.TCC.configuration-profile-policy.png</string>
 		</dict>
 		<key>com.apple.airplay</key>
 		<dict>
 			<key>hash</key>
-			<string>635439de9a30e20dccda1c3c9c9439c7</string>
+			<string>d27f9e12f74ad4cbe33b14239b959fd7</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.airplay.png</string>
 		</dict>
 		<key>com.apple.airplay.security</key>
 		<dict>
 			<key>hash</key>
-			<string>c7f2cc7e9199666c4ce89823ae6980b1</string>
+			<string>a54270b6bf83248606a8a46773314887</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.airplay.security.png</string>
 		</dict>
 		<key>com.apple.airprint</key>
 		<dict>
 			<key>hash</key>
-			<string>2c283cee34f8728a10c6c1a8ecc8a41b</string>
+			<string>abc0df6ef97be3c2b968b2b8d80a38f1</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.airprint.png</string>
 		</dict>
 		<key>com.apple.app.lock</key>
 		<dict>
 			<key>hash</key>
-			<string>3250821e35e6324e8f6223a3de67bd2f</string>
+			<string>ec39f6b6a67d961fa5ceda44a06f986f</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.app.lock.png</string>
 		</dict>
 		<key>com.apple.applicationaccess</key>
 		<dict>
 			<key>hash</key>
-			<string>95b63a1f639acbe60c330bbc88962634</string>
+			<string>0e3fc11d37938057030d53f4b33d5f81</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.applicationaccess.png</string>
 		</dict>
 		<key>com.apple.applicationaccess.new</key>
 		<dict>
 			<key>hash</key>
-			<string>3250821e35e6324e8f6223a3de67bd2f</string>
+			<string>ec39f6b6a67d961fa5ceda44a06f986f</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.applicationaccess.new.png</string>
 		</dict>
 		<key>com.apple.appstore</key>
 		<dict>
 			<key>hash</key>
-			<string>ddcd0950efcfe1e003ff4e862b54b759</string>
+			<string>bb141744a033000ec3abbd0f97fe8cdc</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.appstore.png</string>
 		</dict>
 		<key>com.apple.asam</key>
 		<dict>
 			<key>hash</key>
-			<string>3250821e35e6324e8f6223a3de67bd2f</string>
+			<string>ec39f6b6a67d961fa5ceda44a06f986f</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.asam.png</string>
 		</dict>
 		<key>com.apple.caldav.account</key>
 		<dict>
 			<key>hash</key>
-			<string>d960f46312c0dd0789cd1442d8f45dfb</string>
+			<string>34c8f8776ede5b19667f6749e24c6b16</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.caldav.account.png</string>
 		</dict>
 		<key>com.apple.carddav.account</key>
 		<dict>
 			<key>hash</key>
-			<string>7ec90057d4f7e8fa2d554d29b4a4291f</string>
+			<string>9552732bdbf7f498bb2e413b2925409b</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.carddav.account.png</string>
 		</dict>
 		<key>com.apple.cellular</key>
 		<dict>
 			<key>hash</key>
-			<string>ef83d00673a45f2bb389d517bdf1fd05</string>
+			<string>a0a3be10133a030dac09cc2b128ecba3</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.cellular.png</string>
 		</dict>
 		<key>com.apple.conferenceroomdisplay</key>
 		<dict>
 			<key>hash</key>
-			<string>87b4ebe0c527561621dc46bf8819acf8</string>
+			<string>600c61a3ab6b42c02bc96c7e1409aacd</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.conferenceroomdisplay.png</string>
 		</dict>
 		<key>com.apple.configurationprofile.identification</key>
 		<dict>
 			<key>hash</key>
-			<string>66549bb8bec01a224fb4cd7fa16e3d8f</string>
+			<string>663a756bc71b02c8d654842ff6555917</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.configurationprofile.identification.png</string>
 		</dict>
 		<key>com.apple.dashboard</key>
 		<dict>
 			<key>hash</key>
-			<string>f1685049546d273617f653e649915dea</string>
+			<string>c9f55b26d7aafe44d48f9cf6fdd4a703</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.dashboard.png</string>
 		</dict>
 		<key>com.apple.desktop</key>
 		<dict>
 			<key>hash</key>
-			<string>512e4b0ce89daa2b09e9b029b6bb965e</string>
+			<string>a229b7c4529678ba3070ef7d516ca1e2</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.desktop.png</string>
 		</dict>
 		<key>com.apple.dnsProxy.managed</key>
 		<dict>
 			<key>hash</key>
-			<string>3ca29dee6041699a2d0e2a24ce165ea9</string>
+			<string>e6bdb6268d47573396ec76ab182eec1a</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.dnsProxy.managed.png</string>
 		</dict>
 		<key>com.apple.dnsSettings.managed</key>
 		<dict>
 			<key>hash</key>
-			<string>3ca29dee6041699a2d0e2a24ce165ea9</string>
+			<string>c672fc48b8b3ed42e563fd3ff0574a36</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.dnsSettings.managed.png</string>
 		</dict>
 		<key>com.apple.dock</key>
 		<dict>
 			<key>hash</key>
-			<string>f304e95be9978b5af075fec00f1137a8</string>
+			<string>9a2b01aa340be0dc4b946e263a5ed3b9</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.dock.png</string>
 		</dict>
 		<key>com.apple.domains</key>
 		<dict>
 			<key>hash</key>
-			<string>9b9148147c675d9d12048166f4e7a899</string>
+			<string>5476143326247fd4eb2f74480a74a331</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.domains.png</string>
 		</dict>
 		<key>com.apple.eas.account</key>
 		<dict>
 			<key>hash</key>
-			<string>bf399019476b01726d9cdc07608dd9c4</string>
+			<string>67eff97c6ce3f28813dcf30c567d5e34</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.eas.account.png</string>
 		</dict>
 		<key>com.apple.education</key>
 		<dict>
 			<key>hash</key>
-			<string>1da9721d5f2d2aee87d39323ed372c6a</string>
+			<string>4e78a6a26373959cafa42cd13a9a5d48</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.education.png</string>
 		</dict>
 		<key>com.apple.ews.account</key>
 		<dict>
 			<key>hash</key>
-			<string>bf399019476b01726d9cdc07608dd9c4</string>
+			<string>67eff97c6ce3f28813dcf30c567d5e34</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.ews.account.png</string>
 		</dict>
 		<key>com.apple.extensiblesso</key>
 		<dict>
 			<key>hash</key>
-			<string>810b1234f9c1e8ddb4229ae5a8751f6d</string>
+			<string>7b85d808c82352a852463011ba46b8ca</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.extensiblesso.png</string>
 		</dict>
 		<key>com.apple.familycontrols.contentfilter</key>
 		<dict>
 			<key>hash</key>
-			<string>9641afe624c4e74778c46ffc3cadfcc1</string>
+			<string>e4dd765b321b522c15cc5db86488872e</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.familycontrols.contentfilter.png</string>
 		</dict>
 		<key>com.apple.finder</key>
 		<dict>
 			<key>hash</key>
-			<string>6aeeb5dd38ffa7f0aee8ca1ffb05a935</string>
+			<string>35f07c8b61e5cd7137794e0e88614c88</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.finder.png</string>
 		</dict>
 		<key>com.apple.firstactiveethernet.managed</key>
 		<dict>
 			<key>hash</key>
-			<string>11e5886509cf37dcd703330ce7ced645</string>
+			<string>2c23422c42256e4c67dfb64c05c18a56</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.firstactiveethernet.managed.png</string>
 		</dict>
 		<key>com.apple.firstethernet.managed</key>
 		<dict>
 			<key>hash</key>
-			<string>11e5886509cf37dcd703330ce7ced645</string>
+			<string>2c23422c42256e4c67dfb64c05c18a56</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.firstethernet.managed.png</string>
 		</dict>
 		<key>com.apple.font</key>
 		<dict>
 			<key>hash</key>
-			<string>b5b71a87462c97227615ba6b69f782d0</string>
+			<string>fc3535a7a768e2f7ff09b7b92f3f78a1</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.font.png</string>
 		</dict>
 		<key>com.apple.gamed</key>
 		<dict>
 			<key>hash</key>
-			<string>b5117a0a3470295866bd42d9d5094e02</string>
+			<string>afed9c3fd63ca351989e1867136763ac</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.gamed.png</string>
 		</dict>
 		<key>com.apple.general</key>
 		<dict>
 			<key>hash</key>
-			<string>d0ba6cae0d9b6887ec50efb0addff6ff</string>
+			<string>fa278091be516a47869598463eaf520d</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.general.png</string>
 		</dict>
 		<key>com.apple.globalethernet.managed</key>
 		<dict>
 			<key>hash</key>
-			<string>11e5886509cf37dcd703330ce7ced645</string>
+			<string>2c23422c42256e4c67dfb64c05c18a56</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.globalethernet.managed.png</string>
 		</dict>
 		<key>com.apple.google-oauth</key>
 		<dict>
 			<key>hash</key>
-			<string>53e60d0d8d7ee12bad3fb9be9d9464ed</string>
+			<string>1973a0a591d77ad7d39e0de507cd9108</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.google-oauth.png</string>
 		</dict>
 		<key>com.apple.ironwood.support</key>
 		<dict>
 			<key>hash</key>
-			<string>758816e819ae1f5163ac41e75e537b06</string>
+			<string>1265fc9e7c4d5f8acb1dc0c8b46c73fb</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.ironwood.support.png</string>
 		</dict>
 		<key>com.apple.jabber.account</key>
 		<dict>
 			<key>hash</key>
-			<string>874aedc111c63507058eece27b28fd60</string>
+			<string>ab282652e8c9cfb451e68819f14c07df</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.jabber.account.png</string>
 		</dict>
 		<key>com.apple.ldap.account</key>
 		<dict>
 			<key>hash</key>
-			<string>b68c7b206b8c61f7e69342e4b1364f8e</string>
+			<string>7722f6b27e95cc0933a1ed7176a40dab</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.ldap.account.png</string>
 		</dict>
 		<key>com.apple.loginitems.managed</key>
 		<dict>
 			<key>hash</key>
-			<string>e8867930f9cf449361e99970f6ae798a</string>
+			<string>635c6af2f4498edc892018df273cded5</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.loginitems.managed.png</string>
 		</dict>
 		<key>com.apple.loginwindow</key>
 		<dict>
 			<key>hash</key>
-			<string>42557171f76a9372ce7df66c057c1d51</string>
+			<string>717f8f8a5316b5dfe6e6de32232a960d</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.loginwindow.png</string>
 		</dict>
 		<key>com.apple.mail.managed</key>
 		<dict>
 			<key>hash</key>
-			<string>c18114adc96c3bdddc31eeb95bf0a861</string>
+			<string>0c8a80fdbaa12ad83c776e64c7ea2fc1</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.mail.managed.png</string>
 		</dict>
 		<key>com.apple.mcxloginscripts</key>
 		<dict>
 			<key>hash</key>
-			<string>42557171f76a9372ce7df66c057c1d51</string>
+			<string>717f8f8a5316b5dfe6e6de32232a960d</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.mcxloginscripts.png</string>
 		</dict>
 		<key>com.apple.mcxprinting</key>
 		<dict>
 			<key>hash</key>
-			<string>2f2ff6a3aabd80b216217e0186158b7b</string>
+			<string>238566ad33b2e5e658d8e3548ec01219</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.mcxprinting.png</string>
 		</dict>
 		<key>com.apple.mdm</key>
 		<dict>
 			<key>hash</key>
-			<string>f08365e9642ff165ca5be92ee93976ff</string>
+			<string>58934e1c94a3aacec3aeed59e0cf103c</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.mdm.png</string>
 		</dict>
 		<key>com.apple.mobiledevice.passwordpolicy</key>
 		<dict>
 			<key>hash</key>
-			<string>4c0fac1f69bde4393cb8a1668f2e98de</string>
+			<string>0790b0d32d6062cd41ca7ae3a58dff97</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.mobiledevice.passwordpolicy.png</string>
 		</dict>
 		<key>com.apple.networkusagerules</key>
 		<dict>
 			<key>hash</key>
-			<string>eceef9bdd95751f783c7814c6856e4df</string>
+			<string>99cff8eced3096c0924caf5bb9740c3d</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.networkusagerules.png</string>
 		</dict>
 		<key>com.apple.notificationsettings</key>
 		<dict>
 			<key>hash</key>
-			<string>0cc5145a71eae30217450ecd84245b98</string>
+			<string>76372d8ee0f704d64cffd1ebca2cf818</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.notificationsettings.png</string>
 		</dict>
 		<key>com.apple.osxserver.account</key>
 		<dict>
 			<key>hash</key>
-			<string>e19ef579a5e6236b4a27da60de46f195</string>
+			<string>13cf1ee4b54e806934126bb9710dc7d1</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.osxserver.account.png</string>
 		</dict>
 		<key>com.apple.preference.security</key>
 		<dict>
 			<key>hash</key>
-			<string>b136bc5f2012155967231ec80c3cf465</string>
+			<string>b23474065a3dfa854137d33c9ea1fd00</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.preference.security.png</string>
 		</dict>
 		<key>com.apple.profileRemovalPassword</key>
 		<dict>
 			<key>hash</key>
-			<string>2ff15242428853986f466039c7405803</string>
+			<string>4ae38940f6aa2113febdfe9544336721</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.profileRemovalPassword.png</string>
 		</dict>
 		<key>com.apple.proxy.http.global</key>
 		<dict>
 			<key>hash</key>
-			<string>5e34297478a48e18e97849f68f4698b9</string>
+			<string>364ed2b3afc25980b64e185ec3468f45</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.proxy.http.global.png</string>
 		</dict>
 		<key>com.apple.screensaver</key>
 		<dict>
 			<key>hash</key>
-			<string>ede299bdbbab325dbf36a8a7cefdde99</string>
+			<string>3b3f0ee7801e2249d8b68b20d17b5851</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.screensaver.png</string>
 		</dict>
 		<key>com.apple.screensaver.user</key>
 		<dict>
 			<key>hash</key>
-			<string>ede299bdbbab325dbf36a8a7cefdde99</string>
+			<string>ec6582ed6bd3e311c722d7f03345b482</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.screensaver.user.png</string>
 		</dict>
 		<key>com.apple.secondactiveethernet.managed</key>
 		<dict>
 			<key>hash</key>
-			<string>11e5886509cf37dcd703330ce7ced645</string>
+			<string>2c23422c42256e4c67dfb64c05c18a56</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.secondactiveethernet.managed.png</string>
 		</dict>
 		<key>com.apple.secondethernet.managed</key>
 		<dict>
 			<key>hash</key>
-			<string>11e5886509cf37dcd703330ce7ced645</string>
+			<string>2c23422c42256e4c67dfb64c05c18a56</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.secondethernet.managed.png</string>
 		</dict>
 		<key>com.apple.security.FDERecoveryKeyEscrow</key>
 		<dict>
 			<key>hash</key>
-			<string>b136bc5f2012155967231ec80c3cf465</string>
+			<string>b23474065a3dfa854137d33c9ea1fd00</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.security.FDERecoveryKeyEscrow.png</string>
 		</dict>
 		<key>com.apple.security.FDERecoveryRedirect</key>
 		<dict>
 			<key>hash</key>
-			<string>b136bc5f2012155967231ec80c3cf465</string>
+			<string>b23474065a3dfa854137d33c9ea1fd00</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.security.FDERecoveryRedirect.png</string>
 		</dict>
 		<key>com.apple.security.certificatepreference</key>
 		<dict>
 			<key>hash</key>
-			<string>4e9ae63db0b039490558a68ad5dd2c6e</string>
+			<string>64a6cafea25cdd8d282c098484bfca34</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.security.certificatepreference.png</string>
 		</dict>
 		<key>com.apple.security.certificatetransparency</key>
 		<dict>
 			<key>hash</key>
-			<string>3bd9c5555a68f88827be3eddddd91067</string>
+			<string>ef624efdcd4669056d4fca0b5811afff</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.security.certificatetransparency.png</string>
 		</dict>
 		<key>com.apple.security.firewall</key>
 		<dict>
 			<key>hash</key>
-			<string>b136bc5f2012155967231ec80c3cf465</string>
+			<string>b23474065a3dfa854137d33c9ea1fd00</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.security.firewall.png</string>
 		</dict>
 		<key>com.apple.security.pkcs1</key>
 		<dict>
 			<key>hash</key>
-			<string>4e9ae63db0b039490558a68ad5dd2c6e</string>
+			<string>64a6cafea25cdd8d282c098484bfca34</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.security.pkcs1.png</string>
 		</dict>
 		<key>com.apple.security.pkcs12</key>
 		<dict>
 			<key>hash</key>
-			<string>db876cb2ab797382d719d0ee0f15bcdf</string>
+			<string>ba2c6eb8a818182d87fe627968cf9f05</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.security.pkcs12.png</string>
 		</dict>
 		<key>com.apple.security.root</key>
 		<dict>
 			<key>hash</key>
-			<string>1d6b6f0062c2ab6a09a2e7dab8c887a9</string>
+			<string>c942780863f1759929f19fced62b9011</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.security.root.png</string>
 		</dict>
 		<key>com.apple.security.scep</key>
 		<dict>
 			<key>hash</key>
-			<string>af4788ec8238af6ffb5bc89f79c70e47</string>
+			<string>c26e6a1ac792ad1c8370b68ccd772cbb</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.security.scep.png</string>
 		</dict>
 		<key>com.apple.security.smartcard</key>
 		<dict>
 			<key>hash</key>
-			<string>6d217fc1777cd21e9f660a69caefd691</string>
+			<string>1607cab17505efa3c90499811796263d</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.security.smartcard.png</string>
 		</dict>
 		<key>com.apple.shareddeviceconfiguration</key>
 		<dict>
 			<key>hash</key>
-			<string>3edce8bd0bbdcfd7160eca530db3b255</string>
+			<string>f9892faf8229a235ebfe68c4931866b2</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.shareddeviceconfiguration.png</string>
 		</dict>
 		<key>com.apple.subscribedcalendar.account</key>
 		<dict>
 			<key>hash</key>
-			<string>6a1aec4b12d397faa63c80504844c50f</string>
+			<string>81f3ceab861e13d33b3e6360e7c7c985</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.subscribedcalendar.account.png</string>
 		</dict>
 		<key>com.apple.syspolicy.kernel-extension-policy</key>
 		<dict>
 			<key>hash</key>
-			<string>b3322394c8ff23526df98a9e50d650f3</string>
+			<string>8c363678d5642cdb45f09fa96521ad19</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.syspolicy.kernel-extension-policy.png</string>
 		</dict>
 		<key>com.apple.system-extension-policy</key>
 		<dict>
 			<key>hash</key>
-			<string>b3322394c8ff23526df98a9e50d650f3</string>
+			<string>8c363678d5642cdb45f09fa96521ad19</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.system-extension-policy.png</string>
 		</dict>
 		<key>com.apple.system.logging</key>
 		<dict>
 			<key>hash</key>
-			<string>1e49fd9cc6837538cb3c520a58c6e0db</string>
+			<string>fb0700515a9bdf9fcbee7a0dc0ef7445</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.system.logging.png</string>
 		</dict>
 		<key>com.apple.systemmigration</key>
 		<dict>
 			<key>hash</key>
-			<string>c60938ebb93d867b49a7c14157dd7b22</string>
+			<string>65e5189e092125afeb5d5525f65c7fa2</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.systemmigration.png</string>
 		</dict>
 		<key>com.apple.systempolicy.control</key>
 		<dict>
 			<key>hash</key>
-			<string>857eff874be2703b7097157a9f119ad2</string>
+			<string>c621758d07df145720b9ee0762c3b1e4</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.systempolicy.control.png</string>
 		</dict>
 		<key>com.apple.systempolicy.managed</key>
 		<dict>
 			<key>hash</key>
-			<string>857eff874be2703b7097157a9f119ad2</string>
+			<string>daac01b831c13684049d202e56486956</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.systempolicy.managed.png</string>
 		</dict>
 		<key>com.apple.systempreferences</key>
 		<dict>
 			<key>hash</key>
-			<string>e739de644b20d0a29346b192bc28b7cf</string>
+			<string>012f08d8442be0cfc3dd60a0ff729ab7</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.systempreferences.png</string>
 		</dict>
 		<key>com.apple.systemuiserver</key>
 		<dict>
 			<key>hash</key>
-			<string>2dcbc98f1fda427ee527ecd8032f347b</string>
+			<string>4f7ec168eef67fc63b6feb7c9bfe8d7b</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.systemuiserver.png</string>
 		</dict>
 		<key>com.apple.thirdactiveethernet.managed</key>
 		<dict>
 			<key>hash</key>
-			<string>11e5886509cf37dcd703330ce7ced645</string>
+			<string>2c23422c42256e4c67dfb64c05c18a56</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.thirdactiveethernet.managed.png</string>
 		</dict>
 		<key>com.apple.thirdethernet.managed</key>
 		<dict>
 			<key>hash</key>
-			<string>11e5886509cf37dcd703330ce7ced645</string>
+			<string>2c23422c42256e4c67dfb64c05c18a56</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.thirdethernet.managed.png</string>
 		</dict>
 		<key>com.apple.tvremote</key>
 		<dict>
 			<key>hash</key>
-			<string>8609c912ae80f421f836bfa821800778</string>
+			<string>3e7718a481f720063a2b4a2c5c860872</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.tvremote.png</string>
 		</dict>
 		<key>com.apple.universalaccess</key>
 		<dict>
 			<key>hash</key>
-			<string>9a27c8ca5aeef5d20ad6970a86db4ebc</string>
+			<string>576052c330f5443ac482e054f30eec94</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.universalaccess.png</string>
 		</dict>
 		<key>com.apple.webClip.managed</key>
 		<dict>
 			<key>hash</key>
-			<string>f08a1f21eaf4379e62b49e6a1a68c940</string>
+			<string>1f43063eb55055091094eab095eef607</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.webClip.managed.png</string>
 		</dict>
 		<key>com.apple.webcontent-filter</key>
 		<dict>
 			<key>hash</key>
-			<string>9641afe624c4e74778c46ffc3cadfcc1</string>
+			<string>e4dd765b321b522c15cc5db86488872e</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.webcontent-filter.png</string>
 		</dict>
 		<key>com.apple.wifi.managed</key>
 		<dict>
 			<key>hash</key>
-			<string>f41821b823a4af5db754ac0c3eb48958</string>
+			<string>921e86a99adec4fdd7e66b8e28175fe1</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.wifi.managed.png</string>
 		</dict>
 		<key>com.apple.xsan</key>
 		<dict>
 			<key>hash</key>
-			<string>a8d41e1deacc4e4ab82aa4f6549592cd</string>
+			<string>edd4156fd74be95b84d9c096799c0f52</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.xsan.png</string>
 		</dict>
 		<key>com.apple.xsan.preferences</key>
 		<dict>
 			<key>hash</key>
-			<string>a8d41e1deacc4e4ab82aa4f6549592cd</string>
+			<string>f321ccbcbf621490bc9cc7ca5f5abe67</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/com.apple.xsan.preferences.png</string>
 		</dict>
 		<key>loginwindow</key>
 		<dict>
 			<key>hash</key>
-			<string>42557171f76a9372ce7df66c057c1d51</string>
+			<string>717f8f8a5316b5dfe6e6de32232a960d</string>
 			<key>path</key>
 			<string>Icons/ManifestsApple/loginwindow.png</string>
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2026-05-28T16:36:40Z</date>
+	<date>2026-06-18T17:25:02Z</date>
 </dict>
 </plist>
