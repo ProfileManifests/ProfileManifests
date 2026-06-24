@@ -1663,7 +1663,7 @@
 		<key>com.apple.app.lock</key>
 		<dict>
 			<key>modified</key>
-			<date>2026-06-23T15:59:45Z</date>
+			<date>2026-06-24T14:19:17Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.app.lock.plist</string>
 			<key>version</key>
@@ -2508,6 +2508,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2026-06-22T11:55:49Z</date>
+	<date>2026-06-24T14:19:48Z</date>
 </dict>
 </plist>
