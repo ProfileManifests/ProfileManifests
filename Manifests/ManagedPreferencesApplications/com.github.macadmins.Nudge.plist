@@ -13,7 +13,7 @@
 	<key>pfm_format_version</key>
 	<integer>1</integer>
 	<key>pfm_last_modified</key>
-	<date>2024-08-12T12:17:30Z</date>
+	<date>2026-06-23T15:59:45Z</date>
 	<key>pfm_macos_min</key>
 	<string>11.0</string>
 	<key>pfm_platforms</key>
@@ -52,7 +52,8 @@
 			<key>pfm_default</key>
 			<string>com.github.macadmins.Nudge</string>
 			<key>pfm_description</key>
-			<string>The reverse-DNS-style identifier for the payload. This identifier is usually the same as the TopLevel value, with an additional appended component. This string must be unique within the profile. During a profile replacement, the system updates payloads with the same 'PayloadIdentifier' and 'PayloadUUID' in the old and new profiles.</string>
+			<string>The reverse-DNS-style identifier for the payload. This identifier is usually the same as the 'TopLevel' value, with an additional appended component. This string must be unique within the profile.
+During a profile replacement, the system updates payloads with the same 'PayloadIdentifier' and 'PayloadUUID' in the old and new profiles.</string>
 			<key>pfm_name</key>
 			<string>PayloadIdentifier</string>
 			<key>pfm_require</key>
@@ -80,7 +81,8 @@
 			<key>pfm_default</key>
 			<string></string>
 			<key>pfm_description</key>
-			<string>The globally unique identifier for the payload. The actual content is unimportant, but must be globally unique. In macOS, use 'uuidgen' to generate UUIDs. During a profile replacement, the system updates payloads with the same 'PayloadIdentifier' and 'PayloadUUID' in the old and new profiles.</string>
+			<string>The globally unique identifier for the payload. The actual content is unimportant, but must be globally unique. In macOS, use 'uuidgen' to generate UUIDs.
+During a profile replacement, the system updates payloads with the same 'PayloadIdentifier' and 'PayloadUUID' in the old and new profiles.</string>
 			<key>pfm_format</key>
 			<string>^[0-9A-Za-z]{8}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{12}$</string>
 			<key>pfm_name</key>
@@ -99,6 +101,10 @@
 			<string>The version of this specific payload.</string>
 			<key>pfm_name</key>
 			<string>PayloadVersion</string>
+			<key>pfm_range_list</key>
+			<array>
+				<integer>1</integer>
+			</array>
 			<key>pfm_require</key>
 			<string>always</string>
 			<key>pfm_title</key>
@@ -191,6 +197,8 @@
 					<string>initialRefreshCycle</string>
 					<string>maxRandomDelayInSeconds</string>
 					<string>noTimers</string>
+					<string>nudgeMajorUpgradeEventLaunchDelay</string>
+					<string>nudgeMinorUpdateEventLaunchDelay</string>
 					<string>nudgeRefreshCycle</string>
 					<string>randomDelay</string>
 					<string>userExperience</string>
@@ -1297,7 +1305,7 @@
 					<key>pfm_app_min</key>
 					<string>1.0</string>
 					<key>pfm_default</key>
-					<false/>
+					<true/>
 					<key>pfm_description</key>
 					<string>Enables an initial delay Nudge before launching the UI. This is useful if you do not want your users to all receive the Nudge prompt at the exact time of the LaunchAgent.</string>
 					<key>pfm_documentation_url</key>
@@ -1308,8 +1316,6 @@
 					<string>Random Delay</string>
 					<key>pfm_type</key>
 					<string>boolean</string>
-					<key>pfm_value_placeholder</key>
-					<string>true</string>
 				</dict>
 				<dict>
 					<key>pfm_default</key>
@@ -1482,7 +1488,7 @@
 					<key>pfm_documentation_url</key>
 					<string>https://github.com/macadmins/nudge/wiki/userInterface#icondarkpath---type-string-default-value-</string>
 					<key>pfm_format</key>
-					<string>^.*\.(icns|jpg|png)</string>
+					<string>^(.*\.(icns|jpg|png)|data:image\/png;base64,.*)$</string>
 					<key>pfm_name</key>
 					<string>iconDarkPath</string>
 					<key>pfm_title</key>
@@ -1500,7 +1506,7 @@
 					<key>pfm_documentation_url</key>
 					<string>https://github.com/macadmins/nudge/wiki/userInterface#iconlightpath---type-string-default-value-</string>
 					<key>pfm_format</key>
-					<string>^.*\.(icns|jpg|png)</string>
+					<string>^(.*\.(icns|jpg|png)|data:image\/png;base64,.*)$</string>
 					<key>pfm_name</key>
 					<string>iconLightPath</string>
 					<key>pfm_title</key>
@@ -1518,7 +1524,7 @@
 					<key>pfm_documentation_url</key>
 					<string>https://github.com/macadmins/nudge/wiki/userInterface#screenshotdarkpath---type-string-default-value-</string>
 					<key>pfm_format</key>
-					<string>^.*\.(icns|jpg|png)</string>
+					<string>^(.*\.(icns|jpg|png)|data:image\/png;base64,.*)$</string>
 					<key>pfm_name</key>
 					<string>screenShotDarkPath</string>
 					<key>pfm_title</key>
@@ -1536,7 +1542,7 @@
 					<key>pfm_documentation_url</key>
 					<string>https://github.com/macadmins/nudge/wiki/userInterface#screenshotlightpath---type-string-default-value-</string>
 					<key>pfm_format</key>
-					<string>^.*\.(icns|jpg|png)</string>
+					<string>^(.*\.(icns|jpg|png)|data:image\/png;base64,.*)$</string>
 					<key>pfm_name</key>
 					<string>screenShotLightPath</string>
 					<key>pfm_title</key>
@@ -2078,6 +2084,6 @@
 	<key>pfm_unique</key>
 	<true/>
 	<key>pfm_version</key>
-	<integer>4</integer>
+	<integer>5</integer>
 </dict>
 </plist>

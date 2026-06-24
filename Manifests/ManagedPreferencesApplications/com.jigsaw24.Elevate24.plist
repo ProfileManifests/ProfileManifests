@@ -7,7 +7,7 @@
 	<key>pfm_description</key>
 	<string>macOS privilege access management tool from Jigsaw24</string>
 	<key>pfm_documentation_url</key>
-	<string>https://github.com/Jigsaw24/Elevate24/tree/main</string>
+	<string>https://docs.jigsaw24.com/Elevate24/</string>
 	<key>pfm_domain</key>
 	<string>com.jigsaw24.Elevate24</string>
 	<key>pfm_format_version</key>
@@ -113,7 +113,7 @@
 	RK5CYII=
 	</data>
 	<key>pfm_last_modified</key>
-	<date>2024-12-29T05:56:33Z</date>
+	<date>2026-06-23T15:59:45Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -121,88 +121,14 @@
 	<key>pfm_subkeys</key>
 	<array>
 		<dict>
-			<key>pfm_name</key>
-			<string>PFC_SegmentedControl_0</string>
-			<key>pfm_range_list_titles</key>
-			<array>
-				<string>License</string>
-				<string>Branding</string>
-				<string>Time and Reason</string>
-				<string>Security Settings</string>
-				<string>Secondary Account (Premium)</string>
-				<string>Reporting</string>
-			</array>
-			<key>pfm_require</key>
-			<string>always</string>
-			<key>pfm_segments</key>
-			<dict>
-				<key>Branding</key>
-				<array>
-					<string>message</string>
-					<string>iconPath</string>
-					<string>heading</string>
-					<string>mainbutton</string>
-					<string>HideLogo</string>
-				</array>
-				<key>License</key>
-				<array>
-					<string>LicenseKey</string>
-					<string>LicenseAPIKey</string>
-				</array>
-				<key>Reporting</key>
-				<array>
-					<string>DisableDefaultLog</string>
-					<string>siemURL</string>
-					<string>siemAuthHeader</string>
-					<string>siemAuthToken</string>
-					<string>microsoftsentinel</string>
-					<string>teamswebhook</string>
-					<string>slack-webhook</string>
-				</array>
-				<key>Secondary Account (Premium)</key>
-				<array>
-					<string>userElevateAdmin</string>
-					<string>useCurrentUserAsAdmin</string>
-					<string>adminUserName</string>
-					<string>ComplexPassword</string>
-					<string>PasswordUppercase</string>
-					<string>PasswordLowercase</string>
-					<string>PasswordNumbers</string>
-					<string>PasswordSymbols</string>
-					<string>showAdminPasswordGrace</string>
-				</array>
-				<key>Security Settings</key>
-				<array>
-					<string>enableAppleAuth</string>
-					<string>GoogleAuth</string>
-					<string>standardAtLoad</string>
-					<string>demoteAllAdmin</string>
-					<string>demoteAllAdminQuit</string>
-					<string>killterminalsessions</string>
-					<string>demoteExclusions</string>
-					<string>EnableSessionMonitoring</string>
-				</array>
-				<key>Time and Reason</key>
-				<array>
-					<string>enableReason</string>
-					<string>Enabletimelist</string>
-					<string>Sessiontime</string>
-					<string>times</string>
-					<string>reasons</string>
-				</array>
-			</dict>
-			<key>pfm_type</key>
-			<string>string</string>
-		</dict>
-		<dict>
 			<key>pfm_default</key>
 			<string>Configures Elevate24 configuration preferences.</string>
 			<key>pfm_description</key>
-			<string>Elevate24 Configuration</string>
+			<string>The human-readable description of this payload. This description appears on the Detail screen.</string>
 			<key>pfm_name</key>
 			<string>PayloadDescription</string>
 			<key>pfm_title</key>
-			<string>Elevate24</string>
+			<string>Payload Description</string>
 			<key>pfm_type</key>
 			<string>string</string>
 		</dict>
@@ -210,7 +136,7 @@
 			<key>pfm_default</key>
 			<string>Elevate24</string>
 			<key>pfm_description</key>
-			<string>Elevate24 Configuration</string>
+			<string>The human-readable name for the profile payload. The name appears on the Detail screen and doesn't need to be unique.</string>
 			<key>pfm_description_reference</key>
 			<string>A human-readable name for the profile payload. This name is displayed on the Detail screen. It does not have to be unique.</string>
 			<key>pfm_name</key>
@@ -226,7 +152,8 @@
 			<key>pfm_default</key>
 			<string>com.jigsaw24.Elevate24</string>
 			<key>pfm_description</key>
-			<string>A unique identifier for the payload, dot-delimited.  Usually root PayloadIdentifier+subidentifier</string>
+			<string>The reverse-DNS-style identifier for the payload. This identifier is usually the same as the 'TopLevel' value, with an additional appended component. This string must be unique within the profile.
+During a profile replacement, the system updates payloads with the same 'PayloadIdentifier' and 'PayloadUUID' in the old and new profiles.</string>
 			<key>pfm_description_reference</key>
 			<string>A reverse-DNS-style identifier for the specific payload. It is usually the same identifier as the root-level PayloadIdentifier value with an additional component appended.</string>
 			<key>pfm_name</key>
@@ -242,7 +169,7 @@
 			<key>pfm_default</key>
 			<string>com.jigsaw24.Elevate24</string>
 			<key>pfm_description</key>
-			<string>The type of the payload, a reverse dns string.</string>
+			<string>The payload type, which each payload domain's reference page specifies.</string>
 			<key>pfm_description_reference</key>
 			<string>The payload type.</string>
 			<key>pfm_name</key>
@@ -256,7 +183,8 @@
 		</dict>
 		<dict>
 			<key>pfm_description</key>
-			<string>Unique identifier for the payload (format 01234567-89AB-CDEF-0123-456789ABCDEF)</string>
+			<string>The globally unique identifier for the payload. The actual content is unimportant, but must be globally unique. In macOS, use 'uuidgen' to generate UUIDs.
+During a profile replacement, the system updates payloads with the same 'PayloadIdentifier' and 'PayloadUUID' in the old and new profiles.</string>
 			<key>pfm_description_reference</key>
 			<string>A globally unique identifier for the payload. The actual content is unimportant, but it must be globally unique. In macOS, you can use uuidgen to generate reasonable UUIDs.</string>
 			<key>pfm_format</key>
@@ -274,11 +202,15 @@
 			<key>pfm_default</key>
 			<integer>1</integer>
 			<key>pfm_description</key>
-			<string>The version of the whole configuration profile.</string>
+			<string>The version of this specific payload.</string>
 			<key>pfm_description_reference</key>
 			<string>The version number of the individual payload. A profile can consist of payloads with different version numbers. For example, changes to the VPN software in iOS might introduce a new payload version to support additional features, but Mail payload versions would not necessarily change in the same release.</string>
 			<key>pfm_name</key>
 			<string>PayloadVersion</string>
+			<key>pfm_range_list</key>
+			<array>
+				<integer>1</integer>
+			</array>
 			<key>pfm_require</key>
 			<string>always</string>
 			<key>pfm_title</key>
@@ -288,7 +220,7 @@
 		</dict>
 		<dict>
 			<key>pfm_description</key>
-			<string>This value describes the issuing organization of the profile, as displayed to the user</string>
+			<string>The human-readable string containing the name of the organization that provides the profile. This value doesn't need to match the organization payload value in the enclosing dictionary.</string>
 			<key>pfm_name</key>
 			<string>PayloadOrganization</string>
 			<key>pfm_title</key>
@@ -297,10 +229,94 @@
 			<string>string</string>
 		</dict>
 		<dict>
+			<key>pfm_name</key>
+			<string>PFC_SegmentedControl_0</string>
+			<key>pfm_range_list_titles</key>
+			<array>
+				<string>License</string>
+				<string>Branding</string>
+				<string>Session Customisation</string>
+				<string>Security Settings</string>
+				<string>Secondary Account (Premium)</string>
+				<string>Reporting</string>
+			</array>
+			<key>pfm_require</key>
+			<string>always</string>
+			<key>pfm_segments</key>
+			<dict>
+				<key>Branding</key>
+				<array>
+					<string>newUI</string>
+					<string>message</string>
+					<string>iconPath</string>
+					<string>heading</string>
+					<string>subheading</string>
+					<string>mainbutton</string>
+					<string>HideLogo</string>
+				</array>
+				<key>License</key>
+				<array>
+					<string>LicenseKey</string>
+					<string>LicenseAPIKey</string>
+				</array>
+				<key>Reporting</key>
+				<array>
+					<string>DisableDefaultLog</string>
+					<string>siemURL</string>
+					<string>siemAuthHeader</string>
+					<string>siemAuthToken</string>
+					<string>microsoftsentinel</string>
+				</array>
+				<key>Secondary Account (Premium)</key>
+				<array>
+					<string>userElevateAdmin</string>
+					<string>useCurrentUserAsAdmin</string>
+					<string>adminUserName</string>
+					<string>ComplexPassword</string>
+					<string>PasswordUppercase</string>
+					<string>PasswordLowercase</string>
+					<string>PasswordNumbers</string>
+					<string>PasswordSymbols</string>
+					<string>showAdminPasswordGrace</string>
+				</array>
+				<key>Security Settings</key>
+				<array>
+					<string>UseSystemExtension</string>
+					<string>EnableSessionMonitoring</string>
+					<string>enableAppleAuth</string>
+					<string>GoogleAuth</string>
+					<string>standardAtLoad</string>
+					<string>demoteAllAdmin</string>
+					<string>demoteAllAdminQuit</string>
+					<string>killterminalsessions</string>
+					<string>demoteExclusions</string>
+				</array>
+				<key>Session Customisation</key>
+				<array>
+					<string>enableReason</string>
+					<string>Enabletimelist</string>
+					<string>blockExtend</string>
+					<string>AllowCliElevation</string>
+					<string>DisableUserElevation</string>
+					<string>Sessiontime</string>
+					<string>times</string>
+					<string>reasons</string>
+					<string>sessionExpiryReminder</string>
+					<string>AllowUserDefinedScripts</string>
+					<string>ElevateScriptPath</string>
+					<string>ElevateScriptHash</string>
+					<string>DemoteScriptPath</string>
+					<string>DemoteScriptHash</string>
+				</array>
+			</dict>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
 			<key>pfm_description</key>
 			<string>Enter your Elevate24 license key. Mandatory key for Premium customers only.</string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/Jigsaw24/Elevate24/blob/main/Documentation/Elevate24%20-%20Configuration%20Keys.md#license-configuration</string>
+			<string>https://docs.jigsaw24.com/Elevate24/Documentation/Elevate24%20Configuration/2%20Elevate24%20-%20Licensing.html#licensing</string>
 			<key>pfm_name</key>
 			<string>LicenseKey</string>
 			<key>pfm_title</key>
@@ -314,7 +330,7 @@
 			<key>pfm_description</key>
 			<string>Enter your Elevate24 license api key. Mandatory key for Premium customers only.</string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/Jigsaw24/Elevate24/blob/main/Documentation/Elevate24%20-%20Configuration%20Keys.md#license-configuration</string>
+			<string>https://docs.jigsaw24.com/Elevate24/Documentation/Elevate24%20Configuration/2%20Elevate24%20-%20Licensing.html#licensing</string>
 			<key>pfm_name</key>
 			<string>LicenseAPIKey</string>
 			<key>pfm_title</key>
@@ -326,11 +342,25 @@
 		</dict>
 		<dict>
 			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>Change Elevate24 to show to the new UI. Not required for Elevate24 2.3+ as this is now default.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://docs.jigsaw24.com/Elevate24/Documentation/Elevate24%20Configuration/3%20Elevate24%20-%20Branding.html#branding</string>
+			<key>pfm_name</key>
+			<string>newUI</string>
+			<key>pfm_title</key>
+			<string>New UI</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
 			<string>Use of admin accounts is recorded for security compliance. Select why you require admin privileges and select how long for.</string>
 			<key>pfm_description</key>
 			<string>Change the standard application message in the application.</string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/Jigsaw24/Elevate24/blob/main/Documentation/Elevate24%20-%20Configuration%20Keys.md#branding</string>
+			<string>https://docs.jigsaw24.com/Elevate24/Documentation/Elevate24%20Configuration/3%20Elevate24%20-%20Branding.html#branding</string>
 			<key>pfm_name</key>
 			<string>message</string>
 			<key>pfm_title</key>
@@ -346,7 +376,7 @@
 			<key>pfm_description</key>
 			<string>Prodvide the file path to a JPEG or PNG to use as the icon in the Elevate24 application.</string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/Jigsaw24/Elevate24/blob/main/Documentation/Elevate24%20-%20Configuration%20Keys.md#branding</string>
+			<string>https://docs.jigsaw24.com/Elevate24/Documentation/Elevate24%20Configuration/3%20Elevate24%20-%20Branding.html#branding</string>
 			<key>pfm_name</key>
 			<string>iconPath</string>
 			<key>pfm_title</key>
@@ -362,7 +392,7 @@
 			<key>pfm_description</key>
 			<string>Change the standard header from Elevate24 in the application. Always displays in bold.</string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/Jigsaw24/Elevate24/blob/main/Documentation/Elevate24%20-%20Configuration%20Keys.md#branding</string>
+			<string>https://docs.jigsaw24.com/Elevate24/Documentation/Elevate24%20Configuration/3%20Elevate24%20-%20Branding.html#branding</string>
 			<key>pfm_name</key>
 			<string>heading</string>
 			<key>pfm_title</key>
@@ -374,11 +404,27 @@
 		</dict>
 		<dict>
 			<key>pfm_default</key>
+			<string>Privilege Access Management</string>
+			<key>pfm_description</key>
+			<string>Change the standard text "Privilege Access Management" under the Elevate24 header. New UI V2.2.0+ Only.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://docs.jigsaw24.com/Elevate24/Documentation/Elevate24%20Configuration/3%20Elevate24%20-%20Branding.html#branding</string>
+			<key>pfm_name</key>
+			<string>subheading</string>
+			<key>pfm_title</key>
+			<string>Sub Header (Premium)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>Privilege Access Management</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
 			<string>Elevate24</string>
 			<key>pfm_description</key>
 			<string>Change the standard button text from Elevate in the application. </string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/Jigsaw24/Elevate24/blob/main/Documentation/Elevate24%20-%20Configuration%20Keys.md#branding</string>
+			<string>https://docs.jigsaw24.com/Elevate24/Documentation/Elevate24%20Configuration/3%20Elevate24%20-%20Branding.html#branding</string>
 			<key>pfm_name</key>
 			<string>mainbutton</string>
 			<key>pfm_title</key>
@@ -394,11 +440,43 @@
 			<key>pfm_description</key>
 			<string>Hide the “Powered by Jigsaw24” logo in the application.</string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/Jigsaw24/Elevate24/blob/main/Documentation/Elevate24%20-%20Configuration%20Keys.md#branding</string>
+			<string>https://docs.jigsaw24.com/Elevate24/Documentation/Elevate24%20Configuration/3%20Elevate24%20-%20Branding.html#branding</string>
 			<key>pfm_name</key>
 			<string>HideLogo</string>
 			<key>pfm_title</key>
 			<string>Hide Powered By Jigsaw24 Logo (Premium)</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2.5.0</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>Elevate24 2.5+ Only. When enabled, the Elevate24 menubar UI is hidden and cannot be launched manually from /Applications. End users will have no visible way to request elevation, view their session status, or interact with Elevate24 directly. The underlying agent continues to run in the background, enforcing session policies and authorisation rules as normal.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://docs.jigsaw24.com/Elevate24/Documentation/Elevate24%20Configuration/4%20Elevate24%20-%20Customisation.html#session-customisation</string>
+			<key>pfm_name</key>
+			<string>DisableUserElevation</string>
+			<key>pfm_title</key>
+			<string>Disable User Elevation</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2.5.0</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>Elevate24 2.5+ Only. When enabled, allows user to elevate from the command-line.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://docs.jigsaw24.com/Elevate24/Documentation/Elevate24%20Configuration/4%20Elevate24%20-%20Customisation.html#session-customisation</string>
+			<key>pfm_name</key>
+			<string>AllowCliElevation</string>
+			<key>pfm_title</key>
+			<string>Allow CLI Elevation</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 		</dict>
@@ -408,7 +486,7 @@
 			<key>pfm_description</key>
 			<string>Enables the option for the application to display a choice of times. To be used in conjuction with Session Times list.</string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/Jigsaw24/Elevate24/blob/main/Documentation/Elevate24%20-%20Configuration%20Keys.md#elevated-session-customisation</string>
+			<string>https://docs.jigsaw24.com/Elevate24/Documentation/Elevate24%20Configuration/4%20Elevate24%20-%20Customisation.html#session-customisation</string>
 			<key>pfm_name</key>
 			<string>Enabletimelist</string>
 			<key>pfm_title</key>
@@ -422,7 +500,7 @@
 			<key>pfm_description</key>
 			<string>Will replace reasons drop down list with a free text entry box. </string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/Jigsaw24/Elevate24/blob/main/Documentation/Elevate24%20-%20Configuration%20Keys.md#elevated-session-customisation</string>
+			<string>https://docs.jigsaw24.com/Elevate24/Documentation/Elevate24%20Configuration/4%20Elevate24%20-%20Customisation.html#session-customisation</string>
 			<key>pfm_name</key>
 			<string>enableReason</string>
 			<key>pfm_title</key>
@@ -432,11 +510,25 @@
 		</dict>
 		<dict>
 			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>Will disable the ability to extend the time of an active Elevate24 session.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://docs.jigsaw24.com/Elevate24/Documentation/Elevate24%20Configuration/4%20Elevate24%20-%20Customisation.html#extend-session</string>
+			<key>pfm_name</key>
+			<string>blockExtend</string>
+			<key>pfm_title</key>
+			<string>Block extending session</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
 			<string>3600</string>
 			<key>pfm_description</key>
 			<string>Change the length of time (in seconds) the user will be elevated for. Do not use this key if you want to present a list of times to choose from.</string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/Jigsaw24/Elevate24/blob/main/Documentation/Elevate24%20-%20Configuration%20Keys.md#elevated-session-customisation</string>
+			<string>https://docs.jigsaw24.com/Elevate24/Documentation/Elevate24%20Configuration/4%20Elevate24%20-%20Customisation.html#session-customisation</string>
 			<key>pfm_name</key>
 			<string>Sessiontime</string>
 			<key>pfm_title</key>
@@ -456,7 +548,7 @@
 			<key>pfm_description</key>
 			<string>List of available times to chose from in the Application. Enter time below in seconds.</string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/Jigsaw24/Elevate24/blob/main/Documentation/Elevate24%20-%20Configuration%20Keys.md#elevated-session-customisation</string>
+			<string>https://docs.jigsaw24.com/Elevate24/Documentation/Elevate24%20Configuration/4%20Elevate24%20-%20Customisation.html#session-customisation</string>
 			<key>pfm_name</key>
 			<string>times</string>
 			<key>pfm_subkeys</key>
@@ -475,7 +567,7 @@
 			<key>pfm_description</key>
 			<string>The reasons to choose for needing elevated rights in dropbox within the application.</string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/Jigsaw24/Elevate24/blob/main/Documentation/Elevate24%20-%20Configuration%20Keys.md#elevated-session-customisation</string>
+			<string>https://docs.jigsaw24.com/Elevate24/Documentation/Elevate24%20Configuration/4%20Elevate24%20-%20Customisation.html#session-customisation</string>
 			<key>pfm_name</key>
 			<string>reasons</string>
 			<key>pfm_subkeys</key>
@@ -491,12 +583,100 @@
 			<string>array</string>
 		</dict>
 		<dict>
+			<key>pfm_app_min</key>
+			<string>2.4.0</string>
+			<key>pfm_default</key>
+			<integer>0</integer>
+			<key>pfm_description</key>
+			<string>Set the number of minutes before the application notifies the user that the session is expiring</string>
+			<key>pfm_documentation_url</key>
+			<string>https://docs.jigsaw24.com/Elevate24/Documentation/Elevate24%20Configuration/4%20Elevate24%20-%20Customisation.html#session-customisation</string>
+			<key>pfm_name</key>
+			<string>sessionExpiryReminder</string>
+			<key>pfm_title</key>
+			<string>Set Session Expiry Notification (Premium)</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+			<key>pfm_value_placeholder</key>
+			<string>0</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2.4.0</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>Elevate24 2.4+ Only. When enabled, allows users to specify their own elevation and demotion script paths in addition to any admin-defined scripts. If scripts are configured at both the admin and user level, all scripts will execute. When disabled, only admin-defined scripts (ElevateScriptPath and DemoteScriptPath) will be used.</string>
+			<key>pfm_name</key>
+			<string>AllowUserDefinedScripts</string>
+			<key>pfm_title</key>
+			<string>Allow User Defined Scripts</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2.4.0</string>
+			<key>pfm_description</key>
+			<string>Elevate24 2.4+ Only. Specify the full file path to a script that will be executed automatically when a user's session is elevated to admin. This can be used to perform actions such as logging, launching tools, or configuring the environment at the point of elevation.</string>
+			<key>pfm_name</key>
+			<string>ElevateScriptPath</string>
+			<key>pfm_title</key>
+			<string>Elevate Script Path</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>/path/to/elevate_script.sh</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2.4.0</string>
+			<key>pfm_description</key>
+			<string>Elevate24 2.4+ Only. Optionally provide the SHA256 hash of the elevation script specified in ElevateScriptPath. When configured, Elevate24 will verify the script's integrity before execution and refuse to run it if the hash does not match, protecting against unauthorised modification of the script.</string>
+			<key>pfm_name</key>
+			<string>ElevateScriptHash</string>
+			<key>pfm_title</key>
+			<string>Elevate Script Hash</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>SHA256 hash</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2.4.0</string>
+			<key>pfm_description</key>
+			<string>Elevate24 2.4+ Only. Specify the full file path to a script that will be executed automatically when a user's elevated session ends and they are demoted back to a standard user. This can be used to perform clean-up tasks, revoke temporary access, or audit the end of an elevated session.</string>
+			<key>pfm_name</key>
+			<string>DemoteScriptPath</string>
+			<key>pfm_title</key>
+			<string>Demote Script Path</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>/path/to/demote_script.sh</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2.4.0</string>
+			<key>pfm_description</key>
+			<string>Elevate24 2.4+ Only. Optionally provide the SHA256 hash of the demotion script specified in DemoteScriptPath. When configured, Elevate24 will verify the script's integrity before execution and refuse to run it if the hash does not match, protecting against unauthorised modification of the script.</string>
+			<key>pfm_name</key>
+			<string>DemoteScriptHash</string>
+			<key>pfm_title</key>
+			<string>Demote Script Hash</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>SHA256 hash</string>
+		</dict>
+		<dict>
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
 			<string>To disable sending of premium reporting data to Jigsaw24. If you are a basic customer, no data is sent from the device, it is all stored locally.</string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/Jigsaw24/Elevate24/blob/main/Documentation/Elevate24%20-%20Reporting%20Configuration%20Keys.md#disable-sending-data-to-jigsaw24</string>
+			<string>https://docs.jigsaw24.com/Elevate24/Documentation/Elevate24%20Reporting/2%20Elevate24%20-%20App%20Reporting%20Configuration%20Keys.html#disable-sending-data-to-jigsaw24</string>
 			<key>pfm_name</key>
 			<string>DisableDefaultLog</string>
 			<key>pfm_title</key>
@@ -508,7 +688,7 @@
 			<key>pfm_description</key>
 			<string></string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/Jigsaw24/Elevate24/blob/main/Documentation/Elevate24%20-%20Reporting%20Configuration%20Keys.md#reporting-configuration-keys-for-elevate24</string>
+			<string>https://docs.jigsaw24.com/Elevate24/Documentation/Elevate24%20Reporting/2%20Elevate24%20-%20App%20Reporting%20Configuration%20Keys.html#elevate24-application-level-reporting-configuration-keys</string>
 			<key>pfm_name</key>
 			<string>siemURL</string>
 			<key>pfm_title</key>
@@ -520,7 +700,7 @@
 			<key>pfm_description</key>
 			<string></string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/Jigsaw24/Elevate24/blob/main/Documentation/Elevate24%20-%20Reporting%20Configuration%20Keys.md#reporting-configuration-keys-for-elevate24</string>
+			<string>https://docs.jigsaw24.com/Elevate24/Documentation/Elevate24%20Reporting/2%20Elevate24%20-%20App%20Reporting%20Configuration%20Keys.html#elevate24-application-level-reporting-configuration-keys</string>
 			<key>pfm_name</key>
 			<string>siemAuthHeader</string>
 			<key>pfm_title</key>
@@ -532,7 +712,7 @@
 			<key>pfm_description</key>
 			<string></string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/Jigsaw24/Elevate24/blob/main/Documentation/Elevate24%20-%20Reporting%20Configuration%20Keys.md#reporting-configuration-keys-for-elevate24</string>
+			<string>https://docs.jigsaw24.com/Elevate24/Documentation/Elevate24%20Reporting/2%20Elevate24%20-%20App%20Reporting%20Configuration%20Keys.html#elevate24-application-level-reporting-configuration-keys</string>
 			<key>pfm_name</key>
 			<string>siemAuthToken</string>
 			<key>pfm_title</key>
@@ -542,7 +722,7 @@
 		</dict>
 		<dict>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/Jigsaw24/Elevate24/blob/main/Documentation/Elevate24%20-%20Reporting%20Configuration%20Keys.md#microsoft-sentinel</string>
+			<string>https://docs.jigsaw24.com/Elevate24/Documentation/Elevate24%20Reporting/2%20Elevate24%20-%20App%20Reporting%20Configuration%20Keys.html#elevate24-application-level-reporting-configuration-keys</string>
 			<key>pfm_name</key>
 			<string>microsoftsentinel</string>
 			<key>pfm_subkeys</key>
@@ -595,36 +775,12 @@
 			<string>array</string>
 		</dict>
 		<dict>
-			<key>pfm_description</key>
-			<string></string>
-			<key>pfm_documentation_url</key>
-			<string>https://github.com/Jigsaw24/Elevate24/blob/main/Documentation/Elevate24%20-%20Reporting%20Configuration%20Keys.md#reporting-configuration-keys-for-elevate24</string>
-			<key>pfm_name</key>
-			<string>teamswebhook</string>
-			<key>pfm_title</key>
-			<string>Teams Webhook (Premium)</string>
-			<key>pfm_type</key>
-			<string>string</string>
-		</dict>
-		<dict>
-			<key>pfm_description</key>
-			<string></string>
-			<key>pfm_documentation_url</key>
-			<string>https://github.com/Jigsaw24/Elevate24/blob/main/Documentation/Elevate24%20-%20Reporting%20Configuration%20Keys.md#reporting-configuration-keys-for-elevate24</string>
-			<key>pfm_name</key>
-			<string>slack-webhook</string>
-			<key>pfm_title</key>
-			<string>Slack Webhook (Premium)</string>
-			<key>pfm_type</key>
-			<string>string</string>
-		</dict>
-		<dict>
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
 			<string>To enable monitoring of administrator activities whilst in an elevated state.</string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/Jigsaw24/Elevate24/blob/main/Documentation/Elevate24%20Session%20Reporting%20-%20Configuration%20Keys.md#configuration-keys-for-elevate24-session-reporting</string>
+			<string>https://docs.jigsaw24.com/Elevate24/Documentation/Elevate24%20Configuration/6%20Elevate24%20-%20Security%20Settings.html</string>
 			<key>pfm_name</key>
 			<string>EnableSessionMonitoring</string>
 			<key>pfm_title</key>
@@ -638,7 +794,7 @@
 			<key>pfm_description</key>
 			<string>Prompts the user for their local Apple credentials or TouchID (if enabled on device) before allowing elevation.</string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/Jigsaw24/Elevate24/blob/main/Documentation/Elevate24%20-%20Configuration%20Keys.md#security-settings</string>
+			<string>https://docs.jigsaw24.com/Elevate24/Documentation/Elevate24%20Configuration/6%20Elevate24%20-%20Security%20Settings.html</string>
 			<key>pfm_name</key>
 			<string>enableAppleAuth</string>
 			<key>pfm_title</key>
@@ -652,7 +808,7 @@
 			<key>pfm_description</key>
 			<string>Enables the use of authenticator applications such as Google Auth or Microsoft Auth, prompting for a valid session token before Elevating to admin.</string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/Jigsaw24/Elevate24/blob/main/Documentation/Elevate24%20-%20Configuration%20Keys.md#security-settings</string>
+			<string>https://docs.jigsaw24.com/Elevate24/Documentation/Elevate24%20Configuration/6%20Elevate24%20-%20Security%20Settings.html</string>
 			<key>pfm_name</key>
 			<string>GoogleAuth</string>
 			<key>pfm_title</key>
@@ -666,7 +822,7 @@
 			<key>pfm_description</key>
 			<string>Will remove admin rights when the application first launches.</string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/Jigsaw24/Elevate24/blob/main/Documentation/Elevate24%20-%20Configuration%20Keys.md#security-settings</string>
+			<string>https://docs.jigsaw24.com/Elevate24/Documentation/Elevate24%20Configuration/6%20Elevate24%20-%20Security%20Settings.html#security-settings</string>
 			<key>pfm_name</key>
 			<string>standardAtLoad</string>
 			<key>pfm_title</key>
@@ -680,7 +836,7 @@
 			<key>pfm_description</key>
 			<string>Enables all admin users being demoted to standard users when the current elevation period ends. If you have any accounts on the device you'd like to remain admin please configure Demote Exclusions.</string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/Jigsaw24/Elevate24/blob/main/Documentation/Elevate24%20-%20Configuration%20Keys.md#security-settings</string>
+			<string>https://docs.jigsaw24.com/Elevate24/Documentation/Elevate24%20Configuration/6%20Elevate24%20-%20Security%20Settings.html#security-settings</string>
 			<key>pfm_name</key>
 			<string>demoteAllAdmin</string>
 			<key>pfm_title</key>
@@ -694,7 +850,7 @@
 			<key>pfm_description</key>
 			<string>Will demote all admin accounts from admin when the application quits or the laptop is restarted.</string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/Jigsaw24/Elevate24/blob/main/Documentation/Elevate24%20-%20Configuration%20Keys.md#security-settings</string>
+			<string>https://docs.jigsaw24.com/Elevate24/Documentation/Elevate24%20Configuration/6%20Elevate24%20-%20Security%20Settings.html#security-settings</string>
 			<key>pfm_name</key>
 			<string>demoteAllAdminQuit</string>
 			<key>pfm_title</key>
@@ -706,7 +862,7 @@
 			<key>pfm_description</key>
 			<string>Will exclude accounts on device from being demoted.</string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/Jigsaw24/Elevate24/blob/main/Documentation/Elevate24%20-%20Configuration%20Keys.md#security-settings</string>
+			<string>https://docs.jigsaw24.com/Elevate24/Documentation/Elevate24%20Configuration/6%20Elevate24%20-%20Security%20Settings.html#security-settings</string>
 			<key>pfm_name</key>
 			<string>demoteExclusions</string>
 			<key>pfm_subkeys</key>
@@ -727,7 +883,7 @@
 			<key>pfm_description</key>
 			<string>Will demote the current terminal session from sudo session to standard.</string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/Jigsaw24/Elevate24/blob/main/Documentation/Elevate24%20-%20Configuration%20Keys.md#security-settings</string>
+			<string>https://docs.jigsaw24.com/Elevate24/Documentation/Elevate24%20Configuration/6%20Elevate24%20-%20Security%20Settings.html#security-settings</string>
 			<key>pfm_name</key>
 			<string>killterminalsessions</string>
 			<key>pfm_title</key>
@@ -739,9 +895,23 @@
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
+			<string>Elevate24 v2.3+ Only. To ensure the Application is protected by the on-device system extension, to prevent misuse and tampering.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://docs.jigsaw24.com/Elevate24/Documentation/Elevate24%20Configuration/6%20Elevate24%20-%20Security%20Settings.html#security-settings</string>
+			<key>pfm_name</key>
+			<string>UseSystemExtension</string>
+			<key>pfm_title</key>
+			<string>System Extension</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
 			<string>Will create a temporary secondary account instead of Elevating the primary account. A temporary password will also be supplied upon elevation.</string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/Jigsaw24/Elevate24/blob/main/Documentation/Elevate24%20-%20Configuration%20Keys.md#security-settings</string>
+			<string>https://docs.jigsaw24.com/Elevate24/Documentation/Elevate24%20Configuration/5%20Elevate24%20-%20Secondary%20Account.html</string>
 			<key>pfm_name</key>
 			<string>userElevateAdmin</string>
 			<key>pfm_title</key>
@@ -755,7 +925,7 @@
 			<key>pfm_description</key>
 			<string>If User Elevate Admin Key is enabled and this key is also enabled, the temporary account will use the current logged in users username as part of the account naming. For example, Joe.Bloggs-adm</string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/Jigsaw24/Elevate24/blob/main/Documentation/Elevate24%20-%20Configuration%20Keys.md#secondary-account-configuration</string>
+			<string>https://docs.jigsaw24.com/Elevate24/Documentation/Elevate24%20Configuration/5%20Elevate24%20-%20Secondary%20Account.html#secondary-account-configuration</string>
 			<key>pfm_name</key>
 			<string>useCurrentUserAsAdmin</string>
 			<key>pfm_title</key>
@@ -767,7 +937,7 @@
 			<key>pfm_description</key>
 			<string>If ‘Use Current User As Admin’ is not enabled, this key allows the ability to create a temporary admin account with a standard name. Such as "Temp Admin"</string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/Jigsaw24/Elevate24/blob/main/Documentation/Elevate24%20-%20Configuration%20Keys.md#secondary-account-configuration</string>
+			<string>https://docs.jigsaw24.com/Elevate24/Documentation/Elevate24%20Configuration/5%20Elevate24%20-%20Secondary%20Account.html#secondary-account-configuration</string>
 			<key>pfm_name</key>
 			<string>adminUserName</string>
 			<key>pfm_title</key>
@@ -781,7 +951,7 @@
 			<key>pfm_description</key>
 			<string>Enables the use of a custom complex password when 'User Elevate Admin' is enabled.</string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/Jigsaw24/Elevate24/blob/main/Documentation/Elevate24%20-%20Configuration%20Keys.md#secondary-account-configuration</string>
+			<string>https://docs.jigsaw24.com/Elevate24/Documentation/Elevate24%20Configuration/5%20Elevate24%20-%20Secondary%20Account.html#secondary-account-configuration</string>
 			<key>pfm_name</key>
 			<string>ComplexPassword</string>
 			<key>pfm_title</key>
@@ -793,7 +963,7 @@
 			<key>pfm_description</key>
 			<string>Enter the amount of uppercase Letters required for the password.</string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/Jigsaw24/Elevate24/blob/main/Documentation/Elevate24%20-%20Configuration%20Keys.md#secondary-account-configuration</string>
+			<string>https://docs.jigsaw24.com/Elevate24/Documentation/Elevate24%20Configuration/5%20Elevate24%20-%20Secondary%20Account.html#secondary-account-configuration</string>
 			<key>pfm_name</key>
 			<string>PasswordUppercase</string>
 			<key>pfm_title</key>
@@ -807,7 +977,7 @@
 			<key>pfm_description</key>
 			<string>Enter the amount of lowercase Letters required for the password.</string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/Jigsaw24/Elevate24/blob/main/Documentation/Elevate24%20-%20Configuration%20Keys.md#secondary-account-configuration</string>
+			<string>https://docs.jigsaw24.com/Elevate24/Documentation/Elevate24%20Configuration/5%20Elevate24%20-%20Secondary%20Account.html#secondary-account-configuration</string>
 			<key>pfm_name</key>
 			<string>PasswordLowercase</string>
 			<key>pfm_title</key>
@@ -821,7 +991,7 @@
 			<key>pfm_description</key>
 			<string>Enter the amount of numbers required for the password.</string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/Jigsaw24/Elevate24/blob/main/Documentation/Elevate24%20-%20Configuration%20Keys.md#secondary-account-configuration</string>
+			<string>https://docs.jigsaw24.com/Elevate24/Documentation/Elevate24%20Configuration/5%20Elevate24%20-%20Secondary%20Account.html#secondary-account-configuration</string>
 			<key>pfm_name</key>
 			<string>PasswordNumbers</string>
 			<key>pfm_title</key>
@@ -835,7 +1005,7 @@
 			<key>pfm_description</key>
 			<string>Enter the amount of symbols required for the password.</string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/Jigsaw24/Elevate24/blob/main/Documentation/Elevate24%20-%20Configuration%20Keys.md#secondary-account-configuration</string>
+			<string>https://docs.jigsaw24.com/Elevate24/Documentation/Elevate24%20Configuration/5%20Elevate24%20-%20Secondary%20Account.html#secondary-account-configuration</string>
 			<key>pfm_name</key>
 			<string>PasswordSymbols</string>
 			<key>pfm_title</key>
@@ -851,7 +1021,7 @@
 			<key>pfm_description</key>
 			<string>Set the number of seconds after elevation or last showing the password that the password will be shown (Max 45 seconds). This only works if 'User Elevate Admin' is enabled.</string>
 			<key>pfm_documentation_url</key>
-			<string>https://github.com/Jigsaw24/Elevate24/blob/main/Documentation/Elevate24%20-%20Configuration%20Keys.md#secondary-account-configuration</string>
+			<string>https://docs.jigsaw24.com/Elevate24/Documentation/Elevate24%20Configuration/5%20Elevate24%20-%20Secondary%20Account.html#secondary-account-configuration</string>
 			<key>pfm_name</key>
 			<string>showAdminPasswordGrace</string>
 			<key>pfm_range_max</key>
@@ -873,6 +1043,6 @@
 	<key>pfm_unique</key>
 	<true/>
 	<key>pfm_version</key>
-	<integer>1</integer>
+	<integer>6</integer>
 </dict>
 </plist>

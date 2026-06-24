@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>pfm_description</key>
-	<string>Use this section to manage the Dock.</string>
+	<string>The payload that configures the Dock.</string>
 	<key>pfm_description_reference</key>
 	<string>The Dock payload is designated by specifying com.apple.dock as the PayloadType.
 The Dock payload is supported on the user channel and, except for AllowDockFixupOverride, on all version of
@@ -17,7 +17,7 @@ macOS. The key AllowDockFixupOverride is supported on macOS 10.12 and later.</st
 	<key>pfm_interaction</key>
 	<string>combined</string>
 	<key>pfm_last_modified</key>
-	<date>2024-09-18T11:20:15Z</date>
+	<date>2026-06-23T15:59:45Z</date>
 	<key>pfm_macos_min</key>
 	<string>10.7</string>
 	<key>pfm_platforms</key>
@@ -28,7 +28,7 @@ macOS. The key AllowDockFixupOverride is supported on macOS 10.12 and later.</st
 	<array>
 		<dict>
 			<key>pfm_default</key>
-			<string>Use this section to manage the Dock.</string>
+			<string>The payload that configures the Dock.</string>
 			<key>pfm_description</key>
 			<string>The human-readable description of this payload. This description appears on the Detail screen.</string>
 			<key>pfm_name</key>
@@ -56,7 +56,7 @@ macOS. The key AllowDockFixupOverride is supported on macOS 10.12 and later.</st
 			<key>pfm_default</key>
 			<string>com.apple.dock</string>
 			<key>pfm_description</key>
-			<string>The reverse-DNS-style identifier for the payload. This identifier is usually the same as the TopLevel value, with an additional appended component. This string must be unique within the profile.
+			<string>The reverse-DNS-style identifier for the payload. This identifier is usually the same as the 'TopLevel' value, with an additional appended component. This string must be unique within the profile.
 During a profile replacement, the system updates payloads with the same 'PayloadIdentifier' and 'PayloadUUID' in the old and new profiles.</string>
 			<key>pfm_name</key>
 			<string>PayloadIdentifier</string>
@@ -168,7 +168,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 						</dict>
 						<dict>
 							<key>pfm_description</key>
-							<string>The information about the dock item.</string>
+							<string>The information about the Dock item.</string>
 							<key>pfm_hidden</key>
 							<string>container</string>
 							<key>pfm_name</key>
@@ -179,7 +179,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 							<array>
 								<dict>
 									<key>pfm_description</key>
-									<string>The label of the dock item.</string>
+									<string>The label of the Dock item.</string>
 									<key>pfm_hidden</key>
 									<string>all</string>
 									<key>pfm_name</key>
@@ -199,8 +199,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<key>pfm_description</key>
 									<string>Display name in the profile GUI of a dock item.</string>
 									<key>pfm_description_reference</key>
-									<string></string>
-									<key>pfm_documentation_source</key>
 									<string></string>
 									<key>pfm_hidden</key>
 									<string>all</string>
@@ -244,8 +242,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								<dict>
 									<key>pfm_description</key>
 									<string>The data in a file. For Apple use only.</string>
-									<key>pfm_documentation_source</key>
-									<string>/System/Library/PrivateFrameworks/ConfigurationEngineModel.framework/Versions/A/ConfigurationEngineModel</string>
 									<key>pfm_hidden</key>
 									<string>container</string>
 									<key>pfm_name</key>
@@ -259,8 +255,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 											<string>Path to the application.</string>
 											<key>pfm_description_reference</key>
 											<string></string>
-											<key>pfm_documentation_source</key>
-											<string>/System/Library/PrivateFrameworks/ConfigurationEngineModel.framework/Versions/A/ConfigurationEngineModel</string>
 											<key>pfm_name</key>
 											<string>_CFURLString</string>
 											<key>pfm_title</key>
@@ -273,8 +267,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 											<string>Path type. 0 = /Path/to/item, 15 = file://Path/to/item</string>
 											<key>pfm_description_reference</key>
 											<string></string>
-											<key>pfm_documentation_source</key>
-											<string>/System/Library/PrivateFrameworks/ConfigurationEngineModel.framework/Versions/A/ConfigurationEngineModel</string>
 											<key>pfm_hidden</key>
 											<string>all</string>
 											<key>pfm_name</key>
@@ -343,9 +335,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<array>
 				<dict>
 					<key>pfm_description</key>
-					<string></string>
-					<key>pfm_description_reference</key>
-					<string></string>
+					<string>Items that are located on the Documents side of the Dock and cannot be removed from that location.</string>
 					<key>pfm_name</key>
 					<string>StaticItem</string>
 					<key>pfm_subkeys</key>
@@ -378,7 +368,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 						</dict>
 						<dict>
 							<key>pfm_description</key>
-							<string>The information about the dock item.</string>
+							<string>The information about the Dock item.</string>
 							<key>pfm_hidden</key>
 							<string>container</string>
 							<key>pfm_name</key>
@@ -391,7 +381,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<key>pfm_default_copy</key>
 									<string>static-others.StaticItem.tile-data.file-data._CFURLString</string>
 									<key>pfm_description</key>
-									<string>The label of the dock item.</string>
+									<string>The label of the Dock item.</string>
 									<key>pfm_name</key>
 									<string>label</string>
 									<key>pfm_require</key>
@@ -409,8 +399,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<key>pfm_description</key>
 									<string>Display name in the profile GUI of a dock item.</string>
 									<key>pfm_description_reference</key>
-									<string></string>
-									<key>pfm_documentation_source</key>
 									<string></string>
 									<key>pfm_hidden</key>
 									<string>all</string>
@@ -436,9 +424,10 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<string>static-others.StaticItem.tile-type</string>
 									<key>pfm_description</key>
 									<string>The type of tile:
-* '0': URL
-* '1': File
-* '3': Directory</string>
+
+- '0': URL
+- '1': File
+- '3': Directory</string>
 									<key>pfm_hidden</key>
 									<string>all</string>
 									<key>pfm_name</key>
@@ -469,8 +458,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								<dict>
 									<key>pfm_description</key>
 									<string>The data in a file. For Apple use only.</string>
-									<key>pfm_documentation_source</key>
-									<string>/System/Library/PrivateFrameworks/ConfigurationEngineModel.framework/Versions/A/ConfigurationEngineModel</string>
 									<key>pfm_exclude</key>
 									<array>
 										<dict>
@@ -507,8 +494,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 											<string>Path to the file.</string>
 											<key>pfm_description_reference</key>
 											<string></string>
-											<key>pfm_documentation_source</key>
-											<string>/System/Library/PrivateFrameworks/ConfigurationEngineModel.framework/Versions/A/ConfigurationEngineModel</string>
 											<key>pfm_name</key>
 											<string>_CFURLString</string>
 											<key>pfm_title</key>
@@ -521,8 +506,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 											<string>Path type. 0 = /Path/to/item, 15 = file://Path/to/item</string>
 											<key>pfm_description_reference</key>
 											<string></string>
-											<key>pfm_documentation_source</key>
-											<string>/System/Library/PrivateFrameworks/ConfigurationEngineModel.framework/Versions/A/ConfigurationEngineModel</string>
 											<key>pfm_hidden</key>
 											<string>all</string>
 											<key>pfm_name</key>
@@ -561,8 +544,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<string>Path to item relative to the current user's home directory.</string>
 									<key>pfm_description_reference</key>
 									<string></string>
-									<key>pfm_documentation_source</key>
-									<string></string>
 									<key>pfm_exclude</key>
 									<array>
 										<dict>
@@ -598,8 +579,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<key>pfm_description</key>
 									<string>Arrangement (sorting) of the directory contents.</string>
 									<key>pfm_description_reference</key>
-									<string></string>
-									<key>pfm_documentation_source</key>
 									<string></string>
 									<key>pfm_exclude</key>
 									<array>
@@ -647,8 +626,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<string>Display directory as either a Folder or a Stack.</string>
 									<key>pfm_description_reference</key>
 									<string></string>
-									<key>pfm_documentation_source</key>
-									<string></string>
 									<key>pfm_exclude</key>
 									<array>
 										<dict>
@@ -688,8 +665,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<key>pfm_description</key>
 									<string>How to show directory contents.</string>
 									<key>pfm_description_reference</key>
-									<string></string>
-									<key>pfm_documentation_source</key>
 									<string></string>
 									<key>pfm_exclude</key>
 									<array>
@@ -750,7 +725,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_description</key>
-			<string>An array of items located on the Applications side of the Dock that can be removed from the dock.</string>
+			<string>An array of items located on the Applications side of the Dock that can be removed from the Dock.</string>
 			<key>pfm_name</key>
 			<string>persistent-apps</string>
 			<key>pfm_subkeys</key>
@@ -786,7 +761,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 						</dict>
 						<dict>
 							<key>pfm_description</key>
-							<string>The information about the dock item.</string>
+							<string>The information about the Dock item.</string>
 							<key>pfm_hidden</key>
 							<string>container</string>
 							<key>pfm_name</key>
@@ -797,7 +772,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 							<array>
 								<dict>
 									<key>pfm_description</key>
-									<string>The label of the dock item.</string>
+									<string>The label of the Dock item.</string>
 									<key>pfm_hidden</key>
 									<string>all</string>
 									<key>pfm_name</key>
@@ -817,8 +792,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<key>pfm_description</key>
 									<string>Display name in the profile GUI of a dock item.</string>
 									<key>pfm_description_reference</key>
-									<string></string>
-									<key>pfm_documentation_source</key>
 									<string></string>
 									<key>pfm_hidden</key>
 									<string>all</string>
@@ -862,8 +835,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								<dict>
 									<key>pfm_description</key>
 									<string>The data in a file. For Apple use only.</string>
-									<key>pfm_documentation_source</key>
-									<string>/System/Library/PrivateFrameworks/ConfigurationEngineModel.framework/Versions/A/ConfigurationEngineModel</string>
 									<key>pfm_hidden</key>
 									<string>container</string>
 									<key>pfm_name</key>
@@ -877,8 +848,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 											<string>Path to the application.</string>
 											<key>pfm_description_reference</key>
 											<string></string>
-											<key>pfm_documentation_source</key>
-											<string>/System/Library/PrivateFrameworks/ConfigurationEngineModel.framework/Versions/A/ConfigurationEngineModel</string>
 											<key>pfm_name</key>
 											<string>_CFURLString</string>
 											<key>pfm_title</key>
@@ -891,8 +860,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 											<string>Path type. 0 = /Path/to/item, 15 = file://Path/to/item</string>
 											<key>pfm_description_reference</key>
 											<string></string>
-											<key>pfm_documentation_source</key>
-											<string>/System/Library/PrivateFrameworks/ConfigurationEngineModel.framework/Versions/A/ConfigurationEngineModel</string>
 											<key>pfm_hidden</key>
 											<string>all</string>
 											<key>pfm_name</key>
@@ -952,16 +919,14 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_description</key>
-			<string>An array of items located on the Documents side of the Dock that can be removed from the dock.</string>
+			<string>An array of items located on the Documents side of the Dock that can be removed from the Dock.</string>
 			<key>pfm_name</key>
 			<string>persistent-others</string>
 			<key>pfm_subkeys</key>
 			<array>
 				<dict>
 					<key>pfm_description</key>
-					<string></string>
-					<key>pfm_description_reference</key>
-					<string></string>
+					<string>Items that are located on the Documents side of the Dock and cannot be removed from that location.</string>
 					<key>pfm_name</key>
 					<string>StaticItem</string>
 					<key>pfm_subkeys</key>
@@ -994,7 +959,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 						</dict>
 						<dict>
 							<key>pfm_description</key>
-							<string>The information about the dock item.</string>
+							<string>The information about the Dock item.</string>
 							<key>pfm_hidden</key>
 							<string>container</string>
 							<key>pfm_name</key>
@@ -1007,7 +972,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<key>pfm_default_copy</key>
 									<string>persistent-others.StaticItem.tile-data.file-data._CFURLString</string>
 									<key>pfm_description</key>
-									<string>The label of the dock item.</string>
+									<string>The label of the Dock item.</string>
 									<key>pfm_name</key>
 									<string>label</string>
 									<key>pfm_require</key>
@@ -1025,8 +990,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<key>pfm_description</key>
 									<string>Display name in the profile GUI of a dock item.</string>
 									<key>pfm_description_reference</key>
-									<string></string>
-									<key>pfm_documentation_source</key>
 									<string></string>
 									<key>pfm_hidden</key>
 									<string>all</string>
@@ -1052,9 +1015,10 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<string>persistent-others.StaticItem.tile-type</string>
 									<key>pfm_description</key>
 									<string>The type of tile:
-* '0': URL
-* '1': File
-* '3': Directory</string>
+
+- '0': URL
+- '1': File
+- '3': Directory</string>
 									<key>pfm_hidden</key>
 									<string>all</string>
 									<key>pfm_name</key>
@@ -1085,8 +1049,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								<dict>
 									<key>pfm_description</key>
 									<string>The data in a file. For Apple use only.</string>
-									<key>pfm_documentation_source</key>
-									<string>/System/Library/PrivateFrameworks/ConfigurationEngineModel.framework/Versions/A/ConfigurationEngineModel</string>
 									<key>pfm_exclude</key>
 									<array>
 										<dict>
@@ -1123,8 +1085,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 											<string>Path to the file.</string>
 											<key>pfm_description_reference</key>
 											<string></string>
-											<key>pfm_documentation_source</key>
-											<string>/System/Library/PrivateFrameworks/ConfigurationEngineModel.framework/Versions/A/ConfigurationEngineModel</string>
 											<key>pfm_name</key>
 											<string>_CFURLString</string>
 											<key>pfm_title</key>
@@ -1137,8 +1097,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 											<string>Path type. 0 = /Path/to/item, 15 = file://Path/to/item</string>
 											<key>pfm_description_reference</key>
 											<string></string>
-											<key>pfm_documentation_source</key>
-											<string>/System/Library/PrivateFrameworks/ConfigurationEngineModel.framework/Versions/A/ConfigurationEngineModel</string>
 											<key>pfm_hidden</key>
 											<string>all</string>
 											<key>pfm_name</key>
@@ -1177,8 +1135,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<string>Path to item relative to the current user's home directory.</string>
 									<key>pfm_description_reference</key>
 									<string></string>
-									<key>pfm_documentation_source</key>
-									<string></string>
 									<key>pfm_exclude</key>
 									<array>
 										<dict>
@@ -1214,8 +1170,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<key>pfm_description</key>
 									<string>Arrangement (sorting) of the directory contents.</string>
 									<key>pfm_description_reference</key>
-									<string></string>
-									<key>pfm_documentation_source</key>
 									<string></string>
 									<key>pfm_exclude</key>
 									<array>
@@ -1263,8 +1217,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<string>Display directory as either a Folder or a Stack.</string>
 									<key>pfm_description_reference</key>
 									<string></string>
-									<key>pfm_documentation_source</key>
-									<string></string>
 									<key>pfm_exclude</key>
 									<array>
 										<dict>
@@ -1304,8 +1256,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<key>pfm_description</key>
 									<string>How to show directory contents.</string>
 									<key>pfm_description_reference</key>
-									<string></string>
-									<key>pfm_documentation_source</key>
 									<string></string>
 									<key>pfm_exclude</key>
 									<array>
@@ -1460,7 +1410,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_description</key>
-			<string>The orientation of the dock.</string>
+			<string>The orientation of the Dock.</string>
 			<key>pfm_name</key>
 			<string>orientation</string>
 			<key>pfm_range_list</key>
@@ -1518,7 +1468,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>If 'true', locks 'Minimize windows using.'</string>
+			<string>If 'true', locks "Minimize windows using."</string>
 			<key>pfm_name</key>
 			<string>mineffect-immutable</string>
 			<key>pfm_title</key>
@@ -1530,7 +1480,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>If 'true', enables 'Minimize windows into application icon.'</string>
+			<string>If 'true', enables "Minimize windows into application icon."</string>
 			<key>pfm_name</key>
 			<string>minimize-to-application</string>
 			<key>pfm_title</key>
@@ -1542,7 +1492,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>If 'true', disables the 'Minimize windows into application icon' checkbox.</string>
+			<string>If 'true', disables the "Minimize windows into application icon" checkbox.</string>
 			<key>pfm_macos_min</key>
 			<string>10.14</string>
 			<key>pfm_name</key>
@@ -1556,7 +1506,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>If 'true', enables 'Animate opening applications.'</string>
+			<string>If 'true', enables "Animate opening applications."</string>
 			<key>pfm_name</key>
 			<string>launchanim</string>
 			<key>pfm_title</key>
@@ -1568,7 +1518,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>If 'true', locks 'Animate opening applications.'</string>
+			<string>If 'true', locks "Animate opening applications."</string>
 			<key>pfm_name</key>
 			<string>launchanim-immutable</string>
 			<key>pfm_title</key>
@@ -1580,7 +1530,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>If 'true', enables 'Automatically hide and show the dock.'</string>
+			<string>If 'true', enables "Automatically hide and show the Dock."</string>
 			<key>pfm_name</key>
 			<string>autohide</string>
 			<key>pfm_title</key>
@@ -1592,7 +1542,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>If 'true', locks 'Automatically hide.'</string>
+			<string>If 'true', locks "Automatically hide."</string>
 			<key>pfm_name</key>
 			<string>autohide-immutable</string>
 			<key>pfm_title</key>
@@ -1616,7 +1566,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>If 'true', enables 'Show recent items.'</string>
+			<string>If 'true', enables "Show recent items."</string>
 			<key>pfm_macos_min</key>
 			<string>10.14</string>
 			<key>pfm_name</key>
@@ -1628,9 +1578,23 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_default</key>
+			<integer>3</integer>
+			<key>pfm_description</key>
+			<string>Controls the number of items shown in the recent apps area of the dock.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://apple.stackexchange.com/questions/411278/show-more-than-three-recent-applications-in-dock</string>
+			<key>pfm_name</key>
+			<string>show-recent-count</string>
+			<key>pfm_title</key>
+			<string>Number of recent applications</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>If 'true', uses the 'static-apps' and 'static-others' dictionaries for the dock and ignores any items in the 'persistent-apps' and 'persistent-others' dictionaries. If 'false', the contents are merged with the static items listed first.</string>
+			<string>If 'true', uses the 'static-apps' and 'static-others' dictionaries for the Dock and ignores any items in the 'persistent-apps' and 'persistent-others' dictionaries. If 'false', the contents are merged with the static items listed first.</string>
 			<key>pfm_name</key>
 			<string>static-only</string>
 			<key>pfm_title</key>
@@ -1642,7 +1606,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>If 'true', disables changes to the dock.</string>
+			<string>If 'true', disables changes to the Dock.</string>
 			<key>pfm_name</key>
 			<string>contents-immutable</string>
 			<key>pfm_title</key>
@@ -1666,9 +1630,11 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_description</key>
-			<string>One or more special folders that may be created at user login time and placed in the dock.
+			<string>One or more special folders that may be created at user login time and placed in the Dock.
 
-The 'My Applications' item is only used for Simple Finder environments. The 'Original Network Home' item is only used for mobile account users.</string>
+
+
+The "My Applications" item is only used for Simple Finder environments. The "Original Network Home" item is only used for mobile account users.</string>
 			<key>pfm_name</key>
 			<string>MCXDockSpecialFolders</string>
 			<key>pfm_repetition_max</key>
@@ -2077,7 +2043,7 @@ The 'My Applications' item is only used for Simple Finder environments. The 'Ori
 		</dict>
 		<dict>
 			<key>pfm_description</key>
-			<string>Set the 'Prefer tabs when opening documents' to the provided value.</string>
+			<string>Set the "Prefer tabs when opening documents" to the provided value.</string>
 			<key>pfm_macos_min</key>
 			<string>10.15</string>
 			<key>pfm_name</key>
@@ -2103,7 +2069,7 @@ The 'My Applications' item is only used for Simple Finder environments. The 'Ori
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>If 'true', disables 'Prefer tabs when opening documents' checkbox.</string>
+			<string>If 'true', disables "Prefer tabs when opening documents" checkbox.</string>
 			<key>pfm_macos_min</key>
 			<string>10.12</string>
 			<key>pfm_name</key>
@@ -2141,7 +2107,7 @@ The 'My Applications' item is only used for Simple Finder environments. The 'Ori
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>If 'true', locks 'Double-click a window's title bar.'</string>
+			<string>If 'true', locks "Double-click a window's title bar."</string>
 			<key>pfm_macos_min</key>
 			<string>10.14</string>
 			<key>pfm_name</key>
@@ -2155,7 +2121,7 @@ The 'My Applications' item is only used for Simple Finder environments. The 'Ori
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>If 'true', locks 'Show indicators.'</string>
+			<string>If 'true', locks "Show indicators."</string>
 			<key>pfm_name</key>
 			<string>showindicators-immutable</string>
 			<key>pfm_title</key>
@@ -2167,7 +2133,7 @@ The 'My Applications' item is only used for Simple Finder environments. The 'Ori
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>If 'true', disables 'Show recent applications' checkbox.</string>
+			<string>If 'true', disables "Show recent applications" checkbox.</string>
 			<key>pfm_macos_min</key>
 			<string>10.15</string>
 			<key>pfm_name</key>
@@ -2188,6 +2154,6 @@ The 'My Applications' item is only used for Simple Finder environments. The 'Ori
 	<key>pfm_unique</key>
 	<false/>
 	<key>pfm_version</key>
-	<integer>7</integer>
+	<integer>8</integer>
 </dict>
 </plist>

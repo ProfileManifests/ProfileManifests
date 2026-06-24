@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 # # -*- coding: utf-8 -*-
 
 import plistlib
@@ -6,14 +6,16 @@ import os
 from subprocess import call
 import datetime
 
+def readPlist(path):
+    with open(path, 'rb') as fh:
+        return plistlib.load(fh)
 
 manifestpath = os.path.abspath('/Applications/Google Chrome.app/Contents/Resources/com.google.Chrome.manifest/Contents/Resources/com.google.Chrome.manifest')
-manifest = plistlib.readPlist(manifestpath)
+manifest = readPlist(manifestpath)
 Localizable = os.path.abspath('/Applications/Google Chrome.app/Contents/Resources/com.google.Chrome.manifest/Contents/Resources/en.lproj/Localizable.strings')
-call(["/usr/bin/plutil", "-convert", "xml1", Localizable])
-strings = plistlib.readPlist(Localizable)
-chromeinfo = plistlib.readPlist(
-    os.path.abspath("/Applications/Google Chrome.app/Contents/Info.plist"))
+call(['/usr/bin/plutil', '-convert', 'xml1', '-o', '/tmp/Localizable.strings', Localizable])
+strings = readPlist('/tmp/Localizable.strings')
+chromeinfo = readPlist(os.path.abspath("/Applications/Google Chrome.app/Contents/Info.plist"))
 
 for dict in manifest["pfm_subkeys"]:
     dict["pfm_title"] = strings[dict["pfm_name"]+".pfm_title"]
@@ -42,7 +44,11 @@ for dict in manifest["pfm_subkeys"]:
         for item in range_list:
             for line in description.splitlines():
                 if line.startswith(str(item) + ' '):
-                    range_list_titles.append(line.split(' - ')[1])
+                    line_split = line.split(' - ')
+                    if len(line_split) >= 2:
+                        range_list_titles.append(line_split[1])
+                    else:
+                        range_list_titles.append(line)
                     description_new = description_new.replace(line + '\n','')
         
         if range_list_titles and len(range_list_titles) == len(range_list):
@@ -131,5 +137,6 @@ newmanifest["pfm_platforms"] = ["macOS"]
 # Add pfm_interaction
 newmanifest["pfm_interaction"] = "combined"
 
-plistlib.writePlist(manifest,
-    os.path.abspath(os.path.expanduser("~/Desktop/GoogleChrome_{}.plist".format(chromeinfo["CFBundleShortVersionString"]))))
+path = os.path.abspath(os.path.expanduser(os.path.dirname(os.path.realpath(__file__))+"/GoogleChrome_{}.plist".format(chromeinfo["CFBundleShortVersionString"])))
+with open(path, 'wb') as fh:
+    plistlib.dump(newmanifest, fh)

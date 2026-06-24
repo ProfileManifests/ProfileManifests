@@ -13,7 +13,7 @@
 	<key>pfm_format_version</key>
 	<integer>1</integer>
 	<key>pfm_last_modified</key>
-	<date>2024-08-29T07:55:25Z</date>
+	<date>2026-06-23T15:59:45Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -24,7 +24,7 @@
 			<key>pfm_default</key>
 			<string>Configures Munki settings</string>
 			<key>pfm_description</key>
-			<string>Description of the payload</string>
+			<string>The human-readable description of this payload. This description appears on the Detail screen.</string>
 			<key>pfm_name</key>
 			<string>PayloadDescription</string>
 			<key>pfm_title</key>
@@ -36,7 +36,7 @@
 			<key>pfm_default</key>
 			<string>Munki</string>
 			<key>pfm_description</key>
-			<string>Name of the payload</string>
+			<string>The human-readable name for the profile payload. The name appears on the Detail screen and doesn't need to be unique.</string>
 			<key>pfm_name</key>
 			<string>PayloadDisplayName</string>
 			<key>pfm_require</key>
@@ -50,7 +50,8 @@
 			<key>pfm_default</key>
 			<string>ManagedInstalls</string>
 			<key>pfm_description</key>
-			<string>A unique identifier for the payload, dot-delimited.  Usually root PayloadIdentifier+subidentifier</string>
+			<string>The reverse-DNS-style identifier for the payload. This identifier is usually the same as the 'TopLevel' value, with an additional appended component. This string must be unique within the profile.
+During a profile replacement, the system updates payloads with the same 'PayloadIdentifier' and 'PayloadUUID' in the old and new profiles.</string>
 			<key>pfm_name</key>
 			<string>PayloadIdentifier</string>
 			<key>pfm_require</key>
@@ -64,7 +65,7 @@
 			<key>pfm_default</key>
 			<string>ManagedInstalls</string>
 			<key>pfm_description</key>
-			<string>The type of the payload, a reverse dns string</string>
+			<string>The payload type, which each payload domain's reference page specifies.</string>
 			<key>pfm_name</key>
 			<string>PayloadType</string>
 			<key>pfm_require</key>
@@ -78,7 +79,8 @@
 			<key>pfm_default</key>
 			<string></string>
 			<key>pfm_description</key>
-			<string>Unique identifier for the payload (format 01234567-89AB-CDEF-0123-456789ABCDEF)</string>
+			<string>The globally unique identifier for the payload. The actual content is unimportant, but must be globally unique. In macOS, use 'uuidgen' to generate UUIDs.
+During a profile replacement, the system updates payloads with the same 'PayloadIdentifier' and 'PayloadUUID' in the old and new profiles.</string>
 			<key>pfm_format</key>
 			<string>^[0-9A-Za-z]{8}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{12}$</string>
 			<key>pfm_name</key>
@@ -94,9 +96,13 @@
 			<key>pfm_default</key>
 			<integer>1</integer>
 			<key>pfm_description</key>
-			<string>The version of the whole configuration profile.</string>
+			<string>The version of this specific payload.</string>
 			<key>pfm_name</key>
 			<string>PayloadVersion</string>
+			<key>pfm_range_list</key>
+			<array>
+				<integer>1</integer>
+			</array>
 			<key>pfm_require</key>
 			<string>always</string>
 			<key>pfm_title</key>
@@ -106,7 +112,7 @@
 		</dict>
 		<dict>
 			<key>pfm_description</key>
-			<string>This value describes the issuing organization of the profile, as displayed to the user</string>
+			<string>The human-readable string containing the name of the organization that provides the profile. This value doesn't need to match the organization payload value in the enclosing dictionary.</string>
 			<key>pfm_name</key>
 			<string>PayloadOrganization</string>
 			<key>pfm_title</key>
@@ -178,6 +184,9 @@
 					<string>AggressiveUpdateNotificationDays</string>
 					<string>DaysBetweenNotifications</string>
 					<string>InstallRequiresLogout</string>
+					<string>MSCOfferToQuitBlockingApps</string>
+					<string>MSCOfferToForceQuitBlockingApps</string>
+					<string>MSCOfferToUpdateOthers</string>
 					<string>ShowRemovalDetail</string>
 					<string>ShowOptionalInstallsForHigherOSVersions</string>
 					<string>SuppressUserNotification</string>
@@ -199,6 +208,8 @@
 					<string>CatalogURL</string>
 					<string>ClientResourceURL</string>
 					<string>ClientResourcesFilename</string>
+					<string>DownloadRetries</string>
+					<string>DownloadRetrySleepSeconds</string>
 					<string>FollowHTTPRedirects</string>
 					<string>HelpURL</string>
 					<string>IconURL</string>
@@ -460,6 +471,86 @@
 			<string>Days</string>
 		</dict>
 		<dict>
+			<key>pfm_app_min</key>
+			<string>7.1</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>If true, if there are any running blocking_applications for pending updates, a sheet will be displayed allowing the user to direct Managed Software Center to attempt to quit the blocking applications.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/munki/munki/wiki/Munki-7.1-Assisted-App-Quit</string>
+			<key>pfm_name</key>
+			<string>MSCOfferToQuitBlockingApps</string>
+			<key>pfm_title</key>
+			<string>Offer To Quit Blocking Apps</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>7.1</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>If this (and MSCOfferToQuitBlockingApps) is true, if a "polite" attempt to quit an application fails, a button to force quit the application will be displayed.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/munki/munki/wiki/Munki-7.1-Assisted-App-Quit</string>
+			<key>pfm_exclude</key>
+			<array>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_n_range_list</key>
+							<array>
+								<true/>
+							</array>
+							<key>pfm_target</key>
+							<string>MSCOfferToQuitBlockingApps</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+			<key>pfm_name</key>
+			<string>MSCOfferToForceQuitBlockingApps</string>
+			<key>pfm_title</key>
+			<string>Offer To Force Quit Blocking Apps</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>7.1</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>If there is a mix of pending updates, some of which are blocked by open applications, and some that are not, and this preference is true (and so is MSCOfferToQuitBlockingApps), a button will be shown to allow users to proceed with updating the non-blocked updates.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/munki/munki/wiki/Munki-7.1-Assisted-App-Quit</string>
+			<key>pfm_exclude</key>
+			<array>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_n_range_list</key>
+							<array>
+								<true/>
+							</array>
+							<key>pfm_target</key>
+							<string>MSCOfferToQuitBlockingApps</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+			<key>pfm_name</key>
+			<string>MSCOfferToUpdateOthers</string>
+			<key>pfm_title</key>
+			<string>Offer To Update Others</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
 			<key>pfm_description</key>
 			<string>Controls how Munki verifies the integrity of downloaded packages. (none = No integrity check is performed, hash = Integrity check is performed if package info contains checksum information, hash_strict = Integrity check is performed, and fails if package info does not contain checksum information.)</string>
 			<key>pfm_name</key>
@@ -529,6 +620,62 @@
 			<string>Ignore System Proxies</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>7.1</string>
+			<key>pfm_default</key>
+			<integer>0</integer>
+			<key>pfm_description</key>
+			<string>Number of times to retry a failed download. Valid values are 0-10. Set to 0 to disable retries.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/munki/munki/wiki/Munki-7.1-download-retries</string>
+			<key>pfm_name</key>
+			<string>DownloadRetries</string>
+			<key>pfm_range_max</key>
+			<integer>10</integer>
+			<key>pfm_range_min</key>
+			<integer>0</integer>
+			<key>pfm_title</key>
+			<string>Download Retries</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>7.1</string>
+			<key>pfm_default</key>
+			<integer>10</integer>
+			<key>pfm_description</key>
+			<string>How many seconds to wait between download retries. Valid values are 1-30.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/munki/munki/wiki/Munki-7.1-download-retries</string>
+			<key>pfm_exclude</key>
+			<array>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_present</key>
+							<false/>
+							<key>pfm_target</key>
+							<string>DownloadRetries</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+			<key>pfm_name</key>
+			<string>DownloadRetrySleepSeconds</string>
+			<key>pfm_range_max</key>
+			<integer>30</integer>
+			<key>pfm_range_min</key>
+			<integer>1</integer>
+			<key>pfm_title</key>
+			<string>Download Retry Sleep Seconds</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+			<key>pfm_value_unit</key>
+			<string>Seconds</string>
 		</dict>
 		<dict>
 			<key>pfm_description</key>
@@ -911,6 +1058,6 @@ S3 Endpoint for bucket.</string>
 	<key>pfm_unique</key>
 	<true/>
 	<key>pfm_version</key>
-	<integer>11</integer>
+	<integer>12</integer>
 </dict>
 </plist>
