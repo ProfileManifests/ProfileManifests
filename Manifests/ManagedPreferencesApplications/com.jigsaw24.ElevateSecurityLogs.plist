@@ -115,7 +115,7 @@
 	<key>pfm_interaction</key>
 	<string>exclusive</string>
 	<key>pfm_last_modified</key>
-	<date>2026-06-03T12:00:00Z</date>
+	<date>2026-06-23T15:59:45Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -156,7 +156,7 @@
 			<key>pfm_default</key>
 			<string>com.jigsaw24.Elevate24SecurityExtension</string>
 			<key>pfm_description</key>
-			<string>The reverse-DNS-style identifier for the payload. This identifier is usually the same as the TopLevel value, with an additional appended component. This string must be unique within the profile.
+			<string>The reverse-DNS-style identifier for the payload. This identifier is usually the same as the 'TopLevel' value, with an additional appended component. This string must be unique within the profile.
 During a profile replacement, the system updates payloads with the same 'PayloadIdentifier' and 'PayloadUUID' in the old and new profiles.</string>
 			<key>pfm_description_reference</key>
 			<string>A reverse-DNS-style identifier for the specific payload. It is usually the same identifier as the root-level PayloadIdentifier value with an additional component appended.</string>
@@ -253,7 +253,7 @@ A profile can consist of payloads with different version numbers. For example, c
 			<dict>
 				<key>Authorisation Rules</key>
 				<array>
-			    	<string>HideBlockedEventHistory</string>
+					<string>HideBlockedEventHistory</string>
 					<string>FileOperationRules</string>
 					<string>ExecuteProcessRules</string>
 				</array>
@@ -680,6 +680,14 @@ Multiple arguments can be specified by seperating them with a comma.</string>
 						</dict>
 						<dict>
 							<key>pfm_name</key>
+							<string>sourceSigningID</string>
+							<key>pfm_title</key>
+							<string>Parent Signing ID</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+						<dict>
+							<key>pfm_name</key>
 							<string>matchingArgumentsContaining</string>
 							<key>pfm_title</key>
 							<string>Match Arguments Containing</string>
@@ -943,6 +951,6 @@ Multiple arguments can be specified by seperating them with a comma.</string>
 	<key>pfm_unique</key>
 	<true/>
 	<key>pfm_version</key>
-	<integer>6</integer>
+	<integer>7</integer>
 </dict>
 </plist>
