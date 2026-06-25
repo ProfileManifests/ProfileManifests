@@ -13,7 +13,7 @@
 	<key>pfm_format_version</key>
 	<integer>1</integer>
 	<key>pfm_last_modified</key>
-	<date>2026-06-23T15:59:45Z</date>
+	<date>2026-06-25T00:43:38Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -175,6 +175,7 @@ A profile can consist of payloads with different version numbers. For example, c
 			<dict>
 				<key>Check Okta</key>
 				<array>
+					<string>LicenseFile</string>
 					<string>AuthServer</string>
 					<string>DenyLocal</string>
 					<string>DenyLocalExcluded</string>

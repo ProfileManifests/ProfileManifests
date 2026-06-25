@@ -13,7 +13,7 @@
 	<key>pfm_format_version</key>
 	<integer>1</integer>
 	<key>pfm_last_modified</key>
-	<date>2026-06-23T15:59:45Z</date>
+	<date>2026-06-25T00:43:38Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -164,6 +164,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				</array>
 				<key>General</key>
 				<array>
+					<string>AuthServer</string>
 					<string>LicenseFile</string>
 					<string>PeriodicUpdateTime</string>
 					<string>SignInCommand</string>
@@ -177,7 +178,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<string>TitleSignIn</string>
 					<string>LabelUsername</string>
 					<string>LabelPassword</string>
-					<string>MessagePluginDisable</string>
+					<string>MessagePluginDisabled</string>
 				</array>
 				<key>Kerberos</key>
 				<array>

@@ -20,7 +20,7 @@
 	<key>pfm_interaction</key>
 	<string>undefined</string>
 	<key>pfm_last_modified</key>
-	<date>2026-06-23T15:59:45Z</date>
+	<date>2026-06-25T00:43:38Z</date>
 	<key>pfm_macos_min</key>
 	<string>10.12</string>
 	<key>pfm_platforms</key>
@@ -166,6 +166,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				<key>General</key>
 				<array>
 					<string>General_SegmentedControl</string>
+					<string>EnterprisePoliciesEnabled</string>
 					<string>AppAutoUpdate</string>
 					<string>AppUpdateURL</string>
 					<string>Authentication</string>
