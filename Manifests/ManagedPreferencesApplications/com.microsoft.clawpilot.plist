@@ -136,6 +136,8 @@
 			<string>integer</string>
 			<key>pfm_default</key>
 			<integer>1</integer>
+			<key>pfm_require</key>
+			<string>always</string>
 		</dict>
 		<dict>
 			<key>pfm_name</key>
