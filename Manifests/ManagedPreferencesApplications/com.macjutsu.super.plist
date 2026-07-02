@@ -11,7 +11,7 @@
 	<key>pfm_format_version</key>
 	<integer>1</integer>
 	<key>pfm_last_modified</key>
-	<date>2026-06-23T15:59:45Z</date>
+	<date>2026-07-02T09:12:12Z</date>
 	<key>pfm_macos_min</key>
 	<string>11.0</string>
 	<key>pfm_platforms</key>
@@ -165,7 +165,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<string>DialogTimeoutDefault</string>
 					<string>DialogTimeoutInsufficientStorage</string>
 					<string>DialogTimeoutPowerRequired</string>
-					<string>DialogTimeoutRestartOrDefer</string>
 					<string>DialogTimeoutRestartOrDefer</string>
 					<string>DialogTimeoutSoftDeadline</string>
 					<string>DialogTimeoutUserAuth</string>
