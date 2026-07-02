@@ -11,7 +11,7 @@
 	<key>pfm_interaction</key>
 	<string>exclusive</string>
 	<key>pfm_last_modified</key>
-	<date>2026-06-23T15:59:45Z</date>
+	<date>2026-07-02T08:42:40Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>iOS</string>
@@ -176,7 +176,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<array>
 				<real>5</real>
 				<real>6</real>
-				<real>17.000321199999998</real>
+				<real>17.0003212</real>
 				<real>20</real>
 			</array>
 			<key>pfm_title</key>
@@ -198,8 +198,8 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				<real>0.01</real>
 				<real>0.02</real>
 				<real>0.13</real>
-				<real>0.23000000000000001</real>
-				<real>0.92000000000000004</real>
+				<real>0.23</real>
+				<real>0.92</real>
 			</array>
 			<key>pfm_range_list_titles</key>
 			<array>
@@ -226,25 +226,25 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_range_list</key>
 			<array>
 				<real>1</real>
-				<real>1.1000000000000001</real>
+				<real>1.1</real>
 				<real>1.2</real>
 				<real>1.3</real>
-				<real>1.3999999999999999</real>
+				<real>1.4</real>
 				<real>1.5</real>
-				<real>1.6000000000000001</real>
+				<real>1.6</real>
 				<real>1.7</real>
 				<real>1.8</real>
-				<real>1.8999999999999999</real>
-				<real>1.1000000000000001</real>
-				<real>1.1100000000000001</real>
-				<real>1.1200000000000001</real>
-				<real>1.1299999999999999</real>
-				<real>1.1399999999999999</real>
-				<real>1.1499999999999999</real>
-				<real>1.1599999999999999</real>
-				<real>1.1699999999999999</real>
-				<real>1.1799999999999999</real>
-				<real>1.1899999999999999</real>
+				<real>1.9</real>
+				<real>1.1</real>
+				<real>1.11</real>
+				<real>1.12</real>
+				<real>1.13</real>
+				<real>1.14</real>
+				<real>1.15</real>
+				<real>1.16</real>
+				<real>1.17</real>
+				<real>1.18</real>
+				<real>1.19</real>
 			</array>
 			<key>pfm_title</key>
 			<string>Slider 05: Range List 20 Items</string>
@@ -263,25 +263,25 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_range_list</key>
 			<array>
 				<real>1</real>
-				<real>1.1000000000000001</real>
+				<real>1.1</real>
 				<real>1.2</real>
 				<real>1.3</real>
-				<real>1.3999999999999999</real>
+				<real>1.4</real>
 				<real>1.5</real>
-				<real>1.6000000000000001</real>
+				<real>1.6</real>
 				<real>1.7</real>
 				<real>1.8</real>
-				<real>1.8999999999999999</real>
-				<real>1.1000000000000001</real>
-				<real>1.1100000000000001</real>
-				<real>1.1200000000000001</real>
-				<real>1.1299999999999999</real>
-				<real>1.1399999999999999</real>
-				<real>1.1499999999999999</real>
-				<real>1.1599999999999999</real>
-				<real>1.1699999999999999</real>
-				<real>1.1799999999999999</real>
-				<real>1.1899999999999999</real>
+				<real>1.9</real>
+				<real>1.1</real>
+				<real>1.11</real>
+				<real>1.12</real>
+				<real>1.13</real>
+				<real>1.14</real>
+				<real>1.15</real>
+				<real>1.16</real>
+				<real>1.17</real>
+				<real>1.18</real>
+				<real>1.19</real>
 			</array>
 			<key>pfm_range_list_titles</key>
 			<array>
@@ -323,25 +323,25 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_range_list</key>
 			<array>
 				<real>1</real>
-				<real>1.1000000000000001</real>
+				<real>1.1</real>
 				<real>1.2</real>
 				<real>1.3</real>
-				<real>1.3999999999999999</real>
+				<real>1.4</real>
 				<real>1.5</real>
-				<real>1.6000000000000001</real>
+				<real>1.6</real>
 				<real>1.7</real>
 				<real>1.8</real>
-				<real>1.8999999999999999</real>
-				<real>1.1000000000000001</real>
-				<real>1.1100000000000001</real>
-				<real>1.1200000000000001</real>
-				<real>1.1299999999999999</real>
-				<real>1.1399999999999999</real>
-				<real>1.1499999999999999</real>
-				<real>1.1599999999999999</real>
-				<real>1.1699999999999999</real>
-				<real>1.1799999999999999</real>
-				<real>1.1899999999999999</real>
+				<real>1.9</real>
+				<real>1.1</real>
+				<real>1.11</real>
+				<real>1.12</real>
+				<real>1.13</real>
+				<real>1.14</real>
+				<real>1.15</real>
+				<real>1.16</real>
+				<real>1.17</real>
+				<real>1.18</real>
+				<real>1.19</real>
 			</array>
 			<key>pfm_range_list_titles</key>
 			<array>
@@ -383,25 +383,25 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_range_list</key>
 			<array>
 				<real>1</real>
-				<real>1.1000000000000001</real>
+				<real>1.1</real>
 				<real>1.2</real>
 				<real>1.3</real>
-				<real>1.3999999999999999</real>
+				<real>1.4</real>
 				<real>1.5</real>
-				<real>1.6000000000000001</real>
+				<real>1.6</real>
 				<real>1.7</real>
 				<real>1.8</real>
-				<real>1.8999999999999999</real>
-				<real>1.1000000000000001</real>
-				<real>1.1100000000000001</real>
-				<real>1.1200000000000001</real>
-				<real>1.1299999999999999</real>
-				<real>1.1399999999999999</real>
-				<real>1.1499999999999999</real>
-				<real>1.1599999999999999</real>
-				<real>1.1699999999999999</real>
-				<real>1.1799999999999999</real>
-				<real>1.1899999999999999</real>
+				<real>1.9</real>
+				<real>1.1</real>
+				<real>1.11</real>
+				<real>1.12</real>
+				<real>1.13</real>
+				<real>1.14</real>
+				<real>1.15</real>
+				<real>1.16</real>
+				<real>1.17</real>
+				<real>1.18</real>
+				<real>1.19</real>
 			</array>
 			<key>pfm_range_list_titles</key>
 			<array>
@@ -443,25 +443,25 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_range_list</key>
 			<array>
 				<real>1</real>
-				<real>1.1000000000000001</real>
+				<real>1.1</real>
 				<real>1.2</real>
 				<real>1.3</real>
-				<real>1.3999999999999999</real>
+				<real>1.4</real>
 				<real>1.5</real>
-				<real>1.6000000000000001</real>
+				<real>1.6</real>
 				<real>1.7</real>
 				<real>1.8</real>
-				<real>1.8999999999999999</real>
-				<real>1.1000000000000001</real>
-				<real>1.1100000000000001</real>
-				<real>1.1200000000000001</real>
-				<real>1.1299999999999999</real>
-				<real>1.1399999999999999</real>
-				<real>1.1499999999999999</real>
-				<real>1.1599999999999999</real>
-				<real>1.1699999999999999</real>
-				<real>1.1799999999999999</real>
-				<real>1.1899999999999999</real>
+				<real>1.9</real>
+				<real>1.1</real>
+				<real>1.11</real>
+				<real>1.12</real>
+				<real>1.13</real>
+				<real>1.14</real>
+				<real>1.15</real>
+				<real>1.16</real>
+				<real>1.17</real>
+				<real>1.18</real>
+				<real>1.19</real>
 			</array>
 			<key>pfm_range_list_titles</key>
 			<array>
