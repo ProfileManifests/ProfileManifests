@@ -1258,6 +1258,15 @@
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
+		<key>net.whatsapp.WhatsApp</key>
+		<dict>
+			<key>modified</key>
+			<date>2026-07-02T15:12:59Z</date>
+			<key>path</key>
+			<string>Manifests/ManagedPreferencesApplications/net.whatsapp.WhatsApp.plist</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 		<key>nl.root3.support</key>
 		<dict>
 			<key>modified</key>
@@ -2499,6 +2508,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2026-06-24T16:24:10Z</date>
+	<date>2026-07-02T17:26:14Z</date>
 </dict>
 </plist>
