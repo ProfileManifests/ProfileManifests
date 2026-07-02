@@ -766,7 +766,7 @@
 		<key>com.microsoft.Edge</key>
 		<dict>
 			<key>modified</key>
-			<date>2026-06-23T15:59:45Z</date>
+			<date>2026-07-02T10:21:31Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.microsoft.Edge.plist</string>
 			<key>version</key>
@@ -2517,6 +2517,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2026-07-02T17:29:24Z</date>
+	<date>2026-07-02T17:52:14Z</date>
 </dict>
 </plist>
