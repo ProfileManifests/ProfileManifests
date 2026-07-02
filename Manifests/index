@@ -307,7 +307,7 @@
 		<key>SupportCompanion</key>
 		<dict>
 			<key>modified</key>
-			<date>2026-06-23T15:59:45Z</date>
+			<date>2026-07-02T08:42:40Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/SupportCompanion.plist</string>
 			<key>version</key>
@@ -451,7 +451,7 @@
 		<key>com.barebones.bbedit</key>
 		<dict>
 			<key>modified</key>
-			<date>2026-06-23T15:59:45Z</date>
+			<date>2026-07-02T10:40:13Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.barebones.bbedit.plist</string>
 			<key>version</key>
@@ -460,7 +460,7 @@
 		<key>com.brave.Browser</key>
 		<dict>
 			<key>modified</key>
-			<date>2026-06-23T15:59:45Z</date>
+			<date>2026-07-02T10:12:00Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.brave.Browser.plist</string>
 			<key>version</key>
@@ -550,7 +550,7 @@
 		<key>com.github.macadmins.SupportCompanion</key>
 		<dict>
 			<key>modified</key>
-			<date>2026-06-23T15:59:45Z</date>
+			<date>2026-07-02T08:42:40Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.github.macadmins.SupportCompanion.plist</string>
 			<key>version</key>
@@ -586,7 +586,7 @@
 		<key>com.google.Chrome</key>
 		<dict>
 			<key>modified</key>
-			<date>2026-06-23T15:59:45Z</date>
+			<date>2026-07-02T10:12:00Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.google.Chrome.plist</string>
 			<key>version</key>
@@ -757,7 +757,7 @@
 		<key>com.macjutsu.super</key>
 		<dict>
 			<key>modified</key>
-			<date>2026-06-23T15:59:45Z</date>
+			<date>2026-07-02T09:12:12Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.macjutsu.super.plist</string>
 			<key>version</key>
@@ -982,7 +982,7 @@
 		<key>com.pratikkumar.airserver-mac</key>
 		<dict>
 			<key>modified</key>
-			<date>2026-06-23T15:59:45Z</date>
+			<date>2026-07-02T08:42:40Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.pratikkumar.airserver-mac.plist</string>
 			<key>version</key>
@@ -1417,7 +1417,7 @@
 		<key>com.profilecreator.developer.slider</key>
 		<dict>
 			<key>modified</key>
-			<date>2026-06-23T15:59:45Z</date>
+			<date>2026-07-02T08:42:40Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesDeveloper/com.profilecreator.developer.slider.plist</string>
 			<key>version</key>
@@ -1483,7 +1483,7 @@
 		<key>com.apple.AssetCache.managed</key>
 		<dict>
 			<key>modified</key>
-			<date>2026-06-23T15:59:45Z</date>
+			<date>2026-07-02T08:42:40Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.AssetCache.managed.plist</string>
 			<key>version</key>
@@ -2508,6 +2508,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2026-07-02T17:26:14Z</date>
+	<date>2026-07-02T17:29:24Z</date>
 </dict>
 </plist>
