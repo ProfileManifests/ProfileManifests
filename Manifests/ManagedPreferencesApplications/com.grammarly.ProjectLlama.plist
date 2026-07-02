@@ -77,7 +77,7 @@
 	KPg/Lx/G6r9I+AoAAAAASUVORK5CYII=
 	</data>
 	<key>pfm_last_modified</key>
-	<date>2026-06-23T15:59:45Z</date>
+	<date>2026-07-02T20:54:20Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -200,6 +200,24 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_value_placeholder</key>
 			<string>{UUID}</string>
 		</dict>
+		<dict>
+			<key>pfm_name</key>
+			<string>SUEnableAutomaticChecks</string>
+			<key>pfm_title</key>
+			<string>Enable automatic update checks</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_name</key>
+			<string>SUAutomaticallyUpdate</string>
+			<key>pfm_title</key>
+			<string>Enable automatic updates</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
 	</array>
 	<key>pfm_targets</key>
 	<array>
@@ -210,6 +228,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 	<key>pfm_unique</key>
 	<true/>
 	<key>pfm_version</key>
-	<integer>1</integer>
+	<integer>2</integer>
 </dict>
 </plist>
