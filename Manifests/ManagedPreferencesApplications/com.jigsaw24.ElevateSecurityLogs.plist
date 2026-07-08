@@ -115,7 +115,7 @@
 	<key>pfm_interaction</key>
 	<string>exclusive</string>
 	<key>pfm_last_modified</key>
-	<date>2026-02-26T12:00:00Z</date>
+	<date>2026-06-23T15:59:45Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -156,7 +156,7 @@
 			<key>pfm_default</key>
 			<string>com.jigsaw24.Elevate24SecurityExtension</string>
 			<key>pfm_description</key>
-			<string>The reverse-DNS-style identifier for the payload. This identifier is usually the same as the TopLevel value, with an additional appended component. This string must be unique within the profile.
+			<string>The reverse-DNS-style identifier for the payload. This identifier is usually the same as the 'TopLevel' value, with an additional appended component. This string must be unique within the profile.
 During a profile replacement, the system updates payloads with the same 'PayloadIdentifier' and 'PayloadUUID' in the old and new profiles.</string>
 			<key>pfm_description_reference</key>
 			<string>A reverse-DNS-style identifier for the specific payload. It is usually the same identifier as the root-level PayloadIdentifier value with an additional component appended.</string>
@@ -253,6 +253,7 @@ A profile can consist of payloads with different version numbers. For example, c
 			<dict>
 				<key>Authorisation Rules</key>
 				<array>
+					<string>HideBlockedEventHistory</string>
 					<string>FileOperationRules</string>
 					<string>ExecuteProcessRules</string>
 				</array>
@@ -271,11 +272,9 @@ A profile can consist of payloads with different version numbers. For example, c
 					<string>SelfProtectionRules</string>
 					<string>DisableAll</string>
 					<string>UploadEventsToJigsaw</string>
-					<string>EnableArchive</string>
-					<string>MaxArchiveAge</string>
 					<string>UploadOnHotspot</string>
 				</array>
-				<key>Upload to Other</key>
+				<key>Upload to SIEM</key>
 				<array>
 					<string>siemUploadURL</string>
 					<string>siemUploadHeaders</string>
@@ -499,36 +498,6 @@ A profile can consist of payloads with different version numbers. For example, c
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>Enables the local retention of Events after they have been uploaded to Jigsaw24/SIEM.</string>
-			<key>pfm_documentation_url</key>
-			<string>https://docs.jigsaw24.com/Elevate24/Documentation/Elevate24%20Monitoring/2%20Elevate24%20Session%20Monitoring%20-%20General.html#monitoring-general-settings</string>
-			<key>pfm_name</key>
-			<string>EnableArchive</string>
-			<key>pfm_title</key>
-			<string>Enable Local Retention of Events</string>
-			<key>pfm_type</key>
-			<string>boolean</string>
-		</dict>
-		<dict>
-			<key>pfm_default</key>
-			<integer>7</integer>
-			<key>pfm_description</key>
-			<string>Sets maximum age of events retained locally.</string>
-			<key>pfm_documentation_url</key>
-			<string>https://docs.jigsaw24.com/Elevate24/Documentation/Elevate24%20Monitoring/2%20Elevate24%20Session%20Monitoring%20-%20General.html#monitoring-general-settings</string>
-			<key>pfm_name</key>
-			<string>MaxArchiveAge</string>
-			<key>pfm_title</key>
-			<string>Maximum Age of Retained Events (Days)</string>
-			<key>pfm_type</key>
-			<string>integer</string>
-			<key>pfm_value_placeholder</key>
-			<string>7</string>
-		</dict>
-		<dict>
-			<key>pfm_default</key>
-			<false/>
-			<key>pfm_description</key>
 			<string>Upload Events when connected to iPhone personal hotspot.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://docs.jigsaw24.com/Elevate24/Documentation/Elevate24%20Monitoring/2%20Elevate24%20Session%20Monitoring%20-%20General.html#monitoring-general-settings</string>
@@ -536,6 +505,20 @@ A profile can consist of payloads with different version numbers. For example, c
 			<string>UploadOnHotspot</string>
 			<key>pfm_title</key>
 			<string>Allow Upload Data on Hotspot connection</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>When enabled, hides the blocked events history from the Elevate24 UI.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://docs.jigsaw24.com/Elevate24/Documentation/Elevate24%20Monitoring/5%20Elevate24%20Session%20Monitoring%20-%20Authorisation%20Rules.html#monitoring-authorisation-rules</string>
+			<key>pfm_name</key>
+			<string>HideBlockedEventHistory</string>
+			<key>pfm_title</key>
+			<string>Hide Blocked Event History</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 		</dict>
@@ -697,6 +680,14 @@ Multiple arguments can be specified by seperating them with a comma.</string>
 						</dict>
 						<dict>
 							<key>pfm_name</key>
+							<string>sourceSigningID</string>
+							<key>pfm_title</key>
+							<string>Parent Signing ID</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+						<dict>
+							<key>pfm_name</key>
 							<string>matchingArgumentsContaining</string>
 							<key>pfm_title</key>
 							<string>Match Arguments Containing</string>
@@ -708,6 +699,14 @@ Multiple arguments can be specified by seperating them with a comma.</string>
 							<string>alwaysActive</string>
 							<key>pfm_title</key>
 							<string>Always Active</string>
+							<key>pfm_type</key>
+							<string>boolean</string>
+						</dict>
+						<dict>
+							<key>pfm_name</key>
+							<string>silentBlock</string>
+							<key>pfm_title</key>
+							<string>Silent Block</string>
 							<key>pfm_type</key>
 							<string>boolean</string>
 						</dict>
@@ -952,6 +951,6 @@ Multiple arguments can be specified by seperating them with a comma.</string>
 	<key>pfm_unique</key>
 	<true/>
 	<key>pfm_version</key>
-	<integer>5</integer>
+	<integer>7</integer>
 </dict>
 </plist>
