@@ -1270,11 +1270,11 @@
 		<key>org.churchofjesuschrist.dorm</key>
 		<dict>
 			<key>modified</key>
-			<date>2026-06-23T15:59:45Z</date>
+			<date>2026-07-09T00:00:00Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/org.churchofjesuschrist.dorm.plist</string>
 			<key>version</key>
-			<integer>3</integer>
+			<integer>4</integer>
 		</dict>
 		<key>org.mozilla.firefox</key>
 		<dict>
@@ -2517,6 +2517,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2026-07-08T14:11:53Z</date>
+	<date>2026-07-13T15:37:21Z</date>
 </dict>
 </plist>
