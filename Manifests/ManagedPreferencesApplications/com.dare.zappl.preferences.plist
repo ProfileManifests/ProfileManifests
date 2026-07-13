@@ -13,7 +13,7 @@
 	<key>pfm_format_version</key>
 	<integer>1</integer>
 	<key>pfm_last_modified</key>
-	<date>2026-06-23T15:59:45Z</date>
+	<date>2026-07-13T15:14:09Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -226,9 +226,9 @@ A profile can consist of payloads with different version numbers. For example, c
 					<key>pfm_documentation_url</key>
 					<string>https://docs.zappl.co/customise/preferences#allow-background-updates</string>
 					<key>pfm_name</key>
-					<string>hourlyCheck</string>
+					<string>backgroundUpdates</string>
 					<key>pfm_note</key>
-					<string>Enable this setting to configure the 'Background Update Stagger Window' (backgroundUpdateWindow) preference.</string>
+					<string>Enable this setting to configure the 'Download Stagger Window' (downloadStaggerWindow) preference.</string>
 					<key>pfm_title</key>
 					<string>Allow Background Updates</string>
 					<key>pfm_type</key>
@@ -240,9 +240,9 @@ A profile can consist of payloads with different version numbers. For example, c
 					<key>pfm_default</key>
 					<integer>60</integer>
 					<key>pfm_description</key>
-					<string>Sets a stagger window in minutes that spreads background update checks across your devices. Each device will randomly pick a time within this window to check for and download new updates after they are released. Increasing this value is recommended for large sites to reduce network load. The default and minimum value is 60 minutes and the maximum is 360 minutes (6 hours).</string>
+					<string>Sets a stagger window in minutes that spreads update downloads across your devices. Each device will randomly pick a time within this window to check for and download new updates after they are released. Increasing this value is recommended for large sites to reduce network load. The default and minimum value is 60 minutes and the maximum is 360 minutes (6 hours).</string>
 					<key>pfm_documentation_url</key>
-					<string>https://docs.zappl.co/customise/preferences#background-update-stagger-window</string>
+					<string>https://docs.zappl.co/customise/preferences</string>
 					<key>pfm_exclude</key>
 					<array>
 						<dict>
@@ -254,19 +254,19 @@ A profile can consist of payloads with different version numbers. For example, c
 										<false/>
 									</array>
 									<key>pfm_target</key>
-									<string>GeneralOptions.hourlyCheck</string>
+									<string>GeneralOptions.backgroundUpdates</string>
 								</dict>
 							</array>
 						</dict>
 					</array>
 					<key>pfm_name</key>
-					<string>backgroundUpdateWindow</string>
+					<string>downloadStaggerWindow</string>
 					<key>pfm_range_max</key>
 					<integer>360</integer>
 					<key>pfm_range_min</key>
 					<integer>60</integer>
 					<key>pfm_title</key>
-					<string>Background Update Stagger Window</string>
+					<string>Download Stagger Window</string>
 					<key>pfm_type</key>
 					<string>integer</string>
 					<key>pfm_value_placeholder</key>
@@ -313,6 +313,22 @@ A profile can consist of payloads with different version numbers. For example, c
 					<string>autoInstallAppBar</string>
 					<key>pfm_title</key>
 					<string>Automatically Install AppBar</string>
+					<key>pfm_type</key>
+					<string>boolean</string>
+				</dict>
+				<dict>
+					<key>pfm_app_min</key>
+					<string>3.0.0</string>
+					<key>pfm_default</key>
+					<true/>
+					<key>pfm_description</key>
+					<string>When enabled, Zappl prompts use the Liquid Glass visual style on macOS 26 (Tahoe) and later. Uncheck to use the standard flat appearance on all supported macOS versions.</string>
+					<key>pfm_documentation_url</key>
+					<string>https://docs.zappl.co/customise/preferences</string>
+					<key>pfm_name</key>
+					<string>enableLiquidGlass</string>
+					<key>pfm_title</key>
+					<string>Enable Liquid Glass Effect</string>
 					<key>pfm_type</key>
 					<string>boolean</string>
 				</dict>
@@ -1622,7 +1638,7 @@ A profile can consist of payloads with different version numbers. For example, c
 					<key>pfm_name</key>
 					<string>gracePeriodMinutes</string>
 					<key>pfm_title</key>
-					<string>Grace Period (Minutes)</string>
+					<string>Grace Period in Minutes</string>
 					<key>pfm_type</key>
 					<string>integer</string>
 					<key>pfm_value_placeholder</key>
@@ -1662,165 +1678,6 @@ A profile can consist of payloads with different version numbers. For example, c
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string>Use to customise the size of the initial prompt displayed to users when they can either defer or update. Note: Only configure this setting if defining custom prompt messages. If you are using the default prompt messages, customising prompt size is not recommended as the default prompt size is pre-configured to correctly match the size of the default message displayed.</string>
-					<key>pfm_documentation_url</key>
-					<string>https://docs.zappl.co/customise/preferences#custom-prompt-sizes</string>
-					<key>pfm_enabled</key>
-					<false/>
-					<key>pfm_name</key>
-					<string>customInitialPromptSize</string>
-					<key>pfm_subkeys</key>
-					<array>
-						<dict>
-							<key>pfm_default</key>
-							<integer>330</integer>
-							<key>pfm_description</key>
-							<string>Use to customise the height of the initial prompt displayed to users when they can either defer or update. Only use to define a custom height in points for the prompts shown to users, e.g. 330.</string>
-							<key>pfm_documentation_url</key>
-							<string>https://docs.zappl.co/customise/preferences#custom-prompt-sizes</string>
-							<key>pfm_name</key>
-							<string>promptHeight</string>
-							<key>pfm_note</key>
-							<string>Only configure this setting if defining custom prompt messages. If you are using the default prompt messages, customising prompt size is not recommended as the default prompt size is pre-configured to correctly match the size of the default message displayed.</string>
-							<key>pfm_title</key>
-							<string>Custom Initial Prompt (Height)</string>
-							<key>pfm_type</key>
-							<string>integer</string>
-							<key>pfm_value_placeholder</key>
-							<string>330</string>
-						</dict>
-						<dict>
-							<key>pfm_default</key>
-							<integer>640</integer>
-							<key>pfm_description</key>
-							<string>Use to customise the width of the initial prompt displayed to users when they can either defer or update. Only use to define a custom width in points for the prompts shown to users, e.g. 640.</string>
-							<key>pfm_documentation_url</key>
-							<string>https://docs.zappl.co/customise/preferences#custom-prompt-sizes</string>
-							<key>pfm_name</key>
-							<string>promptWidth</string>
-							<key>pfm_note</key>
-							<string>Only configure this setting if defining custom prompt messages. If you are using the default prompt messages, customising prompt size is not recommended as the default prompt size is pre-configured to correctly match the size of the default message displayed.</string>
-							<key>pfm_title</key>
-							<string>Custom Initial Prompt (Width)</string>
-							<key>pfm_type</key>
-							<string>integer</string>
-							<key>pfm_value_placeholder</key>
-							<string>640</string>
-						</dict>
-					</array>
-					<key>pfm_title</key>
-					<string>Initial Prompt Size</string>
-					<key>pfm_type</key>
-					<string>dictionary</string>
-				</dict>
-				<dict>
-					<key>pfm_description</key>
-					<string>Use to customise the size of the grace period timer prompt shown when users have no remaining deferrals. Note: Only configure this setting if defining custom prompt messages. If you are using the default prompt messages, customising prompt size is not recommended as the default prompt size is pre-configured to correctly match the size of the default message displayed.</string>
-					<key>pfm_documentation_url</key>
-					<string>https://docs.zappl.co/customise/preferences#custom-prompt-sizes</string>
-					<key>pfm_enabled</key>
-					<false/>
-					<key>pfm_name</key>
-					<string>customGracePromptSize</string>
-					<key>pfm_subkeys</key>
-					<array>
-						<dict>
-							<key>pfm_default</key>
-							<integer>330</integer>
-							<key>pfm_description</key>
-							<string>Use to customise the height of the grace period timer prompt displayed to users when they have no remaining deferrals. Only use to define a custom height in points for the prompts shown to users, e.g. 330.</string>
-							<key>pfm_documentation_url</key>
-							<string>https://docs.zappl.co/customise/preferences#custom-prompt-sizes</string>
-							<key>pfm_name</key>
-							<string>promptHeight</string>
-							<key>pfm_note</key>
-							<string>Only configure this setting if defining custom prompt messages. If you are using the default prompt messages, customising prompt size is not recommended as the default prompt size is pre-configured to correctly match the size of the default message displayed.</string>
-							<key>pfm_title</key>
-							<string>Custom Grace Prompt (Height)</string>
-							<key>pfm_type</key>
-							<string>integer</string>
-							<key>pfm_value_placeholder</key>
-							<string>330</string>
-						</dict>
-						<dict>
-							<key>pfm_default</key>
-							<integer>640</integer>
-							<key>pfm_description</key>
-							<string>Use to customise the width of the grace period timer prompt displayed to users when they have no remaining deferrals. Only use to define a custom width in points for the prompts shown to users, e.g. 640.</string>
-							<key>pfm_documentation_url</key>
-							<string>https://docs.zappl.co/customise/preferences#custom-prompt-sizes</string>
-							<key>pfm_name</key>
-							<string>promptWidth</string>
-							<key>pfm_note</key>
-							<string>Only configure this setting if defining custom prompt messages. If you are using the default prompt messages, customising prompt size is not recommended as the default prompt size is pre-configured to correctly match the size of the default message displayed.</string>
-							<key>pfm_title</key>
-							<string>Custom Grace Prompt (Width)</string>
-							<key>pfm_type</key>
-							<string>integer</string>
-							<key>pfm_value_placeholder</key>
-							<string>640</string>
-						</dict>
-					</array>
-					<key>pfm_title</key>
-					<string>Custom Grace Prompt Size</string>
-					<key>pfm_type</key>
-					<string>dictionary</string>
-				</dict>
-				<dict>
-					<key>pfm_description</key>
-					<string>Use to customise the size of the prompt displayed to users when they initiate a Self Service update. Note: Only configure this setting if defining custom prompt messages. If you are using the default prompt messages, customising prompt size is not recommended as the default prompt size is pre-configured to correctly match the size of the default message displayed.</string>
-					<key>pfm_documentation_url</key>
-					<string>https://docs.zappl.co/customise/preferences#custom-prompt-sizes</string>
-					<key>pfm_enabled</key>
-					<false/>
-					<key>pfm_name</key>
-					<string>customSelfServicePromptSize</string>
-					<key>pfm_subkeys</key>
-					<array>
-						<dict>
-							<key>pfm_default</key>
-							<integer>330</integer>
-							<key>pfm_description</key>
-							<string>Use to customise the height of the prompt displayed to users when they initiate a Self Service update. Only use to define a custom height in points for the prompts shown to users, e.g. 330.</string>
-							<key>pfm_documentation_url</key>
-							<string>https://docs.zappl.co/customise/preferences#custom-prompt-sizes</string>
-							<key>pfm_name</key>
-							<string>promptHeight</string>
-							<key>pfm_note</key>
-							<string>Only configure this setting if defining custom prompt messages. If you are using the default prompt messages, customising prompt size is not recommended as the default prompt size is pre-configured to correctly match the size of the default message displayed.</string>
-							<key>pfm_title</key>
-							<string>Self Service Prompt (Height)</string>
-							<key>pfm_type</key>
-							<string>integer</string>
-							<key>pfm_value_placeholder</key>
-							<string>330</string>
-						</dict>
-						<dict>
-							<key>pfm_default</key>
-							<integer>640</integer>
-							<key>pfm_description</key>
-							<string>Use to customise the width of the prompt displayed to users when they initiate a Self Service update. Only use to define a custom width in points for the prompts shown to users, e.g. 640.</string>
-							<key>pfm_documentation_url</key>
-							<string>https://docs.zappl.co/customise/preferences#custom-prompt-sizes</string>
-							<key>pfm_name</key>
-							<string>promptWidth</string>
-							<key>pfm_note</key>
-							<string>Only configure this setting if defining custom prompt messages. If you are using the default prompt messages, customising prompt size is not recommended as the default prompt size is pre-configured to correctly match the size of the default message displayed.</string>
-							<key>pfm_title</key>
-							<string>Self Service Prompt (Width)</string>
-							<key>pfm_type</key>
-							<string>integer</string>
-							<key>pfm_value_placeholder</key>
-							<string>640</string>
-						</dict>
-					</array>
-					<key>pfm_title</key>
-					<string>Self Service Prompt Size</string>
-					<key>pfm_type</key>
-					<string>dictionary</string>
-				</dict>
-				<dict>
-					<key>pfm_description</key>
 					<string>A custom title to be displayed on the user prompts when there is 1 pending App update.</string>
 					<key>pfm_documentation_url</key>
 					<string>https://docs.zappl.co/customise/preferences#custom-single-app-title</string>
@@ -1853,102 +1710,6 @@ A profile can consist of payloads with different version numbers. For example, c
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string>A custom message displayed on the initial \"App needs to quit\" prompt shown when there is 1 pending App update.</string>
-					<key>pfm_documentation_url</key>
-					<string>https://docs.zappl.co/customise/preferences#custom-prompt-messages</string>
-					<key>pfm_enabled</key>
-					<false/>
-					<key>pfm_name</key>
-					<string>singleInitialQuitPromptMessage</string>
-					<key>pfm_title</key>
-					<string>Single App Initial Prompt Message</string>
-					<key>pfm_type</key>
-					<string>string</string>
-					<key>pfm_value_placeholder</key>
-					<string>An important update is pending which requires the App to quit...</string>
-				</dict>
-				<dict>
-					<key>pfm_description</key>
-					<string>A custom message displayed on the initial \"Apps need to quit\" prompt shown when there are multiple pending App updates.</string>
-					<key>pfm_documentation_url</key>
-					<string>https://docs.zappl.co/customise/preferences#custom-prompt-messages</string>
-					<key>pfm_enabled</key>
-					<false/>
-					<key>pfm_name</key>
-					<string>multipleInitialQuitPromptMessage</string>
-					<key>pfm_title</key>
-					<string>Multiple Apps Initial Prompt Message</string>
-					<key>pfm_type</key>
-					<string>string</string>
-					<key>pfm_value_placeholder</key>
-					<string>Important updates are pending which require Apps to quit...</string>
-				</dict>
-				<dict>
-					<key>pfm_description</key>
-					<string>A custom message displayed on the initial \"App needs to quit\" prompt shown when a user manually initiates an update check and there is 1 pending update.</string>
-					<key>pfm_documentation_url</key>
-					<string>https://docs.zappl.co/customise/preferences#custom-prompt-messages</string>
-					<key>pfm_enabled</key>
-					<false/>
-					<key>pfm_name</key>
-					<string>singleSelfServiceQuitMessage</string>
-					<key>pfm_title</key>
-					<string>Single App Self Service Prompt Message</string>
-					<key>pfm_type</key>
-					<string>string</string>
-					<key>pfm_value_placeholder</key>
-					<string>An important update is pending which requires the App to quit...</string>
-				</dict>
-				<dict>
-					<key>pfm_description</key>
-					<string>A custom message displayed on the initial \"Apps need to quit\" prompt shown when a user manually initiates an update check and there are multiple pending App updates.</string>
-					<key>pfm_documentation_url</key>
-					<string>https://docs.zappl.co/customise/preferences#multiple-app-self-service-prompt-message</string>
-					<key>pfm_enabled</key>
-					<false/>
-					<key>pfm_name</key>
-					<string>multipleSelfServiceQuitMessage</string>
-					<key>pfm_title</key>
-					<string>Multiple App Self Service Prompt Message</string>
-					<key>pfm_type</key>
-					<string>string</string>
-					<key>pfm_value_placeholder</key>
-					<string>Important updates are pending which require Apps to quit...</string>
-				</dict>
-				<dict>
-					<key>pfm_description</key>
-					<string>A custom message displayed on the \"App needs to quit\" grace period prompt shown when there is 1 pending update. This prompt shows a grace period timer and is displayed when no deferrals are remaining or configured.</string>
-					<key>pfm_documentation_url</key>
-					<string>https://docs.zappl.co/customise/preferences#custom-prompt-messages</string>
-					<key>pfm_enabled</key>
-					<false/>
-					<key>pfm_name</key>
-					<string>singleAppGracePeriodQuitMessage</string>
-					<key>pfm_title</key>
-					<string>Single App Grace Period Prompt Message</string>
-					<key>pfm_type</key>
-					<string>string</string>
-					<key>pfm_value_placeholder</key>
-					<string>Please save your work and click update...</string>
-				</dict>
-				<dict>
-					<key>pfm_description</key>
-					<string>A custom message displayed on the \"Apps need to quit\" grace period prompt shown when there are multiple pending updates. This prompt shows a grace period timer and is displayed when no deferrals are remaining or configured.</string>
-					<key>pfm_documentation_url</key>
-					<string>https://docs.zappl.co/customise/preferences#custom-prompt-messages</string>
-					<key>pfm_enabled</key>
-					<false/>
-					<key>pfm_name</key>
-					<string>multipleAppGracePeriodQuitMessage</string>
-					<key>pfm_title</key>
-					<string>Multiple App Grace Period Prompt Message</string>
-					<key>pfm_type</key>
-					<string>string</string>
-					<key>pfm_value_placeholder</key>
-					<string>Please save your work and click update...</string>
-				</dict>
-				<dict>
-					<key>pfm_description</key>
 					<string>A custom Defer button label displayed on prompts where deferrals are allowed.</string>
 					<key>pfm_documentation_url</key>
 					<string>https://docs.zappl.co/customise/preferences#custom-defer-button</string>
@@ -1965,22 +1726,6 @@ A profile can consist of payloads with different version numbers. For example, c
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string>A custom Skip button label displayed on the Self Service update prompts that allows users to back out of installing updates without affecting deferrals.</string>
-					<key>pfm_documentation_url</key>
-					<string>https://docs.zappl.co/customise/preferences#custom-self-service-skip-button</string>
-					<key>pfm_enabled</key>
-					<false/>
-					<key>pfm_name</key>
-					<string>customSkipButton</string>
-					<key>pfm_title</key>
-					<string>Self Service Skip Button Label</string>
-					<key>pfm_type</key>
-					<string>string</string>
-					<key>pfm_value_placeholder</key>
-					<string>Skip</string>
-				</dict>
-				<dict>
-					<key>pfm_description</key>
 					<string>A custom Update button label displayed on the update prompts.</string>
 					<key>pfm_documentation_url</key>
 					<string>https://docs.zappl.co/customise/preferences#custom-update-button</string>
@@ -1994,6 +1739,92 @@ A profile can consist of payloads with different version numbers. For example, c
 					<string>string</string>
 					<key>pfm_value_placeholder</key>
 					<string>Update</string>
+				</dict>
+				<dict>
+					<key>pfm_app_min</key>
+					<string>3.0.0</string>
+					<key>pfm_default</key>
+					<true/>
+					<key>pfm_description</key>
+					<string>When enabled, an info button is displayed on update prompts that users can tap to view additional context about the update. Disable to hide the button and show prompts without it.</string>
+					<key>pfm_documentation_url</key>
+					<string>https://docs.zappl.co/customise/preferences</string>
+					<key>pfm_name</key>
+					<string>showInfoButton</string>
+					<key>pfm_note</key>
+					<string>Enable this setting to configure the 'Initial Prompt Info Popover Text' (initialPromptInfoPopover) and 'Grace Period Prompt Info Popover Text' (gracePeriodPromptInfoPopover) preferences.</string>
+					<key>pfm_title</key>
+					<string>Show Info Button</string>
+					<key>pfm_type</key>
+					<string>boolean</string>
+				</dict>
+				<dict>
+					<key>pfm_app_min</key>
+					<string>3.0.0</string>
+					<key>pfm_description</key>
+					<string>Custom text displayed in the info popover on the initial update prompt. Use ## to create headings and ** ** to bold text. Newlines can be inserted using \n.</string>
+					<key>pfm_documentation_url</key>
+					<string>https://docs.zappl.co/customise/preferences</string>
+					<key>pfm_enabled</key>
+					<false/>
+					<key>pfm_exclude</key>
+					<array>
+						<dict>
+							<key>pfm_target_conditions</key>
+							<array>
+								<dict>
+									<key>pfm_range_list</key>
+									<array>
+										<false/>
+									</array>
+									<key>pfm_target</key>
+									<string>ScheduledUpdates.showInfoButton</string>
+								</dict>
+							</array>
+						</dict>
+					</array>
+					<key>pfm_name</key>
+					<string>initialPromptInfoPopover</string>
+					<key>pfm_title</key>
+					<string>Initial Prompt Info Popover Text</string>
+					<key>pfm_type</key>
+					<string>string</string>
+					<key>pfm_value_placeholder</key>
+					<string>E.g., ##About Updates\n\nThese updates are required by your IT department...</string>
+				</dict>
+				<dict>
+					<key>pfm_app_min</key>
+					<string>3.0.0</string>
+					<key>pfm_description</key>
+					<string>Custom text displayed in the info popover on the grace period prompt. Use ## to create headings and ** ** to bold text. Newlines can be inserted using \n.</string>
+					<key>pfm_documentation_url</key>
+					<string>https://docs.zappl.co/customise/preferences</string>
+					<key>pfm_enabled</key>
+					<false/>
+					<key>pfm_exclude</key>
+					<array>
+						<dict>
+							<key>pfm_target_conditions</key>
+							<array>
+								<dict>
+									<key>pfm_range_list</key>
+									<array>
+										<false/>
+									</array>
+									<key>pfm_target</key>
+									<string>ScheduledUpdates.showInfoButton</string>
+								</dict>
+							</array>
+						</dict>
+					</array>
+					<key>pfm_name</key>
+					<string>gracePeriodPromptInfoPopover</string>
+					<key>pfm_title</key>
+					<string>Grace Period Prompt Info Popover Text</string>
+					<key>pfm_type</key>
+					<string>string</string>
+					<key>pfm_value_placeholder</key>
+					<string>E.g., ##About Updates\n\nThe update will start automatically when the timer runs out...</string>
 				</dict>
 				<dict>
 					<key>pfm_description</key>
@@ -2133,6 +1964,20 @@ A profile can consist of payloads with different version numbers. For example, c
 				</dict>
 				<dict>
 					<key>pfm_default</key>
+					<true/>
+					<key>pfm_description</key>
+					<string>When enabled, a small progress prompt is displayed in the corner of the screen while updates are being installed. Disable to run updates silently without any progress indicator.</string>
+					<key>pfm_documentation_url</key>
+					<string>https://docs.zappl.co/customise/preferences#update-progress-prompt-behaviour</string>
+					<key>pfm_name</key>
+					<string>updateProgressPrompt</string>
+					<key>pfm_title</key>
+					<string>Show Update Progress Prompt</string>
+					<key>pfm_type</key>
+					<string>boolean</string>
+				</dict>
+				<dict>
+					<key>pfm_default</key>
 					<string>topright</string>
 					<key>pfm_description</key>
 					<string>The position on the screen of the prompt which displays the progress of an update. The default position is top right.</string>
@@ -2140,6 +1985,22 @@ A profile can consist of payloads with different version numbers. For example, c
 					<string>https://docs.zappl.co/customise/preferences#update-progress-prompt-position</string>
 					<key>pfm_enabled</key>
 					<false/>
+					<key>pfm_exclude</key>
+					<array>
+						<dict>
+							<key>pfm_target_conditions</key>
+							<array>
+								<dict>
+									<key>pfm_range_list</key>
+									<array>
+										<false/>
+									</array>
+									<key>pfm_target</key>
+									<string>ScheduledUpdates.updateProgressPrompt</string>
+								</dict>
+							</array>
+						</dict>
+					</array>
 					<key>pfm_name</key>
 					<string>updateProgressPosition</string>
 					<key>pfm_range_list</key>
@@ -2172,40 +2033,28 @@ A profile can consist of payloads with different version numbers. For example, c
 					<string>string</string>
 				</dict>
 				<dict>
-					<key>pfm_default</key>
-					<string>noFocusPrompt</string>
-					<key>pfm_description</key>
-					<string>Determines the behaviour of the prompt shown when updates are in progress. You can either select a prompt that does not take focus over other running Apps (default), a prompt that does take focus over all other running Apps, or disable the progress prompt completely. If you chose to show no prompt, you can still enable the \"Display Complete Message\" setting to inform users when the update has finished.</string>
-					<key>pfm_documentation_url</key>
-					<string>https://docs.zappl.co/customise/preferences#update-progress-prompt-behaviour</string>
-					<key>pfm_enabled</key>
-					<false/>
-					<key>pfm_name</key>
-					<string>updateProgressPrompt</string>
-					<key>pfm_range_list</key>
-					<array>
-						<string>noFocusPrompt</string>
-						<string>focusPrompt</string>
-						<string>noPrompt</string>
-					</array>
-					<key>pfm_range_list_titles</key>
-					<array>
-						<string>Prompt Without Focus</string>
-						<string>Prompt With Focus</string>
-						<string>No Prompt</string>
-					</array>
-					<key>pfm_title</key>
-					<string>Update Progress Prompt Behaviour</string>
-					<key>pfm_type</key>
-					<string>string</string>
-				</dict>
-				<dict>
 					<key>pfm_description</key>
 					<string>An icon overlay on the prompt shown during the App updates. The overlay is displayed on the bottom right of the main icon, which on this prompt is the App icon. Possible values are paths to a valid .png, .jpg or .icns file, or use the 'selfService' variable for the Jamf Self Service icon.</string>
 					<key>pfm_documentation_url</key>
 					<string>https://docs.zappl.co/customise/preferences#update-progress-prompt-overlay-icon</string>
 					<key>pfm_enabled</key>
 					<false/>
+					<key>pfm_exclude</key>
+					<array>
+						<dict>
+							<key>pfm_target_conditions</key>
+							<array>
+								<dict>
+									<key>pfm_range_list</key>
+									<array>
+										<false/>
+									</array>
+									<key>pfm_target</key>
+									<string>ScheduledUpdates.updateProgressPrompt</string>
+								</dict>
+							</array>
+						</dict>
+					</array>
 					<key>pfm_name</key>
 					<string>updateProgressOverlayIcon</string>
 					<key>pfm_title</key>
@@ -2235,7 +2084,7 @@ A profile can consist of payloads with different version numbers. For example, c
 					<key>pfm_default</key>
 					<true/>
 					<key>pfm_description</key>
-					<string>Determines whether a prompt is displayed to the user to inform them that the updates are complete. The prompt will inherit the same window position as the Update Progress prompt. Default is true.</string>
+					<string>When enabled, a macOS notification is sent to the user once all updates are complete.</string>
 					<key>pfm_documentation_url</key>
 					<string>https://docs.zappl.co/customise/preferences#display-complete-message</string>
 					<key>pfm_enabled</key>
@@ -2243,7 +2092,7 @@ A profile can consist of payloads with different version numbers. For example, c
 					<key>pfm_name</key>
 					<string>displayCompletePrompt</string>
 					<key>pfm_title</key>
-					<string>Display Complete Message</string>
+					<string>Send Completion Notification</string>
 					<key>pfm_type</key>
 					<string>boolean</string>
 				</dict>
@@ -2901,7 +2750,7 @@ A profile can consist of payloads with different version numbers. For example, c
 						</dict>
 					</array>
 					<key>pfm_title</key>
-					<string>Run Limitations</string>
+					<string>Run Limitation Options</string>
 					<key>pfm_type</key>
 					<string>dictionary</string>
 				</dict>
@@ -2931,117 +2780,11 @@ A profile can consist of payloads with different version numbers. For example, c
 					<key>pfm_name</key>
 					<string>initialPromptOverlayIcon</string>
 					<key>pfm_title</key>
-					<string>Initial Prompt Icon Overlay</string>
+					<string>Initial Prompt Overlay Icon</string>
 					<key>pfm_type</key>
 					<string>string</string>
 					<key>pfm_value_placeholder</key>
 					<string>/usr/local/images/CustomIcon.png</string>
-				</dict>
-				<dict>
-					<key>pfm_description</key>
-					<string>Use to customise the size of the initial prompt displayed to users when they can either defer or update. Note: Only configure this setting if defining custom prompt messages. If you are using the default prompt messages, customising prompt size is not recommended as the default prompt size is pre-configured to correctly match the size of the default message displayed.</string>
-					<key>pfm_documentation_url</key>
-					<string>https://docs.zappl.co/customise/preferences#custom-prompt-sizes</string>
-					<key>pfm_enabled</key>
-					<false/>
-					<key>pfm_name</key>
-					<string>customInitialPromptSize</string>
-					<key>pfm_subkeys</key>
-					<array>
-						<dict>
-							<key>pfm_default</key>
-							<integer>330</integer>
-							<key>pfm_description</key>
-							<string>Use to customise the height of the initial prompt displayed to users when they can either defer or update. Only use to define a custom height in points for the prompts shown to users, e.g. 330.</string>
-							<key>pfm_documentation_url</key>
-							<string>https://docs.zappl.co/customise/preferences#custom-prompt-sizes</string>
-							<key>pfm_name</key>
-							<string>promptHeight</string>
-							<key>pfm_note</key>
-							<string>Only configure this setting if defining custom prompt messages. If you are using the default prompt messages, customising prompt size is not recommended as the default prompt size is pre-configured to correctly match the size of the default message displayed.</string>
-							<key>pfm_title</key>
-							<string>Custom Initial Prompt (Height)</string>
-							<key>pfm_type</key>
-							<string>integer</string>
-							<key>pfm_value_placeholder</key>
-							<string>330</string>
-						</dict>
-						<dict>
-							<key>pfm_default</key>
-							<integer>640</integer>
-							<key>pfm_description</key>
-							<string>Use to customise the width of the initial prompt displayed to users when they can either defer or update. Only use to define a custom width in points for the prompts shown to users, e.g. 640.</string>
-							<key>pfm_documentation_url</key>
-							<string>https://docs.zappl.co/customise/preferences#custom-prompt-sizes</string>
-							<key>pfm_name</key>
-							<string>promptWidth</string>
-							<key>pfm_note</key>
-							<string>Only configure this setting if defining custom prompt messages. If you are using the default prompt messages, customising prompt size is not recommended as the default prompt size is pre-configured to correctly match the size of the default message displayed.</string>
-							<key>pfm_title</key>
-							<string>Custom Initial Prompt (Width)</string>
-							<key>pfm_type</key>
-							<string>integer</string>
-							<key>pfm_value_placeholder</key>
-							<string>640</string>
-						</dict>
-					</array>
-					<key>pfm_title</key>
-					<string>Initial Prompt Size</string>
-					<key>pfm_type</key>
-					<string>dictionary</string>
-				</dict>
-				<dict>
-					<key>pfm_description</key>
-					<string>Use to customise the size of the grace period timer prompt shown when users have no remaining deferrals. Note: Only configure this setting if defining custom prompt messages. If you are using the default prompt messages, customising prompt size is not recommended as the default prompt size is pre-configured to correctly match the size of the default message displayed.</string>
-					<key>pfm_documentation_url</key>
-					<string>https://docs.zappl.co/customise/preferences#custom-prompt-sizes</string>
-					<key>pfm_enabled</key>
-					<false/>
-					<key>pfm_name</key>
-					<string>customGracePromptSize</string>
-					<key>pfm_subkeys</key>
-					<array>
-						<dict>
-							<key>pfm_default</key>
-							<integer>330</integer>
-							<key>pfm_description</key>
-							<string>Use to customise the height of the grace period timer prompt displayed to users when they have no remaining deferrals. Only use to define a custom height in points for the prompts shown to users, e.g. 330.</string>
-							<key>pfm_documentation_url</key>
-							<string>https://docs.zappl.co/customise/preferences#custom-prompt-sizes</string>
-							<key>pfm_name</key>
-							<string>promptHeight</string>
-							<key>pfm_note</key>
-							<string>Only configure this setting if defining custom prompt messages. If you are using the default prompt messages, customising prompt size is not recommended as the default prompt size is pre-configured to correctly match the size of the default message displayed.</string>
-							<key>pfm_title</key>
-							<string>Custom Grace Prompt (Height)</string>
-							<key>pfm_type</key>
-							<string>integer</string>
-							<key>pfm_value_placeholder</key>
-							<string>330</string>
-						</dict>
-						<dict>
-							<key>pfm_default</key>
-							<integer>640</integer>
-							<key>pfm_description</key>
-							<string>Use to customise the width of the grace period timer prompt displayed to users when they have no remaining deferrals. Only use to define a custom width in points for the prompts shown to users, e.g. 640.</string>
-							<key>pfm_documentation_url</key>
-							<string>https://docs.zappl.co/customise/preferences#custom-prompt-sizes</string>
-							<key>pfm_name</key>
-							<string>promptWidth</string>
-							<key>pfm_note</key>
-							<string>Only configure this setting if defining custom prompt messages. If you are using the default prompt messages, customising prompt size is not recommended as the default prompt size is pre-configured to correctly match the size of the default message displayed.</string>
-							<key>pfm_title</key>
-							<string>Custom Grace Prompt (Width)</string>
-							<key>pfm_type</key>
-							<string>integer</string>
-							<key>pfm_value_placeholder</key>
-							<string>640</string>
-						</dict>
-					</array>
-					<key>pfm_title</key>
-					<string>Custom Grace Prompt Size</string>
-					<key>pfm_type</key>
-					<string>dictionary</string>
 				</dict>
 				<dict>
 					<key>pfm_description</key>
@@ -3053,43 +2796,11 @@ A profile can consist of payloads with different version numbers. For example, c
 					<key>pfm_name</key>
 					<string>customTitle</string>
 					<key>pfm_title</key>
-					<string>Custom Title</string>
+					<string>Title</string>
 					<key>pfm_type</key>
 					<string>string</string>
 					<key>pfm_value_placeholder</key>
 					<string>appName Update Required</string>
-				</dict>
-				<dict>
-					<key>pfm_description</key>
-					<string>A custom message displayed on the initial \"App needs to quit\" forced update prompt.</string>
-					<key>pfm_documentation_url</key>
-					<string>https://docs.zappl.co/customise/preferences#custom-prompt-messages</string>
-					<key>pfm_enabled</key>
-					<false/>
-					<key>pfm_name</key>
-					<string>initialQuitPromptMessage</string>
-					<key>pfm_title</key>
-					<string>Custom Title</string>
-					<key>pfm_type</key>
-					<string>string</string>
-					<key>pfm_value_placeholder</key>
-					<string>Important updates are pending which require Apps to quit...</string>
-				</dict>
-				<dict>
-					<key>pfm_description</key>
-					<string>A custom message displayed on the grace period \"App needs to quit\" prompt. This prompt shows a grace period timer and is displayed when no deferrals are remaining or configured.</string>
-					<key>pfm_documentation_url</key>
-					<string>https://docs.zappl.co/customise/preferences#custom-prompt-messages</string>
-					<key>pfm_enabled</key>
-					<false/>
-					<key>pfm_name</key>
-					<string>gracePeriodQuitPromptMessage</string>
-					<key>pfm_title</key>
-					<string>Grace Period Quit Prompt Message</string>
-					<key>pfm_type</key>
-					<string>string</string>
-					<key>pfm_value_placeholder</key>
-					<string>Please save your work and click update...</string>
 				</dict>
 				<dict>
 					<key>pfm_description</key>
@@ -3101,7 +2812,7 @@ A profile can consist of payloads with different version numbers. For example, c
 					<key>pfm_name</key>
 					<string>customDeferButton</string>
 					<key>pfm_title</key>
-					<string>Custom Defer Button</string>
+					<string>Defer Button Label</string>
 					<key>pfm_type</key>
 					<string>string</string>
 					<key>pfm_value_placeholder</key>
@@ -3117,11 +2828,97 @@ A profile can consist of payloads with different version numbers. For example, c
 					<key>pfm_name</key>
 					<string>customUpdateButton</string>
 					<key>pfm_title</key>
-					<string>Custom Update Button</string>
+					<string>Update Button Label</string>
 					<key>pfm_type</key>
 					<string>string</string>
 					<key>pfm_value_placeholder</key>
 					<string>Update</string>
+				</dict>
+				<dict>
+					<key>pfm_app_min</key>
+					<string>3.0.0</string>
+					<key>pfm_default</key>
+					<true/>
+					<key>pfm_description</key>
+					<string>When enabled, an info button is displayed on update prompts that users can tap to view additional context about the update. Disable to hide the button and show prompts without it.</string>
+					<key>pfm_documentation_url</key>
+					<string>https://docs.zappl.co/customise/preferences</string>
+					<key>pfm_name</key>
+					<string>showInfoButton</string>
+					<key>pfm_note</key>
+					<string>Enable this setting to configure the 'Initial Prompt Info Popover Text' (initialPromptInfoPopover) and 'Grace Period Prompt Info Popover Text' (gracePeriodPromptInfoPopover) preferences.</string>
+					<key>pfm_title</key>
+					<string>Show Info Button</string>
+					<key>pfm_type</key>
+					<string>boolean</string>
+				</dict>
+				<dict>
+					<key>pfm_app_min</key>
+					<string>3.0.0</string>
+					<key>pfm_description</key>
+					<string>Custom text displayed in the info popover on the initial forced update prompt. Use ## to create headings and ** ** to bold text. Newlines can be inserted using \n.</string>
+					<key>pfm_documentation_url</key>
+					<string>https://docs.zappl.co/customise/preferences</string>
+					<key>pfm_enabled</key>
+					<false/>
+					<key>pfm_exclude</key>
+					<array>
+						<dict>
+							<key>pfm_target_conditions</key>
+							<array>
+								<dict>
+									<key>pfm_range_list</key>
+									<array>
+										<false/>
+									</array>
+									<key>pfm_target</key>
+									<string>ForcedUpdates.showInfoButton</string>
+								</dict>
+							</array>
+						</dict>
+					</array>
+					<key>pfm_name</key>
+					<string>initialPromptInfoPopover</string>
+					<key>pfm_title</key>
+					<string>Initial Prompt Info Popover Text</string>
+					<key>pfm_type</key>
+					<string>string</string>
+					<key>pfm_value_placeholder</key>
+					<string>E.g., ##Urgent Update Required\n\nThis app has a critical security vulnerability...</string>
+				</dict>
+				<dict>
+					<key>pfm_app_min</key>
+					<string>3.0.0</string>
+					<key>pfm_description</key>
+					<string>Custom text displayed in the info popover on the grace period forced update prompt. Use ## to create headings and ** ** to bold text. Newlines can be inserted using \n.</string>
+					<key>pfm_documentation_url</key>
+					<string>https://docs.zappl.co/customise/preferences</string>
+					<key>pfm_enabled</key>
+					<false/>
+					<key>pfm_exclude</key>
+					<array>
+						<dict>
+							<key>pfm_target_conditions</key>
+							<array>
+								<dict>
+									<key>pfm_range_list</key>
+									<array>
+										<false/>
+									</array>
+									<key>pfm_target</key>
+									<string>ForcedUpdates.showInfoButton</string>
+								</dict>
+							</array>
+						</dict>
+					</array>
+					<key>pfm_name</key>
+					<string>gracePeriodPromptInfoPopover</string>
+					<key>pfm_title</key>
+					<string>Grace Period Prompt Info Popover Text</string>
+					<key>pfm_type</key>
+					<string>string</string>
+					<key>pfm_value_placeholder</key>
+					<string>E.g., ##Urgent Update Required\n\nThe update will start automatically when the timer runs out...</string>
 				</dict>
 				<dict>
 					<key>pfm_default</key>
@@ -3237,6 +3034,20 @@ A profile can consist of payloads with different version numbers. For example, c
 				</dict>
 				<dict>
 					<key>pfm_default</key>
+					<true/>
+					<key>pfm_description</key>
+					<string>When enabled, a small progress prompt is displayed in the corner of the screen while updates are being installed. Disable to run updates silently without any progress indicator.</string>
+					<key>pfm_documentation_url</key>
+					<string>https://docs.zappl.co/customise/preferences#update-progress-prompt-behaviour</string>
+					<key>pfm_name</key>
+					<string>updateProgressPrompt</string>
+					<key>pfm_title</key>
+					<string>Show Update Progress Prompt</string>
+					<key>pfm_type</key>
+					<string>boolean</string>
+				</dict>
+				<dict>
+					<key>pfm_default</key>
 					<string>topright</string>
 					<key>pfm_description</key>
 					<string>The position on the screen of the prompt which displays the progress of an update. The default position is top right.</string>
@@ -3244,6 +3055,22 @@ A profile can consist of payloads with different version numbers. For example, c
 					<string>https://docs.zappl.co/customise/preferences#update-progress-prompt-position</string>
 					<key>pfm_enabled</key>
 					<false/>
+					<key>pfm_exclude</key>
+					<array>
+						<dict>
+							<key>pfm_target_conditions</key>
+							<array>
+								<dict>
+									<key>pfm_range_list</key>
+									<array>
+										<false/>
+									</array>
+									<key>pfm_target</key>
+									<string>ForcedUpdates.updateProgressPrompt</string>
+								</dict>
+							</array>
+						</dict>
+					</array>
 					<key>pfm_name</key>
 					<string>updateProgressPosition</string>
 					<key>pfm_range_list</key>
@@ -3276,40 +3103,28 @@ A profile can consist of payloads with different version numbers. For example, c
 					<string>string</string>
 				</dict>
 				<dict>
-					<key>pfm_default</key>
-					<string>noFocusPrompt</string>
-					<key>pfm_description</key>
-					<string>Determines the behaviour of the prompt shown when updates are in progress. You can either select a prompt that does not take focus over other running Apps (default), a prompt that does take focus over all other running Apps, or disable the progress prompt completely. If you chose to show no prompt, you can still enable the \"Display Complete Message\" setting to inform users when the update has finished.</string>
-					<key>pfm_documentation_url</key>
-					<string>https://docs.zappl.co/customise/preferences#update-progress-prompt-behaviour</string>
-					<key>pfm_enabled</key>
-					<false/>
-					<key>pfm_name</key>
-					<string>updateProgressPrompt</string>
-					<key>pfm_range_list</key>
-					<array>
-						<string>noFocusPrompt</string>
-						<string>focusPrompt</string>
-						<string>noPrompt</string>
-					</array>
-					<key>pfm_range_list_titles</key>
-					<array>
-						<string>Prompt Without Focus</string>
-						<string>Prompt With Focus</string>
-						<string>No Prompt</string>
-					</array>
-					<key>pfm_title</key>
-					<string>Update Progress Prompt Behaviour</string>
-					<key>pfm_type</key>
-					<string>string</string>
-				</dict>
-				<dict>
 					<key>pfm_description</key>
 					<string>An icon overlay on the prompt shown during the App updates. The overlay is displayed on the bottom right of the main icon, which on this prompt is the App icon. Possible values are paths to a valid .png, .jpg or .icns file, or use the 'selfService' variable for the Jamf Self Service icon.</string>
 					<key>pfm_documentation_url</key>
 					<string>https://docs.zappl.co/customise/preferences#update-progress-prompt-overlay-icon</string>
 					<key>pfm_enabled</key>
 					<false/>
+					<key>pfm_exclude</key>
+					<array>
+						<dict>
+							<key>pfm_target_conditions</key>
+							<array>
+								<dict>
+									<key>pfm_range_list</key>
+									<array>
+										<false/>
+									</array>
+									<key>pfm_target</key>
+									<string>ForcedUpdates.updateProgressPrompt</string>
+								</dict>
+							</array>
+						</dict>
+					</array>
 					<key>pfm_name</key>
 					<string>updateProgressOverlayIcon</string>
 					<key>pfm_title</key>
@@ -3339,7 +3154,7 @@ A profile can consist of payloads with different version numbers. For example, c
 					<key>pfm_default</key>
 					<true/>
 					<key>pfm_description</key>
-					<string>Determines whether a prompt is displayed to the user to inform them that the updates are complete. The prompt will inherit the same window position as the Update Progress prompt. Default is true.</string>
+					<string>When enabled, a macOS notification is sent to the user once all updates are complete.</string>
 					<key>pfm_documentation_url</key>
 					<string>https://docs.zappl.co/customise/preferences#display-complete-message</string>
 					<key>pfm_enabled</key>
@@ -3347,7 +3162,7 @@ A profile can consist of payloads with different version numbers. For example, c
 					<key>pfm_name</key>
 					<string>displayCompletePrompt</string>
 					<key>pfm_title</key>
-					<string>Display Complete Message</string>
+					<string>Send Completion Notification</string>
 					<key>pfm_type</key>
 					<string>boolean</string>
 				</dict>
@@ -3367,6 +3182,6 @@ A profile can consist of payloads with different version numbers. For example, c
 	<key>pfm_unique</key>
 	<true/>
 	<key>pfm_version</key>
-	<integer>2</integer>
+	<integer>3</integer>
 </dict>
 </plist>
