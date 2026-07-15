@@ -982,11 +982,11 @@
 		<key>com.secondsonconsulting.renew</key>
 		<dict>
 			<key>modified</key>
-			<date>2026-06-23T15:59:45Z</date>
+			<date>2026-07-15T00:00:00Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.secondsonconsulting.renew.plist</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<key>com.sentinelone.registration-token</key>
 		<dict>
@@ -2517,6 +2517,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2026-07-15T10:36:01Z</date>
+	<date>2026-07-15T18:27:26Z</date>
 </dict>
 </plist>
