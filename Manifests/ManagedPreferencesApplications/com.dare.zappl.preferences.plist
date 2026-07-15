@@ -13,7 +13,7 @@
 	<key>pfm_format_version</key>
 	<integer>1</integer>
 	<key>pfm_last_modified</key>
-	<date>2026-07-14T10:36:58Z</date>
+	<date>2026-07-15T09:13:58Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -224,13 +224,13 @@ A profile can consist of payloads with different version numbers. For example, c
 					<key>pfm_default</key>
 					<true/>
 					<key>pfm_description</key>
-					<string>(Previous name for 'backgroundUpdates' — both key names are accepted by Zappl; new profiles should use 'backgroundUpdates'.) When enabled, Zappl attempts to silently update apps in the background on a recurring interval. If an app is not in use when an update is available, it will be updated without any prompts being shown to the user. Leaving this enabled is recommended to ensure updates are applied as quickly as possible with minimal user disruption.</string>
+					<string>When enabled, Zappl attempts to silently update apps in the background on a recurring interval. If an app is not in use when an update is available, it will be updated without any prompts being shown to the user. Leaving this enabled is recommended to ensure updates are applied as quickly as possible with minimal user disruption.</string>
 					<key>pfm_documentation_url</key>
 					<string>https://docs.zappl.co/customise/preferences#allow-background-updates</string>
 					<key>pfm_name</key>
 					<string>hourlyCheck</string>
 					<key>pfm_note</key>
-					<string>Enable this setting to configure the 'Background Update Stagger Window' (backgroundUpdateWindow) preference.</string>
+					<string>Renamed to 'backgroundUpdates' in Zappl 3.0; both key names are accepted.</string>
 					<key>pfm_title</key>
 					<string>Allow Background Updates</string>
 					<key>pfm_type</key>
@@ -244,7 +244,7 @@ A profile can consist of payloads with different version numbers. For example, c
 					<key>pfm_default</key>
 					<integer>60</integer>
 					<key>pfm_description</key>
-					<string>(Previous name for 'downloadStaggerWindow' — both key names are accepted by Zappl; new profiles should use 'downloadStaggerWindow'.) Sets a stagger window in minutes that spreads background update checks across your devices. Each device will randomly pick a time within this window to check for and download new updates after they are released. Increasing this value is recommended for large sites to reduce network load. The default and minimum value is 60 minutes and the maximum is 360 minutes (6 hours).</string>
+					<string>Sets a stagger window in minutes that spreads background update checks across your devices. Each device will randomly pick a time within this window to check for and download new updates after they are released. Increasing this value is recommended for large sites to reduce network load. The default and minimum value is 60 minutes and the maximum is 360 minutes (6 hours).</string>
 					<key>pfm_documentation_url</key>
 					<string>https://docs.zappl.co/customise/preferences#background-update-stagger-window</string>
 					<key>pfm_exclude</key>
@@ -265,6 +265,8 @@ A profile can consist of payloads with different version numbers. For example, c
 					</array>
 					<key>pfm_name</key>
 					<string>backgroundUpdateWindow</string>
+					<key>pfm_note</key>
+					<string>Renamed to 'downloadStaggerWindow' in Zappl 3.0; both key names are accepted.</string>
 					<key>pfm_range_max</key>
 					<integer>360</integer>
 					<key>pfm_range_min</key>
@@ -1738,13 +1740,15 @@ A profile can consist of payloads with different version numbers. For example, c
 					<key>pfm_app_deprecated</key>
 					<string>3.0.0</string>
 					<key>pfm_description</key>
-					<string>(Deprecated in Zappl v3.0.0 — no longer used in Zappl v3 and later; retained so existing profiles continue to load.) Use to customise the size of the initial prompt displayed to users when they can either defer or update. Note: Only configure this setting if defining custom prompt messages. If you are using the default prompt messages, customising prompt size is not recommended as the default prompt size is pre-configured to correctly match the size of the default message displayed.</string>
+					<string>Use to customise the size of the initial prompt displayed to users when they can either defer or update. Note: Only configure this setting if defining custom prompt messages. If you are using the default prompt messages, customising prompt size is not recommended as the default prompt size is pre-configured to correctly match the size of the default message displayed.</string>
 					<key>pfm_documentation_url</key>
 					<string>https://docs.zappl.co/customise/preferences#custom-prompt-sizes</string>
 					<key>pfm_enabled</key>
 					<false/>
 					<key>pfm_name</key>
 					<string>customInitialPromptSize</string>
+					<key>pfm_note</key>
+					<string>Deprecated in Zappl 3.0.</string>
 					<key>pfm_subkeys</key>
 					<array>
 						<dict>
@@ -1753,13 +1757,13 @@ A profile can consist of payloads with different version numbers. For example, c
 							<key>pfm_default</key>
 							<integer>330</integer>
 							<key>pfm_description</key>
-							<string>(Deprecated in Zappl v3.0.0 — no longer used in Zappl v3 and later; retained so existing profiles continue to load.) Use to customise the height of the initial prompt displayed to users when they can either defer or update. Only use to define a custom height in points for the prompts shown to users, e.g. 330.</string>
+							<string>Use to customise the height of the initial prompt displayed to users when they can either defer or update. Only use to define a custom height in points for the prompts shown to users, e.g. 330.</string>
 							<key>pfm_documentation_url</key>
 							<string>https://docs.zappl.co/customise/preferences#custom-prompt-sizes</string>
 							<key>pfm_name</key>
 							<string>promptHeight</string>
 							<key>pfm_note</key>
-							<string>Only configure this setting if defining custom prompt messages. If you are using the default prompt messages, customising prompt size is not recommended as the default prompt size is pre-configured to correctly match the size of the default message displayed.</string>
+							<string>Deprecated in Zappl 3.0.</string>
 							<key>pfm_title</key>
 							<string>Custom Initial Prompt (Height)</string>
 							<key>pfm_type</key>
@@ -1773,13 +1777,13 @@ A profile can consist of payloads with different version numbers. For example, c
 							<key>pfm_default</key>
 							<integer>640</integer>
 							<key>pfm_description</key>
-							<string>(Deprecated in Zappl v3.0.0 — no longer used in Zappl v3 and later; retained so existing profiles continue to load.) Use to customise the width of the initial prompt displayed to users when they can either defer or update. Only use to define a custom width in points for the prompts shown to users, e.g. 640.</string>
+							<string>Use to customise the width of the initial prompt displayed to users when they can either defer or update. Only use to define a custom width in points for the prompts shown to users, e.g. 640.</string>
 							<key>pfm_documentation_url</key>
 							<string>https://docs.zappl.co/customise/preferences#custom-prompt-sizes</string>
 							<key>pfm_name</key>
 							<string>promptWidth</string>
 							<key>pfm_note</key>
-							<string>Only configure this setting if defining custom prompt messages. If you are using the default prompt messages, customising prompt size is not recommended as the default prompt size is pre-configured to correctly match the size of the default message displayed.</string>
+							<string>Deprecated in Zappl 3.0.</string>
 							<key>pfm_title</key>
 							<string>Custom Initial Prompt (Width)</string>
 							<key>pfm_type</key>
@@ -1797,13 +1801,15 @@ A profile can consist of payloads with different version numbers. For example, c
 					<key>pfm_app_deprecated</key>
 					<string>3.0.0</string>
 					<key>pfm_description</key>
-					<string>(Deprecated in Zappl v3.0.0 — no longer used in Zappl v3 and later; retained so existing profiles continue to load.) Use to customise the size of the grace period timer prompt shown when users have no remaining deferrals. Note: Only configure this setting if defining custom prompt messages. If you are using the default prompt messages, customising prompt size is not recommended as the default prompt size is pre-configured to correctly match the size of the default message displayed.</string>
+					<string>Use to customise the size of the grace period timer prompt shown when users have no remaining deferrals. Note: Only configure this setting if defining custom prompt messages. If you are using the default prompt messages, customising prompt size is not recommended as the default prompt size is pre-configured to correctly match the size of the default message displayed.</string>
 					<key>pfm_documentation_url</key>
 					<string>https://docs.zappl.co/customise/preferences#custom-prompt-sizes</string>
 					<key>pfm_enabled</key>
 					<false/>
 					<key>pfm_name</key>
 					<string>customGracePromptSize</string>
+					<key>pfm_note</key>
+					<string>Deprecated in Zappl 3.0.</string>
 					<key>pfm_subkeys</key>
 					<array>
 						<dict>
@@ -1812,13 +1818,13 @@ A profile can consist of payloads with different version numbers. For example, c
 							<key>pfm_default</key>
 							<integer>330</integer>
 							<key>pfm_description</key>
-							<string>(Deprecated in Zappl v3.0.0 — no longer used in Zappl v3 and later; retained so existing profiles continue to load.) Use to customise the height of the grace period timer prompt displayed to users when they have no remaining deferrals. Only use to define a custom height in points for the prompts shown to users, e.g. 330.</string>
+							<string>Use to customise the height of the grace period timer prompt displayed to users when they have no remaining deferrals. Only use to define a custom height in points for the prompts shown to users, e.g. 330.</string>
 							<key>pfm_documentation_url</key>
 							<string>https://docs.zappl.co/customise/preferences#custom-prompt-sizes</string>
 							<key>pfm_name</key>
 							<string>promptHeight</string>
 							<key>pfm_note</key>
-							<string>Only configure this setting if defining custom prompt messages. If you are using the default prompt messages, customising prompt size is not recommended as the default prompt size is pre-configured to correctly match the size of the default message displayed.</string>
+							<string>Deprecated in Zappl 3.0.</string>
 							<key>pfm_title</key>
 							<string>Custom Grace Prompt (Height)</string>
 							<key>pfm_type</key>
@@ -1832,13 +1838,13 @@ A profile can consist of payloads with different version numbers. For example, c
 							<key>pfm_default</key>
 							<integer>640</integer>
 							<key>pfm_description</key>
-							<string>(Deprecated in Zappl v3.0.0 — no longer used in Zappl v3 and later; retained so existing profiles continue to load.) Use to customise the width of the grace period timer prompt displayed to users when they have no remaining deferrals. Only use to define a custom width in points for the prompts shown to users, e.g. 640.</string>
+							<string>Use to customise the width of the grace period timer prompt displayed to users when they have no remaining deferrals. Only use to define a custom width in points for the prompts shown to users, e.g. 640.</string>
 							<key>pfm_documentation_url</key>
 							<string>https://docs.zappl.co/customise/preferences#custom-prompt-sizes</string>
 							<key>pfm_name</key>
 							<string>promptWidth</string>
 							<key>pfm_note</key>
-							<string>Only configure this setting if defining custom prompt messages. If you are using the default prompt messages, customising prompt size is not recommended as the default prompt size is pre-configured to correctly match the size of the default message displayed.</string>
+							<string>Deprecated in Zappl 3.0.</string>
 							<key>pfm_title</key>
 							<string>Custom Grace Prompt (Width)</string>
 							<key>pfm_type</key>
@@ -1856,13 +1862,15 @@ A profile can consist of payloads with different version numbers. For example, c
 					<key>pfm_app_deprecated</key>
 					<string>3.0.0</string>
 					<key>pfm_description</key>
-					<string>(Deprecated in Zappl v3.0.0 — no longer used in Zappl v3 and later; retained so existing profiles continue to load.) Use to customise the size of the prompt displayed to users when they initiate a Self Service update. Note: Only configure this setting if defining custom prompt messages. If you are using the default prompt messages, customising prompt size is not recommended as the default prompt size is pre-configured to correctly match the size of the default message displayed.</string>
+					<string>Use to customise the size of the prompt displayed to users when they initiate a Self Service update. Note: Only configure this setting if defining custom prompt messages. If you are using the default prompt messages, customising prompt size is not recommended as the default prompt size is pre-configured to correctly match the size of the default message displayed.</string>
 					<key>pfm_documentation_url</key>
 					<string>https://docs.zappl.co/customise/preferences#custom-prompt-sizes</string>
 					<key>pfm_enabled</key>
 					<false/>
 					<key>pfm_name</key>
 					<string>customSelfServicePromptSize</string>
+					<key>pfm_note</key>
+					<string>Deprecated in Zappl 3.0.</string>
 					<key>pfm_subkeys</key>
 					<array>
 						<dict>
@@ -1871,13 +1879,13 @@ A profile can consist of payloads with different version numbers. For example, c
 							<key>pfm_default</key>
 							<integer>330</integer>
 							<key>pfm_description</key>
-							<string>(Deprecated in Zappl v3.0.0 — no longer used in Zappl v3 and later; retained so existing profiles continue to load.) Use to customise the height of the prompt displayed to users when they initiate a Self Service update. Only use to define a custom height in points for the prompts shown to users, e.g. 330.</string>
+							<string>Use to customise the height of the prompt displayed to users when they initiate a Self Service update. Only use to define a custom height in points for the prompts shown to users, e.g. 330.</string>
 							<key>pfm_documentation_url</key>
 							<string>https://docs.zappl.co/customise/preferences#custom-prompt-sizes</string>
 							<key>pfm_name</key>
 							<string>promptHeight</string>
 							<key>pfm_note</key>
-							<string>Only configure this setting if defining custom prompt messages. If you are using the default prompt messages, customising prompt size is not recommended as the default prompt size is pre-configured to correctly match the size of the default message displayed.</string>
+							<string>Deprecated in Zappl 3.0.</string>
 							<key>pfm_title</key>
 							<string>Self Service Prompt (Height)</string>
 							<key>pfm_type</key>
@@ -1891,13 +1899,13 @@ A profile can consist of payloads with different version numbers. For example, c
 							<key>pfm_default</key>
 							<integer>640</integer>
 							<key>pfm_description</key>
-							<string>(Deprecated in Zappl v3.0.0 — no longer used in Zappl v3 and later; retained so existing profiles continue to load.) Use to customise the width of the prompt displayed to users when they initiate a Self Service update. Only use to define a custom width in points for the prompts shown to users, e.g. 640.</string>
+							<string>Use to customise the width of the prompt displayed to users when they initiate a Self Service update. Only use to define a custom width in points for the prompts shown to users, e.g. 640.</string>
 							<key>pfm_documentation_url</key>
 							<string>https://docs.zappl.co/customise/preferences#custom-prompt-sizes</string>
 							<key>pfm_name</key>
 							<string>promptWidth</string>
 							<key>pfm_note</key>
-							<string>Only configure this setting if defining custom prompt messages. If you are using the default prompt messages, customising prompt size is not recommended as the default prompt size is pre-configured to correctly match the size of the default message displayed.</string>
+							<string>Deprecated in Zappl 3.0.</string>
 							<key>pfm_title</key>
 							<string>Self Service Prompt (Width)</string>
 							<key>pfm_type</key>
@@ -1947,13 +1955,15 @@ A profile can consist of payloads with different version numbers. For example, c
 					<key>pfm_app_deprecated</key>
 					<string>3.0.0</string>
 					<key>pfm_description</key>
-					<string>(Deprecated in Zappl v3.0.0 — no longer used in Zappl v3 and later; retained so existing profiles continue to load.) A custom message displayed on the initial \"App needs to quit\" prompt shown when there is 1 pending App update.</string>
+					<string>A custom message displayed on the initial \"App needs to quit\" prompt shown when there is 1 pending App update.</string>
 					<key>pfm_documentation_url</key>
 					<string>https://docs.zappl.co/customise/preferences#custom-prompt-messages</string>
 					<key>pfm_enabled</key>
 					<false/>
 					<key>pfm_name</key>
 					<string>singleInitialQuitPromptMessage</string>
+					<key>pfm_note</key>
+					<string>Deprecated in Zappl 3.0.</string>
 					<key>pfm_title</key>
 					<string>Single App Initial Prompt Message</string>
 					<key>pfm_type</key>
@@ -1965,13 +1975,15 @@ A profile can consist of payloads with different version numbers. For example, c
 					<key>pfm_app_deprecated</key>
 					<string>3.0.0</string>
 					<key>pfm_description</key>
-					<string>(Deprecated in Zappl v3.0.0 — no longer used in Zappl v3 and later; retained so existing profiles continue to load.) A custom message displayed on the initial \"Apps need to quit\" prompt shown when there are multiple pending App updates.</string>
+					<string>A custom message displayed on the initial \"Apps need to quit\" prompt shown when there are multiple pending App updates.</string>
 					<key>pfm_documentation_url</key>
 					<string>https://docs.zappl.co/customise/preferences#custom-prompt-messages</string>
 					<key>pfm_enabled</key>
 					<false/>
 					<key>pfm_name</key>
 					<string>multipleInitialQuitPromptMessage</string>
+					<key>pfm_note</key>
+					<string>Deprecated in Zappl 3.0.</string>
 					<key>pfm_title</key>
 					<string>Multiple Apps Initial Prompt Message</string>
 					<key>pfm_type</key>
@@ -1983,13 +1995,15 @@ A profile can consist of payloads with different version numbers. For example, c
 					<key>pfm_app_deprecated</key>
 					<string>3.0.0</string>
 					<key>pfm_description</key>
-					<string>(Deprecated in Zappl v3.0.0 — no longer used in Zappl v3 and later; retained so existing profiles continue to load.) A custom message displayed on the initial \"App needs to quit\" prompt shown when a user manually initiates an update check and there is 1 pending update.</string>
+					<string>A custom message displayed on the initial \"App needs to quit\" prompt shown when a user manually initiates an update check and there is 1 pending update.</string>
 					<key>pfm_documentation_url</key>
 					<string>https://docs.zappl.co/customise/preferences#custom-prompt-messages</string>
 					<key>pfm_enabled</key>
 					<false/>
 					<key>pfm_name</key>
 					<string>singleSelfServiceQuitMessage</string>
+					<key>pfm_note</key>
+					<string>Deprecated in Zappl 3.0.</string>
 					<key>pfm_title</key>
 					<string>Single App Self Service Prompt Message</string>
 					<key>pfm_type</key>
@@ -2001,13 +2015,15 @@ A profile can consist of payloads with different version numbers. For example, c
 					<key>pfm_app_deprecated</key>
 					<string>3.0.0</string>
 					<key>pfm_description</key>
-					<string>(Deprecated in Zappl v3.0.0 — no longer used in Zappl v3 and later; retained so existing profiles continue to load.) A custom message displayed on the initial \"Apps need to quit\" prompt shown when a user manually initiates an update check and there are multiple pending App updates.</string>
+					<string>A custom message displayed on the initial \"Apps need to quit\" prompt shown when a user manually initiates an update check and there are multiple pending App updates.</string>
 					<key>pfm_documentation_url</key>
 					<string>https://docs.zappl.co/customise/preferences#multiple-app-self-service-prompt-message</string>
 					<key>pfm_enabled</key>
 					<false/>
 					<key>pfm_name</key>
 					<string>multipleSelfServiceQuitMessage</string>
+					<key>pfm_note</key>
+					<string>Deprecated in Zappl 3.0.</string>
 					<key>pfm_title</key>
 					<string>Multiple App Self Service Prompt Message</string>
 					<key>pfm_type</key>
@@ -2019,13 +2035,15 @@ A profile can consist of payloads with different version numbers. For example, c
 					<key>pfm_app_deprecated</key>
 					<string>3.0.0</string>
 					<key>pfm_description</key>
-					<string>(Deprecated in Zappl v3.0.0 — no longer used in Zappl v3 and later; retained so existing profiles continue to load.) A custom message displayed on the \"App needs to quit\" grace period prompt shown when there is 1 pending update. This prompt shows a grace period timer and is displayed when no deferrals are remaining or configured.</string>
+					<string>A custom message displayed on the \"App needs to quit\" grace period prompt shown when there is 1 pending update. This prompt shows a grace period timer and is displayed when no deferrals are remaining or configured.</string>
 					<key>pfm_documentation_url</key>
 					<string>https://docs.zappl.co/customise/preferences#custom-prompt-messages</string>
 					<key>pfm_enabled</key>
 					<false/>
 					<key>pfm_name</key>
 					<string>singleAppGracePeriodQuitMessage</string>
+					<key>pfm_note</key>
+					<string>Deprecated in Zappl 3.0.</string>
 					<key>pfm_title</key>
 					<string>Single App Grace Period Prompt Message</string>
 					<key>pfm_type</key>
@@ -2037,13 +2055,15 @@ A profile can consist of payloads with different version numbers. For example, c
 					<key>pfm_app_deprecated</key>
 					<string>3.0.0</string>
 					<key>pfm_description</key>
-					<string>(Deprecated in Zappl v3.0.0 — no longer used in Zappl v3 and later; retained so existing profiles continue to load.) A custom message displayed on the \"Apps need to quit\" grace period prompt shown when there are multiple pending updates. This prompt shows a grace period timer and is displayed when no deferrals are remaining or configured.</string>
+					<string>A custom message displayed on the \"Apps need to quit\" grace period prompt shown when there are multiple pending updates. This prompt shows a grace period timer and is displayed when no deferrals are remaining or configured.</string>
 					<key>pfm_documentation_url</key>
 					<string>https://docs.zappl.co/customise/preferences#custom-prompt-messages</string>
 					<key>pfm_enabled</key>
 					<false/>
 					<key>pfm_name</key>
 					<string>multipleAppGracePeriodQuitMessage</string>
+					<key>pfm_note</key>
+					<string>Deprecated in Zappl 3.0.</string>
 					<key>pfm_title</key>
 					<string>Multiple App Grace Period Prompt Message</string>
 					<key>pfm_type</key>
@@ -2071,13 +2091,15 @@ A profile can consist of payloads with different version numbers. For example, c
 					<key>pfm_app_deprecated</key>
 					<string>3.0.0</string>
 					<key>pfm_description</key>
-					<string>(Deprecated in Zappl v3.0.0 — no longer used in Zappl v3 and later; retained so existing profiles continue to load.) A custom Skip button label displayed on the Self Service update prompts that allows users to back out of installing updates without affecting deferrals.</string>
+					<string>A custom Skip button label displayed on the Self Service update prompts that allows users to back out of installing updates without affecting deferrals.</string>
 					<key>pfm_documentation_url</key>
 					<string>https://docs.zappl.co/customise/preferences#custom-self-service-skip-button</string>
 					<key>pfm_enabled</key>
 					<false/>
 					<key>pfm_name</key>
 					<string>customSkipButton</string>
+					<key>pfm_note</key>
+					<string>Deprecated in Zappl 3.0.</string>
 					<key>pfm_title</key>
 					<string>Self Service Skip Button Label</string>
 					<key>pfm_type</key>
@@ -2327,11 +2349,13 @@ A profile can consist of payloads with different version numbers. For example, c
 					<key>pfm_default</key>
 					<true/>
 					<key>pfm_description</key>
-					<string>When enabled, a small progress prompt is displayed in the corner of the screen while updates are being installed. Disable to run updates silently without any progress indicator. Note: In Zappl v3.0.0 this setting changed from a multi-option value (Prompt Without Focus / Prompt With Focus / No Prompt) to a simple on/off toggle. Existing profiles that still set the previous text value are honoured: 'Prompt Without Focus' and 'Prompt With Focus' map to enabled (true), and 'No Prompt' to disabled (false).</string>
+					<string>When enabled, a small progress prompt is displayed in the corner of the screen while updates are being installed. Disable to run updates silently without any progress indicator.</string>
 					<key>pfm_documentation_url</key>
 					<string>https://docs.zappl.co/customise/preferences#update-progress-prompt-behaviour</string>
 					<key>pfm_name</key>
 					<string>updateProgressPrompt</string>
+					<key>pfm_note</key>
+					<string>In Zappl 3.0 this setting changed from a multi-option value (Prompt Without Focus / Prompt With Focus / No Prompt) to a simple on/off toggle. Existing profiles that still set the previous text value are honoured: 'Prompt Without Focus' and 'Prompt With Focus' map to enabled (true), and 'No Prompt' to disabled (false).</string>
 					<key>pfm_title</key>
 					<string>Show Update Progress Prompt</string>
 					<key>pfm_type</key>
@@ -3151,13 +3175,15 @@ A profile can consist of payloads with different version numbers. For example, c
 					<key>pfm_app_deprecated</key>
 					<string>3.0.0</string>
 					<key>pfm_description</key>
-					<string>(Deprecated in Zappl v3.0.0 — no longer used in Zappl v3 and later; retained so existing profiles continue to load.) Use to customise the size of the initial prompt displayed to users when they can either defer or update. Note: Only configure this setting if defining custom prompt messages. If you are using the default prompt messages, customising prompt size is not recommended as the default prompt size is pre-configured to correctly match the size of the default message displayed.</string>
+					<string>Use to customise the size of the initial prompt displayed to users when they can either defer or update. Note: Only configure this setting if defining custom prompt messages. If you are using the default prompt messages, customising prompt size is not recommended as the default prompt size is pre-configured to correctly match the size of the default message displayed.</string>
 					<key>pfm_documentation_url</key>
 					<string>https://docs.zappl.co/customise/preferences#custom-prompt-sizes</string>
 					<key>pfm_enabled</key>
 					<false/>
 					<key>pfm_name</key>
 					<string>customInitialPromptSize</string>
+					<key>pfm_note</key>
+					<string>Deprecated in Zappl 3.0.</string>
 					<key>pfm_subkeys</key>
 					<array>
 						<dict>
@@ -3166,13 +3192,13 @@ A profile can consist of payloads with different version numbers. For example, c
 							<key>pfm_default</key>
 							<integer>330</integer>
 							<key>pfm_description</key>
-							<string>(Deprecated in Zappl v3.0.0 — no longer used in Zappl v3 and later; retained so existing profiles continue to load.) Use to customise the height of the initial prompt displayed to users when they can either defer or update. Only use to define a custom height in points for the prompts shown to users, e.g. 330.</string>
+							<string>Use to customise the height of the initial prompt displayed to users when they can either defer or update. Only use to define a custom height in points for the prompts shown to users, e.g. 330.</string>
 							<key>pfm_documentation_url</key>
 							<string>https://docs.zappl.co/customise/preferences#custom-prompt-sizes</string>
 							<key>pfm_name</key>
 							<string>promptHeight</string>
 							<key>pfm_note</key>
-							<string>Only configure this setting if defining custom prompt messages. If you are using the default prompt messages, customising prompt size is not recommended as the default prompt size is pre-configured to correctly match the size of the default message displayed.</string>
+							<string>Deprecated in Zappl 3.0.</string>
 							<key>pfm_title</key>
 							<string>Custom Initial Prompt (Height)</string>
 							<key>pfm_type</key>
@@ -3186,13 +3212,13 @@ A profile can consist of payloads with different version numbers. For example, c
 							<key>pfm_default</key>
 							<integer>640</integer>
 							<key>pfm_description</key>
-							<string>(Deprecated in Zappl v3.0.0 — no longer used in Zappl v3 and later; retained so existing profiles continue to load.) Use to customise the width of the initial prompt displayed to users when they can either defer or update. Only use to define a custom width in points for the prompts shown to users, e.g. 640.</string>
+							<string>Use to customise the width of the initial prompt displayed to users when they can either defer or update. Only use to define a custom width in points for the prompts shown to users, e.g. 640.</string>
 							<key>pfm_documentation_url</key>
 							<string>https://docs.zappl.co/customise/preferences#custom-prompt-sizes</string>
 							<key>pfm_name</key>
 							<string>promptWidth</string>
 							<key>pfm_note</key>
-							<string>Only configure this setting if defining custom prompt messages. If you are using the default prompt messages, customising prompt size is not recommended as the default prompt size is pre-configured to correctly match the size of the default message displayed.</string>
+							<string>Deprecated in Zappl 3.0.</string>
 							<key>pfm_title</key>
 							<string>Custom Initial Prompt (Width)</string>
 							<key>pfm_type</key>
@@ -3210,13 +3236,15 @@ A profile can consist of payloads with different version numbers. For example, c
 					<key>pfm_app_deprecated</key>
 					<string>3.0.0</string>
 					<key>pfm_description</key>
-					<string>(Deprecated in Zappl v3.0.0 — no longer used in Zappl v3 and later; retained so existing profiles continue to load.) Use to customise the size of the grace period timer prompt shown when users have no remaining deferrals. Note: Only configure this setting if defining custom prompt messages. If you are using the default prompt messages, customising prompt size is not recommended as the default prompt size is pre-configured to correctly match the size of the default message displayed.</string>
+					<string>Use to customise the size of the grace period timer prompt shown when users have no remaining deferrals. Note: Only configure this setting if defining custom prompt messages. If you are using the default prompt messages, customising prompt size is not recommended as the default prompt size is pre-configured to correctly match the size of the default message displayed.</string>
 					<key>pfm_documentation_url</key>
 					<string>https://docs.zappl.co/customise/preferences#custom-prompt-sizes</string>
 					<key>pfm_enabled</key>
 					<false/>
 					<key>pfm_name</key>
 					<string>customGracePromptSize</string>
+					<key>pfm_note</key>
+					<string>Deprecated in Zappl 3.0.</string>
 					<key>pfm_subkeys</key>
 					<array>
 						<dict>
@@ -3225,13 +3253,13 @@ A profile can consist of payloads with different version numbers. For example, c
 							<key>pfm_default</key>
 							<integer>330</integer>
 							<key>pfm_description</key>
-							<string>(Deprecated in Zappl v3.0.0 — no longer used in Zappl v3 and later; retained so existing profiles continue to load.) Use to customise the height of the grace period timer prompt displayed to users when they have no remaining deferrals. Only use to define a custom height in points for the prompts shown to users, e.g. 330.</string>
+							<string>Use to customise the height of the grace period timer prompt displayed to users when they have no remaining deferrals. Only use to define a custom height in points for the prompts shown to users, e.g. 330.</string>
 							<key>pfm_documentation_url</key>
 							<string>https://docs.zappl.co/customise/preferences#custom-prompt-sizes</string>
 							<key>pfm_name</key>
 							<string>promptHeight</string>
 							<key>pfm_note</key>
-							<string>Only configure this setting if defining custom prompt messages. If you are using the default prompt messages, customising prompt size is not recommended as the default prompt size is pre-configured to correctly match the size of the default message displayed.</string>
+							<string>Deprecated in Zappl 3.0.</string>
 							<key>pfm_title</key>
 							<string>Custom Grace Prompt (Height)</string>
 							<key>pfm_type</key>
@@ -3245,13 +3273,13 @@ A profile can consist of payloads with different version numbers. For example, c
 							<key>pfm_default</key>
 							<integer>640</integer>
 							<key>pfm_description</key>
-							<string>(Deprecated in Zappl v3.0.0 — no longer used in Zappl v3 and later; retained so existing profiles continue to load.) Use to customise the width of the grace period timer prompt displayed to users when they have no remaining deferrals. Only use to define a custom width in points for the prompts shown to users, e.g. 640.</string>
+							<string>Use to customise the width of the grace period timer prompt displayed to users when they have no remaining deferrals. Only use to define a custom width in points for the prompts shown to users, e.g. 640.</string>
 							<key>pfm_documentation_url</key>
 							<string>https://docs.zappl.co/customise/preferences#custom-prompt-sizes</string>
 							<key>pfm_name</key>
 							<string>promptWidth</string>
 							<key>pfm_note</key>
-							<string>Only configure this setting if defining custom prompt messages. If you are using the default prompt messages, customising prompt size is not recommended as the default prompt size is pre-configured to correctly match the size of the default message displayed.</string>
+							<string>Deprecated in Zappl 3.0.</string>
 							<key>pfm_title</key>
 							<string>Custom Grace Prompt (Width)</string>
 							<key>pfm_type</key>
@@ -3285,13 +3313,15 @@ A profile can consist of payloads with different version numbers. For example, c
 					<key>pfm_app_deprecated</key>
 					<string>3.0.0</string>
 					<key>pfm_description</key>
-					<string>(Deprecated in Zappl v3.0.0 — no longer used in Zappl v3 and later; retained so existing profiles continue to load.) A custom message displayed on the initial \"App needs to quit\" forced update prompt.</string>
+					<string>A custom message displayed on the initial \"App needs to quit\" forced update prompt.</string>
 					<key>pfm_documentation_url</key>
 					<string>https://docs.zappl.co/customise/preferences#custom-prompt-messages</string>
 					<key>pfm_enabled</key>
 					<false/>
 					<key>pfm_name</key>
 					<string>initialQuitPromptMessage</string>
+					<key>pfm_note</key>
+					<string>Deprecated in Zappl 3.0.</string>
 					<key>pfm_title</key>
 					<string>Custom Title</string>
 					<key>pfm_type</key>
@@ -3303,13 +3333,15 @@ A profile can consist of payloads with different version numbers. For example, c
 					<key>pfm_app_deprecated</key>
 					<string>3.0.0</string>
 					<key>pfm_description</key>
-					<string>(Deprecated in Zappl v3.0.0 — no longer used in Zappl v3 and later; retained so existing profiles continue to load.) A custom message displayed on the grace period \"App needs to quit\" prompt. This prompt shows a grace period timer and is displayed when no deferrals are remaining or configured.</string>
+					<string>A custom message displayed on the grace period \"App needs to quit\" prompt. This prompt shows a grace period timer and is displayed when no deferrals are remaining or configured.</string>
 					<key>pfm_documentation_url</key>
 					<string>https://docs.zappl.co/customise/preferences#custom-prompt-messages</string>
 					<key>pfm_enabled</key>
 					<false/>
 					<key>pfm_name</key>
 					<string>gracePeriodQuitPromptMessage</string>
+					<key>pfm_note</key>
+					<string>Deprecated in Zappl 3.0.</string>
 					<key>pfm_title</key>
 					<string>Grace Period Quit Prompt Message</string>
 					<key>pfm_type</key>
@@ -3551,11 +3583,13 @@ A profile can consist of payloads with different version numbers. For example, c
 					<key>pfm_default</key>
 					<true/>
 					<key>pfm_description</key>
-					<string>When enabled, a small progress prompt is displayed in the corner of the screen while updates are being installed. Disable to run updates silently without any progress indicator. Note: In Zappl v3.0.0 this setting changed from a multi-option value (Prompt Without Focus / Prompt With Focus / No Prompt) to a simple on/off toggle. Existing profiles that still set the previous text value are honoured: 'Prompt Without Focus' and 'Prompt With Focus' map to enabled (true), and 'No Prompt' to disabled (false).</string>
+					<string>When enabled, a small progress prompt is displayed in the corner of the screen while updates are being installed. Disable to run updates silently without any progress indicator.</string>
 					<key>pfm_documentation_url</key>
 					<string>https://docs.zappl.co/customise/preferences#update-progress-prompt-behaviour</string>
 					<key>pfm_name</key>
 					<string>updateProgressPrompt</string>
+					<key>pfm_note</key>
+					<string>In Zappl 3.0 this setting changed from a multi-option value (Prompt Without Focus / Prompt With Focus / No Prompt) to a simple on/off toggle. Existing profiles that still set the previous text value are honoured: 'Prompt Without Focus' and 'Prompt With Focus' map to enabled (true), and 'No Prompt' to disabled (false).</string>
 					<key>pfm_title</key>
 					<string>Show Update Progress Prompt</string>
 					<key>pfm_type</key>
