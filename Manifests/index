@@ -496,11 +496,11 @@
 		<key>com.dare.zappl.preferences</key>
 		<dict>
 			<key>modified</key>
-			<date>2026-06-23T15:59:45Z</date>
+			<date>2026-07-15T09:25:33Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.dare.zappl.preferences.plist</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<key>com.docker.config</key>
 		<dict>
@@ -2508,6 +2508,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2026-07-13T13:27:45Z</date>
+	<date>2026-07-15T09:47:58Z</date>
 </dict>
 </plist>
