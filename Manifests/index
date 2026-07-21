@@ -511,6 +511,15 @@
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
+		<key>com.electron.dialpad</key>
+		<dict>
+			<key>modified</key>
+			<date>2026-06-09T13:00:23Z</date>
+			<key>path</key>
+			<string>Manifests/ManagedPreferencesApplications/com.electron.dialpad.plist</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 		<key>com.frontapp.Front</key>
 		<dict>
 			<key>modified</key>
@@ -2508,6 +2517,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2026-07-15T18:25:16Z</date>
+	<date>2026-07-21T01:00:21Z</date>
 </dict>
 </plist>
