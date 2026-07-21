@@ -301,6 +301,13 @@
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.docker.config.png</string>
 		</dict>
+		<key>com.electron.dialpad</key>
+		<dict>
+			<key>hash</key>
+			<string>3c1922ac2578ea17ee3c38a51498773f</string>
+			<key>path</key>
+			<string>Icons/ManagedPreferencesApplications/com.electron.dialpad.png</string>
+		</dict>
 		<key>com.fxfactory.FxFactory</key>
 		<dict>
 			<key>hash</key>
@@ -1594,6 +1601,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2026-07-15T18:27:26Z</date>
+	<date>2026-07-21T01:36:54Z</date>
 </dict>
 </plist>
