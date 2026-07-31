@@ -11,7 +11,7 @@
 	<key>pfm_interaction</key>
 	<string>exclusive</string>
 	<key>pfm_last_modified</key>
-	<date>2026-06-23T15:59:45Z</date>
+	<date>2026-06-25T00:43:38Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -171,6 +171,7 @@ A profile can consist of payloads with different version numbers. For example, c
 				</array>
 				<key>General</key>
 				<array>
+					<string>adRealm</string>
 					<string>launchAtLogin</string>
 					<string>runPeriodicStateCheck</string>
 					<string>orgUsernameLabel</string>

@@ -13,7 +13,7 @@
 	<key>pfm_format_version</key>
 	<integer>1</integer>
 	<key>pfm_last_modified</key>
-	<date>2026-06-23T15:59:45Z</date>
+	<date>2026-06-25T00:43:38Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -224,6 +224,10 @@ Custom.</string>
 			<dict>
 				<key>Check OIDC/Azure</key>
 				<array>
+					<string>OIDCProvider</string>
+					<string>OIDCRedirectURI</string>
+					<string>OIDCClientID</string>
+					<string>LicenseFile</string>
 					<string>DenyLocal</string>
 					<string>DenyLocalExcluded</string>
 					<string>Migrate</string>
@@ -234,6 +238,7 @@ Custom.</string>
 					<string>OIDCAdminAttribute</string>
 					<string>OIDCClientSecret</string>
 					<string>OIDCTenant</string>
+					<string>OIDCDiscoveryURL</string>
 					<string>OIDCIgnoreCookies</string>
 					<string>RightsTmpCache</string>
 					<string>LoginLogo</string>
