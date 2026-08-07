@@ -614,7 +614,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_note</key>
 			<string>This must be enabled to use any of the associated AU2 options.</string>
 			<key>pfm_title</key>
-			<string>Enable Updates</string>
+			<string>Enable Automatic Updates</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 		</dict>
@@ -984,7 +984,7 @@ Screen is locked or screen saver is active</string>
 			<key>pfm_note</key>
 			<string>This is not a true auto-update feature, this only allows the user to manually check for updates.</string>
 			<key>pfm_title</key>
-			<string>Enable Updates</string>
+			<string>Manage Manual Update Checks</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 		</dict>
