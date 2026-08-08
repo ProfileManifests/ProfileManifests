@@ -189,6 +189,20 @@
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.alectrona.patch.png</string>
 		</dict>
+		<key>com.alectrona.patch-agent</key>
+		<dict>
+			<key>hash</key>
+			<string>332a916da6aa3000fe11bb7ad60d20f7</string>
+			<key>path</key>
+			<string>Icons/ManagedPreferencesApplications/com.alectrona.patch-agent.png</string>
+		</dict>
+		<key>com.alectrona.patch-notifier</key>
+		<dict>
+			<key>hash</key>
+			<string>332a916da6aa3000fe11bb7ad60d20f7</string>
+			<key>path</key>
+			<string>Icons/ManagedPreferencesApplications/com.alectrona.patch-notifier.png</string>
+		</dict>
 		<key>com.anthropic.claudefordesktop</key>
 		<dict>
 			<key>hash</key>
@@ -308,12 +322,26 @@
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.electron.dialpad.png</string>
 		</dict>
+		<key>com.frontapp.Front</key>
+		<dict>
+			<key>hash</key>
+			<string>0f826302bdda9b99b2c532671fff2ba3</string>
+			<key>path</key>
+			<string>Icons/ManagedPreferencesApplications/com.frontapp.Front.png</string>
+		</dict>
 		<key>com.fxfactory.FxFactory</key>
 		<dict>
 			<key>hash</key>
 			<string>b6cfdd8616646e642b565be47a9a1852</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.fxfactory.FxFactory.png</string>
+		</dict>
+		<key>com.gingerlabs.notability-macOS</key>
+		<dict>
+			<key>hash</key>
+			<string>5cc0654a7929b96588b13cd1242f0e7a</string>
+			<key>path</key>
+			<string>Icons/ManagedPreferencesApplications/com.gingerlabs.notability-macOS.png</string>
 		</dict>
 		<key>com.github.ants-framework</key>
 		<dict>
@@ -335,6 +363,27 @@
 			<string>fa537e839b782631d8c7bdecdeea2a10</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.github.macadmins.SupportCompanion.png</string>
+		</dict>
+		<key>com.github.mpanighetti.install-or-defer</key>
+		<dict>
+			<key>hash</key>
+			<string>9800cde20724893020e7e3f0345770f7</string>
+			<key>path</key>
+			<string>Icons/ManagedPreferencesApplications/com.github.mpanighetti.install-or-defer.png</string>
+		</dict>
+		<key>com.github.salopensource.sal</key>
+		<dict>
+			<key>hash</key>
+			<string>9800cde20724893020e7e3f0345770f7</string>
+			<key>path</key>
+			<string>Icons/ManagedPreferencesApplications/com.github.salopensource.sal.png</string>
+		</dict>
+		<key>com.github.wavebirddash.install-or-defer</key>
+		<dict>
+			<key>hash</key>
+			<string>9800cde20724893020e7e3f0345770f7</string>
+			<key>path</key>
+			<string>Icons/ManagedPreferencesApplications/com.github.wavebirddash.install-or-defer.png</string>
 		</dict>
 		<key>com.google.Chrome</key>
 		<dict>
@@ -363,6 +412,13 @@
 			<string>b309af53b61bea0325c89c4dac44822d</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.google.santa.png</string>
+		</dict>
+		<key>com.grahamgilbert.crypt</key>
+		<dict>
+			<key>hash</key>
+			<string>9800cde20724893020e7e3f0345770f7</string>
+			<key>path</key>
+			<string>Icons/ManagedPreferencesApplications/com.grahamgilbert.crypt.png</string>
 		</dict>
 		<key>com.grammarly.ProjectLlama</key>
 		<dict>
@@ -448,12 +504,26 @@
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.jigsaw24.ElevateSecurityLogs.png</string>
 		</dict>
+		<key>com.joinajax.ajax-desktop-client-prod</key>
+		<dict>
+			<key>hash</key>
+			<string>aa7a658d117ce821d828f4db303d367a</string>
+			<key>path</key>
+			<string>Icons/ManagedPreferencesApplications/com.joinajax.ajax-desktop-client-prod.png</string>
+		</dict>
 		<key>com.keepersecurity.passwordmanager</key>
 		<dict>
 			<key>hash</key>
 			<string>b4b90570517378d90b55b8f166b71957</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.keepersecurity.passwordmanager.png</string>
+		</dict>
+		<key>com.macjutsu.super</key>
+		<dict>
+			<key>hash</key>
+			<string>9800cde20724893020e7e3f0345770f7</string>
+			<key>path</key>
+			<string>Icons/ManagedPreferencesApplications/com.macjutsu.super.png</string>
 		</dict>
 		<key>com.macpaw.site.theunarchiver</key>
 		<dict>
@@ -524,6 +594,13 @@
 			<string>e15b2769d62228af714b006c85c61dc5</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.microsoft.SkypeForBusiness.png</string>
+		</dict>
+		<key>com.microsoft.VSCode</key>
+		<dict>
+			<key>hash</key>
+			<string>e672bffe5f33aafcd8b0a81ed193a766</string>
+			<key>path</key>
+			<string>Icons/ManagedPreferencesApplications/com.microsoft.VSCode.png</string>
 		</dict>
 		<key>com.microsoft.Word</key>
 		<dict>
@@ -700,12 +777,12 @@
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.unity3d.UnityEditor5.x.png</string>
 		</dict>
-		<key>com.vpntracker.365</key>
+		<key>com.vpntracker.365mac</key>
 		<dict>
 			<key>hash</key>
 			<string>aec5bcae37a371e157141c82c07f5e55</string>
 			<key>path</key>
-			<string>Icons/ManagedPreferencesApplications/com.vpntracker.365.png</string>
+			<string>Icons/ManagedPreferencesApplications/com.vpntracker.365mac.png</string>
 		</dict>
 		<key>com.zappl.AppBar</key>
 		<dict>
@@ -748,6 +825,20 @@
 			<string>8c4beb59421585983b43b9e35e2e6eaa</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/dev.firezone.firezone.png</string>
+		</dict>
+		<key>edu.ncsu.confboard</key>
+		<dict>
+			<key>hash</key>
+			<string>fbcc64eea4256e07b5852e2049f26fa5</string>
+			<key>path</key>
+			<string>Icons/ManagedPreferencesApplications/edu.ncsu.confboard.png</string>
+		</dict>
+		<key>edu.psu.macoslaps</key>
+		<dict>
+			<key>hash</key>
+			<string>9800cde20724893020e7e3f0345770f7</string>
+			<key>path</key>
+			<string>Icons/ManagedPreferencesApplications/edu.psu.macoslaps.png</string>
 		</dict>
 		<key>fr.handbrake.HandBrake</key>
 		<dict>
@@ -819,12 +910,26 @@
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/net.glencode.Particulars.Widget.png</string>
 		</dict>
+		<key>net.whatsapp.WhatsApp</key>
+		<dict>
+			<key>hash</key>
+			<string>fc54ef4238ab91283f774a48325d2c00</string>
+			<key>path</key>
+			<string>Icons/ManagedPreferencesApplications/net.whatsapp.WhatsApp.png</string>
+		</dict>
 		<key>nl.root3.support</key>
 		<dict>
 			<key>hash</key>
 			<string>7becbbe783d32964198102bc855817be</string>
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/nl.root3.support.png</string>
+		</dict>
+		<key>notion.id</key>
+		<dict>
+			<key>hash</key>
+			<string>dbd499867be0926e04182669a270f999</string>
+			<key>path</key>
+			<string>Icons/ManagedPreferencesApplications/notion.id.png</string>
 		</dict>
 		<key>org.churchofjesuschrist.dorm</key>
 		<dict>
@@ -1601,6 +1706,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2026-07-29T03:05:07Z</date>
+	<date>2026-08-08T15:59:38Z</date>
 </dict>
 </plist>
