@@ -10,10 +10,14 @@
 	<string>com.google.drivefs.settings</string>
 	<key>pfm_format_version</key>
 	<integer>1</integer>
+	<key>pfm_imazing_participating_bundle_ids</key>
+	<array>
+		<string>com.google.drivefs</string>
+	</array>
 	<key>pfm_interaction</key>
 	<string>exclusive</string>
 	<key>pfm_last_modified</key>
-	<date>2026-06-23T15:59:45Z</date>
+	<date>2026-08-10T09:29:10Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
