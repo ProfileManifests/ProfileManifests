@@ -164,7 +164,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				</array>
 				<key>General</key>
 				<array>
-					<string>AuthServer</string>
 					<string>LicenseFile</string>
 					<string>PeriodicUpdateTime</string>
 					<string>SignInCommand</string>
