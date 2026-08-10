@@ -15,7 +15,7 @@
 	<key>pfm_interaction</key>
 	<string>combined</string>
 	<key>pfm_last_modified</key>
-	<date>2026-06-23T15:59:45Z</date>
+	<date>2026-07-02T10:12:00Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -6397,8 +6397,6 @@ Managed bookmarks are not synced to the user account and can't be modified by ex
 				<dict>
 					<key>pfm_description</key>
 					<string></string>
-					<key>pfm_name</key>
-					<string>ManagedBookmark</string>
 					<key>pfm_subkeys</key>
 					<array>
 						<dict>
