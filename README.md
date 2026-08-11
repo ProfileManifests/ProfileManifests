@@ -5,7 +5,7 @@ This repository is a fork of [ProfileManifests](https://github.com/ProfileManife
 The fork is continuously synced with upstream updates, and work done here is submitted back to the upstream when relevant to the whole Mac Admins community.
 
 ## Contributing
-Please no issues or PRs here, unless they are iMazing Profile Editor specific. Instead, open these on the upstream, and if approved they will appear here quickly.
+Please no issues or PRs here, unless they are iMazing Profile Editor specific. Instead, open these on the upstream, and if approved they will automatically appear here.
 
 For easy manifest editing using iMazing Profile Editor, consult our [Working with Custom Manifests](https://imazing.com/guides/imazing-profile-editor-working-with-custom-preference-manifests) guide.
 
