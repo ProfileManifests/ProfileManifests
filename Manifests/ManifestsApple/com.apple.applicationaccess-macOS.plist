@@ -15,7 +15,7 @@
 	<key>pfm_interaction</key>
 	<string>combined</string>
 	<key>pfm_last_modified</key>
-	<date>2026-06-23T15:59:45Z</date>
+	<date>2026-06-25T00:43:38Z</date>
 	<key>pfm_macos_min</key>
 	<string>10.7</string>
 	<key>pfm_note</key>
@@ -191,8 +191,10 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<string>allowAccountModification</string>
 					<string>allowApplePersonalizedAdvertising</string>
 					<string>allowActivityContinuation</string>
+					<string>allowDiagnosticSubmission</string>
 					<string>allowAddingGameCenterFriends</string>
 					<string>allowARDRemoteManagementModification</string>
+					<string>allowBluetoothModification</string>
 					<string>allowBluetoothSharingModification</string>
 					<string>allowCamera</string>
 					<string>allowContentCaching</string>
