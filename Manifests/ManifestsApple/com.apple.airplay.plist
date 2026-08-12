@@ -17,7 +17,7 @@
 	<key>pfm_ios_min</key>
 	<string>7.0</string>
 	<key>pfm_last_modified</key>
-	<date>2026-06-23T15:59:45Z</date>
+	<date>2026-08-12T12:50:15Z</date>
 	<key>pfm_macos_min</key>
 	<string>10.10</string>
 	<key>pfm_platforms</key>
@@ -248,10 +248,6 @@ Specifying the same MACAddress more than once, whether in the same payload acros
 As of tvOS 18, 'DeviceID' isn't supported.</string>
 							<key>pfm_format</key>
 							<string>^([0-9A-Fa-f]{2}:){5}([0-9A-Fa-f]{2})$</string>
-							<key>pfm_ios_deprecated</key>
-							<string>18.0</string>
-							<key>pfm_macos_deprecated</key>
-							<string>15.0</string>
 							<key>pfm_name</key>
 							<string>DeviceID</string>
 							<key>pfm_title</key>

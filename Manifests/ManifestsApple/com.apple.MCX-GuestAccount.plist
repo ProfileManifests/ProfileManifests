@@ -13,7 +13,7 @@
 	<key>pfm_interaction</key>
 	<string>combined</string>
 	<key>pfm_last_modified</key>
-	<date>2026-06-23T15:59:45Z</date>
+	<date>2026-08-12T12:50:15Z</date>
 	<key>pfm_macos_min</key>
 	<string>10.7</string>
 	<key>pfm_platforms</key>
@@ -131,8 +131,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>If 'true', the system enables the guest account.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://developer.apple.com/documentation/devicemanagement/accounts</string>
-			<key>pfm_macos_min</key>
-			<string>10.7</string>
 			<key>pfm_name</key>
 			<string>EnableGuestAccount</string>
 			<key>pfm_title</key>
@@ -163,8 +161,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					</array>
 				</dict>
 			</array>
-			<key>pfm_macos_min</key>
-			<string>10.7</string>
 			<key>pfm_name</key>
 			<string>DisableGuestAccount</string>
 			<key>pfm_title</key>
