@@ -1564,7 +1564,7 @@
 		<key>com.apple.MCX-GuestAccount</key>
 		<dict>
 			<key>modified</key>
-			<date>2026-06-23T15:59:45Z</date>
+			<date>2026-08-12T12:50:15Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.MCX-GuestAccount.plist</string>
 			<key>version</key>
@@ -1672,7 +1672,7 @@
 		<key>com.apple.airplay</key>
 		<dict>
 			<key>modified</key>
-			<date>2026-06-23T15:59:45Z</date>
+			<date>2026-08-12T12:50:15Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.airplay.plist</string>
 			<key>version</key>
@@ -1996,11 +1996,11 @@
 		<key>com.apple.globalethernet.managed</key>
 		<dict>
 			<key>modified</key>
-			<date>2026-06-23T15:59:45Z</date>
+			<date>2026-08-12T12:50:15Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.globalethernet.managed.plist</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<key>com.apple.google-oauth</key>
 		<dict>
@@ -2518,7 +2518,7 @@
 		<key>loginwindow</key>
 		<dict>
 			<key>modified</key>
-			<date>2026-06-23T15:59:45Z</date>
+			<date>2026-08-12T12:50:15Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/loginwindow.plist</string>
 			<key>version</key>
@@ -2526,6 +2526,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2026-08-12T17:22:25Z</date>
+	<date>2026-08-12T17:22:57Z</date>
 </dict>
 </plist>
