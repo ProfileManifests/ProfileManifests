@@ -15,7 +15,7 @@
 	<key>pfm_interaction</key>
 	<string>combined</string>
 	<key>pfm_last_modified</key>
-	<date>2026-07-02T10:12:00Z</date>
+	<date>2026-08-12T14:36:43Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -6828,7 +6828,7 @@ Note that if the platform supports policy notifications, the refresh delay will 
 			<key>pfm_range_max</key>
 			<integer>86400000</integer>
 			<key>pfm_range_min</key>
-			<string>1800000</string>
+			<integer>1800000</integer>
 			<key>pfm_title</key>
 			<string>Policy Refresh Rate</string>
 			<key>pfm_type</key>
