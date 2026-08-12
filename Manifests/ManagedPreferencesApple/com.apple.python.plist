@@ -9,7 +9,7 @@
 	<key>pfm_format_version</key>
 	<integer>1</integer>
 	<key>pfm_last_modified</key>
-	<date>2026-06-23T15:59:45Z</date>
+	<date>2026-08-12T15:23:22Z</date>
 	<key>pfm_macos_deprecated</key>
 	<string>12.4</string>
 	<key>pfm_macos_max</key>
@@ -162,10 +162,14 @@ A profile can consist of payloads with different version numbers. For example, c
 	<dict>
 		<key>macOS</key>
 		<dict>
+			<key>pfmx_device_channel</key>
+			<true/>
 			<key>pfmx_introduced</key>
 			<string>12.0</string>
 			<key>pfmx_removed</key>
 			<string>12.4</string>
+			<key>pfmx_user_channel</key>
+			<false/>
 		</dict>
 	</dict>
 </dict>
