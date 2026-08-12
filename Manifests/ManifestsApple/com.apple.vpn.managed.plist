@@ -15,7 +15,7 @@
 	<key>pfm_ios_min</key>
 	<string>4.0</string>
 	<key>pfm_last_modified</key>
-	<date>2025-08-04T08:25:08Z</date>
+	<date>2026-08-12T14:01:22Z</date>
 	<key>pfm_macos_min</key>
 	<string>10.7</string>
 	<key>pfm_platforms</key>
@@ -2284,8 +2284,6 @@ For 'AlwaysOn' VPN in iOS 14.2 and later, the minimum allowed value is '14'.
 							</array>
 							<key>pfm_title</key>
 							<string>Post-quantum Key Exchange Methods</string>
-							<key>pfm_tvos_min</key>
-							<string>16.0</string>
 							<key>pfm_type</key>
 							<string>array</string>
 							<key>pfmx_supported_oses</key>
@@ -2299,11 +2297,6 @@ For 'AlwaysOn' VPN in iOS 14.2 and later, the minimum allowed value is '14'.
 								<dict>
 									<key>pfmx_introduced</key>
 									<string>26.0</string>
-								</dict>
-								<key>tvOS</key>
-								<dict>
-									<key>pfmx_introduced</key>
-									<string>16.0</string>
 								</dict>
 								<key>visionOS</key>
 								<dict>
