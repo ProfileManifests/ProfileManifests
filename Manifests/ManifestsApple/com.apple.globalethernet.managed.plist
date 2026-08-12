@@ -15,7 +15,7 @@
 	<key>pfm_ios_min</key>
 	<string>17.0</string>
 	<key>pfm_last_modified</key>
-	<date>2026-06-23T15:59:45Z</date>
+	<date>2026-08-12T12:50:15Z</date>
 	<key>pfm_macos_min</key>
 	<string>10.13</string>
 	<key>pfm_platforms</key>
@@ -347,16 +347,10 @@ During a profile replacement, the system updates payloads with the same 'Payload
 							</array>
 						</dict>
 					</array>
-					<key>pfm_ios_min</key>
-					<string>8.0</string>
-					<key>pfm_macos_min</key>
-					<string>10.8</string>
 					<key>pfm_name</key>
 					<string>OneTimeUserPassword</string>
 					<key>pfm_title</key>
 					<string>Per-Connection Password</string>
-					<key>pfm_tvos_min</key>
-					<string>7.0</string>
 					<key>pfm_type</key>
 					<string>boolean</string>
 				</dict>
@@ -407,22 +401,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<string>Trusted Server Certificate Names</string>
 					<key>pfm_type</key>
 					<string>array</string>
-				</dict>
-				<dict>
-					<key>pfm_default</key>
-					<true/>
-					<key>pfm_description</key>
-					<string>Allows a dynamic trust decision by the user.</string>
-					<key>pfm_ios_deprecated</key>
-					<string>7.1.2</string>
-					<key>pfm_ios_max</key>
-					<string>7.1.2</string>
-					<key>pfm_name</key>
-					<string>TLSAllowTrustExceptions</string>
-					<key>pfm_title</key>
-					<string>Allow Trust Exceptions</string>
-					<key>pfm_type</key>
-					<string>boolean</string>
 				</dict>
 				<dict>
 					<key>pfm_conditionals</key>
@@ -527,10 +505,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 							</array>
 						</dict>
 					</array>
-					<key>pfm_ios_min</key>
-					<string>11.0</string>
-					<key>pfm_macos_min</key>
-					<string>10.13</string>
 					<key>pfm_name</key>
 					<string>TLSMinimumVersion</string>
 					<key>pfm_range_list</key>
@@ -542,8 +516,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					</array>
 					<key>pfm_title</key>
 					<string>TLS Minimum Version</string>
-					<key>pfm_tvos_min</key>
-					<string>11.0</string>
 					<key>pfm_type</key>
 					<string>string</string>
 				</dict>
@@ -568,10 +540,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 							</array>
 						</dict>
 					</array>
-					<key>pfm_ios_min</key>
-					<string>11.0</string>
-					<key>pfm_macos_min</key>
-					<string>10.13</string>
 					<key>pfm_name</key>
 					<string>TLSMaximumVersion</string>
 					<key>pfm_range_list</key>
@@ -583,8 +551,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					</array>
 					<key>pfm_title</key>
 					<string>TLS Maximum Version</string>
-					<key>pfm_tvos_min</key>
-					<string>11.0</string>
 					<key>pfm_type</key>
 					<string>string</string>
 				</dict>
@@ -745,8 +711,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 							</array>
 						</dict>
 					</array>
-					<key>pfm_ios_min</key>
-					<string>8.0</string>
 					<key>pfm_name</key>
 					<string>EAPSIMNumberOfRANDs</string>
 					<key>pfm_range_list</key>
@@ -872,8 +836,6 @@ If you don't specify a value, the default is 'true' for EAP-TLS, and 'false' for
 							</array>
 						</dict>
 					</array>
-					<key>pfm_ios_min</key>
-					<string>7.0</string>
 					<key>pfm_name</key>
 					<string>TLSCertificateIsRequired</string>
 					<key>pfm_platforms</key>
@@ -922,7 +884,7 @@ If you don't specify a value, the default is 'true' for EAP-TLS, and 'false' for
 	<key>pfm_unique</key>
 	<true/>
 	<key>pfm_version</key>
-	<integer>2</integer>
+	<integer>3</integer>
 	<key>pfmx_supported_oses</key>
 	<dict>
 		<key>iOS</key>

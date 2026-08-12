@@ -334,7 +334,7 @@
 		<key>com.agilebits.onepassword7</key>
 		<dict>
 			<key>modified</key>
-			<date>2026-06-23T15:59:45Z</date>
+			<date>2026-06-25T00:43:30Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.agilebits.onepassword7.plist</string>
 			<key>version</key>
@@ -685,7 +685,7 @@
 		<key>com.jamf.connect.sync</key>
 		<dict>
 			<key>modified</key>
-			<date>2026-06-23T15:59:45Z</date>
+			<date>2026-06-25T00:43:38Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.jamf.connect.sync.plist</string>
 			<key>version</key>
@@ -1207,7 +1207,7 @@
 		<key>menu.nomad.NoMADPro</key>
 		<dict>
 			<key>modified</key>
-			<date>2026-06-23T15:59:45Z</date>
+			<date>2026-06-25T00:43:38Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/menu.nomad.NoMADPro.plist</string>
 			<key>version</key>
@@ -1699,7 +1699,7 @@
 		<key>com.apple.applicationaccess-iOS</key>
 		<dict>
 			<key>modified</key>
-			<date>2026-06-23T15:59:45Z</date>
+			<date>2026-06-25T00:43:38Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.applicationaccess-iOS.plist</string>
 			<key>version</key>
@@ -1708,7 +1708,7 @@
 		<key>com.apple.applicationaccess-macOS</key>
 		<dict>
 			<key>modified</key>
-			<date>2026-06-23T15:59:45Z</date>
+			<date>2026-06-25T00:43:38Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.applicationaccess-macOS.plist</string>
 			<key>version</key>
@@ -2535,6 +2535,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2026-08-10T09:37:50Z</date>
+	<date>2026-08-11T12:50:03Z</date>
 </dict>
 </plist>

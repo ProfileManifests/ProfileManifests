@@ -17,7 +17,7 @@
 	<key>pfm_ios_min</key>
 	<string>4.0</string>
 	<key>pfm_last_modified</key>
-	<date>2026-06-23T15:59:45Z</date>
+	<date>2026-06-25T00:43:38Z</date>
 	<key>pfm_note</key>
 	<string>Important:
 The system allows multiple Restrictions payloads. However, don't attempt to manage the same restriction in different payloads. Doing so results in unexpected behavior.</string>
@@ -260,6 +260,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<string>allowEnablingRestrictions</string>
 					<string>allowEnterpriseAppTrust</string>
 					<string>allowEraseContentAndSettings</string>
+					<string>forcePreserveESIMOnErase</string>
 					<string>allowFindMyDevice</string>
 					<string>allowFindMyFriends</string>
 					<string>allowFindMyFriendsModification</string>
@@ -285,7 +286,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<string>allowPredictiveKeyboard</string>
 					<string>allowProximitySetupToNewDevice</string>
 					<string>allowRemoteScreenObservation</string>
-					<string>allowScreenshot</string>
+					<string>allowScreenShot</string>
 					<string>allowSharedDeviceTemporarySession</string>
 					<string>allowSpellCheck</string>
 					<string>allowUIConfigurationProfileInstallation</string>
