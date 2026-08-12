@@ -223,7 +223,7 @@
 		<key>com.apple.python</key>
 		<dict>
 			<key>modified</key>
-			<date>2026-06-23T15:59:45Z</date>
+			<date>2026-08-12T15:23:22Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApple/com.apple.python.plist</string>
 			<key>version</key>
@@ -2535,6 +2535,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2026-08-12T14:39:57Z</date>
+	<date>2026-08-12T15:24:49Z</date>
 </dict>
 </plist>
