@@ -230,8 +230,6 @@ The system limits the list of visible AirPlay destinations to devices that are p
 					<dict>
 						<key>iOS</key>
 						<dict>
-							<key>pfmx_introduced</key>
-							<string>7.0</string>
 							<key>pfmx_supervised</key>
 							<true/>
 							<key>pfmx_user_enrollment</key>
@@ -242,8 +240,6 @@ The system limits the list of visible AirPlay destinations to devices that are p
 						</dict>
 						<key>macOS</key>
 						<dict>
-							<key>pfmx_introduced</key>
-							<string>10.10</string>
 							<key>pfmx_user_enrollment</key>
 							<dict>
 								<key>pfmx_mode</key>
@@ -336,19 +332,6 @@ As of tvOS 18, 'DeviceID' isn't supported.</string>
 							<string>string</string>
 							<key>pfm_value_placeholder</key>
 							<string>xx:xx:xx:xx:xx:xx</string>
-							<key>pfmx_supported_oses</key>
-							<dict>
-								<key>iOS</key>
-								<dict>
-									<key>pfmx_deprecated</key>
-									<string>18.0</string>
-								</dict>
-								<key>macOS</key>
-								<dict>
-									<key>pfmx_deprecated</key>
-									<string>15.0</string>
-								</dict>
-							</dict>
 						</dict>
 						<dict>
 							<key>pfm_description</key>
