@@ -7,7 +7,7 @@
 	<key>pfm_description</key>
 	<string>Parallels Desktop Settings</string>
 	<key>pfm_documentation_url</key>
-	<string>https://docs.parallels.com/parallels-desktop-enterprise-administrators-guide/mass-deployment-of-parallels-desktop-and-virtual-machines/deploying-parallels-desktop-via-mdm-app-catalogs-using-configuration-profiles</string>
+	<string>https://link.parallels.com/pde-mdm-pd-settings</string>
 	<key>pfm_domain</key>
 	<string>com.parallels.desktop.managedprefs</string>
 	<key>pfm_format_version</key>
@@ -121,7 +121,7 @@
 	<key>pfm_interaction</key>
 	<string>exclusive</string>
 	<key>pfm_last_modified</key>
-	<date>2026-06-23T15:59:45Z</date>
+	<date>2026-08-14T15:59:45Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -234,7 +234,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_description</key>
 			<string>Select a method for activating Parallels Desktop for Mac</string>
 			<key>pfm_documentation_url</key>
-			<string>https://docs.parallels.com/parallels-desktop-enterprise-administrators-guide/mass-deployment-of-parallels-desktop-and-virtual-machines/deploying-parallels-desktop-via-mdm-app-catalogs-using-configuration-profiles</string>
+			<string>https://link.parallels.com/pde-mdm-activation-experience</string>
 			<key>pfm_name</key>
 			<string>ActivationExperience</string>
 			<key>pfm_range_list</key>
@@ -271,7 +271,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_description</key>
 			<string>Enter your 30-character license key:</string>
 			<key>pfm_documentation_url</key>
-			<string>https://docs.parallels.com/parallels-desktop-licensing-guide/managing-subscriptions-licences-and-seats/viewing-subscriptions-and-subscription-details</string>
+			<string>https://link.parallels.com/pde-mdm-pd-licensing</string>
 			<key>pfm_exclude</key>
 			<array>
 				<dict>
@@ -305,7 +305,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_description</key>
 			<string>Enter SSO dialogue header text:</string>
 			<key>pfm_documentation_url</key>
-			<string>https://docs.parallels.com/parallels-desktop-licensing-guide/managing-subscriptions-licences-and-seats/viewing-subscriptions-and-subscription-details</string>
+			<string>https://link.parallels.com/pde-mdm-sso-header</string>
 			<key>pfm_exclude</key>
 			<array>
 				<dict>
@@ -335,7 +335,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_description</key>
 			<string>Enter SSO dialogue description text:</string>
 			<key>pfm_documentation_url</key>
-			<string>https://docs.parallels.com/parallels-desktop-licensing-guide/managing-subscriptions-licences-and-seats/viewing-subscriptions-and-subscription-details</string>
+			<string>https://link.parallels.com/pde-mdm-sso-description</string>
 			<key>pfm_exclude</key>
 			<array>
 				<dict>
@@ -365,7 +365,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_description</key>
 			<string>Enter SSO dialogue label text:</string>
 			<key>pfm_documentation_url</key>
-			<string>https://docs.parallels.com/parallels-desktop-licensing-guide/managing-subscriptions-licences-and-seats/viewing-subscriptions-and-subscription-details</string>
+			<string>https://link.parallels.com/pde-mdm-sso-email</string>
 			<key>pfm_exclude</key>
 			<array>
 				<dict>
