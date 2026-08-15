@@ -658,6 +658,13 @@
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.microsoft.wdav.png</string>
 		</dict>
+		<key>com.missiveapp.osx</key>
+		<dict>
+			<key>hash</key>
+			<string>34aa307bdc490412d87d216ed22f2d2a</string>
+			<key>path</key>
+			<string>Icons/ManagedPreferencesApplications/com.missiveapp.osx.png</string>
+		</dict>
 		<key>com.northpolesec.santa</key>
 		<dict>
 			<key>hash</key>
@@ -1706,6 +1713,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2026-08-12T18:20:47Z</date>
+	<date>2026-08-15T01:32:01Z</date>
 </dict>
 </plist>

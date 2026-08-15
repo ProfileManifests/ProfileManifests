@@ -934,6 +934,15 @@
 			<key>version</key>
 			<integer>5</integer>
 		</dict>
+		<key>com.missiveapp.osx</key>
+		<dict>
+			<key>modified</key>
+			<date>2026-08-14T13:00:23Z</date>
+			<key>path</key>
+			<string>Manifests/ManagedPreferencesApplications/com.missiveapp.osx.plist</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 		<key>com.northpolesec.santa</key>
 		<dict>
 			<key>modified</key>
@@ -2535,6 +2544,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2026-08-12T18:20:48Z</date>
+	<date>2026-08-15T01:32:01Z</date>
 </dict>
 </plist>
