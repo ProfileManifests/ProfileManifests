@@ -1078,6 +1078,15 @@
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
+		<key>com.trelica.macapp</key>
+		<dict>
+			<key>modified</key>
+			<date>2026-05-22T00:00:00Z</date>
+			<key>path</key>
+			<string>Manifests/ManagedPreferencesApplications/com.trelica.macapp.plist</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 		<key>com.trusourcelabs.NoMAD</key>
 		<dict>
 			<key>modified</key>
@@ -2535,6 +2544,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2026-08-18T09:23:46Z</date>
+	<date>2026-08-18T15:00:54Z</date>
 </dict>
 </plist>

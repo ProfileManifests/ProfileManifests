@@ -756,6 +756,13 @@
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.todesktop.230313mzl4w4u92.png</string>
 		</dict>
+		<key>com.trelica.macapp</key>
+		<dict>
+			<key>hash</key>
+			<string>a3c8e390ac2755fe87d57ecbfc8e4f4c</string>
+			<key>path</key>
+			<string>Icons/ManagedPreferencesApplications/com.trelica.macapp.png</string>
+		</dict>
 		<key>com.trusourcelabs.NoMAD</key>
 		<dict>
 			<key>hash</key>
@@ -1713,6 +1720,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2026-08-18T09:23:46Z</date>
+	<date>2026-08-18T15:00:54Z</date>
 </dict>
 </plist>
