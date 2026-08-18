@@ -185,7 +185,7 @@ A profile can consist of payloads with different version numbers. For example, c
 			<key>pfm_description</key>
 			<string>If you are using the Standalone version of Tailscale for macOS, the client will periodically check for updates automatically and notify the user that a new version is available, using the Sparkle framework. We recommend that you leave this feature on, in order to ensure your users receive any security updates in a timely manner. However, you might prefer to manually deploy updates and disable notifications of new available versions. Set this value to false to disable automatically checking for updates.</string>
 			<key>pfm_documentation_url</key>
-			<string>https://tailscale.com/kb/1315/mdm-keys/#check-for-updates-automatically</string>
+			<string>https://tailscale.com/docs/features/tailscale-system-policies#check-for-updates-automatically-macos</string>
 			<key>pfm_name</key>
 			<string>SUEnableAutomaticChecks</string>
 			<key>pfm_title</key>
@@ -197,9 +197,9 @@ A profile can consist of payloads with different version numbers. For example, c
 			<key>pfm_app_min</key>
 			<string>1.52</string>
 			<key>pfm_description</key>
-			<string>If you are using the Standalone version of Tailscale for macOS, the client can also install updates automatically. This feature also relies on the Sparkle framework. We recommend that you always turn this feature on, in order to ensure your users receive any security updates in a timely manner. However, if you manually manage updates, or prefer your users to be notified but to manually update, you can disable the automatic installation. When set to false, the standalone variant of Tailscale for macOS will require user input before updates are installed.</string>
+			<string>If you are using the Standalone version of Tailscale for macOS, the client can install updates automatically. This uses the Sparkle framework. We recommend that you always turn this feature on to make sure your users receive any security updates in a timely manner. Note, when the policy is set to true users may need to confirm the update before it is applied. However, if you manually manage updates, or prefer your users to be notified to manually update, you can disable the automatic installation. When SUAutomaticallyUpdate is set to false, the Standalone variant of Tailscale for macOS will require user input before updates are installed.</string>
 			<key>pfm_documentation_url</key>
-			<string>https://tailscale.com/kb/1315/mdm-keys/#install-updates-automatically</string>
+			<string>https://tailscale.com/docs/features/tailscale-system-policies#install-updates-automatically-macos</string>
 			<key>pfm_name</key>
 			<string>SUAutomaticallyUpdate</string>
 			<key>pfm_title</key>
