@@ -18,6 +18,9 @@
 	<date>2026-06-23T15:59:45Z</date>
 	<key>pfm_macos_min</key>
 	<string>10.12</string>
+	<key>pfm_note</key>
+	<string>A 'CertificatePreference' payload lets you identify a certificate preference item in the user's keychain that references a certificate payload included in the same profile. It can only appear in a user profile, not a device profile. You can include multiple 'CertificatePreference' payloads as needed.
+See also 'IdentityPreference'  for information about setting up identity preferences.</string>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -158,6 +161,8 @@ During a profile replacement, the system updates payloads with the same 'Payload
 	<key>pfm_title</key>
 	<string>Certificate Preference</string>
 	<key>pfm_unique</key>
+	<false/>
+	<key>pfm_user_approved</key>
 	<false/>
 	<key>pfm_version</key>
 	<integer>1</integer>

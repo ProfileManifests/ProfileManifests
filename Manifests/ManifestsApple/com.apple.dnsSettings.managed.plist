@@ -20,6 +20,9 @@
 	<date>2026-06-23T15:59:45Z</date>
 	<key>pfm_macos_min</key>
 	<string>11.0</string>
+	<key>pfm_note</key>
+	<string>When installed from an MDM, the setting only applies to managed Wi-Fi networks.
+When installed manually, this setting also applies to cellular networks.</string>
 	<key>pfm_platforms</key>
 	<array>
 		<string>iOS</string>
@@ -241,7 +244,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				<dict>
 					<key>pfm_description</key>
 					<string>A list of domain strings used to determine which DNS queries use the DNS server. If not set, all domains use the DNS server.
-
 The system supports a single wildcard ('*') prefix, but it's not required. For example, both '*.example.com' and 'example.com' match against 'mydomain.example.com' and 'your.domain.example.com', but don't match against 'mydomain-example.com'.</string>
 					<key>pfm_name</key>
 					<string>SupplementalMatchDomains</string>
@@ -354,10 +356,9 @@ The system supports a single wildcard ('*') prefix, but it's not required. For e
 						<dict>
 							<key>pfm_description</key>
 							<string>The action to take if this dictionary matches the current network. Allowed values:
-
-- 'Connect': Apply DNS Settings when the dictionary matches.
-- 'Disconnect': Don't apply DNS Settings when the dictionary matches.
-- 'EvaluateConnection': Apply DNS Settings with per-domain exceptions when the dictionary matches.</string>
+'Connect': Apply DNS Settings when the dictionary matches.
+'Disconnect': Don't apply DNS Settings when the dictionary matches.
+'EvaluateConnection': Apply DNS Settings with per-domain exceptions when the dictionary matches.</string>
 							<key>pfm_name</key>
 							<string>Action</string>
 							<key>pfm_range_list</key>
@@ -406,8 +407,7 @@ The system supports a single wildcard ('*') prefix, but it's not required. For e
 							<array>
 								<dict>
 									<key>pfm_description</key>
-									<string>A dictionary that provides per-connection rules.
-The keys allowed in each dictionary are described below. Note: This array is only for dictionaries in which 'EvaluateConnection' is the 'Action' value.</string>
+									<string>A dictionary that provides per-connection rules. The keys allowed in each dictionary are described below. Note: This array is only for dictionaries in which 'EvaluateConnection' is the 'Action' value.</string>
 									<key>pfm_name</key>
 									<string>ActionParameter</string>
 									<key>pfm_subkeys</key>
@@ -415,9 +415,8 @@ The keys allowed in each dictionary are described below. Note: This array is onl
 										<dict>
 											<key>pfm_description</key>
 											<string>The DNS settings behavior for the specified domains. Allowed values:
-
-* 'NeverConnect': Don't use the DNS Settings for the specified domains.
-* 'ConnectIfNeeded': Allow using the DNS Settings for the specified domains.</string>
+'NeverConnect': Don't use the DNS Settings for the specified domains.
+'ConnectIfNeeded': Allow using the DNS Settings for the specified domains.</string>
 											<key>pfm_name</key>
 											<string>DomainAction</string>
 											<key>pfm_range_list</key>
@@ -475,7 +474,6 @@ The keys allowed in each dictionary are described below. Note: This array is onl
 						<dict>
 							<key>pfm_description</key>
 							<string>An array of domain names. This rule matches if any of the domain names in the specified list matches any domain in the device's search domains list.
-
 The system supports a single wildcard ('*') prefix, but it's not required. For example, both '*.example.com' and 'example.com' match against 'mydomain.example.com' and 'your.domain.example.com', but don't match against 'mydomain-example.com'.</string>
 							<key>pfm_name</key>
 							<string>DNSDomainMatch</string>
@@ -498,7 +496,6 @@ The system supports a single wildcard ('*') prefix, but it's not required. For e
 						<dict>
 							<key>pfm_description</key>
 							<string>An array of IP addresses. This rule matches if any of the network's specified DNS servers match any entry in the array.
-
 The system supports matching with a single wildcard. For example, '17.*' matches any DNS server in the 17.0.0.0/8 subnet.</string>
 							<key>pfm_name</key>
 							<string>DNSServerAddressMatch</string>
@@ -601,6 +598,8 @@ The system supports matching with a single wildcard. For example, '17.*' matches
 	<key>pfm_title</key>
 	<string>DNS Settings</string>
 	<key>pfm_unique</key>
+	<false/>
+	<key>pfm_user_approved</key>
 	<false/>
 	<key>pfm_version</key>
 	<integer>4</integer>

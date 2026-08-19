@@ -209,6 +209,8 @@ During a profile replacement, the system updates payloads with the same 'Payload
 	<string>Service Management - Managed Login Items</string>
 	<key>pfm_unique</key>
 	<false/>
+	<key>pfm_user_approved</key>
+	<true/>
 	<key>pfm_version</key>
 	<integer>2</integer>
 	<key>pfmx_supported_oses</key>

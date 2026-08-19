@@ -182,9 +182,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>L2TP</string>
 			<key>pfm_description</key>
 			<string>The type of the VPN, which defines which settings are appropriate for this VPN payload.
-
 If the type is 'VPN' or 'TransparentProxy', then the system requires a value for 'VPNSubType'.
-
 'TransparentProxy' is only available in macOS. 'L2TP' and 'IPSec' aren't available in tvOS. 'AlwaysOn' is only available on iOS and Apple Watch pairing isn't supported with 'AlwaysOn'. For a previously paired Apple Watch, all phone-watch communications cease when 'AlwaysOn' is enabled. Not available in watchOS.</string>
 			<key>pfm_name</key>
 			<string>VPNType</string>
@@ -237,19 +235,14 @@ If the type is 'VPN' or 'TransparentProxy', then the system requires a value for
 			</array>
 			<key>pfm_description</key>
 			<string>An identifier for a vendor-specified configuration dictionary when the value for 'VPNType' is 'VPN'.
-
 If 'VPNType' is 'VPN', the system requires this field. If the configuration targets a VPN solution that uses a VPN plugin, then this field contains the bundle identifier of the plugin. Here are some examples:
-
-- Cisco AnyConnect: 'com.cisco.anyconnect.applevpn.plugin'
-- Juniper SSL: 'net.juniper.sslvpn'
-- F5 SSL: 'com.f5.F5-Edge-Client.vpnplugin'
-- SonicWALL Mobile Connect: 'com.sonicwall.SonicWALL-SSLVPN.vpnplugin'
-- ''Aruba VIA: 'com.arubanetworks.aruba-via.vpnplugin'
-
+Cisco AnyConnect: 'com.cisco.anyconnect.applevpn.plugin'
+Juniper SSL: 'net.juniper.sslvpn'
+F5 SSL: 'com.f5.F5-Edge-Client.vpnplugin'
+SonicWALL Mobile Connect: 'com.sonicwall.SonicWALL-SSLVPN.vpnplugin'
+``Aruba VIA: 'com.arubanetworks.aruba-via.vpnplugin'
 If the configuration targets a VPN solution that uses a network extension provider, then this field contains the bundle identifier of the app that contains the provider. Contact the VPN solution vendor for the value of the identifier.
-
 If 'VPNType' is 'IKEv2', then the 'VPNSubType' field is optional and reserved for future use. If it's specified, it needs to contain an empty string.
-
 Not available in watchOS.</string>
 			<key>pfm_exclude</key>
 			<array>
@@ -322,6 +315,11 @@ Not available in watchOS.</string>
 					<string>The IP address or host name of VPN server. This key is for use with L2TP and PPTP networks.</string>
 					<key>pfm_name</key>
 					<string>CommRemoteAddress</string>
+					<key>pfm_platforms</key>
+					<array>
+						<string>iOS</string>
+						<string>macOS</string>
+					</array>
 					<key>pfm_require</key>
 					<string>always</string>
 					<key>pfm_title</key>
@@ -334,6 +332,11 @@ Not available in watchOS.</string>
 					<string>The VPN account user name. This key is for use with L2TP and PPTP networks.</string>
 					<key>pfm_name</key>
 					<string>AuthName</string>
+					<key>pfm_platforms</key>
+					<array>
+						<string>iOS</string>
+						<string>macOS</string>
+					</array>
 					<key>pfm_require</key>
 					<string>push</string>
 					<key>pfm_title</key>
@@ -371,6 +374,11 @@ Not available in watchOS.</string>
 					</array>
 					<key>pfm_name</key>
 					<string>AuthPassword</string>
+					<key>pfm_platforms</key>
+					<array>
+						<string>iOS</string>
+						<string>macOS</string>
+					</array>
 					<key>pfm_title</key>
 					<string>Account Password</string>
 					<key>pfm_type</key>
@@ -411,6 +419,11 @@ Not available in watchOS.</string>
 					</array>
 					<key>pfm_name</key>
 					<string>AuthEAPPlugins</string>
+					<key>pfm_platforms</key>
+					<array>
+						<string>iOS</string>
+						<string>macOS</string>
+					</array>
 					<key>pfm_subkeys</key>
 					<array>
 						<dict>
@@ -418,6 +431,11 @@ Not available in watchOS.</string>
 							<string>EAP-RSA</string>
 							<key>pfm_name</key>
 							<string>EAPPluginElement</string>
+							<key>pfm_platforms</key>
+							<array>
+								<string>iOS</string>
+								<string>macOS</string>
+							</array>
 							<key>pfm_range_list</key>
 							<array>
 								<string>EAP-RSA</string>
@@ -478,6 +496,11 @@ Not available in watchOS.</string>
 					</array>
 					<key>pfm_name</key>
 					<string>AuthProtocol</string>
+					<key>pfm_platforms</key>
+					<array>
+						<string>iOS</string>
+						<string>macOS</string>
+					</array>
 					<key>pfm_subkeys</key>
 					<array>
 						<dict>
@@ -485,6 +508,11 @@ Not available in watchOS.</string>
 							<string>EAP</string>
 							<key>pfm_name</key>
 							<string>AuthProtocolElement</string>
+							<key>pfm_platforms</key>
+							<array>
+								<string>iOS</string>
+								<string>macOS</string>
+							</array>
 							<key>pfm_range_list</key>
 							<array>
 								<string>EAP</string>
@@ -531,6 +559,11 @@ Not available in watchOS.</string>
 					</array>
 					<key>pfm_name</key>
 					<string>TokenCard</string>
+					<key>pfm_platforms</key>
+					<array>
+						<string>iOS</string>
+						<string>macOS</string>
+					</array>
 					<key>pfm_range_list</key>
 					<array>
 						<integer>0</integer>
@@ -564,6 +597,11 @@ Not available in watchOS.</string>
 					</array>
 					<key>pfm_name</key>
 					<string>CCPEnabled</string>
+					<key>pfm_platforms</key>
+					<array>
+						<string>iOS</string>
+						<string>macOS</string>
+					</array>
 					<key>pfm_range_list</key>
 					<array>
 						<integer>0</integer>
@@ -628,6 +666,11 @@ Not available in watchOS.</string>
 					</array>
 					<key>pfm_name</key>
 					<string>CCPMPPE40Enabled</string>
+					<key>pfm_platforms</key>
+					<array>
+						<string>iOS</string>
+						<string>macOS</string>
+					</array>
 					<key>pfm_range_list</key>
 					<array>
 						<integer>0</integer>
@@ -692,6 +735,11 @@ Not available in watchOS.</string>
 					</array>
 					<key>pfm_name</key>
 					<string>CCPMPPE128Enabled</string>
+					<key>pfm_platforms</key>
+					<array>
+						<string>iOS</string>
+						<string>macOS</string>
+					</array>
 					<key>pfm_range_list</key>
 					<array>
 						<integer>0</integer>
@@ -716,6 +764,11 @@ Not available in watchOS.</string>
 					<string>If '1', disconnects after an on demand connection idles.</string>
 					<key>pfm_name</key>
 					<string>DisconnectOnIdle</string>
+					<key>pfm_platforms</key>
+					<array>
+						<string>iOS</string>
+						<string>macOS</string>
+					</array>
 					<key>pfm_range_list</key>
 					<array>
 						<integer>0</integer>
@@ -754,6 +807,11 @@ Not available in watchOS.</string>
 					</array>
 					<key>pfm_name</key>
 					<string>DisconnectOnIdleTimer</string>
+					<key>pfm_platforms</key>
+					<array>
+						<string>iOS</string>
+						<string>macOS</string>
+					</array>
 					<key>pfm_range_min</key>
 					<integer>0</integer>
 					<key>pfm_title</key>
@@ -827,10 +885,15 @@ Not available in watchOS.</string>
 					<string>Password</string>
 					<key>pfm_description</key>
 					<string>The type of authentication method to use: 'Password', 'Certificate', or 'Password+Certificate'.
-
 Available in macOS 14 and later.</string>
+					<key>pfm_macos_min</key>
+					<string>14.0</string>
 					<key>pfm_name</key>
 					<string>AuthenticationMethod</string>
+					<key>pfm_platforms</key>
+					<array>
+						<string>macOS</string>
+					</array>
 					<key>pfm_range_list</key>
 					<array>
 						<string>Password</string>
@@ -845,7 +908,6 @@ Available in macOS 14 and later.</string>
 				<dict>
 					<key>pfm_description</key>
 					<string>The password to use for the account credentials. Only used if 'AuthenticationMethod' is 'Password'.
-
 Available in macOS 14 and later.</string>
 					<key>pfm_exclude</key>
 					<array>
@@ -864,8 +926,14 @@ Available in macOS 14 and later.</string>
 							</array>
 						</dict>
 					</array>
+					<key>pfm_macos_min</key>
+					<string>14.0</string>
 					<key>pfm_name</key>
 					<string>Password</string>
+					<key>pfm_platforms</key>
+					<array>
+						<string>macOS</string>
+					</array>
 					<key>pfm_title</key>
 					<string>Account Password</string>
 					<key>pfm_type</key>
@@ -874,7 +942,6 @@ Available in macOS 14 and later.</string>
 				<dict>
 					<key>pfm_description</key>
 					<string>The UUID of the identity certificate as the account credential. If 'AuthenticationMethod' is 'Certificate', and extended authentication (EAP) isn't used, this certificate is sent out for IKE client authentication. If extended authentication is used, this certificate can be used for EAP-TLS.
-
 Available in macOS 14 and later.</string>
 					<key>pfm_exclude</key>
 					<array>
@@ -896,12 +963,11 @@ Available in macOS 14 and later.</string>
 					<key>pfm_ios_min</key>
 					<string>16.0</string>
 					<key>pfm_macos_min</key>
-					<string>13.0</string>
+					<string>14.0</string>
 					<key>pfm_name</key>
 					<string>PayloadCertificateUUID</string>
 					<key>pfm_platforms</key>
 					<array>
-						<string>iOS</string>
 						<string>macOS</string>
 					</array>
 					<key>pfm_title</key>
@@ -914,10 +980,15 @@ Available in macOS 14 and later.</string>
 					<integer>0</integer>
 					<key>pfm_description</key>
 					<string>If '1', the system brings up the VPN on demand.
-
 Available in macOS 14 and later.</string>
+					<key>pfm_macos_min</key>
+					<string>14.0</string>
 					<key>pfm_name</key>
 					<string>OnDemandEnabled</string>
+					<key>pfm_platforms</key>
+					<array>
+						<string>macOS</string>
+					</array>
 					<key>pfm_range_list</key>
 					<array>
 						<integer>0</integer>
@@ -938,7 +1009,6 @@ Available in macOS 14 and later.</string>
 				<dict>
 					<key>pfm_description</key>
 					<string>Determines when and how the system uses an OnDemand VPN.
-
 Available in macOS 14 and later.</string>
 					<key>pfm_exclude</key>
 					<array>
@@ -956,26 +1026,43 @@ Available in macOS 14 and later.</string>
 							</array>
 						</dict>
 					</array>
+					<key>pfm_macos_min</key>
+					<string>14.0</string>
 					<key>pfm_name</key>
 					<string>OnDemandRules</string>
+					<key>pfm_platforms</key>
+					<array>
+						<string>macOS</string>
+					</array>
 					<key>pfm_subkeys</key>
 					<array>
 						<dict>
+							<key>pfm_macos_min</key>
+							<string>14.0</string>
 							<key>pfm_name</key>
 							<string>OnDemandRulesElement</string>
+							<key>pfm_platforms</key>
+							<array>
+								<string>macOS</string>
+							</array>
 							<key>pfm_subkeys</key>
 							<array>
 								<dict>
 									<key>pfm_description</key>
 									<string>The action to take if this dictionary matches the current network. Possible values are:
-- 'Allow': Deprecated. Allow VPN On Demand to connect if triggered.
-- 'Connect': Unconditionally initiate a VPN connection on the next network attempt.
-- 'Disconnect': Tear down the VPN connection and don't reconnect on demand as long as this dictionary matches.
-- 'EvaluateConnection': Evaluate the ActionParameters array for each connection attempt.
-- 'Ignore': Leave any existing VPN connection up, but don't reconnect on demand as long as this dictionary matches.
-Only the 'Disconnect' action is available on watchOS 10 and later.</string>
+'Allow': Deprecated. Allow VPN On Demand to connect if triggered.
+'Connect': Unconditionally initiate a VPN connection on the next network attempt.
+'Disconnect': Tear down the VPN connection and don't reconnect on demand as long as this dictionary matches.
+'EvaluateConnection': Evaluate the ActionParameters array for each connection attempt.
+'Ignore': Leave any existing VPN connection up, but don't reconnect on demand as long as this dictionary matches. Only the 'Disconnect' action is available on watchOS 10 and later.</string>
+									<key>pfm_macos_min</key>
+									<string>14.0</string>
 									<key>pfm_name</key>
 									<string>Action</string>
+									<key>pfm_platforms</key>
+									<array>
+										<string>macOS</string>
+									</array>
 									<key>pfm_range_list</key>
 									<array>
 										<string>Allow</string>
@@ -1002,8 +1089,14 @@ Only the 'Disconnect' action is available on watchOS 10 and later.</string>
 								<dict>
 									<key>pfm_description</key>
 									<string>An interface type. If specified, this rule matches only if the primary network interface hardware matches the specified type.</string>
+									<key>pfm_macos_min</key>
+									<string>14.0</string>
 									<key>pfm_name</key>
 									<string>InterfaceTypeMatch</string>
+									<key>pfm_platforms</key>
+									<array>
+										<string>macOS</string>
+									</array>
 									<key>pfm_range_list</key>
 									<array>
 										<string>Ethernet</string>
@@ -1023,15 +1116,26 @@ Only the 'Disconnect' action is available on watchOS 10 and later.</string>
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>An array of domain names. This rule matches if any of the domain names in the specified list matches any domain in the device's search domains list.
-The system supports a wildcard ('*') prefix. For example, '*.example.com' matches against either 'mydomain.example.com' or 'yourdomain.example.com'.</string>
+									<string>An array of domain names. This rule matches if any of the domain names in the specified list matches any domain in the device's search domains list. The system supports a wildcard ('*') prefix. For example, '*.example.com' matches against either 'mydomain.example.com' or 'yourdomain.example.com'.</string>
+									<key>pfm_macos_min</key>
+									<string>14.0</string>
 									<key>pfm_name</key>
 									<string>DNSDomainMatch</string>
+									<key>pfm_platforms</key>
+									<array>
+										<string>macOS</string>
+									</array>
 									<key>pfm_subkeys</key>
 									<array>
 										<dict>
+											<key>pfm_macos_min</key>
+											<string>14.0</string>
 											<key>pfm_name</key>
 											<string>DNSDomainMatchElement</string>
+											<key>pfm_platforms</key>
+											<array>
+												<string>macOS</string>
+											</array>
 											<key>pfm_title</key>
 											<string>DNS Domain Match Element</string>
 											<key>pfm_type</key>
@@ -1047,15 +1151,26 @@ The system supports a wildcard ('*') prefix. For example, '*.example.com' matche
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>An array of IP addresses. This rule matches if any of the network's specified DNS servers match any entry in the array.
-The system supports matching with a single wildcard. For example, '17.*' matches any DNS server in the '17.0.0.0/8' subnet.</string>
+									<string>An array of IP addresses. This rule matches if any of the network's specified DNS servers match any entry in the array. The system supports matching with a single wildcard. For example, '17.*' matches any DNS server in the '17.0.0.0/8' subnet.</string>
+									<key>pfm_macos_min</key>
+									<string>14.0</string>
 									<key>pfm_name</key>
 									<string>DNSServerAddressMatch</string>
+									<key>pfm_platforms</key>
+									<array>
+										<string>macOS</string>
+									</array>
 									<key>pfm_subkeys</key>
 									<array>
 										<dict>
+											<key>pfm_macos_min</key>
+											<string>14.0</string>
 											<key>pfm_name</key>
 											<string>DNSServerAddressMatchElement</string>
+											<key>pfm_platforms</key>
+											<array>
+												<string>macOS</string>
+											</array>
 											<key>pfm_title</key>
 											<string>DNS Server Address Match Element</string>
 											<key>pfm_type</key>
@@ -1069,15 +1184,26 @@ The system supports matching with a single wildcard. For example, '17.*' matches
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>An array of SSIDs to match against the current network. If the network isn't a Wi-Fi network or if the SSID doesn't appear in this array, the match fails.
-Omit this key and the corresponding array to match against any SSID.</string>
+									<string>An array of SSIDs to match against the current network. If the network isn't a Wi-Fi network or if the SSID doesn't appear in this array, the match fails. Omit this key and the corresponding array to match against any SSID.</string>
+									<key>pfm_macos_min</key>
+									<string>14.0</string>
 									<key>pfm_name</key>
 									<string>SSIDMatch</string>
+									<key>pfm_platforms</key>
+									<array>
+										<string>macOS</string>
+									</array>
 									<key>pfm_subkeys</key>
 									<array>
 										<dict>
+											<key>pfm_macos_min</key>
+											<string>14.0</string>
 											<key>pfm_name</key>
 											<string>SSIDMatchElement</string>
+											<key>pfm_platforms</key>
+											<array>
+												<string>macOS</string>
+											</array>
 											<key>pfm_title</key>
 											<string>SSID Match Element</string>
 											<key>pfm_type</key>
@@ -1092,8 +1218,14 @@ Omit this key and the corresponding array to match against any SSID.</string>
 								<dict>
 									<key>pfm_description</key>
 									<string>A URL to probe. This rule matches when this URL is successfully fetched (returns a '200' HTTP status code) without redirection. Not available in watchOS.</string>
+									<key>pfm_macos_min</key>
+									<string>14.0</string>
 									<key>pfm_name</key>
 									<string>URLStringProbe</string>
+									<key>pfm_platforms</key>
+									<array>
+										<string>macOS</string>
+									</array>
 									<key>pfm_title</key>
 									<string>URL String Probe</string>
 									<key>pfm_type</key>
@@ -1102,25 +1234,42 @@ Omit this key and the corresponding array to match against any SSID.</string>
 								<dict>
 									<key>pfm_description</key>
 									<string>An array of dictionaries that provides rules similar to the 'OnDemandRules' dictionary, but evaluated on each connection instead of when the network changes. This value is only for use with dictionaries in which the 'Action' value is 'EvaluateConnection'. The system evaluates these dictionaries in order and the first dictionary that matches determines the behavior. Not available in watchOS.</string>
+									<key>pfm_macos_min</key>
+									<string>14.0</string>
 									<key>pfm_name</key>
 									<string>ActionParameters</string>
+									<key>pfm_platforms</key>
+									<array>
+										<string>macOS</string>
+									</array>
 									<key>pfm_subkeys</key>
 									<array>
 										<dict>
 											<key>pfm_description</key>
-											<string>A dictionary that provides rules similar to the OnDemandRules dictionary, but evaluated on each connection instead of when the network changes. These dictionaries are evaluated in order, and the behavior is determined by the first dictionary that matches.
-The keys allowed in each dictionary are described below. Note: This array is used only for dictionaries in which EvaluateConnection is the Action value.</string>
+											<string>A dictionary that provides rules similar to the OnDemandRules dictionary, but evaluated on each connection instead of when the network changes. These dictionaries are evaluated in order, and the behavior is determined by the first dictionary that matches. The keys allowed in each dictionary are described below. Note: This array is used only for dictionaries in which EvaluateConnection is the Action value.</string>
+											<key>pfm_macos_min</key>
+											<string>14.0</string>
 											<key>pfm_name</key>
 											<string>ActionParameter</string>
+											<key>pfm_platforms</key>
+											<array>
+												<string>macOS</string>
+											</array>
 											<key>pfm_subkeys</key>
 											<array>
 												<dict>
 													<key>pfm_description</key>
 													<string>Defines the VPN behavior for the specified domains. Allowed values are:
-* 'ConnectIfNeeded': The specified domains should trigger a VPN connection attempt if domain name resolution fails, such as when the DNS server indicates that it can't resolve the domain, responds with a redirection to a different server, or fails to respond (timeout).
-* 'NeverConnect': The specified domains should never trigger a VPN connection attempt.</string>
+'ConnectIfNeeded': The specified domains should trigger a VPN connection attempt if domain name resolution fails, such as when the DNS server indicates that it can't resolve the domain, responds with a redirection to a different server, or fails to respond (timeout).
+'NeverConnect': The specified domains should never trigger a VPN connection attempt.</string>
+													<key>pfm_macos_min</key>
+													<string>14.0</string>
 													<key>pfm_name</key>
 													<string>DomainAction</string>
+													<key>pfm_platforms</key>
+													<array>
+														<string>macOS</string>
+													</array>
 													<key>pfm_range_list</key>
 													<array>
 														<string>ConnectIfNeeded</string>
@@ -1141,15 +1290,27 @@ The keys allowed in each dictionary are described below. Note: This array is use
 												<dict>
 													<key>pfm_description</key>
 													<string>The domains to apply this evaluation.</string>
+													<key>pfm_macos_min</key>
+													<string>14.0</string>
 													<key>pfm_name</key>
 													<string>Domains</string>
+													<key>pfm_platforms</key>
+													<array>
+														<string>macOS</string>
+													</array>
 													<key>pfm_require</key>
 													<string>always</string>
 													<key>pfm_subkeys</key>
 													<array>
 														<dict>
+															<key>pfm_macos_min</key>
+															<string>14.0</string>
 															<key>pfm_name</key>
 															<string>DomainsElement</string>
+															<key>pfm_platforms</key>
+															<array>
+																<string>macOS</string>
+															</array>
 															<key>pfm_title</key>
 															<string>Domains Element</string>
 															<key>pfm_type</key>
@@ -1163,15 +1324,26 @@ The keys allowed in each dictionary are described below. Note: This array is use
 												</dict>
 												<dict>
 													<key>pfm_description</key>
-													<string>An array of IP addresses of DNS servers to use for resolving the specified domains. These servers don't need to be part of the device's current network configuration. If these DNS servers aren't reachable, the system establishes a VPN connection. These DNS servers need to be either internal DNS servers or trusted external DNS servers.
-This key is valid only if the value of 'DomainAction' is 'ConnectIfNeeded'.</string>
+													<string>An array of IP addresses of DNS servers to use for resolving the specified domains. These servers don't need to be part of the device's current network configuration. If these DNS servers aren't reachable, the system establishes a VPN connection. These DNS servers need to be either internal DNS servers or trusted external DNS servers. This key is valid only if the value of 'DomainAction' is 'ConnectIfNeeded'.</string>
+													<key>pfm_macos_min</key>
+													<string>14.0</string>
 													<key>pfm_name</key>
 													<string>RequiredDNSServers</string>
+													<key>pfm_platforms</key>
+													<array>
+														<string>macOS</string>
+													</array>
 													<key>pfm_subkeys</key>
 													<array>
 														<dict>
+															<key>pfm_macos_min</key>
+															<string>14.0</string>
 															<key>pfm_name</key>
 															<string>RequiredDNSServersElement</string>
+															<key>pfm_platforms</key>
+															<array>
+																<string>macOS</string>
+															</array>
 															<key>pfm_title</key>
 															<string>Required DNS Servers Element</string>
 															<key>pfm_type</key>
@@ -1185,10 +1357,15 @@ This key is valid only if the value of 'DomainAction' is 'ConnectIfNeeded'.</str
 												</dict>
 												<dict>
 													<key>pfm_description</key>
-													<string>An HTTP or HTTPS (preferred) URL to probe, using a GET request. If the URL's hostname can't be resolved, if the server is unreachable, or if the server doesn't respond with a 200 HTTP status code, a VPN connection is established in response.
-This key is valid only if the value of 'DomainAction' is 'ConnectIfNeeded'.</string>
+													<string>An HTTP or HTTPS (preferred) URL to probe, using a GET request. If the URL's hostname can't be resolved, if the server is unreachable, or if the server doesn't respond with a 200 HTTP status code, a VPN connection is established in response. This key is valid only if the value of 'DomainAction' is 'ConnectIfNeeded'.</string>
+													<key>pfm_macos_min</key>
+													<string>14.0</string>
 													<key>pfm_name</key>
 													<string>RequiredURLStringProbe</string>
+													<key>pfm_platforms</key>
+													<array>
+														<string>macOS</string>
+													</array>
 													<key>pfm_title</key>
 													<string>Required URL String Probe</string>
 													<key>pfm_type</key>
@@ -1223,10 +1400,15 @@ This key is valid only if the value of 'DomainAction' is 'ConnectIfNeeded'.</str
 					<string>packet-tunnel</string>
 					<key>pfm_description</key>
 					<string>If the value of this key is 'app-proxy', the VPN service tunnels traffic at the application layer. If the value of this key is 'packet-tunnel', the VPN service tunnels traffic at the IP layer.
-
 Available in macOS 14 and later.</string>
+					<key>pfm_macos_min</key>
+					<string>14.0</string>
 					<key>pfm_name</key>
 					<string>ProviderType</string>
+					<key>pfm_platforms</key>
+					<array>
+						<string>macOS</string>
+					</array>
 					<key>pfm_range_list</key>
 					<array>
 						<string>packet-tunnel</string>
@@ -1245,10 +1427,15 @@ Available in macOS 14 and later.</string>
 				<dict>
 					<key>pfm_description</key>
 					<string>If the VPNSubType field contains the bundle identifier of an app that contains multiple VPN providers of the same type (app-proxy or packet-tunnel), then the system uses this field to choose which provider to use for this configuration. If the VPN provider is implemented as a System Extension, then this field is required.
-
 Available in macOS 14 and later.</string>
+					<key>pfm_macos_min</key>
+					<string>14.0</string>
 					<key>pfm_name</key>
 					<string>ProviderBundleIdentifier</string>
+					<key>pfm_platforms</key>
+					<array>
+						<string>macOS</string>
+					</array>
 					<key>pfm_title</key>
 					<string>Provider Bundle Identifier</string>
 					<key>pfm_type</key>
@@ -1257,10 +1444,15 @@ Available in macOS 14 and later.</string>
 				<dict>
 					<key>pfm_description</key>
 					<string>If the VPN provider is implemented as a System Extension, then this field is required.
-
 Available in macOS 14 and later.</string>
+					<key>pfm_macos_min</key>
+					<string>14.0</string>
 					<key>pfm_name</key>
 					<string>ProviderDesignatedRequirement</string>
+					<key>pfm_platforms</key>
+					<array>
+						<string>macOS</string>
+					</array>
 					<key>pfm_title</key>
 					<string>Provider Designated Requirement</string>
 					<key>pfm_type</key>
@@ -1271,10 +1463,15 @@ Available in macOS 14 and later.</string>
 					<integer>0</integer>
 					<key>pfm_description</key>
 					<string>If '1', the VPN disconnects automatically disconnect after a period defined by 'DisconnectOnIdleTimer'.
-
 Available in macOS 14 and later.</string>
+					<key>pfm_macos_min</key>
+					<string>14.0</string>
 					<key>pfm_name</key>
 					<string>DisconnectOnIdle</string>
+					<key>pfm_platforms</key>
+					<array>
+						<string>macOS</string>
+					</array>
 					<key>pfm_range_list</key>
 					<array>
 						<integer>0</integer>
@@ -1297,10 +1494,15 @@ Available in macOS 14 and later.</string>
 					<integer>0</integer>
 					<key>pfm_description</key>
 					<string>If '1', then all the VPN's non-default routes take precedence over any locally-defined routes. If 'IncludeAllNetworks' is '1', the system ignores the value of 'EnforceRoutes'.
-
 Available in macOS 14 and later.</string>
+					<key>pfm_macos_min</key>
+					<string>14.0</string>
 					<key>pfm_name</key>
 					<string>EnforceRoutes</string>
+					<key>pfm_platforms</key>
+					<array>
+						<string>macOS</string>
+					</array>
 					<key>pfm_range_list</key>
 					<array>
 						<integer>0</integer>
@@ -1316,7 +1518,6 @@ Available in macOS 14 and later.</string>
 				<dict>
 					<key>pfm_description</key>
 					<string>The number of seconds before the VPN disconnects. This value is only used if 'DisconnectOnIdle' is '1'.
-
 Available in macOS 14 and later.</string>
 					<key>pfm_exclude</key>
 					<array>
@@ -1334,8 +1535,14 @@ Available in macOS 14 and later.</string>
 							</array>
 						</dict>
 					</array>
+					<key>pfm_macos_min</key>
+					<string>14.0</string>
 					<key>pfm_name</key>
 					<string>DisconnectOnIdleTimer</string>
+					<key>pfm_platforms</key>
+					<array>
+						<string>macOS</string>
+					</array>
 					<key>pfm_range_min</key>
 					<integer>0</integer>
 					<key>pfm_title</key>
@@ -1346,10 +1553,15 @@ Available in macOS 14 and later.</string>
 				<dict>
 					<key>pfm_description</key>
 					<string>A positive integer.
-
 Available in macOS 14 and later.</string>
+					<key>pfm_macos_min</key>
+					<string>14.0</string>
 					<key>pfm_name</key>
 					<string>Order</string>
+					<key>pfm_platforms</key>
+					<array>
+						<string>macOS</string>
+					</array>
 					<key>pfm_title</key>
 					<string>Order</string>
 					<key>pfm_type</key>
@@ -1461,7 +1673,6 @@ Available in macOS 14 and later.</string>
 					<string>SharedSecret</string>
 					<key>pfm_description</key>
 					<string>The type of authentication method for the VPN.
-
 To enable EAP-only authentication, set this to 'None' and 'ExtendedAuthEnabled' to '1'. If this is 'None' and the 'ExtendedAuthEnabled' key isn't set, the authentication configuration defaults to 'SharedSecret'.</string>
 					<key>pfm_name</key>
 					<string>AuthenticationMethod</string>
@@ -1900,12 +2111,10 @@ To enable EAP-only authentication, set this to 'None' and 'ExtendedAuthEnabled' 
 					<string>Medium</string>
 					<key>pfm_description</key>
 					<string>One of the following:
-
-- 'None': No keepalive.
-- 'Low': Send keepalive every 30 minutes.
-- 'Medium': Send keepalive every 10 minutes.
-- 'High': Send keepalive every 1 minute.
-
+'None': No keepalive.
+'Low': Send keepalive every 30 minutes.
+'Medium': Send keepalive every 10 minutes.
+'High': Send keepalive every 1 minute.
 Not available in watchOS.</string>
 					<key>pfm_name</key>
 					<string>DeadPeerDetectionRate</string>
@@ -2111,14 +2320,17 @@ Not available in watchOS.</string>
 					<integer>0</integer>
 					<key>pfm_description</key>
 					<string>If '1', the system enables a tunnel over cellular data to carry traffic that's eligible for Wi-Fi Assist and also requires VPN.
-
 Enabling fallback requires that the server support multiple tunnels for a single user.
-
 This field is available in iOS 13 and later, and tvOS 17 and later. Not available in watchOS.</string>
 					<key>pfm_ios_min</key>
 					<string>13.0</string>
 					<key>pfm_name</key>
 					<string>EnableFallback</string>
+					<key>pfm_platforms</key>
+					<array>
+						<string>iOS</string>
+						<string>tvOS</string>
+					</array>
 					<key>pfm_range_list</key>
 					<array>
 						<integer>0</integer>
@@ -2166,9 +2378,7 @@ This field is available in iOS 13 and later, and tvOS 17 and later. Not availabl
 							<string>AES-256</string>
 							<key>pfm_description</key>
 							<string>The encryption algorithm.
-
-In watchOS and tvOS, the default value is 'AES-256-GCM'.
-'DES' and '3DES' are available only in iOS, macOS, and visionOS prior to iOS 26, macOS 26, and visionOS 26.</string>
+In watchOS and tvOS, the default value is 'AES-256-GCM'. 'DES' and '3DES' are available only in iOS, macOS, and visionOS prior to iOS 26, macOS 26, and visionOS 26.</string>
 							<key>pfm_name</key>
 							<string>EncryptionAlgorithm</string>
 							<key>pfm_range_list</key>
@@ -2191,7 +2401,6 @@ In watchOS and tvOS, the default value is 'AES-256-GCM'.
 							<string>SHA2-256</string>
 							<key>pfm_description</key>
 							<string>The integrity algorithm.
-
 'SHA1-96' and 'SHA1-160' are available only in iOS, macOS, and visionOS prior to iOS 26, macOS 26, and visionOS 26.</string>
 							<key>pfm_name</key>
 							<string>IntegrityAlgorithm</string>
@@ -2213,9 +2422,7 @@ In watchOS and tvOS, the default value is 'AES-256-GCM'.
 							<integer>14</integer>
 							<key>pfm_description</key>
 							<string>The Diffie-Hellman group.
-
 For 'AlwaysOn' VPN in iOS 14.2 and later, the minimum allowed value is '14'.
-
 '1', '2', and '5' are available only in iOS, macOS, and visionOS prior to iOS 26, macOS 26, and visionOS 26.</string>
 							<key>pfm_name</key>
 							<string>DiffieHellmanGroup</string>
@@ -2268,6 +2475,10 @@ For 'AlwaysOn' VPN in iOS 14.2 and later, the minimum allowed value is '14'.
 							<key>pfm_subkeys</key>
 							<array>
 								<dict>
+									<key>pfm_ios_min</key>
+									<string>26.0</string>
+									<key>pfm_macos_min</key>
+									<string>26.0</string>
 									<key>pfm_name</key>
 									<string>PostQuantumKeyExchangeMethod</string>
 									<key>pfm_range_list</key>
@@ -2328,9 +2539,7 @@ For 'AlwaysOn' VPN in iOS 14.2 and later, the minimum allowed value is '14'.
 							<string>AES-256</string>
 							<key>pfm_description</key>
 							<string>The encryption algorithm.
-
-In watchOS and tvOS, the default value is 'AES-256-GCM'.
-'DES' and '3DES' are available only in iOS, macOS, and visionOS prior to iOS 26, macOS 26, and visionOS 26.</string>
+In watchOS and tvOS, the default value is 'AES-256-GCM'. 'DES' and '3DES' are available only in iOS, macOS, and visionOS prior to iOS 26, macOS 26, and visionOS 26.</string>
 							<key>pfm_name</key>
 							<string>EncryptionAlgorithm</string>
 							<key>pfm_range_list</key>
@@ -2353,7 +2562,6 @@ In watchOS and tvOS, the default value is 'AES-256-GCM'.
 							<string>SHA2-256</string>
 							<key>pfm_description</key>
 							<string>The integrity algorithm.
-
 'SHA1-96' and 'SHA1-160' are available only in iOS, macOS, and visionOS prior to iOS 26, macOS 26, and visionOS 26.</string>
 							<key>pfm_name</key>
 							<string>IntegrityAlgorithm</string>
@@ -2375,9 +2583,7 @@ In watchOS and tvOS, the default value is 'AES-256-GCM'.
 							<integer>14</integer>
 							<key>pfm_description</key>
 							<string>The Diffie-Hellman group.
-
 For 'AlwaysOn' VPN in iOS 14.2 and later, the minimum allowed value is '14'.
-
 '1', '2', and '5' are available only in iOS, macOS, and visionOS prior to iOS 26, macOS 26, and visionOS 26.</string>
 							<key>pfm_name</key>
 							<string>DiffieHellmanGroup</string>
@@ -2430,6 +2636,10 @@ For 'AlwaysOn' VPN in iOS 14.2 and later, the minimum allowed value is '14'.
 							<key>pfm_subkeys</key>
 							<array>
 								<dict>
+									<key>pfm_ios_min</key>
+									<string>26.0</string>
+									<key>pfm_macos_min</key>
+									<string>26.0</string>
 									<key>pfm_name</key>
 									<string>PostQuantumKeyExchangeMethod</string>
 									<key>pfm_range_list</key>
@@ -2615,11 +2825,10 @@ For 'AlwaysOn' VPN in iOS 14.2 and later, the minimum allowed value is '14'.
 					<integer>0</integer>
 					<key>pfm_description</key>
 					<string>If '1', then the system routes all network traffic through the VPN, with some controllable exclusions, such as 'ExcludeLocalNetworks', 'ExcludeCellularServices', and 'ExcludeAPNs' properties. The system always excludes the following traffic from the tunnel:
-
-- Traffic necessary for connecting and maintaining the device's network connection, such as DHCP.
-- Traffic necessary for connecting to captive networks.
-- Certain cellular services traffic that's not routable over the internet and is instead directly routed to the cellular network. See the 'ExcludeCellularServices' field for more information.
-- Network communication with a companion device such as a watchOS device.</string>
+Traffic necessary for connecting and maintaining the device's network connection, such as DHCP.
+Traffic necessary for connecting to captive networks.
+Certain cellular services traffic that's not routable over the internet and is instead directly routed to the cellular network. See the 'ExcludeCellularServices' field for more information.
+Network communication with a companion device such as a watchOS device.</string>
 					<key>pfm_ios_min</key>
 					<string>14.0</string>
 					<key>pfm_macos_min</key>
@@ -2984,12 +3193,11 @@ For 'AlwaysOn' VPN in iOS 14.2 and later, the minimum allowed value is '14'.
 								<dict>
 									<key>pfm_description</key>
 									<string>The action to take if this dictionary matches the current network. Possible values are:
-- 'Allow': Deprecated. Allow VPN On Demand to connect if triggered.
-- 'Connect': Unconditionally initiate a VPN connection on the next network attempt.
-- 'Disconnect': Tear down the VPN connection and don't reconnect on demand as long as this dictionary matches.
-- 'EvaluateConnection': Evaluate the ActionParameters array for each connection attempt.
-- 'Ignore': Leave any existing VPN connection up, but don't reconnect on demand as long as this dictionary matches.
-Only the 'Disconnect' action is available on watchOS 10 and later.</string>
+'Allow': Deprecated. Allow VPN On Demand to connect if triggered.
+'Connect': Unconditionally initiate a VPN connection on the next network attempt.
+'Disconnect': Tear down the VPN connection and don't reconnect on demand as long as this dictionary matches.
+'EvaluateConnection': Evaluate the ActionParameters array for each connection attempt.
+'Ignore': Leave any existing VPN connection up, but don't reconnect on demand as long as this dictionary matches. Only the 'Disconnect' action is available on watchOS 10 and later.</string>
 									<key>pfm_name</key>
 									<string>Action</string>
 									<key>pfm_range_list</key>
@@ -3016,8 +3224,7 @@ Only the 'Disconnect' action is available on watchOS 10 and later.</string>
 									<array>
 										<dict>
 											<key>pfm_description</key>
-											<string>A dictionary that provides rules similar to the OnDemandRules dictionary, but evaluated on each connection instead of when the network changes. These dictionaries are evaluated in order, and the behavior is determined by the first dictionary that matches.
-The keys allowed in each dictionary are described below. Note: This array is used only for dictionaries in which EvaluateConnection is the Action value.</string>
+											<string>A dictionary that provides rules similar to the OnDemandRules dictionary, but evaluated on each connection instead of when the network changes. These dictionaries are evaluated in order, and the behavior is determined by the first dictionary that matches. The keys allowed in each dictionary are described below. Note: This array is used only for dictionaries in which EvaluateConnection is the Action value.</string>
 											<key>pfm_name</key>
 											<string>ActionParameter</string>
 											<key>pfm_subkeys</key>
@@ -3048,8 +3255,8 @@ The keys allowed in each dictionary are described below. Note: This array is use
 												<dict>
 													<key>pfm_description</key>
 													<string>Defines the VPN behavior for the specified domains. Allowed values are:
-* 'ConnectIfNeeded': The specified domains should trigger a VPN connection attempt if domain name resolution fails, such as when the DNS server indicates that it can't resolve the domain, responds with a redirection to a different server, or fails to respond (timeout).
-* 'NeverConnect': The specified domains should never trigger a VPN connection attempt.</string>
+'ConnectIfNeeded': The specified domains should trigger a VPN connection attempt if domain name resolution fails, such as when the DNS server indicates that it can't resolve the domain, responds with a redirection to a different server, or fails to respond (timeout).
+'NeverConnect': The specified domains should never trigger a VPN connection attempt.</string>
 													<key>pfm_name</key>
 													<string>DomainAction</string>
 													<key>pfm_range_list</key>
@@ -3066,8 +3273,7 @@ The keys allowed in each dictionary are described below. Note: This array is use
 												</dict>
 												<dict>
 													<key>pfm_description</key>
-													<string>An array of IP addresses of DNS servers to use for resolving the specified domains. These servers don't need to be part of the device's current network configuration. If these DNS servers aren't reachable, the system establishes a VPN connection. These DNS servers need to be either internal DNS servers or trusted external DNS servers.
-This key is valid only if the value of 'DomainAction' is 'ConnectIfNeeded'.</string>
+													<string>An array of IP addresses of DNS servers to use for resolving the specified domains. These servers don't need to be part of the device's current network configuration. If these DNS servers aren't reachable, the system establishes a VPN connection. These DNS servers need to be either internal DNS servers or trusted external DNS servers. This key is valid only if the value of 'DomainAction' is 'ConnectIfNeeded'.</string>
 													<key>pfm_name</key>
 													<string>RequiredDNSServers</string>
 													<key>pfm_subkeys</key>
@@ -3088,8 +3294,7 @@ This key is valid only if the value of 'DomainAction' is 'ConnectIfNeeded'.</str
 												</dict>
 												<dict>
 													<key>pfm_description</key>
-													<string>An HTTP or HTTPS (preferred) URL to probe, using a GET request. If the URL's hostname can't be resolved, if the server is unreachable, or if the server doesn't respond with a 200 HTTP status code, a VPN connection is established in response.
-This key is valid only if the value of 'DomainAction' is 'ConnectIfNeeded'.</string>
+													<string>An HTTP or HTTPS (preferred) URL to probe, using a GET request. If the URL's hostname can't be resolved, if the server is unreachable, or if the server doesn't respond with a 200 HTTP status code, a VPN connection is established in response. This key is valid only if the value of 'DomainAction' is 'ConnectIfNeeded'.</string>
 													<key>pfm_name</key>
 													<string>RequiredURLStringProbe</string>
 													<key>pfm_title</key>
@@ -3111,8 +3316,7 @@ This key is valid only if the value of 'DomainAction' is 'ConnectIfNeeded'.</str
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>An array of domain names. This rule matches if any of the domain names in the specified list matches any domain in the device's search domains list.
-The system supports a wildcard ('*') prefix. For example, '*.example.com' matches against either 'mydomain.example.com' or 'yourdomain.example.com'.</string>
+									<string>An array of domain names. This rule matches if any of the domain names in the specified list matches any domain in the device's search domains list. The system supports a wildcard ('*') prefix. For example, '*.example.com' matches against either 'mydomain.example.com' or 'yourdomain.example.com'.</string>
 									<key>pfm_name</key>
 									<string>DNSDomainMatch</string>
 									<key>pfm_subkeys</key>
@@ -3133,8 +3337,7 @@ The system supports a wildcard ('*') prefix. For example, '*.example.com' matche
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>An array of IP addresses. This rule matches if any of the network's specified DNS servers match any entry in the array.
-The system supports matching with a single wildcard. For example, '17.*' matches any DNS server in the '17.0.0.0/8' subnet.</string>
+									<string>An array of IP addresses. This rule matches if any of the network's specified DNS servers match any entry in the array. The system supports matching with a single wildcard. For example, '17.*' matches any DNS server in the '17.0.0.0/8' subnet.</string>
 									<key>pfm_name</key>
 									<string>DNSServerAddressMatch</string>
 									<key>pfm_subkeys</key>
@@ -3171,8 +3374,7 @@ The system supports matching with a single wildcard. For example, '17.*' matches
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>An array of SSIDs to match against the current network. If the network isn't a Wi-Fi network or if the SSID doesn't appear in this array, the match fails.
-Omit this key and the corresponding array to match against any SSID.</string>
+									<string>An array of SSIDs to match against the current network. If the network isn't a Wi-Fi network or if the SSID doesn't appear in this array, the match fails. Omit this key and the corresponding array to match against any SSID.</string>
 									<key>pfm_name</key>
 									<string>SSIDMatch</string>
 									<key>pfm_subkeys</key>
@@ -3218,7 +3420,6 @@ Omit this key and the corresponding array to match against any SSID.</string>
 					<integer>1</integer>
 					<key>pfm_description</key>
 					<string>If '1', enables NAT keepalive offload for Always On VPN IKEv2 connections. The device sends keepalive packets to maintain NAT mappings for IKEv2 connections that have a NAT on the path. It sends keepalive packets at regular intervals when the device is awake. If 'NATKeepAliveOffloadEnable' is '1', the system offloads keepalive packets to hardware while the device is asleep.
-
 NAT keepalive offload has an impact on the battery life due to the extra workload during sleep. The default interval for the keepalive offload packets is 20 seconds over Wi-Fi and 110 seconds over Cellular interface. The default NAT keepalive works well on networks with small NAT mapping timeouts but imposes a potential battery impact. If a network has larger NAT mapping timeouts, larger keepalive intervals may be safely used to minimize battery impact. Modify the keepalive interval through the 'NATKeepAliveInterval' key.</string>
 					<key>pfm_ios_min</key>
 					<string>9.0</string>
@@ -3564,7 +3765,6 @@ NAT keepalive offload has an impact on the battery life due to the extra workloa
 			<key>pfm_platforms</key>
 			<array>
 				<string>iOS</string>
-				<string>macOS</string>
 			</array>
 			<key>pfm_subkeys</key>
 			<array>
@@ -3573,6 +3773,8 @@ NAT keepalive offload has an impact on the battery life due to the extra workloa
 					<integer>0</integer>
 					<key>pfm_description</key>
 					<string>If '1', allows traffic from all captive networking apps outside the VPN tunnel to perform captive network handling.</string>
+					<key>pfm_ios_min</key>
+					<string>8.0</string>
 					<key>pfm_name</key>
 					<string>AllowAllCaptiveNetworkPlugins</string>
 					<key>pfm_platforms</key>
@@ -3601,6 +3803,8 @@ NAT keepalive offload has an impact on the battery life due to the extra workloa
 					<integer>0</integer>
 					<key>pfm_description</key>
 					<string>If '1', allows traffic from Captive Web Sheet outside the VPN tunnel.</string>
+					<key>pfm_ios_min</key>
+					<string>8.0</string>
 					<key>pfm_name</key>
 					<string>AllowCaptiveWebSheet</string>
 					<key>pfm_platforms</key>
@@ -3643,6 +3847,8 @@ NAT keepalive offload has an impact on the battery life due to the extra workloa
 							</array>
 						</dict>
 					</array>
+					<key>pfm_ios_min</key>
+					<string>8.0</string>
 					<key>pfm_name</key>
 					<string>AllowedCaptiveNetworkPlugins</string>
 					<key>pfm_platforms</key>
@@ -3660,15 +3866,27 @@ NAT keepalive offload has an impact on the battery life due to the extra workloa
 							<string>string</string>
 						</dict>
 						<dict>
+							<key>pfm_ios_min</key>
+							<string>8.0</string>
 							<key>pfm_name</key>
 							<string>AllowedCaptiveNetworkPluginElement</string>
+							<key>pfm_platforms</key>
+							<array>
+								<string>iOS</string>
+							</array>
 							<key>pfm_subkeys</key>
 							<array>
 								<dict>
 									<key>pfm_description</key>
 									<string>The bundle identifier for the app that's allowed on the captive network.</string>
+									<key>pfm_ios_min</key>
+									<string>8.0</string>
 									<key>pfm_name</key>
 									<string>BundleIdentifier</string>
+									<key>pfm_platforms</key>
+									<array>
+										<string>iOS</string>
+									</array>
 									<key>pfm_require</key>
 									<string>always</string>
 									<key>pfm_title</key>
@@ -3691,6 +3909,8 @@ NAT keepalive offload has an impact on the battery life due to the extra workloa
 				<dict>
 					<key>pfm_description</key>
 					<string>An array that contains an arbitrary number of service exceptions.</string>
+					<key>pfm_ios_min</key>
+					<string>8.0</string>
 					<key>pfm_name</key>
 					<string>ServiceExceptions</string>
 					<key>pfm_platforms</key>
@@ -3754,19 +3974,29 @@ NAT keepalive offload has an impact on the battery life due to the extra workloa
 							<string>dictionary</string>
 						</dict>
 						<dict>
+							<key>pfm_ios_min</key>
+							<string>8.0</string>
 							<key>pfm_name</key>
 							<string>ServiceExceptionElement</string>
+							<key>pfm_platforms</key>
+							<array>
+								<string>iOS</string>
+							</array>
 							<key>pfm_subkeys</key>
 							<array>
 								<dict>
 									<key>pfm_description</key>
 									<string>The name of a service that's exempt from Always On VPN.
-
 'CellularServices' is available in iOS 11.3 and later; it exempts 'VoLTE', 'IMS' and 'MMS'. WiFiCalling is exempted in iOS 13.4 and later.
-
 'DeviceCommunication' is available in iOS 17.4 and later; it exempts network traffic used for communicating with devices connected via USB or Wi-Fi.</string>
+									<key>pfm_ios_min</key>
+									<string>8.0</string>
 									<key>pfm_name</key>
 									<string>ServiceName</string>
+									<key>pfm_platforms</key>
+									<array>
+										<string>iOS</string>
+									</array>
 									<key>pfm_range_list</key>
 									<array>
 										<string>VoiceMail</string>
@@ -3784,8 +4014,14 @@ NAT keepalive offload has an impact on the battery life due to the extra workloa
 								<dict>
 									<key>pfm_description</key>
 									<string>The action to take with network connections from the named service.</string>
+									<key>pfm_ios_min</key>
+									<string>8.0</string>
 									<key>pfm_name</key>
 									<string>Action</string>
+									<key>pfm_platforms</key>
+									<array>
+										<string>iOS</string>
+									</array>
 									<key>pfm_range_list</key>
 									<array>
 										<string>Allow</string>
@@ -3813,6 +4049,8 @@ NAT keepalive offload has an impact on the battery life due to the extra workloa
 				<dict>
 					<key>pfm_description</key>
 					<string>An array that contains an arbitrary number of tunnel configurations.</string>
+					<key>pfm_ios_min</key>
+					<string>8.0</string>
 					<key>pfm_name</key>
 					<string>TunnelConfigurations</string>
 					<key>pfm_platforms</key>
@@ -4534,15 +4772,27 @@ NAT keepalive offload has an impact on the battery life due to the extra workloa
 							<string>dictionary</string>
 						</dict>
 						<dict>
+							<key>pfm_ios_min</key>
+							<string>8.0</string>
 							<key>pfm_name</key>
 							<string>TunnelConfigurationElement</string>
+							<key>pfm_platforms</key>
+							<array>
+								<string>iOS</string>
+							</array>
 							<key>pfm_subkeys</key>
 							<array>
 								<dict>
 									<key>pfm_description</key>
 									<string>The type of connection, which needs to be 'IKEv2'.</string>
+									<key>pfm_ios_min</key>
+									<string>8.0</string>
 									<key>pfm_name</key>
 									<string>ProtocolType</string>
+									<key>pfm_platforms</key>
+									<array>
+										<string>iOS</string>
+									</array>
 									<key>pfm_range_list</key>
 									<array>
 										<string>IKEv2</string>
@@ -4557,13 +4807,25 @@ NAT keepalive offload has an impact on the battery life due to the extra workloa
 								<dict>
 									<key>pfm_description</key>
 									<string>The interfaces to apply this configuration to.</string>
+									<key>pfm_ios_min</key>
+									<string>8.0</string>
 									<key>pfm_name</key>
 									<string>Interfaces</string>
+									<key>pfm_platforms</key>
+									<array>
+										<string>iOS</string>
+									</array>
 									<key>pfm_subkeys</key>
 									<array>
 										<dict>
+											<key>pfm_ios_min</key>
+											<string>8.0</string>
 											<key>pfm_name</key>
 											<string>InterfacesElement</string>
+											<key>pfm_platforms</key>
+											<array>
+												<string>iOS</string>
+											</array>
 											<key>pfm_range_list</key>
 											<array>
 												<string>Cellular</string>
@@ -4597,6 +4859,8 @@ NAT keepalive offload has an impact on the battery life due to the extra workloa
 					<integer>0</integer>
 					<key>pfm_description</key>
 					<string>If '1', allows the user to disable the VPN configuration.</string>
+					<key>pfm_ios_min</key>
+					<string>8.0</string>
 					<key>pfm_name</key>
 					<string>UIToggleEnabled</string>
 					<key>pfm_platforms</key>
@@ -4634,15 +4898,27 @@ NAT keepalive offload has an impact on the battery life due to the extra workloa
 					<key>pfm_subkeys</key>
 					<array>
 						<dict>
+							<key>pfm_ios_min</key>
+							<string>13.6</string>
 							<key>pfm_name</key>
 							<string>ApplicationExceptionElement</string>
+							<key>pfm_platforms</key>
+							<array>
+								<string>iOS</string>
+							</array>
 							<key>pfm_subkeys</key>
 							<array>
 								<dict>
 									<key>pfm_description</key>
 									<string>The app's bundle identifier.</string>
+									<key>pfm_ios_min</key>
+									<string>13.6</string>
 									<key>pfm_name</key>
 									<string>BundleIdentifier</string>
+									<key>pfm_platforms</key>
+									<array>
+										<string>iOS</string>
+									</array>
 									<key>pfm_require</key>
 									<string>always</string>
 									<key>pfm_title</key>
@@ -4653,13 +4929,25 @@ NAT keepalive offload has an impact on the battery life due to the extra workloa
 								<dict>
 									<key>pfm_description</key>
 									<string>Limit the exception to only the specified list of protocols, with support for 'UDP' only.</string>
+									<key>pfm_ios_min</key>
+									<string>13.6</string>
 									<key>pfm_name</key>
 									<string>LimitToProtocols</string>
+									<key>pfm_platforms</key>
+									<array>
+										<string>iOS</string>
+									</array>
 									<key>pfm_subkeys</key>
 									<array>
 										<dict>
+											<key>pfm_ios_min</key>
+											<string>13.6</string>
 											<key>pfm_name</key>
 											<string>LimitToProtocolElement</string>
+											<key>pfm_platforms</key>
+											<array>
+												<string>iOS</string>
+											</array>
 											<key>pfm_range_list</key>
 											<array>
 												<string>UDP</string>
@@ -4771,6 +5059,10 @@ NAT keepalive offload has an impact on the battery life due to the extra workloa
 					<key>pfm_subkeys</key>
 					<array>
 						<dict>
+							<key>pfm_ios_min</key>
+							<string>10.0</string>
+							<key>pfm_macos_min</key>
+							<string>10.12</string>
 							<key>pfm_name</key>
 							<string>ServerAddressesElement</string>
 							<key>pfm_title</key>
@@ -4809,6 +5101,10 @@ NAT keepalive offload has an impact on the battery life due to the extra workloa
 					<key>pfm_subkeys</key>
 					<array>
 						<dict>
+							<key>pfm_ios_min</key>
+							<string>10.0</string>
+							<key>pfm_macos_min</key>
+							<string>10.12</string>
 							<key>pfm_name</key>
 							<string>SearchDomainsElement</string>
 							<key>pfm_title</key>
@@ -4838,9 +5134,7 @@ NAT keepalive offload has an impact on the battery life due to the extra workloa
 				<dict>
 					<key>pfm_description</key>
 					<string>The list of domain strings used to determine which DNS queries use the DNS resolver settings in 'ServerAddresses'. The system uses this key to create a split DNS configuration where it resolves only hosts in certain domains using the tunnel's DNS resolver. The system uses the default resolver for hosts that aren't in one of the domains in this list.
-
 If 'SupplementalMatchDomains' contains the empty string it becomes the default domain.
-
 Split-tunnel configurations can direct all DNS queries to the VPN DNS servers before the primary DNS servers. If the VPN tunnel becomes the network's default route, the servers listed in 'ServerAddresses' become the default resolver and the system ignores the 'SupplementalMatchDomains' list.</string>
 					<key>pfm_ios_min</key>
 					<string>10.0</string>
@@ -4851,6 +5145,10 @@ Split-tunnel configurations can direct all DNS queries to the VPN DNS servers be
 					<key>pfm_subkeys</key>
 					<array>
 						<dict>
+							<key>pfm_ios_min</key>
+							<string>10.0</string>
+							<key>pfm_macos_min</key>
+							<string>10.12</string>
 							<key>pfm_name</key>
 							<string>SupplementalMatchDomainsElement</string>
 							<key>pfm_title</key>
@@ -5100,6 +5398,11 @@ Split-tunnel configurations can direct all DNS queries to the VPN DNS servers be
 					</array>
 					<key>pfm_name</key>
 					<string>RemoteAddress</string>
+					<key>pfm_platforms</key>
+					<array>
+						<string>iOS</string>
+						<string>macOS</string>
+					</array>
 					<key>pfm_require</key>
 					<string>always</string>
 					<key>pfm_title</key>
@@ -5128,6 +5431,11 @@ Split-tunnel configurations can direct all DNS queries to the VPN DNS servers be
 					</array>
 					<key>pfm_name</key>
 					<string>XAuthEnabled</string>
+					<key>pfm_platforms</key>
+					<array>
+						<string>iOS</string>
+						<string>macOS</string>
+					</array>
 					<key>pfm_range_list</key>
 					<array>
 						<integer>0</integer>
@@ -5179,6 +5487,11 @@ Split-tunnel configurations can direct all DNS queries to the VPN DNS servers be
 					</array>
 					<key>pfm_name</key>
 					<string>XAuthName</string>
+					<key>pfm_platforms</key>
+					<array>
+						<string>iOS</string>
+						<string>macOS</string>
+					</array>
 					<key>pfm_require</key>
 					<string>push</string>
 					<key>pfm_title</key>
@@ -5220,6 +5533,11 @@ Split-tunnel configurations can direct all DNS queries to the VPN DNS servers be
 					</array>
 					<key>pfm_name</key>
 					<string>XAuthPassword</string>
+					<key>pfm_platforms</key>
+					<array>
+						<string>iOS</string>
+						<string>macOS</string>
+					</array>
 					<key>pfm_require</key>
 					<string>push</string>
 					<key>pfm_title</key>
@@ -5261,6 +5579,11 @@ Split-tunnel configurations can direct all DNS queries to the VPN DNS servers be
 					</array>
 					<key>pfm_name</key>
 					<string>XAuthPasswordEncryption</string>
+					<key>pfm_platforms</key>
+					<array>
+						<string>iOS</string>
+						<string>macOS</string>
+					</array>
 					<key>pfm_range_list</key>
 					<array>
 						<string>Prompt</string>
@@ -5277,6 +5600,11 @@ Split-tunnel configurations can direct all DNS queries to the VPN DNS servers be
 					<string>The authentication method for L2TP and Cisco IPSec.</string>
 					<key>pfm_name</key>
 					<string>AuthenticationMethod</string>
+					<key>pfm_platforms</key>
+					<array>
+						<string>iOS</string>
+						<string>macOS</string>
+					</array>
 					<key>pfm_range_list</key>
 					<array>
 						<string>SharedSecret</string>
@@ -5297,7 +5625,6 @@ Split-tunnel configurations can direct all DNS queries to the VPN DNS servers be
 				<dict>
 					<key>pfm_description</key>
 					<string>The name of the group. For hybrid authentication, the string needs to end with "hybrid".
-
 Present only for Cisco IPSec if 'AuthenticationMethod' is 'SharedSecret'.</string>
 					<key>pfm_exclude</key>
 					<array>
@@ -5330,6 +5657,11 @@ Present only for Cisco IPSec if 'AuthenticationMethod' is 'SharedSecret'.</strin
 					</array>
 					<key>pfm_name</key>
 					<string>LocalIdentifier</string>
+					<key>pfm_platforms</key>
+					<array>
+						<string>iOS</string>
+						<string>macOS</string>
+					</array>
 					<key>pfm_title</key>
 					<string>Local Identifier</string>
 					<key>pfm_type</key>
@@ -5358,6 +5690,11 @@ Present only for Cisco IPSec if 'AuthenticationMethod' is 'SharedSecret'.</strin
 					</array>
 					<key>pfm_name</key>
 					<string>LocalIdentifierType</string>
+					<key>pfm_platforms</key>
+					<array>
+						<string>iOS</string>
+						<string>macOS</string>
+					</array>
 					<key>pfm_range_list</key>
 					<array>
 						<string>KeyID</string>
@@ -5370,7 +5707,6 @@ Present only for Cisco IPSec if 'AuthenticationMethod' is 'SharedSecret'.</strin
 				<dict>
 					<key>pfm_description</key>
 					<string>The shared secret for this VPN account.
-
 Only use this with L2TP and Cisco IPSec VPNs and if the 'AuthenticationMethod' key is to 'SharedSecret'.</string>
 					<key>pfm_exclude</key>
 					<array>
@@ -5390,6 +5726,11 @@ Only use this with L2TP and Cisco IPSec VPNs and if the 'AuthenticationMethod' k
 					</array>
 					<key>pfm_name</key>
 					<string>SharedSecret</string>
+					<key>pfm_platforms</key>
+					<array>
+						<string>iOS</string>
+						<string>macOS</string>
+					</array>
 					<key>pfm_title</key>
 					<string>Shared Secret</string>
 					<key>pfm_type</key>
@@ -5400,7 +5741,6 @@ Only use this with L2TP and Cisco IPSec VPNs and if the 'AuthenticationMethod' k
 				<dict>
 					<key>pfm_description</key>
 					<string>The UUID of the certificate payload within the same profile to use for the account credentials.
-
 Only use this with Cisco IPSec VPNs and if the 'AuthenticationMethod' key is to 'Certificate'.</string>
 					<key>pfm_exclude</key>
 					<array>
@@ -5424,6 +5764,11 @@ Only use this with Cisco IPSec VPNs and if the 'AuthenticationMethod' key is to 
 					<string>13.0</string>
 					<key>pfm_name</key>
 					<string>PayloadCertificateUUID</string>
+					<key>pfm_platforms</key>
+					<array>
+						<string>iOS</string>
+						<string>macOS</string>
+					</array>
 					<key>pfm_title</key>
 					<string>Certificate UUID</string>
 					<key>pfm_type</key>
@@ -5452,6 +5797,11 @@ Only use this with Cisco IPSec VPNs and if the 'AuthenticationMethod' key is to 
 					</array>
 					<key>pfm_name</key>
 					<string>PromptForVPNPIN</string>
+					<key>pfm_platforms</key>
+					<array>
+						<string>iOS</string>
+						<string>macOS</string>
+					</array>
 					<key>pfm_title</key>
 					<string>Prompt for PIN</string>
 					<key>pfm_type</key>
@@ -5480,6 +5830,11 @@ Only use this with Cisco IPSec VPNs and if the 'AuthenticationMethod' key is to 
 					</array>
 					<key>pfm_name</key>
 					<string>OnDemandEnabled</string>
+					<key>pfm_platforms</key>
+					<array>
+						<string>iOS</string>
+						<string>macOS</string>
+					</array>
 					<key>pfm_range_list</key>
 					<array>
 						<integer>0</integer>
@@ -5533,11 +5888,23 @@ Only use this with Cisco IPSec VPNs and if the 'AuthenticationMethod' key is to 
 					<string>7.0</string>
 					<key>pfm_name</key>
 					<string>OnDemandMatchDomainsAlways</string>
+					<key>pfm_platforms</key>
+					<array>
+						<string>iOS</string>
+						<string>macOS</string>
+					</array>
 					<key>pfm_subkeys</key>
 					<array>
 						<dict>
+							<key>pfm_ios_deprecated</key>
+							<string>7.0</string>
 							<key>pfm_name</key>
 							<string>MatchDomainAlwaysElement</string>
+							<key>pfm_platforms</key>
+							<array>
+								<string>iOS</string>
+								<string>macOS</string>
+							</array>
 							<key>pfm_title</key>
 							<string>Match Domain Always Element</string>
 							<key>pfm_type</key>
@@ -5593,11 +5960,23 @@ Only use this with Cisco IPSec VPNs and if the 'AuthenticationMethod' key is to 
 					<string>7.0</string>
 					<key>pfm_name</key>
 					<string>OnDemandMatchDomainsNever</string>
+					<key>pfm_platforms</key>
+					<array>
+						<string>iOS</string>
+						<string>macOS</string>
+					</array>
 					<key>pfm_subkeys</key>
 					<array>
 						<dict>
+							<key>pfm_ios_deprecated</key>
+							<string>7.0</string>
 							<key>pfm_name</key>
 							<string>MatchDomainNeverElement</string>
+							<key>pfm_platforms</key>
+							<array>
+								<string>iOS</string>
+								<string>macOS</string>
+							</array>
 							<key>pfm_title</key>
 							<string>Match Domain Never Element</string>
 							<key>pfm_type</key>
@@ -5653,11 +6032,23 @@ Only use this with Cisco IPSec VPNs and if the 'AuthenticationMethod' key is to 
 					<string>7.0</string>
 					<key>pfm_name</key>
 					<string>OnDemandMatchDomainsOnRetry</string>
+					<key>pfm_platforms</key>
+					<array>
+						<string>iOS</string>
+						<string>macOS</string>
+					</array>
 					<key>pfm_subkeys</key>
 					<array>
 						<dict>
+							<key>pfm_ios_deprecated</key>
+							<string>7.0</string>
 							<key>pfm_name</key>
 							<string>MatchDomainOnRetryElement</string>
+							<key>pfm_platforms</key>
+							<array>
+								<string>iOS</string>
+								<string>macOS</string>
+							</array>
 							<key>pfm_title</key>
 							<string>Match Domain On Retry Element</string>
 							<key>pfm_type</key>
@@ -5711,24 +6102,38 @@ Only use this with Cisco IPSec VPNs and if the 'AuthenticationMethod' key is to 
 					</array>
 					<key>pfm_name</key>
 					<string>OnDemandRules</string>
+					<key>pfm_platforms</key>
+					<array>
+						<string>iOS</string>
+						<string>macOS</string>
+					</array>
 					<key>pfm_subkeys</key>
 					<array>
 						<dict>
 							<key>pfm_name</key>
 							<string>OnDemandRulesElement</string>
+							<key>pfm_platforms</key>
+							<array>
+								<string>iOS</string>
+								<string>macOS</string>
+							</array>
 							<key>pfm_subkeys</key>
 							<array>
 								<dict>
 									<key>pfm_description</key>
 									<string>The action to take if this dictionary matches the current network. Possible values are:
-- 'Allow': Deprecated. Allow VPN On Demand to connect if triggered.
-- 'Connect': Unconditionally initiate a VPN connection on the next network attempt.
-- 'Disconnect': Tear down the VPN connection and don't reconnect on demand as long as this dictionary matches.
-- 'EvaluateConnection': Evaluate the ActionParameters array for each connection attempt.
-- 'Ignore': Leave any existing VPN connection up, but don't reconnect on demand as long as this dictionary matches.
-Only the 'Disconnect' action is available on watchOS 10 and later.</string>
+'Allow': Deprecated. Allow VPN On Demand to connect if triggered.
+'Connect': Unconditionally initiate a VPN connection on the next network attempt.
+'Disconnect': Tear down the VPN connection and don't reconnect on demand as long as this dictionary matches.
+'EvaluateConnection': Evaluate the ActionParameters array for each connection attempt.
+'Ignore': Leave any existing VPN connection up, but don't reconnect on demand as long as this dictionary matches. Only the 'Disconnect' action is available on watchOS 10 and later.</string>
 									<key>pfm_name</key>
 									<string>Action</string>
+									<key>pfm_platforms</key>
+									<array>
+										<string>iOS</string>
+										<string>macOS</string>
+									</array>
 									<key>pfm_range_list</key>
 									<array>
 										<string>Allow</string>
@@ -5757,6 +6162,11 @@ Only the 'Disconnect' action is available on watchOS 10 and later.</string>
 									<string>An interface type. If specified, this rule matches only if the primary network interface hardware matches the specified type.</string>
 									<key>pfm_name</key>
 									<string>InterfaceTypeMatch</string>
+									<key>pfm_platforms</key>
+									<array>
+										<string>iOS</string>
+										<string>macOS</string>
+									</array>
 									<key>pfm_range_list</key>
 									<array>
 										<string>Ethernet</string>
@@ -5776,15 +6186,24 @@ Only the 'Disconnect' action is available on watchOS 10 and later.</string>
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>An array of domain names. This rule matches if any of the domain names in the specified list matches any domain in the device's search domains list.
-The system supports a wildcard ('*') prefix. For example, '*.example.com' matches against either 'mydomain.example.com' or 'yourdomain.example.com'.</string>
+									<string>An array of domain names. This rule matches if any of the domain names in the specified list matches any domain in the device's search domains list. The system supports a wildcard ('*') prefix. For example, '*.example.com' matches against either 'mydomain.example.com' or 'yourdomain.example.com'.</string>
 									<key>pfm_name</key>
 									<string>DNSDomainMatch</string>
+									<key>pfm_platforms</key>
+									<array>
+										<string>iOS</string>
+										<string>macOS</string>
+									</array>
 									<key>pfm_subkeys</key>
 									<array>
 										<dict>
 											<key>pfm_name</key>
 											<string>DNSDomainMatchElement</string>
+											<key>pfm_platforms</key>
+											<array>
+												<string>iOS</string>
+												<string>macOS</string>
+											</array>
 											<key>pfm_title</key>
 											<string>DNS Domain Match Element</string>
 											<key>pfm_type</key>
@@ -5800,15 +6219,24 @@ The system supports a wildcard ('*') prefix. For example, '*.example.com' matche
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>An array of IP addresses. This rule matches if any of the network's specified DNS servers match any entry in the array.
-The system supports matching with a single wildcard. For example, '17.*' matches any DNS server in the '17.0.0.0/8' subnet.</string>
+									<string>An array of IP addresses. This rule matches if any of the network's specified DNS servers match any entry in the array. The system supports matching with a single wildcard. For example, '17.*' matches any DNS server in the '17.0.0.0/8' subnet.</string>
 									<key>pfm_name</key>
 									<string>DNSServerAddressMatch</string>
+									<key>pfm_platforms</key>
+									<array>
+										<string>iOS</string>
+										<string>macOS</string>
+									</array>
 									<key>pfm_subkeys</key>
 									<array>
 										<dict>
 											<key>pfm_name</key>
 											<string>DNSServerAddressMatchElement</string>
+											<key>pfm_platforms</key>
+											<array>
+												<string>iOS</string>
+												<string>macOS</string>
+											</array>
 											<key>pfm_title</key>
 											<string>DNS Server Address Match Element</string>
 											<key>pfm_type</key>
@@ -5822,15 +6250,24 @@ The system supports matching with a single wildcard. For example, '17.*' matches
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>An array of SSIDs to match against the current network. If the network isn't a Wi-Fi network or if the SSID doesn't appear in this array, the match fails.
-Omit this key and the corresponding array to match against any SSID.</string>
+									<string>An array of SSIDs to match against the current network. If the network isn't a Wi-Fi network or if the SSID doesn't appear in this array, the match fails. Omit this key and the corresponding array to match against any SSID.</string>
 									<key>pfm_name</key>
 									<string>SSIDMatch</string>
+									<key>pfm_platforms</key>
+									<array>
+										<string>iOS</string>
+										<string>macOS</string>
+									</array>
 									<key>pfm_subkeys</key>
 									<array>
 										<dict>
 											<key>pfm_name</key>
 											<string>SSIDMatchElement</string>
+											<key>pfm_platforms</key>
+											<array>
+												<string>iOS</string>
+												<string>macOS</string>
+											</array>
 											<key>pfm_title</key>
 											<string>SSID Match Element</string>
 											<key>pfm_type</key>
@@ -5847,6 +6284,11 @@ Omit this key and the corresponding array to match against any SSID.</string>
 									<string>A URL to probe. This rule matches when this URL is successfully fetched (returns a '200' HTTP status code) without redirection. Not available in watchOS.</string>
 									<key>pfm_name</key>
 									<string>URLStringProbe</string>
+									<key>pfm_platforms</key>
+									<array>
+										<string>iOS</string>
+										<string>macOS</string>
+									</array>
 									<key>pfm_title</key>
 									<string>URL String Probe</string>
 									<key>pfm_type</key>
@@ -5857,23 +6299,37 @@ Omit this key and the corresponding array to match against any SSID.</string>
 									<string>An array of dictionaries that provides rules similar to the 'OnDemandRules' dictionary, but evaluated on each connection instead of when the network changes. This value is only for use with dictionaries in which the 'Action' value is 'EvaluateConnection'. The system evaluates these dictionaries in order and the first dictionary that matches determines the behavior. Not available in watchOS.</string>
 									<key>pfm_name</key>
 									<string>ActionParameters</string>
+									<key>pfm_platforms</key>
+									<array>
+										<string>iOS</string>
+										<string>macOS</string>
+									</array>
 									<key>pfm_subkeys</key>
 									<array>
 										<dict>
 											<key>pfm_description</key>
-											<string>A dictionary that provides rules similar to the OnDemandRules dictionary, but evaluated on each connection instead of when the network changes. These dictionaries are evaluated in order, and the behavior is determined by the first dictionary that matches.
-The keys allowed in each dictionary are described below. Note: This array is used only for dictionaries in which EvaluateConnection is the Action value.</string>
+											<string>A dictionary that provides rules similar to the OnDemandRules dictionary, but evaluated on each connection instead of when the network changes. These dictionaries are evaluated in order, and the behavior is determined by the first dictionary that matches. The keys allowed in each dictionary are described below. Note: This array is used only for dictionaries in which EvaluateConnection is the Action value.</string>
 											<key>pfm_name</key>
 											<string>ActionParameter</string>
+											<key>pfm_platforms</key>
+											<array>
+												<string>iOS</string>
+												<string>macOS</string>
+											</array>
 											<key>pfm_subkeys</key>
 											<array>
 												<dict>
 													<key>pfm_description</key>
 													<string>Defines the VPN behavior for the specified domains. Allowed values are:
-* 'ConnectIfNeeded': The specified domains should trigger a VPN connection attempt if domain name resolution fails, such as when the DNS server indicates that it can't resolve the domain, responds with a redirection to a different server, or fails to respond (timeout).
-* 'NeverConnect': The specified domains should never trigger a VPN connection attempt.</string>
+'ConnectIfNeeded': The specified domains should trigger a VPN connection attempt if domain name resolution fails, such as when the DNS server indicates that it can't resolve the domain, responds with a redirection to a different server, or fails to respond (timeout).
+'NeverConnect': The specified domains should never trigger a VPN connection attempt.</string>
 													<key>pfm_name</key>
 													<string>DomainAction</string>
+													<key>pfm_platforms</key>
+													<array>
+														<string>iOS</string>
+														<string>macOS</string>
+													</array>
 													<key>pfm_range_list</key>
 													<array>
 														<string>ConnectIfNeeded</string>
@@ -5896,6 +6352,11 @@ The keys allowed in each dictionary are described below. Note: This array is use
 													<string>The domains to apply this evaluation.</string>
 													<key>pfm_name</key>
 													<string>Domains</string>
+													<key>pfm_platforms</key>
+													<array>
+														<string>iOS</string>
+														<string>macOS</string>
+													</array>
 													<key>pfm_require</key>
 													<string>always</string>
 													<key>pfm_subkeys</key>
@@ -5903,6 +6364,11 @@ The keys allowed in each dictionary are described below. Note: This array is use
 														<dict>
 															<key>pfm_name</key>
 															<string>DomainsElement</string>
+															<key>pfm_platforms</key>
+															<array>
+																<string>iOS</string>
+																<string>macOS</string>
+															</array>
 															<key>pfm_title</key>
 															<string>Domains Element</string>
 															<key>pfm_type</key>
@@ -5916,15 +6382,24 @@ The keys allowed in each dictionary are described below. Note: This array is use
 												</dict>
 												<dict>
 													<key>pfm_description</key>
-													<string>An array of IP addresses of DNS servers to use for resolving the specified domains. These servers don't need to be part of the device's current network configuration. If these DNS servers aren't reachable, the system establishes a VPN connection. These DNS servers need to be either internal DNS servers or trusted external DNS servers.
-This key is valid only if the value of 'DomainAction' is 'ConnectIfNeeded'.</string>
+													<string>An array of IP addresses of DNS servers to use for resolving the specified domains. These servers don't need to be part of the device's current network configuration. If these DNS servers aren't reachable, the system establishes a VPN connection. These DNS servers need to be either internal DNS servers or trusted external DNS servers. This key is valid only if the value of 'DomainAction' is 'ConnectIfNeeded'.</string>
 													<key>pfm_name</key>
 													<string>RequiredDNSServers</string>
+													<key>pfm_platforms</key>
+													<array>
+														<string>iOS</string>
+														<string>macOS</string>
+													</array>
 													<key>pfm_subkeys</key>
 													<array>
 														<dict>
 															<key>pfm_name</key>
 															<string>RequiredDNSServersElement</string>
+															<key>pfm_platforms</key>
+															<array>
+																<string>iOS</string>
+																<string>macOS</string>
+															</array>
 															<key>pfm_title</key>
 															<string>Required DNS Servers Element</string>
 															<key>pfm_type</key>
@@ -5938,10 +6413,14 @@ This key is valid only if the value of 'DomainAction' is 'ConnectIfNeeded'.</str
 												</dict>
 												<dict>
 													<key>pfm_description</key>
-													<string>An HTTP or HTTPS (preferred) URL to probe, using a GET request. If the URL's hostname can't be resolved, if the server is unreachable, or if the server doesn't respond with a 200 HTTP status code, a VPN connection is established in response.
-This key is valid only if the value of 'DomainAction' is 'ConnectIfNeeded'.</string>
+													<string>An HTTP or HTTPS (preferred) URL to probe, using a GET request. If the URL's hostname can't be resolved, if the server is unreachable, or if the server doesn't respond with a 200 HTTP status code, a VPN connection is established in response. This key is valid only if the value of 'DomainAction' is 'ConnectIfNeeded'.</string>
 													<key>pfm_name</key>
 													<string>RequiredURLStringProbe</string>
+													<key>pfm_platforms</key>
+													<array>
+														<string>iOS</string>
+														<string>macOS</string>
+													</array>
 													<key>pfm_title</key>
 													<string>Required URL String Probe</string>
 													<key>pfm_type</key>
@@ -5994,6 +6473,11 @@ This key is valid only if the value of 'DomainAction' is 'ConnectIfNeeded'.</str
 					</array>
 					<key>pfm_name</key>
 					<string>DisconnectOnIdle</string>
+					<key>pfm_platforms</key>
+					<array>
+						<string>iOS</string>
+						<string>macOS</string>
+					</array>
 					<key>pfm_range_list</key>
 					<array>
 						<integer>0</integer>
@@ -6045,6 +6529,11 @@ This key is valid only if the value of 'DomainAction' is 'ConnectIfNeeded'.</str
 					</array>
 					<key>pfm_name</key>
 					<string>DisconnectOnIdleTimer</string>
+					<key>pfm_platforms</key>
+					<array>
+						<string>iOS</string>
+						<string>macOS</string>
+					</array>
 					<key>pfm_range_min</key>
 					<integer>0</integer>
 					<key>pfm_title</key>
@@ -6482,9 +6971,7 @@ This key is valid only if the value of 'DomainAction' is 'ConnectIfNeeded'.</str
 				<dict>
 					<key>pfm_description</key>
 					<string>A list of domain names. The system treats associated domain names as though they're associated with the 'OnDemandMatchDomainsOnRetry' key. This behavior can be overridden by 'OnDemandRules'.
-
 In iOS 7 and later, this key is deprecated (but still supported) in favor of 'EvaluateConnection' actions in the 'OnDemandRules' dictionaries.
-
 Not available in watchOS.</string>
 					<key>pfm_exclude</key>
 					<array>
@@ -6509,6 +6996,8 @@ Not available in watchOS.</string>
 					<key>pfm_subkeys</key>
 					<array>
 						<dict>
+							<key>pfm_ios_deprecated</key>
+							<string>7.0</string>
 							<key>pfm_name</key>
 							<string>MatchDomainAlwaysElement</string>
 							<key>pfm_title</key>
@@ -6533,9 +7022,7 @@ Not available in watchOS.</string>
 				<dict>
 					<key>pfm_description</key>
 					<string>A list of domain names. If the host name ends with one of these domain names, the system doesn't start the VPN automatically. The system uses this value to exclude a subdomain within an included domain.
-
 In iOS 7 and later, this key is deprecated (but still supported) in favor of 'EvaluateConnection' actions in the 'OnDemandRules' dictionaries.
-
 Not available in watchOS.</string>
 					<key>pfm_exclude</key>
 					<array>
@@ -6560,6 +7047,8 @@ Not available in watchOS.</string>
 					<key>pfm_subkeys</key>
 					<array>
 						<dict>
+							<key>pfm_ios_deprecated</key>
+							<string>7.0</string>
 							<key>pfm_name</key>
 							<string>MatchDomainNeverElement</string>
 							<key>pfm_title</key>
@@ -6584,9 +7073,7 @@ Not available in watchOS.</string>
 				<dict>
 					<key>pfm_description</key>
 					<string>A list of domain names. If the host name ends with one of these domain names and a DNS query for that domain name fails, the system starts the VPN automatically.
-
 In iOS 7 and later, this key is deprecated (but still supported) in favor of 'EvaluateConnection' actions in the 'OnDemandRules' dictionaries.
-
 Not available in watchOS.</string>
 					<key>pfm_exclude</key>
 					<array>
@@ -6611,6 +7098,8 @@ Not available in watchOS.</string>
 					<key>pfm_subkeys</key>
 					<array>
 						<dict>
+							<key>pfm_ios_deprecated</key>
+							<string>7.0</string>
 							<key>pfm_name</key>
 							<string>MatchDomainOnRetryElement</string>
 							<key>pfm_title</key>
@@ -6663,12 +7152,11 @@ Not available in watchOS.</string>
 								<dict>
 									<key>pfm_description</key>
 									<string>The action to take if this dictionary matches the current network. Possible values are:
-- 'Allow': Deprecated. Allow VPN On Demand to connect if triggered.
-- 'Connect': Unconditionally initiate a VPN connection on the next network attempt.
-- 'Disconnect': Tear down the VPN connection and don't reconnect on demand as long as this dictionary matches.
-- 'EvaluateConnection': Evaluate the ActionParameters array for each connection attempt.
-- 'Ignore': Leave any existing VPN connection up, but don't reconnect on demand as long as this dictionary matches.
-Only the 'Disconnect' action is available on watchOS 10 and later.</string>
+'Allow': Deprecated. Allow VPN On Demand to connect if triggered.
+'Connect': Unconditionally initiate a VPN connection on the next network attempt.
+'Disconnect': Tear down the VPN connection and don't reconnect on demand as long as this dictionary matches.
+'EvaluateConnection': Evaluate the ActionParameters array for each connection attempt.
+'Ignore': Leave any existing VPN connection up, but don't reconnect on demand as long as this dictionary matches. Only the 'Disconnect' action is available on watchOS 10 and later.</string>
 									<key>pfm_name</key>
 									<string>Action</string>
 									<key>pfm_range_list</key>
@@ -6718,8 +7206,7 @@ Only the 'Disconnect' action is available on watchOS 10 and later.</string>
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>An array of domain names. This rule matches if any of the domain names in the specified list matches any domain in the device's search domains list.
-The system supports a wildcard ('*') prefix. For example, '*.example.com' matches against either 'mydomain.example.com' or 'yourdomain.example.com'.</string>
+									<string>An array of domain names. This rule matches if any of the domain names in the specified list matches any domain in the device's search domains list. The system supports a wildcard ('*') prefix. For example, '*.example.com' matches against either 'mydomain.example.com' or 'yourdomain.example.com'.</string>
 									<key>pfm_name</key>
 									<string>DNSDomainMatch</string>
 									<key>pfm_subkeys</key>
@@ -6742,8 +7229,7 @@ The system supports a wildcard ('*') prefix. For example, '*.example.com' matche
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>An array of IP addresses. This rule matches if any of the network's specified DNS servers match any entry in the array.
-The system supports matching with a single wildcard. For example, '17.*' matches any DNS server in the '17.0.0.0/8' subnet.</string>
+									<string>An array of IP addresses. This rule matches if any of the network's specified DNS servers match any entry in the array. The system supports matching with a single wildcard. For example, '17.*' matches any DNS server in the '17.0.0.0/8' subnet.</string>
 									<key>pfm_name</key>
 									<string>DNSServerAddressMatch</string>
 									<key>pfm_subkeys</key>
@@ -6764,8 +7250,7 @@ The system supports matching with a single wildcard. For example, '17.*' matches
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>An array of SSIDs to match against the current network. If the network isn't a Wi-Fi network or if the SSID doesn't appear in this array, the match fails.
-Omit this key and the corresponding array to match against any SSID.</string>
+									<string>An array of SSIDs to match against the current network. If the network isn't a Wi-Fi network or if the SSID doesn't appear in this array, the match fails. Omit this key and the corresponding array to match against any SSID.</string>
 									<key>pfm_name</key>
 									<string>SSIDMatch</string>
 									<key>pfm_subkeys</key>
@@ -6803,8 +7288,7 @@ Omit this key and the corresponding array to match against any SSID.</string>
 									<array>
 										<dict>
 											<key>pfm_description</key>
-											<string>A dictionary that provides rules similar to the OnDemandRules dictionary, but evaluated on each connection instead of when the network changes. These dictionaries are evaluated in order, and the behavior is determined by the first dictionary that matches.
-The keys allowed in each dictionary are described below. Note: This array is used only for dictionaries in which EvaluateConnection is the Action value.</string>
+											<string>A dictionary that provides rules similar to the OnDemandRules dictionary, but evaluated on each connection instead of when the network changes. These dictionaries are evaluated in order, and the behavior is determined by the first dictionary that matches. The keys allowed in each dictionary are described below. Note: This array is used only for dictionaries in which EvaluateConnection is the Action value.</string>
 											<key>pfm_name</key>
 											<string>ActionParameter</string>
 											<key>pfm_subkeys</key>
@@ -6812,8 +7296,8 @@ The keys allowed in each dictionary are described below. Note: This array is use
 												<dict>
 													<key>pfm_description</key>
 													<string>Defines the VPN behavior for the specified domains. Allowed values are:
-* 'ConnectIfNeeded': The specified domains should trigger a VPN connection attempt if domain name resolution fails, such as when the DNS server indicates that it can't resolve the domain, responds with a redirection to a different server, or fails to respond (timeout).
-* 'NeverConnect': The specified domains should never trigger a VPN connection attempt.</string>
+'ConnectIfNeeded': The specified domains should trigger a VPN connection attempt if domain name resolution fails, such as when the DNS server indicates that it can't resolve the domain, responds with a redirection to a different server, or fails to respond (timeout).
+'NeverConnect': The specified domains should never trigger a VPN connection attempt.</string>
 													<key>pfm_name</key>
 													<string>DomainAction</string>
 													<key>pfm_range_list</key>
@@ -6858,8 +7342,7 @@ The keys allowed in each dictionary are described below. Note: This array is use
 												</dict>
 												<dict>
 													<key>pfm_description</key>
-													<string>An array of IP addresses of DNS servers to use for resolving the specified domains. These servers don't need to be part of the device's current network configuration. If these DNS servers aren't reachable, the system establishes a VPN connection. These DNS servers need to be either internal DNS servers or trusted external DNS servers.
-This key is valid only if the value of 'DomainAction' is 'ConnectIfNeeded'.</string>
+													<string>An array of IP addresses of DNS servers to use for resolving the specified domains. These servers don't need to be part of the device's current network configuration. If these DNS servers aren't reachable, the system establishes a VPN connection. These DNS servers need to be either internal DNS servers or trusted external DNS servers. This key is valid only if the value of 'DomainAction' is 'ConnectIfNeeded'.</string>
 													<key>pfm_name</key>
 													<string>RequiredDNSServers</string>
 													<key>pfm_subkeys</key>
@@ -6880,8 +7363,7 @@ This key is valid only if the value of 'DomainAction' is 'ConnectIfNeeded'.</str
 												</dict>
 												<dict>
 													<key>pfm_description</key>
-													<string>An HTTP or HTTPS (preferred) URL to probe, using a GET request. If the URL's hostname can't be resolved, if the server is unreachable, or if the server doesn't respond with a 200 HTTP status code, a VPN connection is established in response.
-This key is valid only if the value of 'DomainAction' is 'ConnectIfNeeded'.</string>
+													<string>An HTTP or HTTPS (preferred) URL to probe, using a GET request. If the URL's hostname can't be resolved, if the server is unreachable, or if the server doesn't respond with a 200 HTTP status code, a VPN connection is established in response. This key is valid only if the value of 'DomainAction' is 'ConnectIfNeeded'.</string>
 													<key>pfm_name</key>
 													<string>RequiredURLStringProbe</string>
 													<key>pfm_title</key>
@@ -6938,6 +7420,11 @@ This key is valid only if the value of 'DomainAction' is 'ConnectIfNeeded'.</str
 					<string>14.0</string>
 					<key>pfm_name</key>
 					<string>OnDemandUserOverrideDisabled</string>
+					<key>pfm_platforms</key>
+					<array>
+						<string>iOS</string>
+						<string>tvOS</string>
+					</array>
 					<key>pfm_range_list</key>
 					<array>
 						<integer>0</integer>
@@ -6972,13 +7459,11 @@ This key is valid only if the value of 'DomainAction' is 'ConnectIfNeeded'.</str
 					<key>pfm_default</key>
 					<integer>0</integer>
 					<key>pfm_description</key>
-					<string>If '1'', routes all traffic through the VPN, with some exclusions. Several of the exclusions can be controlled with the 'ExcludeLocalNetworks', 'ExcludeCellularServices', 'ExcludeAPNs' and 'ExcludeDeviceCommunication' properties. The following traffic is always excluded from the tunnel:
-
-- Traffic necessary for connecting and maintaining the device's network connection, such as DHCP.
-- Traffic necessary for connecting to captive networks.
-- Certain cellular services traffic that is not routable over the internet and is instead directly routed to the cellular network. See the ExcludeCellularServices property for more details.
-- Network communication with a companion device such as a watchOS device.
-
+					<string>If '1``, routes all traffic through the VPN, with some exclusions. Several of the exclusions can be controlled with the 'ExcludeLocalNetworks', 'ExcludeCellularServices', 'ExcludeAPNs'and'ExcludeDeviceCommunication` properties. The following traffic is always excluded from the tunnel:
+Traffic necessary for connecting and maintaining the device's network connection, such as DHCP.
+Traffic necessary for connecting to captive networks.
+Certain cellular services traffic that is not routable over the internet and is instead directly routed to the cellular network. See the ExcludeCellularServices property for more details.
+Network communication with a companion device such as a watchOS device.
 Not available in watchOS.</string>
 					<key>pfm_ios_min</key>
 					<string>14.0</string>
@@ -7140,6 +7625,11 @@ Not available in watchOS.</string>
 					<string>10.15</string>
 					<key>pfm_name</key>
 					<string>ProviderDesignatedRequirement</string>
+					<key>pfm_platforms</key>
+					<array>
+						<string>macOS</string>
+						<string>tvOS</string>
+					</array>
 					<key>pfm_title</key>
 					<string>Provider Designated Requirement</string>
 					<key>pfm_type</key>
@@ -7192,9 +7682,7 @@ Not available in watchOS.</string>
 					<integer>0</integer>
 					<key>pfm_description</key>
 					<string>If '1', all the VPN's non-default routes take precedence over any locally defined routes.
-
 If 'IncludeAllNetworks' is '1', the system ignores the value of 'EnforceRoutes'.
-
 Available in iOS 14.2 and later, and macOS 11 and later. Not available in watchOS.</string>
 					<key>pfm_ios_min</key>
 					<string>14.2</string>
@@ -7468,6 +7956,11 @@ Available in iOS 14.2 and later, and macOS 11 and later. Not available in watchO
 					<string>If '1', the system sends all network traffic over VPN. Only applies to Cisco IPsec and L2TP VPN types.</string>
 					<key>pfm_name</key>
 					<string>OverridePrimary</string>
+					<key>pfm_platforms</key>
+					<array>
+						<string>iOS</string>
+						<string>macOS</string>
+					</array>
 					<key>pfm_range_list</key>
 					<array>
 						<integer>0</integer>
@@ -7950,6 +8443,8 @@ Available in iOS 14.2 and later, and macOS 11 and later. Not available in watchO
 	<key>pfm_tvos_min</key>
 	<string>17.0</string>
 	<key>pfm_unique</key>
+	<false/>
+	<key>pfm_user_approved</key>
 	<false/>
 	<key>pfm_version</key>
 	<integer>8</integer>

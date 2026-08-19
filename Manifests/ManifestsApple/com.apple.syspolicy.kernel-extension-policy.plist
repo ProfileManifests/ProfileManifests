@@ -139,7 +139,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<false/>
 			<key>pfm_description</key>
 			<string>If 'true', nonadministrative users can approve additional kernel extensions in the Security &amp; Privacy preferences.
-
 Available in macOS 11 and later.</string>
 			<key>pfm_macos_min</key>
 			<string>11.0</string>

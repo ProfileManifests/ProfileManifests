@@ -228,10 +228,9 @@ During a profile replacement, the system updates payloads with the same 'Payload
 						<dict>
 							<key>pfm_description</key>
 							<string>The default Internet Protocol versions. Available in iOS 10.3 but no longer used in iOS 11 and later. Allowed values:
-
-- '1': IPv4
-- '2': IPv6
-- '3': Both</string>
+'1': IPv4
+'2': IPv6
+'3': Both</string>
 							<key>pfm_ios_deprecated</key>
 							<string>11.0</string>
 							<key>pfm_ios_min</key>
@@ -268,10 +267,9 @@ During a profile replacement, the system updates payloads with the same 'Payload
 						<dict>
 							<key>pfm_description</key>
 							<string>The Internet Protocol versions that the system supports. Available in iOS 10.3 and later. Allowed values:
-
-- '1': IPv4
-- '2': IPv6
-- '3': Both</string>
+'1': IPv4
+'2': IPv6
+'3': Both</string>
 							<key>pfm_ios_min</key>
 							<string>10.3</string>
 							<key>pfm_name</key>
@@ -304,10 +302,9 @@ During a profile replacement, the system updates payloads with the same 'Payload
 						<dict>
 							<key>pfm_description</key>
 							<string>The Internet Protocol versions that the system supports while roaming. Available in iOS 10.3 and later. Allowed values:
-
-- '1': IPv4
-- '2': IPv6
-- '3': Both</string>
+'1': IPv4
+'2': IPv6
+'3': Both</string>
 							<key>pfm_ios_min</key>
 							<string>10.3</string>
 							<key>pfm_name</key>
@@ -340,10 +337,9 @@ During a profile replacement, the system updates payloads with the same 'Payload
 						<dict>
 							<key>pfm_description</key>
 							<string>The Internet Protocol versions that the system supports while roaming. Available in iOS 10.3 and later. Allowed values:
-
-- '1': IPv4
-- '2': IPv6
-- '3': Both</string>
+'1': IPv4
+'2': IPv6
+'3': Both</string>
 							<key>pfm_ios_min</key>
 							<string>10.3</string>
 							<key>pfm_name</key>
@@ -473,10 +469,9 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				<dict>
 					<key>pfm_description</key>
 					<string>The Internet Protocol versions that the system supports. Allowed values:
-
-- '1': IPv4
-- '2': IPv6
-- '3': Both</string>
+'1': IPv4
+'2': IPv6
+'3': Both</string>
 					<key>pfm_ios_min</key>
 					<string>10.3</string>
 					<key>pfm_name</key>

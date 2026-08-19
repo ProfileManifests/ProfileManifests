@@ -241,6 +241,8 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>moduleName</string>
 			<key>pfm_note</key>
 			<string>The property is officially documented as required, however user reports and testing on macOS 14.4.1 have confirmed it to be optional.</string>
+			<key>pfm_require</key>
+			<string>always</string>
 			<key>pfm_title</key>
 			<string>Screensaver Module Name</string>
 			<key>pfm_type</key>
@@ -254,6 +256,8 @@ During a profile replacement, the system updates payloads with the same 'Payload
 	<key>pfm_title</key>
 	<string>Screensaver</string>
 	<key>pfm_unique</key>
+	<true/>
+	<key>pfm_user_approved</key>
 	<false/>
 	<key>pfm_version</key>
 	<integer>3</integer>

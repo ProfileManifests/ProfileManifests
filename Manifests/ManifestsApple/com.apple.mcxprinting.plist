@@ -18,6 +18,8 @@
 	<date>2026-06-23T15:59:45Z</date>
 	<key>pfm_macos_min</key>
 	<string>10.7</string>
+	<key>pfm_note</key>
+	<string>Removing this profile from a device doesn't automatically remove printers from the device.</string>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -424,6 +426,8 @@ During a profile replacement, the system updates payloads with the same 'Payload
 	<key>pfm_title</key>
 	<string>Printing</string>
 	<key>pfm_unique</key>
+	<true/>
+	<key>pfm_user_approved</key>
 	<false/>
 	<key>pfm_version</key>
 	<integer>1</integer>

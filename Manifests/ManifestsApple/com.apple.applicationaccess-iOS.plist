@@ -19,8 +19,7 @@
 	<key>pfm_last_modified</key>
 	<date>2026-06-25T00:43:38Z</date>
 	<key>pfm_note</key>
-	<string>Important:
-The system allows multiple Restrictions payloads. However, don't attempt to manage the same restriction in different payloads. Doing so results in unexpected behavior.</string>
+	<string>Important: The system allows multiple Restrictions payloads. However, don't attempt to manage the same restriction in different payloads. Doing so results in unexpected behavior.</string>
 	<key>pfm_platforms</key>
 	<array>
 		<string>iOS</string>
@@ -776,12 +775,10 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<true/>
 			<key>pfm_description</key>
 			<string>If 'false', the system disables:
-
-- The AutoFill Passwords feature in iOS, with Keychain and third-party password managers
-- Prompting the user to use a saved password in Safari or in apps
-- Automatic strong passwords
-- Suggesting strong passwords to users
-
+The AutoFill Passwords feature in iOS, with Keychain and third-party password managers
+Prompting the user to use a saved password in Safari or in apps
+Automatic strong passwords
+Suggesting strong passwords to users
 However, if 'false', the system doesn't prevent AutoFill for contact info and credit cards in Safari.</string>
 			<key>pfm_ios_min</key>
 			<string>12.0</string>
@@ -2314,7 +2311,6 @@ However, if 'false', the system doesn't prevent AutoFill for contact info and cr
 			<true/>
 			<key>pfm_description</key>
 			<string>If 'false', the system disables the App Store and removes its icon from the Home Screen. Users are unable to install or update their apps. This applies to App Store apps, marketplace apps, and locally installed apps (using Configurator, Xcode, and so forth).
-
 In iOS 10 and later, MDM commands can override this restriction. Requires a supervised device in iOS 13 and later.</string>
 			<key>pfm_ios_min</key>
 			<string>4.0</string>
@@ -2372,7 +2368,6 @@ In iOS 10 and later, MDM commands can override this restriction. Requires a supe
 			<true/>
 			<key>pfm_description</key>
 			<string>If 'false', the system disables the App Store and removes its icon from the Home Screen. However, users can continue to install or update their apps either locally (via Configurator, Xcode, and so forth), or using alternative marketplace apps.
-
 In iOS 10 and later, MDM commands can override this restriction.</string>
 			<key>pfm_ios_min</key>
 			<string>9.0</string>
@@ -3185,9 +3180,7 @@ In iOS 10 and later, MDM commands can override this restriction.</string>
 			<false/>
 			<key>pfm_description</key>
 			<string>If 'true', the system preserves eSIM when it erases the device due to too many failed password attempts or the Erase All Content and Settings option in Settings &gt; General &gt; Reset.
-
-Note:
-The system doesn't preserve eSIM if Find My initiates erasing the device.</string>
+Note: The system doesn't preserve eSIM if Find My initiates erasing the device.</string>
 			<key>pfm_ios_min</key>
 			<string>17.2</string>
 			<key>pfm_name</key>
@@ -4740,9 +4733,7 @@ The system doesn't preserve eSIM if Find My initiates erasing the device.</strin
 			<false/>
 			<key>pfm_description</key>
 			<string>If 'true', the system allows unmanaged apps to read from managed contacts accounts. If 'allowOpenFromManagedToUnmanaged' is 'true', this restriction has no effect.
-
-Important:
-Use MDM to install profiles that contain this restriction.</string>
+Important: Use MDM to install profiles that contain this restriction.</string>
 			<key>pfm_ios_min</key>
 			<string>12.0</string>
 			<key>pfm_name</key>
@@ -4789,9 +4780,7 @@ Use MDM to install profiles that contain this restriction.</string>
 			<false/>
 			<key>pfm_description</key>
 			<string>If 'true', the system allows managed apps to write contacts to unmanaged accounts. If 'allowOpenFromManagedToUnmanaged' is 'true', this restriction has no effect.
-
-Important:
-Use MDM to install profiles that contain this restriction.</string>
+Important: Use MDM to install profiles that contain this restriction.</string>
 			<key>pfm_ios_min</key>
 			<string>12.0</string>
 			<key>pfm_name</key>
@@ -6817,9 +6806,7 @@ Use MDM to install profiles that contain this restriction.</string>
 			<true/>
 			<key>pfm_description</key>
 			<string>If 'false', the system disables Safari AutoFill for passwords, contact info, and credit cards, and also prevents using the Keychain for AutoFill. Requires a supervised device in iOS 13 and later.
-
-Note:
-The system still allows third-party password managers, and apps can use AutoFill.</string>
+Note: The system still allows third-party password managers, and apps can use AutoFill.</string>
 			<key>pfm_ios_min</key>
 			<string>4.0</string>
 			<key>pfm_name</key>
@@ -7008,10 +6995,9 @@ The system still allows third-party password managers, and apps can use AutoFill
 			<real>2</real>
 			<key>pfm_description</key>
 			<string>Defines the conditions under which the device accepts cookies. The user-facing settings changed in iOS 11, although the possible values remain the same. Support for this restriction on unsupervised devices is deprecated. Allowed values:
-
-- '0': Enables Prevent Cross-Site Tracking and Block All Cookies, and the user canʼt disable either setting.
-- '1' or '1.5': Enables Prevent Cross-Site Tracking, and the user canʼt disable it. Doesn't enable Block All Cookies, but the user can enable it.
-- '2': Enables Prevent Cross-Site Tracking, but doesn't enable Block All Cookies. The user can toggle either setting.</string>
+'0': Enables Prevent Cross-Site Tracking and Block All Cookies, and the user canʼt disable either setting.
+'1' or '1.5': Enables Prevent Cross-Site Tracking, and the user canʼt disable it. Doesn't enable Block All Cookies, but the user can enable it.
+'2': Enables Prevent Cross-Site Tracking, but doesn't enable Block All Cookies. The user can toggle either setting.</string>
 			<key>pfm_ios_min</key>
 			<string>4.0</string>
 			<key>pfm_name</key>
@@ -7134,9 +7120,7 @@ The system still allows third-party password managers, and apps can use AutoFill
 		<dict>
 			<key>pfm_description</key>
 			<string>If present, the system prevents showing or launching apps with bundle IDs in the array. Include the value 'com.apple.webapp' to restrict all webclips. This applies to App Store apps, marketplace apps, and locally installed apps (using Configurator, Xcode, and so forth).
-
-Note:
-Denying system apps may disable other functionality. For example, denying the App Store app may prevent users from accepting the terms and conditions for the user-based Volume Purchase Program (VPP).</string>
+Note: Denying system apps may disable other functionality. For example, denying the App Store app may prevent users from accepting the terms and conditions for the user-based Volume Purchase Program (VPP).</string>
 			<key>pfm_exclude</key>
 			<array>
 				<dict>
@@ -7602,34 +7586,31 @@ Denying system apps may disable other functionality. For example, denying the Ap
 			<integer>1000</integer>
 			<key>pfm_description</key>
 			<string>The maximum level of app content allowed on the device. Starting with iOS 26.2, this rating may apply to certain system apps.
-
-Age bands and the number of discrete age values vary by region, but the values are consistent across regions. For example, in a region that defines rating level 14+, its value is guaranteed to be larger than 300 (12+) and smaller than 600 (17+). Also, the value of rating level 15+ is guaranteed to be larger than the assigned value of rating level 14+. For more information about age ratings, see [Age ratings values and definitions](https://developer.apple.com/help/app-store-connect/reference/age-ratings-values-and-definitions).
-
+Age bands and the number of discrete age values vary by region, but the values are consistent across regions. For example, in a region that defines rating level 14+, its value is guaranteed to be larger than 300 (12+) and smaller than 600 (17+). Also, the value of rating level 15+ is guaranteed to be larger than the assigned value of rating level 14+. For more information about age ratings, see Age ratings values and definitions.
 Below is the complete list of age rating values used across all App Store regions.
-- '1000': All
-- '621': 21+
-- '620': 20+
-- '619': 19+
-- '618': 18+
-- '600': 17+
-- '416': 16+
-- '415': 15+
-- '314': 14+
-- '313': 13+
-- '300': 12+
-- '211': 11+
-- '210': 10+
-- '200': 9+
-- '108': 8+
-- '107': 7+
-- '106': 6+
-- '105': 5+
-- '100': 4+
-- '3': 3+
-- '2': 2+
-- '1': 1+
-- '0': None
-
+'1000': All
+'621': 21+
+'620': 20+
+'619': 19+
+'618': 18+
+'600': 17+
+'416': 16+
+'415': 15+
+'314': 14+
+'313': 13+
+'300': 12+
+'211': 11+
+'210': 10+
+'200': 9+
+'108': 8+
+'107': 7+
+'106': 6+
+'105': 5+
+'100': 4+
+'3': 3+
+'2': 2+
+'1': 1+
+'0': None
 This restriction will require supervision in a future release.</string>
 			<key>pfm_ios_min</key>
 			<string>4.0</string>
@@ -7713,16 +7694,14 @@ This restriction will require supervision in a future release.</string>
 			<integer>1000</integer>
 			<key>pfm_description</key>
 			<string>The maximum level of movie content allowed on the device. Support for this restriction on unsupervised devices is deprecated.
-
 Possible values, with the U.S. description of the rating level:
-
-- '1000': All
-- '500': NC-17
-- '400': R
-- '300': PG-13
-- '200': PG
-- '100': G
-- '0': None</string>
+'1000': All
+'500': NC-17
+'400': R
+'300': PG-13
+'200': PG
+'100': G
+'0': None</string>
 			<key>pfm_ios_min</key>
 			<string>4.0</string>
 			<key>pfm_name</key>
@@ -7805,17 +7784,15 @@ Possible values, with the U.S. description of the rating level:
 			<integer>1000</integer>
 			<key>pfm_description</key>
 			<string>The maximum level of TV content allowed on the device. Support for this restriction on unsupervised devices is deprecated.
-
 Possible values, with the U.S. description of the rating level:
-
-- '1000': All
-- '600': TV-MA
-- '500': TV-14
-- '400': TV-PG
-- '300': TV-G
-- '200': TV-Y7
-- '100': TV-Y
-- '0': None</string>
+'1000': All
+'600': TV-MA
+'500': TV-14
+'400': TV-PG
+'300': TV-G
+'200': TV-Y7
+'100': TV-Y
+'0': None</string>
 			<key>pfm_ios_min</key>
 			<string>4.0</string>
 			<key>pfm_name</key>
@@ -7898,7 +7875,6 @@ Possible values, with the U.S. description of the rating level:
 			<true/>
 			<key>pfm_description</key>
 			<string>If 'false', the system hides explicit music or video content purchased from the iTunes Store. The system marks explicit content as such by content providers, such as record labels, when sold through the iTunes Store. Explicit content in the News and Podcast apps is also hidden.
-
 Requires a supervised device in iOS 13 and later. Support for this restriction on unsupervised devices is deprecated.</string>
 			<key>pfm_ios_min</key>
 			<string>4.0</string>

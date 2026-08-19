@@ -16,6 +16,8 @@
 	<date>2025-08-04T08:25:08Z</date>
 	<key>pfm_macos_min</key>
 	<string>10.9</string>
+	<key>pfm_note</key>
+	<string>This profile defines per-app VPN behavior and applies only to VPN services of type 'VPN', 'IPsec', and 'IKEv2'. All the properties of VPN apply to the top level of this profile as well.</string>
 	<key>pfm_platforms</key>
 	<array>
 		<string>iOS</string>
@@ -7785,6 +7787,11 @@ Available in iOS 14.2 and later, and macOS 11 and later. Not available in watchO
 			<string>An array with entries that must each specify a domain that triggers the VPN connection in Safari. Each entry is in the format 'www.apple.com'.</string>
 			<key>pfm_name</key>
 			<string>SafariDomains</string>
+			<key>pfm_platforms</key>
+			<array>
+				<string>iOS</string>
+				<string>macOS</string>
+			</array>
 			<key>pfm_subkeys</key>
 			<array>
 				<dict>
@@ -7792,6 +7799,11 @@ Available in iOS 14.2 and later, and macOS 11 and later. Not available in watchO
 					<string>A domain.</string>
 					<key>pfm_name</key>
 					<string>SafariDomainsItem</string>
+					<key>pfm_platforms</key>
+					<array>
+						<string>iOS</string>
+						<string>macOS</string>
+					</array>
 					<key>pfm_require</key>
 					<string>always</string>
 					<key>pfm_type</key>
@@ -7812,7 +7824,6 @@ Available in iOS 14.2 and later, and macOS 11 and later. Not available in watchO
 		<dict>
 			<key>pfm_description</key>
 			<string>An array with entries that must each specify a domain that triggers this VPN connection in Mail. Each entry is in the format 'www.apple.com'.
-
 This property is deprecated in iOS 13.4 and later; use the 'VPNUUID' property of the 'Mail' or 'ExchangeActiveSync' payload instead.</string>
 			<key>pfm_ios_deprecated</key>
 			<string>13.4</string>
@@ -7822,13 +7833,29 @@ This property is deprecated in iOS 13.4 and later; use the 'VPNUUID' property of
 			<string>10.15</string>
 			<key>pfm_name</key>
 			<string>MailDomains</string>
+			<key>pfm_platforms</key>
+			<array>
+				<string>iOS</string>
+				<string>macOS</string>
+			</array>
 			<key>pfm_subkeys</key>
 			<array>
 				<dict>
 					<key>pfm_description</key>
 					<string>A domain.</string>
+					<key>pfm_ios_deprecated</key>
+					<string>13.4</string>
+					<key>pfm_ios_min</key>
+					<string>13.0</string>
+					<key>pfm_macos_min</key>
+					<string>10.15</string>
 					<key>pfm_name</key>
 					<string>MailDomainsItem</string>
+					<key>pfm_platforms</key>
+					<array>
+						<string>iOS</string>
+						<string>macOS</string>
+					</array>
 					<key>pfm_require</key>
 					<string>always</string>
 					<key>pfm_type</key>
@@ -7866,7 +7893,6 @@ This property is deprecated in iOS 13.4 and later; use the 'VPNUUID' property of
 		<dict>
 			<key>pfm_description</key>
 			<string>An array with entries that must each specify a domain that triggers this VPN connection in Calendar. Each entry is in the format 'www.apple.com'.
-
 This property is deprecated in iOS 13.4 and later; use the 'VPNUUID' property of the 'CalDAV' payload instead.</string>
 			<key>pfm_ios_deprecated</key>
 			<string>13.4</string>
@@ -7876,13 +7902,29 @@ This property is deprecated in iOS 13.4 and later; use the 'VPNUUID' property of
 			<string>10.15</string>
 			<key>pfm_name</key>
 			<string>CalendarDomains</string>
+			<key>pfm_platforms</key>
+			<array>
+				<string>iOS</string>
+				<string>macOS</string>
+			</array>
 			<key>pfm_subkeys</key>
 			<array>
 				<dict>
 					<key>pfm_description</key>
 					<string>A domain.</string>
+					<key>pfm_ios_deprecated</key>
+					<string>13.4</string>
+					<key>pfm_ios_min</key>
+					<string>13.0</string>
+					<key>pfm_macos_min</key>
+					<string>10.15</string>
 					<key>pfm_name</key>
 					<string>CalendarDomainsItem</string>
+					<key>pfm_platforms</key>
+					<array>
+						<string>iOS</string>
+						<string>macOS</string>
+					</array>
 					<key>pfm_require</key>
 					<string>always</string>
 					<key>pfm_type</key>
@@ -7920,7 +7962,6 @@ This property is deprecated in iOS 13.4 and later; use the 'VPNUUID' property of
 		<dict>
 			<key>pfm_description</key>
 			<string>An array with entries that must each specify a domain that triggers this VPN connection in Contacts. Each entry is in the format 'www.apple.com'.
-
 This property is deprecated in iOS 13.4 and later; use the 'VPNUUID' property of the 'CardDAV' payload instead.</string>
 			<key>pfm_ios_deprecated</key>
 			<string>13.4</string>
@@ -7930,13 +7971,29 @@ This property is deprecated in iOS 13.4 and later; use the 'VPNUUID' property of
 			<string>10.15</string>
 			<key>pfm_name</key>
 			<string>ContactsDomains</string>
+			<key>pfm_platforms</key>
+			<array>
+				<string>iOS</string>
+				<string>macOS</string>
+			</array>
 			<key>pfm_subkeys</key>
 			<array>
 				<dict>
 					<key>pfm_description</key>
 					<string>A domain.</string>
+					<key>pfm_ios_deprecated</key>
+					<string>13.4</string>
+					<key>pfm_ios_min</key>
+					<string>13.0</string>
+					<key>pfm_macos_min</key>
+					<string>10.15</string>
 					<key>pfm_name</key>
 					<string>ContactsDomainsItem</string>
+					<key>pfm_platforms</key>
+					<array>
+						<string>iOS</string>
+						<string>macOS</string>
+					</array>
 					<key>pfm_require</key>
 					<string>always</string>
 					<key>pfm_type</key>
@@ -7974,7 +8031,6 @@ This property is deprecated in iOS 13.4 and later; use the 'VPNUUID' property of
 		<dict>
 			<key>pfm_description</key>
 			<string>An array with entries that must each specify a domain that triggers this VPN. The domains must also be part of the 'apple-app-site-association' file, as described in 'Supporting associated domains'.
-
 Available in iOS 14 and later, and macOS 11 and later.</string>
 			<key>pfm_ios_min</key>
 			<string>14.0</string>
@@ -7987,6 +8043,10 @@ Available in iOS 14 and later, and macOS 11 and later.</string>
 				<dict>
 					<key>pfm_description</key>
 					<string>A domain.</string>
+					<key>pfm_ios_min</key>
+					<string>14.0</string>
+					<key>pfm_macos_min</key>
+					<string>11.0</string>
 					<key>pfm_name</key>
 					<string>AssociatedDomainsItem</string>
 					<key>pfm_require</key>
@@ -8014,7 +8074,6 @@ Available in iOS 14 and later, and macOS 11 and later.</string>
 		<dict>
 			<key>pfm_description</key>
 			<string>An array with entries that each specify a domain that doesn't trigger this VPN for connections to the domain.
-
 Available in iOS 14 and later, and macOS 11 and later.</string>
 			<key>pfm_ios_min</key>
 			<string>14.0</string>
@@ -8027,6 +8086,10 @@ Available in iOS 14 and later, and macOS 11 and later.</string>
 				<dict>
 					<key>pfm_description</key>
 					<string>A domain.</string>
+					<key>pfm_ios_min</key>
+					<string>14.0</string>
+					<key>pfm_macos_min</key>
+					<string>11.0</string>
 					<key>pfm_name</key>
 					<string>ExcludedDomainsItem</string>
 					<key>pfm_require</key>
@@ -8062,7 +8125,6 @@ Available in iOS 14 and later, and macOS 11 and later.</string>
 		<dict>
 			<key>pfm_description</key>
 			<string>An array of SMB domains that's accessible through this VPN connection.
-
 Available in iOS 13 and later.</string>
 			<key>pfm_ios_min</key>
 			<string>13.0</string>
@@ -8077,8 +8139,14 @@ Available in iOS 13 and later.</string>
 				<dict>
 					<key>pfm_description</key>
 					<string>An SMB domain.</string>
+					<key>pfm_ios_min</key>
+					<string>13.0</string>
 					<key>pfm_name</key>
 					<string>SMBDomainsItem</string>
+					<key>pfm_platforms</key>
+					<array>
+						<string>iOS</string>
+					</array>
 					<key>pfm_require</key>
 					<string>always</string>
 					<key>pfm_type</key>
@@ -8156,6 +8224,8 @@ Available in iOS 13 and later.</string>
 	<key>pfm_tvos_min</key>
 	<string>17.0</string>
 	<key>pfm_unique</key>
+	<false/>
+	<key>pfm_user_approved</key>
 	<false/>
 	<key>pfm_version</key>
 	<integer>6</integer>

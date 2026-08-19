@@ -219,6 +219,10 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			</array>
 			<key>pfm_name</key>
 			<string>CardDAVPrincipalURL</string>
+			<key>pfm_platforms</key>
+			<array>
+				<string>iOS</string>
+			</array>
 			<key>pfm_title</key>
 			<string>Principal URL</string>
 			<key>pfm_type</key>
@@ -321,6 +325,10 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>10.0</string>
 			<key>pfm_name</key>
 			<string>CommunicationServiceRules</string>
+			<key>pfm_platforms</key>
+			<array>
+				<string>iOS</string>
+			</array>
 			<key>pfm_subkeys</key>
 			<array>
 				<dict>
@@ -330,6 +338,10 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<string>10.0</string>
 					<key>pfm_name</key>
 					<string>DefaultServiceHandlers</string>
+					<key>pfm_platforms</key>
+					<array>
+						<string>iOS</string>
+					</array>
 					<key>pfm_required</key>
 					<true/>
 					<key>pfm_subkeys</key>
@@ -341,6 +353,10 @@ During a profile replacement, the system updates payloads with the same 'Payload
 							<string>10.0</string>
 							<key>pfm_name</key>
 							<string>AudioCall</string>
+							<key>pfm_platforms</key>
+							<array>
+								<string>iOS</string>
+							</array>
 							<key>pfm_title</key>
 							<string>App for audio calls</string>
 							<key>pfm_type</key>
@@ -434,6 +450,8 @@ During a profile replacement, the system updates payloads with the same 'Payload
 	<key>pfm_title</key>
 	<string>Contacts</string>
 	<key>pfm_unique</key>
+	<false/>
+	<key>pfm_user_approved</key>
 	<false/>
 	<key>pfm_version</key>
 	<integer>3</integer>

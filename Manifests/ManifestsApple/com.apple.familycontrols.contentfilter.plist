@@ -347,7 +347,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		<dict>
 			<key>pfm_description</key>
 			<string>An array of sites that defines an allow list. If specified, this defines additional allowed sites besides those in the automated allow list and deny list, including disallowed adult sites.
-
 This key is required if 'allowListEnabled' is 'true'.</string>
 			<key>pfm_macos_min</key>
 			<string>15.2</string>

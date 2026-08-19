@@ -166,6 +166,8 @@ During a profile replacement, the system updates payloads with the same 'Payload
 	<string>9.0</string>
 	<key>pfm_unique</key>
 	<false/>
+	<key>pfm_user_approved</key>
+	<false/>
 	<key>pfm_version</key>
 	<integer>2</integer>
 	<key>pfmx_supported_oses</key>

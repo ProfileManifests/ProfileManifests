@@ -206,11 +206,10 @@ During a profile replacement, the system updates payloads with the same 'Payload
 						<dict>
 							<key>pfm_description</key>
 							<string>The resource path associated with the printer. This path corresponds to the 'rp' parameter of the '_ipps.tcp' Bonjour record. For example:
-
-- 'printers/Canon_MG5300_series'
-- 'printers/Xerox_Phaser_7600'
-- 'ipp/print'
-- 'Epson_IPP_Printer'</string>
+'printers/Canon_MG5300_series'
+'printers/Xerox_Phaser_7600'
+'ipp/print'
+'Epson_IPP_Printer'</string>
 							<key>pfm_ios_min</key>
 							<string>7.0</string>
 							<key>pfm_name</key>
@@ -284,6 +283,8 @@ During a profile replacement, the system updates payloads with the same 'Payload
 	<key>pfm_title</key>
 	<string>AirPrint</string>
 	<key>pfm_unique</key>
+	<false/>
+	<key>pfm_user_approved</key>
 	<false/>
 	<key>pfm_version</key>
 	<integer>2</integer>

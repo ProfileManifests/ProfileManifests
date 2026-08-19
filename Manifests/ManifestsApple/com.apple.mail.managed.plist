@@ -1027,6 +1027,8 @@ This setting is only supported by interactive profile installations. Not support
 	<string>Mail</string>
 	<key>pfm_unique</key>
 	<false/>
+	<key>pfm_user_approved</key>
+	<false/>
 	<key>pfm_version</key>
 	<integer>9</integer>
 	<key>pfmx_supported_oses</key>

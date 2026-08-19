@@ -16,6 +16,8 @@
 	<string>9.3</string>
 	<key>pfm_last_modified</key>
 	<date>2026-06-23T15:59:45Z</date>
+	<key>pfm_note</key>
+	<string>This payload allows administrators to specify optional text displayed in the Login Window and Lock Screen (for example, an "If Lost, Return To" message and asset tag information). There can only be one Lock Screen payload.</string>
 	<key>pfm_platforms</key>
 	<array>
 		<string>iOS</string>
@@ -132,7 +134,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_name</key>
 			<string>IfLostReturnToMessage</string>
 			<key>pfm_title</key>
-			<string>"If lost, return to"</string>
+			<string>If Lost message</string>
 			<key>pfm_type</key>
 			<string>string</string>
 			<key>pfmx_supported_oses</key>

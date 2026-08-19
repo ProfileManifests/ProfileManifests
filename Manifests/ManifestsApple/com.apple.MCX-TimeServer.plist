@@ -19,6 +19,8 @@ This payload allows devices to connect to custom time servers.</string>
 	<date>2026-06-23T15:59:45Z</date>
 	<key>pfm_macos_min</key>
 	<string>10.12.4</string>
+	<key>pfm_note</key>
+	<string>If multiple profiles with this payload are sent, the system sets the device's time server to the value in the last payload installed. Removing the payload won't change the settings back to the prior settings.</string>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -155,6 +157,8 @@ During a profile replacement, the system updates payloads with the same 'Payload
 	<key>pfm_title</key>
 	<string>Time Server</string>
 	<key>pfm_unique</key>
+	<true/>
+	<key>pfm_user_approved</key>
 	<false/>
 	<key>pfm_version</key>
 	<integer>1</integer>

@@ -241,6 +241,8 @@ During a profile replacement, the system updates payloads with the same 'Payload
 	<key>pfm_title</key>
 	<string>App Store</string>
 	<key>pfm_unique</key>
+	<true/>
+	<key>pfm_user_approved</key>
 	<false/>
 	<key>pfm_version</key>
 	<integer>1</integer>

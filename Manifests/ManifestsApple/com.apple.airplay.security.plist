@@ -126,9 +126,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		<dict>
 			<key>pfm_description</key>
 			<string>The access policy for AirPlay.
-
 'ANY' allows connections from both Ethernet, Wi-Fi, and Apple Wireless Direct Link.
-
 'WIFI_ONLY' allows connections only from devices on the same Ethernet or Wi-Fi network as Apple TV.</string>
 			<key>pfm_name</key>
 			<string>AccessType</string>
@@ -152,13 +150,10 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		<dict>
 			<key>pfm_description</key>
 			<string>The security policy for AirPlay. Allowed values:
-
-- 'PASSCODE_ONCE': Requires an onscreen passcode on first connection from a device. Subsequent connections from the same device aren't prompted.
-- 'PASSCODE_ALWAYS': Requires an onscreen passcode for every AirPlay connection. After an AirPlay connection ends, the system allows reconnecting within 30 seconds without a password.
-- 'PASSWORD': Requires the passphrase set for 'Password'.
-
-Note:
-'NONE' was deprecated in tvOS 11.3. Existing profiles that use 'NONE' get the 'PASSWORD_ONCE' behavior.</string>
+'PASSCODE_ONCE': Requires an onscreen passcode on first connection from a device. Subsequent connections from the same device aren't prompted.
+'PASSCODE_ALWAYS': Requires an onscreen passcode for every AirPlay connection. After an AirPlay connection ends, the system allows reconnecting within 30 seconds without a password.
+'PASSWORD': Requires the passphrase set for 'Password'.
+Note: 'NONE' was deprecated in tvOS 11.3. Existing profiles that use 'NONE' get the 'PASSWORD_ONCE' behavior.</string>
 			<key>pfm_name</key>
 			<string>SecurityType</string>
 			<key>pfm_range_list</key>
@@ -236,7 +231,7 @@ Note:
 	<key>pfm_tvos_min</key>
 	<string>11.0</string>
 	<key>pfm_unique</key>
-	<false/>
+	<true/>
 	<key>pfm_version</key>
 	<integer>3</integer>
 	<key>pfmx_supported_oses</key>

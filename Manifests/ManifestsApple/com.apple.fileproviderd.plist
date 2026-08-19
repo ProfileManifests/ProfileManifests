@@ -278,7 +278,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
-			<string>If 'false', the device only allows File Provider extension volume synchronization for the system "home" volume and any data separated volume, and prevents synchronization with any other volumes. If 'true'', the device allows File Provider extension volume synchronization for the system "home" volume, any data separated volume, and any encrypted APFS volumes (on either internal or external media).</string>
+			<string>If 'false', the device only allows File Provider extension volume synchronization for the system "home" volume and any data separated volume, and prevents synchronization with any other volumes. If `true``, the device allows File Provider extension volume synchronization for the system "home" volume, any data separated volume, and any encrypted APFS volumes (on either internal or external media).</string>
 			<key>pfm_macos_min</key>
 			<string>26.4</string>
 			<key>pfm_name</key>

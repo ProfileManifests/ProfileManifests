@@ -206,9 +206,9 @@ During a profile replacement, the system updates payloads with the same 'Payload
 							<key>pfm_default</key>
 							<integer>0</integer>
 							<key>pfm_description</key>
-							<string>The type of day range:
-0 = Weekday
-1 = Weekend</string>
+							<string>The type of day range, which has the following possible values:
+'0': Weekday
+'1': Weekend</string>
 							<key>pfm_exclude</key>
 							<array>
 								<dict>
@@ -230,6 +230,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 							<key>pfm_range_list</key>
 							<array>
 								<integer>0</integer>
+								<integer>1</integer>
 							</array>
 							<key>pfm_range_list_titles</key>
 							<array>
@@ -323,9 +324,9 @@ During a profile replacement, the system updates payloads with the same 'Payload
 							<key>pfm_default</key>
 							<integer>0</integer>
 							<key>pfm_description</key>
-							<string>The type of day range:
-0 = Weekday
-1 = Weekend</string>
+							<string>The type of day range, which has the following possible values:
+'0': Weekday
+'1': Weekend</string>
 							<key>pfm_exclude</key>
 							<array>
 								<dict>
@@ -347,6 +348,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 							<key>pfm_range_list</key>
 							<array>
 								<integer>0</integer>
+								<integer>1</integer>
 							</array>
 							<key>pfm_range_list_titles</key>
 							<array>
@@ -414,9 +416,9 @@ During a profile replacement, the system updates payloads with the same 'Payload
 							<key>pfm_default</key>
 							<integer>1</integer>
 							<key>pfm_description</key>
-							<string>The type of day range:
-0 = Weekday
-1 = Weekend</string>
+							<string>The type of day range, which has the following possible values:
+'0': Weekday
+'1': Weekend</string>
 							<key>pfm_exclude</key>
 							<array>
 								<dict>
@@ -437,6 +439,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 							<string>rangeType</string>
 							<key>pfm_range_list</key>
 							<array>
+								<integer>0</integer>
 								<integer>1</integer>
 							</array>
 							<key>pfm_range_list_titles</key>
@@ -531,9 +534,9 @@ During a profile replacement, the system updates payloads with the same 'Payload
 							<key>pfm_default</key>
 							<integer>1</integer>
 							<key>pfm_description</key>
-							<string>The type of day range:
-0 = Weekday
-1 = Weekend</string>
+							<string>The type of day range, which has the following possible values:
+'0': Weekday
+'1': Weekend</string>
 							<key>pfm_exclude</key>
 							<array>
 								<dict>
@@ -554,6 +557,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 							<string>rangeType</string>
 							<key>pfm_range_list</key>
 							<array>
+								<integer>0</integer>
 								<integer>1</integer>
 							</array>
 							<key>pfm_range_list_titles</key>
@@ -588,6 +592,8 @@ During a profile replacement, the system updates payloads with the same 'Payload
 	<key>pfm_title</key>
 	<string>Parental Controls: Time Limits</string>
 	<key>pfm_unique</key>
+	<true/>
+	<key>pfm_user_approved</key>
 	<false/>
 	<key>pfm_version</key>
 	<integer>1</integer>

@@ -14,6 +14,8 @@
 	<date>2026-06-23T15:59:45Z</date>
 	<key>pfm_macos_min</key>
 	<string>10.15</string>
+	<key>pfm_note</key>
+	<string>You can use associated domains with features such as Extensible AppSSO, universal links, and Password AutoFill.</string>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -207,6 +209,8 @@ During a profile replacement, the system updates payloads with the same 'Payload
 	<string>Associated Domains</string>
 	<key>pfm_unique</key>
 	<false/>
+	<key>pfm_user_approved</key>
+	<true/>
 	<key>pfm_version</key>
 	<integer>1</integer>
 	<key>pfmx_supported_oses</key>

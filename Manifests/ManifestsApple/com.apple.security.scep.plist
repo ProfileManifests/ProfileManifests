@@ -18,6 +18,8 @@
 	<date>2026-06-23T15:59:45Z</date>
 	<key>pfm_macos_min</key>
 	<string>10.7</string>
+	<key>pfm_note</key>
+	<string>A SCEP payload automates the request of a client certificate from a SCEP server, as described in Over-the-Air Profile Delivery and Configuration.</string>
 	<key>pfm_platforms</key>
 	<array>
 		<string>iOS</string>
@@ -170,9 +172,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				<dict>
 					<key>pfm_description</key>
 					<string>The representation of an X.500 name as an array of OID and value.
-
 For example, '/C=US/O=Apple Inc./CN=foo/1.2.5.3=bar' translates to '[ [ ["C", "US"] ], [ ["O", "Apple Inc."] ], …, [ [ "1.2.5.3", "bar" ] ] ]'.
-
 OIDs can be represented as dotted numbers, with shortcuts for country (C), locality (L), state (ST), organization (O), organizational unit (OU), and common name (CN).</string>
 					<key>pfm_format</key>
 					<string>(,?[^=,]+=[^=,]+(,|$))</string>
@@ -406,10 +406,8 @@ OIDs can be represented as dotted numbers, with shortcuts for country (C), local
 					<integer>0</integer>
 					<key>pfm_description</key>
 					<string>A bitmask indicating the use of the key. Possible values:
-
-- '1': Signing
-- '4': Encryption
-
+'1': Signing
+'4': Encryption
 Some certificate authorities, such as Windows CA, support only encryption or signing, but not both at the same time.</string>
 					<key>pfm_ios_min</key>
 					<string>4.0</string>
@@ -1062,6 +1060,8 @@ Some certificate authorities, such as Windows CA, support only encryption or sig
 	<key>pfm_tvos_min</key>
 	<string>9.0</string>
 	<key>pfm_unique</key>
+	<false/>
+	<key>pfm_user_approved</key>
 	<false/>
 	<key>pfm_version</key>
 	<integer>8</integer>
