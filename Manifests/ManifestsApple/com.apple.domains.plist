@@ -297,11 +297,6 @@ SafariPasswordAutoFillDomains definitions are cumulative. Patterns defined by al
 					<string>9.3</string>
 					<key>pfmx_supervised</key>
 					<true/>
-					<key>pfmx_user_enrollment</key>
-					<dict>
-						<key>pfmx_mode</key>
-						<string>forbidden</string>
-					</dict>
 				</dict>
 				<key>macOS</key>
 				<dict>
@@ -361,11 +356,6 @@ Available in iOS 16.2 and later and macOS 13.1 and later.</string>
 					<string>16.2</string>
 					<key>pfmx_supervised</key>
 					<true/>
-					<key>pfmx_user_enrollment</key>
-					<dict>
-						<key>pfmx_mode</key>
-						<string>forbidden</string>
-					</dict>
 				</dict>
 				<key>macOS</key>
 				<dict>
@@ -417,11 +407,6 @@ Available in iOS 18 and later and macOS 15 and later.</string>
 					<string>18.0</string>
 					<key>pfmx_supervised</key>
 					<true/>
-					<key>pfmx_user_enrollment</key>
-					<dict>
-						<key>pfmx_mode</key>
-						<string>forbidden</string>
-					</dict>
 				</dict>
 				<key>macOS</key>
 				<dict>

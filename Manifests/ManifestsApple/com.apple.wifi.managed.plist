@@ -1448,11 +1448,6 @@ Prior to macOS 13, the encryption type, if specified explicitly, needed to match
 					<key>pfmx_introduced</key>
 					<string>n/a</string>
 				</dict>
-				<key>macOS</key>
-				<dict>
-					<key>pfmx_introduced</key>
-					<string>10.7</string>
-				</dict>
 				<key>tvOS</key>
 				<dict>
 					<key>pfmx_introduced</key>
@@ -1710,11 +1705,6 @@ For EAP-TLS authentication without a network payload, install the necessary iden
 						<dict>
 							<key>pfmx_introduced</key>
 							<string>10.8</string>
-						</dict>
-						<key>tvOS</key>
-						<dict>
-							<key>pfmx_introduced</key>
-							<string>9.0</string>
 						</dict>
 					</dict>
 				</dict>

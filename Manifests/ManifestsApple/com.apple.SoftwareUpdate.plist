@@ -145,13 +145,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				<dict>
 					<key>pfmx_deprecated</key>
 					<string>11.0</string>
-					<key>pfmx_introduced</key>
-					<string>10.7</string>
-					<key>pfmx_user_enrollment</key>
-					<dict>
-						<key>pfmx_mode</key>
-						<string>forbidden</string>
-					</dict>
 				</dict>
 			</dict>
 		</dict>

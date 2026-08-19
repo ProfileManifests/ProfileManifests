@@ -909,7 +909,7 @@ If you don't specify a value, the default is 'true' for EAP-TLS, and 'false' for
 				<key>pfmx_mode</key>
 				<string>allowed</string>
 				<key>pfmx_user_channel</key>
-				<true/>
+				<false/>
 			</dict>
 			<key>pfmx_supervised</key>
 			<false/>

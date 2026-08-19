@@ -195,8 +195,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				<dict>
 					<key>pfmx_deprecated</key>
 					<string>10.15</string>
-					<key>pfmx_introduced</key>
-					<string>10.9</string>
 				</dict>
 			</dict>
 		</dict>

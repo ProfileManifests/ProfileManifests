@@ -143,8 +143,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				<dict>
 					<key>pfmx_deprecated</key>
 					<string>9.3.1</string>
-					<key>pfmx_introduced</key>
-					<string>9.3</string>
 				</dict>
 			</dict>
 		</dict>
