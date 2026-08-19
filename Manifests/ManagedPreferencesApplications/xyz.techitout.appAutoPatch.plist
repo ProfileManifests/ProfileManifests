@@ -13,7 +13,7 @@
 	<key>pfm_format_version</key>
 	<integer>1</integer>
 	<key>pfm_last_modified</key>
-	<date>2026-06-23T15:59:45Z</date>
+	<date>2026-08-19T00:00:00Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -54,8 +54,9 @@
 			<key>pfm_default</key>
 			<string>xyz.techitout.appAutoPatch</string>
 			<key>pfm_description</key>
-			<string>The reverse-DNS-style identifier for the payload. This identifier is usually the same as the 'TopLevel' value, with an additional appended component. This string must be unique within the profile.
-During a profile replacement, the system updates payloads with the same 'PayloadIdentifier' and 'PayloadUUID' in the old and new profiles.</string>
+			<string>The reverse-DNS-style identifier for the payload. This identifier is usually the same as the `TopLevel` value, with an additional appended component. This string must be unique within the profile.
+
+During a profile replacement, the system updates payloads with the same `PayloadIdentifier` and `PayloadUUID` in the old and new profiles.</string>
 			<key>pfm_description_reference</key>
 			<string>A reverse-DNS-style identifier for the specific payload. It is usually the same identifier as the root-level PayloadIdentifier value with an additional component appended.</string>
 			<key>pfm_name</key>
@@ -85,8 +86,9 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_description</key>
-			<string>The globally unique identifier for the payload. The actual content is unimportant, but must be globally unique. In macOS, use 'uuidgen' to generate UUIDs.
-During a profile replacement, the system updates payloads with the same 'PayloadIdentifier' and 'PayloadUUID' in the old and new profiles.</string>
+			<string>The globally unique identifier for the payload. The actual content is unimportant, but must be globally unique. In macOS, use `uuidgen` to generate UUIDs.
+
+During a profile replacement, the system updates payloads with the same `PayloadIdentifier` and `PayloadUUID` in the old and new profiles.</string>
 			<key>pfm_description_reference</key>
 			<string>A globally unique identifier for the payload. The actual content is unimportant, but it must be globally unique. In macOS, you can use uuidgen to generate reasonable UUIDs.</string>
 			<key>pfm_format</key>
@@ -109,10 +111,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>The version number of the individual payload.</string>
 			<key>pfm_name</key>
 			<string>PayloadVersion</string>
-			<key>pfm_range_list</key>
-			<array>
-				<integer>1</integer>
-			</array>
 			<key>pfm_require</key>
 			<string>always</string>
 			<key>pfm_title</key>
@@ -167,16 +165,27 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				<key>Dialogs and Notifications</key>
 				<array>
 					<string>DialogOnTop</string>
+					<string>ShowDockIcon</string>
+					<string>DialogQuitHandlingDiscoveryStaging</string>
+					<string>ShowNotificationsAll</string>
+					<string>ShowNotificationsSilentUpdated</string>
+					<string>ShowNotificationsAppsQueued</string>
+					<string>ShowNotificationsSilentAndQueued</string>
 					<string>DialogTimeoutDeferral</string>
 					<string>DialogTimeoutDeferralAction</string>
+					<string>DialogTimeoutConfirmInstall</string>
 					<string>UnattendedExit</string>
 					<string>UnattendedExitSeconds</string>
 					<string>UseOverlayIcon</string>
 					<string>DialogIcon</string>
+					<string>BannerImage</string>
+					<string>BannerTitle</string>
+					<string>BannerHeight</string>
 				</array>
 				<key>Labels</key>
 				<array>
 					<string>IgnoredLabels</string>
+					<string>ExcludedBackgroundLabels</string>
 					<string>OptionalLabels</string>
 					<string>RequiredLabels</string>
 				</array>
@@ -190,11 +199,20 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<string>AppTitle</string>
 					<string>ConvertAppsInHomeFolder</string>
 					<string>IgnoreAppsInHomeFolder</string>
+					<string>SkipPreUpdateVerification</string>
 					<string>InstallomatorOptions</string>
 					<string>InstallomatorUpdateDisable</string>
 					<string>InstallomatorVersion</string>
 					<string>InstallomatorVersionCustomRepoPath</string>
 					<string>InstallomatorVersionCustomBranchName</string>
+					<string>GitHubAPIAuthEnabled</string>
+					<string>GitHubAPIToken</string>
+					<string>PrePatchScript</string>
+					<string>PostPatchScript</string>
+					<string>PrePatchScriptFailAction</string>
+					<string>PostPatchScriptFailAction</string>
+					<string>PatchScriptTimeoutSeconds</string>
+					<string>StaleProcessTimeoutSeconds</string>
 					<string>InteractiveMode</string>
 					<string>RemoveInstallomatorPath</string>
 					<string>SupportTeamName</string>
@@ -205,11 +223,20 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<string>WebhookURLSlack</string>
 					<string>WebhookURLTeams</string>
 					<string>WorkflowDisableAppDiscovery</string>
+					<string>WorkflowScheduledDiscovery</string>
 					<string>WorkflowDisableRelaunch</string>
+					<string>BusinessHours</string>
+					<string>BusinessHoursRespectHardDeadline</string>
+					<string>BusinessHoursSilentDuring</string>
+					<string>BusinessHoursAllowDiscovery</string>
 					<string>WorkflowInstallNowPatchingStatusAction</string>
+					<string>WorkflowStageUpdates</string>
+					<string>WorkflowBackgroundPatchClosedApps</string>
+					<string>DiscoveryFrequency</string>
+					<string>IgnoreDNDApps</string>
 					<string>SelfUpdateEnabled</string>
 					<string>SelfUpdateFrequency</string>
-					<string>versionComparisonMethod</string>
+					<string>VersionComparisonMethod</string>
 					<string>VersionComparisonInstallomatorFallback</string>
 				</array>
 			</dict>
@@ -508,6 +535,24 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
+			<string>3.6.0</string>
+			<key>pfm_default</key>
+			<integer>24</integer>
+			<key>pfm_description</key>
+			<string>The number of hours since the last successful App Discovery before App Auto-Patch will run discovery again. If the workflow resets and re-runs (e.g. after a deferral) within this window, discovery is skipped and the previously discovered queue is reused. A value of 0 forces discovery to run on every workflow execution</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Workflows#discovery-frequency</string>
+			<key>pfm_name</key>
+			<string>DiscoveryFrequency</string>
+			<key>pfm_title</key>
+			<string>Discovery Frequency</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+			<key>pfm_value_unit</key>
+			<string>hours</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
 			<string>3.5.0</string>
 			<key>pfm_description</key>
 			<string>When enabled, AAP will automatically skip updating Zoom if a call is active</string>
@@ -543,6 +588,112 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>Dialog On Top</string>
 			<key>pfm_type</key>
 			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.7.0</string>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>When true, workflow swiftDialog windows show the App Auto-Patch logo in the macOS Dock (requires swiftDialog 3.0+). Deferral dialogs badge the pending update count; the installation dialog counts the badge down as updates finish. Default true.</string>
+			<key>pfm_description_reference</key>
+			<string>https://swiftdialog.app/advanced/command-line-options/</string>
+			<key>pfm_name</key>
+			<string>ShowDockIcon</string>
+			<key>pfm_title</key>
+			<string>Show Dock Icon</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.7.0</string>
+			<key>pfm_default</key>
+			<string>PROMPT</string>
+			<key>pfm_description</key>
+			<string>What happens if the user quits the discovery or staging window (Dock Quit / menu Quit / ⌘Q). PROMPT (default) asks whether to Keep Running in the background or Stop App Auto-Patch until the next scheduled run. CONTINUE keeps the workflow running with no prompt (previous implicit behavior). STOP ends the current run cleanly and preserves NextAutoLaunch. Stop is ignored when a hard deadline is already due or Install Now is running — the workflow continues instead.</string>
+			<key>pfm_name</key>
+			<string>DialogQuitHandlingDiscoveryStaging</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>PROMPT</string>
+				<string>CONTINUE</string>
+				<string>STOP</string>
+			</array>
+			<key>pfm_range_list_titles</key>
+			<array>
+				<string>PROMPT — Keep Running or Stop</string>
+				<string>CONTINUE — keep running, no prompt</string>
+				<string>STOP — stop until next scheduled run</string>
+			</array>
+			<key>pfm_title</key>
+			<string>Discovery/Staging Dialog Quit Handling</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.7.0</string>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>Master switch for banner-style swiftDialog notifications. When true (default), every notification type is shown and individual ShowNotifications* keys are ignored. When false, enable specific types with ShowNotificationsSilentUpdated, ShowNotificationsAppsQueued, and/or ShowNotificationsSilentAndQueued. Does not itself enable discovery during Business Hours.</string>
+			<key>pfm_description_reference</key>
+			<string>https://swiftdialog.app/</string>
+			<key>pfm_name</key>
+			<string>ShowNotificationsAll</string>
+			<key>pfm_title</key>
+			<string>Show Notifications (All)</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.7.0</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>When ShowNotificationsAll is false, enable the banner that reports successful silent closed-app updates (e.g. “updated {count} application(s) in the background”). Ignored when ShowNotificationsAll is true.</string>
+			<key>pfm_description_reference</key>
+			<string>https://swiftdialog.app/</string>
+			<key>pfm_name</key>
+			<string>ShowNotificationsSilentUpdated</string>
+			<key>pfm_title</key>
+			<string>Show Notification: Silent Updated</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.7.0</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>When ShowNotificationsAll is false, enable the banner that reports pending updates with Install Now / Dismiss (including after BusinessHoursAllowDiscovery). Ignored when ShowNotificationsAll is true.</string>
+			<key>pfm_description_reference</key>
+			<string>https://swiftdialog.app/</string>
+			<key>pfm_name</key>
+			<string>ShowNotificationsAppsQueued</string>
+			<key>pfm_title</key>
+			<string>Show Notification: Apps Queued</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.7.0</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>When ShowNotificationsAll is false, enable the combined banner after Business Hours Silent During (“{count} updated… {remaining} remain queued”). Ignored when ShowNotificationsAll is true.</string>
+			<key>pfm_description_reference</key>
+			<string>https://swiftdialog.app/</string>
+			<key>pfm_name</key>
+			<string>ShowNotificationsSilentAndQueued</string>
+			<key>pfm_title</key>
+			<string>Show Notification: Silent And Queued</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
@@ -583,6 +734,24 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>Deferral Dialog Timeout Action</string>
 			<key>pfm_type</key>
 			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.6.0</string>
+			<key>pfm_default</key>
+			<integer>15</integer>
+			<key>pfm_description</key>
+			<string>The number of seconds given to the user to respond to the "Are you sure?" confirmation dialog shown after clicking Install Now on the deferral dialog. If the timer expires with no response, App Auto-Patch defaults to continuing with the install</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings#dialogtimeoutconfirminstall</string>
+			<key>pfm_name</key>
+			<string>DialogTimeoutConfirmInstall</string>
+			<key>pfm_title</key>
+			<string>Confirm Install Dialog Timeout</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+			<key>pfm_value_unit</key>
+			<string>seconds</string>
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
@@ -664,9 +833,57 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
+			<string>3.6.0</string>
+			<key>pfm_description</key>
+			<string>Displays a swiftDialog banner image in place of the standard title text. Accepts a filepath, a URL, a solid colour (colour=#hex), or a gradient (gradient=colour,colour). When set, this replaces the standard --title text banner and hides the standard dialog icon area, matching swiftDialog's own banner behavior. Not applied to the App Discovery or "All Apps Up To Date" mini dialogs, which are too small to display a banner</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings#bannerimage</string>
+			<key>pfm_name</key>
+			<string>BannerImage</string>
+			<key>pfm_title</key>
+			<string>Banner Image</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>Filepath|URL|colour=#hex|gradient=colour,colour</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.6.0</string>
+			<key>pfm_description</key>
+			<string>The text displayed within the banner image set by BannerImage. Falls back to AppTitle if left blank. Has no effect unless BannerImage is also configured</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings#bannertitle</string>
+			<key>pfm_name</key>
+			<string>BannerTitle</string>
+			<key>pfm_title</key>
+			<string>Banner Title</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>App Auto-Patch</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.6.0</string>
+			<key>pfm_description</key>
+			<string>Overrides the default height, in points, of the banner image set by BannerImage. Invalid (non-integer) values are ignored. Has no effect unless BannerImage is also configured</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings#bannerheight</string>
+			<key>pfm_name</key>
+			<string>BannerHeight</string>
+			<key>pfm_title</key>
+			<string>Banner Height</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+			<key>pfm_value_unit</key>
+			<string>points</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
 			<string>3.0</string>
 			<key>pfm_description</key>
-			<string>A space-separated list of Installomator labels to ignore for the AAP workflow. Supports wilddcards</string>
+			<string>A space-separated list of Installomator labels to ignore for the AAP workflow. Supports wildcards, for example "microsoft*". A single "*" ignores every Installomator label except those listed in Required Labels and Optional Labels.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Populating-App-Labels#ignored</string>
 			<key>pfm_name</key>
@@ -677,6 +894,22 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>string</string>
 			<key>pfm_value_placeholder</key>
 			<string>1password* androidstudio microsoft*</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.7.0</string>
+			<key>pfm_description</key>
+			<string>A space-separated list of Installomator labels to discover and report, but not update during fully-silent runs (InteractiveMode 0 / --workflow-install-now-silent) or Background Patch Closed Apps. Interactive Install Now and hard-deadline installs still update them. Supports wildcards. Unlike Ignored Labels, these apps stay visible in discovery, logs, and inventory.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Populating-App-Labels#excluded-background</string>
+			<key>pfm_name</key>
+			<string>ExcludedBackgroundLabels</string>
+			<key>pfm_title</key>
+			<string>Excluded Background Labels</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>amazoncorretto* nodejs python*</string>
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
@@ -780,6 +1013,22 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
+			<string>3.7.0</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>When true, discovery skips the local Gatekeeper (spctl) / Team ID pre-update check for already-installed apps. Use this when spctl assessment intermittently fails for a valid app and would otherwise exclude it from discovery/updates. Installomator still validates the downloaded package after download. Default false.</string>
+			<key>pfm_description_reference</key>
+			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/issues/256</string>
+			<key>pfm_name</key>
+			<string>SkipPreUpdateVerification</string>
+			<key>pfm_title</key>
+			<string>Skip Pre-Update Verification</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
 			<string>3.0</string>
 			<key>pfm_description</key>
 			<string>A space-separated list of options to override default Installomator options (i.e., BLOCKING_PROCESS_ACTION=prompt_user NOTIFY=silent LOGO=appstore)</string>
@@ -819,6 +1068,152 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>Installomator Update Disable</string>
 			<key>pfm_type</key>
 			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.7.0</string>
+			<key>pfm_default</key>
+			<string>FALSE</string>
+			<key>pfm_description</key>
+			<string>When TRUE, App Auto-Patch authenticates GitHub REST API requests (api.github.com) with the personal access token in GitHubAPIToken, raising the rate limit from 60 to 5,000 requests per hour. Managed preferences only - the token is never written to the local preference file and is never logged. If this key is TRUE, GitHubAPIToken is required or startup validation fails.</string>
+			<key>pfm_description_reference</key>
+			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/issues/249</string>
+			<key>pfm_name</key>
+			<string>GitHubAPIAuthEnabled</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>TRUE</string>
+				<string>FALSE</string>
+			</array>
+			<key>pfm_range_list_titles</key>
+			<array>
+				<string>Enable GitHub API Authentication</string>
+				<string>Disable GitHub API Authentication</string>
+			</array>
+			<key>pfm_title</key>
+			<string>GitHub API Auth Enabled</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.7.0</string>
+			<key>pfm_description</key>
+			<string>GitHub personal access token (classic or fine-grained) used when GitHubAPIAuthEnabled is TRUE. Sent as Authorization: Bearer on api.github.com requests for Installomator and swiftDialog lookups. Prefer a fine-grained token with Contents: Read on the repositories AAP queries. Managed preferences only - never stored in the local preference file or written to logs.</string>
+			<key>pfm_description_reference</key>
+			<string>https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api</string>
+			<key>pfm_name</key>
+			<string>GitHubAPIToken</string>
+			<key>pfm_title</key>
+			<string>GitHub API Token</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>github_pat_...</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.7.0</string>
+			<key>pfm_description</key>
+			<string>Absolute path to a root-owned executable script run once before Installomator installations in a patch run. Must live under /Library/Management/AppAutoPatch/Hooks/, must not be a symlink, and must not be group/world-writable. Managed preferences only - never accepted from CLI or the local preference file. Never evaluated as a shell string.</string>
+			<key>pfm_description_reference</key>
+			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/issues/156</string>
+			<key>pfm_name</key>
+			<string>PrePatchScript</string>
+			<key>pfm_title</key>
+			<string>Pre Patch Script</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>/Library/Management/AppAutoPatch/Hooks/pre.sh</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.7.0</string>
+			<key>pfm_description</key>
+			<string>Absolute path to a root-owned executable script run once after Installomator installations complete in a patch run (for example jamf recon). Same security requirements as PrePatchScript. Managed preferences only.</string>
+			<key>pfm_description_reference</key>
+			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/issues/156</string>
+			<key>pfm_name</key>
+			<string>PostPatchScript</string>
+			<key>pfm_title</key>
+			<string>Post Patch Script</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>/Library/Management/AppAutoPatch/Hooks/post.sh</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.7.0</string>
+			<key>pfm_default</key>
+			<string>ABORT</string>
+			<key>pfm_description</key>
+			<string>What to do if PrePatchScript is missing/invalid or exits non-zero. ABORT stops the install run; CONTINUE logs the failure and proceeds with patching.</string>
+			<key>pfm_name</key>
+			<string>PrePatchScriptFailAction</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>ABORT</string>
+				<string>CONTINUE</string>
+			</array>
+			<key>pfm_title</key>
+			<string>Pre Patch Script Fail Action</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.7.0</string>
+			<key>pfm_default</key>
+			<string>CONTINUE</string>
+			<key>pfm_description</key>
+			<string>What to do if PostPatchScript is missing/invalid or exits non-zero. ABORT exits AAP with an error after installs; CONTINUE (default) logs the failure and proceeds with webhook/relaunch.</string>
+			<key>pfm_name</key>
+			<string>PostPatchScriptFailAction</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>ABORT</string>
+				<string>CONTINUE</string>
+			</array>
+			<key>pfm_title</key>
+			<string>Post Patch Script Fail Action</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.7.0</string>
+			<key>pfm_default</key>
+			<integer>300</integer>
+			<key>pfm_description</key>
+			<string>Maximum seconds allowed for a PrePatchScript or PostPatchScript run before AAP terminates it (treated as failure).</string>
+			<key>pfm_name</key>
+			<string>PatchScriptTimeoutSeconds</string>
+			<key>pfm_title</key>
+			<string>Patch Script Timeout Seconds</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+			<key>pfm_value_placeholder</key>
+			<string>300</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.7.0</string>
+			<key>pfm_default</key>
+			<integer>3600</integer>
+			<key>pfm_description</key>
+			<string>Seconds of missing heartbeat after which a leftover App Auto-Patch process is treated as hung and recovered (graceful TERM, then KILL if needed). The PID file is also validated so a recycled PID is not mistaken for a live AAP run. Default 3600 (1 hour). 0 disables timeout-based stale-process killing (dead/reused PID cleanup still runs). Any other value below 300 is raised to 300.</string>
+			<key>pfm_name</key>
+			<string>StaleProcessTimeoutSeconds</string>
+			<key>pfm_title</key>
+			<string>Stale Process Timeout Seconds</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+			<key>pfm_value_placeholder</key>
+			<string>3600</string>
+			<key>pfm_value_unit</key>
+			<string>seconds</string>
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
@@ -1074,6 +1469,70 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
+			<string>3.6.0</string>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>When InteractiveMode is 1 or 2, silently pre-patches apps that are not currently open immediately after discovery and before any deferral/deadline dialog is shown. Apps that are open (blocking process detected) remain in the queue and are presented to the user as normal</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Workflows#background-patch-closed-apps</string>
+			<key>pfm_name</key>
+			<string>WorkflowBackgroundPatchClosedApps</string>
+			<key>pfm_title</key>
+			<string>Background Patch Closed Apps</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.6.0</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>Pre-downloads (stages) installers for queued updates to a local staging folder immediately after discovery, before the deferral/deadline dialog is shown to the user. This makes the later install step nearly instantaneous for staged updates. Works alongside Background Patch Closed Apps without downloading the same update twice</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Workflows#update-staging</string>
+			<key>pfm_name</key>
+			<string>WorkflowStageUpdates</string>
+			<key>pfm_title</key>
+			<string>Stage Updates</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.6.0</string>
+			<key>pfm_description</key>
+			<string>A comma-separated list of app/process names to exclude from display-sleep assertion (Focus/Do Not Disturb) detection. Useful for background utilities that permanently hold display assertions (e.g. Logi Options+, Amphetamine) that should not block interactive patching. Process names must match exactly as pmset reports them, including spaces</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings#ignorednapps</string>
+			<key>pfm_name</key>
+			<string>IgnoreDNDApps</string>
+			<key>pfm_title</key>
+			<string>Ignore Do Not Disturb Apps</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>App1,App2,App3</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.7.0</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>When WorkflowDisableRelaunch is also enabled, keep periodic headless discovery runs active using DiscoveryFrequency. These runs refresh the pending-app report, optionally stage updates, and can notify users, but never silently patch, show deferral or deadline dialogs, or install apps. Users initiate installation from the pending-apps dialog, Support App, notification action, or another explicit Install Now trigger</string>
+			<key>pfm_description_reference</key>
+			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/issues/258</string>
+			<key>pfm_name</key>
+			<string>WorkflowScheduledDiscovery</string>
+			<key>pfm_title</key>
+			<string>Scheduled Discovery Only</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
 			<string>3.0</string>
 			<key>pfm_default</key>
 			<string>FALSE</string>
@@ -1097,6 +1556,70 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>Disable Relaunch Workflow</string>
 			<key>pfm_type</key>
 			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.7.0</string>
+			<key>pfm_description</key>
+			<string>Weekday time windows when interactive App Auto-Patch must NOT run (blocked / do-not-disturb hours). Format: DAY:hh:mm-hh:mm, comma-separated, no spaces (MON-SUN, 24-hour). Multiple windows per day are allowed — for example MON:09:00-11:59,MON:13:00-17:00 blocks morning and afternoon but leaves lunch clear. Same-day ranges only — split overnight spans into two windows. Empty/unset = always allowed. During a window, AAP reschedules NextAutoLaunch to the next clear time and exits without interactive patching unless BusinessHoursSilentDuring or BusinessHoursAllowDiscovery is true. Local Mac timezone. Intentionally bypassed by --workflow-install-now / --workflow-install-now-silent / --preview-deferral-dialog. Overdue hard deadlines bypass BusinessHours by default unless BusinessHoursRespectHardDeadline is true.</string>
+			<key>pfm_description_reference</key>
+			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/issues/166</string>
+			<key>pfm_name</key>
+			<string>BusinessHours</string>
+			<key>pfm_title</key>
+			<string>Business Hours</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>MON:09:00-17:00,TUE:09:00-17:00,WED:09:00-17:00,THU:09:00-17:00,FRI:09:00-17:00</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.7.0</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>When true, even an overdue hard deadline (days or count) waits until BusinessHours clear. When false (default), an overdue hard deadline bypasses BusinessHours so mandatory installs are not delayed by days.</string>
+			<key>pfm_description_reference</key>
+			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/issues/166</string>
+			<key>pfm_name</key>
+			<string>BusinessHoursRespectHardDeadline</string>
+			<key>pfm_title</key>
+			<string>Business Hours Respect Hard Deadline</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.7.0</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>When true and during BusinessHours, AAP still runs discovery and silently patches closed apps only — no dialogs even if InteractiveMode is 1 or 2. Open or blocked apps remain queued and are deferred until BusinessHours clear. When false (default), during BusinessHours AAP only reschedules NextAutoLaunch and exits — unless BusinessHoursAllowDiscovery is true.</string>
+			<key>pfm_description_reference</key>
+			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/issues/166</string>
+			<key>pfm_name</key>
+			<string>BusinessHoursSilentDuring</string>
+			<key>pfm_title</key>
+			<string>Business Hours Silent During</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.7.0</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>When true and during BusinessHours without BusinessHoursSilentDuring, AAP runs discovery then defers until the window clears (no interactive dialogs or silent patching). Notification prefs independently control whether pending apps get a banner with Install Now. When false (default), AAP exits immediately during BusinessHours without discovery — matching historical behavior.</string>
+			<key>pfm_description_reference</key>
+			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/issues/166</string>
+			<key>pfm_name</key>
+			<string>BusinessHoursAllowDiscovery</string>
+			<key>pfm_title</key>
+			<string>Business Hours Allow Discovery</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
@@ -1168,7 +1691,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_documentation_url</key>
 			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Version-Comparison-Methods#version-comparison-method</string>
 			<key>pfm_name</key>
-			<string>versionComparisonMethod</string>
+			<string>VersionComparisonMethod</string>
 			<key>pfm_range_list</key>
 			<array>
 				<string>IS_AT_LEAST</string>
@@ -1187,8 +1710,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		<dict>
 			<key>pfm_app_min</key>
 			<string>3.5.0</string>
-			<key>pfm_default</key>
-			<false/>
 			<key>pfm_description</key>
 			<string>When enabled, if version comparison fails, AAP will fall back to using Installomator for version checking</string>
 			<key>pfm_documentation_url</key>
@@ -1451,6 +1972,54 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								</dict>
 								<dict>
 									<key>pfm_app_min</key>
+									<string>3.6.0</string>
+									<key>pfm_description</key>
+									<string>Language for the message shown on the progress dialog covering the update staging and background-patch-closed-apps phases (InteractiveMode 2 only)</string>
+									<key>pfm_documentation_url</key>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/User-Interface-%7C-Multi%E2%80%90Language-Support</string>
+									<key>pfm_name</key>
+									<string>display_string_staging_message</string>
+									<key>pfm_title</key>
+									<string>Staging Dialog Message</string>
+									<key>pfm_type</key>
+									<string>string</string>
+									<key>pfm_value_placeholder</key>
+									<string>Preparing updates</string>
+								</dict>
+								<dict>
+									<key>pfm_app_min</key>
+									<string>3.6.0</string>
+									<key>pfm_description</key>
+									<string>Language for the progress text shown while an update is being staged (downloaded ahead of time). The app display name is appended (e.g. "Staging Google Chrome …").</string>
+									<key>pfm_documentation_url</key>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/User-Interface-%7C-Multi%E2%80%90Language-Support</string>
+									<key>pfm_name</key>
+									<string>display_string_staging_progress</string>
+									<key>pfm_title</key>
+									<string>Staging Dialog Progress</string>
+									<key>pfm_type</key>
+									<string>string</string>
+									<key>pfm_value_placeholder</key>
+									<string>Staging</string>
+								</dict>
+								<dict>
+									<key>pfm_app_min</key>
+									<string>3.6.0</string>
+									<key>pfm_description</key>
+									<string>Language for the progress text shown while a closed app is being silently patched in the background. The app display name is appended (e.g. "Installing Google Chrome …").</string>
+									<key>pfm_documentation_url</key>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/User-Interface-%7C-Multi%E2%80%90Language-Support</string>
+									<key>pfm_name</key>
+									<string>display_string_silent_patch_progress</string>
+									<key>pfm_title</key>
+									<string>Silent Patch Progress</string>
+									<key>pfm_type</key>
+									<string>string</string>
+									<key>pfm_value_placeholder</key>
+									<string>Installing</string>
+								</dict>
+								<dict>
+									<key>pfm_app_min</key>
 									<string>3.2</string>
 									<key>pfm_description</key>
 									<string>Language for Button1 of the Deferral Dialog</string>
@@ -1480,6 +2049,278 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<string>string</string>
 									<key>pfm_value_placeholder</key>
 									<string>Defer</string>
+								</dict>
+								<dict>
+									<key>pfm_app_min</key>
+									<string>3.7.0</string>
+									<key>pfm_description</key>
+									<string>Language for the Later / dismiss button on the pending-apps dialog (--pending-apps-dialog and queued-apps notification Install Now action)</string>
+									<key>pfm_documentation_url</key>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/User-Interface-%7C-Multi%E2%80%90Language-Support</string>
+									<key>pfm_name</key>
+									<string>display_string_pendingapps_button_later</string>
+									<key>pfm_title</key>
+									<string>Pending Apps Dialog Later Button</string>
+									<key>pfm_type</key>
+									<string>string</string>
+									<key>pfm_value_placeholder</key>
+									<string>Later</string>
+								</dict>
+								<dict>
+									<key>pfm_app_min</key>
+									<string>3.6.0</string>
+									<key>pfm_description</key>
+									<string>Language for the message on the "Install Now" confirmation dialog shown after clicking Install Now on the Deferral Dialog</string>
+									<key>pfm_documentation_url</key>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/User-Interface-%7C-Multi%E2%80%90Language-Support</string>
+									<key>pfm_name</key>
+									<string>display_string_confirminstall_message</string>
+									<key>pfm_title</key>
+									<string>Confirm Install Dialog Message</string>
+									<key>pfm_type</key>
+									<string>string</string>
+									<key>pfm_value_placeholder</key>
+									<string>Are you sure you want to install updates now? This will close the applications listed.</string>
+								</dict>
+								<dict>
+									<key>pfm_app_min</key>
+									<string>3.6.0</string>
+									<key>pfm_description</key>
+									<string>Language for Button1 (confirm) of the "Install Now" confirmation dialog</string>
+									<key>pfm_documentation_url</key>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/User-Interface-%7C-Multi%E2%80%90Language-Support</string>
+									<key>pfm_name</key>
+									<string>display_string_confirminstall_button1</string>
+									<key>pfm_title</key>
+									<string>Confirm Install Dialog Button1</string>
+									<key>pfm_type</key>
+									<string>string</string>
+									<key>pfm_value_placeholder</key>
+									<string>Yes, Install Now</string>
+								</dict>
+								<dict>
+									<key>pfm_app_min</key>
+									<string>3.6.0</string>
+									<key>pfm_description</key>
+									<string>Language for Button2 (cancel, returns to Deferral Dialog) of the "Install Now" confirmation dialog</string>
+									<key>pfm_documentation_url</key>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/User-Interface-%7C-Multi%E2%80%90Language-Support</string>
+									<key>pfm_name</key>
+									<string>display_string_confirminstall_button2</string>
+									<key>pfm_title</key>
+									<string>Confirm Install Dialog Button2</string>
+									<key>pfm_type</key>
+									<string>string</string>
+									<key>pfm_value_placeholder</key>
+									<string>No, Go Back</string>
+								</dict>
+								<dict>
+									<key>pfm_app_min</key>
+									<string>3.6.0</string>
+									<key>pfm_description</key>
+									<string>Language for the first part of the countdown text on the "Install Now" confirmation dialog, shown before the remaining number of seconds</string>
+									<key>pfm_documentation_url</key>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/User-Interface-%7C-Multi%E2%80%90Language-Support</string>
+									<key>pfm_name</key>
+									<string>display_string_confirminstall_countdown</string>
+									<key>pfm_title</key>
+									<string>Confirm Install Dialog Countdown</string>
+									<key>pfm_type</key>
+									<string>string</string>
+									<key>pfm_value_placeholder</key>
+									<string>Continuing automatically in</string>
+								</dict>
+								<dict>
+									<key>pfm_app_min</key>
+									<string>3.6.0</string>
+									<key>pfm_description</key>
+									<string>Language for the suffix of the countdown text on the "Install Now" confirmation dialog, shown after the remaining number of seconds</string>
+									<key>pfm_documentation_url</key>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/User-Interface-%7C-Multi%E2%80%90Language-Support</string>
+									<key>pfm_name</key>
+									<string>display_string_confirminstall_countdown_suffix</string>
+									<key>pfm_title</key>
+									<string>Confirm Install Dialog Countdown Suffix</string>
+									<key>pfm_type</key>
+									<string>string</string>
+									<key>pfm_value_placeholder</key>
+									<string>seconds…</string>
+								</dict>
+								<dict>
+									<key>pfm_app_min</key>
+									<string>3.7.0</string>
+									<key>pfm_description</key>
+									<string>Language for the message on the dialog shown when the patching progress window was closed (Dock Quit / menu Quit) while updates are still running</string>
+									<key>pfm_documentation_url</key>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/User-Interface-%7C-Multi%E2%80%90Language-Support</string>
+									<key>pfm_name</key>
+									<string>display_string_dialogdismissed_message</string>
+									<key>pfm_title</key>
+									<string>Dialog Dismissed Message</string>
+									<key>pfm_type</key>
+									<string>string</string>
+									<key>pfm_value_placeholder</key>
+									<string>The App Auto-Patch window was closed, but updates are still running in the background.</string>
+								</dict>
+								<dict>
+									<key>pfm_app_min</key>
+									<string>3.7.0</string>
+									<key>pfm_description</key>
+									<string>Language for Button1 (Show Progress) on the dialog shown when the patching progress window was closed while updates are still running</string>
+									<key>pfm_documentation_url</key>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/User-Interface-%7C-Multi%E2%80%90Language-Support</string>
+									<key>pfm_name</key>
+									<string>display_string_dialogdismissed_button1</string>
+									<key>pfm_title</key>
+									<string>Dialog Dismissed Button1</string>
+									<key>pfm_type</key>
+									<string>string</string>
+									<key>pfm_value_placeholder</key>
+									<string>Show Progress</string>
+								</dict>
+								<dict>
+									<key>pfm_app_min</key>
+									<string>3.7.0</string>
+									<key>pfm_description</key>
+									<string>Language for Button2 (Continue in Background) on the dialog shown when the patching progress window was closed while updates are still running</string>
+									<key>pfm_documentation_url</key>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/User-Interface-%7C-Multi%E2%80%90Language-Support</string>
+									<key>pfm_name</key>
+									<string>display_string_dialogdismissed_button2</string>
+									<key>pfm_title</key>
+									<string>Dialog Dismissed Button2</string>
+									<key>pfm_type</key>
+									<string>string</string>
+									<key>pfm_value_placeholder</key>
+									<string>Continue in Background</string>
+								</dict>
+								<dict>
+									<key>pfm_app_min</key>
+									<string>3.7.0</string>
+									<key>pfm_description</key>
+									<string>Language for the message on the dialog shown when the discovery or staging window was closed (Dock Quit / menu Quit) while App Auto-Patch is still preparing. Default explains Keep Running vs Stop App Auto-Patch.</string>
+									<key>pfm_documentation_url</key>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/User-Interface-%7C-Multi%E2%80%90Language-Support</string>
+									<key>pfm_name</key>
+									<string>display_string_preparationdismissed_message</string>
+									<key>pfm_title</key>
+									<string>Preparation Dismissed Message</string>
+									<key>pfm_type</key>
+									<string>string</string>
+									<key>pfm_value_placeholder</key>
+									<string>The App Auto-Patch preparation window was closed. You can keep the workflow running in the background or stop App Auto-Patch until its next scheduled run.</string>
+								</dict>
+								<dict>
+									<key>pfm_app_min</key>
+									<string>3.7.0</string>
+									<key>pfm_description</key>
+									<string>Language for Button1 (Keep Running) on the discovery/staging quit prompt</string>
+									<key>pfm_documentation_url</key>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/User-Interface-%7C-Multi%E2%80%90Language-Support</string>
+									<key>pfm_name</key>
+									<string>display_string_preparationdismissed_button1</string>
+									<key>pfm_title</key>
+									<string>Preparation Dismissed Button1</string>
+									<key>pfm_type</key>
+									<string>string</string>
+									<key>pfm_value_placeholder</key>
+									<string>Keep Running</string>
+								</dict>
+								<dict>
+									<key>pfm_app_min</key>
+									<string>3.7.0</string>
+									<key>pfm_description</key>
+									<string>Language for Button2 (Stop App Auto-Patch) on the discovery/staging quit prompt</string>
+									<key>pfm_documentation_url</key>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/User-Interface-%7C-Multi%E2%80%90Language-Support</string>
+									<key>pfm_name</key>
+									<string>display_string_preparationdismissed_button2</string>
+									<key>pfm_title</key>
+									<string>Preparation Dismissed Button2</string>
+									<key>pfm_type</key>
+									<string>string</string>
+									<key>pfm_value_placeholder</key>
+									<string>Stop App Auto-Patch</string>
+								</dict>
+								<dict>
+									<key>pfm_app_min</key>
+									<string>3.7.0</string>
+									<key>pfm_description</key>
+									<string>Banner notification message when silent background patching updates apps. Use {count} for the number of apps updated.</string>
+									<key>pfm_documentation_url</key>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/User-Interface-%7C-Multi%E2%80%90Language-Support</string>
+									<key>pfm_name</key>
+									<string>display_string_notification_silent_updated</string>
+									<key>pfm_title</key>
+									<string>Notification Silent Updated Message</string>
+									<key>pfm_type</key>
+									<string>string</string>
+									<key>pfm_value_placeholder</key>
+									<string>App Auto-Patch has updated {count} application(s) in the background.</string>
+								</dict>
+								<dict>
+									<key>pfm_app_min</key>
+									<string>3.7.0</string>
+									<key>pfm_description</key>
+									<string>Banner notification message when apps require updates (e.g. during Business Hours). Use {count} for the number of apps queued. Includes Install Now / Dismiss actions.</string>
+									<key>pfm_documentation_url</key>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/User-Interface-%7C-Multi%E2%80%90Language-Support</string>
+									<key>pfm_name</key>
+									<string>display_string_notification_apps_queued</string>
+									<key>pfm_title</key>
+									<string>Notification Apps Queued Message</string>
+									<key>pfm_type</key>
+									<string>string</string>
+									<key>pfm_value_placeholder</key>
+									<string>{count} application(s) require updates.</string>
+								</dict>
+								<dict>
+									<key>pfm_app_min</key>
+									<string>3.7.0</string>
+									<key>pfm_description</key>
+									<string>Banner notification message when silent patching updated some apps and others remain queued. Use {count} for updated and {remaining} for still-queued apps. Includes Install Now / Dismiss when remaining &gt; 0.</string>
+									<key>pfm_documentation_url</key>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/User-Interface-%7C-Multi%E2%80%90Language-Support</string>
+									<key>pfm_name</key>
+									<string>display_string_notification_silent_and_queued</string>
+									<key>pfm_title</key>
+									<string>Notification Silent And Queued Message</string>
+									<key>pfm_type</key>
+									<string>string</string>
+									<key>pfm_value_placeholder</key>
+									<string>{count} application(s) were updated in the background. {remaining} open application(s) remain queued.</string>
+								</dict>
+								<dict>
+									<key>pfm_app_min</key>
+									<string>3.7.0</string>
+									<key>pfm_description</key>
+									<string>Label for the Install Now action on banner notifications that offer starting --workflow-install-now</string>
+									<key>pfm_documentation_url</key>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/User-Interface-%7C-Multi%E2%80%90Language-Support</string>
+									<key>pfm_name</key>
+									<string>display_string_notification_button_install</string>
+									<key>pfm_title</key>
+									<string>Notification Install Now Button</string>
+									<key>pfm_type</key>
+									<string>string</string>
+									<key>pfm_value_placeholder</key>
+									<string>Install Now</string>
+								</dict>
+								<dict>
+									<key>pfm_app_min</key>
+									<string>3.7.0</string>
+									<key>pfm_description</key>
+									<string>Label for the Dismiss action on banner notifications</string>
+									<key>pfm_documentation_url</key>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/User-Interface-%7C-Multi%E2%80%90Language-Support</string>
+									<key>pfm_name</key>
+									<string>display_string_notification_button_dismiss</string>
+									<key>pfm_title</key>
+									<string>Notification Dismiss Button</string>
+									<key>pfm_type</key>
+									<string>string</string>
+									<key>pfm_value_placeholder</key>
+									<string>Dismiss</string>
 								</dict>
 								<dict>
 									<key>pfm_app_min</key>
@@ -1592,6 +2433,54 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<string>string</string>
 									<key>pfm_value_placeholder</key>
 									<string>Defer updates for:</string>
+								</dict>
+								<dict>
+									<key>pfm_app_min</key>
+									<string>3.6.0</string>
+									<key>pfm_description</key>
+									<string>Language for the "Current Version" prefix shown under each app in the deferral/hard deadline dialog patch lists</string>
+									<key>pfm_documentation_url</key>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/User-Interface-%7C-Multi%E2%80%90Language-Support</string>
+									<key>pfm_name</key>
+									<string>display_string_version_current</string>
+									<key>pfm_title</key>
+									<string>Current Version Prefix</string>
+									<key>pfm_type</key>
+									<string>string</string>
+									<key>pfm_value_placeholder</key>
+									<string>Current Version:</string>
+								</dict>
+								<dict>
+									<key>pfm_app_min</key>
+									<string>3.6.0</string>
+									<key>pfm_description</key>
+									<string>Language for the "New Version" prefix shown under each app in the deferral/hard deadline dialog patch lists</string>
+									<key>pfm_documentation_url</key>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/User-Interface-%7C-Multi%E2%80%90Language-Support</string>
+									<key>pfm_name</key>
+									<string>display_string_version_new</string>
+									<key>pfm_title</key>
+									<string>New Version Prefix</string>
+									<key>pfm_type</key>
+									<string>string</string>
+									<key>pfm_value_placeholder</key>
+									<string>New Version:</string>
+								</dict>
+								<dict>
+									<key>pfm_app_min</key>
+									<string>3.6.0</string>
+									<key>pfm_description</key>
+									<string>Language for the "Later" button shown by the aap_pending_apps_dialog.zsh Root3 Support App Extension example script (Resources/SupportApp-Extension/) - not used by App Auto-Patch itself</string>
+									<key>pfm_documentation_url</key>
+									<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Reporting</string>
+									<key>pfm_name</key>
+									<string>display_string_pendingapps_button_later</string>
+									<key>pfm_title</key>
+									<string>Pending Apps Dialog "Later" Button (Support App Extension)</string>
+									<key>pfm_type</key>
+									<string>string</string>
+									<key>pfm_value_placeholder</key>
+									<string>Later</string>
 								</dict>
 								<dict>
 									<key>pfm_app_min</key>
@@ -2006,6 +2895,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 	<key>pfm_unique</key>
 	<true/>
 	<key>pfm_version</key>
-	<integer>3</integer>
+	<integer>4</integer>
 </dict>
 </plist>
