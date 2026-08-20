@@ -191,7 +191,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_description</key>
-			<string>The list of plugin IDs that won't show up in the user's Share menu. This key is used only if there is no 'SHKAllowedShareServices' key.</string>
+			<string>The list of plugin IDs that won't show up in the user's Share menu. This key is used only if there's no 'SHKAllowedShareServices' key.</string>
 			<key>pfm_exclude</key>
 			<array>
 				<dict>

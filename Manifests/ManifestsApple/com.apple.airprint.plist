@@ -178,7 +178,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 							<key>pfm_range_min</key>
 							<integer>0</integer>
 							<key>pfm_title</key>
-							<string>Port Number</string>
+							<string>Port number</string>
 							<key>pfm_type</key>
 							<string>integer</string>
 							<key>pfmx_supported_oses</key>
@@ -209,7 +209,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 							<key>pfm_require</key>
 							<string>always</string>
 							<key>pfm_title</key>
-							<string>Resource Path</string>
+							<string>Resource path</string>
 							<key>pfm_type</key>
 							<string>string</string>
 							<key>pfm_value_placeholder</key>
@@ -219,7 +219,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 							<key>pfm_default</key>
 							<false/>
 							<key>pfm_description</key>
-							<string>If 'true', AirPrint connections are secured by Transport Layer Security (TLS). Available only in iOS 11 and later.</string>
+							<string>If 'true', Transport Layer Security (TLS) secures AirPrint connections. Available only in iOS 11 and later.</string>
 							<key>pfm_ios_min</key>
 							<string>11.0</string>
 							<key>pfm_name</key>

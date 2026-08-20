@@ -202,7 +202,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_supervised</key>
 			<true/>
 			<key>pfm_title</key>
-			<string>Allow Modifying Device Name</string>
+			<string>Allow modifying device name</string>
 			<key>pfm_tvos_min</key>
 			<string>11.0</string>
 			<key>pfm_type</key>
@@ -371,7 +371,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_name</key>
 			<string>allowCamera</string>
 			<key>pfm_title</key>
-			<string>Allow Camera Use</string>
+			<string>Allow camera use</string>
 			<key>pfm_tvos_min</key>
 			<string>17.0</string>
 			<key>pfm_type</key>
@@ -482,6 +482,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		<dict>
 			<key>pfm_description</key>
 			<string>If present, the system prevents showing or launching apps with bundle IDs in the array. Include the value 'com.apple.webapp' to restrict all webclips. This applies to App Store apps, marketplace apps, and locally installed apps (using Configurator, Xcode, and so forth).
+Deprecated: use the declarative management 'com.apple.configuration.app.settings' configuration.
 Note: Denying system apps may disable other functionality. For example, denying the App Store app may prevent users from accepting the terms and conditions for the user-based Volume Purchase Program (VPP).</string>
 			<key>pfm_exclude</key>
 			<array>
@@ -508,6 +509,8 @@ Note: Denying system apps may disable other functionality. For example, denying 
 					<true/>
 					<key>pfm_title</key>
 					<string>Bundle ID</string>
+					<key>pfm_tvos_deprecated</key>
+					<string>27.0</string>
 					<key>pfm_tvos_min</key>
 					<string>15.0</string>
 					<key>pfm_type</key>
@@ -519,7 +522,9 @@ Note: Denying system apps may disable other functionality. For example, denying 
 			<key>pfm_supervised</key>
 			<true/>
 			<key>pfm_title</key>
-			<string>Blocked Apps</string>
+			<string>Blocked apps</string>
+			<key>pfm_tvos_deprecated</key>
+			<string>27.0</string>
 			<key>pfm_tvos_min</key>
 			<string>15.0</string>
 			<key>pfm_type</key>
@@ -528,6 +533,8 @@ Note: Denying system apps may disable other functionality. For example, denying 
 			<dict>
 				<key>iOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>27.0</string>
 					<key>pfmx_introduced</key>
 					<string>15.0</string>
 					<key>pfmx_supervised</key>
@@ -545,6 +552,8 @@ Note: Denying system apps may disable other functionality. For example, denying 
 				</dict>
 				<key>tvOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>27.0</string>
 					<key>pfmx_introduced</key>
 					<string>15.0</string>
 					<key>pfmx_supervised</key>
@@ -552,8 +561,17 @@ Note: Denying system apps may disable other functionality. For example, denying 
 				</dict>
 				<key>visionOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>27.0</string>
 					<key>pfmx_introduced</key>
-					<string>n/a</string>
+					<string>27.0</string>
+					<key>pfmx_supervised</key>
+					<true/>
+					<key>pfmx_user_enrollment</key>
+					<dict>
+						<key>pfmx_mode</key>
+						<string>forbidden</string>
+					</dict>
 				</dict>
 				<key>watchOS</key>
 				<dict>
@@ -564,7 +582,7 @@ Note: Denying system apps may disable other functionality. For example, denying 
 		</dict>
 		<dict>
 			<key>pfm_description</key>
-			<string>Use 'blockedAppBundleIDs' instead.</string>
+			<string>Deprecated: use the declarative management 'com.apple.configuration.app.settings' configuration.</string>
 			<key>pfm_exclude</key>
 			<array>
 				<dict>
@@ -605,7 +623,7 @@ Note: Denying system apps may disable other functionality. For example, denying 
 			<key>pfm_supervised</key>
 			<true/>
 			<key>pfm_title</key>
-			<string>Blacklisted Apps</string>
+			<string>Blacklisted apps</string>
 			<key>pfm_tvos_deprecated</key>
 			<string>15.0</string>
 			<key>pfm_tvos_min</key>
@@ -656,7 +674,8 @@ Note: Denying system apps may disable other functionality. For example, denying 
 		</dict>
 		<dict>
 			<key>pfm_description</key>
-			<string>If present, the system only shows or can launch apps with bundle IDs in the array. Include the value 'com.apple.webapp' to allow all webclips. This applies to App Store apps, marketplace apps, and locally installed apps (using Configurator, Xcode, and so forth).</string>
+			<string>If present, the system only shows or can launch apps with bundle IDs in the array. Include the value 'com.apple.webapp' to allow all webclips. This applies to App Store apps, marketplace apps, and locally installed apps (using Configurator, Xcode, and so forth).
+Deprecated: use the declarative management 'com.apple.configuration.app.settings' configuration.</string>
 			<key>pfm_exclude</key>
 			<array>
 				<dict>
@@ -682,6 +701,8 @@ Note: Denying system apps may disable other functionality. For example, denying 
 					<true/>
 					<key>pfm_title</key>
 					<string>Bundle ID</string>
+					<key>pfm_tvos_deprecated</key>
+					<string>27.0</string>
 					<key>pfm_tvos_min</key>
 					<string>15.0</string>
 					<key>pfm_type</key>
@@ -693,7 +714,9 @@ Note: Denying system apps may disable other functionality. For example, denying 
 			<key>pfm_supervised</key>
 			<true/>
 			<key>pfm_title</key>
-			<string>Allow Listed Apps</string>
+			<string>Allow listed apps</string>
+			<key>pfm_tvos_deprecated</key>
+			<string>27.0</string>
 			<key>pfm_tvos_min</key>
 			<string>15.0</string>
 			<key>pfm_type</key>
@@ -702,6 +725,8 @@ Note: Denying system apps may disable other functionality. For example, denying 
 			<dict>
 				<key>iOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>27.0</string>
 					<key>pfmx_introduced</key>
 					<string>15.0</string>
 					<key>pfmx_supervised</key>
@@ -719,6 +744,8 @@ Note: Denying system apps may disable other functionality. For example, denying 
 				</dict>
 				<key>tvOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>27.0</string>
 					<key>pfmx_introduced</key>
 					<string>15.0</string>
 					<key>pfmx_supervised</key>
@@ -726,8 +753,17 @@ Note: Denying system apps may disable other functionality. For example, denying 
 				</dict>
 				<key>visionOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>27.0</string>
 					<key>pfmx_introduced</key>
-					<string>n/a</string>
+					<string>27.0</string>
+					<key>pfmx_supervised</key>
+					<true/>
+					<key>pfmx_user_enrollment</key>
+					<dict>
+						<key>pfmx_mode</key>
+						<string>forbidden</string>
+					</dict>
 				</dict>
 				<key>watchOS</key>
 				<dict>
@@ -738,7 +774,7 @@ Note: Denying system apps may disable other functionality. For example, denying 
 		</dict>
 		<dict>
 			<key>pfm_description</key>
-			<string>Use 'allowListedAppBundleIDs' instead.</string>
+			<string>Deprecated: use the declarative management 'com.apple.configuration.app.settings' configuration.</string>
 			<key>pfm_exclude</key>
 			<array>
 				<dict>
@@ -779,7 +815,7 @@ Note: Denying system apps may disable other functionality. For example, denying 
 			<key>pfm_supervised</key>
 			<true/>
 			<key>pfm_title</key>
-			<string>Whitelisted Apps</string>
+			<string>Whitelisted apps</string>
 			<key>pfm_tvos_deprecated</key>
 			<string>15.0</string>
 			<key>pfm_tvos_min</key>
@@ -961,7 +997,7 @@ Note: Denying system apps may disable other functionality. For example, denying 
 				<string>United Kingdom</string>
 			</array>
 			<key>pfm_title</key>
-			<string>Region Code</string>
+			<string>Region code</string>
 			<key>pfm_tvos_min</key>
 			<string>11.3</string>
 			<key>pfm_type</key>
@@ -1280,7 +1316,7 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 			<key>pfm_supervised</key>
 			<true/>
 			<key>pfm_title</key>
-			<string>Allow Explicit Content</string>
+			<string>Allow explicit content</string>
 			<key>pfm_tvos_min</key>
 			<string>11.3</string>
 			<key>pfm_type</key>
@@ -1334,7 +1370,7 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 			<key>pfm_name</key>
 			<string>allowBookstoreErotica</string>
 			<key>pfm_title</key>
-			<string>Allow Bookstore Erotica</string>
+			<string>Allow Book Store erotica</string>
 			<key>pfm_tvos_deprecated</key>
 			<string>17.0</string>
 			<key>pfm_tvos_min</key>
@@ -1590,7 +1626,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>If 'true', the system delays user visibility of software updates. In macOS, the system allows seed build updates without delay. The delay is 30 days unless you set 'enforcedSoftwareUpdateDelay' to another value.</string>
+			<string>If 'true', the system delays user visibility of software updates. In macOS, the system allows seed build updates without delay. The delay is 30 days unless you set 'enforcedSoftwareUpdateDelay' to another value.
+Removed: use the declarative management 'com.apple.configuration.softwareupdate.settings' configuration.</string>
 			<key>pfm_name</key>
 			<string>forceDelayedSoftwareUpdates</string>
 			<key>pfm_supervised</key>
@@ -1611,6 +1648,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 					<string>26.0</string>
 					<key>pfmx_introduced</key>
 					<string>11.3</string>
+					<key>pfmx_removed</key>
+					<string>27.0</string>
 					<key>pfmx_supervised</key>
 					<true/>
 					<key>pfmx_user_enrollment</key>
@@ -1625,6 +1664,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 					<string>26.0</string>
 					<key>pfmx_introduced</key>
 					<string>10.13</string>
+					<key>pfmx_removed</key>
+					<string>27.0</string>
 					<key>pfmx_user_enrollment</key>
 					<dict>
 						<key>pfmx_mode</key>
@@ -1637,6 +1678,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 					<string>26.0</string>
 					<key>pfmx_introduced</key>
 					<string>12.2</string>
+					<key>pfmx_removed</key>
+					<string>27.0</string>
 					<key>pfmx_supervised</key>
 					<true/>
 				</dict>
@@ -1656,7 +1699,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 			<key>pfm_default</key>
 			<integer>30</integer>
 			<key>pfm_description</key>
-			<string>How many days to delay a software update on the device. With this restriction in place, the user doesn't see a software update until the specified number of days after the software update release date. The restrictions 'forceDelayedAppSoftwareUpdates' and 'forceDelayedSoftwareUpdates' use this value.</string>
+			<string>How many days to delay a software update on the device. With this restriction in place, the user doesn't see a software update until the specified number of days after the software update release date. The restrictions 'forceDelayedAppSoftwareUpdates' and 'forceDelayedSoftwareUpdates' use this value.
+Removed: use the declarative management 'com.apple.configuration.softwareupdate.settings' configuration.</string>
 			<key>pfm_exclude</key>
 			<array>
 				<dict>
@@ -1699,6 +1743,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 					<string>26.0</string>
 					<key>pfmx_introduced</key>
 					<string>11.3</string>
+					<key>pfmx_removed</key>
+					<string>27.0</string>
 					<key>pfmx_supervised</key>
 					<true/>
 					<key>pfmx_user_enrollment</key>
@@ -1713,6 +1759,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 					<string>26.0</string>
 					<key>pfmx_introduced</key>
 					<string>10.13.4</string>
+					<key>pfmx_removed</key>
+					<string>27.0</string>
 					<key>pfmx_user_enrollment</key>
 					<dict>
 						<key>pfmx_mode</key>
@@ -1725,6 +1773,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 					<string>26.0</string>
 					<key>pfmx_introduced</key>
 					<string>12.2</string>
+					<key>pfmx_removed</key>
+					<string>27.0</string>
 					<key>pfmx_supervised</key>
 					<true/>
 				</dict>
@@ -1750,7 +1800,7 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 			<key>pfm_supervised</key>
 			<true/>
 			<key>pfm_title</key>
-			<string>Allow Device Sleep</string>
+			<string>Allow device sleep</string>
 			<key>pfm_tvos_min</key>
 			<string>13.0</string>
 			<key>pfm_type</key>

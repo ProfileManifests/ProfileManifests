@@ -8030,8 +8030,7 @@ This property is deprecated in iOS 13.4 and later; use the 'VPNUUID' property of
 		</dict>
 		<dict>
 			<key>pfm_description</key>
-			<string>An array with entries that must each specify a domain that triggers this VPN. The domains must also be part of the 'apple-app-site-association' file, as described in 'Supporting associated domains'.
-Available in iOS 14 and later, and macOS 11 and later.</string>
+			<string>An array with entries that must each specify a domain that triggers this VPN. The domains must also be part of the 'apple-app-site-association' file, as described in 'Supporting associated domains'.</string>
 			<key>pfm_ios_min</key>
 			<string>14.0</string>
 			<key>pfm_macos_min</key>
@@ -8073,8 +8072,7 @@ Available in iOS 14 and later, and macOS 11 and later.</string>
 		</dict>
 		<dict>
 			<key>pfm_description</key>
-			<string>An array with entries that each specify a domain that doesn't trigger this VPN for connections to the domain.
-Available in iOS 14 and later, and macOS 11 and later.</string>
+			<string>An array with entries that each specify a domain that doesn't trigger this VPN for connections to the domain.</string>
 			<key>pfm_ios_min</key>
 			<string>14.0</string>
 			<key>pfm_macos_min</key>
@@ -8124,8 +8122,7 @@ Available in iOS 14 and later, and macOS 11 and later.</string>
 		</dict>
 		<dict>
 			<key>pfm_description</key>
-			<string>An array of SMB domains that's accessible through this VPN connection.
-Available in iOS 13 and later.</string>
+			<string>An array of SMB domains that's accessible through this VPN connection.</string>
 			<key>pfm_ios_min</key>
 			<string>13.0</string>
 			<key>pfm_name</key>
@@ -8197,11 +8194,6 @@ Available in iOS 13 and later.</string>
 					<string>18.0</string>
 				</dict>
 				<key>macOS</key>
-				<dict>
-					<key>pfmx_introduced</key>
-					<string>n/a</string>
-				</dict>
-				<key>tvOS</key>
 				<dict>
 					<key>pfmx_introduced</key>
 					<string>n/a</string>

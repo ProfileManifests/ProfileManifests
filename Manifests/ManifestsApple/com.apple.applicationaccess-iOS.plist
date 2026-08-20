@@ -375,7 +375,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_name</key>
 			<string>allowCamera</string>
 			<key>pfm_title</key>
-			<string>Allow Camera Use</string>
+			<string>Allow camera use</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 			<key>pfmx_supported_oses</key>
@@ -461,7 +461,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_supervised</key>
 			<true/>
 			<key>pfm_title</key>
-			<string>Allowed Exceptions to Camera Restriction</string>
+			<string>Allowed exceptions to camera restriction</string>
 			<key>pfm_type</key>
 			<string>array</string>
 			<key>pfmx_supported_oses</key>
@@ -519,7 +519,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_supervised</key>
 			<true/>
 			<key>pfm_title</key>
-			<string>Allow Video Conferencing</string>
+			<string>Allow video conferencing</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 			<key>pfmx_supported_oses</key>
@@ -573,7 +573,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_name</key>
 			<string>allowCloudBackup</string>
 			<key>pfm_title</key>
-			<string>Allow iCloud Backup</string>
+			<string>Allow iCloud backup</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 			<key>pfmx_supported_oses</key>
@@ -625,7 +625,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_name</key>
 			<string>allowCloudPhotoLibrary</string>
 			<key>pfm_title</key>
-			<string>Allow iCloud Photo Library</string>
+			<string>Allow iCloud photo library</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 			<key>pfmx_supported_oses</key>
@@ -733,7 +733,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_name</key>
 			<string>allowSharedStream</string>
 			<key>pfm_title</key>
-			<string>Allow Shared Stream</string>
+			<string>Allow shared stream</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 			<key>pfmx_supported_oses</key>
@@ -905,7 +905,7 @@ However, if 'false', the system doesn't prevent AutoFill for contact info and cr
 			<key>pfm_name</key>
 			<string>allowFingerprintForUnlock</string>
 			<key>pfm_title</key>
-			<string>Allow Touch ID to Unlock Device</string>
+			<string>Allow Touch ID to unlock device</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 			<key>pfmx_supported_oses</key>
@@ -964,7 +964,7 @@ However, if 'false', the system doesn't prevent AutoFill for contact info and cr
 			<key>pfm_supervised</key>
 			<true/>
 			<key>pfm_title</key>
-			<string>Allow Bookstore</string>
+			<string>Allow Book Store</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 			<key>pfmx_supported_oses</key>
@@ -1050,7 +1050,14 @@ However, if 'false', the system doesn't prevent AutoFill for contact info and cr
 				<key>visionOS</key>
 				<dict>
 					<key>pfmx_introduced</key>
-					<string>n/a</string>
+					<string>27.0</string>
+					<key>pfmx_supervised</key>
+					<true/>
+					<key>pfmx_user_enrollment</key>
+					<dict>
+						<key>pfmx_mode</key>
+						<string>forbidden</string>
+					</dict>
 				</dict>
 				<key>watchOS</key>
 				<dict>
@@ -1278,7 +1285,7 @@ However, if 'false', the system doesn't prevent AutoFill for contact info and cr
 			<key>pfm_supervised</key>
 			<true/>
 			<key>pfm_title</key>
-			<string>Allow iTunes Radio</string>
+			<string>Allow iTunes radio</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 			<key>pfmx_supported_oses</key>
@@ -1345,7 +1352,7 @@ However, if 'false', the system doesn't prevent AutoFill for contact info and cr
 			<key>pfm_supervised</key>
 			<true/>
 			<key>pfm_title</key>
-			<string>Allow Hiding Apps</string>
+			<string>Allow hiding apps</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 			<key>pfmx_supported_oses</key>
@@ -1401,7 +1408,7 @@ However, if 'false', the system doesn't prevent AutoFill for contact info and cr
 			<key>pfm_supervised</key>
 			<true/>
 			<key>pfm_title</key>
-			<string>Allow Locking Apps</string>
+			<string>Allow locking apps</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 			<key>pfmx_supported_oses</key>
@@ -1457,7 +1464,7 @@ However, if 'false', the system doesn't prevent AutoFill for contact info and cr
 			<key>pfm_supervised</key>
 			<true/>
 			<key>pfm_title</key>
-			<string>Allow iCloud Document Sync</string>
+			<string>Allow iCloud document sync</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 			<key>pfmx_supported_oses</key>
@@ -1574,7 +1581,8 @@ However, if 'false', the system doesn't prevent AutoFill for contact info and cr
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
-			<string>If 'false', the system disables definition lookup.</string>
+			<string>If 'false', the system disables definition lookup.
+Deprecated: use the declarative management 'com.apple.configuration.keyboard.settings' configuration.</string>
 			<key>pfm_ios_deprecated</key>
 			<string>26.4</string>
 			<key>pfm_ios_min</key>
@@ -1815,7 +1823,7 @@ However, if 'false', the system doesn't prevent AutoFill for contact info and cr
 			<key>pfm_name</key>
 			<string>allowScreenShot</string>
 			<key>pfm_title</key>
-			<string>Allow Screenshots and Screen Recording</string>
+			<string>Allow screenshots and screen recording</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 			<key>pfmx_supported_oses</key>
@@ -1847,7 +1855,7 @@ However, if 'false', the system doesn't prevent AutoFill for contact info and cr
 			<key>pfm_name</key>
 			<string>allowRemoteScreenObservation</string>
 			<key>pfm_title</key>
-			<string>Allow Remote Screen Observation</string>
+			<string>Allow remote screen observation</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 			<key>pfmx_supported_oses</key>
@@ -1979,7 +1987,7 @@ However, if 'false', the system doesn't prevent AutoFill for contact info and cr
 			<key>pfm_name</key>
 			<string>allowVoiceDialing</string>
 			<key>pfm_title</key>
-			<string>Allow Voice Dialing While Device is Locked</string>
+			<string>Allow voice dialing while device is locked</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 			<key>pfmx_supported_oses</key>
@@ -2020,7 +2028,8 @@ However, if 'false', the system doesn't prevent AutoFill for contact info and cr
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
-			<string>If 'false', the system disables Siri.</string>
+			<string>If 'false', the system disables Siri.
+Deprecated: use the declarative management 'com.apple.configuration.siri.settings' configuration.</string>
 			<key>pfm_ios_deprecated</key>
 			<string>26.4</string>
 			<key>pfm_ios_min</key>
@@ -2075,7 +2084,8 @@ However, if 'false', the system doesn't prevent AutoFill for contact info and cr
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
-			<string>If 'false', the system disables Siri when the device is locked. The system ignores this restriction if the device doesn't have a passcode set.</string>
+			<string>If 'false', the system disables Siri when the device is locked. The system ignores this restriction if the device doesn't have a passcode set.
+Deprecated: use the declarative management 'com.apple.configuration.siri.settings' configuration.</string>
 			<key>pfm_ios_deprecated</key>
 			<string>26.4</string>
 			<key>pfm_ios_min</key>
@@ -2083,7 +2093,7 @@ However, if 'false', the system doesn't prevent AutoFill for contact info and cr
 			<key>pfm_name</key>
 			<string>allowAssistantWhileLocked</string>
 			<key>pfm_title</key>
-			<string>Allow Siri While Locked</string>
+			<string>Allow Siri while locked</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 			<key>pfmx_supported_oses</key>
@@ -2121,7 +2131,8 @@ However, if 'false', the system doesn't prevent AutoFill for contact info and cr
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>If 'true', the system forces the use of the profanity filter for Siri and dictation. Requires a supervised device in iOS.</string>
+			<string>If 'true', the system forces the use of the profanity filter for Siri and dictation. Requires a supervised device in iOS.
+Deprecated: use the declarative management 'com.apple.configuration.siri.settings' configuration.</string>
 			<key>pfm_ios_deprecated</key>
 			<string>26.4</string>
 			<key>pfm_ios_min</key>
@@ -2131,7 +2142,7 @@ However, if 'false', the system doesn't prevent AutoFill for contact info and cr
 			<key>pfm_supervised</key>
 			<true/>
 			<key>pfm_title</key>
-			<string>Enable Siri Profanity Filter</string>
+			<string>Enable Siri profanity filter</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 			<key>pfmx_supported_oses</key>
@@ -2183,7 +2194,8 @@ However, if 'false', the system doesn't prevent AutoFill for contact info and cr
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
-			<string>If 'false', the system prevents Siri from querying user-generated content from the web.</string>
+			<string>If 'false', the system prevents Siri from querying user-generated content from the web.
+Deprecated: use the declarative management 'com.apple.configuration.siri.settings' configuration.</string>
 			<key>pfm_ios_deprecated</key>
 			<string>26.4</string>
 			<key>pfm_ios_min</key>
@@ -2264,7 +2276,7 @@ However, if 'false', the system doesn't prevent AutoFill for contact info and cr
 			<key>pfm_supervised</key>
 			<true/>
 			<key>pfm_title</key>
-			<string>Allow Siri Suggestions</string>
+			<string>Allow Siri suggestions</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 			<key>pfmx_supported_oses</key>
@@ -2319,7 +2331,7 @@ In iOS 10 and later, MDM commands can override this restriction. Requires a supe
 			<key>pfm_supervised</key>
 			<true/>
 			<key>pfm_title</key>
-			<string>Allow App Installation</string>
+			<string>Allow app installation</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 			<key>pfmx_supported_oses</key>
@@ -2376,7 +2388,7 @@ In iOS 10 and later, MDM commands can override this restriction.</string>
 			<key>pfm_supervised</key>
 			<true/>
 			<key>pfm_title</key>
-			<string>Allow App Installation from App Store</string>
+			<string>Allow app installation from app store</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 			<key>pfmx_supported_oses</key>
@@ -2434,7 +2446,7 @@ In iOS 10 and later, MDM commands can override this restriction.</string>
 			<key>pfm_supervised</key>
 			<true/>
 			<key>pfm_title</key>
-			<string>Allow Automatic App Downloads</string>
+			<string>Allow automatic app downloads</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 			<key>pfmx_supported_oses</key>
@@ -2485,7 +2497,7 @@ In iOS 10 and later, MDM commands can override this restriction.</string>
 			<key>pfm_supervised</key>
 			<true/>
 			<key>pfm_title</key>
-			<string>Allow App Installation from alternative marketplaces</string>
+			<string>Allow app installation from alternative marketplaces</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 			<key>pfmx_supported_oses</key>
@@ -2541,7 +2553,7 @@ In iOS 10 and later, MDM commands can override this restriction.</string>
 			<key>pfm_supervised</key>
 			<true/>
 			<key>pfm_title</key>
-			<string>Allow App Installation from web sites</string>
+			<string>Allow app installation from web sites</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 			<key>pfmx_supported_oses</key>
@@ -2597,7 +2609,7 @@ In iOS 10 and later, MDM commands can override this restriction.</string>
 			<key>pfm_supervised</key>
 			<true/>
 			<key>pfm_title</key>
-			<string>Allow App Removal</string>
+			<string>Allow app removal</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 			<key>pfmx_supported_oses</key>
@@ -2755,7 +2767,7 @@ In iOS 10 and later, MDM commands can override this restriction.</string>
 			<key>pfm_name</key>
 			<string>allowInAppPurchases</string>
 			<key>pfm_title</key>
-			<string>Allow In App Purchases</string>
+			<string>Allow in app purchases</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 			<key>pfmx_supported_oses</key>
@@ -2851,7 +2863,7 @@ In iOS 10 and later, MDM commands can override this restriction.</string>
 			<key>pfm_name</key>
 			<string>allowManagedAppsCloudSync</string>
 			<key>pfm_title</key>
-			<string>Allow iCloud Sync for Managed Apps</string>
+			<string>Allow iCloud sync for managed apps</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 			<key>pfmx_supported_oses</key>
@@ -2893,7 +2905,7 @@ In iOS 10 and later, MDM commands can override this restriction.</string>
 			<key>pfm_name</key>
 			<string>allowEnterpriseBookBackup</string>
 			<key>pfm_title</key>
-			<string>Allow Enterprise Books Backup</string>
+			<string>Allow enterprise books backup</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 			<key>pfmx_supported_oses</key>
@@ -2935,7 +2947,7 @@ In iOS 10 and later, MDM commands can override this restriction.</string>
 			<key>pfm_name</key>
 			<string>allowEnterpriseBookMetadataSync</string>
 			<key>pfm_title</key>
-			<string>Allow Enterprise Books Notes and Highlights Sync</string>
+			<string>Allow enterprise books notes and highlights sync</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 			<key>pfmx_supported_oses</key>
@@ -3040,7 +3052,7 @@ In iOS 10 and later, MDM commands can override this restriction.</string>
 			<key>pfm_name</key>
 			<string>allowGlobalBackgroundFetchWhenRoaming</string>
 			<key>pfm_title</key>
-			<string>Allow Automatic Sync While Roaming</string>
+			<string>Allow automatic sync while roaming</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 			<key>pfmx_supported_oses</key>
@@ -3085,7 +3097,7 @@ In iOS 10 and later, MDM commands can override this restriction.</string>
 			<key>pfm_name</key>
 			<string>forceEncryptedBackup</string>
 			<key>pfm_title</key>
-			<string>Force Encrypted Backups</string>
+			<string>Force encrypted backups</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 			<key>pfmx_supported_oses</key>
@@ -3124,7 +3136,7 @@ In iOS 10 and later, MDM commands can override this restriction.</string>
 			<key>pfm_supervised</key>
 			<true/>
 			<key>pfm_title</key>
-			<string>Allow Erase All Content and Settings</string>
+			<string>Allow erase all content and settings</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 			<key>pfmx_supported_oses</key>
@@ -3188,7 +3200,7 @@ Note: The system doesn't preserve eSIM if Find My initiates erasing the device.<
 			<key>pfm_supervised</key>
 			<true/>
 			<key>pfm_title</key>
-			<string>Force Preserve ESIM on Erase</string>
+			<string>Force preserve ESIM on erase</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 			<key>pfmx_supported_oses</key>
@@ -3292,7 +3304,7 @@ Note: The system doesn't preserve eSIM if Find My initiates erasing the device.<
 			<key>pfm_name</key>
 			<string>allowEnterpriseAppTrust</string>
 			<key>pfm_title</key>
-			<string>Allow Trusting Enterprise Apps</string>
+			<string>Allow trusting enterprise apps</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 			<key>pfmx_supported_oses</key>
@@ -3393,7 +3405,7 @@ Note: The system doesn't preserve eSIM if Find My initiates erasing the device.<
 			<key>pfm_supervised</key>
 			<true/>
 			<key>pfm_title</key>
-			<string>Allow UI Configuration Profile Installation</string>
+			<string>Allow UI configuration profile installation</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 			<key>pfmx_supported_oses</key>
@@ -3456,7 +3468,7 @@ Note: The system doesn't preserve eSIM if Find My initiates erasing the device.<
 			<key>pfm_supervised</key>
 			<true/>
 			<key>pfm_title</key>
-			<string>Allow Adding VPN Configurations (Supervised devices only)</string>
+			<string>Allow adding VPN configurations (supervised devices only)</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 			<key>pfmx_supported_oses</key>
@@ -3852,7 +3864,14 @@ Note: The system doesn't preserve eSIM if Find My initiates erasing the device.<
 				<key>visionOS</key>
 				<dict>
 					<key>pfmx_introduced</key>
-					<string>n/a</string>
+					<string>27.0</string>
+					<key>pfmx_supervised</key>
+					<true/>
+					<key>pfmx_user_enrollment</key>
+					<dict>
+						<key>pfmx_mode</key>
+						<string>forbidden</string>
+					</dict>
 				</dict>
 				<key>watchOS</key>
 				<dict>
@@ -3873,7 +3892,7 @@ Note: The system doesn't preserve eSIM if Find My initiates erasing the device.<
 			<key>pfm_supervised</key>
 			<true/>
 			<key>pfm_title</key>
-			<string>Allow Modifying Cellular Data Usage for Apps Settings</string>
+			<string>Allow modifying cellular data usage for apps settings</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 			<key>pfmx_supported_oses</key>
@@ -3967,7 +3986,7 @@ Note: The system doesn't preserve eSIM if Find My initiates erasing the device.<
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
-			<string>If 'false', the system disables modifications of eSIMs.</string>
+			<string>If 'false', the system disables modifications of eSIMs. This also disables the phone number sharing setup on iPhones, in iOS 27 and later.</string>
 			<key>pfm_ios_min</key>
 			<string>12.1</string>
 			<key>pfm_name</key>
@@ -3975,7 +3994,7 @@ Note: The system doesn't preserve eSIM if Find My initiates erasing the device.<
 			<key>pfm_supervised</key>
 			<true/>
 			<key>pfm_title</key>
-			<string>Allow eSIM Modification</string>
+			<string>Allow eSIM modification</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 			<key>pfmx_supported_oses</key>
@@ -4077,7 +4096,7 @@ Note: The system doesn't preserve eSIM if Find My initiates erasing the device.<
 			<key>pfm_supervised</key>
 			<true/>
 			<key>pfm_title</key>
-			<string>Allow Modifying Notifications Settings</string>
+			<string>Allow modifying notifications settings</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 			<key>pfmx_supported_oses</key>
@@ -4186,7 +4205,7 @@ Note: The system doesn't preserve eSIM if Find My initiates erasing the device.<
 			<key>pfm_supervised</key>
 			<true/>
 			<key>pfm_title</key>
-			<string>Allow Modifying Passcode</string>
+			<string>Allow modifying passcode</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 			<key>pfmx_supported_oses</key>
@@ -4317,7 +4336,7 @@ Note: The system doesn't preserve eSIM if Find My initiates erasing the device.<
 			<key>pfm_supervised</key>
 			<true/>
 			<key>pfm_title</key>
-			<string>Allow Configuring Restrictions or ScreenTime</string>
+			<string>Allow configuring restrictions or ScreenTime</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 			<key>pfmx_supported_oses</key>
@@ -4380,7 +4399,7 @@ Note: The system doesn't preserve eSIM if Find My initiates erasing the device.<
 			<key>pfm_supervised</key>
 			<true/>
 			<key>pfm_title</key>
-			<string>Allow Modifying Wallpaper</string>
+			<string>Allow modifying wallpaper</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 			<key>pfmx_supported_oses</key>
@@ -4428,7 +4447,7 @@ Note: The system doesn't preserve eSIM if Find My initiates erasing the device.<
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
-			<string>If 'false', the system allows iOS devices to always connect to USB accessories while locked. In macOS, allows new USB and Thunderbolt accessories, and SD cards to connect without authorization. If the system has Lockdown mode enabled, it ignores this value. This restriction is not supported on the user channel.</string>
+			<string>If 'false', the system allows iOS devices to always connect to USB accessories while locked. In macOS, allows new USB and Thunderbolt accessories, and SD cards to connect without authorization. If the system has Lockdown mode enabled, it ignores this value. This restriction isn't supported on the user channel.</string>
 			<key>pfm_ios_min</key>
 			<string>11.4.1</string>
 			<key>pfm_name</key>
@@ -4836,7 +4855,7 @@ Important: Use MDM to install profiles that contain this restriction.</string>
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>If 'true', copy-and-paste functionality is limited by the 'allowOpenFromManagedToUnmanaged' and 'allowOpenFromUnmanagedToManaged' restrictions.</string>
+			<string>If 'true', the 'allowOpenFromManagedToUnmanaged' and 'allowOpenFromUnmanagedToManaged' restrictions also limit copy-and-paste functionality.</string>
 			<key>pfm_ios_min</key>
 			<string>15.0</string>
 			<key>pfm_name</key>
@@ -4947,7 +4966,7 @@ Important: Use MDM to install profiles that contain this restriction.</string>
 			<key>pfm_name</key>
 			<string>forceAirDropUnmanaged</string>
 			<key>pfm_title</key>
-			<string>Treat AirDrop as Unmanaged Destination</string>
+			<string>Treat AirDrop as unmanaged destination</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 			<key>pfmx_supported_oses</key>
@@ -4989,7 +5008,7 @@ Important: Use MDM to install profiles that contain this restriction.</string>
 			<key>pfm_name</key>
 			<string>allowActivityContinuation</string>
 			<key>pfm_title</key>
-			<string>Allow Handoff</string>
+			<string>Allow handoff</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 			<key>pfmx_supported_oses</key>
@@ -5201,7 +5220,7 @@ Important: Use MDM to install profiles that contain this restriction.</string>
 			<key>pfm_supervised</key>
 			<true/>
 			<key>pfm_title</key>
-			<string>Allow Pairing With Apple Watch</string>
+			<string>Allow pairing with Apple Watch</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 			<key>pfmx_supported_oses</key>
@@ -5252,7 +5271,7 @@ Important: Use MDM to install profiles that contain this restriction.</string>
 			<key>pfm_supervised</key>
 			<true/>
 			<key>pfm_title</key>
-			<string>Force Apple Watch Wrist Detection</string>
+			<string>Force Apple Watch wrist detection</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 			<key>pfmx_supported_oses</key>
@@ -5503,7 +5522,8 @@ Important: Use MDM to install profiles that contain this restriction.</string>
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
-			<string>If 'false', the system disables predictive keyboards.</string>
+			<string>If 'false', the system disables predictive keyboards.
+Deprecated: use the declarative management 'com.apple.configuration.keyboard.settings' configuration.</string>
 			<key>pfm_ios_deprecated</key>
 			<string>26.4</string>
 			<key>pfm_ios_min</key>
@@ -5513,7 +5533,7 @@ Important: Use MDM to install profiles that contain this restriction.</string>
 			<key>pfm_supervised</key>
 			<true/>
 			<key>pfm_title</key>
-			<string>Allow Predictive Keyboard</string>
+			<string>Allow predictive keyboard</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 			<key>pfmx_supported_oses</key>
@@ -5558,7 +5578,8 @@ Important: Use MDM to install profiles that contain this restriction.</string>
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
-			<string>If 'false', the system disables keyboard shortcuts.</string>
+			<string>If 'false', the system disables keyboard shortcuts.
+Deprecated: use the declarative management 'com.apple.configuration.keyboard.settings' configuration.</string>
 			<key>pfm_ios_deprecated</key>
 			<string>26.4</string>
 			<key>pfm_ios_min</key>
@@ -5568,7 +5589,7 @@ Important: Use MDM to install profiles that contain this restriction.</string>
 			<key>pfm_supervised</key>
 			<true/>
 			<key>pfm_title</key>
-			<string>Allow Keyboard Shortcuts</string>
+			<string>Allow keyboard shortcuts</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 			<key>pfmx_supported_oses</key>
@@ -5613,7 +5634,8 @@ Important: Use MDM to install profiles that contain this restriction.</string>
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
-			<string>If 'false', the system disables keyboard autocorrection.</string>
+			<string>If 'false', the system disables keyboard autocorrection.
+Deprecated: use the declarative management 'com.apple.configuration.keyboard.settings' configuration.</string>
 			<key>pfm_ios_deprecated</key>
 			<string>26.4</string>
 			<key>pfm_ios_min</key>
@@ -5623,7 +5645,7 @@ Important: Use MDM to install profiles that contain this restriction.</string>
 			<key>pfm_supervised</key>
 			<true/>
 			<key>pfm_title</key>
-			<string>Allow Auto Correction</string>
+			<string>Allow auto correction</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 			<key>pfmx_supported_oses</key>
@@ -5668,7 +5690,8 @@ Important: Use MDM to install profiles that contain this restriction.</string>
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
-			<string>If 'false', the system disables QuickPath keyboard.</string>
+			<string>If 'false', the system disables QuickPath keyboard.
+Deprecated: use the declarative management 'com.apple.configuration.keyboard.settings' configuration.</string>
 			<key>pfm_ios_deprecated</key>
 			<string>26.4</string>
 			<key>pfm_ios_min</key>
@@ -5678,7 +5701,7 @@ Important: Use MDM to install profiles that contain this restriction.</string>
 			<key>pfm_supervised</key>
 			<true/>
 			<key>pfm_title</key>
-			<string>Allow Continuous Path Keyboard</string>
+			<string>Allow continuous path keyboard</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 			<key>pfmx_supported_oses</key>
@@ -5723,7 +5746,8 @@ Important: Use MDM to install profiles that contain this restriction.</string>
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
-			<string>If 'false', the system disables the keyboard spell checker.</string>
+			<string>If 'false', the system disables the keyboard spell checker.
+Deprecated: use the declarative management 'com.apple.configuration.keyboard.settings' configuration.</string>
 			<key>pfm_ios_deprecated</key>
 			<string>26.4</string>
 			<key>pfm_ios_min</key>
@@ -5733,7 +5757,7 @@ Important: Use MDM to install profiles that contain this restriction.</string>
 			<key>pfm_supervised</key>
 			<true/>
 			<key>pfm_title</key>
-			<string>Allow Spell Check</string>
+			<string>Allow spell check</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 			<key>pfmx_supported_oses</key>
@@ -5834,7 +5858,8 @@ Important: Use MDM to install profiles that contain this restriction.</string>
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
-			<string>If 'false', the system disallows dictation input.</string>
+			<string>If 'false', the system disallows dictation input.
+Deprecated: use the declarative management 'com.apple.configuration.keyboard.settings' configuration.</string>
 			<key>pfm_ios_deprecated</key>
 			<string>26.4</string>
 			<key>pfm_ios_min</key>
@@ -5896,7 +5921,8 @@ Important: Use MDM to install profiles that contain this restriction.</string>
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>If 'true', the system disables connections to Siri servers for the purposes of dictation.</string>
+			<string>If 'true', the system disables connections to Siri servers for the purposes of dictation.
+Deprecated: use the declarative management 'com.apple.configuration.intelligence.settings' configuration.</string>
 			<key>pfm_ios_deprecated</key>
 			<string>26.4</string>
 			<key>pfm_ios_min</key>
@@ -5946,7 +5972,8 @@ Important: Use MDM to install profiles that contain this restriction.</string>
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>If 'true', the device can't connect to Siri servers for the purposes of translation.</string>
+			<string>If 'true', the device can't connect to Siri servers for the purposes of translation.
+Deprecated: use the declarative management 'com.apple.configuration.intelligence.settings' configuration.</string>
 			<key>pfm_ios_deprecated</key>
 			<string>26.4</string>
 			<key>pfm_ios_min</key>
@@ -5998,7 +6025,7 @@ Important: Use MDM to install profiles that contain this restriction.</string>
 			<key>pfm_name</key>
 			<string>allowPassbookWhileLocked</string>
 			<key>pfm_title</key>
-			<string>Allow Wallet While Locked</string>
+			<string>Allow Wallet while locked</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 			<key>pfmx_supported_oses</key>
@@ -6047,7 +6074,7 @@ Important: Use MDM to install profiles that contain this restriction.</string>
 			<key>pfm_supervised</key>
 			<true/>
 			<key>pfm_title</key>
-			<string>Allow modifying Personal Hotspot settings</string>
+			<string>Allow modifying personal hotspot settings</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 			<key>pfmx_supported_oses</key>
@@ -6098,7 +6125,7 @@ Important: Use MDM to install profiles that contain this restriction.</string>
 			<key>pfm_supervised</key>
 			<true/>
 			<key>pfm_title</key>
-			<string>Allow Live Voicemail</string>
+			<string>Allow live voicemail</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 			<key>pfmx_supported_oses</key>
@@ -6324,7 +6351,7 @@ Important: Use MDM to install profiles that contain this restriction.</string>
 			<key>pfm_supervised</key>
 			<true/>
 			<key>pfm_title</key>
-			<string>Allow storage of AirPrint credentials in Keychain</string>
+			<string>Allow storage of AirPrint credentials in keychain</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 			<key>pfmx_supported_oses</key>
@@ -6535,7 +6562,7 @@ Important: Use MDM to install profiles that contain this restriction.</string>
 			<key>pfm_supervised</key>
 			<true/>
 			<key>pfm_title</key>
-			<string>Allow Auto Dim</string>
+			<string>Allow auto dim</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 			<key>pfmx_supported_oses</key>
@@ -6652,7 +6679,7 @@ Important: Use MDM to install profiles that contain this restriction.</string>
 			<key>pfm_supervised</key>
 			<true/>
 			<key>pfm_title</key>
-			<string>Allow Adding Game Center Friends</string>
+			<string>Allow adding Game Center friends</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 			<key>pfmx_supported_oses</key>
@@ -6708,7 +6735,7 @@ Important: Use MDM to install profiles that contain this restriction.</string>
 			<key>pfm_supervised</key>
 			<true/>
 			<key>pfm_title</key>
-			<string>Allow Multiplayer Gaming</string>
+			<string>Allow multiplayer gaming</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 			<key>pfmx_supported_oses</key>
@@ -6873,7 +6900,7 @@ Note: The system still allows third-party password managers, and apps can use Au
 			<key>pfm_name</key>
 			<string>safariForceFraudWarning</string>
 			<key>pfm_title</key>
-			<string>Enable Fraud Warning</string>
+			<string>Enable fraud warning</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 			<key>pfmx_supported_oses</key>
@@ -6955,7 +6982,7 @@ Note: The system still allows third-party password managers, and apps can use Au
 			<key>pfm_name</key>
 			<string>safariAllowPopups</string>
 			<key>pfm_title</key>
-			<string>Allow Pop-ups</string>
+			<string>Allow pop-ups</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 			<key>pfmx_supported_oses</key>
@@ -7017,7 +7044,7 @@ Note: The system still allows third-party password managers, and apps can use Au
 				<string>Always / Prevent Cross-Site Tracking</string>
 			</array>
 			<key>pfm_title</key>
-			<string>Accept Cookies in Safari</string>
+			<string>Accept cookies in Safari</string>
 			<key>pfm_type</key>
 			<string>real</string>
 			<key>pfmx_supported_oses</key>
@@ -7064,7 +7091,7 @@ Note: The system still allows third-party password managers, and apps can use Au
 			<key>pfm_supervised</key>
 			<true/>
 			<key>pfm_title</key>
-			<string>Allow Modifying Device Name</string>
+			<string>Allow modifying device name</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 			<key>pfmx_supported_oses</key>
@@ -7120,6 +7147,7 @@ Note: The system still allows third-party password managers, and apps can use Au
 		<dict>
 			<key>pfm_description</key>
 			<string>If present, the system prevents showing or launching apps with bundle IDs in the array. Include the value 'com.apple.webapp' to restrict all webclips. This applies to App Store apps, marketplace apps, and locally installed apps (using Configurator, Xcode, and so forth).
+Deprecated: use the declarative management 'com.apple.configuration.app.settings' configuration.
 Note: Denying system apps may disable other functionality. For example, denying the App Store app may prevent users from accepting the terms and conditions for the user-based Volume Purchase Program (VPP).</string>
 			<key>pfm_exclude</key>
 			<array>
@@ -7135,6 +7163,8 @@ Note: Denying system apps may disable other functionality. For example, denying 
 					</array>
 				</dict>
 			</array>
+			<key>pfm_ios_deprecated</key>
+			<string>27.0</string>
 			<key>pfm_ios_min</key>
 			<string>15.0</string>
 			<key>pfm_name</key>
@@ -7142,6 +7172,8 @@ Note: Denying system apps may disable other functionality. For example, denying 
 			<key>pfm_subkeys</key>
 			<array>
 				<dict>
+					<key>pfm_ios_deprecated</key>
+					<string>27.0</string>
 					<key>pfm_ios_min</key>
 					<string>15.0</string>
 					<key>pfm_name</key>
@@ -7159,13 +7191,15 @@ Note: Denying system apps may disable other functionality. For example, denying 
 			<key>pfm_supervised</key>
 			<true/>
 			<key>pfm_title</key>
-			<string>Blocked Apps</string>
+			<string>Blocked apps</string>
 			<key>pfm_type</key>
 			<string>array</string>
 			<key>pfmx_supported_oses</key>
 			<dict>
 				<key>iOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>27.0</string>
 					<key>pfmx_introduced</key>
 					<string>15.0</string>
 					<key>pfmx_supervised</key>
@@ -7183,6 +7217,8 @@ Note: Denying system apps may disable other functionality. For example, denying 
 				</dict>
 				<key>tvOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>27.0</string>
 					<key>pfmx_introduced</key>
 					<string>15.0</string>
 					<key>pfmx_supervised</key>
@@ -7190,8 +7226,17 @@ Note: Denying system apps may disable other functionality. For example, denying 
 				</dict>
 				<key>visionOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>27.0</string>
 					<key>pfmx_introduced</key>
-					<string>n/a</string>
+					<string>27.0</string>
+					<key>pfmx_supervised</key>
+					<true/>
+					<key>pfmx_user_enrollment</key>
+					<dict>
+						<key>pfmx_mode</key>
+						<string>forbidden</string>
+					</dict>
 				</dict>
 				<key>watchOS</key>
 				<dict>
@@ -7202,7 +7247,7 @@ Note: Denying system apps may disable other functionality. For example, denying 
 		</dict>
 		<dict>
 			<key>pfm_description</key>
-			<string>Use 'blockedAppBundleIDs' instead.</string>
+			<string>Deprecated: use the declarative management 'com.apple.configuration.app.settings' configuration.</string>
 			<key>pfm_exclude</key>
 			<array>
 				<dict>
@@ -7294,7 +7339,8 @@ Note: Denying system apps may disable other functionality. For example, denying 
 		</dict>
 		<dict>
 			<key>pfm_description</key>
-			<string>If present, the system only shows or can launch apps with bundle IDs in the array. Include the value 'com.apple.webapp' to allow all webclips. This applies to App Store apps, marketplace apps, and locally installed apps (using Configurator, Xcode, and so forth).</string>
+			<string>If present, the system only shows or can launch apps with bundle IDs in the array. Include the value 'com.apple.webapp' to allow all webclips. This applies to App Store apps, marketplace apps, and locally installed apps (using Configurator, Xcode, and so forth).
+Deprecated: use the declarative management 'com.apple.configuration.app.settings' configuration.</string>
 			<key>pfm_exclude</key>
 			<array>
 				<dict>
@@ -7309,6 +7355,8 @@ Note: Denying system apps may disable other functionality. For example, denying 
 					</array>
 				</dict>
 			</array>
+			<key>pfm_ios_deprecated</key>
+			<string>27.0</string>
 			<key>pfm_ios_min</key>
 			<string>15.0</string>
 			<key>pfm_name</key>
@@ -7316,6 +7364,8 @@ Note: Denying system apps may disable other functionality. For example, denying 
 			<key>pfm_subkeys</key>
 			<array>
 				<dict>
+					<key>pfm_ios_deprecated</key>
+					<string>27.0</string>
 					<key>pfm_ios_min</key>
 					<string>15.0</string>
 					<key>pfm_name</key>
@@ -7333,13 +7383,15 @@ Note: Denying system apps may disable other functionality. For example, denying 
 			<key>pfm_supervised</key>
 			<true/>
 			<key>pfm_title</key>
-			<string>Allow Listed Apps</string>
+			<string>Allow listed apps</string>
 			<key>pfm_type</key>
 			<string>array</string>
 			<key>pfmx_supported_oses</key>
 			<dict>
 				<key>iOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>27.0</string>
 					<key>pfmx_introduced</key>
 					<string>15.0</string>
 					<key>pfmx_supervised</key>
@@ -7357,6 +7409,8 @@ Note: Denying system apps may disable other functionality. For example, denying 
 				</dict>
 				<key>tvOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>27.0</string>
 					<key>pfmx_introduced</key>
 					<string>15.0</string>
 					<key>pfmx_supervised</key>
@@ -7364,8 +7418,17 @@ Note: Denying system apps may disable other functionality. For example, denying 
 				</dict>
 				<key>visionOS</key>
 				<dict>
+					<key>pfmx_deprecated</key>
+					<string>27.0</string>
 					<key>pfmx_introduced</key>
-					<string>n/a</string>
+					<string>27.0</string>
+					<key>pfmx_supervised</key>
+					<true/>
+					<key>pfmx_user_enrollment</key>
+					<dict>
+						<key>pfmx_mode</key>
+						<string>forbidden</string>
+					</dict>
 				</dict>
 				<key>watchOS</key>
 				<dict>
@@ -7376,7 +7439,7 @@ Note: Denying system apps may disable other functionality. For example, denying 
 		</dict>
 		<dict>
 			<key>pfm_description</key>
-			<string>Use 'allowListedAppBundleIDs' instead.</string>
+			<string>Deprecated: use the declarative management 'com.apple.configuration.app.settings' configuration.</string>
 			<key>pfm_exclude</key>
 			<array>
 				<dict>
@@ -7483,7 +7546,7 @@ Note: Denying system apps may disable other functionality. For example, denying 
 					<key>pfm_supervised</key>
 					<true/>
 					<key>pfm_title</key>
-					<string>Apps allow list for Autonomous Single App Mode</string>
+					<string>Apps allow list for autonomous single app mode</string>
 					<key>pfm_type</key>
 					<string>string</string>
 				</dict>
@@ -7649,7 +7712,7 @@ This restriction will require supervision in a future release.</string>
 			<key>pfm_range_min</key>
 			<integer>0</integer>
 			<key>pfm_title</key>
-			<string>Apps Ranking Number</string>
+			<string>Apps ranking number</string>
 			<key>pfm_type</key>
 			<string>integer</string>
 			<key>pfmx_supported_oses</key>
@@ -7739,7 +7802,7 @@ Possible values, with the U.S. description of the rating level:
 			<key>pfm_range_min</key>
 			<integer>0</integer>
 			<key>pfm_title</key>
-			<string>Movies Ranking Number</string>
+			<string>Movies ranking number</string>
 			<key>pfm_type</key>
 			<string>integer</string>
 			<key>pfmx_supported_oses</key>
@@ -7883,7 +7946,7 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 			<key>pfm_supervised</key>
 			<true/>
 			<key>pfm_title</key>
-			<string>Allow Explicit Content</string>
+			<string>Allow explicit content</string>
 			<key>pfm_tvos_min</key>
 			<string>11.3</string>
 			<key>pfm_type</key>
@@ -7990,7 +8053,7 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 			<key>pfm_name</key>
 			<string>allowBookstoreErotica</string>
 			<key>pfm_title</key>
-			<string>Allow Bookstore Erotica</string>
+			<string>Allow Book Store erotica</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 			<key>pfmx_supported_oses</key>
@@ -8163,7 +8226,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>If 'true', the system delays user visibility of software updates. In macOS, the system allows seed build updates without delay. The delay is 30 days unless you set 'enforcedSoftwareUpdateDelay' to another value.</string>
+			<string>If 'true', the system delays user visibility of software updates. In macOS, the system allows seed build updates without delay. The delay is 30 days unless you set 'enforcedSoftwareUpdateDelay' to another value.
+Removed: use the declarative management 'com.apple.configuration.softwareupdate.settings' configuration.</string>
 			<key>pfm_ios_deprecated</key>
 			<string>26.0</string>
 			<key>pfm_ios_min</key>
@@ -8184,6 +8248,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 					<string>26.0</string>
 					<key>pfmx_introduced</key>
 					<string>11.3</string>
+					<key>pfmx_removed</key>
+					<string>27.0</string>
 					<key>pfmx_supervised</key>
 					<true/>
 					<key>pfmx_user_enrollment</key>
@@ -8198,6 +8264,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 					<string>26.0</string>
 					<key>pfmx_introduced</key>
 					<string>10.13</string>
+					<key>pfmx_removed</key>
+					<string>27.0</string>
 					<key>pfmx_user_enrollment</key>
 					<dict>
 						<key>pfmx_mode</key>
@@ -8210,6 +8278,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 					<string>26.0</string>
 					<key>pfmx_introduced</key>
 					<string>12.2</string>
+					<key>pfmx_removed</key>
+					<string>27.0</string>
 					<key>pfmx_supervised</key>
 					<true/>
 				</dict>
@@ -8229,7 +8299,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 			<key>pfm_default</key>
 			<integer>30</integer>
 			<key>pfm_description</key>
-			<string>How many days to delay a software update on the device. With this restriction in place, the user doesn't see a software update until the specified number of days after the software update release date. The restrictions 'forceDelayedAppSoftwareUpdates' and 'forceDelayedSoftwareUpdates' use this value.</string>
+			<string>How many days to delay a software update on the device. With this restriction in place, the user doesn't see a software update until the specified number of days after the software update release date. The restrictions 'forceDelayedAppSoftwareUpdates' and 'forceDelayedSoftwareUpdates' use this value.
+Removed: use the declarative management 'com.apple.configuration.softwareupdate.settings' configuration.</string>
 			<key>pfm_exclude</key>
 			<array>
 				<dict>
@@ -8272,6 +8343,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 					<string>26.0</string>
 					<key>pfmx_introduced</key>
 					<string>11.3</string>
+					<key>pfmx_removed</key>
+					<string>27.0</string>
 					<key>pfmx_supervised</key>
 					<true/>
 					<key>pfmx_user_enrollment</key>
@@ -8286,6 +8359,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 					<string>26.0</string>
 					<key>pfmx_introduced</key>
 					<string>10.13.4</string>
+					<key>pfmx_removed</key>
+					<string>27.0</string>
 					<key>pfmx_user_enrollment</key>
 					<dict>
 						<key>pfmx_mode</key>
@@ -8298,6 +8373,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 					<string>26.0</string>
 					<key>pfmx_introduced</key>
 					<string>12.2</string>
+					<key>pfmx_removed</key>
+					<string>27.0</string>
 					<key>pfmx_supervised</key>
 					<true/>
 				</dict>
@@ -8317,7 +8394,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
-			<string>If 'false', the system prohibits installation of Background Security Improvements.</string>
+			<string>If 'false', the system prohibits installation of Background Security Improvements.
+Removed: use the declarative management 'com.apple.configuration.softwareupdate.settings' configuration.</string>
 			<key>pfm_ios_deprecated</key>
 			<string>26.0</string>
 			<key>pfm_ios_min</key>
@@ -8327,7 +8405,7 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 			<key>pfm_supervised</key>
 			<true/>
 			<key>pfm_title</key>
-			<string>Allow Background Security Improvement Installation</string>
+			<string>Allow Background Security Improvements installation</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 			<key>pfmx_supported_oses</key>
@@ -8338,6 +8416,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 					<string>26.0</string>
 					<key>pfmx_introduced</key>
 					<string>16.0</string>
+					<key>pfmx_removed</key>
+					<string>27.0</string>
 					<key>pfmx_supervised</key>
 					<true/>
 					<key>pfmx_user_enrollment</key>
@@ -8352,6 +8432,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 					<string>26.0</string>
 					<key>pfmx_introduced</key>
 					<string>13.0</string>
+					<key>pfmx_removed</key>
+					<string>27.0</string>
 					<key>pfmx_user_enrollment</key>
 					<dict>
 						<key>pfmx_mode</key>
@@ -8379,7 +8461,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
-			<string>If 'false', the system prohibits removal of Background Security Improvements.</string>
+			<string>If 'false', the system prohibits removal of Background Security Improvements.
+Removed: use the declarative management 'com.apple.configuration.softwareupdate.settings' configuration.</string>
 			<key>pfm_ios_deprecated</key>
 			<string>26.0</string>
 			<key>pfm_ios_min</key>
@@ -8389,7 +8472,7 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 			<key>pfm_supervised</key>
 			<true/>
 			<key>pfm_title</key>
-			<string>Allow Background Security Improvement Removal</string>
+			<string>Allow Background Security Improvements removal</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 			<key>pfmx_supported_oses</key>
@@ -8400,6 +8483,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 					<string>26.0</string>
 					<key>pfmx_introduced</key>
 					<string>16.0</string>
+					<key>pfmx_removed</key>
+					<string>27.0</string>
 					<key>pfmx_supervised</key>
 					<true/>
 					<key>pfmx_user_enrollment</key>
@@ -8414,6 +8499,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 					<string>26.0</string>
 					<key>pfmx_introduced</key>
 					<string>13.0</string>
+					<key>pfmx_removed</key>
+					<string>27.0</string>
 					<key>pfmx_user_enrollment</key>
 					<dict>
 						<key>pfmx_mode</key>
@@ -8629,7 +8716,7 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 			<key>pfm_supervised</key>
 			<true/>
 			<key>pfm_title</key>
-			<string>Allow eSIM Outgoing Transfers</string>
+			<string>Allow eSIM outgoing transfers</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 			<key>pfmx_supported_oses</key>
@@ -8672,7 +8759,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
-			<string>If 'false', prohibits creating new Genmoji.</string>
+			<string>If 'false', prohibits creating new Genmoji.
+Deprecated: use the declarative management 'com.apple.configuration.intelligence.settings' configuration.</string>
 			<key>pfm_ios_deprecated</key>
 			<string>26.4</string>
 			<key>pfm_ios_min</key>
@@ -8748,7 +8836,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
-			<string>If 'false', prohibits the use of image generation.</string>
+			<string>If 'false', prohibits the use of image generation.
+Deprecated: use the declarative management 'com.apple.configuration.intelligence.settings' configuration.</string>
 			<key>pfm_ios_deprecated</key>
 			<string>26.4</string>
 			<key>pfm_ios_min</key>
@@ -8824,7 +8913,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
-			<string>If 'false', prohibits the use of Image Wand.</string>
+			<string>If 'false', prohibits the use of Image Wand.
+Deprecated: use the declarative management 'com.apple.configuration.intelligence.settings' configuration.</string>
 			<key>pfm_ios_deprecated</key>
 			<string>26.4</string>
 			<key>pfm_ios_min</key>
@@ -8954,7 +9044,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
-			<string>If false, prevents the system from generating text in the user's handwriting.</string>
+			<string>If false, prevents the system from generating text in the user's handwriting.
+Deprecated: use the declarative management 'com.apple.configuration.intelligence.settings' configuration.</string>
 			<key>pfm_ios_deprecated</key>
 			<string>26.4</string>
 			<key>pfm_ios_min</key>
@@ -9014,7 +9105,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
-			<string>If 'false', disables Apple Intelligence writing tools.</string>
+			<string>If 'false', disables Apple Intelligence writing tools.
+Deprecated: use the declarative management 'com.apple.configuration.intelligence.settings' configuration.</string>
 			<key>pfm_ios_deprecated</key>
 			<string>26.4</string>
 			<key>pfm_ios_min</key>
@@ -9098,7 +9190,7 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 			<key>pfm_supervised</key>
 			<true/>
 			<key>pfm_title</key>
-			<string>Allow Call Recording</string>
+			<string>Allow call recording</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 			<key>pfmx_supported_oses</key>
@@ -9151,7 +9243,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
-			<string>If 'false', disables the ability to create summaries of email messages manually. This doesn't affect automatic summary generation.</string>
+			<string>If 'false', disables the ability to create summaries of email messages manually. This doesn't affect automatic summary generation.
+Deprecated: use the declarative management 'com.apple.configuration.intelligence.settings' configuration.</string>
 			<key>pfm_ios_deprecated</key>
 			<string>26.4</string>
 			<key>pfm_ios_min</key>
@@ -9225,7 +9318,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
-			<string>If 'false', disables smart replies in Mail.</string>
+			<string>If 'false', disables smart replies in Mail.
+Deprecated: use the declarative management 'com.apple.configuration.intelligence.settings' configuration.</string>
 			<key>pfm_ios_deprecated</key>
 			<string>26.4</string>
 			<key>pfm_ios_min</key>
@@ -9501,7 +9595,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
-			<string>If 'false', disables the use of external, cloud-based intelligence services with Siri. In iOS, this restriction is temporarily allowed on unsupervised and user enrollments. In a future release, this restriction will require supervision, and will be ignored on unsupervised devices.</string>
+			<string>If 'false', disables the use of external, cloud-based intelligence services with Siri. In iOS, this restriction is temporarily allowed on unsupervised and user enrollments. In a future release, this restriction will require supervision, and will be ignored on unsupervised devices.
+Deprecated: use the declarative management 'com.apple.configuration.external-intelligence.settings' configuration.</string>
 			<key>pfm_ios_deprecated</key>
 			<string>26.4</string>
 			<key>pfm_ios_min</key>
@@ -9558,7 +9653,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
-			<string>If 'false', forces external intelligence providers into anonymous mode. If a user is already signed in to an external intelligence provider, applying this restriction signs them out when attempting the next request.</string>
+			<string>If 'false', forces external intelligence providers into anonymous mode. If a user is already signed in to an external intelligence provider, applying this restriction signs them out when attempting the next request.
+Deprecated: use the declarative management 'com.apple.configuration.external-intelligence.settings' configuration.</string>
 			<key>pfm_ios_deprecated</key>
 			<string>26.4</string>
 			<key>pfm_ios_min</key>
@@ -9613,7 +9709,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 		</dict>
 		<dict>
 			<key>pfm_description</key>
-			<string>An array of strings, but currently restricted to a single element. If present, Apple Intelligence allows use of only the given external integration workspace ID, and requires a sign-in to make requests. The user is required to sign in to integrations that support signing in. Multiple payloads combine using an intersect operation. This means the allowed set of workspace IDs can become the empty set if multiple payloads specify conflicting values.</string>
+			<string>An array of strings, but currently restricted to a single element. If present, Apple Intelligence allows use of only the given external integration workspace ID, and requires a sign-in to make requests. The user is required to sign in to integrations that support signing in. Multiple payloads combine using an intersect operation. This means the allowed set of workspace IDs can become the empty set if multiple payloads specify conflicting values.
+Deprecated: use the declarative management 'com.apple.configuration.external-intelligence.settings' configuration.</string>
 			<key>pfm_ios_deprecated</key>
 			<string>26.4</string>
 			<key>pfm_ios_min</key>
@@ -9634,7 +9731,7 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 					<key>pfm_supervised</key>
 					<true/>
 					<key>pfm_title</key>
-					<string>Allowed Workspace ID</string>
+					<string>Allowed workspace ID</string>
 					<key>pfm_type</key>
 					<string>string</string>
 				</dict>
@@ -9642,7 +9739,7 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 			<key>pfm_supervised</key>
 			<true/>
 			<key>pfm_title</key>
-			<string>Allowed External Intelligence Workspace IDs</string>
+			<string>Allowed external intelligence workspace IDs</string>
 			<key>pfm_type</key>
 			<string>array</string>
 			<key>pfmx_supported_oses</key>
@@ -9714,7 +9811,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
-			<string>If 'false', disables transcription summarization in Notes.</string>
+			<string>If 'false', disables transcription summarization in Notes.
+Deprecated: use the declarative management 'com.apple.configuration.intelligence.settings' configuration.</string>
 			<key>pfm_ios_deprecated</key>
 			<string>26.4</string>
 			<key>pfm_ios_min</key>
@@ -9779,7 +9877,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
-			<string>If 'false', disables transcription in Notes.</string>
+			<string>If 'false', disables transcription in Notes.
+Deprecated: use the declarative management 'com.apple.configuration.intelligence.settings' configuration.</string>
 			<key>pfm_ios_deprecated</key>
 			<string>26.4</string>
 			<key>pfm_ios_min</key>
@@ -9844,7 +9943,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
-			<string>If 'false', the system disables visual intelligence summarization.</string>
+			<string>If 'false', the system disables visual intelligence summarization.
+Deprecated: use the declarative management 'com.apple.configuration.intelligence.settings' configuration.</string>
 			<key>pfm_ios_deprecated</key>
 			<string>26.4</string>
 			<key>pfm_ios_min</key>
@@ -9854,7 +9954,7 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 			<key>pfm_supervised</key>
 			<true/>
 			<key>pfm_title</key>
-			<string>Allow Visual Intelligence Summary</string>
+			<string>Allow visual intelligence summary</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 			<key>pfmx_supported_oses</key>
@@ -9960,7 +10060,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
-			<string>If 'false', the system disables Apple Intelligence reports.</string>
+			<string>If 'false', the system disables Apple Intelligence reports.
+Deprecated: use the declarative management 'com.apple.configuration.intelligence.settings' configuration.</string>
 			<key>pfm_ios_deprecated</key>
 			<string>26.4</string>
 			<key>pfm_ios_min</key>
@@ -9970,7 +10071,7 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 			<key>pfm_supervised</key>
 			<true/>
 			<key>pfm_title</key>
-			<string>Allow Apple Intelligence Report</string>
+			<string>Allow Apple Intelligence report</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 			<key>pfmx_supported_oses</key>
@@ -10027,7 +10128,8 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
-			<string>If 'false', the system disables the ability to summarize content in Safari.</string>
+			<string>If 'false', the system disables the ability to summarize content in Safari.
+Deprecated: use the declarative management 'com.apple.configuration.intelligence.settings' configuration.</string>
 			<key>pfm_ios_deprecated</key>
 			<string>26.4</string>
 			<key>pfm_ios_min</key>
@@ -10109,7 +10211,7 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 			<key>pfm_supervised</key>
 			<true/>
 			<key>pfm_title</key>
-			<string>Allow Video Conferencing Remote Control</string>
+			<string>Allow video conferencing remote control</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 			<key>pfmx_supported_oses</key>
@@ -10318,6 +10420,11 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 				<dict>
 					<key>pfmx_introduced</key>
 					<string>26.0</string>
+					<key>pfmx_shared_ipad</key>
+					<dict>
+						<key>pfmx_mode</key>
+						<string>forbidden</string>
+					</dict>
 					<key>pfmx_supervised</key>
 					<true/>
 					<key>pfmx_user_enrollment</key>
@@ -10382,6 +10489,11 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 				<dict>
 					<key>pfmx_introduced</key>
 					<string>26.0</string>
+					<key>pfmx_shared_ipad</key>
+					<dict>
+						<key>pfmx_mode</key>
+						<string>forbidden</string>
+					</dict>
 					<key>pfmx_supervised</key>
 					<true/>
 					<key>pfmx_user_enrollment</key>
@@ -10427,13 +10539,13 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 					<key>pfm_name</key>
 					<string>ratingAppsExemptedBundleID</string>
 					<key>pfm_title</key>
-					<string>Exempted App</string>
+					<string>Exempted app</string>
 					<key>pfm_type</key>
 					<string>string</string>
 				</dict>
 			</array>
 			<key>pfm_title</key>
-			<string>Apps Exempted from Rating Restrictions</string>
+			<string>Apps exempted from rating restrictions</string>
 			<key>pfm_type</key>
 			<string>array</string>
 			<key>pfmx_supported_oses</key>
@@ -10445,6 +10557,58 @@ Requires a supervised device in iOS 13 and later. Support for this restriction o
 					<key>pfmx_introduced</key>
 					<string>26.1</string>
 					<key>pfmx_user_enrollment</key>
+					<dict>
+						<key>pfmx_mode</key>
+						<string>forbidden</string>
+					</dict>
+				</dict>
+				<key>macOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>n/a</string>
+				</dict>
+				<key>tvOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>n/a</string>
+				</dict>
+				<key>visionOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>n/a</string>
+				</dict>
+				<key>watchOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>n/a</string>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>If 'false', the system disables Apple Intelligence integration in Siri.
+Deprecated: use the declarative management 'com.apple.configuration.siri.settings' configuration.</string>
+			<key>pfm_ios_deprecated</key>
+			<string>27.0</string>
+			<key>pfm_ios_min</key>
+			<string>27.0</string>
+			<key>pfm_name</key>
+			<string>allowSiriAI</string>
+			<key>pfm_title</key>
+			<string>Allow Siri Apple Intelligence integration</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>iOS</key>
+				<dict>
+					<key>pfmx_deprecated</key>
+					<string>27.0</string>
+					<key>pfmx_introduced</key>
+					<string>27.0</string>
+					<key>pfmx_shared_ipad</key>
 					<dict>
 						<key>pfmx_mode</key>
 						<string>forbidden</string>

@@ -19,7 +19,7 @@
 	<key>pfm_macos_min</key>
 	<string>10.9</string>
 	<key>pfm_note</key>
-	<string>In iPadOS 18 and later, the font profile is available on the user channel for Shared iPads.</string>
+	<string>In iPadOS 18 and later, the font profile is available on the user channel for Shared iPad.</string>
 	<key>pfm_platforms</key>
 	<array>
 		<string>iOS</string>
@@ -131,14 +131,14 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<string></string>
 			<key>pfm_description</key>
-			<string>The user-visible name for the font. This field is replaced by the actual name of the font after installation. Each payload must contain exactly one font file in trueType (.ttf) or OpenType (.otf) format. Collection formats (.ttc or .otc) are not supported.
-Fonts are identified by their embedded PostScript names. Two fonts with the same PostScript name are considered to be the same font even if their contents differ. Installing two different fonts with the same PostScript name isn't supported, and the resulting behavior is undefined.</string>
+			<string>The user-visible name for the font. The device replaces this field with the actual name of the font after installation. Each payload must contain exactly one font file in trueType (.ttf) or OpenType (.otf) format. The device doesn't support collection formats (.ttc or .otc).
+The device identifies fonts by their embedded PostScript names. The device considers two fonts with the same PostScript name to be the same font, even if their contents differ. The device doesn't support installing two different fonts with the same PostScript name, and the resulting behavior is undefined.</string>
 			<key>pfm_name</key>
 			<string>Name</string>
 			<key>pfm_note</key>
 			<string>Each payload must contain exactly one font file in trueType (.ttf) or OpenType (.otf) format. Installing two different fonts with the same PostScript name isn't supported, and the resulting behavior is undefined.</string>
 			<key>pfm_title</key>
-			<string>Font Name</string>
+			<string>Font name</string>
 			<key>pfm_type</key>
 			<string>string</string>
 		</dict>

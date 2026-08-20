@@ -307,6 +307,8 @@ A profile can consist of payloads with different version numbers. For example, c
 			<false/>
 			<key>pfmx_requires_dep</key>
 			<false/>
+			<key>pfmx_supervised</key>
+			<false/>
 			<key>pfmx_user_approved_mdm</key>
 			<false/>
 			<key>pfmx_user_channel</key>

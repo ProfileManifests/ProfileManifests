@@ -132,7 +132,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				<string>com.apple.application-bundle</string>
 			</array>
 			<key>pfm_description</key>
-			<string>An array of items located on the Applications side of the Dock and cannot be removed from that location.</string>
+			<string>An array of items located on the Applications side of the Dock that users can't remove from that location.</string>
 			<key>pfm_name</key>
 			<string>static-apps</string>
 			<key>pfm_subkeys</key>
@@ -322,7 +322,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_description</key>
-			<string>An array of items located on the Documents side of the Dock and cannot be removed from that location.</string>
+			<string>An array of items located on the Documents side of the Dock that users can't remove from that location.</string>
 			<key>pfm_name</key>
 			<string>static-others</string>
 			<key>pfm_subkeys</key>
@@ -704,7 +704,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_description</key>
-			<string>An array of items located on the Applications side of the Dock that can be removed from the Dock.</string>
+			<string>An array of items located on the Applications side of the Dock that users can remove from the Dock.</string>
 			<key>pfm_name</key>
 			<string>persistent-apps</string>
 			<key>pfm_subkeys</key>
@@ -898,7 +898,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_description</key>
-			<string>An array of items located on the Documents side of the Dock that can be removed from the Dock.</string>
+			<string>An array of items located on the Documents side of the Dock that users can remove from the Dock.</string>
 			<key>pfm_name</key>
 			<string>persistent-others</string>
 			<key>pfm_subkeys</key>
@@ -1612,7 +1612,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>If 'true', use the file in '/Library/Preferences/com.apple.dockfixup.plist' when a new user or migrated user logs in. This option has no effect for existing users. Available in macOS 10.12 and later. Only available on the device channel.</string>
+			<string>If 'true', use the file in '/Library/Preferences/com.apple.dockfixup.plist' when a new user or migrated user logs in. This option has no effect for existing users. Only available on the device channel.</string>
 			<key>pfm_macos_min</key>
 			<string>10.12</string>
 			<key>pfm_name</key>
@@ -1632,7 +1632,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_description</key>
-			<string>One or more special folders that may be created at user login time and placed in the Dock.
+			<string>One or more special folders that the device may create at user login time and place in the Dock.
 The "My Applications" item is only used for Simple Finder environments. The "Original Network Home" item is only used for mobile account users.</string>
 			<key>pfm_name</key>
 			<string>MCXDockSpecialFolders</string>

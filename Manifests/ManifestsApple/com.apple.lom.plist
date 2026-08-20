@@ -154,7 +154,7 @@ This key configures the device to accept the 'LOMDeviceRequestCommand' from MDM 
 			<key>pfm_name</key>
 			<string>ControllerCertificateUUID</string>
 			<key>pfm_title</key>
-			<string>Controller Certificate payload UUID</string>
+			<string>Controller certificate payload UUID</string>
 			<key>pfm_type</key>
 			<string>string</string>
 		</dict>
@@ -183,7 +183,7 @@ This key configures the device to accept the 'LOMDeviceRequestCommand' from MDM 
 			<key>pfm_name</key>
 			<string>DeviceCertificateUUID</string>
 			<key>pfm_title</key>
-			<string>Device Certificate payload UUID</string>
+			<string>Device certificate payload UUID</string>
 			<key>pfm_type</key>
 			<string>string</string>
 		</dict>

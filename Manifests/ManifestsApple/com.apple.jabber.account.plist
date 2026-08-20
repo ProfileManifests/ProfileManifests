@@ -132,7 +132,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_require</key>
 			<string>always</string>
 			<key>pfm_title</key>
-			<string>Account Description</string>
+			<string>Account description</string>
 			<key>pfm_type</key>
 			<string>string</string>
 		</dict>
@@ -142,7 +142,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_name</key>
 			<string>JabberUserName</string>
 			<key>pfm_title</key>
-			<string>Account Username</string>
+			<string>Account username</string>
 			<key>pfm_type</key>
 			<string>string</string>
 		</dict>
@@ -170,7 +170,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_sensitive</key>
 			<true/>
 			<key>pfm_title</key>
-			<string>Account Password</string>
+			<string>Account password</string>
 			<key>pfm_type</key>
 			<string>string</string>
 		</dict>
@@ -192,7 +192,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_require</key>
 			<string>always</string>
 			<key>pfm_title</key>
-			<string>Jabber Authentication</string>
+			<string>Jabber authentication</string>
 			<key>pfm_type</key>
 			<string>string</string>
 		</dict>
@@ -204,7 +204,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_require</key>
 			<string>always</string>
 			<key>pfm_title</key>
-			<string>Account Hostname</string>
+			<string>Account hostname</string>
 			<key>pfm_type</key>
 			<string>string</string>
 		</dict>
@@ -222,7 +222,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_require</key>
 			<string>always</string>
 			<key>pfm_title</key>
-			<string>Port Number</string>
+			<string>Port number</string>
 			<key>pfm_type</key>
 			<string>integer</string>
 		</dict>

@@ -152,7 +152,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>If 'true', the system prevents App Store from launching. Available in macOS 10.14 and later. Restricts installations to software updates only in macOS 10.10 through 10.13.</string>
+			<string>If 'true', the system prevents App Store from launching. Restricts installations to software updates only in macOS 10.10 through 10.13.</string>
 			<key>pfm_macos_min</key>
 			<string>10.10</string>
 			<key>pfm_name</key>
@@ -174,7 +174,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>If 'true', the system disables app adoption by users. Available in macOS 10.10 and later.</string>
+			<string>If 'true', the system disables app adoption by users.</string>
 			<key>pfm_macos_min</key>
 			<string>10.10</string>
 			<key>pfm_name</key>
@@ -196,7 +196,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>If 'true', the system disables software update notifications. Available in macOS 10.10 and later.</string>
+			<string>If 'true', the system disables software update notifications.</string>
 			<key>pfm_macos_min</key>
 			<string>10.10</string>
 			<key>pfm_name</key>

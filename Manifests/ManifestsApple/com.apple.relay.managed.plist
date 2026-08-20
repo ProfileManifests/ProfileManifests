@@ -10,10 +10,14 @@
 	<string>com.apple.relay.managed</string>
 	<key>pfm_format_version</key>
 	<integer>1</integer>
+	<key>pfm_ios_deprecated</key>
+	<string>27.0</string>
 	<key>pfm_ios_min</key>
 	<string>17.0</string>
 	<key>pfm_last_modified</key>
 	<date>2026-06-23T15:59:45Z</date>
+	<key>pfm_macos_deprecated</key>
+	<string>27.0</string>
 	<key>pfm_macos_min</key>
 	<string>14.0</string>
 	<key>pfm_platforms</key>
@@ -143,7 +147,7 @@ Each relay needs to include either 'HTTP2RelayURL' or 'HTTP3RelayURL', or it can
 							<key>pfm_name</key>
 							<string>HTTP3RelayURL</string>
 							<key>pfm_title</key>
-							<string>HTTP/3 Relay URL</string>
+							<string>HTTP/3 relay URL</string>
 							<key>pfm_type</key>
 							<string>string</string>
 						</dict>
@@ -154,7 +158,7 @@ Each relay needs to include either 'HTTP2RelayURL' or 'HTTP3RelayURL', or it can
 							<key>pfm_name</key>
 							<string>HTTP2RelayURL</string>
 							<key>pfm_title</key>
-							<string>HTTP/2 Relay URL</string>
+							<string>HTTP/2 relay URL</string>
 							<key>pfm_type</key>
 							<string>string</string>
 						</dict>
@@ -193,7 +197,7 @@ Each relay needs to include either 'HTTP2RelayURL' or 'HTTP3RelayURL', or it can
 								</dict>
 							</array>
 							<key>pfm_title</key>
-							<string>Additional HTTP Header Fields</string>
+							<string>Additional HTTP header fields</string>
 							<key>pfm_type</key>
 							<string>dictionary</string>
 						</dict>
@@ -221,19 +225,19 @@ If this array is empty, the system uses the default TLS trust evaluation.</strin
 									<key>pfm_name</key>
 									<string>RawPublicKeysElement</string>
 									<key>pfm_title</key>
-									<string>Raw Public Key Element</string>
+									<string>Raw public key element</string>
 									<key>pfm_type</key>
 									<string>data</string>
 								</dict>
 							</array>
 							<key>pfm_title</key>
-							<string>Raw Public Keys</string>
+							<string>Raw public keys</string>
 							<key>pfm_type</key>
 							<string>array</string>
 						</dict>
 					</array>
 					<key>pfm_title</key>
-					<string>Network Relay</string>
+					<string>Network relay</string>
 					<key>pfm_type</key>
 					<string>dictionary</string>
 				</dict>
@@ -256,13 +260,13 @@ If this list and 'MatchFQDNs' are empty, the system routes traffic to all domain
 					<key>pfm_name</key>
 					<string>MatchDomainsElement</string>
 					<key>pfm_title</key>
-					<string>Match Domains Element</string>
+					<string>Match domains element</string>
 					<key>pfm_type</key>
 					<string>string</string>
 				</dict>
 			</array>
 			<key>pfm_title</key>
-			<string>Match Domains</string>
+			<string>Match domains</string>
 			<key>pfm_type</key>
 			<string>array</string>
 		</dict>
@@ -277,13 +281,13 @@ If this list and 'MatchFQDNs' are empty, the system routes traffic to all domain
 					<key>pfm_name</key>
 					<string>ExcludedDomainsElement</string>
 					<key>pfm_title</key>
-					<string>Excluded Domains Element</string>
+					<string>Excluded domains element</string>
 					<key>pfm_type</key>
 					<string>string</string>
 				</dict>
 			</array>
 			<key>pfm_title</key>
-			<string>Excluded Domains</string>
+			<string>Excluded domains</string>
 			<key>pfm_type</key>
 			<string>array</string>
 		</dict>
@@ -292,12 +296,27 @@ If this list and 'MatchFQDNs' are empty, the system routes traffic to all domain
 			<string>A globally unique identifier for this relay configuration. The system uses this UUID to route managed apps through the servers in 'Relays'. This key is required for user enrollment.</string>
 			<key>pfm_name</key>
 			<string>RelayUUID</string>
+			<key>pfm_platforms</key>
+			<array>
+				<string>iOS</string>
+				<string>tvOS</string>
+			</array>
+			<key>pfm_title</key>
+			<string>Relay UUID</string>
 			<key>pfm_type</key>
 			<string>string</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>macOS</key>
+				<dict>
+					<key>pfmx_introduced</key>
+					<string>n/a</string>
+				</dict>
+			</dict>
 		</dict>
 		<dict>
 			<key>pfm_description</key>
-			<string>A list of Fully Qualified Domain Names (FQDNs) to be routed through the servers contained in 'Relays'. Any connection that matches an FQDN in the list exactly uses the relay servers. If this list and 'MatchDomains' are empty, the system routes traffic to all domains to the relay servers, except those that match an excluded domain or excluded FQDN.</string>
+			<string>A list of Fully Qualified Domain Names (FQDNs) to route through the servers contained in 'Relays'. Any connection that matches an FQDN in the list exactly uses the relay servers. If this list and 'MatchDomains' are empty, the system routes traffic to all domains to the relay servers, except those that match an excluded domain or excluded FQDN.</string>
 			<key>pfm_ios_min</key>
 			<string>18.4</string>
 			<key>pfm_macos_min</key>
@@ -314,7 +333,7 @@ If this list and 'MatchFQDNs' are empty, the system routes traffic to all domain
 					<key>pfm_name</key>
 					<string>MatchFQDNsElement</string>
 					<key>pfm_title</key>
-					<string>Match FQDNs Element</string>
+					<string>Match FQDNs element</string>
 					<key>pfm_tvos_min</key>
 					<string>18.4</string>
 					<key>pfm_type</key>
@@ -353,7 +372,7 @@ If this list and 'MatchFQDNs' are empty, the system routes traffic to all domain
 		</dict>
 		<dict>
 			<key>pfm_description</key>
-			<string>A list of Fully Qualified Domain Names (FQDNs) to exclude from routing through the servers contained in 'Relays'. Any connection that matches an FQDN in the list exactly won't use the relay server. When 'MatchDomains' is also present, any FQDN listed in the list should be a subdomain of at least one 'MatchDomain' value, otherwise it will not have any effect.</string>
+			<string>A list of Fully Qualified Domain Names (FQDNs) to exclude from routing through the servers contained in 'Relays'. Any connection that matches an FQDN in the list exactly won't use the relay server. When 'MatchDomains' is also present, any FQDN listed in the list should be a subdomain of at least one 'MatchDomain' value, otherwise it won't have any effect.</string>
 			<key>pfm_ios_min</key>
 			<string>18.4</string>
 			<key>pfm_macos_min</key>
@@ -370,7 +389,7 @@ If this list and 'MatchFQDNs' are empty, the system routes traffic to all domain
 					<key>pfm_name</key>
 					<string>ExcludedFQDNsElement</string>
 					<key>pfm_title</key>
-					<string>Excluded FQDNs Element</string>
+					<string>Excluded FQDNs element</string>
 					<key>pfm_tvos_min</key>
 					<string>18.4</string>
 					<key>pfm_type</key>
@@ -419,7 +438,7 @@ If this list and 'MatchFQDNs' are empty, the system routes traffic to all domain
 			<key>pfm_name</key>
 			<string>UIToggleEnabled</string>
 			<key>pfm_title</key>
-			<string>UI Toggle Enabled</string>
+			<string>UI toggle enabled</string>
 			<key>pfm_tvos_min</key>
 			<string>26.0</string>
 			<key>pfm_type</key>
@@ -460,7 +479,7 @@ If this list and 'MatchFQDNs' are empty, the system routes traffic to all domain
 			<key>pfm_name</key>
 			<string>AllowDNSFailover</string>
 			<key>pfm_title</key>
-			<string>Allow DNS Failover</string>
+			<string>Allow DNS failover</string>
 			<key>pfm_tvos_min</key>
 			<string>26.0</string>
 			<key>pfm_type</key>
@@ -511,6 +530,8 @@ If this list and 'MatchFQDNs' are empty, the system routes traffic to all domain
 		<dict>
 			<key>pfmx_allow_manual_install</key>
 			<true/>
+			<key>pfmx_deprecated</key>
+			<string>27.0</string>
 			<key>pfmx_introduced</key>
 			<string>17.0</string>
 			<key>pfmx_multiple</key>
@@ -536,6 +557,8 @@ If this list and 'MatchFQDNs' are empty, the system routes traffic to all domain
 		<dict>
 			<key>pfmx_allow_manual_install</key>
 			<true/>
+			<key>pfmx_deprecated</key>
+			<string>27.0</string>
 			<key>pfmx_device_channel</key>
 			<true/>
 			<key>pfmx_introduced</key>
@@ -571,6 +594,8 @@ If this list and 'MatchFQDNs' are empty, the system routes traffic to all domain
 		<dict>
 			<key>pfmx_allow_manual_install</key>
 			<true/>
+			<key>pfmx_deprecated</key>
+			<string>27.0</string>
 			<key>pfmx_introduced</key>
 			<string>1.0</string>
 			<key>pfmx_multiple</key>

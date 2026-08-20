@@ -200,7 +200,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_name</key>
 			<string>IsHotspot</string>
 			<key>pfm_title</key>
-			<string>Is Hotspot</string>
+			<string>Is hotspot</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 			<key>pfmx_supported_oses</key>
@@ -310,7 +310,7 @@ If 'false', the user must tap the network name to join it.</string>
 			<key>pfm_name</key>
 			<string>AutoJoin</string>
 			<key>pfm_title</key>
-			<string>Auto Join</string>
+			<string>Auto join</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 			<key>pfmx_supported_oses</key>
@@ -337,7 +337,7 @@ If 'false', the user must tap the network name to join it.</string>
 				<string>tvOS</string>
 			</array>
 			<key>pfm_title</key>
-			<string>Disable Captive Network Detection</string>
+			<string>Disable captive network detection</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 			<key>pfmx_supported_oses</key>
@@ -446,7 +446,7 @@ This value is only locked when MDM installs the profile. If the profile is manua
 				<string>Auto</string>
 			</array>
 			<key>pfm_title</key>
-			<string>Proxy Type</string>
+			<string>Proxy type</string>
 			<key>pfm_type</key>
 			<string>string</string>
 			<key>pfmx_supported_oses</key>
@@ -515,7 +515,7 @@ This value is only locked when MDM installs the profile. If the profile is manua
 			<key>pfm_name</key>
 			<string>ProxyServer</string>
 			<key>pfm_title</key>
-			<string>Proxy Server</string>
+			<string>Proxy server</string>
 			<key>pfm_type</key>
 			<string>string</string>
 			<key>pfmx_supported_oses</key>
@@ -596,7 +596,7 @@ This value is only locked when MDM installs the profile. If the profile is manua
 			<key>pfm_range_min</key>
 			<integer>0</integer>
 			<key>pfm_title</key>
-			<string>Proxy Server Port</string>
+			<string>Proxy server port</string>
 			<key>pfm_type</key>
 			<string>integer</string>
 			<key>pfmx_supported_oses</key>
@@ -649,7 +649,7 @@ This value is only locked when MDM installs the profile. If the profile is manua
 			<key>pfm_name</key>
 			<string>ProxyUsername</string>
 			<key>pfm_title</key>
-			<string>Proxy Username</string>
+			<string>Proxy username</string>
 			<key>pfm_type</key>
 			<string>string</string>
 			<key>pfmx_supported_oses</key>
@@ -704,7 +704,7 @@ This value is only locked when MDM installs the profile. If the profile is manua
 			<key>pfm_sensitive</key>
 			<true/>
 			<key>pfm_title</key>
-			<string>Proxy Password</string>
+			<string>Proxy password</string>
 			<key>pfm_type</key>
 			<string>string</string>
 			<key>pfmx_supported_oses</key>
@@ -804,7 +804,7 @@ This value is only locked when MDM installs the profile. If the profile is manua
 			<key>pfm_name</key>
 			<string>ProxyPACFallbackAllowed</string>
 			<key>pfm_title</key>
-			<string>Proxy PAC Fallback Allowed</string>
+			<string>Proxy PAC fallback allowed</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 			<key>pfmx_supported_oses</key>
@@ -871,7 +871,7 @@ Prior to macOS 13, the encryption type, if specified explicitly, needed to match
 				<string>None</string>
 			</array>
 			<key>pfm_title</key>
-			<string>Encryption Type</string>
+			<string>Encryption type</string>
 			<key>pfm_type</key>
 			<string>string</string>
 		</dict>
@@ -966,7 +966,7 @@ Prior to macOS 13, the encryption type, if specified explicitly, needed to match
 			<key>pfm_name</key>
 			<string>DisplayedOperatorName</string>
 			<key>pfm_title</key>
-			<string>Displayed Operator Name</string>
+			<string>Displayed operator name</string>
 			<key>pfm_type</key>
 			<string>string</string>
 			<key>pfmx_supported_oses</key>
@@ -1035,7 +1035,7 @@ Prior to macOS 13, the encryption type, if specified explicitly, needed to match
 			<key>pfm_name</key>
 			<string>DomainName</string>
 			<key>pfm_title</key>
-			<string>Domain Name</string>
+			<string>Domain name</string>
 			<key>pfm_type</key>
 			<string>string</string>
 			<key>pfmx_supported_oses</key>
@@ -1094,7 +1094,7 @@ Prior to macOS 13, the encryption type, if specified explicitly, needed to match
 			<key>pfm_name</key>
 			<string>ServiceProviderRoamingEnabled</string>
 			<key>pfm_title</key>
-			<string>Roaming Enable</string>
+			<string>Roaming enable</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 			<key>pfmx_supported_oses</key>
@@ -1236,7 +1236,7 @@ Prior to macOS 13, the encryption type, if specified explicitly, needed to match
 				</dict>
 			</array>
 			<key>pfm_title</key>
-			<string>Realm Names</string>
+			<string>Realm names</string>
 			<key>pfm_type</key>
 			<string>array</string>
 			<key>pfmx_supported_oses</key>
@@ -1544,13 +1544,13 @@ For EAP-TLS authentication without a network payload, install the necessary iden
 								<string>EAP-FAST</string>
 							</array>
 							<key>pfm_title</key>
-							<string>EAP Type</string>
+							<string>EAP type</string>
 							<key>pfm_type</key>
 							<string>integer</string>
 						</dict>
 					</array>
 					<key>pfm_title</key>
-					<string>Accept EAP Types</string>
+					<string>Accept EAP types</string>
 					<key>pfm_type</key>
 					<string>array</string>
 					<key>pfm_type_input</key>
@@ -1689,7 +1689,7 @@ For EAP-TLS authentication without a network payload, install the necessary iden
 					<key>pfm_name</key>
 					<string>OneTimeUserPassword</string>
 					<key>pfm_title</key>
-					<string>Per-Connection Password</string>
+					<string>Per-connection password</string>
 					<key>pfm_tvos_min</key>
 					<string>9.0</string>
 					<key>pfm_type</key>
@@ -1710,7 +1710,7 @@ For EAP-TLS authentication without a network payload, install the necessary iden
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string>An array of the UUID of each certificate payload in the same profile to trust for authentication. Use this key to prevent the device from asking the user whether to trust the listed certificates. Dynamic trust (the certificate dialogue) is in a disabled state if you specify this property without also enabling 'TLSAllowTrustExceptions'.</string>
+					<string>An array of the UUID of each certificate payload in the same profile to trust for authentication. Use this key to prevent the device from asking the user whether to trust the listed certificates. The device disables dynamic trust (the certificate dialogue) if you specify this property without also enabling 'TLSAllowTrustExceptions'.</string>
 					<key>pfm_name</key>
 					<string>PayloadCertificateAnchorUUID</string>
 					<key>pfm_subkeys</key>
@@ -1723,19 +1723,19 @@ For EAP-TLS authentication without a network payload, install the necessary iden
 							<key>pfm_name</key>
 							<string>CertificateAnchorUUID</string>
 							<key>pfm_title</key>
-							<string>Individual Certificate Anchor UUID</string>
+							<string>Individual certificate anchor UUID</string>
 							<key>pfm_type</key>
 							<string>string</string>
 						</dict>
 					</array>
 					<key>pfm_title</key>
-					<string>Certificate Anchor UUID</string>
+					<string>Certificate anchor UUID</string>
 					<key>pfm_type</key>
 					<string>array</string>
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string>The list of accepted server certificate common names. If a server presents a certificate that isn't in this list, the system doesn't trust it. If you specify this property, the system disables dynamic trust (the certificate dialog) unless you also specify 'TLSAllowTrustExceptions' with the value 'true'. If necessary, use wildcards to specify the name, such as 'wpa.*.example.com'.</string>
+					<string>The list of accepted server certificate common names. If a server presents a certificate that isn't in this list, the system doesn't trust it. If you specify this property, the system disables dynamic trust (the certificate dialog) unless you also specify 'TLSAllowTrustExceptions' with the value 'true'. If necessary, use a single "*" character to specify a wildcard for an individual component of the name, such as 'wpa.*.example.com'.</string>
 					<key>pfm_exclude</key>
 					<array>
 						<dict>
@@ -1768,13 +1768,13 @@ For EAP-TLS authentication without a network payload, install the necessary iden
 							<key>pfm_name</key>
 							<string>TLSTrustedServerName</string>
 							<key>pfm_title</key>
-							<string>Individual Trusted TLS Server Name</string>
+							<string>Individual trusted TLS server name</string>
 							<key>pfm_type</key>
 							<string>string</string>
 						</dict>
 					</array>
 					<key>pfm_title</key>
-					<string>TLS Trusted Server Names</string>
+					<string>TLS trusted server names</string>
 					<key>pfm_type</key>
 					<string>array</string>
 				</dict>
@@ -1790,7 +1790,7 @@ For EAP-TLS authentication without a network payload, install the necessary iden
 					<key>pfm_name</key>
 					<string>TLSAllowTrustExceptions</string>
 					<key>pfm_title</key>
-					<string>Allow Trust Exceptions</string>
+					<string>Allow trust exceptions</string>
 					<key>pfm_type</key>
 					<string>boolean</string>
 					<key>pfmx_supported_oses</key>
@@ -1857,7 +1857,7 @@ For EAP-TLS authentication without a network payload, install the necessary iden
 						<string>MSCHAPv2</string>
 					</array>
 					<key>pfm_title</key>
-					<string>TTLS Inner Authentication</string>
+					<string>TTLS inner authentication</string>
 					<key>pfm_type</key>
 					<string>string</string>
 				</dict>
@@ -1903,7 +1903,7 @@ For EAP-TLS authentication without a network payload, install the necessary iden
 					<key>pfm_name</key>
 					<string>OuterIdentity</string>
 					<key>pfm_title</key>
-					<string>Outer Identity</string>
+					<string>Outer identity</string>
 					<key>pfm_type</key>
 					<string>string</string>
 				</dict>
@@ -2162,7 +2162,7 @@ This value is only applicable if 'EAPFASTUsePAC' is 'true'. This value must be '
 					<key>pfm_name</key>
 					<string>EAPFASTProvisionPACAnonymously</string>
 					<key>pfm_title</key>
-					<string>Provision PAC Anonymously</string>
+					<string>Provision PAC anonymously</string>
 					<key>pfm_type</key>
 					<string>boolean</string>
 				</dict>
@@ -2197,7 +2197,7 @@ This value is only applicable if 'EAPFASTUsePAC' is 'true'. This value must be '
 						<integer>3</integer>
 					</array>
 					<key>pfm_title</key>
-					<string>Allow Two RANDs</string>
+					<string>Allow two RANDs</string>
 					<key>pfm_type</key>
 					<string>integer</string>
 					<key>pfmx_supported_oses</key>
@@ -2302,7 +2302,7 @@ This value is only applicable if 'EAPFASTUsePAC' is 'true'. This value must be '
 						</dict>
 					</array>
 					<key>pfm_title</key>
-					<string>TLS Trusted Certificates</string>
+					<string>TLS trusted certificates</string>
 					<key>pfm_type</key>
 					<string>array</string>
 				</dict>
@@ -2344,7 +2344,7 @@ This value is only applicable if 'EAPFASTUsePAC' is 'true'. This value must be '
 				</dict>
 			</array>
 			<key>pfm_title</key>
-			<string>EAP Client Configuration</string>
+			<string>EAP client configuration</string>
 			<key>pfm_type</key>
 			<string>dictionary</string>
 		</dict>
@@ -2411,13 +2411,13 @@ If 'false', the system behaves as if Wi-Fi doesn't have an association with a Ci
 							<key>pfm_name</key>
 							<string>appBundleID</string>
 							<key>pfm_title</key>
-							<string>Allowlisted App</string>
+							<string>Allowlisted app</string>
 							<key>pfm_type</key>
 							<string>string</string>
 						</dict>
 					</array>
 					<key>pfm_title</key>
-					<string>Allowlisted App Identifiers</string>
+					<string>Allowlisted app identifiers</string>
 					<key>pfm_type</key>
 					<string>array</string>
 					<key>pfmx_supported_oses</key>
@@ -2461,13 +2461,13 @@ If 'false', the system behaves as if Wi-Fi doesn't have an association with a Ci
 							<key>pfm_name</key>
 							<string>appBundleID</string>
 							<key>pfm_title</key>
-							<string>Allowlisted App</string>
+							<string>Allowlisted app</string>
 							<key>pfm_type</key>
 							<string>string</string>
 						</dict>
 					</array>
 					<key>pfm_title</key>
-					<string>Whitelisted App Identifiers</string>
+					<string>Whitelisted app identifiers</string>
 					<key>pfm_type</key>
 					<string>array</string>
 					<key>pfmx_supported_oses</key>
@@ -2491,7 +2491,7 @@ If 'false', the system behaves as if Wi-Fi doesn't have an association with a Ci
 				</dict>
 			</array>
 			<key>pfm_title</key>
-			<string>QoS Marking Policy</string>
+			<string>QoS marking policy</string>
 			<key>pfm_type</key>
 			<string>dictionary</string>
 			<key>pfmx_supported_oses</key>
@@ -2586,7 +2586,7 @@ If 'false', the system behaves as if Wi-Fi doesn't have an association with a Ci
 			<key>pfm_name</key>
 			<string>TLSCertificateRequired</string>
 			<key>pfm_title</key>
-			<string>Certificate Required</string>
+			<string>Certificate required</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 		</dict>
@@ -2594,15 +2594,15 @@ If 'false', the system behaves as if Wi-Fi doesn't have an association with a Ci
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>If 'true', the device makes this network available for joining before the device is unlocked for the first time following a reboot, on a device configured for return to service. Any network credentials are placed into Class D storage within the keychain, and information about the network is stored on disk in Class D.
+			<string>If 'true', the device makes this network available for joining before the device is unlocked for the first time following a reboot, on a device configured for return to service. The device places any network credentials into Class D storage within the keychain and stores information about the network on disk in Class D.
 There are several restrictions on the use of this flag:
 This property is only available in the return to service mode.
-Only one network can be designated as available before first unlock.
+You can designate only one network as available before first unlock.
 'EAPClientConfiguration' must not be present.
 If 'IsHotspot' is present, it must be set to 'false'.
 'QoSMarkingPolicy' must not be present.
 If 'ProxyType' is present, it must be set to 'None'.
-The device fails to install the profile payload if any of these conditions are not met.</string>
+The device fails to install the profile payload if any of these conditions aren't met.</string>
 			<key>pfm_exclude</key>
 			<array>
 				<dict>
@@ -2663,7 +2663,7 @@ The device fails to install the profile payload if any of these conditions are n
 			<key>pfm_name</key>
 			<string>AllowJoinBeforeFirstUnlock</string>
 			<key>pfm_title</key>
-			<string>Allow Join Before First Unlock</string>
+			<string>Allow join before first unlock</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 			<key>pfmx_supported_oses</key>

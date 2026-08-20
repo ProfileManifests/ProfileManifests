@@ -170,7 +170,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 							<key>pfm_name</key>
 							<string>DisableTouch</string>
 							<key>pfm_title</key>
-							<string>Disable Touch</string>
+							<string>Disable touch</string>
 							<key>pfm_tvos_min</key>
 							<string>10.2</string>
 							<key>pfm_type</key>
@@ -190,7 +190,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								<string>iOS</string>
 							</array>
 							<key>pfm_title</key>
-							<string>Disable Device Rotation</string>
+							<string>Disable device rotation</string>
 							<key>pfm_type</key>
 							<string>boolean</string>
 							<key>pfmx_supported_oses</key>
@@ -216,7 +216,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								<string>iOS</string>
 							</array>
 							<key>pfm_title</key>
-							<string>Disable Volume Buttons</string>
+							<string>Disable volume buttons</string>
 							<key>pfm_type</key>
 							<string>boolean</string>
 							<key>pfmx_supported_oses</key>
@@ -242,7 +242,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								<string>iOS</string>
 							</array>
 							<key>pfm_title</key>
-							<string>Disable Ringer Switch</string>
+							<string>Disable ringer switch</string>
 							<key>pfm_type</key>
 							<string>boolean</string>
 							<key>pfmx_supported_oses</key>
@@ -268,7 +268,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								<string>iOS</string>
 							</array>
 							<key>pfm_title</key>
-							<string>Disable Sleep Wake Button</string>
+							<string>Disable sleep wake button</string>
 							<key>pfm_type</key>
 							<string>boolean</string>
 							<key>pfmx_supported_oses</key>
@@ -290,7 +290,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 							<key>pfm_name</key>
 							<string>DisableAutoLock</string>
 							<key>pfm_title</key>
-							<string>Disable Auto Lock</string>
+							<string>Disable auto lock</string>
 							<key>pfm_tvos_min</key>
 							<string>10.2</string>
 							<key>pfm_type</key>
@@ -306,7 +306,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 							<key>pfm_name</key>
 							<string>EnableVoiceOver</string>
 							<key>pfm_title</key>
-							<string>Enable Voice Over</string>
+							<string>Enable VoiceOver</string>
 							<key>pfm_tvos_min</key>
 							<string>10.2</string>
 							<key>pfm_type</key>
@@ -358,7 +358,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								<string>iOS</string>
 							</array>
 							<key>pfm_title</key>
-							<string>Enable Assistive Touch</string>
+							<string>Enable AssistiveTouch</string>
 							<key>pfm_type</key>
 							<string>boolean</string>
 							<key>pfmx_supported_oses</key>
@@ -486,7 +486,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 							<key>pfm_name</key>
 							<string>VoiceOver</string>
 							<key>pfm_title</key>
-							<string>Voice Over</string>
+							<string>VoiceOver</string>
 							<key>pfm_tvos_min</key>
 							<string>10.2</string>
 							<key>pfm_type</key>
@@ -538,7 +538,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								<string>iOS</string>
 							</array>
 							<key>pfm_title</key>
-							<string>Assistive Touch</string>
+							<string>AssistiveTouch</string>
 							<key>pfm_type</key>
 							<string>boolean</string>
 							<key>pfmx_supported_oses</key>
@@ -583,7 +583,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 						</dict>
 					</array>
 					<key>pfm_title</key>
-					<string>User Enabled Options</string>
+					<string>User enabled options</string>
 					<key>pfm_type</key>
 					<string>dictionary</string>
 					<key>pfmx_supported_oses</key>

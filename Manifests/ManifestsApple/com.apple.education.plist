@@ -23,15 +23,15 @@ It is supported on macOS 10.14 and later. On macOS, it must be sent over the use
 	<key>pfm_macos_min</key>
 	<string>10.14</string>
 	<key>pfm_note</key>
-	<string>In iOS, send this payload over the device channel. Additionally, the system requires supervision unless the payload only specifies as teacher configuration.
+	<string>In iOS, send this payload over the device channel. Additionally, the system requires supervision unless the payload only specifies a teacher configuration.
 In macOS, send this payload over the user channel. The system supports student payloads in macOS 10.14.4 and later.
-Additionally, configure:
-All identities as both SSL clients and servers
-All certificates with a key size of at least 2048 bits
-All certificates to use a hashing algorithm of SHA256 or stronger
-Leader certificates to have the common name prefix leader, which is case-insensitive
-Member certificates to have the common name prefix member, which is case-insensitive
-TLS server certificates issued on or after September 1, 2020 00:00 GMT/UTC to have a validity period greater than 398 days; see About Upcoming Limits on Trusted Certificates for more information.</string>
+Additionally, ensure:
+You configure all identities as both TLS clients and servers
+You configure all certificates with a key size of at least 2048 bits
+You configure all certificates to use a hashing algorithm of SHA256 or stronger
+You configure leader certificates to have the common name prefix "leader", which is case-insensitive
+You configure  member certificates to have the common name prefix "member", which is case-insensitive
+You configure TLS server certificates issued on or after September 1, 2020 00:00 GMT/UTC to have a validity period less than 398 days; see About Upcoming Limits on Trusted Certificates for more information.</string>
 	<key>pfm_platforms</key>
 	<array>
 		<string>iOS</string>

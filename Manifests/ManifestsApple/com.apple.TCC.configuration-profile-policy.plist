@@ -133,7 +133,10 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<array>
 				<dict>
 					<key>pfm_description</key>
-					<string>Specifies the policies for the app via the Accessibility subsystem. The ability to grant access by this profile is deprecated as of macOS 26.2, and will be removed in macOS 27.0.</string>
+					<string>Specifies the policies for the app via the Accessibility subsystem. In macOS 27.0, the device shows a non-blocking notification for each application when this setting is applied, and it allows the user to make changes to the setting in the System Settings app.
+Deprecated: use the 'Privacy' key in the declarative management 'com.apple.configuration.app.settings' configuration.</string>
+					<key>pfm_macos_deprecated</key>
+					<string>27.0</string>
 					<key>pfm_macos_min</key>
 					<string>10.14</string>
 					<key>pfm_name</key>
@@ -143,6 +146,8 @@ During a profile replacement, the system updates payloads with the same 'Payload
 						<dict>
 							<key>pfm_description</key>
 							<string>A dictionary listing apps and the privacy policy to apply to them.</string>
+							<key>pfm_macos_deprecated</key>
+							<string>27.0</string>
 							<key>pfm_name</key>
 							<string>IdentityDict</string>
 							<key>pfm_require</key>
@@ -153,6 +158,8 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<key>pfm_description</key>
 									<string>The bundle ID or installation path of the binary.
 Note: This value is case-sensitive.</string>
+									<key>pfm_macos_deprecated</key>
+									<string>27.0</string>
 									<key>pfm_name</key>
 									<string>Identifier</string>
 									<key>pfm_require</key>
@@ -167,6 +174,8 @@ Note: This value is case-sensitive.</string>
 								<dict>
 									<key>pfm_description</key>
 									<string>The type of identifier value. Application bundles must be identified by bundle ID. Nonbundled binaries must be identified by installation path. Helper tools embedded within an application bundle automatically inherit the permissions of their enclosing app bundle.</string>
+									<key>pfm_macos_deprecated</key>
+									<string>27.0</string>
 									<key>pfm_name</key>
 									<string>IdentifierType</string>
 									<key>pfm_range_list</key>
@@ -188,7 +197,9 @@ Note: This value is case-sensitive.</string>
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>Obtained via the command 'codesign -display -r -'.</string>
+									<string>Obtain this value by running 'codesign -display -r -'.</string>
+									<key>pfm_macos_deprecated</key>
+									<string>27.0</string>
 									<key>pfm_name</key>
 									<string>CodeRequirement</string>
 									<key>pfm_require</key>
@@ -203,6 +214,8 @@ Note: This value is case-sensitive.</string>
 									<false/>
 									<key>pfm_description</key>
 									<string>If 'true', statically validate the code requirement. Used only if the process invalidates its dynamic code signature.</string>
+									<key>pfm_macos_deprecated</key>
+									<string>27.0</string>
 									<key>pfm_name</key>
 									<string>StaticCode</string>
 									<key>pfm_title</key>
@@ -217,6 +230,8 @@ Note: This value is case-sensitive.</string>
 'Deny': Equivalent to a 'false' value for the 'Allowed' key
 Note: Every payload needs to include either 'Authorization' or 'Allowed', but not both.
 Available in macOS 11 and later.</string>
+									<key>pfm_macos_deprecated</key>
+									<string>27.0</string>
 									<key>pfm_macos_min</key>
 									<string>11.0</string>
 									<key>pfm_name</key>
@@ -246,6 +261,8 @@ Available in macOS 11 and later.</string>
 									<key>pfm_description</key>
 									<string>If 'true', access is granted; otherwise, the process doesn't have access. The user isn't prompted and can't change this value.
 Note: Every payload needs to include either 'Authorization' or 'Allowed', but not both.</string>
+									<key>pfm_macos_deprecated</key>
+									<string>27.0</string>
 									<key>pfm_name</key>
 									<string>Allowed</string>
 									<key>pfm_range_list</key>
@@ -268,6 +285,8 @@ Note: Every payload needs to include either 'Authorization' or 'Allowed', but no
 									<string>Not used.</string>
 									<key>pfm_hidden</key>
 									<string>all</string>
+									<key>pfm_macos_deprecated</key>
+									<string>27.0</string>
 									<key>pfm_name</key>
 									<string>Comment</string>
 									<key>pfm_title</key>
@@ -288,6 +307,14 @@ Note: Every payload needs to include either 'Authorization' or 'Allowed', but no
 					<string>array</string>
 					<key>pfm_value_import_processor</key>
 					<string>com.apple.TCC.configuration-profile-policy.services</string>
+					<key>pfmx_supported_oses</key>
+					<dict>
+						<key>macOS</key>
+						<dict>
+							<key>pfmx_deprecated</key>
+							<string>27.0</string>
+						</dict>
+					</dict>
 				</dict>
 				<dict>
 					<key>pfm_description</key>
@@ -346,7 +373,7 @@ Note: This value is case-sensitive.</string>
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>Obtained via the command 'codesign -display -r -'.</string>
+									<string>Obtain this value by running 'codesign -display -r -'.</string>
 									<key>pfm_name</key>
 									<string>CodeRequirement</string>
 									<key>pfm_require</key>
@@ -490,7 +517,10 @@ Note: Every payload needs to include either 'Authorization' or 'Allowed', but no
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string>Specifies the policies for the app to access Bluetooth devices.</string>
+					<string>Specifies the policies for the app to access Bluetooth devices.
+Deprecated: use the 'Privacy' key in the declarative management 'com.apple.configuration.app.settings' configuration.</string>
+					<key>pfm_macos_deprecated</key>
+					<string>27.0</string>
 					<key>pfm_macos_min</key>
 					<string>11.0</string>
 					<key>pfm_name</key>
@@ -500,6 +530,8 @@ Note: Every payload needs to include either 'Authorization' or 'Allowed', but no
 						<dict>
 							<key>pfm_description</key>
 							<string>A dictionary listing apps and the privacy policy to apply to them.</string>
+							<key>pfm_macos_deprecated</key>
+							<string>27.0</string>
 							<key>pfm_macos_min</key>
 							<string>11.0</string>
 							<key>pfm_name</key>
@@ -512,6 +544,8 @@ Note: Every payload needs to include either 'Authorization' or 'Allowed', but no
 									<key>pfm_description</key>
 									<string>The bundle ID or installation path of the binary.
 Note: This value is case-sensitive.</string>
+									<key>pfm_macos_deprecated</key>
+									<string>27.0</string>
 									<key>pfm_macos_min</key>
 									<string>11.0</string>
 									<key>pfm_name</key>
@@ -528,6 +562,8 @@ Note: This value is case-sensitive.</string>
 								<dict>
 									<key>pfm_description</key>
 									<string>The type of identifier value. Application bundles must be identified by bundle ID. Nonbundled binaries must be identified by installation path. Helper tools embedded within an application bundle automatically inherit the permissions of their enclosing app bundle.</string>
+									<key>pfm_macos_deprecated</key>
+									<string>27.0</string>
 									<key>pfm_macos_min</key>
 									<string>11.0</string>
 									<key>pfm_name</key>
@@ -551,7 +587,9 @@ Note: This value is case-sensitive.</string>
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>Obtained via the command 'codesign -display -r -'.</string>
+									<string>Obtain this value by running 'codesign -display -r -'.</string>
+									<key>pfm_macos_deprecated</key>
+									<string>27.0</string>
 									<key>pfm_macos_min</key>
 									<string>11.0</string>
 									<key>pfm_name</key>
@@ -568,6 +606,8 @@ Note: This value is case-sensitive.</string>
 									<false/>
 									<key>pfm_description</key>
 									<string>If 'true', statically validate the code requirement. Used only if the process invalidates its dynamic code signature.</string>
+									<key>pfm_macos_deprecated</key>
+									<string>27.0</string>
 									<key>pfm_macos_min</key>
 									<string>11.0</string>
 									<key>pfm_name</key>
@@ -584,6 +624,8 @@ Note: This value is case-sensitive.</string>
 'Deny': Equivalent to a 'false' value for the 'Allowed' key
 Note: Every payload needs to include either 'Authorization' or 'Allowed', but not both.
 Available in macOS 11 and later.</string>
+									<key>pfm_macos_deprecated</key>
+									<string>27.0</string>
 									<key>pfm_macos_min</key>
 									<string>11.0</string>
 									<key>pfm_name</key>
@@ -600,6 +642,8 @@ Available in macOS 11 and later.</string>
 									<key>pfm_description</key>
 									<string>If 'true', access is granted; otherwise, the process doesn't have access. The user isn't prompted and can't change this value.
 Note: Every payload needs to include either 'Authorization' or 'Allowed', but not both.</string>
+									<key>pfm_macos_deprecated</key>
+									<string>27.0</string>
 									<key>pfm_macos_min</key>
 									<string>11.0</string>
 									<key>pfm_name</key>
@@ -622,6 +666,8 @@ Note: Every payload needs to include either 'Authorization' or 'Allowed', but no
 									<string>Not used.</string>
 									<key>pfm_hidden</key>
 									<string>all</string>
+									<key>pfm_macos_deprecated</key>
+									<string>27.0</string>
 									<key>pfm_macos_min</key>
 									<string>11.0</string>
 									<key>pfm_name</key>
@@ -646,6 +692,8 @@ Note: Every payload needs to include either 'Authorization' or 'Allowed', but no
 					<dict>
 						<key>macOS</key>
 						<dict>
+							<key>pfmx_deprecated</key>
+							<string>27.0</string>
 							<key>pfmx_introduced</key>
 							<string>11.0</string>
 						</dict>
@@ -708,7 +756,7 @@ Note: This value is case-sensitive.</string>
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>Obtained via the command 'codesign -display -r -'.</string>
+									<string>Obtain this value by running 'codesign -display -r -'.</string>
 									<key>pfm_name</key>
 									<string>CodeRequirement</string>
 									<key>pfm_require</key>
@@ -806,7 +854,9 @@ Note: Every payload needs to include either 'Authorization' or 'Allowed', but no
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string>A system camera. Access to the camera can't be given in a profile; it can only be denied.</string>
+					<string>A system camera. A profile can't grant access to the camera; it can only deny it.</string>
+					<key>pfm_macos_deprecated</key>
+					<string>27.0</string>
 					<key>pfm_macos_min</key>
 					<string>10.14</string>
 					<key>pfm_name</key>
@@ -816,6 +866,8 @@ Note: Every payload needs to include either 'Authorization' or 'Allowed', but no
 						<dict>
 							<key>pfm_description</key>
 							<string>A dictionary listing apps and the privacy policy to apply to them.</string>
+							<key>pfm_macos_deprecated</key>
+							<string>27.0</string>
 							<key>pfm_name</key>
 							<string>IdentityDict</string>
 							<key>pfm_require</key>
@@ -826,6 +878,8 @@ Note: Every payload needs to include either 'Authorization' or 'Allowed', but no
 									<key>pfm_description</key>
 									<string>The bundle ID or installation path of the binary.
 Note: This value is case-sensitive.</string>
+									<key>pfm_macos_deprecated</key>
+									<string>27.0</string>
 									<key>pfm_name</key>
 									<string>Identifier</string>
 									<key>pfm_require</key>
@@ -840,6 +894,8 @@ Note: This value is case-sensitive.</string>
 								<dict>
 									<key>pfm_description</key>
 									<string>The type of identifier value. Application bundles must be identified by bundle ID. Nonbundled binaries must be identified by installation path. Helper tools embedded within an application bundle automatically inherit the permissions of their enclosing app bundle.</string>
+									<key>pfm_macos_deprecated</key>
+									<string>27.0</string>
 									<key>pfm_name</key>
 									<string>IdentifierType</string>
 									<key>pfm_range_list</key>
@@ -861,7 +917,9 @@ Note: This value is case-sensitive.</string>
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>Obtained via the command 'codesign -display -r -'.</string>
+									<string>Obtain this value by running 'codesign -display -r -'.</string>
+									<key>pfm_macos_deprecated</key>
+									<string>27.0</string>
 									<key>pfm_name</key>
 									<string>CodeRequirement</string>
 									<key>pfm_require</key>
@@ -876,6 +934,8 @@ Note: This value is case-sensitive.</string>
 									<false/>
 									<key>pfm_description</key>
 									<string>If 'true', statically validate the code requirement. Used only if the process invalidates its dynamic code signature.</string>
+									<key>pfm_macos_deprecated</key>
+									<string>27.0</string>
 									<key>pfm_name</key>
 									<string>StaticCode</string>
 									<key>pfm_title</key>
@@ -890,6 +950,8 @@ Note: This value is case-sensitive.</string>
 'Deny': Equivalent to a 'false' value for the 'Allowed' key
 Note: Every payload needs to include either 'Authorization' or 'Allowed', but not both.
 Available in macOS 11 and later.</string>
+									<key>pfm_macos_deprecated</key>
+									<string>27.0</string>
 									<key>pfm_macos_min</key>
 									<string>11.0</string>
 									<key>pfm_name</key>
@@ -913,6 +975,8 @@ Available in macOS 11 and later.</string>
 									<key>pfm_description</key>
 									<string>If 'true', access is granted; otherwise, the process doesn't have access. The user isn't prompted and can't change this value.
 Note: Every payload needs to include either 'Authorization' or 'Allowed', but not both.</string>
+									<key>pfm_macos_deprecated</key>
+									<string>27.0</string>
 									<key>pfm_name</key>
 									<string>Allowed</string>
 									<key>pfm_range_list</key>
@@ -933,6 +997,8 @@ Note: Every payload needs to include either 'Authorization' or 'Allowed', but no
 									<string>Not used.</string>
 									<key>pfm_hidden</key>
 									<string>all</string>
+									<key>pfm_macos_deprecated</key>
+									<string>27.0</string>
 									<key>pfm_name</key>
 									<string>Comment</string>
 									<key>pfm_title</key>
@@ -953,6 +1019,14 @@ Note: Every payload needs to include either 'Authorization' or 'Allowed', but no
 					<string>array</string>
 					<key>pfm_value_import_processor</key>
 					<string>com.apple.TCC.configuration-profile-policy.services</string>
+					<key>pfmx_supported_oses</key>
+					<dict>
+						<key>macOS</key>
+						<dict>
+							<key>pfmx_deprecated</key>
+							<string>27.0</string>
+						</dict>
+					</dict>
 				</dict>
 				<dict>
 					<key>pfm_description</key>
@@ -1011,7 +1085,7 @@ Note: This value is case-sensitive.</string>
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>Obtained via the command 'codesign -display -r -'.</string>
+									<string>Obtain this value by running 'codesign -display -r -'.</string>
 									<key>pfm_name</key>
 									<string>CodeRequirement</string>
 									<key>pfm_require</key>
@@ -1170,7 +1244,7 @@ Note: This value is case-sensitive.</string>
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>Obtained via the command 'codesign -display -r -'.</string>
+									<string>Obtain this value by running 'codesign -display -r -'.</string>
 									<key>pfm_macos_min</key>
 									<string>10.15</string>
 									<key>pfm_name</key>
@@ -1282,7 +1356,7 @@ Note: Every payload needs to include either 'Authorization' or 'Allowed', but no
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string>Allows the application to use CoreGraphics and HID APIs to listen to (receive) CGEvents and HID events from all processes. Access to these events can't be given in a profile; it can only be denied.</string>
+					<string>Allows the application to use CoreGraphics and HID APIs to listen to (receive) CGEvents and HID events from all processes. A profile can't grant access to these events; it can only deny it.</string>
 					<key>pfm_macos_min</key>
 					<string>10.15</string>
 					<key>pfm_name</key>
@@ -1343,7 +1417,7 @@ Note: This value is case-sensitive.</string>
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>Obtained via the command 'codesign -display -r -'.</string>
+									<string>Obtain this value by running 'codesign -display -r -'.</string>
 									<key>pfm_macos_min</key>
 									<string>10.15</string>
 									<key>pfm_name</key>
@@ -1375,8 +1449,7 @@ Note: This value is case-sensitive.</string>
 'Allow': Equivalent to a 'true' value for the 'Allowed' key
 'Deny': Equivalent to a 'false' value for the 'Allowed' key
 'AllowStandardUserToSetSystemService': Allows a standard (non-admin) user to configure the permissions for the specified app in the Privacy preferences for services that otherwise require admin authorization; only valid for the 'ListenEvent' and 'ScreenCapture' services
-Note: Every payload needs to include either 'Authorization' or 'Allowed', but not both.
-Available in macOS 11 and later.</string>
+Note: Every payload needs to include either 'Authorization' or 'Allowed', but not both.</string>
 									<key>pfm_macos_min</key>
 									<string>11.0</string>
 									<key>pfm_name</key>
@@ -1522,7 +1595,7 @@ Note: This value is case-sensitive.</string>
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>Obtained via the command 'codesign -display -r -'.</string>
+									<string>Obtain this value by running 'codesign -display -r -'.</string>
 									<key>pfm_macos_min</key>
 									<string>10.15</string>
 									<key>pfm_name</key>
@@ -1636,7 +1709,9 @@ Note: Every payload needs to include either 'Authorization' or 'Allowed', but no
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string>A system microphone. Access to the microphone can't be given in a profile; it can only be denied.</string>
+					<string>A system microphone. A profile can't grant access to the microphone; it can only deny it.</string>
+					<key>pfm_macos_deprecated</key>
+					<string>27.0</string>
 					<key>pfm_macos_min</key>
 					<string>10.14</string>
 					<key>pfm_name</key>
@@ -1646,6 +1721,8 @@ Note: Every payload needs to include either 'Authorization' or 'Allowed', but no
 						<dict>
 							<key>pfm_description</key>
 							<string>A dictionary listing apps and the privacy policy to apply to them.</string>
+							<key>pfm_macos_deprecated</key>
+							<string>27.0</string>
 							<key>pfm_name</key>
 							<string>IdentityDict</string>
 							<key>pfm_require</key>
@@ -1656,6 +1733,8 @@ Note: Every payload needs to include either 'Authorization' or 'Allowed', but no
 									<key>pfm_description</key>
 									<string>The bundle ID or installation path of the binary.
 Note: This value is case-sensitive.</string>
+									<key>pfm_macos_deprecated</key>
+									<string>27.0</string>
 									<key>pfm_name</key>
 									<string>Identifier</string>
 									<key>pfm_require</key>
@@ -1670,6 +1749,8 @@ Note: This value is case-sensitive.</string>
 								<dict>
 									<key>pfm_description</key>
 									<string>The type of identifier value. Application bundles must be identified by bundle ID. Nonbundled binaries must be identified by installation path. Helper tools embedded within an application bundle automatically inherit the permissions of their enclosing app bundle.</string>
+									<key>pfm_macos_deprecated</key>
+									<string>27.0</string>
 									<key>pfm_name</key>
 									<string>IdentifierType</string>
 									<key>pfm_range_list</key>
@@ -1691,7 +1772,9 @@ Note: This value is case-sensitive.</string>
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>Obtained via the command 'codesign -display -r -'.</string>
+									<string>Obtain this value by running 'codesign -display -r -'.</string>
+									<key>pfm_macos_deprecated</key>
+									<string>27.0</string>
 									<key>pfm_name</key>
 									<string>CodeRequirement</string>
 									<key>pfm_require</key>
@@ -1706,6 +1789,8 @@ Note: This value is case-sensitive.</string>
 									<false/>
 									<key>pfm_description</key>
 									<string>If 'true', statically validate the code requirement. Used only if the process invalidates its dynamic code signature.</string>
+									<key>pfm_macos_deprecated</key>
+									<string>27.0</string>
 									<key>pfm_name</key>
 									<string>StaticCode</string>
 									<key>pfm_title</key>
@@ -1720,6 +1805,8 @@ Note: This value is case-sensitive.</string>
 'Deny': Equivalent to a 'false' value for the 'Allowed' key
 Note: Every payload needs to include either 'Authorization' or 'Allowed', but not both.
 Available in macOS 11 and later.</string>
+									<key>pfm_macos_deprecated</key>
+									<string>27.0</string>
 									<key>pfm_macos_min</key>
 									<string>11.0</string>
 									<key>pfm_name</key>
@@ -1743,6 +1830,8 @@ Available in macOS 11 and later.</string>
 									<key>pfm_description</key>
 									<string>If 'true', access is granted; otherwise, the process doesn't have access. The user isn't prompted and can't change this value.
 Note: Every payload needs to include either 'Authorization' or 'Allowed', but not both.</string>
+									<key>pfm_macos_deprecated</key>
+									<string>27.0</string>
 									<key>pfm_name</key>
 									<string>Allowed</string>
 									<key>pfm_range_list</key>
@@ -1763,6 +1852,8 @@ Note: Every payload needs to include either 'Authorization' or 'Allowed', but no
 									<string>Not used.</string>
 									<key>pfm_hidden</key>
 									<string>all</string>
+									<key>pfm_macos_deprecated</key>
+									<string>27.0</string>
 									<key>pfm_name</key>
 									<string>Comment</string>
 									<key>pfm_title</key>
@@ -1783,6 +1874,14 @@ Note: Every payload needs to include either 'Authorization' or 'Allowed', but no
 					<string>array</string>
 					<key>pfm_value_import_processor</key>
 					<string>com.apple.TCC.configuration-profile-policy.services</string>
+					<key>pfmx_supported_oses</key>
+					<dict>
+						<key>macOS</key>
+						<dict>
+							<key>pfmx_deprecated</key>
+							<string>27.0</string>
+						</dict>
+					</dict>
 				</dict>
 				<dict>
 					<key>pfm_description</key>
@@ -1841,7 +1940,7 @@ Note: This value is case-sensitive.</string>
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>Obtained via the command 'codesign -display -r -'.</string>
+									<string>Obtain this value by running 'codesign -display -r -'.</string>
 									<key>pfm_name</key>
 									<string>CodeRequirement</string>
 									<key>pfm_require</key>
@@ -1994,7 +2093,7 @@ Note: This value is case-sensitive.</string>
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>Obtained via the command 'codesign -display -r -'.</string>
+									<string>Obtain this value by running 'codesign -display -r -'.</string>
 									<key>pfm_name</key>
 									<string>CodeRequirement</string>
 									<key>pfm_require</key>
@@ -2147,7 +2246,7 @@ Note: This value is case-sensitive.</string>
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>Obtained via the command 'codesign -display -r -'.</string>
+									<string>Obtain this value by running 'codesign -display -r -'.</string>
 									<key>pfm_name</key>
 									<string>CodeRequirement</string>
 									<key>pfm_require</key>
@@ -2300,7 +2399,7 @@ Note: This value is case-sensitive.</string>
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>Obtained via the command 'codesign -display -r -'.</string>
+									<string>Obtain this value by running 'codesign -display -r -'.</string>
 									<key>pfm_name</key>
 									<string>CodeRequirement</string>
 									<key>pfm_require</key>
@@ -2398,7 +2497,7 @@ Note: Every payload needs to include either 'Authorization' or 'Allowed', but no
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string>Allows the application to capture (read) the contents of the system display. Access to the contents can't be given in a profile; it can only be denied.</string>
+					<string>Allows the application to capture (read) the contents of the system display. A profile can't grant access to the contents; it can only deny it.</string>
 					<key>pfm_macos_min</key>
 					<string>10.15</string>
 					<key>pfm_name</key>
@@ -2459,7 +2558,7 @@ Note: This value is case-sensitive.</string>
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>Obtained via the command 'codesign -display -r -'.</string>
+									<string>Obtain this value by running 'codesign -display -r -'.</string>
 									<key>pfm_macos_min</key>
 									<string>10.15</string>
 									<key>pfm_name</key>
@@ -2491,8 +2590,7 @@ Note: This value is case-sensitive.</string>
 'Allow': Equivalent to a 'true' value for the 'Allowed' key
 'Deny': Equivalent to a 'false' value for the 'Allowed' key
 'AllowStandardUserToSetSystemService': Allows a standard (non-admin) user to configure the permissions for the specified app in the Privacy preferences for services that otherwise require admin authorization; only valid for the 'ListenEvent' and 'ScreenCapture' services
-Note: Every payload needs to include either 'Authorization' or 'Allowed', but not both.
-Available in macOS 11 and later.</string>
+Note: Every payload needs to include either 'Authorization' or 'Allowed', but not both.</string>
 									<key>pfm_macos_min</key>
 									<string>11.0</string>
 									<key>pfm_name</key>
@@ -2577,7 +2675,10 @@ Note: Every payload needs to include either 'Authorization' or 'Allowed', but no
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string>Allows the application to use the system Speech Recognition facility and to send speech data to Apple.</string>
+					<string>Allows the application to use the system Speech Recognition facility and to send speech data to Apple.
+Deprecated: use the 'Privacy' key in the declarative management 'com.apple.configuration.app.settings' configuration.</string>
+					<key>pfm_macos_deprecated</key>
+					<string>27.0</string>
 					<key>pfm_macos_min</key>
 					<string>10.15</string>
 					<key>pfm_name</key>
@@ -2587,6 +2688,8 @@ Note: Every payload needs to include either 'Authorization' or 'Allowed', but no
 						<dict>
 							<key>pfm_description</key>
 							<string>A dictionary listing apps and the privacy policy to apply to them.</string>
+							<key>pfm_macos_deprecated</key>
+							<string>27.0</string>
 							<key>pfm_macos_min</key>
 							<string>10.15</string>
 							<key>pfm_name</key>
@@ -2599,6 +2702,8 @@ Note: Every payload needs to include either 'Authorization' or 'Allowed', but no
 									<key>pfm_description</key>
 									<string>The bundle ID or installation path of the binary.
 Note: This value is case-sensitive.</string>
+									<key>pfm_macos_deprecated</key>
+									<string>27.0</string>
 									<key>pfm_macos_min</key>
 									<string>10.15</string>
 									<key>pfm_name</key>
@@ -2615,6 +2720,8 @@ Note: This value is case-sensitive.</string>
 								<dict>
 									<key>pfm_description</key>
 									<string>The type of identifier value. Application bundles must be identified by bundle ID. Nonbundled binaries must be identified by installation path. Helper tools embedded within an application bundle automatically inherit the permissions of their enclosing app bundle.</string>
+									<key>pfm_macos_deprecated</key>
+									<string>27.0</string>
 									<key>pfm_macos_min</key>
 									<string>10.15</string>
 									<key>pfm_name</key>
@@ -2638,7 +2745,9 @@ Note: This value is case-sensitive.</string>
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>Obtained via the command 'codesign -display -r -'.</string>
+									<string>Obtain this value by running 'codesign -display -r -'.</string>
+									<key>pfm_macos_deprecated</key>
+									<string>27.0</string>
 									<key>pfm_macos_min</key>
 									<string>10.15</string>
 									<key>pfm_name</key>
@@ -2655,6 +2764,8 @@ Note: This value is case-sensitive.</string>
 									<false/>
 									<key>pfm_description</key>
 									<string>If 'true', statically validate the code requirement. Used only if the process invalidates its dynamic code signature.</string>
+									<key>pfm_macos_deprecated</key>
+									<string>27.0</string>
 									<key>pfm_macos_min</key>
 									<string>10.15</string>
 									<key>pfm_name</key>
@@ -2671,6 +2782,8 @@ Note: This value is case-sensitive.</string>
 'Deny': Equivalent to a 'false' value for the 'Allowed' key
 Note: Every payload needs to include either 'Authorization' or 'Allowed', but not both.
 Available in macOS 11 and later.</string>
+									<key>pfm_macos_deprecated</key>
+									<string>27.0</string>
 									<key>pfm_macos_min</key>
 									<string>11.0</string>
 									<key>pfm_name</key>
@@ -2695,6 +2808,8 @@ Available in macOS 11 and later.</string>
 									<key>pfm_description</key>
 									<string>If 'true', access is granted; otherwise, the process doesn't have access. The user isn't prompted and can't change this value.
 Note: Every payload needs to include either 'Authorization' or 'Allowed', but not both.</string>
+									<key>pfm_macos_deprecated</key>
+									<string>27.0</string>
 									<key>pfm_macos_min</key>
 									<string>10.15</string>
 									<key>pfm_name</key>
@@ -2719,6 +2834,8 @@ Note: Every payload needs to include either 'Authorization' or 'Allowed', but no
 									<string>Not used.</string>
 									<key>pfm_hidden</key>
 									<string>all</string>
+									<key>pfm_macos_deprecated</key>
+									<string>27.0</string>
 									<key>pfm_macos_min</key>
 									<string>10.15</string>
 									<key>pfm_name</key>
@@ -2745,6 +2862,8 @@ Note: Every payload needs to include either 'Authorization' or 'Allowed', but no
 					<dict>
 						<key>macOS</key>
 						<dict>
+							<key>pfmx_deprecated</key>
+							<string>27.0</string>
 							<key>pfmx_introduced</key>
 							<string>10.15</string>
 						</dict>
@@ -2813,7 +2932,7 @@ Note: This value is case-sensitive.</string>
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>Obtained via the command 'codesign -display -r -'.</string>
+									<string>Obtain this value by running 'codesign -display -r -'.</string>
 									<key>pfm_macos_min</key>
 									<string>10.15</string>
 									<key>pfm_name</key>
@@ -2988,7 +3107,7 @@ Note: This value is case-sensitive.</string>
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>Obtained via the command 'codesign -display -r -'.</string>
+									<string>Obtain this value by running 'codesign -display -r -'.</string>
 									<key>pfm_macos_min</key>
 									<string>10.15</string>
 									<key>pfm_name</key>
@@ -3163,7 +3282,7 @@ Note: This value is case-sensitive.</string>
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>Obtained via the command 'codesign -display -r -'.</string>
+									<string>Obtain this value by running 'codesign -display -r -'.</string>
 									<key>pfm_macos_min</key>
 									<string>10.15</string>
 									<key>pfm_name</key>
@@ -3338,7 +3457,7 @@ Note: This value is case-sensitive.</string>
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>Obtained via the command 'codesign -display -r -'.</string>
+									<string>Obtain this value by running 'codesign -display -r -'.</string>
 									<key>pfm_macos_min</key>
 									<string>10.15</string>
 									<key>pfm_name</key>
@@ -3513,7 +3632,7 @@ Note: This value is case-sensitive.</string>
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>Obtained via the command 'codesign -display -r -'.</string>
+									<string>Obtain this value by running 'codesign -display -r -'.</string>
 									<key>pfm_macos_min</key>
 									<string>10.15</string>
 									<key>pfm_name</key>
@@ -3682,7 +3801,7 @@ Note: This value is case-sensitive.</string>
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>Obtained via the command 'codesign -display -r -'.</string>
+									<string>Obtain this value by running 'codesign -display -r -'.</string>
 									<key>pfm_name</key>
 									<string>CodeRequirement</string>
 									<key>pfm_require</key>
@@ -3828,7 +3947,7 @@ Note: This value is case-sensitive.</string>
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>Obtained via the command 'codesign -display -r -'.</string>
+									<string>Obtain this value by running 'codesign -display -r -'.</string>
 									<key>pfm_macos_min</key>
 									<string>14.0</string>
 									<key>pfm_name</key>
@@ -3922,7 +4041,7 @@ Note: Every payload needs to include either 'Authorization' or 'Allowed', but no
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string>Allows the application to update or delete other apps. Available in macOS 13 and later.</string>
+					<string>Allows the application to update or delete other apps.</string>
 					<key>pfm_macos_min</key>
 					<string>13.0</string>
 					<key>pfm_name</key>
@@ -3983,7 +4102,7 @@ Note: This value is case-sensitive.</string>
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>Obtained via the command 'codesign -display -r -'.</string>
+									<string>Obtain this value by running 'codesign -display -r -'.</string>
 									<key>pfm_macos_min</key>
 									<string>13.0</string>
 									<key>pfm_name</key>

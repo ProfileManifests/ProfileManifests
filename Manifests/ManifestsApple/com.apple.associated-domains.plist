@@ -173,7 +173,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 							<key>pfm_default</key>
 							<false/>
 							<key>pfm_description</key>
-							<string>If 'true', the system enables direct download of data for this domain instead of through a CDN. Set the entitlement value for this domain to 'service:domain?mode=managed'; otherwise, the system ignores this value. Available in macOS 11 and later.</string>
+							<string>If 'true', the system enables direct download of data for this domain instead of through a CDN. Set the entitlement value for this domain to 'service:domain?mode=managed'; otherwise, the system ignores this value.</string>
 							<key>pfm_macos_min</key>
 							<string>11.0</string>
 							<key>pfm_name</key>

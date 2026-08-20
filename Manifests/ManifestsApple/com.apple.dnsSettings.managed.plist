@@ -14,10 +14,14 @@
 	<integer>1</integer>
 	<key>pfm_interaction</key>
 	<string>combined</string>
+	<key>pfm_ios_deprecated</key>
+	<string>27.0</string>
 	<key>pfm_ios_min</key>
 	<string>14.0</string>
 	<key>pfm_last_modified</key>
 	<date>2026-06-23T15:59:45Z</date>
+	<key>pfm_macos_deprecated</key>
+	<string>27.0</string>
 	<key>pfm_macos_min</key>
 	<string>11.0</string>
 	<key>pfm_note</key>
@@ -152,7 +156,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<key>pfm_require</key>
 					<string>always-nested</string>
 					<key>pfm_title</key>
-					<string>DNS Protocol</string>
+					<string>DNS protocol</string>
 					<key>pfm_type</key>
 					<string>string</string>
 				</dict>
@@ -167,13 +171,13 @@ During a profile replacement, the system updates payloads with the same 'Payload
 							<key>pfm_name</key>
 							<string>ServerAddressesElement</string>
 							<key>pfm_title</key>
-							<string>Server Address Element</string>
+							<string>Server address element</string>
 							<key>pfm_type</key>
 							<string>string</string>
 						</dict>
 					</array>
 					<key>pfm_title</key>
-					<string>DNS Server Addresses</string>
+					<string>DNS server addresses</string>
 					<key>pfm_type</key>
 					<string>array</string>
 				</dict>
@@ -203,7 +207,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<key>pfm_note</key>
 					<string>This key must be present only if the DNSProtocol is TLS.</string>
 					<key>pfm_title</key>
-					<string>Server Name</string>
+					<string>Server name</string>
 					<key>pfm_type</key>
 					<string>string</string>
 				</dict>
@@ -244,7 +248,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				<dict>
 					<key>pfm_description</key>
 					<string>A list of domain strings used to determine which DNS queries use the DNS server. If not set, all domains use the DNS server.
-The system supports a single wildcard ('*') prefix, but it's not required. For example, both '*.example.com' and 'example.com' match against 'mydomain.example.com' and 'your.domain.example.com', but don't match against 'mydomain-example.com'.</string>
+The system supports a single wildcard ('\*') prefix, but it's not required. For example, both '\*.example.com' and 'example.com' match against 'mydomain.example.com' and 'your.domain.example.com', but don't match against 'mydomain-example.com'.</string>
 					<key>pfm_name</key>
 					<string>SupplementalMatchDomains</string>
 					<key>pfm_subkeys</key>
@@ -253,7 +257,7 @@ The system supports a single wildcard ('*') prefix, but it's not required. For e
 							<key>pfm_name</key>
 							<string>SupplementalMatchDomainsElement</string>
 							<key>pfm_title</key>
-							<string>Supplemental Match Domains Element</string>
+							<string>Supplemental match domains element</string>
 							<key>pfm_type</key>
 							<string>string</string>
 							<key>pfm_value_placeholder</key>
@@ -261,7 +265,7 @@ The system supports a single wildcard ('*') prefix, but it's not required. For e
 						</dict>
 					</array>
 					<key>pfm_title</key>
-					<string>Supplemental Match Domains</string>
+					<string>Supplemental match domains</string>
 					<key>pfm_type</key>
 					<string>array</string>
 				</dict>
@@ -277,7 +281,7 @@ The system supports a single wildcard ('*') prefix, but it's not required. For e
 					<key>pfm_name</key>
 					<string>AllowFailover</string>
 					<key>pfm_title</key>
-					<string>Allow Failover</string>
+					<string>Allow failover</string>
 					<key>pfm_tvos_min</key>
 					<string>26.0</string>
 					<key>pfm_type</key>
@@ -332,7 +336,7 @@ The system supports a single wildcard ('*') prefix, but it's not required. For e
 				</dict>
 			</array>
 			<key>pfm_title</key>
-			<string>DNS Settings</string>
+			<string>DNS settings</string>
 			<key>pfm_type</key>
 			<string>dictionary</string>
 		</dict>
@@ -371,7 +375,7 @@ The system supports a single wildcard ('*') prefix, but it's not required. For e
 							<key>pfm_require</key>
 							<string>always-nested</string>
 							<key>pfm_title</key>
-							<string>On Demand Action</string>
+							<string>On demand action</string>
 							<key>pfm_type</key>
 							<string>string</string>
 						</dict>
@@ -427,7 +431,7 @@ The system supports a single wildcard ('*') prefix, but it's not required. For e
 											<key>pfm_require</key>
 											<string>always</string>
 											<key>pfm_title</key>
-											<string>Domain Action</string>
+											<string>Domain action</string>
 											<key>pfm_type</key>
 											<string>string</string>
 										</dict>
@@ -444,7 +448,7 @@ The system supports a single wildcard ('*') prefix, but it's not required. For e
 													<key>pfm_name</key>
 													<string>DomainsElement</string>
 													<key>pfm_title</key>
-													<string>Domains Element</string>
+													<string>Domains element</string>
 													<key>pfm_type</key>
 													<string>string</string>
 												</dict>
@@ -456,20 +460,20 @@ The system supports a single wildcard ('*') prefix, but it's not required. For e
 										</dict>
 									</array>
 									<key>pfm_title</key>
-									<string>Action Parameter</string>
+									<string>Action parameter</string>
 									<key>pfm_type</key>
 									<string>dictionary</string>
 								</dict>
 							</array>
 							<key>pfm_title</key>
-							<string>Action Parameters</string>
+							<string>Action parameters</string>
 							<key>pfm_type</key>
 							<string>array</string>
 						</dict>
 						<dict>
 							<key>pfm_description</key>
 							<string>An array of domain names. This rule matches if any of the domain names in the specified list matches any domain in the device's search domains list.
-The system supports a single wildcard ('*') prefix, but it's not required. For example, both '*.example.com' and 'example.com' match against 'mydomain.example.com' and 'your.domain.example.com', but don't match against 'mydomain-example.com'.</string>
+The system supports a single wildcard ('\*') prefix, but it's not required. For example, both '\*.example.com' and 'example.com' match against 'mydomain.example.com' and 'your.domain.example.com', but don't match against 'mydomain-example.com'.</string>
 							<key>pfm_name</key>
 							<string>DNSDomainMatch</string>
 							<key>pfm_subkeys</key>
@@ -478,20 +482,20 @@ The system supports a single wildcard ('*') prefix, but it's not required. For e
 									<key>pfm_name</key>
 									<string>DNSDomainMatchElement</string>
 									<key>pfm_title</key>
-									<string>DNS Domain Match Element</string>
+									<string>DNS domain match element</string>
 									<key>pfm_type</key>
 									<string>string</string>
 								</dict>
 							</array>
 							<key>pfm_title</key>
-							<string>DNS Domain Match</string>
+							<string>DNS domain match</string>
 							<key>pfm_type</key>
 							<string>array</string>
 						</dict>
 						<dict>
 							<key>pfm_description</key>
 							<string>An array of IP addresses. This rule matches if any of the network's specified DNS servers match any entry in the array.
-The system supports matching with a single wildcard. For example, '17.*' matches any DNS server in the 17.0.0.0/8 subnet.</string>
+The system supports matching with a single wildcard. For example, '17.\*' matches any DNS server in the 17.0.0.0/8 subnet.</string>
 							<key>pfm_name</key>
 							<string>DNSServerAddressMatch</string>
 							<key>pfm_subkeys</key>
@@ -500,13 +504,13 @@ The system supports matching with a single wildcard. For example, '17.*' matches
 									<key>pfm_name</key>
 									<string>DNSServerAddressMatchElement</string>
 									<key>pfm_title</key>
-									<string>DNS Server Address Match Element</string>
+									<string>DNS server address match element</string>
 									<key>pfm_type</key>
 									<string>string</string>
 								</dict>
 							</array>
 							<key>pfm_title</key>
-							<string>DNS Server Address Match</string>
+							<string>DNS server address match</string>
 							<key>pfm_type</key>
 							<string>array</string>
 						</dict>
@@ -522,7 +526,7 @@ The system supports matching with a single wildcard. For example, '17.*' matches
 								<string>Cellular</string>
 							</array>
 							<key>pfm_title</key>
-							<string>Interface Type Match</string>
+							<string>Interface type match</string>
 							<key>pfm_type</key>
 							<string>string</string>
 						</dict>
@@ -537,13 +541,13 @@ The system supports matching with a single wildcard. For example, '17.*' matches
 									<key>pfm_name</key>
 									<string>SSIDMatchElement</string>
 									<key>pfm_title</key>
-									<string>SSID Match Element</string>
+									<string>SSID match element</string>
 									<key>pfm_type</key>
 									<string>string</string>
 								</dict>
 							</array>
 							<key>pfm_title</key>
-							<string>SSID Match</string>
+							<string>SSID match</string>
 							<key>pfm_type</key>
 							<string>array</string>
 						</dict>
@@ -553,19 +557,19 @@ The system supports matching with a single wildcard. For example, '17.*' matches
 							<key>pfm_name</key>
 							<string>URLStringProbe</string>
 							<key>pfm_title</key>
-							<string>URL String Probe</string>
+							<string>URL string probe</string>
 							<key>pfm_type</key>
 							<string>string</string>
 						</dict>
 					</array>
 					<key>pfm_title</key>
-					<string>On Demand Rules Element</string>
+					<string>On demand rules element</string>
 					<key>pfm_type</key>
 					<string>dictionary</string>
 				</dict>
 			</array>
 			<key>pfm_title</key>
-			<string>On Demand Rules</string>
+			<string>On demand rules</string>
 			<key>pfm_type</key>
 			<string>array</string>
 		</dict>
@@ -579,11 +583,29 @@ The system supports matching with a single wildcard. For example, '17.*' matches
 			<key>pfm_supervised</key>
 			<true/>
 			<key>pfm_title</key>
-			<string>Prohibit Disablement</string>
+			<string>Prohibit disablement</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 			<key>pfm_user_approved</key>
 			<true/>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>iOS</key>
+				<dict>
+					<key>pfmx_supervised</key>
+					<true/>
+				</dict>
+				<key>macOS</key>
+				<dict>
+					<key>pfmx_supervised</key>
+					<true/>
+				</dict>
+				<key>visionOS</key>
+				<dict>
+					<key>pfmx_supervised</key>
+					<true/>
+				</dict>
+			</dict>
 		</dict>
 	</array>
 	<key>pfm_targets</key>
@@ -604,6 +626,8 @@ The system supports matching with a single wildcard. For example, '17.*' matches
 		<dict>
 			<key>pfmx_allow_manual_install</key>
 			<true/>
+			<key>pfmx_deprecated</key>
+			<string>27.0</string>
 			<key>pfmx_introduced</key>
 			<string>14.0</string>
 			<key>pfmx_multiple</key>
@@ -629,6 +653,8 @@ The system supports matching with a single wildcard. For example, '17.*' matches
 		<dict>
 			<key>pfmx_allow_manual_install</key>
 			<true/>
+			<key>pfmx_deprecated</key>
+			<string>27.0</string>
 			<key>pfmx_device_channel</key>
 			<true/>
 			<key>pfmx_introduced</key>
@@ -651,6 +677,8 @@ The system supports matching with a single wildcard. For example, '17.*' matches
 		<dict>
 			<key>pfmx_allow_manual_install</key>
 			<true/>
+			<key>pfmx_deprecated</key>
+			<string>27.0</string>
 			<key>pfmx_introduced</key>
 			<string>1.0</string>
 			<key>pfmx_multiple</key>

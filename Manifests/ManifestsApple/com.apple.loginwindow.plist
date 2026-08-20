@@ -455,7 +455,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>If 'true', the system disables the Log Out menu item when the user is logged in. Available in macOS 10.13 and later.</string>
+			<string>If 'true', the system disables the Log Out menu item when the user is logged in.</string>
 			<key>pfm_macos_min</key>
 			<string>10.13</string>
 			<key>pfm_name</key>
@@ -477,7 +477,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>If 'true', the system disables the immediate Screen Lock functions. Available in macOS 10.13 and later.</string>
+			<string>If 'true', the system disables the immediate Screen Lock functions.</string>
 			<key>pfm_macos_min</key>
 			<string>10.13</string>
 			<key>pfm_name</key>
@@ -595,9 +595,9 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_default</key>
-			<true/>
+			<false/>
 			<key>pfm_description</key>
-			<string>Allows Mac administrators on the computer to refresh or disable the management features.</string>
+			<string>If 'true', a local administrator user can bypass or disable managed preferences (MCX settings) for their login session. The device presents the user with this option at login only when the user is a local administrator, and other users are not logged in.</string>
 			<key>pfm_name</key>
 			<string>AdminMayDisableMCX</string>
 			<key>pfm_title</key>
@@ -748,8 +748,10 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>boolean</string>
 		</dict>
 		<dict>
+			<key>pfm_default</key>
+			<integer>0</integer>
 			<key>pfm_description</key>
-			<string>Number of tries until password hint is shown (0 = disable password hints).</string>
+			<string>If specified, allows a certain number of retries until the device shows a password hint. The device shows no hints if set to a value of 0.</string>
 			<key>pfm_name</key>
 			<string>RetriesUntilHint</string>
 			<key>pfm_title</key>
@@ -805,6 +807,54 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>Hidden Users List</string>
 			<key>pfm_type</key>
 			<string>array</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>If 'true', the system allows the user to select WiFi networks at login or unlock.</string>
+			<key>pfm_macos_min</key>
+			<string>27.0</string>
+			<key>pfm_name</key>
+			<string>ForceWifiConfigurationOnLockScreen</string>
+			<key>pfm_title</key>
+			<string>Enable WiFi network selection for login and unlock</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>macOS</key>
+				<dict>
+					<key>pfmx_allow_manual_install</key>
+					<false/>
+					<key>pfmx_introduced</key>
+					<string>27.0</string>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>If 'true', the system allows use of the captive WiFi portal at login or unlock.</string>
+			<key>pfm_macos_min</key>
+			<string>27.0</string>
+			<key>pfm_name</key>
+			<string>ForceCaptivePortalConnectionFromLockScreen</string>
+			<key>pfm_title</key>
+			<string>Enable captive WiFi portal for login and unlock</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+			<key>pfmx_supported_oses</key>
+			<dict>
+				<key>macOS</key>
+				<dict>
+					<key>pfmx_allow_manual_install</key>
+					<false/>
+					<key>pfmx_introduced</key>
+					<string>27.0</string>
+				</dict>
+			</dict>
 		</dict>
 	</array>
 	<key>pfm_targets</key>

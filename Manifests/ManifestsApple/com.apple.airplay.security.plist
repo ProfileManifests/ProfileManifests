@@ -143,7 +143,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_require</key>
 			<string>always</string>
 			<key>pfm_title</key>
-			<string>Access Type</string>
+			<string>Access type</string>
 			<key>pfm_type</key>
 			<string>string</string>
 		</dict>
@@ -173,7 +173,7 @@ Note: 'NONE' was deprecated in tvOS 11.3. Existing profiles that use 'NONE' get 
 			<key>pfm_require</key>
 			<string>always</string>
 			<key>pfm_title</key>
-			<string>Security Type</string>
+			<string>Security type</string>
 			<key>pfm_type</key>
 			<string>string</string>
 		</dict>

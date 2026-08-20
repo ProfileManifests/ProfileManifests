@@ -152,7 +152,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 							<key>pfm_require</key>
 							<string>always</string>
 							<key>pfm_title</key>
-							<string>Rule Type</string>
+							<string>Rule type</string>
 							<key>pfm_type</key>
 							<string>string</string>
 						</dict>
@@ -164,7 +164,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 							<key>pfm_require</key>
 							<string>always</string>
 							<key>pfm_title</key>
-							<string>Rule Value</string>
+							<string>Rule value</string>
 							<key>pfm_type</key>
 							<string>string</string>
 						</dict>
@@ -184,7 +184,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 							<key>pfm_name</key>
 							<string>TeamIdentifier</string>
 							<key>pfm_title</key>
-							<string>Team Identifier</string>
+							<string>Team identifier</string>
 							<key>pfm_type</key>
 							<string>string</string>
 						</dict>

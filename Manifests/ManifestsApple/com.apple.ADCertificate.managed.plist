@@ -144,13 +144,13 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_require</key>
 			<string>always</string>
 			<key>pfm_title</key>
-			<string>Certificate Server</string>
+			<string>Certificate server</string>
 			<key>pfm_type</key>
 			<string>string</string>
 		</dict>
 		<dict>
 			<key>pfm_description</key>
-			<string>The name of the certificate authority (CA), which is determined from the common name (CN) of the Active Directory entry. Available in macOS 10.8 and later. Valid values:
+			<string>The name of the certificate authority (CA), which the device determines from the common name (CN) of the Active Directory entry. Valid values:
 CN=&lt;your CA Name&gt;
 CN='Certification Authorities'
 CN='Public Key Services'
@@ -164,7 +164,7 @@ CN=&lt;your base Domain Name&gt;</string>
 			<key>pfm_require</key>
 			<string>always</string>
 			<key>pfm_title</key>
-			<string>Certificate Authority</string>
+			<string>Certificate authority</string>
 			<key>pfm_type</key>
 			<string>string</string>
 			<key>pfmx_supported_oses</key>
@@ -186,13 +186,13 @@ CN=&lt;your base Domain Name&gt;</string>
 			<key>pfm_require</key>
 			<string>always</string>
 			<key>pfm_title</key>
-			<string>Certificate Template</string>
+			<string>Certificate template</string>
 			<key>pfm_type</key>
 			<string>string</string>
 		</dict>
 		<dict>
 			<key>pfm_description</key>
-			<string>This value is most commonly 'RPC'; if using web enrollment, use 'HTTP'. Available in macOS 10.8 and later.</string>
+			<string>This value is most commonly 'RPC'; if using web enrollment, use 'HTTP'.</string>
 			<key>pfm_macos_min</key>
 			<string>10.8</string>
 			<key>pfm_name</key>
@@ -203,7 +203,7 @@ CN=&lt;your base Domain Name&gt;</string>
 				<string>HTTP</string>
 			</array>
 			<key>pfm_title</key>
-			<string>Certificate Acquisition Mechanism</string>
+			<string>Certificate acquisition mechanism</string>
 			<key>pfm_type</key>
 			<string>string</string>
 			<key>pfmx_supported_oses</key>
@@ -225,7 +225,7 @@ CN=&lt;your base Domain Name&gt;</string>
 			<key>pfm_require</key>
 			<string>always</string>
 			<key>pfm_title</key>
-			<string>Certificate Renewal Time Interval</string>
+			<string>Certificate renewal time interval</string>
 			<key>pfm_type</key>
 			<string>integer</string>
 		</dict>
@@ -233,7 +233,7 @@ CN=&lt;your base Domain Name&gt;</string>
 			<key>pfm_default</key>
 			<integer>2048</integer>
 			<key>pfm_description</key>
-			<string>The RSA key size for the certificate signing request (CSR). Available in macOS 10.11 and later.</string>
+			<string>The RSA key size for the certificate signing request (CSR).</string>
 			<key>pfm_macos_min</key>
 			<string>10.11</string>
 			<key>pfm_name</key>
@@ -241,7 +241,7 @@ CN=&lt;your base Domain Name&gt;</string>
 			<key>pfm_require</key>
 			<string>always</string>
 			<key>pfm_title</key>
-			<string>Key Size</string>
+			<string>Key size</string>
 			<key>pfm_type</key>
 			<string>integer</string>
 			<key>pfmx_supported_oses</key>
@@ -257,13 +257,13 @@ CN=&lt;your base Domain Name&gt;</string>
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>If 'true', the system prompts the user for credentials when is installs the profile. This key applies only to user certificates with the Manual Download profile delivery method. Omit this key for computer certificates. Available in macOS 10.8 and later.</string>
+			<string>If 'true', the system prompts the user for credentials when is installs the profile. This key applies only to user certificates with the Manual Download profile delivery method. Omit this key for computer certificates.</string>
 			<key>pfm_macos_min</key>
 			<string>10.8</string>
 			<key>pfm_name</key>
 			<string>PromptForCredentials</string>
 			<key>pfm_title</key>
-			<string>Prompt for Credentials</string>
+			<string>Prompt for credentials</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 			<key>pfmx_supported_oses</key>
@@ -299,13 +299,13 @@ CN=&lt;your base Domain Name&gt;</string>
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>If 'true', gives apps access to the private key. Available in macOS 10.10 and later.</string>
+			<string>If 'true', gives apps access to the private key.</string>
 			<key>pfm_macos_min</key>
 			<string>10.10</string>
 			<key>pfm_name</key>
 			<string>AllowAllAppsAccess</string>
 			<key>pfm_title</key>
-			<string>Allow All Apps Access</string>
+			<string>Allow all apps access</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 			<key>pfmx_supported_oses</key>
@@ -321,13 +321,13 @@ CN=&lt;your base Domain Name&gt;</string>
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>If 'true', the system allows exporting the private key. Available in macOS 10.10 and later.</string>
+			<string>If 'true', the system allows exporting the private key.</string>
 			<key>pfm_macos_min</key>
 			<string>10.10</string>
 			<key>pfm_name</key>
 			<string>KeyIsExtractable</string>
 			<key>pfm_title</key>
-			<string>Key Is Extractable</string>
+			<string>Key is extractable</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 			<key>pfmx_supported_oses</key>
@@ -343,13 +343,13 @@ CN=&lt;your base Domain Name&gt;</string>
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>If 'true', the certificate obtained with this payload attempts auto-renewal. Auto-renewal can only be used with device Active Directory certificate payloads. Available in macOS 10.13.4 and later.</string>
+			<string>If 'true', the certificate obtained with this payload attempts auto-renewal. Auto-renewal can only be used with device Active Directory certificate payloads.</string>
 			<key>pfm_macos_min</key>
 			<string>10.13.4</string>
 			<key>pfm_name</key>
 			<string>EnableAutoRenewal</string>
 			<key>pfm_title</key>
-			<string>Enable Auto Renewal</string>
+			<string>Enable auto renewal</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 			<key>pfmx_supported_oses</key>

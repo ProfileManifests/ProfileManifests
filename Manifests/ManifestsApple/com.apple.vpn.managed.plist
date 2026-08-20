@@ -173,7 +173,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_require</key>
 			<string>always</string>
 			<key>pfm_title</key>
-			<string>User Defined Name</string>
+			<string>User defined name</string>
 			<key>pfm_type</key>
 			<string>string</string>
 		</dict>
@@ -183,7 +183,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_description</key>
 			<string>The type of the VPN, which defines which settings are appropriate for this VPN payload.
 If the type is 'VPN' or 'TransparentProxy', then the system requires a value for 'VPNSubType'.
-'TransparentProxy' is only available in macOS. 'L2TP' and 'IPSec' aren't available in tvOS. 'AlwaysOn' is only available on iOS and Apple Watch pairing isn't supported with 'AlwaysOn'. For a previously paired Apple Watch, all phone-watch communications cease when 'AlwaysOn' is enabled. Not available in watchOS.</string>
+'TransparentProxy' is only available in macOS. 'L2TP' and 'IPSec' aren't available in tvOS. 'AlwaysOn' is only available on iOS and 'AlwaysOn' doesn't support Apple Watch pairing. For a previously paired Apple Watch, all phone-watch communications cease when 'AlwaysOn' is enabled. Not available in watchOS.</string>
 			<key>pfm_name</key>
 			<string>VPNType</string>
 			<key>pfm_range_list</key>
@@ -277,7 +277,7 @@ Not available in watchOS.</string>
 			<key>pfm_range_list_allow_custom_value</key>
 			<true/>
 			<key>pfm_title</key>
-			<string>VPN Subtype</string>
+			<string>VPN subtype</string>
 			<key>pfm_type</key>
 			<string>string</string>
 		</dict>
@@ -323,7 +323,7 @@ Not available in watchOS.</string>
 					<key>pfm_require</key>
 					<string>always</string>
 					<key>pfm_title</key>
-					<string>Remote Address</string>
+					<string>Remote address</string>
 					<key>pfm_type</key>
 					<string>string</string>
 				</dict>
@@ -340,7 +340,7 @@ Not available in watchOS.</string>
 					<key>pfm_require</key>
 					<string>push</string>
 					<key>pfm_title</key>
-					<string>Account Username</string>
+					<string>Account username</string>
 					<key>pfm_type</key>
 					<string>string</string>
 				</dict>
@@ -380,7 +380,7 @@ Not available in watchOS.</string>
 						<string>macOS</string>
 					</array>
 					<key>pfm_title</key>
-					<string>Account Password</string>
+					<string>Account password</string>
 					<key>pfm_type</key>
 					<string>string</string>
 				</dict>
@@ -449,13 +449,13 @@ Not available in watchOS.</string>
 							<key>pfm_require</key>
 							<string>always</string>
 							<key>pfm_title</key>
-							<string>EAP Plugin</string>
+							<string>EAP plugin</string>
 							<key>pfm_type</key>
 							<string>string</string>
 						</dict>
 					</array>
 					<key>pfm_title</key>
-					<string>EAP Plugins</string>
+					<string>EAP plugins</string>
 					<key>pfm_type</key>
 					<string>array</string>
 					<key>pfm_type_input</key>
@@ -524,7 +524,7 @@ Not available in watchOS.</string>
 							<key>pfm_require</key>
 							<string>always</string>
 							<key>pfm_title</key>
-							<string>Auth Protocol</string>
+							<string>Auth protocol</string>
 							<key>pfm_type</key>
 							<string>string</string>
 						</dict>
@@ -570,7 +570,7 @@ Not available in watchOS.</string>
 						<integer>1</integer>
 					</array>
 					<key>pfm_title</key>
-					<string>Use Token Card</string>
+					<string>Use token card</string>
 					<key>pfm_type</key>
 					<string>integer</string>
 					<key>pfm_type_input</key>
@@ -780,7 +780,7 @@ Not available in watchOS.</string>
 						<string>Enable</string>
 					</array>
 					<key>pfm_title</key>
-					<string>Enable Disconnect on Idle</string>
+					<string>Enable disconnect on idle</string>
 					<key>pfm_type</key>
 					<string>integer</string>
 					<key>pfm_type_input</key>
@@ -815,7 +815,7 @@ Not available in watchOS.</string>
 					<key>pfm_range_min</key>
 					<integer>0</integer>
 					<key>pfm_title</key>
-					<string>Disconnect on Idle time</string>
+					<string>Disconnect on idle time</string>
 					<key>pfm_type</key>
 					<string>integer</string>
 				</dict>
@@ -835,7 +835,7 @@ Not available in watchOS.</string>
 		</dict>
 		<dict>
 			<key>pfm_description</key>
-			<string>The dictionary to use when 'VPNType' is 'TransparentProxy'. Available in macOS 14 and later.</string>
+			<string>The dictionary to use when 'VPNType' is 'TransparentProxy'.</string>
 			<key>pfm_exclude</key>
 			<array>
 				<dict>
@@ -884,8 +884,7 @@ Not available in watchOS.</string>
 					<key>pfm_default</key>
 					<string>Password</string>
 					<key>pfm_description</key>
-					<string>The type of authentication method to use: 'Password', 'Certificate', or 'Password+Certificate'.
-Available in macOS 14 and later.</string>
+					<string>The type of authentication method to use: 'Password', 'Certificate', or 'Password+Certificate'.</string>
 					<key>pfm_macos_min</key>
 					<string>14.0</string>
 					<key>pfm_name</key>
@@ -901,14 +900,13 @@ Available in macOS 14 and later.</string>
 						<string>Password+Certificate</string>
 					</array>
 					<key>pfm_title</key>
-					<string>Authentication Method</string>
+					<string>Authentication method</string>
 					<key>pfm_type</key>
 					<string>string</string>
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string>The password to use for the account credentials. Only used if 'AuthenticationMethod' is 'Password'.
-Available in macOS 14 and later.</string>
+					<string>The password to use for the account credentials. Only used if 'AuthenticationMethod' is 'Password'.</string>
 					<key>pfm_exclude</key>
 					<array>
 						<dict>
@@ -935,14 +933,13 @@ Available in macOS 14 and later.</string>
 						<string>macOS</string>
 					</array>
 					<key>pfm_title</key>
-					<string>Account Password</string>
+					<string>Account password</string>
 					<key>pfm_type</key>
 					<string>string</string>
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string>The UUID of the identity certificate as the account credential. If 'AuthenticationMethod' is 'Certificate', and extended authentication (EAP) isn't used, this certificate is sent out for IKE client authentication. If extended authentication is used, this certificate can be used for EAP-TLS.
-Available in macOS 14 and later.</string>
+					<string>The UUID of the identity certificate as the account credential. If 'AuthenticationMethod' is 'Certificate', and extended authentication (EAP) isn't used, the device sends this certificate for IKE client authentication. If extended authentication is used, this certificate can be used for EAP-TLS.</string>
 					<key>pfm_exclude</key>
 					<array>
 						<dict>
@@ -979,8 +976,7 @@ Available in macOS 14 and later.</string>
 					<key>pfm_default</key>
 					<integer>0</integer>
 					<key>pfm_description</key>
-					<string>If '1', the system brings up the VPN on demand.
-Available in macOS 14 and later.</string>
+					<string>If '1', the system brings up the VPN on demand.</string>
 					<key>pfm_macos_min</key>
 					<string>14.0</string>
 					<key>pfm_name</key>
@@ -1000,7 +996,7 @@ Available in macOS 14 and later.</string>
 						<string>Enable</string>
 					</array>
 					<key>pfm_title</key>
-					<string>Enable VPN On Demand</string>
+					<string>Enable VPN on demand</string>
 					<key>pfm_type</key>
 					<string>integer</string>
 					<key>pfm_type_input</key>
@@ -1008,8 +1004,7 @@ Available in macOS 14 and later.</string>
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string>Determines when and how the system uses an OnDemand VPN.
-Available in macOS 14 and later.</string>
+					<string>Determines when and how the system uses an OnDemand VPN.</string>
 					<key>pfm_exclude</key>
 					<array>
 						<dict>
@@ -1082,7 +1077,7 @@ Available in macOS 14 and later.</string>
 									<key>pfm_require</key>
 									<string>always</string>
 									<key>pfm_title</key>
-									<string>On Demand Action</string>
+									<string>On demand action</string>
 									<key>pfm_type</key>
 									<string>string</string>
 								</dict>
@@ -1110,13 +1105,13 @@ Available in macOS 14 and later.</string>
 										<string>Cellular</string>
 									</array>
 									<key>pfm_title</key>
-									<string>Interface Type Match</string>
+									<string>Interface type match</string>
 									<key>pfm_type</key>
 									<string>string</string>
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>An array of domain names. This rule matches if any of the domain names in the specified list matches any domain in the device's search domains list. The system supports a wildcard ('*') prefix. For example, '*.example.com' matches against either 'mydomain.example.com' or 'yourdomain.example.com'.</string>
+									<string>An array of domain names. This rule matches if any of the domain names in the specified list matches any domain in the device's search domains list. The system supports a wildcard ('\*') prefix. For example, '\*.example.com' matches against either 'mydomain.example.com' or 'yourdomain.example.com'.</string>
 									<key>pfm_macos_min</key>
 									<string>14.0</string>
 									<key>pfm_name</key>
@@ -1137,7 +1132,7 @@ Available in macOS 14 and later.</string>
 												<string>macOS</string>
 											</array>
 											<key>pfm_title</key>
-											<string>DNS Domain Match Element</string>
+											<string>DNS domain match element</string>
 											<key>pfm_type</key>
 											<string>string</string>
 											<key>pfm_value_placeholder</key>
@@ -1145,13 +1140,13 @@ Available in macOS 14 and later.</string>
 										</dict>
 									</array>
 									<key>pfm_title</key>
-									<string>DNS Domain Match</string>
+									<string>DNS domain match</string>
 									<key>pfm_type</key>
 									<string>array</string>
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>An array of IP addresses. This rule matches if any of the network's specified DNS servers match any entry in the array. The system supports matching with a single wildcard. For example, '17.*' matches any DNS server in the '17.0.0.0/8' subnet.</string>
+									<string>An array of IP addresses. This rule matches if any of the network's specified DNS servers match any entry in the array. The system supports matching with a single wildcard. For example, '17.\*' matches any DNS server in the '17.0.0.0/8' subnet.</string>
 									<key>pfm_macos_min</key>
 									<string>14.0</string>
 									<key>pfm_name</key>
@@ -1172,13 +1167,13 @@ Available in macOS 14 and later.</string>
 												<string>macOS</string>
 											</array>
 											<key>pfm_title</key>
-											<string>DNS Server Address Match Element</string>
+											<string>DNS server address match element</string>
 											<key>pfm_type</key>
 											<string>string</string>
 										</dict>
 									</array>
 									<key>pfm_title</key>
-									<string>DNS Server Address Match</string>
+									<string>DNS server address match</string>
 									<key>pfm_type</key>
 									<string>array</string>
 								</dict>
@@ -1205,13 +1200,13 @@ Available in macOS 14 and later.</string>
 												<string>macOS</string>
 											</array>
 											<key>pfm_title</key>
-											<string>SSID Match Element</string>
+											<string>SSID match element</string>
 											<key>pfm_type</key>
 											<string>string</string>
 										</dict>
 									</array>
 									<key>pfm_title</key>
-									<string>SSID Match</string>
+									<string>SSID match</string>
 									<key>pfm_type</key>
 									<string>array</string>
 								</dict>
@@ -1227,7 +1222,7 @@ Available in macOS 14 and later.</string>
 										<string>macOS</string>
 									</array>
 									<key>pfm_title</key>
-									<string>URL String Probe</string>
+									<string>URL string probe</string>
 									<key>pfm_type</key>
 									<string>string</string>
 								</dict>
@@ -1283,7 +1278,7 @@ Available in macOS 14 and later.</string>
 													<key>pfm_require</key>
 													<string>always</string>
 													<key>pfm_title</key>
-													<string>Domain Action</string>
+													<string>Domain action</string>
 													<key>pfm_type</key>
 													<string>string</string>
 												</dict>
@@ -1312,7 +1307,7 @@ Available in macOS 14 and later.</string>
 																<string>macOS</string>
 															</array>
 															<key>pfm_title</key>
-															<string>Domains Element</string>
+															<string>Domains element</string>
 															<key>pfm_type</key>
 															<string>string</string>
 														</dict>
@@ -1345,19 +1340,19 @@ Available in macOS 14 and later.</string>
 																<string>macOS</string>
 															</array>
 															<key>pfm_title</key>
-															<string>Required DNS Servers Element</string>
+															<string>Required DNS servers element</string>
 															<key>pfm_type</key>
 															<string>string</string>
 														</dict>
 													</array>
 													<key>pfm_title</key>
-													<string>Required DNS Servers</string>
+													<string>Required DNS servers</string>
 													<key>pfm_type</key>
 													<string>array</string>
 												</dict>
 												<dict>
 													<key>pfm_description</key>
-													<string>An HTTP or HTTPS (preferred) URL to probe, using a GET request. If the URL's hostname can't be resolved, if the server is unreachable, or if the server doesn't respond with a 200 HTTP status code, a VPN connection is established in response. This key is valid only if the value of 'DomainAction' is 'ConnectIfNeeded'.</string>
+													<string>An HTTP or HTTPS (preferred) URL to probe, using a GET request. If the URL's hostname can't be resolved, if the server is unreachable, or if the server doesn't respond with a 200 HTTP status code, the device establishes a VPN connection in response. This key is valid only if the value of 'DomainAction' is 'ConnectIfNeeded'.</string>
 													<key>pfm_macos_min</key>
 													<string>14.0</string>
 													<key>pfm_name</key>
@@ -1367,31 +1362,31 @@ Available in macOS 14 and later.</string>
 														<string>macOS</string>
 													</array>
 													<key>pfm_title</key>
-													<string>Required URL String Probe</string>
+													<string>Required URL string probe</string>
 													<key>pfm_type</key>
 													<string>string</string>
 												</dict>
 											</array>
 											<key>pfm_title</key>
-											<string>Action Parameter</string>
+											<string>Action parameter</string>
 											<key>pfm_type</key>
 											<string>dictionary</string>
 										</dict>
 									</array>
 									<key>pfm_title</key>
-									<string>Action Parameters</string>
+									<string>Action parameters</string>
 									<key>pfm_type</key>
 									<string>array</string>
 								</dict>
 							</array>
 							<key>pfm_title</key>
-							<string>On Demand Rules Element</string>
+							<string>On demand rules element</string>
 							<key>pfm_type</key>
 							<string>dictionary</string>
 						</dict>
 					</array>
 					<key>pfm_title</key>
-					<string>On Demand Rules</string>
+					<string>On demand rules</string>
 					<key>pfm_type</key>
 					<string>array</string>
 				</dict>
@@ -1399,8 +1394,7 @@ Available in macOS 14 and later.</string>
 					<key>pfm_default</key>
 					<string>packet-tunnel</string>
 					<key>pfm_description</key>
-					<string>If the value of this key is 'app-proxy', the VPN service tunnels traffic at the application layer. If the value of this key is 'packet-tunnel', the VPN service tunnels traffic at the IP layer.
-Available in macOS 14 and later.</string>
+					<string>If the value of this key is 'app-proxy', the VPN service tunnels traffic at the application layer. If the value of this key is 'packet-tunnel', the VPN service tunnels traffic at the IP layer.</string>
 					<key>pfm_macos_min</key>
 					<string>14.0</string>
 					<key>pfm_name</key>
@@ -1426,8 +1420,7 @@ Available in macOS 14 and later.</string>
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string>If the VPNSubType field contains the bundle identifier of an app that contains multiple VPN providers of the same type (app-proxy or packet-tunnel), then the system uses this field to choose which provider to use for this configuration. If the VPN provider is implemented as a System Extension, then this field is required.
-Available in macOS 14 and later.</string>
+					<string>If the VPNSubType field contains the bundle identifier of an app that contains multiple VPN providers of the same type (app-proxy or packet-tunnel), then the system uses this field to choose which provider to use for this configuration. If the VPN provider uses a system extension, then this field is required.</string>
 					<key>pfm_macos_min</key>
 					<string>14.0</string>
 					<key>pfm_name</key>
@@ -1437,14 +1430,13 @@ Available in macOS 14 and later.</string>
 						<string>macOS</string>
 					</array>
 					<key>pfm_title</key>
-					<string>Provider Bundle Identifier</string>
+					<string>Provider bundle identifier</string>
 					<key>pfm_type</key>
 					<string>string</string>
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string>If the VPN provider is implemented as a System Extension, then this field is required.
-Available in macOS 14 and later.</string>
+					<string>If the VPN provider uses a system extension, then this field is required.</string>
 					<key>pfm_macos_min</key>
 					<string>14.0</string>
 					<key>pfm_name</key>
@@ -1454,7 +1446,7 @@ Available in macOS 14 and later.</string>
 						<string>macOS</string>
 					</array>
 					<key>pfm_title</key>
-					<string>Provider Designated Requirement</string>
+					<string>Provider designated requirement</string>
 					<key>pfm_type</key>
 					<string>string</string>
 				</dict>
@@ -1462,8 +1454,7 @@ Available in macOS 14 and later.</string>
 					<key>pfm_default</key>
 					<integer>0</integer>
 					<key>pfm_description</key>
-					<string>If '1', the VPN disconnects automatically disconnect after a period defined by 'DisconnectOnIdleTimer'.
-Available in macOS 14 and later.</string>
+					<string>If '1', the VPN disconnects automatically disconnect after a period defined by 'DisconnectOnIdleTimer'.</string>
 					<key>pfm_macos_min</key>
 					<string>14.0</string>
 					<key>pfm_name</key>
@@ -1483,7 +1474,7 @@ Available in macOS 14 and later.</string>
 						<string>Enable</string>
 					</array>
 					<key>pfm_title</key>
-					<string>Enable Disconnect on Idle</string>
+					<string>Enable disconnect on idle</string>
 					<key>pfm_type</key>
 					<string>integer</string>
 					<key>pfm_type_input</key>
@@ -1493,8 +1484,7 @@ Available in macOS 14 and later.</string>
 					<key>pfm_default</key>
 					<integer>0</integer>
 					<key>pfm_description</key>
-					<string>If '1', then all the VPN's non-default routes take precedence over any locally-defined routes. If 'IncludeAllNetworks' is '1', the system ignores the value of 'EnforceRoutes'.
-Available in macOS 14 and later.</string>
+					<string>If '1', then all the VPN's non-default routes take precedence over any locally-defined routes. If 'IncludeAllNetworks' is '1', the system ignores the value of 'EnforceRoutes'.</string>
 					<key>pfm_macos_min</key>
 					<string>14.0</string>
 					<key>pfm_name</key>
@@ -1509,7 +1499,7 @@ Available in macOS 14 and later.</string>
 						<integer>1</integer>
 					</array>
 					<key>pfm_title</key>
-					<string>Enforce Routes</string>
+					<string>Enforce routes</string>
 					<key>pfm_type</key>
 					<string>integer</string>
 					<key>pfm_type_input</key>
@@ -1517,8 +1507,7 @@ Available in macOS 14 and later.</string>
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string>The number of seconds before the VPN disconnects. This value is only used if 'DisconnectOnIdle' is '1'.
-Available in macOS 14 and later.</string>
+					<string>The number of seconds before the VPN disconnects. This value is only used if 'DisconnectOnIdle' is '1'.</string>
 					<key>pfm_exclude</key>
 					<array>
 						<dict>
@@ -1546,14 +1535,13 @@ Available in macOS 14 and later.</string>
 					<key>pfm_range_min</key>
 					<integer>0</integer>
 					<key>pfm_title</key>
-					<string>Disconnect on Idle time</string>
+					<string>Disconnect on idle time</string>
 					<key>pfm_type</key>
 					<string>integer</string>
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string>A positive integer.
-Available in macOS 14 and later.</string>
+					<string>A positive integer.</string>
 					<key>pfm_macos_min</key>
 					<string>14.0</string>
 					<key>pfm_name</key>
@@ -1790,9 +1778,10 @@ To enable EAP-only authentication, set this to 'None' and 'ExtendedAuthEnabled' 
 						<string>1.0</string>
 						<string>1.1</string>
 						<string>1.2</string>
+						<string>1.3</string>
 					</array>
 					<key>pfm_title</key>
-					<string>TLS Minimum Version</string>
+					<string>TLS minimum version</string>
 					<key>pfm_type</key>
 					<string>string</string>
 					<key>pfmx_supported_oses</key>
@@ -1841,9 +1830,10 @@ To enable EAP-only authentication, set this to 'None' and 'ExtendedAuthEnabled' 
 						<string>1.0</string>
 						<string>1.1</string>
 						<string>1.2</string>
+						<string>1.3</string>
 					</array>
 					<key>pfm_title</key>
-					<string>TLS Maximum Version</string>
+					<string>TLS maximum version</string>
 					<key>pfm_type</key>
 					<string>string</string>
 					<key>pfmx_supported_oses</key>
@@ -1862,7 +1852,7 @@ To enable EAP-only authentication, set this to 'None' and 'ExtendedAuthEnabled' 
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string>If 'AuthenticationMethod' is 'SharedSecret', this value is used for IKE authentication.</string>
+					<string>If 'AuthenticationMethod' is 'SharedSecret', the device uses this value for IKE authentication.</string>
 					<key>pfm_exclude</key>
 					<array>
 						<dict>
@@ -1961,7 +1951,7 @@ To enable EAP-only authentication, set this to 'None' and 'ExtendedAuthEnabled' 
 						<string>RSA-PSS</string>
 					</array>
 					<key>pfm_title</key>
-					<string>Certificate Type</string>
+					<string>Certificate type</string>
 					<key>pfm_type</key>
 					<string>string</string>
 				</dict>
@@ -2059,7 +2049,7 @@ To enable EAP-only authentication, set this to 'None' and 'ExtendedAuthEnabled' 
 						<string>Enable</string>
 					</array>
 					<key>pfm_title</key>
-					<string>Enable Disconnect on Idle</string>
+					<string>Enable disconnect on idle</string>
 					<key>pfm_type</key>
 					<string>integer</string>
 					<key>pfm_type_input</key>
@@ -2089,7 +2079,7 @@ To enable EAP-only authentication, set this to 'None' and 'ExtendedAuthEnabled' 
 					<key>pfm_range_min</key>
 					<integer>0</integer>
 					<key>pfm_title</key>
-					<string>Disconnect on Idle time</string>
+					<string>Disconnect on idle time</string>
 					<key>pfm_type</key>
 					<string>integer</string>
 				</dict>
@@ -2120,7 +2110,7 @@ Not available in watchOS.</string>
 						<string>High - keepalive sent every minute</string>
 					</array>
 					<key>pfm_title</key>
-					<string>Dead Peer Detection Rate</string>
+					<string>Dead peer detection rate</string>
 					<key>pfm_type</key>
 					<string>string</string>
 				</dict>
@@ -2144,7 +2134,7 @@ Not available in watchOS.</string>
 						<string>Disable</string>
 					</array>
 					<key>pfm_title</key>
-					<string>Disable Redirect</string>
+					<string>Disable redirect</string>
 					<key>pfm_type</key>
 					<string>integer</string>
 					<key>pfm_type_input</key>
@@ -2178,7 +2168,7 @@ Not available in watchOS.</string>
 						<string>Disable</string>
 					</array>
 					<key>pfm_title</key>
-					<string>Disable Mobility and Multihoming</string>
+					<string>Disable mobility and multihoming</string>
 					<key>pfm_type</key>
 					<string>integer</string>
 					<key>pfm_type_input</key>
@@ -2212,7 +2202,7 @@ Not available in watchOS.</string>
 						<string>Enable</string>
 					</array>
 					<key>pfm_title</key>
-					<string>Use IPv4 / IPv6 Internal Subnet Attributes</string>
+					<string>Use IPv4 / IPv6 internal subnet attributes</string>
 					<key>pfm_type</key>
 					<string>integer</string>
 					<key>pfm_type_input</key>
@@ -2300,7 +2290,7 @@ Not available in watchOS.</string>
 					<key>pfm_description</key>
 					<string>If '1', the system enables a tunnel over cellular data to carry traffic that's eligible for Wi-Fi Assist and also requires VPN.
 Enabling fallback requires that the server support multiple tunnels for a single user.
-This field is available in iOS 13 and later, and tvOS 17 and later. Not available in watchOS.</string>
+Not available in watchOS.</string>
 					<key>pfm_ios_min</key>
 					<string>13.0</string>
 					<key>pfm_name</key>
@@ -2439,7 +2429,7 @@ For 'AlwaysOn' VPN in iOS 14.2 and later, the minimum allowed value is '14'.
 						</dict>
 						<dict>
 							<key>pfm_description</key>
-							<string>An array of strings representing postquantum key exchange methods the device uses during SA establishment and rekey. You can specify up to seven items, which correspond to ADDKE1 - ADDKE7 from RFC 9370.</string>
+							<string>An array of integers representing postquantum key exchange methods the device uses during SA establishment and rekey. You can specify up to seven items, which correspond to ADDKE1 - ADDKE7 from RFC 9370.</string>
 							<key>pfm_ios_min</key>
 							<string>26.0</string>
 							<key>pfm_macos_min</key>
@@ -2462,13 +2452,13 @@ For 'AlwaysOn' VPN in iOS 14.2 and later, the minimum allowed value is '14'.
 										<integer>37</integer>
 									</array>
 									<key>pfm_title</key>
-									<string>Post-quantum Key Exchange Method</string>
+									<string>Post-quantum key exchange method</string>
 									<key>pfm_type</key>
 									<string>integer</string>
 								</dict>
 							</array>
 							<key>pfm_title</key>
-							<string>Post-quantum Key Exchange Methods</string>
+							<string>Post-quantum key exchange methods</string>
 							<key>pfm_type</key>
 							<string>array</string>
 							<key>pfmx_supported_oses</key>
@@ -2595,7 +2585,7 @@ For 'AlwaysOn' VPN in iOS 14.2 and later, the minimum allowed value is '14'.
 						</dict>
 						<dict>
 							<key>pfm_description</key>
-							<string>An array of strings representing postquantum key exchange methods the device uses during SA establishment and rekey. You can specify up to seven items, which correspond to ADDKE1 - ADDKE7 from RFC 9370.</string>
+							<string>An array of integers representing postquantum key exchange methods the device uses during SA establishment and rekey. You can specify up to seven items, which correspond to ADDKE1 - ADDKE7 from RFC 9370.</string>
 							<key>pfm_ios_min</key>
 							<string>26.0</string>
 							<key>pfm_macos_min</key>
@@ -2618,13 +2608,13 @@ For 'AlwaysOn' VPN in iOS 14.2 and later, the minimum allowed value is '14'.
 										<integer>37</integer>
 									</array>
 									<key>pfm_title</key>
-									<string>Post-quantum Key Exchange Method</string>
+									<string>Post-quantum key exchange method</string>
 									<key>pfm_type</key>
 									<string>integer</string>
 								</dict>
 							</array>
 							<key>pfm_title</key>
-							<string>Post-quantum Key Exchange Methods</string>
+							<string>Post-quantum key exchange methods</string>
 							<key>pfm_tvos_min</key>
 							<string>16.0</string>
 							<key>pfm_type</key>
@@ -2658,7 +2648,7 @@ For 'AlwaysOn' VPN in iOS 14.2 and later, the minimum allowed value is '14'.
 					<key>pfm_default</key>
 					<integer>1280</integer>
 					<key>pfm_description</key>
-					<string>The Maximum Transmission Unit (MTU) specifies the maximum size in bytes of each packet that the system sends over the IKEv2 VPN interface. Available in iOS 14 and later, and macOS 11 and later.</string>
+					<string>The Maximum Transmission Unit (MTU) specifies the maximum size in bytes of each packet that the system sends over the IKEv2 VPN interface.</string>
 					<key>pfm_ios_min</key>
 					<string>14.0</string>
 					<key>pfm_macos_min</key>
@@ -2670,7 +2660,7 @@ For 'AlwaysOn' VPN in iOS 14.2 and later, the minimum allowed value is '14'.
 					<key>pfm_range_min</key>
 					<integer>1280</integer>
 					<key>pfm_title</key>
-					<string>Maximum Transmission Unit</string>
+					<string>Maximum transmission unit</string>
 					<key>pfm_type</key>
 					<string>integer</string>
 					<key>pfmx_supported_oses</key>
@@ -2704,7 +2694,7 @@ For 'AlwaysOn' VPN in iOS 14.2 and later, the minimum allowed value is '14'.
 						<integer>1</integer>
 					</array>
 					<key>pfm_title</key>
-					<string>Enforce Routes</string>
+					<string>Enforce routes</string>
 					<key>pfm_type</key>
 					<string>integer</string>
 					<key>pfm_type_input</key>
@@ -2745,7 +2735,7 @@ For 'AlwaysOn' VPN in iOS 14.2 and later, the minimum allowed value is '14'.
 						<integer>1</integer>
 					</array>
 					<key>pfm_title</key>
-					<string>Exclude Local Networks</string>
+					<string>Exclude local networks</string>
 					<key>pfm_type</key>
 					<string>integer</string>
 					<key>pfm_type_input</key>
@@ -2795,7 +2785,7 @@ Network communication with a companion device such as a watchOS device.</string>
 						<integer>1</integer>
 					</array>
 					<key>pfm_title</key>
-					<string>Include All Networks</string>
+					<string>Include all networks</string>
 					<key>pfm_type</key>
 					<string>integer</string>
 					<key>pfm_type_input</key>
@@ -2841,7 +2831,7 @@ Network communication with a companion device such as a watchOS device.</string>
 						<integer>1</integer>
 					</array>
 					<key>pfm_title</key>
-					<string>Exclude Cellular Services</string>
+					<string>Exclude cellular services</string>
 					<key>pfm_type</key>
 					<string>integer</string>
 					<key>pfm_type_input</key>
@@ -2887,7 +2877,7 @@ Network communication with a companion device such as a watchOS device.</string>
 						<integer>1</integer>
 					</array>
 					<key>pfm_title</key>
-					<string>Exclude Device Communication</string>
+					<string>Exclude device communication</string>
 					<key>pfm_type</key>
 					<string>integer</string>
 					<key>pfm_type_input</key>
@@ -2968,23 +2958,23 @@ Network communication with a companion device such as a watchOS device.</string>
 					<key>pfm_name</key>
 					<string>Password</string>
 					<key>pfm_title</key>
-					<string>Account Password</string>
+					<string>Account password</string>
 					<key>pfm_type</key>
 					<string>string</string>
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string>If the VPNSubType field contains the bundle identifier of an app that contains multiple VPN providers of the same type (app-proxy or packet-tunnel), then the system uses this field to choose which provider to use for this configuration. If the VPN provider is implemented as a System Extension, then this field is required.</string>
+					<string>If the VPNSubType field contains the bundle identifier of an app that contains multiple VPN providers of the same type (app-proxy or packet-tunnel), then the system uses this field to choose which provider to use for this configuration. If the VPN provider uses a system extension, then this field is required.</string>
 					<key>pfm_name</key>
 					<string>ProviderBundleIdentifier</string>
 					<key>pfm_title</key>
-					<string>Provider Bundle Identifier</string>
+					<string>Provider bundle identifier</string>
 					<key>pfm_type</key>
 					<string>string</string>
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string>If the VPN provider is implemented as a System Extension, then this field is required. Available in macOS 10.15 and later, tvOS 17 and later, and watchOS 10 and later.</string>
+					<string>If the VPN provider uses a system extension, then this field is required.</string>
 					<key>pfm_macos_min</key>
 					<string>10.15</string>
 					<key>pfm_name</key>
@@ -2995,7 +2985,7 @@ Network communication with a companion device such as a watchOS device.</string>
 						<string>tvOS</string>
 					</array>
 					<key>pfm_title</key>
-					<string>Provider Designated Requirement</string>
+					<string>Provider designated requirement</string>
 					<key>pfm_type</key>
 					<string>string</string>
 					<key>pfmx_supported_oses</key>
@@ -3030,7 +3020,7 @@ Network communication with a companion device such as a watchOS device.</string>
 						<integer>1</integer>
 					</array>
 					<key>pfm_title</key>
-					<string>Enable VPN On Demand</string>
+					<string>Enable VPN on demand</string>
 					<key>pfm_type</key>
 					<string>integer</string>
 					<key>pfm_type_input</key>
@@ -3072,7 +3062,7 @@ Network communication with a companion device such as a watchOS device.</string>
 						<integer>1</integer>
 					</array>
 					<key>pfm_title</key>
-					<string>Prevent users from toggling VPN On Demand</string>
+					<string>Prevent users from toggling VPN on demand</string>
 					<key>pfm_type</key>
 					<string>integer</string>
 					<key>pfm_type_input</key>
@@ -3140,7 +3130,7 @@ Network communication with a companion device such as a watchOS device.</string>
 									<key>pfm_require</key>
 									<string>always</string>
 									<key>pfm_title</key>
-									<string>On Demand Action</string>
+									<string>On demand action</string>
 									<key>pfm_type</key>
 									<string>string</string>
 								</dict>
@@ -3171,7 +3161,7 @@ Network communication with a companion device such as a watchOS device.</string>
 															<key>pfm_name</key>
 															<string>DomainsElement</string>
 															<key>pfm_title</key>
-															<string>Domains Element</string>
+															<string>Domains element</string>
 															<key>pfm_type</key>
 															<string>string</string>
 														</dict>
@@ -3196,7 +3186,7 @@ Network communication with a companion device such as a watchOS device.</string>
 													<key>pfm_require</key>
 													<string>always</string>
 													<key>pfm_title</key>
-													<string>Domain Action</string>
+													<string>Domain action</string>
 													<key>pfm_type</key>
 													<string>string</string>
 												</dict>
@@ -3211,41 +3201,41 @@ Network communication with a companion device such as a watchOS device.</string>
 															<key>pfm_name</key>
 															<string>RequiredDNSServersElement</string>
 															<key>pfm_title</key>
-															<string>Required DNS Servers Element</string>
+															<string>Required DNS servers element</string>
 															<key>pfm_type</key>
 															<string>string</string>
 														</dict>
 													</array>
 													<key>pfm_title</key>
-													<string>Required DNS Servers</string>
+													<string>Required DNS servers</string>
 													<key>pfm_type</key>
 													<string>array</string>
 												</dict>
 												<dict>
 													<key>pfm_description</key>
-													<string>An HTTP or HTTPS (preferred) URL to probe, using a GET request. If the URL's hostname can't be resolved, if the server is unreachable, or if the server doesn't respond with a 200 HTTP status code, a VPN connection is established in response. This key is valid only if the value of 'DomainAction' is 'ConnectIfNeeded'.</string>
+													<string>An HTTP or HTTPS (preferred) URL to probe, using a GET request. If the URL's hostname can't be resolved, if the server is unreachable, or if the server doesn't respond with a 200 HTTP status code, the device establishes a VPN connection in response. This key is valid only if the value of 'DomainAction' is 'ConnectIfNeeded'.</string>
 													<key>pfm_name</key>
 													<string>RequiredURLStringProbe</string>
 													<key>pfm_title</key>
-													<string>Required URL String Probe</string>
+													<string>Required URL string probe</string>
 													<key>pfm_type</key>
 													<string>string</string>
 												</dict>
 											</array>
 											<key>pfm_title</key>
-											<string>Action Parameter</string>
+											<string>Action parameter</string>
 											<key>pfm_type</key>
 											<string>dictionary</string>
 										</dict>
 									</array>
 									<key>pfm_title</key>
-									<string>Action Parameters</string>
+									<string>Action parameters</string>
 									<key>pfm_type</key>
 									<string>array</string>
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>An array of domain names. This rule matches if any of the domain names in the specified list matches any domain in the device's search domains list. The system supports a wildcard ('*') prefix. For example, '*.example.com' matches against either 'mydomain.example.com' or 'yourdomain.example.com'.</string>
+									<string>An array of domain names. This rule matches if any of the domain names in the specified list matches any domain in the device's search domains list. The system supports a wildcard ('\*') prefix. For example, '\*.example.com' matches against either 'mydomain.example.com' or 'yourdomain.example.com'.</string>
 									<key>pfm_name</key>
 									<string>DNSDomainMatch</string>
 									<key>pfm_subkeys</key>
@@ -3254,19 +3244,19 @@ Network communication with a companion device such as a watchOS device.</string>
 											<key>pfm_name</key>
 											<string>DNSDomainMatchElement</string>
 											<key>pfm_title</key>
-											<string>DNS Domain Match Element</string>
+											<string>DNS domain match element</string>
 											<key>pfm_type</key>
 											<string>string</string>
 										</dict>
 									</array>
 									<key>pfm_title</key>
-									<string>DNS Domain Match</string>
+									<string>DNS domain match</string>
 									<key>pfm_type</key>
 									<string>array</string>
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>An array of IP addresses. This rule matches if any of the network's specified DNS servers match any entry in the array. The system supports matching with a single wildcard. For example, '17.*' matches any DNS server in the '17.0.0.0/8' subnet.</string>
+									<string>An array of IP addresses. This rule matches if any of the network's specified DNS servers match any entry in the array. The system supports matching with a single wildcard. For example, '17.\*' matches any DNS server in the '17.0.0.0/8' subnet.</string>
 									<key>pfm_name</key>
 									<string>DNSServerAddressMatch</string>
 									<key>pfm_subkeys</key>
@@ -3275,13 +3265,13 @@ Network communication with a companion device such as a watchOS device.</string>
 											<key>pfm_name</key>
 											<string>DNSServerAddressMatchElement</string>
 											<key>pfm_title</key>
-											<string>DNS Server Address Match Element</string>
+											<string>DNS server address match element</string>
 											<key>pfm_type</key>
 											<string>string</string>
 										</dict>
 									</array>
 									<key>pfm_title</key>
-									<string>DNS Server Address Match</string>
+									<string>DNS server address match</string>
 									<key>pfm_type</key>
 									<string>array</string>
 								</dict>
@@ -3297,7 +3287,7 @@ Network communication with a companion device such as a watchOS device.</string>
 										<string>Cellular</string>
 									</array>
 									<key>pfm_title</key>
-									<string>Interface Type Match</string>
+									<string>Interface type match</string>
 									<key>pfm_type</key>
 									<string>string</string>
 								</dict>
@@ -3312,13 +3302,13 @@ Network communication with a companion device such as a watchOS device.</string>
 											<key>pfm_name</key>
 											<string>SSIDMatchElement</string>
 											<key>pfm_title</key>
-											<string>SSID Match Element</string>
+											<string>SSID match element</string>
 											<key>pfm_type</key>
 											<string>string</string>
 										</dict>
 									</array>
 									<key>pfm_title</key>
-									<string>SSID Match</string>
+									<string>SSID match</string>
 									<key>pfm_type</key>
 									<string>array</string>
 								</dict>
@@ -3328,19 +3318,19 @@ Network communication with a companion device such as a watchOS device.</string>
 									<key>pfm_name</key>
 									<string>URLStringProbe</string>
 									<key>pfm_title</key>
-									<string>URL String Probe</string>
+									<string>URL string probe</string>
 									<key>pfm_type</key>
 									<string>string</string>
 								</dict>
 							</array>
 							<key>pfm_title</key>
-							<string>On Demand Rules Element</string>
+							<string>On demand rules element</string>
 							<key>pfm_type</key>
 							<string>dictionary</string>
 						</dict>
 					</array>
 					<key>pfm_title</key>
-					<string>On Demand Rules</string>
+					<string>On demand rules</string>
 					<key>pfm_type</key>
 					<string>array</string>
 				</dict>
@@ -3360,7 +3350,7 @@ NAT keepalive offload has an impact on the battery life due to the extra workloa
 						<integer>1</integer>
 					</array>
 					<key>pfm_title</key>
-					<string>NAT Keep Alive Offload Enable</string>
+					<string>NAT keep alive offload enable</string>
 					<key>pfm_type</key>
 					<string>integer</string>
 					<key>pfm_type_input</key>
@@ -3384,7 +3374,7 @@ NAT keepalive offload has an impact on the battery life due to the extra workloa
 					<key>pfm_name</key>
 					<string>NATKeepAliveInterval</string>
 					<key>pfm_title</key>
-					<string>NAT Keepalive Interval</string>
+					<string>NAT keepalive interval</string>
 					<key>pfm_type</key>
 					<string>integer</string>
 					<key>pfmx_supported_oses</key>
@@ -3421,7 +3411,7 @@ NAT keepalive offload has an impact on the battery life due to the extra workloa
 					<key>pfm_name</key>
 					<string>PPK</string>
 					<key>pfm_title</key>
-					<string>Post-quantum Pre-shared Key</string>
+					<string>Post-quantum pre-shared key</string>
 					<key>pfm_tvos_min</key>
 					<string>18.0</string>
 					<key>pfm_type</key>
@@ -3460,7 +3450,7 @@ NAT keepalive offload has an impact on the battery life due to the extra workloa
 					<key>pfm_name</key>
 					<string>PPKIdentifier</string>
 					<key>pfm_title</key>
-					<string>Post-quantum Pre-shared Key Identifier</string>
+					<string>Post-quantum pre-shared key identifier</string>
 					<key>pfm_tvos_min</key>
 					<string>18.0</string>
 					<key>pfm_type</key>
@@ -3493,7 +3483,7 @@ NAT keepalive offload has an impact on the battery life due to the extra workloa
 					<key>pfm_default</key>
 					<integer>1</integer>
 					<key>pfm_description</key>
-					<string>If set to '1', the VPN doesn't establish a connection if the server doesn't support RFC 8784 or doesn't accept the PPK identifier specified in 'PPKIdentifier'. The device ignores this key if 'PPK' and 'PPKIdentifier' are not present.</string>
+					<string>If set to '1', the VPN doesn't establish a connection if the server doesn't support RFC 8784 or doesn't accept the PPK identifier specified in 'PPKIdentifier'. The device ignores this key if 'PPK' and 'PPKIdentifier' aren't present.</string>
 					<key>pfm_ios_min</key>
 					<string>18.0</string>
 					<key>pfm_macos_min</key>
@@ -3506,7 +3496,7 @@ NAT keepalive offload has an impact on the battery life due to the extra workloa
 						<integer>1</integer>
 					</array>
 					<key>pfm_title</key>
-					<string>Post-quantum Pre-shared Key Mandatory</string>
+					<string>Post-quantum pre-shared key mandatory</string>
 					<key>pfm_tvos_min</key>
 					<string>18.0</string>
 					<key>pfm_type</key>
@@ -3541,7 +3531,7 @@ NAT keepalive offload has an impact on the battery life due to the extra workloa
 					<key>pfm_default</key>
 					<integer>0</integer>
 					<key>pfm_description</key>
-					<string>If set to '0', the VPN doesn't establish a connection if the server does not support or doesn't allow post-quantum key exchanges. Thd device ignores this key if 'PostQuantumKeyExchangeMethods' is not present in 'IKESecurityAssociationParameters' or 'ChildSecurityAssociationParameters'.</string>
+					<string>If set to '0', the VPN doesn't establish a connection if the server does not support or doesn't allow post-quantum key exchanges. Thd device ignores this key if 'PostQuantumKeyExchangeMethods' isn't present in 'IKESecurityAssociationParameters' or 'ChildSecurityAssociationParameters'.</string>
 					<key>pfm_ios_min</key>
 					<string>26.0</string>
 					<key>pfm_macos_min</key>
@@ -3554,7 +3544,7 @@ NAT keepalive offload has an impact on the battery life due to the extra workloa
 						<integer>1</integer>
 					</array>
 					<key>pfm_title</key>
-					<string>Allow Post-quantum Key Exchange Fallback</string>
+					<string>Allow post-quantum key exchange fallback</string>
 					<key>pfm_tvos_min</key>
 					<string>26.0</string>
 					<key>pfm_type</key>
@@ -3587,7 +3577,7 @@ NAT keepalive offload has an impact on the battery life due to the extra workloa
 					<key>pfm_default</key>
 					<integer>0</integer>
 					<key>pfm_description</key>
-					<string>If set to '1', the device doesn't allow DES, 3DES, and Diffie-Hellman groups less than 14. Also the device requires the encryption algorithm specified for the IKE SA to be at least as cryptographically strong as the algorithm specified for the child SA. The device rejects this profile payload if these requirements are not met.</string>
+					<string>If set to '1', the device doesn't allow DES, 3DES, and Diffie-Hellman groups less than 14. Also the device requires the encryption algorithm specified for the IKE SA to be at least as cryptographically strong as the algorithm specified for the child SA. The device rejects this profile payload if these requirements aren't met.</string>
 					<key>pfm_ios_min</key>
 					<string>18.5</string>
 					<key>pfm_macos_min</key>
@@ -3600,7 +3590,7 @@ NAT keepalive offload has an impact on the battery life due to the extra workloa
 						<integer>1</integer>
 					</array>
 					<key>pfm_title</key>
-					<string>Enforce Strict Algorithm Selection</string>
+					<string>Enforce strict algorithm selection</string>
 					<key>pfm_tvos_min</key>
 					<string>18.5</string>
 					<key>pfm_type</key>
@@ -3688,7 +3678,7 @@ NAT keepalive offload has an impact on the battery life due to the extra workloa
 						<string>Allow</string>
 					</array>
 					<key>pfm_title</key>
-					<string>Allow All Captive Network Plugins</string>
+					<string>Allow all captive network plugins</string>
 					<key>pfm_type</key>
 					<string>integer</string>
 					<key>pfm_type_input</key>
@@ -3718,7 +3708,7 @@ NAT keepalive offload has an impact on the battery life due to the extra workloa
 						<string>Allow</string>
 					</array>
 					<key>pfm_title</key>
-					<string>Allow Captive Web Sheet</string>
+					<string>Allow captive web sheet</string>
 					<key>pfm_type</key>
 					<string>integer</string>
 					<key>pfm_type_input</key>
@@ -3786,13 +3776,13 @@ NAT keepalive offload has an impact on the battery life due to the extra workloa
 									<key>pfm_require</key>
 									<string>always</string>
 									<key>pfm_title</key>
-									<string>Bundle Identifier</string>
+									<string>Bundle identifier</string>
 									<key>pfm_type</key>
 									<string>string</string>
 								</dict>
 							</array>
 							<key>pfm_title</key>
-							<string>An AllowedCaptiveNetworkPlugin Element</string>
+							<string>An AllowedCaptiveNetworkPlugin element</string>
 							<key>pfm_type</key>
 							<string>dictionary</string>
 						</dict>
@@ -3883,7 +3873,7 @@ NAT keepalive offload has an impact on the battery life due to the extra workloa
 								<dict>
 									<key>pfm_description</key>
 									<string>The name of a service that's exempt from Always On VPN.
-'CellularServices' is available in iOS 11.3 and later; it exempts 'VoLTE', 'IMS' and 'MMS'. WiFiCalling is exempted in iOS 13.4 and later.
+'CellularServices' is available in iOS 11.3 and later; it exempts 'VoLTE', 'IMS' and 'MMS'. Always On VPN exempts WiFiCalling in iOS 13.4 and later.
 'DeviceCommunication' is available in iOS 17.4 and later; it exempts network traffic used for communicating with devices connected via USB or Wi-Fi.</string>
 									<key>pfm_ios_min</key>
 									<string>8.0</string>
@@ -3903,7 +3893,7 @@ NAT keepalive offload has an impact on the battery life due to the extra workloa
 									<key>pfm_require</key>
 									<string>always</string>
 									<key>pfm_title</key>
-									<string>Service Name</string>
+									<string>Service name</string>
 									<key>pfm_type</key>
 									<string>string</string>
 								</dict>
@@ -3932,7 +3922,7 @@ NAT keepalive offload has an impact on the battery life due to the extra workloa
 								</dict>
 							</array>
 							<key>pfm_title</key>
-							<string>A ServiceException Element</string>
+							<string>A ServiceException element</string>
 							<key>pfm_type</key>
 							<string>dictionary</string>
 						</dict>
@@ -4696,7 +4686,7 @@ NAT keepalive offload has an impact on the battery life due to the extra workloa
 									<key>pfm_require</key>
 									<string>always</string>
 									<key>pfm_title</key>
-									<string>Protocol Type</string>
+									<string>Protocol type</string>
 									<key>pfm_type</key>
 									<string>string</string>
 								</dict>
@@ -4728,7 +4718,7 @@ NAT keepalive offload has an impact on the battery life due to the extra workloa
 												<string>WiFi</string>
 											</array>
 											<key>pfm_title</key>
-											<string>Interfaces Element</string>
+											<string>Interfaces element</string>
 											<key>pfm_type</key>
 											<string>string</string>
 										</dict>
@@ -4740,7 +4730,7 @@ NAT keepalive offload has an impact on the battery life due to the extra workloa
 								</dict>
 							</array>
 							<key>pfm_title</key>
-							<string>A TunnelConfiguration Element</string>
+							<string>A TunnelConfiguration element</string>
 							<key>pfm_type</key>
 							<string>dictionary</string>
 						</dict>
@@ -4774,7 +4764,7 @@ NAT keepalive offload has an impact on the battery life due to the extra workloa
 						<string>Enable</string>
 					</array>
 					<key>pfm_title</key>
-					<string>UI Toggle Enabled</string>
+					<string>UI toggle enabled</string>
 					<key>pfm_type</key>
 					<string>integer</string>
 					<key>pfm_type_input</key>
@@ -4818,7 +4808,7 @@ NAT keepalive offload has an impact on the battery life due to the extra workloa
 									<key>pfm_require</key>
 									<string>always</string>
 									<key>pfm_title</key>
-									<string>Bundle Identifier</string>
+									<string>Bundle identifier</string>
 									<key>pfm_type</key>
 									<string>string</string>
 								</dict>
@@ -4849,7 +4839,7 @@ NAT keepalive offload has an impact on the battery life due to the extra workloa
 												<string>UDP</string>
 											</array>
 											<key>pfm_title</key>
-											<string>LimitToProtocol Element</string>
+											<string>LimitToProtocol element</string>
 											<key>pfm_type</key>
 											<string>string</string>
 										</dict>
@@ -4861,7 +4851,7 @@ NAT keepalive offload has an impact on the battery life due to the extra workloa
 								</dict>
 							</array>
 							<key>pfm_title</key>
-							<string>A ApplicationException Element</string>
+							<string>A ApplicationException element</string>
 							<key>pfm_type</key>
 							<string>dictionary</string>
 						</dict>
@@ -4924,7 +4914,7 @@ NAT keepalive offload has an impact on the battery life due to the extra workloa
 					<key>pfm_name</key>
 					<string>DomainName</string>
 					<key>pfm_title</key>
-					<string>Domain Name</string>
+					<string>Domain name</string>
 					<key>pfm_type</key>
 					<string>string</string>
 					<key>pfmx_supported_oses</key>
@@ -4962,13 +4952,13 @@ NAT keepalive offload has an impact on the battery life due to the extra workloa
 							<key>pfm_name</key>
 							<string>ServerAddressesElement</string>
 							<key>pfm_title</key>
-							<string>Server Address Element</string>
+							<string>Server address element</string>
 							<key>pfm_type</key>
 							<string>string</string>
 						</dict>
 					</array>
 					<key>pfm_title</key>
-					<string>DNS Server Addresses</string>
+					<string>DNS server addresses</string>
 					<key>pfm_type</key>
 					<string>array</string>
 					<key>pfmx_supported_oses</key>
@@ -5004,13 +4994,13 @@ NAT keepalive offload has an impact on the battery life due to the extra workloa
 							<key>pfm_name</key>
 							<string>SearchDomainsElement</string>
 							<key>pfm_title</key>
-							<string>Search Domains Element</string>
+							<string>Search domains element</string>
 							<key>pfm_type</key>
 							<string>string</string>
 						</dict>
 					</array>
 					<key>pfm_title</key>
-					<string>DNS Search Domains</string>
+					<string>DNS search domains</string>
 					<key>pfm_type</key>
 					<string>array</string>
 					<key>pfmx_supported_oses</key>
@@ -5048,13 +5038,13 @@ Split-tunnel configurations can direct all DNS queries to the VPN DNS servers be
 							<key>pfm_name</key>
 							<string>SupplementalMatchDomainsElement</string>
 							<key>pfm_title</key>
-							<string>Supplemental Match Domains Element</string>
+							<string>Supplemental match domains element</string>
 							<key>pfm_type</key>
 							<string>string</string>
 						</dict>
 					</array>
 					<key>pfm_title</key>
-					<string>Supplemental Match Domains</string>
+					<string>Supplemental match domains</string>
 					<key>pfm_type</key>
 					<string>array</string>
 					<key>pfmx_supported_oses</key>
@@ -5093,7 +5083,7 @@ Split-tunnel configurations can direct all DNS queries to the VPN DNS servers be
 						<string>Do not append</string>
 					</array>
 					<key>pfm_title</key>
-					<string>Supplemental Match Domains No Search</string>
+					<string>Supplemental match domains no search</string>
 					<key>pfm_type</key>
 					<string>integer</string>
 					<key>pfm_type_input</key>
@@ -5130,7 +5120,7 @@ Split-tunnel configurations can direct all DNS queries to the VPN DNS servers be
 					<key>pfm_require</key>
 					<string>always</string>
 					<key>pfm_title</key>
-					<string>DNS Protocol</string>
+					<string>DNS protocol</string>
 					<key>pfm_type</key>
 					<string>string</string>
 					<key>pfmx_supported_oses</key>
@@ -5184,7 +5174,7 @@ Split-tunnel configurations can direct all DNS queries to the VPN DNS servers be
 					<key>pfm_name</key>
 					<string>ServerName</string>
 					<key>pfm_title</key>
-					<string>Server Name</string>
+					<string>Server name</string>
 					<key>pfm_type</key>
 					<string>string</string>
 					<key>pfmx_supported_oses</key>
@@ -5213,7 +5203,7 @@ Split-tunnel configurations can direct all DNS queries to the VPN DNS servers be
 					<key>pfm_name</key>
 					<string>PayloadCertificateUUID</string>
 					<key>pfm_title</key>
-					<string>DNS Certificate UUID</string>
+					<string>DNS certificate UUID</string>
 					<key>pfm_type</key>
 					<string>string</string>
 					<key>pfmx_supported_oses</key>
@@ -5294,7 +5284,7 @@ Split-tunnel configurations can direct all DNS queries to the VPN DNS servers be
 					<key>pfm_require</key>
 					<string>always</string>
 					<key>pfm_title</key>
-					<string>Remote Address</string>
+					<string>Remote address</string>
 					<key>pfm_type</key>
 					<string>string</string>
 				</dict>
@@ -5335,7 +5325,7 @@ Split-tunnel configurations can direct all DNS queries to the VPN DNS servers be
 						<string>Enable</string>
 					</array>
 					<key>pfm_title</key>
-					<string>XAUTH Enabled</string>
+					<string>XAUTH enabled</string>
 					<key>pfm_type</key>
 					<string>integer</string>
 					<key>pfm_type_input</key>
@@ -5477,7 +5467,7 @@ Split-tunnel configurations can direct all DNS queries to the VPN DNS servers be
 						<string>Prompt</string>
 					</array>
 					<key>pfm_title</key>
-					<string>XAUTH Password Encryption</string>
+					<string>XAUTH password encryption</string>
 					<key>pfm_type</key>
 					<string>string</string>
 				</dict>
@@ -5506,7 +5496,7 @@ Split-tunnel configurations can direct all DNS queries to the VPN DNS servers be
 					<key>pfm_require</key>
 					<string>always</string>
 					<key>pfm_title</key>
-					<string>Authentication Method</string>
+					<string>Authentication method</string>
 					<key>pfm_type</key>
 					<string>string</string>
 				</dict>
@@ -5551,7 +5541,7 @@ Present only for Cisco IPSec if 'AuthenticationMethod' is 'SharedSecret'.</strin
 						<string>macOS</string>
 					</array>
 					<key>pfm_title</key>
-					<string>Local Identifier</string>
+					<string>Local identifier</string>
 					<key>pfm_type</key>
 					<string>string</string>
 				</dict>
@@ -5588,7 +5578,7 @@ Present only for Cisco IPSec if 'AuthenticationMethod' is 'SharedSecret'.</strin
 						<string>KeyID</string>
 					</array>
 					<key>pfm_title</key>
-					<string>Local Identifier Type</string>
+					<string>Local identifier type</string>
 					<key>pfm_type</key>
 					<string>string</string>
 				</dict>
@@ -5620,7 +5610,7 @@ Only use this with L2TP and Cisco IPSec VPNs and if the 'AuthenticationMethod' k
 						<string>macOS</string>
 					</array>
 					<key>pfm_title</key>
-					<string>Shared Secret</string>
+					<string>Shared secret</string>
 					<key>pfm_type</key>
 					<string>data</string>
 					<key>pfm_type_input</key>
@@ -5734,7 +5724,7 @@ Only use this with Cisco IPSec VPNs and if the 'AuthenticationMethod' key is to 
 						<string>Enable</string>
 					</array>
 					<key>pfm_title</key>
-					<string>Enable VPN On Demand</string>
+					<string>Enable VPN on demand</string>
 					<key>pfm_type</key>
 					<string>integer</string>
 					<key>pfm_type_input</key>
@@ -5794,13 +5784,13 @@ Only use this with Cisco IPSec VPNs and if the 'AuthenticationMethod' key is to 
 								<string>macOS</string>
 							</array>
 							<key>pfm_title</key>
-							<string>Match Domain Always Element</string>
+							<string>Match domain always element</string>
 							<key>pfm_type</key>
 							<string>string</string>
 						</dict>
 					</array>
 					<key>pfm_title</key>
-					<string>On Demand Match Domains Always</string>
+					<string>On demand match domains always</string>
 					<key>pfm_type</key>
 					<string>array</string>
 					<key>pfmx_supported_oses</key>
@@ -5866,13 +5856,13 @@ Only use this with Cisco IPSec VPNs and if the 'AuthenticationMethod' key is to 
 								<string>macOS</string>
 							</array>
 							<key>pfm_title</key>
-							<string>Match Domain Never Element</string>
+							<string>Match domain never element</string>
 							<key>pfm_type</key>
 							<string>string</string>
 						</dict>
 					</array>
 					<key>pfm_title</key>
-					<string>On Demand Match Domains Never</string>
+					<string>On demand match domains never</string>
 					<key>pfm_type</key>
 					<string>array</string>
 					<key>pfmx_supported_oses</key>
@@ -5938,13 +5928,13 @@ Only use this with Cisco IPSec VPNs and if the 'AuthenticationMethod' key is to 
 								<string>macOS</string>
 							</array>
 							<key>pfm_title</key>
-							<string>Match Domain On Retry Element</string>
+							<string>Match domain on retry element</string>
 							<key>pfm_type</key>
 							<string>string</string>
 						</dict>
 					</array>
 					<key>pfm_title</key>
-					<string>On Demand Match Domains On Retry</string>
+					<string>On demand match domains on retry</string>
 					<key>pfm_type</key>
 					<string>array</string>
 					<key>pfmx_supported_oses</key>
@@ -6041,7 +6031,7 @@ Only use this with Cisco IPSec VPNs and if the 'AuthenticationMethod' key is to 
 									<key>pfm_require</key>
 									<string>always</string>
 									<key>pfm_title</key>
-									<string>On Demand Action</string>
+									<string>On demand action</string>
 									<key>pfm_type</key>
 									<string>string</string>
 								</dict>
@@ -6068,13 +6058,13 @@ Only use this with Cisco IPSec VPNs and if the 'AuthenticationMethod' key is to 
 										<string>Cellular</string>
 									</array>
 									<key>pfm_title</key>
-									<string>Interface Type Match</string>
+									<string>Interface type match</string>
 									<key>pfm_type</key>
 									<string>string</string>
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>An array of domain names. This rule matches if any of the domain names in the specified list matches any domain in the device's search domains list. The system supports a wildcard ('*') prefix. For example, '*.example.com' matches against either 'mydomain.example.com' or 'yourdomain.example.com'.</string>
+									<string>An array of domain names. This rule matches if any of the domain names in the specified list matches any domain in the device's search domains list. The system supports a wildcard ('\*') prefix. For example, '\*.example.com' matches against either 'mydomain.example.com' or 'yourdomain.example.com'.</string>
 									<key>pfm_name</key>
 									<string>DNSDomainMatch</string>
 									<key>pfm_platforms</key>
@@ -6093,7 +6083,7 @@ Only use this with Cisco IPSec VPNs and if the 'AuthenticationMethod' key is to 
 												<string>macOS</string>
 											</array>
 											<key>pfm_title</key>
-											<string>DNS Domain Match Element</string>
+											<string>DNS domain match element</string>
 											<key>pfm_type</key>
 											<string>string</string>
 											<key>pfm_value_placeholder</key>
@@ -6101,13 +6091,13 @@ Only use this with Cisco IPSec VPNs and if the 'AuthenticationMethod' key is to 
 										</dict>
 									</array>
 									<key>pfm_title</key>
-									<string>DNS Domain Match</string>
+									<string>DNS domain match</string>
 									<key>pfm_type</key>
 									<string>array</string>
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>An array of IP addresses. This rule matches if any of the network's specified DNS servers match any entry in the array. The system supports matching with a single wildcard. For example, '17.*' matches any DNS server in the '17.0.0.0/8' subnet.</string>
+									<string>An array of IP addresses. This rule matches if any of the network's specified DNS servers match any entry in the array. The system supports matching with a single wildcard. For example, '17.\*' matches any DNS server in the '17.0.0.0/8' subnet.</string>
 									<key>pfm_name</key>
 									<string>DNSServerAddressMatch</string>
 									<key>pfm_platforms</key>
@@ -6126,13 +6116,13 @@ Only use this with Cisco IPSec VPNs and if the 'AuthenticationMethod' key is to 
 												<string>macOS</string>
 											</array>
 											<key>pfm_title</key>
-											<string>DNS Server Address Match Element</string>
+											<string>DNS server address match element</string>
 											<key>pfm_type</key>
 											<string>string</string>
 										</dict>
 									</array>
 									<key>pfm_title</key>
-									<string>DNS Server Address Match</string>
+									<string>DNS server address match</string>
 									<key>pfm_type</key>
 									<string>array</string>
 								</dict>
@@ -6157,13 +6147,13 @@ Only use this with Cisco IPSec VPNs and if the 'AuthenticationMethod' key is to 
 												<string>macOS</string>
 											</array>
 											<key>pfm_title</key>
-											<string>SSID Match Element</string>
+											<string>SSID match element</string>
 											<key>pfm_type</key>
 											<string>string</string>
 										</dict>
 									</array>
 									<key>pfm_title</key>
-									<string>SSID Match</string>
+									<string>SSID match</string>
 									<key>pfm_type</key>
 									<string>array</string>
 								</dict>
@@ -6178,7 +6168,7 @@ Only use this with Cisco IPSec VPNs and if the 'AuthenticationMethod' key is to 
 										<string>macOS</string>
 									</array>
 									<key>pfm_title</key>
-									<string>URL String Probe</string>
+									<string>URL string probe</string>
 									<key>pfm_type</key>
 									<string>string</string>
 								</dict>
@@ -6231,7 +6221,7 @@ Only use this with Cisco IPSec VPNs and if the 'AuthenticationMethod' key is to 
 													<key>pfm_require</key>
 													<string>always</string>
 													<key>pfm_title</key>
-													<string>Domain Action</string>
+													<string>Domain action</string>
 													<key>pfm_type</key>
 													<string>string</string>
 												</dict>
@@ -6258,7 +6248,7 @@ Only use this with Cisco IPSec VPNs and if the 'AuthenticationMethod' key is to 
 																<string>macOS</string>
 															</array>
 															<key>pfm_title</key>
-															<string>Domains Element</string>
+															<string>Domains element</string>
 															<key>pfm_type</key>
 															<string>string</string>
 														</dict>
@@ -6289,19 +6279,19 @@ Only use this with Cisco IPSec VPNs and if the 'AuthenticationMethod' key is to 
 																<string>macOS</string>
 															</array>
 															<key>pfm_title</key>
-															<string>Required DNS Servers Element</string>
+															<string>Required DNS servers element</string>
 															<key>pfm_type</key>
 															<string>string</string>
 														</dict>
 													</array>
 													<key>pfm_title</key>
-													<string>Required DNS Servers</string>
+													<string>Required DNS servers</string>
 													<key>pfm_type</key>
 													<string>array</string>
 												</dict>
 												<dict>
 													<key>pfm_description</key>
-													<string>An HTTP or HTTPS (preferred) URL to probe, using a GET request. If the URL's hostname can't be resolved, if the server is unreachable, or if the server doesn't respond with a 200 HTTP status code, a VPN connection is established in response. This key is valid only if the value of 'DomainAction' is 'ConnectIfNeeded'.</string>
+													<string>An HTTP or HTTPS (preferred) URL to probe, using a GET request. If the URL's hostname can't be resolved, if the server is unreachable, or if the server doesn't respond with a 200 HTTP status code, the device establishes a VPN connection in response. This key is valid only if the value of 'DomainAction' is 'ConnectIfNeeded'.</string>
 													<key>pfm_name</key>
 													<string>RequiredURLStringProbe</string>
 													<key>pfm_platforms</key>
@@ -6310,31 +6300,31 @@ Only use this with Cisco IPSec VPNs and if the 'AuthenticationMethod' key is to 
 														<string>macOS</string>
 													</array>
 													<key>pfm_title</key>
-													<string>Required URL String Probe</string>
+													<string>Required URL string probe</string>
 													<key>pfm_type</key>
 													<string>string</string>
 												</dict>
 											</array>
 											<key>pfm_title</key>
-											<string>Action Parameter</string>
+											<string>Action parameter</string>
 											<key>pfm_type</key>
 											<string>dictionary</string>
 										</dict>
 									</array>
 									<key>pfm_title</key>
-									<string>Action Parameters</string>
+									<string>Action parameters</string>
 									<key>pfm_type</key>
 									<string>array</string>
 								</dict>
 							</array>
 							<key>pfm_title</key>
-							<string>On Demand Rules Element</string>
+							<string>On demand rules element</string>
 							<key>pfm_type</key>
 							<string>dictionary</string>
 						</dict>
 					</array>
 					<key>pfm_title</key>
-					<string>On Demand Rules</string>
+					<string>On demand rules</string>
 					<key>pfm_type</key>
 					<string>array</string>
 				</dict>
@@ -6377,7 +6367,7 @@ Only use this with Cisco IPSec VPNs and if the 'AuthenticationMethod' key is to 
 						<string>Enable</string>
 					</array>
 					<key>pfm_title</key>
-					<string>Enable Disconnect on Idle</string>
+					<string>Enable disconnect on idle</string>
 					<key>pfm_type</key>
 					<string>integer</string>
 					<key>pfm_type_input</key>
@@ -6425,13 +6415,13 @@ Only use this with Cisco IPSec VPNs and if the 'AuthenticationMethod' key is to 
 					<key>pfm_range_min</key>
 					<integer>0</integer>
 					<key>pfm_title</key>
-					<string>Disconnect on Idle time</string>
+					<string>Disconnect on idle time</string>
 					<key>pfm_type</key>
 					<string>integer</string>
 				</dict>
 			</array>
 			<key>pfm_title</key>
-			<string>IPSec Settings</string>
+			<string>IPSec settings</string>
 			<key>pfm_type</key>
 			<string>dictionary</string>
 			<key>pfmx_supported_oses</key>
@@ -6549,7 +6539,7 @@ Only use this with Cisco IPSec VPNs and if the 'AuthenticationMethod' key is to 
 					<key>pfm_name</key>
 					<string>LoginGroupOrDomain</string>
 					<key>pfm_title</key>
-					<string>Login Group or Domain</string>
+					<string>Login group or domain</string>
 					<key>pfm_type</key>
 					<string>string</string>
 				</dict>
@@ -6687,7 +6677,7 @@ Only use this with Cisco IPSec VPNs and if the 'AuthenticationMethod' key is to 
 				</dict>
 			</array>
 			<key>pfm_title</key>
-			<string>Vendor Configuration Dictionary</string>
+			<string>Vendor configuration dictionary</string>
 			<key>pfm_type</key>
 			<string>dictionary</string>
 		</dict>
@@ -6734,7 +6724,7 @@ Only use this with Cisco IPSec VPNs and if the 'AuthenticationMethod' key is to 
 					<key>pfm_require</key>
 					<string>push</string>
 					<key>pfm_title</key>
-					<string>Account Username</string>
+					<string>Account username</string>
 					<key>pfm_type</key>
 					<string>string</string>
 				</dict>
@@ -6770,7 +6760,7 @@ Only use this with Cisco IPSec VPNs and if the 'AuthenticationMethod' key is to 
 						<string>Password+Certificate</string>
 					</array>
 					<key>pfm_title</key>
-					<string>Authentication Method</string>
+					<string>Authentication method</string>
 					<key>pfm_type</key>
 					<string>string</string>
 				</dict>
@@ -6850,7 +6840,7 @@ Only use this with Cisco IPSec VPNs and if the 'AuthenticationMethod' key is to 
 						<string>Enable</string>
 					</array>
 					<key>pfm_title</key>
-					<string>Enable VPN On Demand</string>
+					<string>Enable VPN on demand</string>
 					<key>pfm_type</key>
 					<string>integer</string>
 					<key>pfm_type_input</key>
@@ -6889,13 +6879,13 @@ Not available in watchOS.</string>
 							<key>pfm_name</key>
 							<string>MatchDomainAlwaysElement</string>
 							<key>pfm_title</key>
-							<string>Match Domain Always Element</string>
+							<string>Match domain always element</string>
 							<key>pfm_type</key>
 							<string>string</string>
 						</dict>
 					</array>
 					<key>pfm_title</key>
-					<string>On Demand Match Domains Always</string>
+					<string>On demand match domains always</string>
 					<key>pfm_type</key>
 					<string>array</string>
 					<key>pfmx_supported_oses</key>
@@ -6940,13 +6930,13 @@ Not available in watchOS.</string>
 							<key>pfm_name</key>
 							<string>MatchDomainNeverElement</string>
 							<key>pfm_title</key>
-							<string>Match Domain Never Element</string>
+							<string>Match domain never element</string>
 							<key>pfm_type</key>
 							<string>string</string>
 						</dict>
 					</array>
 					<key>pfm_title</key>
-					<string>On Demand Match Domains Never</string>
+					<string>On demand match domains never</string>
 					<key>pfm_type</key>
 					<string>array</string>
 					<key>pfmx_supported_oses</key>
@@ -6991,13 +6981,13 @@ Not available in watchOS.</string>
 							<key>pfm_name</key>
 							<string>MatchDomainOnRetryElement</string>
 							<key>pfm_title</key>
-							<string>Match Domain On Retry Element</string>
+							<string>Match domain on retry element</string>
 							<key>pfm_type</key>
 							<string>string</string>
 						</dict>
 					</array>
 					<key>pfm_title</key>
-					<string>On Demand Match Domains On Retry</string>
+					<string>On demand match domains on retry</string>
 					<key>pfm_type</key>
 					<string>array</string>
 					<key>pfmx_supported_oses</key>
@@ -7066,7 +7056,7 @@ Not available in watchOS.</string>
 									<key>pfm_require</key>
 									<string>always</string>
 									<key>pfm_title</key>
-									<string>On Demand Action</string>
+									<string>On demand action</string>
 									<key>pfm_type</key>
 									<string>string</string>
 								</dict>
@@ -7088,13 +7078,13 @@ Not available in watchOS.</string>
 										<string>Cellular</string>
 									</array>
 									<key>pfm_title</key>
-									<string>Interface Type Match</string>
+									<string>Interface type match</string>
 									<key>pfm_type</key>
 									<string>string</string>
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>An array of domain names. This rule matches if any of the domain names in the specified list matches any domain in the device's search domains list. The system supports a wildcard ('*') prefix. For example, '*.example.com' matches against either 'mydomain.example.com' or 'yourdomain.example.com'.</string>
+									<string>An array of domain names. This rule matches if any of the domain names in the specified list matches any domain in the device's search domains list. The system supports a wildcard ('\*') prefix. For example, '\*.example.com' matches against either 'mydomain.example.com' or 'yourdomain.example.com'.</string>
 									<key>pfm_name</key>
 									<string>DNSDomainMatch</string>
 									<key>pfm_subkeys</key>
@@ -7103,7 +7093,7 @@ Not available in watchOS.</string>
 											<key>pfm_name</key>
 											<string>DNSDomainMatchElement</string>
 											<key>pfm_title</key>
-											<string>DNS Domain Match Element</string>
+											<string>DNS domain match element</string>
 											<key>pfm_type</key>
 											<string>string</string>
 											<key>pfm_value_placeholder</key>
@@ -7111,13 +7101,13 @@ Not available in watchOS.</string>
 										</dict>
 									</array>
 									<key>pfm_title</key>
-									<string>DNS Domain Match</string>
+									<string>DNS domain match</string>
 									<key>pfm_type</key>
 									<string>array</string>
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>An array of IP addresses. This rule matches if any of the network's specified DNS servers match any entry in the array. The system supports matching with a single wildcard. For example, '17.*' matches any DNS server in the '17.0.0.0/8' subnet.</string>
+									<string>An array of IP addresses. This rule matches if any of the network's specified DNS servers match any entry in the array. The system supports matching with a single wildcard. For example, '17.\*' matches any DNS server in the '17.0.0.0/8' subnet.</string>
 									<key>pfm_name</key>
 									<string>DNSServerAddressMatch</string>
 									<key>pfm_subkeys</key>
@@ -7126,13 +7116,13 @@ Not available in watchOS.</string>
 											<key>pfm_name</key>
 											<string>DNSServerAddressMatchElement</string>
 											<key>pfm_title</key>
-											<string>DNS Server Address Match Element</string>
+											<string>DNS server address match element</string>
 											<key>pfm_type</key>
 											<string>string</string>
 										</dict>
 									</array>
 									<key>pfm_title</key>
-									<string>DNS Server Address Match</string>
+									<string>DNS server address match</string>
 									<key>pfm_type</key>
 									<string>array</string>
 								</dict>
@@ -7147,13 +7137,13 @@ Not available in watchOS.</string>
 											<key>pfm_name</key>
 											<string>SSIDMatchElement</string>
 											<key>pfm_title</key>
-											<string>SSID Match Element</string>
+											<string>SSID match element</string>
 											<key>pfm_type</key>
 											<string>string</string>
 										</dict>
 									</array>
 									<key>pfm_title</key>
-									<string>SSID Match</string>
+									<string>SSID match</string>
 									<key>pfm_type</key>
 									<string>array</string>
 								</dict>
@@ -7163,7 +7153,7 @@ Not available in watchOS.</string>
 									<key>pfm_name</key>
 									<string>URLStringProbe</string>
 									<key>pfm_title</key>
-									<string>URL String Probe</string>
+									<string>URL string probe</string>
 									<key>pfm_type</key>
 									<string>string</string>
 								</dict>
@@ -7201,7 +7191,7 @@ Not available in watchOS.</string>
 													<key>pfm_require</key>
 													<string>always</string>
 													<key>pfm_title</key>
-													<string>Domain Action</string>
+													<string>Domain action</string>
 													<key>pfm_type</key>
 													<string>string</string>
 												</dict>
@@ -7218,7 +7208,7 @@ Not available in watchOS.</string>
 															<key>pfm_name</key>
 															<string>DomainsElement</string>
 															<key>pfm_title</key>
-															<string>Domains Element</string>
+															<string>Domains element</string>
 															<key>pfm_type</key>
 															<string>string</string>
 														</dict>
@@ -7239,47 +7229,47 @@ Not available in watchOS.</string>
 															<key>pfm_name</key>
 															<string>RequiredDNSServersElement</string>
 															<key>pfm_title</key>
-															<string>Required DNS Servers Element</string>
+															<string>Required DNS servers element</string>
 															<key>pfm_type</key>
 															<string>string</string>
 														</dict>
 													</array>
 													<key>pfm_title</key>
-													<string>Required DNS Servers</string>
+													<string>Required DNS servers</string>
 													<key>pfm_type</key>
 													<string>array</string>
 												</dict>
 												<dict>
 													<key>pfm_description</key>
-													<string>An HTTP or HTTPS (preferred) URL to probe, using a GET request. If the URL's hostname can't be resolved, if the server is unreachable, or if the server doesn't respond with a 200 HTTP status code, a VPN connection is established in response. This key is valid only if the value of 'DomainAction' is 'ConnectIfNeeded'.</string>
+													<string>An HTTP or HTTPS (preferred) URL to probe, using a GET request. If the URL's hostname can't be resolved, if the server is unreachable, or if the server doesn't respond with a 200 HTTP status code, the device establishes a VPN connection in response. This key is valid only if the value of 'DomainAction' is 'ConnectIfNeeded'.</string>
 													<key>pfm_name</key>
 													<string>RequiredURLStringProbe</string>
 													<key>pfm_title</key>
-													<string>Required URL String Probe</string>
+													<string>Required URL string probe</string>
 													<key>pfm_type</key>
 													<string>string</string>
 												</dict>
 											</array>
 											<key>pfm_title</key>
-											<string>Action Parameter</string>
+											<string>Action parameter</string>
 											<key>pfm_type</key>
 											<string>dictionary</string>
 										</dict>
 									</array>
 									<key>pfm_title</key>
-									<string>Action Parameters</string>
+									<string>Action parameters</string>
 									<key>pfm_type</key>
 									<string>array</string>
 								</dict>
 							</array>
 							<key>pfm_title</key>
-							<string>On Demand Rules Element</string>
+							<string>On demand rules element</string>
 							<key>pfm_type</key>
 							<string>dictionary</string>
 						</dict>
 					</array>
 					<key>pfm_title</key>
-					<string>On Demand Rules</string>
+					<string>On demand rules</string>
 					<key>pfm_type</key>
 					<string>array</string>
 				</dict>
@@ -7287,7 +7277,7 @@ Not available in watchOS.</string>
 					<key>pfm_default</key>
 					<integer>0</integer>
 					<key>pfm_description</key>
-					<string>If '1', the Connect On Demand toggle in Settings is disabled for this configuration. Available in iOS 14 and later. Not available in watchOS.</string>
+					<string>If '1', the device disables the Connect On Demand toggle in Settings for this configuration. Not available in watchOS.</string>
 					<key>pfm_exclude</key>
 					<array>
 						<dict>
@@ -7324,7 +7314,7 @@ Not available in watchOS.</string>
 						<string>Disable</string>
 					</array>
 					<key>pfm_title</key>
-					<string>Prevent users from toggling VPN On Demand</string>
+					<string>Prevent users from toggling VPN on demand</string>
 					<key>pfm_type</key>
 					<string>integer</string>
 					<key>pfm_type_input</key>
@@ -7347,10 +7337,10 @@ Not available in watchOS.</string>
 					<key>pfm_default</key>
 					<integer>0</integer>
 					<key>pfm_description</key>
-					<string>If '1``, routes all traffic through the VPN, with some exclusions. Several of the exclusions can be controlled with the 'ExcludeLocalNetworks', 'ExcludeCellularServices', 'ExcludeAPNs'and'ExcludeDeviceCommunication` properties. The following traffic is always excluded from the tunnel:
+					<string>If '1``, routes all traffic through the VPN, with some exclusions. Several of the exclusions can be controlled with the 'ExcludeLocalNetworks', 'ExcludeCellularServices', 'ExcludeAPNs'and'ExcludeDeviceCommunication` properties. The system always excludes the following traffic from the tunnel:
 Traffic necessary for connecting and maintaining the device's network connection, such as DHCP.
 Traffic necessary for connecting to captive networks.
-Certain cellular services traffic that is not routable over the internet and is instead directly routed to the cellular network. See the ExcludeCellularServices property for more details.
+Certain cellular services traffic that's not routable over the internet and is instead directly routed to the cellular network. See the ExcludeCellularServices property for more details.
 Network communication with a companion device such as a watchOS device.
 Not available in watchOS.</string>
 					<key>pfm_ios_min</key>
@@ -7370,7 +7360,7 @@ Not available in watchOS.</string>
 						<integer>1</integer>
 					</array>
 					<key>pfm_title</key>
-					<string>Include All Networks</string>
+					<string>Include all networks</string>
 					<key>pfm_type</key>
 					<string>integer</string>
 					<key>pfm_type_input</key>
@@ -7450,7 +7440,7 @@ Not available in watchOS.</string>
 						<integer>1</integer>
 					</array>
 					<key>pfm_title</key>
-					<string>Exclude Local Networks</string>
+					<string>Exclude local networks</string>
 					<key>pfm_type</key>
 					<string>integer</string>
 					<key>pfm_type_input</key>
@@ -7502,13 +7492,13 @@ Not available in watchOS.</string>
 					<key>pfm_name</key>
 					<string>ProviderBundleIdentifier</string>
 					<key>pfm_title</key>
-					<string>Provider Bundle Identifier</string>
+					<string>Provider bundle identifier</string>
 					<key>pfm_type</key>
 					<string>string</string>
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string>If the VPN provider is implemented as a system extension, this field is required. Not available in watchOS.</string>
+					<string>If the VPN provider uses a system extension, this field is required. Not available in watchOS.</string>
 					<key>pfm_macos_min</key>
 					<string>10.15</string>
 					<key>pfm_name</key>
@@ -7519,7 +7509,7 @@ Not available in watchOS.</string>
 						<string>tvOS</string>
 					</array>
 					<key>pfm_title</key>
-					<string>Provider Designated Requirement</string>
+					<string>Provider designated requirement</string>
 					<key>pfm_type</key>
 					<string>string</string>
 					<key>pfmx_supported_oses</key>
@@ -7559,7 +7549,7 @@ Not available in watchOS.</string>
 						<string>Enable</string>
 					</array>
 					<key>pfm_title</key>
-					<string>Enable Disconnect on Idle</string>
+					<string>Enable disconnect on idle</string>
 					<key>pfm_type</key>
 					<string>integer</string>
 					<key>pfm_type_input</key>
@@ -7571,7 +7561,7 @@ Not available in watchOS.</string>
 					<key>pfm_description</key>
 					<string>If '1', all the VPN's non-default routes take precedence over any locally defined routes.
 If 'IncludeAllNetworks' is '1', the system ignores the value of 'EnforceRoutes'.
-Available in iOS 14.2 and later, and macOS 11 and later. Not available in watchOS.</string>
+Not available in watchOS.</string>
 					<key>pfm_ios_min</key>
 					<string>14.2</string>
 					<key>pfm_macos_min</key>
@@ -7584,7 +7574,7 @@ Available in iOS 14.2 and later, and macOS 11 and later. Not available in watchO
 						<integer>1</integer>
 					</array>
 					<key>pfm_title</key>
-					<string>Enforce Routes</string>
+					<string>Enforce routes</string>
 					<key>pfm_type</key>
 					<string>integer</string>
 					<key>pfm_type_input</key>
@@ -7625,7 +7615,7 @@ Available in iOS 14.2 and later, and macOS 11 and later. Not available in watchO
 						<integer>1</integer>
 					</array>
 					<key>pfm_title</key>
-					<string>Exclude Cellular Services</string>
+					<string>Exclude cellular services</string>
 					<key>pfm_type</key>
 					<string>integer</string>
 					<key>pfm_type_input</key>
@@ -7671,7 +7661,7 @@ Available in iOS 14.2 and later, and macOS 11 and later. Not available in watchO
 						<integer>1</integer>
 					</array>
 					<key>pfm_title</key>
-					<string>Exclude Device Communication</string>
+					<string>Exclude device communication</string>
 					<key>pfm_type</key>
 					<string>integer</string>
 					<key>pfm_type_input</key>
@@ -7770,7 +7760,7 @@ Available in iOS 14.2 and later, and macOS 11 and later. Not available in watchO
 					<key>pfm_range_min</key>
 					<integer>0</integer>
 					<key>pfm_title</key>
-					<string>Disconnect on Idle time</string>
+					<string>Disconnect on idle time</string>
 					<key>pfm_type</key>
 					<string>integer</string>
 				</dict>
@@ -7797,7 +7787,7 @@ Available in iOS 14.2 and later, and macOS 11 and later. Not available in watchO
 					<key>pfm_name</key>
 					<string>AuthPassword</string>
 					<key>pfm_title</key>
-					<string>Account Password</string>
+					<string>Account password</string>
 					<key>pfm_type</key>
 					<string>string</string>
 				</dict>
@@ -7860,7 +7850,7 @@ Available in iOS 14.2 and later, and macOS 11 and later. Not available in watchO
 						<string>Enable</string>
 					</array>
 					<key>pfm_title</key>
-					<string>Override Primary Connection</string>
+					<string>Override primary connection</string>
 					<key>pfm_type</key>
 					<string>integer</string>
 					<key>pfm_type_input</key>
@@ -7868,7 +7858,7 @@ Available in iOS 14.2 and later, and macOS 11 and later. Not available in watchO
 				</dict>
 			</array>
 			<key>pfm_title</key>
-			<string>IPv4 Settings</string>
+			<string>IPv4 settings</string>
 			<key>pfm_type</key>
 			<string>dictionary</string>
 			<key>pfmx_supported_oses</key>
@@ -7957,7 +7947,7 @@ Available in iOS 14.2 and later, and macOS 11 and later. Not available in watchO
 					<key>pfm_name</key>
 					<string>HTTPProxy</string>
 					<key>pfm_title</key>
-					<string>HTTP Proxy</string>
+					<string>HTTP proxy</string>
 					<key>pfm_type</key>
 					<string>string</string>
 				</dict>
@@ -8003,7 +7993,7 @@ Available in iOS 14.2 and later, and macOS 11 and later. Not available in watchO
 					<key>pfm_range_min</key>
 					<integer>0</integer>
 					<key>pfm_title</key>
-					<string>HTTP Port</string>
+					<string>HTTP port</string>
 					<key>pfm_type</key>
 					<string>integer</string>
 				</dict>
@@ -8029,7 +8019,7 @@ Available in iOS 14.2 and later, and macOS 11 and later. Not available in watchO
 					<key>pfm_name</key>
 					<string>HTTPSProxy</string>
 					<key>pfm_title</key>
-					<string>HTTPS Proxy</string>
+					<string>HTTPS proxy</string>
 					<key>pfm_type</key>
 					<string>string</string>
 				</dict>
@@ -8075,7 +8065,7 @@ Available in iOS 14.2 and later, and macOS 11 and later. Not available in watchO
 					<key>pfm_range_min</key>
 					<integer>0</integer>
 					<key>pfm_title</key>
-					<string>HTTPS Port</string>
+					<string>HTTPS port</string>
 					<key>pfm_type</key>
 					<string>integer</string>
 				</dict>
@@ -8165,7 +8155,7 @@ Available in iOS 14.2 and later, and macOS 11 and later. Not available in watchO
 						<string>Enable</string>
 					</array>
 					<key>pfm_title</key>
-					<string>Proxy AutoConfig Enable</string>
+					<string>Proxy AutoConfig enable</string>
 					<key>pfm_type</key>
 					<string>integer</string>
 					<key>pfm_type_input</key>
@@ -8216,7 +8206,7 @@ Available in iOS 14.2 and later, and macOS 11 and later. Not available in watchO
 						<string>Enable</string>
 					</array>
 					<key>pfm_title</key>
-					<string>Proxy Auto Discovery Enable</string>
+					<string>Proxy auto discovery enable</string>
 					<key>pfm_type</key>
 					<string>integer</string>
 					<key>pfm_type_input</key>
@@ -8257,7 +8247,7 @@ Available in iOS 14.2 and later, and macOS 11 and later. Not available in watchO
 					<key>pfm_name</key>
 					<string>ProxyAutoConfigURLString</string>
 					<key>pfm_title</key>
-					<string>Proxy Server URL</string>
+					<string>Proxy server URL</string>
 					<key>pfm_type</key>
 					<string>string</string>
 				</dict>
@@ -8296,13 +8286,13 @@ Available in iOS 14.2 and later, and macOS 11 and later. Not available in watchO
 							<key>pfm_name</key>
 							<string>SupplementalMatchDomainsElement</string>
 							<key>pfm_title</key>
-							<string>Supplemental Match Domains Element</string>
+							<string>Supplemental match domains element</string>
 							<key>pfm_type</key>
 							<string>string</string>
 						</dict>
 					</array>
 					<key>pfm_title</key>
-					<string>Supplemental Match Domains</string>
+					<string>Supplemental match domains</string>
 					<key>pfm_type</key>
 					<string>array</string>
 				</dict>

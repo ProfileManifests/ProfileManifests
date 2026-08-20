@@ -219,7 +219,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 						</dict>
 						<dict>
 							<key>pfm_description</key>
-							<string>The default Internet Protocol versions. Available in iOS 10.3 but no longer used in iOS 11 and later. Allowed values:
+							<string>The default Internet Protocol versions. Allowed values:
 '1': IPv4
 '2': IPv6
 '3': Both</string>
@@ -258,7 +258,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 						</dict>
 						<dict>
 							<key>pfm_description</key>
-							<string>The Internet Protocol versions that the system supports. Available in iOS 10.3 and later. Allowed values:
+							<string>The Internet Protocol versions that the system supports. Allowed values:
 '1': IPv4
 '2': IPv6
 '3': Both</string>
@@ -293,7 +293,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 						</dict>
 						<dict>
 							<key>pfm_description</key>
-							<string>The Internet Protocol versions that the system supports while roaming. Available in iOS 10.3 and later. Allowed values:
+							<string>The Internet Protocol versions that the system supports while roaming. Allowed values:
 '1': IPv4
 '2': IPv6
 '3': Both</string>
@@ -328,7 +328,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 						</dict>
 						<dict>
 							<key>pfm_description</key>
-							<string>The Internet Protocol versions that the system supports while roaming. Available in iOS 10.3 and later. Allowed values:
+							<string>The Internet Protocol versions that the system supports while roaming. Allowed values:
 '1': IPv4
 '2': IPv6
 '3': Both</string>
@@ -365,7 +365,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 							<key>pfm_default</key>
 							<false/>
 							<key>pfm_description</key>
-							<string>If 'true', the system enables XLAT464. Available in iOS 16 and later and watchOS 9 and later.</string>
+							<string>If 'true', the system enables XLAT464.</string>
 							<key>pfm_ios_min</key>
 							<string>16.0</string>
 							<key>pfm_name</key>

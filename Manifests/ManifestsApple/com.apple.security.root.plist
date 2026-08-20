@@ -134,7 +134,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_name</key>
 			<string>PayloadCertificateFileName</string>
 			<key>pfm_title</key>
-			<string>Payload Certificate Filename</string>
+			<string>Payload certificate filename</string>
 			<key>pfm_type</key>
 			<string>string</string>
 		</dict>
@@ -150,7 +150,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_require</key>
 			<string>always</string>
 			<key>pfm_title</key>
-			<string>Payload Certificate Data</string>
+			<string>Payload certificate data</string>
 			<key>pfm_type</key>
 			<string>data</string>
 		</dict>
