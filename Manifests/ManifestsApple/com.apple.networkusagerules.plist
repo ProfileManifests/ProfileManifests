@@ -15,7 +15,7 @@
 	<key>pfm_ios_min</key>
 	<string>9.0</string>
 	<key>pfm_last_modified</key>
-	<date>2026-06-23T15:59:45Z</date>
+	<date>2026-08-20T16:39:06Z</date>
 	<key>pfm_note</key>
 	<string>Network usage rules allow enterprises to specify how devices use networks, such as cellular data networks. iOS 9-12 require the application rules. In iOS 13, application rules, SIM rules, or both must be present.</string>
 	<key>pfm_platforms</key>

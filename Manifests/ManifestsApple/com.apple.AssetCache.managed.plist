@@ -15,7 +15,7 @@
 	<key>pfm_interaction</key>
 	<string>exclusive</string>
 	<key>pfm_last_modified</key>
-	<date>2026-07-02T08:42:40Z</date>
+	<date>2026-08-20T16:39:06Z</date>
 	<key>pfm_macos_deprecated</key>
 	<string>27.0</string>
 	<key>pfm_macos_min</key>
@@ -705,7 +705,7 @@ The system creates a directory and its intermediates for the given data path if 
 		</dict>
 		<dict>
 			<key>pfm_default</key>
-			<real>0.2</real>
+			<real>0.20000000000000001</real>
 			<key>pfm_description_reference</key>
 			<string>The percentage of attenuation added to the upload time. Clamped minimum is 0% attenuation. Values too large will exceed the ImportTimeout and cause failures.</string>
 			<key>pfm_documentation_url</key>

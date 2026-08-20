@@ -15,7 +15,7 @@
 	<key>pfm_ios_min</key>
 	<string>9.3</string>
 	<key>pfm_last_modified</key>
-	<date>2026-06-23T15:59:45Z</date>
+	<date>2026-08-20T16:39:06Z</date>
 	<key>pfm_note</key>
 	<string>This payload allows administrators to specify optional text displayed in the Login Window and Lock Screen (for example, an "If Lost, Return To" message and asset tag information). There can only be one Lock Screen payload.</string>
 	<key>pfm_platforms</key>
