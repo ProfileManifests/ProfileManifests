@@ -367,6 +367,22 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				<dict>
 					<key>pfm_description</key>
 					<string>A dictionary defining an app for parental control.</string>
+					<key>pfm_exclude</key>
+					<array>
+						<dict>
+							<key>pfm_target_conditions</key>
+							<array>
+								<dict>
+									<key>pfm_n_range_list</key>
+									<array>
+										<true/>
+									</array>
+									<key>pfm_target</key>
+									<string>familyControlsEnabled</string>
+								</dict>
+							</array>
+						</dict>
+					</array>
 					<key>pfm_macos_deprecated</key>
 					<string>10.15</string>
 					<key>pfm_name</key>
@@ -527,7 +543,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				</dict>
 			</array>
 			<key>pfm_title</key>
-			<string>Allowlisted Applications by Code Signature</string>
+			<string>Allow List (legacy)</string>
 			<key>pfm_type</key>
 			<string>array</string>
 			<key>pfm_value_import_processor</key>
@@ -588,7 +604,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				</dict>
 			</array>
 			<key>pfm_title</key>
-			<string>Allowlisted Application Folders</string>
+			<string>Path Allow List (legacy)</string>
 			<key>pfm_type</key>
 			<string>array</string>
 			<key>pfm_value_import_processor</key>
@@ -649,7 +665,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				</dict>
 			</array>
 			<key>pfm_title</key>
-			<string>Denylisted Application Folders</string>
+			<string>Path Deny List (legacy)</string>
 			<key>pfm_type</key>
 			<string>array</string>
 			<key>pfm_value_import_processor</key>
@@ -666,6 +682,22 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		<dict>
 			<key>pfm_description</key>
 			<string>The allow list of app item dictionaries.</string>
+			<key>pfm_exclude</key>
+			<array>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_n_range_list</key>
+							<array>
+								<true/>
+							</array>
+							<key>pfm_target</key>
+							<string>familyControlsEnabled</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
 			<key>pfm_macos_min</key>
 			<string>10.15</string>
 			<key>pfm_name</key>
@@ -702,8 +734,14 @@ During a profile replacement, the system updates payloads with the same 'Payload
 							<string>appID</string>
 							<key>pfm_require</key>
 							<string>always</string>
+							<key>pfm_title</key>
+							<string>Code Requirement</string>
 							<key>pfm_type</key>
 							<string>data</string>
+							<key>pfm_type_input</key>
+							<string>string</string>
+							<key>pfm_value_processor</key>
+							<string>designatedCodeRequirement2Data</string>
 						</dict>
 						<dict>
 							<key>pfm_description</key>
@@ -848,6 +886,22 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		<dict>
 			<key>pfm_description</key>
 			<string>The paths to apps in the deny list.</string>
+			<key>pfm_exclude</key>
+			<array>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_n_range_list</key>
+							<array>
+								<true/>
+							</array>
+							<key>pfm_target</key>
+							<string>familyControlsEnabled</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
 			<key>pfm_macos_min</key>
 			<string>10.15</string>
 			<key>pfm_name</key>
@@ -881,6 +935,22 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		<dict>
 			<key>pfm_description</key>
 			<string>The paths to apps in the allow list.</string>
+			<key>pfm_exclude</key>
+			<array>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_n_range_list</key>
+							<array>
+								<true/>
+							</array>
+							<key>pfm_target</key>
+							<string>familyControlsEnabled</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
 			<key>pfm_macos_min</key>
 			<string>10.15</string>
 			<key>pfm_name</key>
