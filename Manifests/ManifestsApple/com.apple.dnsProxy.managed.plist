@@ -258,7 +258,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 	<key>pfm_user_approved</key>
 	<false/>
 	<key>pfm_version</key>
-	<integer>4</integer>
+	<integer>5</integer>
 	<key>pfmx_supported_oses</key>
 	<dict>
 		<key>iOS</key>

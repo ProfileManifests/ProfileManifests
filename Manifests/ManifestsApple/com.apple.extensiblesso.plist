@@ -3762,7 +3762,7 @@ kerberosDefault - The default Kerberos processes for selecting credentials is us
 	<key>pfm_user_approved</key>
 	<true/>
 	<key>pfm_version</key>
-	<integer>10</integer>
+	<integer>11</integer>
 	<key>pfmx_supported_oses</key>
 	<dict>
 		<key>iOS</key>

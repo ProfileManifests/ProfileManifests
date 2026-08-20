@@ -10649,7 +10649,7 @@ Deprecated: use the declarative management 'com.apple.configuration.siri.setting
 	<key>pfm_user_approved</key>
 	<false/>
 	<key>pfm_version</key>
-	<integer>21</integer>
+	<integer>22</integer>
 	<key>pfmx_supported_oses</key>
 	<dict>
 		<key>iOS</key>
