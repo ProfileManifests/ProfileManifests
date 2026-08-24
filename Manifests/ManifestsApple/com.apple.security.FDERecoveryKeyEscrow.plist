@@ -23,9 +23,20 @@ Note these cautions:
 	<key>pfm_interaction</key>
 	<string>exclusive</string>
 	<key>pfm_last_modified</key>
-	<date>2026-06-23T15:59:45Z</date>
+	<date>2026-08-24T08:00:30Z</date>
 	<key>pfm_macos_min</key>
 	<string>10.13</string>
+	<key>pfm_note</key>
+	<string>FileVault Full Disk Encryption (FDE) recovery keys are, by default, sent to Apple if the user requests them. Only one payload of this type is allowed per system.
+If FileVault is enabled after the system installs this payload, the system encrypts the FileVault PRK with the specified certificate, wrapped with a CMS envelope and stored at '/var/db/FileVaultPRK.dat'. The 'SecurityInfo' command makes this encrypted data available to the MDM server.
+Alternatively, if a site uses its own administration software, it can extract the PRK from the foregoing location at any time. Because the PRK is encrypted using the certificate provided in the profile, only the author of the profile can extract the data.
+Note these cautions:
+The payload needs to exist in a system-scoped profile.
+Installing more than one payload of this type per computer results in an error.
+The previous payload ('com.apple.security.FDERecoveryRedirect') is no longer supported. You can still install the previous payload but the system ignores it, so servers can send out the same profile to old and new clients.
+If only an old-style redirection payload is installed at the time FileVault is turned on through the Security Preferences pane, the system displays an error and doesn't enable FileVault.
+The system doesn't provide a warning or error if FileVault is already enabled and an old-style payload is installed. In this case, it's assumed that the recovery key has already been escrowed with the server.
+Although the system no longer supports the previous FDE Recovery payload in macOS 10.13 and later, it's still supported in macOS 10.9 through 10.12. Designate that payload by specifying 'com.apple.security.FDERecoveryRedirect' as the payload type.</string>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -159,7 +170,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		<dict>
 			<key>pfm_description</key>
 			<string>The string that's included in help text if the user appears to have forgotten the password. Site admins can use this key to look up the escrowed key for the particular computer.
-
 This key replaces the 'RecordNumber' key used in the previous escrow mechanism. If the key is missing, the system uses the device serial number instead.</string>
 			<key>pfm_name</key>
 			<string>DeviceKey</string>
@@ -176,6 +186,8 @@ This key replaces the 'RecordNumber' key used in the previous escrow mechanism. 
 	<key>pfm_title</key>
 	<string>FileVault Recovery Key Escrow</string>
 	<key>pfm_unique</key>
+	<true/>
+	<key>pfm_user_approved</key>
 	<false/>
 	<key>pfm_version</key>
 	<integer>1</integer>

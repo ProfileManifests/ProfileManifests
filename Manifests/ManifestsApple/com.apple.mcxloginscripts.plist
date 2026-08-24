@@ -13,9 +13,12 @@
 	<key>pfm_interaction</key>
 	<string>combined</string>
 	<key>pfm_last_modified</key>
-	<date>2026-06-23T15:59:45Z</date>
+	<date>2026-08-24T08:00:30Z</date>
 	<key>pfm_macos_min</key>
 	<string>10.7</string>
+	<key>pfm_note</key>
+	<string>The MCX login and logout managed-scripts payload contains information about executable scripts that can run at user login and logout. To use this payload, set 'EnableMCXLoginScripts' to 'true' in '/var/root/Library/Preferences/com.apple.loginwindow.plist'; otherwise, the system ignores this payload.
+'Loginwindow' uses the 'LoginHook' and 'LogoutHook' string keys in '/var/root/Library/Preferences/com.apple.loginwindow.plist' to indicate a path to the executable script files, which run during user login and logout. The system passes the current user name as an argument to the file.</string>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -284,6 +287,8 @@ During a profile replacement, the system updates payloads with the same 'Payload
 	<key>pfm_title</key>
 	<string>Login Window: Scripts</string>
 	<key>pfm_unique</key>
+	<true/>
+	<key>pfm_user_approved</key>
 	<false/>
 	<key>pfm_version</key>
 	<integer>6</integer>

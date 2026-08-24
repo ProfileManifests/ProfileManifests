@@ -20,7 +20,7 @@ must be set to true to set the ADPacketEncrypt key to enable.</string>
 	<key>pfm_interaction</key>
 	<string>exclusive</string>
 	<key>pfm_last_modified</key>
-	<date>2026-06-23T15:59:45Z</date>
+	<date>2026-08-24T08:00:30Z</date>
 	<key>pfm_macos_min</key>
 	<string>10.8</string>
 	<key>pfm_platforms</key>
@@ -1201,6 +1201,8 @@ During a profile replacement, the system updates payloads with the same 'Payload
 	<key>pfm_title</key>
 	<string>Active Directory</string>
 	<key>pfm_unique</key>
+	<false/>
+	<key>pfm_user_approved</key>
 	<false/>
 	<key>pfm_version</key>
 	<integer>1</integer>

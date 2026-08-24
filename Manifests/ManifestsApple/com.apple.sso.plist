@@ -15,7 +15,9 @@
 	<key>pfm_ios_min</key>
 	<string>7.0</string>
 	<key>pfm_last_modified</key>
-	<date>2026-06-23T15:59:45Z</date>
+	<date>2026-08-24T08:00:30Z</date>
+	<key>pfm_note</key>
+	<string>Deprecated in iOS 26. Use the 'ExtensibleSingleSignOn' payload instead.</string>
 	<key>pfm_platforms</key>
 	<array>
 		<string>iOS</string>
@@ -144,7 +146,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				<dict>
 					<key>pfm_description</key>
 					<string>The list of app identifiers that the system allows to use this login. If this field missing, the system matches all app identifiers with this login.
-
 Don't set an empty array. The array needs to contain strings that match App Bundle IDs. These strings can be exact matches such as 'com.mycompany.myapp', or they may specify a prefix match on the Bundle ID by using the '*' wildcard character. The wildcard character needs to appear after a period ('.'), and may only appear once, at the end of the string, for example, 'com.mycompany.*'. When you provide a wildcard, the system grants access to the account to any app with a Bundle ID that begins with the prefix.</string>
 					<key>pfm_name</key>
 					<string>AppIdentifierMatches</string>
@@ -209,7 +210,6 @@ Don't set an empty array. The array needs to contain strings that match App Bund
 				<dict>
 					<key>pfm_description</key>
 					<string>The list of URL prefixes to match in order to use this account for Kerberos authentication over HTTP. If this key is missing, the system makes the account eligible to match all 'http://' and 'https://' URLs.
-
 Begin the URL matching patterns with either 'http://' or 'https://'. The system performs a simple string match, so the URL prefix 'http://www.apple.com/' doesn't match 'http://www.apple.com:80/'. However, if a matching pattern doesn't end in '/', the system automatically append a '/' to it.</string>
 					<key>pfm_name</key>
 					<string>URLPrefixMatches</string>
