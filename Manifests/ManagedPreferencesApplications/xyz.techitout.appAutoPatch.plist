@@ -54,9 +54,8 @@
 			<key>pfm_default</key>
 			<string>xyz.techitout.appAutoPatch</string>
 			<key>pfm_description</key>
-			<string>The reverse-DNS-style identifier for the payload. This identifier is usually the same as the `TopLevel` value, with an additional appended component. This string must be unique within the profile.
-
-During a profile replacement, the system updates payloads with the same `PayloadIdentifier` and `PayloadUUID` in the old and new profiles.</string>
+			<string>The reverse-DNS-style identifier for the payload. This identifier is usually the same as the 'TopLevel' value, with an additional appended component. This string must be unique within the profile.
+During a profile replacement, the system updates payloads with the same 'PayloadIdentifier' and 'PayloadUUID' in the old and new profiles.</string>
 			<key>pfm_description_reference</key>
 			<string>A reverse-DNS-style identifier for the specific payload. It is usually the same identifier as the root-level PayloadIdentifier value with an additional component appended.</string>
 			<key>pfm_name</key>
@@ -86,9 +85,8 @@ During a profile replacement, the system updates payloads with the same `Payload
 		</dict>
 		<dict>
 			<key>pfm_description</key>
-			<string>The globally unique identifier for the payload. The actual content is unimportant, but must be globally unique. In macOS, use `uuidgen` to generate UUIDs.
-
-During a profile replacement, the system updates payloads with the same `PayloadIdentifier` and `PayloadUUID` in the old and new profiles.</string>
+			<string>The globally unique identifier for the payload. The actual content is unimportant, but must be globally unique. In macOS, use 'uuidgen' to generate UUIDs.
+During a profile replacement, the system updates payloads with the same 'PayloadIdentifier' and 'PayloadUUID' in the old and new profiles.</string>
 			<key>pfm_description_reference</key>
 			<string>A globally unique identifier for the payload. The actual content is unimportant, but it must be globally unique. In macOS, you can use uuidgen to generate reasonable UUIDs.</string>
 			<key>pfm_format</key>
@@ -111,6 +109,10 @@ During a profile replacement, the system updates payloads with the same `Payload
 			<string>The version number of the individual payload.</string>
 			<key>pfm_name</key>
 			<string>PayloadVersion</string>
+			<key>pfm_range_list</key>
+			<array>
+				<integer>1</integer>
+			</array>
 			<key>pfm_require</key>
 			<string>always</string>
 			<key>pfm_title</key>
@@ -248,7 +250,7 @@ During a profile replacement, the system updates payloads with the same `Payload
 			<string>3.0</string>
 			<key>pfm_description</key>
 			<string>The number of days after the patching cadence start date (Zero Date) that the patching complete status will reset from TRUE to FALSE</string>
-			<key>pfm_description_reference</key>
+			<key>pfm_documentation_url</key>
 			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings#daysuntilreset</string>
 			<key>pfm_name</key>
 			<string>DaysUntilReset</string>
@@ -264,7 +266,7 @@ During a profile replacement, the system updates payloads with the same `Payload
 			<string>3.0</string>
 			<key>pfm_description</key>
 			<string>The day of the week to force the patching cadence start date (Zero Date) to go back to in order to have the patch cadence start the same day of the week for all users</string>
-			<key>pfm_description_reference</key>
+			<key>pfm_documentation_url</key>
 			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings#patchweekstartday</string>
 			<key>pfm_name</key>
 			<string>PatchWeekStartDay</string>
@@ -570,7 +572,7 @@ During a profile replacement, the system updates payloads with the same `Payload
 			<string>3.0</string>
 			<key>pfm_description</key>
 			<string>Forces the AAP dialogs to stay on top of all other windows</string>
-			<key>pfm_description_reference</key>
+			<key>pfm_documentation_url</key>
 			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings#dialogontop</string>
 			<key>pfm_name</key>
 			<string>DialogOnTop</string>
@@ -596,8 +598,6 @@ During a profile replacement, the system updates payloads with the same `Payload
 			<true/>
 			<key>pfm_description</key>
 			<string>When true, workflow swiftDialog windows show the App Auto-Patch logo in the macOS Dock (requires swiftDialog 3.0+). Deferral dialogs badge the pending update count; the installation dialog counts the badge down as updates finish. Default true.</string>
-			<key>pfm_description_reference</key>
-			<string>https://swiftdialog.app/advanced/command-line-options/</string>
 			<key>pfm_name</key>
 			<string>ShowDockIcon</string>
 			<key>pfm_title</key>
@@ -638,8 +638,6 @@ During a profile replacement, the system updates payloads with the same `Payload
 			<true/>
 			<key>pfm_description</key>
 			<string>Master switch for banner-style swiftDialog notifications. When true (default), every notification type is shown and individual ShowNotifications* keys are ignored. When false, enable specific types with ShowNotificationsSilentUpdated, ShowNotificationsAppsQueued, and/or ShowNotificationsSilentAndQueued. Does not itself enable discovery during Business Hours.</string>
-			<key>pfm_description_reference</key>
-			<string>https://swiftdialog.app/</string>
 			<key>pfm_name</key>
 			<string>ShowNotificationsAll</string>
 			<key>pfm_title</key>
@@ -654,8 +652,6 @@ During a profile replacement, the system updates payloads with the same `Payload
 			<false/>
 			<key>pfm_description</key>
 			<string>When ShowNotificationsAll is false, enable the banner that reports successful silent closed-app updates (e.g. “updated {count} application(s) in the background”). Ignored when ShowNotificationsAll is true.</string>
-			<key>pfm_description_reference</key>
-			<string>https://swiftdialog.app/</string>
 			<key>pfm_name</key>
 			<string>ShowNotificationsSilentUpdated</string>
 			<key>pfm_title</key>
@@ -670,8 +666,6 @@ During a profile replacement, the system updates payloads with the same `Payload
 			<false/>
 			<key>pfm_description</key>
 			<string>When ShowNotificationsAll is false, enable the banner that reports pending updates with Install Now / Dismiss (including after BusinessHoursAllowDiscovery). Ignored when ShowNotificationsAll is true.</string>
-			<key>pfm_description_reference</key>
-			<string>https://swiftdialog.app/</string>
 			<key>pfm_name</key>
 			<string>ShowNotificationsAppsQueued</string>
 			<key>pfm_title</key>
@@ -686,8 +680,6 @@ During a profile replacement, the system updates payloads with the same `Payload
 			<false/>
 			<key>pfm_description</key>
 			<string>When ShowNotificationsAll is false, enable the combined banner after Business Hours Silent During (“{count} updated… {remaining} remain queued”). Ignored when ShowNotificationsAll is true.</string>
-			<key>pfm_description_reference</key>
-			<string>https://swiftdialog.app/</string>
 			<key>pfm_name</key>
 			<string>ShowNotificationsSilentAndQueued</string>
 			<key>pfm_title</key>
@@ -716,7 +708,7 @@ During a profile replacement, the system updates payloads with the same `Payload
 			<string>3.0</string>
 			<key>pfm_description</key>
 			<string>What happens when the deferral timer expires</string>
-			<key>pfm_description_reference</key>
+			<key>pfm_documentation_url</key>
 			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings#dialogtimeoutdeferralaction</string>
 			<key>pfm_name</key>
 			<string>DialogTimeoutDeferralAction</string>
@@ -758,7 +750,7 @@ During a profile replacement, the system updates payloads with the same `Payload
 			<string>3.0</string>
 			<key>pfm_description</key>
 			<string>Deterines if the Dialog should automatically close after completion if there is no response from the end-user</string>
-			<key>pfm_description_reference</key>
+			<key>pfm_documentation_url</key>
 			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings#unattendedexit</string>
 			<key>pfm_name</key>
 			<string>UnattendedExit</string>
@@ -798,7 +790,7 @@ During a profile replacement, the system updates payloads with the same `Payload
 			<string>3.0</string>
 			<key>pfm_description</key>
 			<string>Toggles swiftDialog to use an overlay icon</string>
-			<key>pfm_description_reference</key>
+			<key>pfm_documentation_url</key>
 			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings</string>
 			<key>pfm_name</key>
 			<string>UseOverlayIcon</string>
@@ -822,7 +814,7 @@ During a profile replacement, the system updates payloads with the same `Payload
 			<string>3.4.0</string>
 			<key>pfm_description</key>
 			<string>Allows you to set a custom icon for the dialog vs. the default Laptop/Desktop symbol</string>
-			<key>pfm_description_reference</key>
+			<key>pfm_documentation_url</key>
 			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings</string>
 			<key>pfm_name</key>
 			<string>DialogIcon</string>
@@ -966,7 +958,7 @@ During a profile replacement, the system updates payloads with the same `Payload
 			<string>TRUE</string>
 			<key>pfm_description</key>
 			<string>This will convert any apps found in the users home folder to the /Applications folder</string>
-			<key>pfm_description_reference</key>
+			<key>pfm_documentation_url</key>
 			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings#convertappsinhomefolder</string>
 			<key>pfm_name</key>
 			<string>ConvertAppsInHomeFolder</string>
@@ -992,7 +984,7 @@ During a profile replacement, the system updates payloads with the same `Payload
 			<string>FALSE</string>
 			<key>pfm_description</key>
 			<string>Ignore apps found in '/Users/'. If an update is found in '/Users/' and variable is set to false, the app will be updated into the application's default path</string>
-			<key>pfm_description_reference</key>
+			<key>pfm_documentation_url</key>
 			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings#ignoreappsinhomefolder</string>
 			<key>pfm_name</key>
 			<string>IgnoreAppsInHomeFolder</string>
@@ -1018,8 +1010,6 @@ During a profile replacement, the system updates payloads with the same `Payload
 			<false/>
 			<key>pfm_description</key>
 			<string>When true, discovery skips the local Gatekeeper (spctl) / Team ID pre-update check for already-installed apps. Use this when spctl assessment intermittently fails for a valid app and would otherwise exclude it from discovery/updates. Installomator still validates the downloaded package after download. Default false.</string>
-			<key>pfm_description_reference</key>
-			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/issues/256</string>
 			<key>pfm_name</key>
 			<string>SkipPreUpdateVerification</string>
 			<key>pfm_title</key>
@@ -1050,7 +1040,7 @@ During a profile replacement, the system updates payloads with the same `Payload
 			<string>FALSE</string>
 			<key>pfm_description</key>
 			<string>This will prevent Installomator from automatically updating. If Installomator does not exist in the working folder, it will still download from GitHub to prevent script failure</string>
-			<key>pfm_description_reference</key>
+			<key>pfm_documentation_url</key>
 			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Installomator-Integration#installomator-update-disable</string>
 			<key>pfm_name</key>
 			<string>InstallomatorUpdateDisable</string>
@@ -1076,8 +1066,6 @@ During a profile replacement, the system updates payloads with the same `Payload
 			<string>FALSE</string>
 			<key>pfm_description</key>
 			<string>When TRUE, App Auto-Patch authenticates GitHub REST API requests (api.github.com) with the personal access token in GitHubAPIToken, raising the rate limit from 60 to 5,000 requests per hour. Managed preferences only - the token is never written to the local preference file and is never logged. If this key is TRUE, GitHubAPIToken is required or startup validation fails.</string>
-			<key>pfm_description_reference</key>
-			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/issues/249</string>
 			<key>pfm_name</key>
 			<string>GitHubAPIAuthEnabled</string>
 			<key>pfm_range_list</key>
@@ -1100,7 +1088,7 @@ During a profile replacement, the system updates payloads with the same `Payload
 			<string>3.7.0</string>
 			<key>pfm_description</key>
 			<string>GitHub personal access token (classic or fine-grained) used when GitHubAPIAuthEnabled is TRUE. Sent as Authorization: Bearer on api.github.com requests for Installomator and swiftDialog lookups. Prefer a fine-grained token with Contents: Read on the repositories AAP queries. Managed preferences only - never stored in the local preference file or written to logs.</string>
-			<key>pfm_description_reference</key>
+			<key>pfm_documentation_url</key>
 			<string>https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api</string>
 			<key>pfm_name</key>
 			<string>GitHubAPIToken</string>
@@ -1116,8 +1104,6 @@ During a profile replacement, the system updates payloads with the same `Payload
 			<string>3.7.0</string>
 			<key>pfm_description</key>
 			<string>Absolute path to a root-owned executable script run once before Installomator installations in a patch run. Must live under /Library/Management/AppAutoPatch/Hooks/, must not be a symlink, and must not be group/world-writable. Managed preferences only - never accepted from CLI or the local preference file. Never evaluated as a shell string.</string>
-			<key>pfm_description_reference</key>
-			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/issues/156</string>
 			<key>pfm_name</key>
 			<string>PrePatchScript</string>
 			<key>pfm_title</key>
@@ -1132,8 +1118,6 @@ During a profile replacement, the system updates payloads with the same `Payload
 			<string>3.7.0</string>
 			<key>pfm_description</key>
 			<string>Absolute path to a root-owned executable script run once after Installomator installations complete in a patch run (for example jamf recon). Same security requirements as PrePatchScript. Managed preferences only.</string>
-			<key>pfm_description_reference</key>
-			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/issues/156</string>
 			<key>pfm_name</key>
 			<string>PostPatchScript</string>
 			<key>pfm_title</key>
@@ -1222,7 +1206,7 @@ During a profile replacement, the system updates payloads with the same `Payload
 			<string>Main</string>
 			<key>pfm_description</key>
 			<string>Determines if the AAP script should use the Main, Release, or Custom version of Installomator. The version from the Main branch typically includes more recent updates from PR's to fix issues or add new labels. If using Custom, you must also set the InstallomatorVersionCustomRepoPath and InstallomatorVersionCustomBranchName keys</string>
-			<key>pfm_description_reference</key>
+			<key>pfm_documentation_url</key>
 			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Installomator-Integration#installomator-versions</string>
 			<key>pfm_name</key>
 			<string>InstallomatorVersion</string>
@@ -1242,7 +1226,7 @@ During a profile replacement, the system updates payloads with the same `Payload
 			<string>3.0</string>
 			<key>pfm_description</key>
 			<string>If InstallomatorVersion is set to Custom, enter the Github Site and Repository name in the following format: site_name/repo_name . For example, if the custom fork is located at https://github.com/TechTrekkie/Installomator, you would set this key to techtrekkie/installomator</string>
-			<key>pfm_description_reference</key>
+			<key>pfm_documentation_url</key>
 			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Installomator-Integration#custom-installomator-repo</string>
 			<key>pfm_name</key>
 			<string>InstallomatorVersionCustomRepoPath</string>
@@ -1258,7 +1242,7 @@ During a profile replacement, the system updates payloads with the same `Payload
 			<string>3.0</string>
 			<key>pfm_description</key>
 			<string>The name of the branch you want to use in your custom repo, typically main.</string>
-			<key>pfm_description_reference</key>
+			<key>pfm_documentation_url</key>
 			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Installomator-Integration#custom-installomator-repo</string>
 			<key>pfm_name</key>
 			<string>InstallomatorVersionCustomBranchName</string>
@@ -1276,7 +1260,7 @@ During a profile replacement, the system updates payloads with the same `Payload
 			<integer>2</integer>
 			<key>pfm_description</key>
 			<string>0 (Completely Silent) | 1 (Silent Discovery, Interactive Patching) | 2 (Full Interactive) (default)</string>
-			<key>pfm_description_reference</key>
+			<key>pfm_documentation_url</key>
 			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/End-User-Experience#interactive-mode</string>
 			<key>pfm_name</key>
 			<string>InteractiveMode</string>
@@ -1304,7 +1288,7 @@ During a profile replacement, the system updates payloads with the same `Payload
 			<string>FALSE</string>
 			<key>pfm_description</key>
 			<string>Remove Installomator after App Auto-Patch is completed</string>
-			<key>pfm_description_reference</key>
+			<key>pfm_documentation_url</key>
 			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings</string>
 			<key>pfm_name</key>
 			<string>RemoveInstallomatorPath</string>
@@ -1394,7 +1378,7 @@ During a profile replacement, the system updates payloads with the same `Payload
 			<string>FAILURES</string>
 			<key>pfm_description</key>
 			<string>Determines if Webhooks are sent when patching is completed</string>
-			<key>pfm_description_reference</key>
+			<key>pfm_documentation_url</key>
 			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings</string>
 			<key>pfm_name</key>
 			<string>WebhookFeature</string>
@@ -1522,8 +1506,6 @@ During a profile replacement, the system updates payloads with the same `Payload
 			<false/>
 			<key>pfm_description</key>
 			<string>When WorkflowDisableRelaunch is also enabled, keep periodic headless discovery runs active using DiscoveryFrequency. These runs refresh the pending-app report, optionally stage updates, and can notify users, but never silently patch, show deferral or deadline dialogs, or install apps. Users initiate installation from the pending-apps dialog, Support App, notification action, or another explicit Install Now trigger</string>
-			<key>pfm_description_reference</key>
-			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/issues/258</string>
 			<key>pfm_name</key>
 			<string>WorkflowScheduledDiscovery</string>
 			<key>pfm_title</key>
@@ -1562,8 +1544,6 @@ During a profile replacement, the system updates payloads with the same `Payload
 			<string>3.7.0</string>
 			<key>pfm_description</key>
 			<string>Weekday time windows when interactive App Auto-Patch must NOT run (blocked / do-not-disturb hours). Format: DAY:hh:mm-hh:mm, comma-separated, no spaces (MON-SUN, 24-hour). Multiple windows per day are allowed — for example MON:09:00-11:59,MON:13:00-17:00 blocks morning and afternoon but leaves lunch clear. Same-day ranges only — split overnight spans into two windows. Empty/unset = always allowed. During a window, AAP reschedules NextAutoLaunch to the next clear time and exits without interactive patching unless BusinessHoursSilentDuring or BusinessHoursAllowDiscovery is true. Local Mac timezone. Intentionally bypassed by --workflow-install-now / --workflow-install-now-silent / --preview-deferral-dialog. Overdue hard deadlines bypass BusinessHours by default unless BusinessHoursRespectHardDeadline is true.</string>
-			<key>pfm_description_reference</key>
-			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/issues/166</string>
 			<key>pfm_name</key>
 			<string>BusinessHours</string>
 			<key>pfm_title</key>
@@ -1580,8 +1560,6 @@ During a profile replacement, the system updates payloads with the same `Payload
 			<false/>
 			<key>pfm_description</key>
 			<string>When true, even an overdue hard deadline (days or count) waits until BusinessHours clear. When false (default), an overdue hard deadline bypasses BusinessHours so mandatory installs are not delayed by days.</string>
-			<key>pfm_description_reference</key>
-			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/issues/166</string>
 			<key>pfm_name</key>
 			<string>BusinessHoursRespectHardDeadline</string>
 			<key>pfm_title</key>
@@ -1596,8 +1574,6 @@ During a profile replacement, the system updates payloads with the same `Payload
 			<false/>
 			<key>pfm_description</key>
 			<string>When true and during BusinessHours, AAP still runs discovery and silently patches closed apps only — no dialogs even if InteractiveMode is 1 or 2. Open or blocked apps remain queued and are deferred until BusinessHours clear. When false (default), during BusinessHours AAP only reschedules NextAutoLaunch and exits — unless BusinessHoursAllowDiscovery is true.</string>
-			<key>pfm_description_reference</key>
-			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/issues/166</string>
 			<key>pfm_name</key>
 			<string>BusinessHoursSilentDuring</string>
 			<key>pfm_title</key>
@@ -1612,8 +1588,6 @@ During a profile replacement, the system updates payloads with the same `Payload
 			<false/>
 			<key>pfm_description</key>
 			<string>When true and during BusinessHours without BusinessHoursSilentDuring, AAP runs discovery then defers until the window clears (no interactive dialogs or silent patching). Notification prefs independently control whether pending apps get a banner with Install Now. When false (default), AAP exits immediately during BusinessHours without discovery — matching historical behavior.</string>
-			<key>pfm_description_reference</key>
-			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/issues/166</string>
 			<key>pfm_name</key>
 			<string>BusinessHoursAllowDiscovery</string>
 			<key>pfm_title</key>
@@ -1628,7 +1602,7 @@ During a profile replacement, the system updates payloads with the same `Payload
 			<string>SUCCESS</string>
 			<key>pfm_description</key>
 			<string>Determines if the Patching Completion Status is set to true when using the --workflow-install-now trigger</string>
-			<key>pfm_description_reference</key>
+			<key>pfm_documentation_url</key>
 			<string>https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Workflows#workflow-install-now-patching-status-action</string>
 			<key>pfm_name</key>
 			<string>WorkflowInstallNowPatchingStatusAction</string>
