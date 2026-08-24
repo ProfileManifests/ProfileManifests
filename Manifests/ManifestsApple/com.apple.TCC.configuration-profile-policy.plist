@@ -13,7 +13,7 @@
 	<key>pfm_interaction</key>
 	<string>combined</string>
 	<key>pfm_last_modified</key>
-	<date>2026-06-23T15:59:45Z</date>
+	<date>2026-08-24T08:13:12Z</date>
 	<key>pfm_macos_min</key>
 	<string>10.14</string>
 	<key>pfm_platforms</key>
@@ -146,7 +146,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 							<key>pfm_description</key>
 							<string>Keys are limited to the privacy service names listed below. Each key is an array of dictionaries describing the app or process to which access is given. In the case of conflicting specifications, the most restrictive setting (deny) will be used.</string>
 							<key>pfm_name</key>
-							<string>Services</string>
+							<string>IdentityDict</string>
 							<key>pfm_require</key>
 							<string>always</string>
 							<key>pfm_subkeys</key>
@@ -237,8 +237,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<string>string</string>
 								</dict>
 							</array>
-							<key>pfm_title</key>
-							<string>Services</string>
 							<key>pfm_type</key>
 							<string>dictionary</string>
 						</dict>
@@ -263,7 +261,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 							<key>pfm_description</key>
 							<string>Keys are limited to the privacy service names listed below. Each key is an array of dictionaries describing the app or process to which access is given. In the case of conflicting specifications, the most restrictive setting (deny) will be used.</string>
 							<key>pfm_name</key>
-							<string>Services</string>
+							<string>IdentityDict</string>
 							<key>pfm_require</key>
 							<string>always</string>
 							<key>pfm_subkeys</key>
@@ -400,8 +398,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<string>string</string>
 								</dict>
 							</array>
-							<key>pfm_title</key>
-							<string>Services</string>
 							<key>pfm_type</key>
 							<string>dictionary</string>
 						</dict>
@@ -426,7 +422,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 							<key>pfm_description</key>
 							<string>Keys are limited to the privacy service names listed below. Each key is an array of dictionaries describing the app or process to which access is given. In the case of conflicting specifications, the most restrictive setting (deny) will be used.</string>
 							<key>pfm_name</key>
-							<string>Services</string>
+							<string>IdentityDict</string>
 							<key>pfm_require</key>
 							<string>always</string>
 							<key>pfm_subkeys</key>
@@ -515,8 +511,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<string>string</string>
 								</dict>
 							</array>
-							<key>pfm_title</key>
-							<string>Services</string>
 							<key>pfm_type</key>
 							<string>dictionary</string>
 						</dict>
@@ -539,7 +533,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 							<key>pfm_description</key>
 							<string>Keys are limited to the privacy service names listed below. Each key is an array of dictionaries describing the app or process to which access is given. In the case of conflicting specifications, the most restrictive setting (deny) will be used.</string>
 							<key>pfm_name</key>
-							<string>Services</string>
+							<string>IdentityDict</string>
 							<key>pfm_require</key>
 							<string>always</string>
 							<key>pfm_subkeys</key>
@@ -630,8 +624,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<string>string</string>
 								</dict>
 							</array>
-							<key>pfm_title</key>
-							<string>Services</string>
 							<key>pfm_type</key>
 							<string>dictionary</string>
 						</dict>
@@ -656,7 +648,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 							<key>pfm_description</key>
 							<string>Keys are limited to the privacy service names listed below. Each key is an array of dictionaries describing the app or process to which access is given. In the case of conflicting specifications, the most restrictive setting (deny) will be used.</string>
 							<key>pfm_name</key>
-							<string>Services</string>
+							<string>IdentityDict</string>
 							<key>pfm_require</key>
 							<string>always</string>
 							<key>pfm_subkeys</key>
@@ -746,8 +738,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<string>string</string>
 								</dict>
 							</array>
-							<key>pfm_title</key>
-							<string>Services</string>
 							<key>pfm_type</key>
 							<string>dictionary</string>
 						</dict>
@@ -772,7 +762,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 							<key>pfm_description</key>
 							<string>Keys are limited to the privacy service names listed below. Each key is an array of dictionaries describing the app or process to which access is given. In the case of conflicting specifications, the most restrictive setting (deny) will be used.</string>
 							<key>pfm_name</key>
-							<string>Services</string>
+							<string>IdentityDict</string>
 							<key>pfm_require</key>
 							<string>always</string>
 							<key>pfm_subkeys</key>
@@ -863,8 +853,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<string>string</string>
 								</dict>
 							</array>
-							<key>pfm_title</key>
-							<string>Services</string>
 							<key>pfm_type</key>
 							<string>dictionary</string>
 						</dict>
@@ -889,7 +877,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 							<key>pfm_description</key>
 							<string>Keys are limited to the privacy service names listed below. Each key is an array of dictionaries describing the app or process to which access is given. In the case of conflicting specifications, the most restrictive setting (deny) will be used.</string>
 							<key>pfm_name</key>
-							<string>Services</string>
+							<string>IdentityDict</string>
 							<key>pfm_require</key>
 							<string>always</string>
 							<key>pfm_subkeys</key>
@@ -980,8 +968,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<string>string</string>
 								</dict>
 							</array>
-							<key>pfm_title</key>
-							<string>Services</string>
 							<key>pfm_type</key>
 							<string>dictionary</string>
 						</dict>
@@ -1009,7 +995,7 @@ Approval cannot be applied in a profile; the only option is to enable standard (
 							<key>pfm_description</key>
 							<string>Keys are limited to the privacy service names listed below. Each key is an array of dictionaries describing the app or process to which access is given. In the case of conflicting specifications, the most restrictive setting (deny) will be used.</string>
 							<key>pfm_name</key>
-							<string>Services</string>
+							<string>IdentityDict</string>
 							<key>pfm_require</key>
 							<string>always</string>
 							<key>pfm_subkeys</key>
@@ -1103,8 +1089,6 @@ If no value is provided, the default is to only allow an administrator account c
 									<string>string</string>
 								</dict>
 							</array>
-							<key>pfm_title</key>
-							<string>Services</string>
 							<key>pfm_type</key>
 							<string>dictionary</string>
 						</dict>
@@ -1127,7 +1111,7 @@ If no value is provided, the default is to only allow an administrator account c
 							<key>pfm_description</key>
 							<string>Keys are limited to the privacy service names listed below. Each key is an array of dictionaries describing the app or process to which access is given. In the case of conflicting specifications, the most restrictive setting (deny) will be used.</string>
 							<key>pfm_name</key>
-							<string>Services</string>
+							<string>IdentityDict</string>
 							<key>pfm_require</key>
 							<string>always</string>
 							<key>pfm_subkeys</key>
@@ -1218,8 +1202,6 @@ If no value is provided, the default is to only allow an administrator account c
 									<string>string</string>
 								</dict>
 							</array>
-							<key>pfm_title</key>
-							<string>Services</string>
 							<key>pfm_type</key>
 							<string>dictionary</string>
 						</dict>
@@ -1242,7 +1224,7 @@ If no value is provided, the default is to only allow an administrator account c
 							<key>pfm_description</key>
 							<string>Keys are limited to the privacy service names listed below. Each key is an array of dictionaries describing the app or process to which access is given. In the case of conflicting specifications, the most restrictive setting (deny) will be used.</string>
 							<key>pfm_name</key>
-							<string>Services</string>
+							<string>IdentityDict</string>
 							<key>pfm_require</key>
 							<string>always</string>
 							<key>pfm_subkeys</key>
@@ -1332,8 +1314,6 @@ If no value is provided, the default is to only allow an administrator account c
 									<string>string</string>
 								</dict>
 							</array>
-							<key>pfm_title</key>
-							<string>Services</string>
 							<key>pfm_type</key>
 							<string>dictionary</string>
 						</dict>
@@ -1358,7 +1338,7 @@ If no value is provided, the default is to only allow an administrator account c
 							<key>pfm_description</key>
 							<string>Keys are limited to the privacy service names listed below. Each key is an array of dictionaries describing the app or process to which access is given. In the case of conflicting specifications, the most restrictive setting (deny) will be used.</string>
 							<key>pfm_name</key>
-							<string>Services</string>
+							<string>IdentityDict</string>
 							<key>pfm_require</key>
 							<string>always</string>
 							<key>pfm_subkeys</key>
@@ -1449,8 +1429,6 @@ If no value is provided, the default is to only allow an administrator account c
 									<string>string</string>
 								</dict>
 							</array>
-							<key>pfm_title</key>
-							<string>Services</string>
 							<key>pfm_type</key>
 							<string>dictionary</string>
 						</dict>
@@ -1475,7 +1453,7 @@ If no value is provided, the default is to only allow an administrator account c
 							<key>pfm_description</key>
 							<string>Keys are limited to the privacy service names listed below. Each key is an array of dictionaries describing the app or process to which access is given. In the case of conflicting specifications, the most restrictive setting (deny) will be used.</string>
 							<key>pfm_name</key>
-							<string>Services</string>
+							<string>IdentityDict</string>
 							<key>pfm_require</key>
 							<string>always</string>
 							<key>pfm_subkeys</key>
@@ -1566,8 +1544,6 @@ If no value is provided, the default is to only allow an administrator account c
 									<string>string</string>
 								</dict>
 							</array>
-							<key>pfm_title</key>
-							<string>Services</string>
 							<key>pfm_type</key>
 							<string>dictionary</string>
 						</dict>
@@ -1592,7 +1568,7 @@ If no value is provided, the default is to only allow an administrator account c
 							<key>pfm_description</key>
 							<string>Keys are limited to the privacy service names listed below. Each key is an array of dictionaries describing the app or process to which access is given. In the case of conflicting specifications, the most restrictive setting (deny) will be used.</string>
 							<key>pfm_name</key>
-							<string>Services</string>
+							<string>IdentityDict</string>
 							<key>pfm_require</key>
 							<string>always</string>
 							<key>pfm_subkeys</key>
@@ -1683,8 +1659,6 @@ If no value is provided, the default is to only allow an administrator account c
 									<string>string</string>
 								</dict>
 							</array>
-							<key>pfm_title</key>
-							<string>Services</string>
 							<key>pfm_type</key>
 							<string>dictionary</string>
 						</dict>
@@ -1709,7 +1683,7 @@ If no value is provided, the default is to only allow an administrator account c
 							<key>pfm_description</key>
 							<string>Keys are limited to the privacy service names listed below. Each key is an array of dictionaries describing the app or process to which access is given. In the case of conflicting specifications, the most restrictive setting (deny) will be used.</string>
 							<key>pfm_name</key>
-							<string>Services</string>
+							<string>IdentityDict</string>
 							<key>pfm_require</key>
 							<string>always</string>
 							<key>pfm_subkeys</key>
@@ -1800,8 +1774,6 @@ If no value is provided, the default is to only allow an administrator account c
 									<string>string</string>
 								</dict>
 							</array>
-							<key>pfm_title</key>
-							<string>Services</string>
 							<key>pfm_type</key>
 							<string>dictionary</string>
 						</dict>
@@ -1829,7 +1801,7 @@ Approval cannot be applied in a profile; the only option is to enable standard (
 							<key>pfm_description</key>
 							<string>Keys are limited to the privacy service names listed below. Each key is an array of dictionaries describing the app or process to which access is given. In the case of conflicting specifications, the most restrictive setting (deny) will be used.</string>
 							<key>pfm_name</key>
-							<string>Services</string>
+							<string>IdentityDict</string>
 							<key>pfm_require</key>
 							<string>always</string>
 							<key>pfm_subkeys</key>
@@ -1923,8 +1895,6 @@ If no value is provided, the default is to only allow an administrator account c
 									<string>string</string>
 								</dict>
 							</array>
-							<key>pfm_title</key>
-							<string>Services</string>
 							<key>pfm_type</key>
 							<string>dictionary</string>
 						</dict>
@@ -1947,7 +1917,7 @@ If no value is provided, the default is to only allow an administrator account c
 							<key>pfm_description</key>
 							<string>Keys are limited to the privacy service names listed below. Each key is an array of dictionaries describing the app or process to which access is given. In the case of conflicting specifications, the most restrictive setting (deny) will be used.</string>
 							<key>pfm_name</key>
-							<string>Services</string>
+							<string>IdentityDict</string>
 							<key>pfm_require</key>
 							<string>always</string>
 							<key>pfm_subkeys</key>
@@ -2038,8 +2008,6 @@ If no value is provided, the default is to only allow an administrator account c
 									<string>string</string>
 								</dict>
 							</array>
-							<key>pfm_title</key>
-							<string>Services</string>
 							<key>pfm_type</key>
 							<string>dictionary</string>
 						</dict>
@@ -2062,7 +2030,7 @@ If no value is provided, the default is to only allow an administrator account c
 							<key>pfm_description</key>
 							<string>Keys are limited to the privacy service names listed below. Each key is an array of dictionaries describing the app or process to which access is given. In the case of conflicting specifications, the most restrictive setting (deny) will be used.</string>
 							<key>pfm_name</key>
-							<string>Services</string>
+							<string>IdentityDict</string>
 							<key>pfm_require</key>
 							<string>always</string>
 							<key>pfm_subkeys</key>
@@ -2153,8 +2121,6 @@ If no value is provided, the default is to only allow an administrator account c
 									<string>string</string>
 								</dict>
 							</array>
-							<key>pfm_title</key>
-							<string>Services</string>
 							<key>pfm_type</key>
 							<string>dictionary</string>
 						</dict>
@@ -2177,7 +2143,7 @@ If no value is provided, the default is to only allow an administrator account c
 							<key>pfm_description</key>
 							<string>Keys are limited to the privacy service names listed below. Each key is an array of dictionaries describing the app or process to which access is given. In the case of conflicting specifications, the most restrictive setting (deny) will be used.</string>
 							<key>pfm_name</key>
-							<string>Services</string>
+							<string>IdentityDict</string>
 							<key>pfm_require</key>
 							<string>always</string>
 							<key>pfm_subkeys</key>
@@ -2268,8 +2234,6 @@ If no value is provided, the default is to only allow an administrator account c
 									<string>string</string>
 								</dict>
 							</array>
-							<key>pfm_title</key>
-							<string>Services</string>
 							<key>pfm_type</key>
 							<string>dictionary</string>
 						</dict>
@@ -2292,7 +2256,7 @@ If no value is provided, the default is to only allow an administrator account c
 							<key>pfm_description</key>
 							<string>Keys are limited to the privacy service names listed below. Each key is an array of dictionaries describing the app or process to which access is given. In the case of conflicting specifications, the most restrictive setting (deny) will be used.</string>
 							<key>pfm_name</key>
-							<string>Services</string>
+							<string>IdentityDict</string>
 							<key>pfm_require</key>
 							<string>always</string>
 							<key>pfm_subkeys</key>
@@ -2383,8 +2347,6 @@ If no value is provided, the default is to only allow an administrator account c
 									<string>string</string>
 								</dict>
 							</array>
-							<key>pfm_title</key>
-							<string>Services</string>
 							<key>pfm_type</key>
 							<string>dictionary</string>
 						</dict>
@@ -2407,7 +2369,7 @@ If no value is provided, the default is to only allow an administrator account c
 							<key>pfm_description</key>
 							<string>Keys are limited to the privacy service names listed below. Each key is an array of dictionaries describing the app or process to which access is given. In the case of conflicting specifications, the most restrictive setting (deny) will be used.</string>
 							<key>pfm_name</key>
-							<string>Services</string>
+							<string>IdentityDict</string>
 							<key>pfm_require</key>
 							<string>always</string>
 							<key>pfm_subkeys</key>
@@ -2498,8 +2460,6 @@ If no value is provided, the default is to only allow an administrator account c
 									<string>string</string>
 								</dict>
 							</array>
-							<key>pfm_title</key>
-							<string>Services</string>
 							<key>pfm_type</key>
 							<string>dictionary</string>
 						</dict>
@@ -2522,7 +2482,7 @@ If no value is provided, the default is to only allow an administrator account c
 							<key>pfm_description</key>
 							<string>Keys are limited to the privacy service names listed below. Each key is an array of dictionaries describing the app or process to which access is given. In the case of conflicting specifications, the most restrictive setting (deny) will be used.</string>
 							<key>pfm_name</key>
-							<string>Services</string>
+							<string>IdentityDict</string>
 							<key>pfm_require</key>
 							<string>always</string>
 							<key>pfm_subkeys</key>
@@ -2613,8 +2573,6 @@ If no value is provided, the default is to only allow an administrator account c
 									<string>string</string>
 								</dict>
 							</array>
-							<key>pfm_title</key>
-							<string>Services</string>
 							<key>pfm_type</key>
 							<string>dictionary</string>
 						</dict>
@@ -2637,7 +2595,7 @@ If no value is provided, the default is to only allow an administrator account c
 							<key>pfm_description</key>
 							<string>Keys are limited to the privacy service names listed below. Each key is an array of dictionaries describing the app or process to which access is given. In the case of conflicting specifications, the most restrictive setting (deny) will be used.</string>
 							<key>pfm_name</key>
-							<string>Services</string>
+							<string>IdentityDict</string>
 							<key>pfm_require</key>
 							<string>always</string>
 							<key>pfm_subkeys</key>
@@ -2728,8 +2686,6 @@ If no value is provided, the default is to only allow an administrator account c
 									<string>string</string>
 								</dict>
 							</array>
-							<key>pfm_title</key>
-							<string>Services</string>
 							<key>pfm_type</key>
 							<string>dictionary</string>
 						</dict>
@@ -2869,7 +2825,7 @@ If no value is provided, the default is to only allow an administrator account c
 							<key>pfm_description</key>
 							<string>Keys are limited to the privacy service names listed below. Each key is an array of dictionaries describing the app or process to which access is given. In the case of conflicting specifications, the most restrictive setting (deny) will be used.</string>
 							<key>pfm_name</key>
-							<string>Services</string>
+							<string>IdentityDict</string>
 							<key>pfm_require</key>
 							<string>always</string>
 							<key>pfm_subkeys</key>
@@ -2960,8 +2916,6 @@ If no value is provided, the default is to only allow an administrator account c
 									<string>string</string>
 								</dict>
 							</array>
-							<key>pfm_title</key>
-							<string>Services</string>
 							<key>pfm_type</key>
 							<string>dictionary</string>
 						</dict>
