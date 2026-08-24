@@ -3,7 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>pfm_description</key>
-	<string>Login Window: Login Items settings</string>
+	<string>The payload that configures login behavior.</string>
+	<key>pfm_documentation_url</key>
+	<string>https://developer.apple.com/documentation/devicemanagement/loginwindowloginitems</string>
 	<key>pfm_domain</key>
 	<string>loginwindow</string>
 	<key>pfm_format_version</key>
@@ -11,7 +13,9 @@
 	<key>pfm_interaction</key>
 	<string>combined</string>
 	<key>pfm_last_modified</key>
-	<date>2019-11-07T15:29:16Z</date>
+	<date>2026-08-24T08:00:30Z</date>
+	<key>pfm_macos_min</key>
+	<string>10.7</string>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -20,7 +24,7 @@
 	<array>
 		<dict>
 			<key>pfm_default</key>
-			<string>Configures Login Window: Login Items settings</string>
+			<string>The payload that configures login behavior.</string>
 			<key>pfm_description</key>
 			<string>The human-readable description of this payload. This description appears on the Detail screen.</string>
 			<key>pfm_name</key>
@@ -48,7 +52,7 @@
 			<key>pfm_default</key>
 			<string>loginwindow</string>
 			<key>pfm_description</key>
-			<string>The reverse-DNS-style identifier for the payload. This identifier is usually the same as the TopLevel value, with an additional appended component. This string must be unique within the profile.
+			<string>The reverse-DNS-style identifier for the payload. This identifier is usually the same as the 'TopLevel' value, with an additional appended component. This string must be unique within the profile.
 During a profile replacement, the system updates payloads with the same 'PayloadIdentifier' and 'PayloadUUID' in the old and new profiles.</string>
 			<key>pfm_name</key>
 			<string>PayloadIdentifier</string>
@@ -122,7 +126,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>Prevent users from disabling login items launching using the Shift key.</string>
+			<string>If 'true', the system prevents the user from disabling login item launches by using the Shift key.</string>
 			<key>pfm_name</key>
 			<string>DisableLoginItemsSuppression</string>
 			<key>pfm_title</key>
@@ -207,12 +211,14 @@ During a profile replacement, the system updates payloads with the same 'Payload
 	</array>
 	<key>pfm_targets</key>
 	<array>
-		<string>user</string>
+		<string>system</string>
 	</array>
 	<key>pfm_title</key>
 	<string>Login Window: Login Items</string>
 	<key>pfm_unique</key>
 	<true/>
+	<key>pfm_user_approved</key>
+	<false/>
 	<key>pfm_version</key>
 	<integer>2</integer>
 </dict>

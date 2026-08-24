@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>pfm_description</key>
-	<string>Login Window settings</string>
+	<string>The payload that configures Login Window behavior.</string>
 	<key>pfm_description_reference</key>
 	<string>The Loginwindow payload is designated by specifying com.apple.loginwindow as the PayloadType value. This payload creates managed preferences on all versions of macOS for system and device profiles. Multiple Login-
 window payloads may be installed together.</string>
@@ -16,7 +16,7 @@ window payloads may be installed together.</string>
 	<key>pfm_interaction</key>
 	<string>combined</string>
 	<key>pfm_last_modified</key>
-	<date>2024-09-03T15:13:17Z</date>
+	<date>2026-08-24T08:00:30Z</date>
 	<key>pfm_macos_min</key>
 	<string>10.7</string>
 	<key>pfm_platforms</key>
@@ -27,7 +27,7 @@ window payloads may be installed together.</string>
 	<array>
 		<dict>
 			<key>pfm_default</key>
-			<string>Configures Loginwindow settings</string>
+			<string>The payload that configures Login Window behavior.</string>
 			<key>pfm_description</key>
 			<string>The human-readable description of this payload. This description appears on the Detail screen.</string>
 			<key>pfm_name</key>
@@ -55,7 +55,7 @@ window payloads may be installed together.</string>
 			<key>pfm_default</key>
 			<string>com.apple.loginwindow</string>
 			<key>pfm_description</key>
-			<string>The reverse-DNS-style identifier for the payload. This identifier is usually the same as the TopLevel value, with an additional appended component. This string must be unique within the profile.
+			<string>The reverse-DNS-style identifier for the payload. This identifier is usually the same as the 'TopLevel' value, with an additional appended component. This string must be unique within the profile.
 During a profile replacement, the system updates payloads with the same 'PayloadIdentifier' and 'PayloadUUID' in the old and new profiles.</string>
 			<key>pfm_name</key>
 			<string>PayloadIdentifier</string>
@@ -196,7 +196,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<string>HostName</string>
 			<key>pfm_description</key>
-			<string>The admin host info. If present in the payload, the system displays its value in the login window as additional computer information. Before macOS 10.10, this string could only contain host name, system version, or IP address. After macOS 10.10, setting this key to any value allows the user to click the time area of the menu bar to toggle through various computer information values.</string>
+			<string>The admin host info. If present in the payload, the system displays its value in the Login Window as additional computer information. Before macOS 10.10, this string could only contain host name, system version, or IP address. After macOS 10.10, setting this key to any value allows the user to click the time area of the menu bar to toggle through various computer information values.</string>
 			<key>pfm_name</key>
 			<string>AdminHostInfo</string>
 			<key>pfm_range_list</key>
@@ -214,7 +214,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_description</key>
-			<string>The text to display in the login window.</string>
+			<string>The text to display in the Login Window.</string>
 			<key>pfm_name</key>
 			<string>LoginwindowText</string>
 			<key>pfm_title</key>
@@ -361,7 +361,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>If 'true', the system displays “Other...” when it shows a list of users.</string>
+			<string>If 'true', the system displays "Other..." when it shows a list of users.</string>
 			<key>pfm_exclude</key>
 			<array>
 				<dict>
@@ -498,8 +498,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>A loginwindow password will be required to login.</string>
 			<key>pfm_description_reference</key>
 			<string></string>
-			<key>pfm_documentation_source</key>
-			<string></string>
 			<key>pfm_name</key>
 			<string>com.apple.login.mcx.DisableAutoLoginClient</string>
 			<key>pfm_title</key>
@@ -519,7 +517,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_description</key>
-			<string>A user password to set up auto login, must match the "AutologinUsername" user's current password.</string>
+			<string>An optional user password to set up auto login. This must match the 'AutologinUsername' user's current password.</string>
 			<key>pfm_macos_min</key>
 			<string>14.0</string>
 			<key>pfm_name</key>
@@ -532,8 +530,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<false/>
 			<key>pfm_description</key>
 			<string>If 'true', the system disables the automatic login option when using FileVault.</string>
-			<key>pfm_documentation_source</key>
-			<string></string>
 			<key>pfm_macos_min</key>
 			<string>10.9</string>
 			<key>pfm_name</key>
@@ -564,8 +560,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>Allows external accounts to log in.</string>
 			<key>pfm_description_reference</key>
 			<string></string>
-			<key>pfm_documentation_source</key>
-			<string></string>
 			<key>pfm_name</key>
 			<string>EnableExternalAccounts</string>
 			<key>pfm_title</key>
@@ -579,8 +573,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_description</key>
 			<string>Allows Mac administrators on the computer to refresh or disable the management features.</string>
 			<key>pfm_description_reference</key>
-			<string></string>
-			<key>pfm_documentation_source</key>
 			<string></string>
 			<key>pfm_name</key>
 			<string>AdminMayDisableMCX</string>
@@ -608,8 +600,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>Forces the name of the Mac to be set as the computer record name.</string>
 			<key>pfm_description_reference</key>
 			<string></string>
-			<key>pfm_documentation_source</key>
-			<string></string>
 			<key>pfm_name</key>
 			<string>UseComputerNameForComputerRecordName</string>
 			<key>pfm_title</key>
@@ -619,7 +609,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_description</key>
-			<string>The list of user GUIDs or group GUIDs of users that the system allows to log in. An asterisk ('*') string specifies all users or groups.</string>
+			<string>The list of user GUIDs or group GUIDs of users that the system allows to log in. An asterisk ('*') string specifies all users or groups. This only applies to network accounts and mobile accounts.</string>
 			<key>pfm_name</key>
 			<string>AllowList</string>
 			<key>pfm_subkeys</key>
@@ -648,7 +638,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_description</key>
-			<string>The list of user GUIDs or group GUIDs of users that the system disallows to log in. This list takes priority over the list in the 'AllowList' key.</string>
+			<string>The list of user GUIDs or group GUIDs of users that the system disallows to log in. This list takes priority over the list in the 'AllowList' key. This only applies to network accounts and mobile accounts.</string>
 			<key>pfm_name</key>
 			<string>DenyList</string>
 			<key>pfm_subkeys</key>
@@ -680,8 +670,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>Permit only local users to log in. Network users won't be allowed to log in.</string>
 			<key>pfm_description_reference</key>
 			<string></string>
-			<key>pfm_documentation_source</key>
-			<string></string>
 			<key>pfm_name</key>
 			<string>LocalUserLoginEnabled</string>
 			<key>pfm_title</key>
@@ -693,8 +681,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_description</key>
 			<string>Local users are forced to use any available workgroup settings.</string>
 			<key>pfm_description_reference</key>
-			<string></string>
-			<key>pfm_documentation_source</key>
 			<string></string>
 			<key>pfm_name</key>
 			<string>LocalUsersHaveWorkgroups</string>
@@ -708,8 +694,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>If users are part of a nested workgroup, only the settings of the user's workgroup are enforced.</string>
 			<key>pfm_description_reference</key>
 			<string></string>
-			<key>pfm_documentation_source</key>
-			<string></string>
 			<key>pfm_name</key>
 			<string>FlattenUserWorkgroups</string>
 			<key>pfm_title</key>
@@ -721,8 +705,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_description</key>
 			<string>If users are part of a nested workgroup, all nested workgroup settings are enforced.</string>
 			<key>pfm_description_reference</key>
-			<string></string>
-			<key>pfm_documentation_source</key>
 			<string></string>
 			<key>pfm_name</key>
 			<string>CombineUserWorkgroups</string>
@@ -736,8 +718,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>If the workgroup has a specific dialog, that dialog is shown when users log in.</string>
 			<key>pfm_description_reference</key>
 			<string></string>
-			<key>pfm_documentation_source</key>
-			<string></string>
 			<key>pfm_name</key>
 			<string>AlwaysShowWorkgroupDialog</string>
 			<key>pfm_title</key>
@@ -749,8 +729,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_description</key>
 			<string>Enable or disable the "Change Password…" button in the Users &amp; Groups preference pane.</string>
 			<key>pfm_description_reference</key>
-			<string></string>
-			<key>pfm_documentation_source</key>
 			<string></string>
 			<key>pfm_name</key>
 			<string>ChangePasswordDisabled</string>
@@ -766,8 +744,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>Number of tries until password hint is shown (0 = disable password hints).</string>
 			<key>pfm_description_reference</key>
 			<string></string>
-			<key>pfm_documentation_source</key>
-			<string></string>
 			<key>pfm_name</key>
 			<string>RetriesUntilHint</string>
 			<key>pfm_title</key>
@@ -779,9 +755,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>If 'true', the system shows the Input Menu in the login window.</string>
-			<key>pfm_documentation_source</key>
-			<string></string>
+			<string>If 'true', the system shows the Input Menu in the Login Window.</string>
 			<key>pfm_macos_min</key>
 			<string>10.8</string>
 			<key>pfm_name</key>
@@ -828,6 +802,8 @@ During a profile replacement, the system updates payloads with the same 'Payload
 	<key>pfm_title</key>
 	<string>Login Window</string>
 	<key>pfm_unique</key>
+	<false/>
+	<key>pfm_user_approved</key>
 	<false/>
 	<key>pfm_version</key>
 	<integer>7</integer>
