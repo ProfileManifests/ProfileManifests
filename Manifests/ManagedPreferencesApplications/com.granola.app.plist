@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>pfm_app_url</key>
-	<string>https://www.granola.ai/download</string>
+	<string>https://www.granola.ai</string>
 	<key>pfm_description</key>
 	<string>Granola settings</string>
 	<key>pfm_documentation_url</key>
