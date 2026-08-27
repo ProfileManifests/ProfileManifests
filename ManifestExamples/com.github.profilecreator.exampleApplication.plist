@@ -7,6 +7,8 @@
 	<!-- All keys below this comment are only optional but help the user with more information about the payload. -->
 	
 	<!-- This key should contain a URL to the download page of the application it's configuring. -->
+	<key>pfm_app_min</key>
+	<string>7.147.1</string>
 	<key>pfm_app_url</key>
 	<string>https://github.com/erikberglund/ProfileCreator/releases</string>
 	
