@@ -15,7 +15,7 @@
 	<key>pfm_ios_min</key>
 	<string>4.0</string>
 	<key>pfm_last_modified</key>
-	<date>2026-06-23T15:59:45Z</date>
+	<date>2026-08-24T08:00:30Z</date>
 	<key>pfm_macos_min</key>
 	<string>10.7</string>
 	<key>pfm_platforms</key>
@@ -181,7 +181,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_name</key>
 			<string>IncomingMailServerIMAPPathPrefix</string>
 			<key>pfm_title</key>
-			<string>Path Prefix</string>
+			<string>Incoming Mail Server IMAP Path Prefix</string>
 			<key>pfm_type</key>
 			<string>string</string>
 		</dict>
@@ -239,7 +239,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				<string>iOS</string>
 			</array>
 			<key>pfm_title</key>
-			<string>Allow user to move messages from this account</string>
+			<string>Disallow user to move messages from this account</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 			<key>pfm_value_inverted</key>
@@ -255,7 +255,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_name</key>
 			<string>disableMailRecentsSyncing</string>
 			<key>pfm_title</key>
-			<string>Allow recent addresses to be synced</string>
+			<string>Exclude account from recent addresses syncing</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 			<key>pfm_value_inverted</key>
@@ -807,6 +807,8 @@ This setting is only supported by interactive profile installations. Not support
 	<key>pfm_title</key>
 	<string>Mail</string>
 	<key>pfm_unique</key>
+	<false/>
+	<key>pfm_user_approved</key>
 	<false/>
 	<key>pfm_version</key>
 	<integer>9</integer>

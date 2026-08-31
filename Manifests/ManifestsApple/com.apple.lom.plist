@@ -15,9 +15,11 @@
 	<key>pfm_interaction</key>
 	<string>exclusive</string>
 	<key>pfm_last_modified</key>
-	<date>2026-06-23T15:59:45Z</date>
+	<date>2026-08-24T08:00:30Z</date>
 	<key>pfm_macos_min</key>
 	<string>11.0</string>
+	<key>pfm_note</key>
+	<string>You can configure a compatible macOS device to be both a controller and a device. Include the UUID of the certificate in both 'DeviceCertificateUUID' and 'ControllerCertificateUUID' properties.</string>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -127,7 +129,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		<dict>
 			<key>pfm_description</key>
 			<string>An array of payload UUIDs containing CA certificates that devices use to evaluate trust of controller certificates.
-
 This key configures the device to accept the 'LOMDeviceRequestCommand' from MDM and then send it to the target device. This certificate must contain the Key Usage attributes of Digital Signature, Key Encipherment and Data Encipherment. As well as the Extended Key Usage attributes of Server Authentication and Client Authentication.</string>
 			<key>pfm_name</key>
 			<string>ControllerCACertificateUUIDs</string>
@@ -194,7 +195,7 @@ This key configures the device to accept the 'LOMDeviceRequestCommand' from MDM 
 	<key>pfm_title</key>
 	<string>Lights Out Management (LOM)</string>
 	<key>pfm_unique</key>
-	<false/>
+	<true/>
 	<key>pfm_user_approved</key>
 	<true/>
 	<key>pfm_version</key>

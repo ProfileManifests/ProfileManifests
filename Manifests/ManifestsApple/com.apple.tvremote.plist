@@ -19,7 +19,7 @@ To lock specific Apple TVs to specific devices running Apple TV Remote app, both
 	<key>pfm_ios_min</key>
 	<string>11.3</string>
 	<key>pfm_last_modified</key>
-	<date>2026-06-23T15:59:45Z</date>
+	<date>2026-08-24T08:00:30Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>iOS</string>
@@ -143,6 +143,10 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<string>The array of valid devices that Apple TV can connect to.</string>
 					<key>pfm_name</key>
 					<string>AllowedRemotesItem</string>
+					<key>pfm_platforms</key>
+					<array>
+						<string>tvOS</string>
+					</array>
 					<key>pfm_require</key>
 					<string>always</string>
 					<key>pfm_subkeys</key>
@@ -154,6 +158,10 @@ During a profile replacement, the system updates payloads with the same 'Payload
 							<string>^([0-9A-Fa-f]{2}:){5}([0-9A-Fa-f]{2})$</string>
 							<key>pfm_name</key>
 							<string>RemoteDeviceID</string>
+							<key>pfm_platforms</key>
+							<array>
+								<string>tvOS</string>
+							</array>
 							<key>pfm_require</key>
 							<string>always</string>
 							<key>pfm_title</key>
@@ -195,6 +203,10 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<string>The array of valid Apple TV identifiers that the remote can connect to.</string>
 					<key>pfm_name</key>
 					<string>AllowedTVsItem</string>
+					<key>pfm_platforms</key>
+					<array>
+						<string>iOS</string>
+					</array>
 					<key>pfm_require</key>
 					<string>always</string>
 					<key>pfm_subkeys</key>
@@ -206,6 +218,10 @@ During a profile replacement, the system updates payloads with the same 'Payload
 							<string>^([0-9A-Fa-f]{2}:){5}([0-9A-Fa-f]{2})$</string>
 							<key>pfm_name</key>
 							<string>TVDeviceID</string>
+							<key>pfm_platforms</key>
+							<array>
+								<string>iOS</string>
+							</array>
 							<key>pfm_require</key>
 							<string>always</string>
 							<key>pfm_title</key>
@@ -222,6 +238,10 @@ During a profile replacement, the system updates payloads with the same 'Payload
 							<string>15.0</string>
 							<key>pfm_name</key>
 							<string>TVDeviceName</string>
+							<key>pfm_platforms</key>
+							<array>
+								<string>iOS</string>
+							</array>
 							<key>pfm_title</key>
 							<string>TV Device Name</string>
 							<key>pfm_type</key>

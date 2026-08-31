@@ -15,7 +15,11 @@
 	<key>pfm_ios_min</key>
 	<string>9.3</string>
 	<key>pfm_last_modified</key>
-	<date>2026-06-23T15:59:45Z</date>
+	<date>2026-08-24T08:00:30Z</date>
+	<key>pfm_note</key>
+	<string>You can install multiple Google payloads. Each sets up a Google email address and any other Google services the user enables after authentication.
+Note: For supervised devices, the system requires installation of Google accounts through MDM or Apple Configurator 2.
+The payload never contains credentials; the system prompts the user to enter credentials shortly after installation of the payload.</string>
 	<key>pfm_platforms</key>
 	<array>
 		<string>iOS</string>

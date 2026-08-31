@@ -15,9 +15,11 @@
 	<key>pfm_interaction</key>
 	<string>exclusive</string>
 	<key>pfm_last_modified</key>
-	<date>2026-06-23T15:59:45Z</date>
+	<date>2026-08-24T08:00:30Z</date>
 	<key>pfm_macos_min</key>
 	<string>10.7</string>
+	<key>pfm_note</key>
+	<string>Removing this profile from a device doesn't automatically remove printers from the device.</string>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -142,7 +144,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_description</key>
-			<string>The default printer for the user. This information should match one of the printers in the Printer List.</string>
+			<string>The default printer for the user.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://developer.apple.com/documentation/devicemanagement/printing</string>
 			<key>pfm_exclude</key>
@@ -167,7 +169,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<array>
 				<dict>
 					<key>pfm_description</key>
-					<string>The printer display name. This should match one of the printers in the Printer List.</string>
+					<string>The display name.</string>
 					<key>pfm_documentation_url</key>
 					<string>https://developer.apple.com/documentation/devicemanagement/printing/defaultprinter</string>
 					<key>pfm_macos_min</key>
@@ -185,7 +187,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string>The device URI. This should match one of the printers in the Printer List.</string>
+					<string>The device URI.</string>
 					<key>pfm_documentation_url</key>
 					<string>https://developer.apple.com/documentation/devicemanagement/printing/defaultprinter</string>
 					<key>pfm_macos_min</key>
@@ -328,7 +330,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<array>
 				<dict>
 					<key>pfm_description</key>
-					<string>A printer item in the printer list</string>
+					<string>A dictionary of printer details.</string>
 					<key>pfm_hidden</key>
 					<string>container</string>
 					<key>pfm_name</key>
@@ -339,7 +341,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>The printer display name.</string>
+							<string>The display name.</string>
 							<key>pfm_name</key>
 							<string>DisplayName</string>
 							<key>pfm_require</key>
@@ -438,6 +440,8 @@ During a profile replacement, the system updates payloads with the same 'Payload
 	<key>pfm_title</key>
 	<string>Printing</string>
 	<key>pfm_unique</key>
+	<true/>
+	<key>pfm_user_approved</key>
 	<false/>
 	<key>pfm_version</key>
 	<integer>1</integer>

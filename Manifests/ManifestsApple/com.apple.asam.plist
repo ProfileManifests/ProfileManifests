@@ -19,11 +19,12 @@ To be granted access, applications must be signed with the specified bundle iden
 	<key>pfm_interaction</key>
 	<string>exclusive</string>
 	<key>pfm_last_modified</key>
-	<date>2026-06-23T15:59:45Z</date>
+	<date>2026-08-24T08:00:30Z</date>
 	<key>pfm_macos_min</key>
 	<string>10.13.4</string>
 	<key>pfm_note</key>
-	<string>Applications listed in this payload will have low-level access to the system, including, but not limited to, key logging and user interface manipulation outside of the applicationʼs context.</string>
+	<string>The system only allows installation of one profile of this type, and it requires installation through a user-approved MDM server. Apps listed in this profile have low-level access to the system, including, but not limited to, key logging and user interface manipulation outside the app's context.
+Important: If two dictionaries contain the same 'BundleIdentifier' value but a different 'TeamIdentifier' value, an error occurs and the system doesn’t install the profile.</string>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -202,7 +203,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 	<key>pfm_title</key>
 	<string>Autonomous Single App Mode</string>
 	<key>pfm_unique</key>
-	<false/>
+	<true/>
 	<key>pfm_user_approved</key>
 	<true/>
 	<key>pfm_version</key>

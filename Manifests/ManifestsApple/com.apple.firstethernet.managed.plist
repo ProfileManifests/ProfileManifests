@@ -13,9 +13,15 @@
 	<key>pfm_interaction</key>
 	<string>combined</string>
 	<key>pfm_last_modified</key>
-	<date>2026-06-23T15:59:45Z</date>
+	<date>2026-08-24T08:00:30Z</date>
 	<key>pfm_macos_min</key>
 	<string>10.7</string>
+	<key>pfm_note</key>
+	<string>This payload's contents contain these profile-specific keys:
+Interface (String): This payload uses the value 'FirstEthernet'.
+EAPClientConfiguration ('EAPClientConfiguration'): The dictionary that defines the enterprise profile for the network.
+SetupModes (String): The type of connection mode, which is either "System" or "Loginwindow." "System" is the default.
+This payload applies to Ethernet interfaces according to service order, regardless of whether the interface is working.</string>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -914,6 +920,8 @@ If you don't specify a value, the default is 'true' for EAP-TLS, and 'false' for
 	<key>pfm_title</key>
 	<string>802.1X Ethernet: First</string>
 	<key>pfm_unique</key>
+	<true/>
+	<key>pfm_user_approved</key>
 	<false/>
 	<key>pfm_version</key>
 	<integer>2</integer>

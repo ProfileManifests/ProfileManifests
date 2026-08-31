@@ -4,6 +4,8 @@
 <dict>
 	<key>pfm_description</key>
 	<string>The payload that configures privacy preferences.</string>
+	<key>pfm_documentation_url</key>
+	<string>https://developer.apple.com/documentation/devicemanagement/privacypreferencespolicycontrol</string>
 	<key>pfm_domain</key>
 	<string>com.apple.TCC.configuration-profile-policy</string>
 	<key>pfm_format_version</key>
@@ -11,7 +13,7 @@
 	<key>pfm_interaction</key>
 	<string>combined</string>
 	<key>pfm_last_modified</key>
-	<date>2026-06-23T15:59:45Z</date>
+	<date>2026-08-24T10:02:22Z</date>
 	<key>pfm_macos_min</key>
 	<string>10.14</string>
 	<key>pfm_platforms</key>
@@ -142,16 +144,17 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Keys are limited to the privacy service names listed below. Each key is an array of dictionaries describing the app or process to which access is given. In the case of conflicting specifications, the most restrictive setting (deny) will be used.</string>
+							<string>A dictionary listing apps and the privacy policy to apply to them.</string>
 							<key>pfm_name</key>
-							<string>Services</string>
+							<string>IdentityDict</string>
 							<key>pfm_require</key>
 							<string>always</string>
 							<key>pfm_subkeys</key>
 							<array>
 								<dict>
 									<key>pfm_description</key>
-									<string>The bundle ID or installation path of the binary.</string>
+									<string>The bundle ID or installation path of the binary.
+Note: This value is case-sensitive.</string>
 									<key>pfm_name</key>
 									<string>Identifier</string>
 									<key>pfm_require</key>
@@ -165,7 +168,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>The type of Identifier value.</string>
+									<string>The type of identifier value. Application bundles must be identified by bundle ID. Nonbundled binaries must be identified by installation path. Helper tools embedded within an application bundle automatically inherit the permissions of their enclosing app bundle.</string>
 									<key>pfm_name</key>
 									<string>IdentifierType</string>
 									<key>pfm_range_list</key>
@@ -187,7 +190,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>The designated requirement describing the code signature of this executable.</string>
+									<string>Obtained via the command 'codesign -display -r -'.</string>
 									<key>pfm_name</key>
 									<string>CodeRequirement</string>
 									<key>pfm_require</key>
@@ -198,8 +201,10 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<string>string</string>
 								</dict>
 								<dict>
+									<key>pfm_default</key>
+									<false/>
 									<key>pfm_description</key>
-									<string>If set to true, statically validate the code requirement. Used only if the process invalidates its dynamic code signature.</string>
+									<string>If 'true', statically validate the code requirement. Used only if the process invalidates its dynamic code signature.</string>
 									<key>pfm_name</key>
 									<string>StaticCode</string>
 									<key>pfm_title</key>
@@ -209,27 +214,31 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>If set to true, access is granted. Otherwise the process does not have access. The user is not prompted and cannot change this value.</string>
+									<string>The 'Authorization' has one of the following possible values:
+'Allow': Access is granted.
+'Deny': Access is denied.</string>
+									<key>pfm_macos_min</key>
+									<string>11.0</string>
 									<key>pfm_name</key>
-									<string>Allowed</string>
+									<string>Authorization</string>
 									<key>pfm_range_list</key>
 									<array>
-										<false/>
-										<true/>
+										<string>Allow</string>
+										<string>Deny</string>
 									</array>
 									<key>pfm_range_list_titles</key>
 									<array>
+										<string>Allow (deprecated 26.2, removed 27.0)</string>
 										<string>Deny</string>
-										<string>Allow</string>
 									</array>
 									<key>pfm_title</key>
-									<string>Allowed</string>
+									<string>Authorization</string>
 									<key>pfm_type</key>
-									<string>boolean</string>
+									<string>string</string>
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>Not Used</string>
+									<string>Not used.</string>
 									<key>pfm_hidden</key>
 									<string>all</string>
 									<key>pfm_name</key>
@@ -240,8 +249,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<string>string</string>
 								</dict>
 							</array>
-							<key>pfm_title</key>
-							<string>Services</string>
 							<key>pfm_type</key>
 							<string>dictionary</string>
 						</dict>
@@ -254,6 +261,8 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<string>com.apple.TCC.configuration-profile-policy.services</string>
 				</dict>
 				<dict>
+					<key>pfm_description</key>
+					<string>Specifies the policies for the app sending restricted AppleEvents to another process.</string>
 					<key>pfm_description_reference</key>
 					<string>Specifies the policies for the app sending restricted AppleEvents to another process.</string>
 					<key>pfm_macos_min</key>
@@ -264,16 +273,17 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Keys are limited to the privacy service names listed below. Each key is an array of dictionaries describing the app or process to which access is given. In the case of conflicting specifications, the most restrictive setting (deny) will be used.</string>
+							<string>A dictionary listing apps and the privacy policy to apply to them.</string>
 							<key>pfm_name</key>
-							<string>Services</string>
+							<string>IdentityDict</string>
 							<key>pfm_require</key>
 							<string>always</string>
 							<key>pfm_subkeys</key>
 							<array>
 								<dict>
 									<key>pfm_description</key>
-									<string>The bundle ID or installation path of the binary.</string>
+									<string>The bundle ID or installation path of the binary.
+Note: This value is case-sensitive.</string>
 									<key>pfm_name</key>
 									<string>Identifier</string>
 									<key>pfm_require</key>
@@ -287,7 +297,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>The type of Identifier value.</string>
+									<string>The type of identifier value. Application bundles must be identified by bundle ID. Nonbundled binaries must be identified by installation path. Helper tools embedded within an application bundle automatically inherit the permissions of their enclosing app bundle.</string>
 									<key>pfm_name</key>
 									<string>IdentifierType</string>
 									<key>pfm_range_list</key>
@@ -309,7 +319,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>The designated requirement describing the code signature of this executable.</string>
+									<string>Obtained via the command 'codesign -display -r -'.</string>
 									<key>pfm_name</key>
 									<string>CodeRequirement</string>
 									<key>pfm_require</key>
@@ -320,8 +330,10 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<string>string</string>
 								</dict>
 								<dict>
+									<key>pfm_default</key>
+									<false/>
 									<key>pfm_description</key>
-									<string>If set to true, statically validate the code requirement. Used only if the process invalidates its dynamic code signature.</string>
+									<string>If 'true', statically validate the code requirement. Used only if the process invalidates its dynamic code signature.</string>
 									<key>pfm_name</key>
 									<string>StaticCode</string>
 									<key>pfm_title</key>
@@ -331,27 +343,26 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>If set to true, access is granted. Otherwise the process does not have access. The user is not prompted and cannot change this value.</string>
+									<string>The 'Authorization' has one of the following possible values:
+'Allow': Access is granted.
+'Deny': Access is denied.</string>
+									<key>pfm_macos_min</key>
+									<string>11.0</string>
 									<key>pfm_name</key>
-									<string>Allowed</string>
+									<string>Authorization</string>
 									<key>pfm_range_list</key>
 									<array>
-										<false/>
-										<true/>
-									</array>
-									<key>pfm_range_list_titles</key>
-									<array>
-										<string>Deny</string>
 										<string>Allow</string>
+										<string>Deny</string>
 									</array>
 									<key>pfm_title</key>
-									<string>Allowed</string>
+									<string>Authorization</string>
 									<key>pfm_type</key>
-									<string>boolean</string>
+									<string>string</string>
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>The identifier of the process receiving an ApplEvent sent by the Identifier process.</string>
+									<string>The identifier of the process receiving an AppleEvent sent by the Identifier process. This identifier is required for AppleEvents service; not valid for other services.</string>
 									<key>pfm_name</key>
 									<string>AEReceiverIdentifier</string>
 									<key>pfm_require</key>
@@ -363,7 +374,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>The type of AEReceiverIdentifier value.</string>
+									<string>The type of AEReceiverIdentifier value, either 'bundleID' or 'path'. This setting is required for AppleEvents service; not valid for other services.</string>
 									<key>pfm_name</key>
 									<string>AEReceiverIdentifierType</string>
 									<key>pfm_range_list</key>
@@ -385,7 +396,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>Code requirement for the receiving binary.</string>
+									<string>The code requirement for the receiving binary. This code requirement is required for AppleEvents service; not valid for other services.</string>
 									<key>pfm_name</key>
 									<string>AEReceiverCodeRequirement</string>
 									<key>pfm_require</key>
@@ -397,7 +408,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>Not Used</string>
+									<string>Not used.</string>
 									<key>pfm_hidden</key>
 									<string>all</string>
 									<key>pfm_name</key>
@@ -408,8 +419,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<string>string</string>
 								</dict>
 							</array>
-							<key>pfm_title</key>
-							<string>Services</string>
 							<key>pfm_type</key>
 							<string>dictionary</string>
 						</dict>
@@ -432,16 +441,21 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Keys are limited to the privacy service names listed below. Each key is an array of dictionaries describing the app or process to which access is given. In the case of conflicting specifications, the most restrictive setting (deny) will be used.</string>
+							<string>A dictionary listing apps and the privacy policy to apply to them.</string>
+							<key>pfm_macos_min</key>
+							<string>11.0</string>
 							<key>pfm_name</key>
-							<string>Services</string>
+							<string>IdentityDict</string>
 							<key>pfm_require</key>
 							<string>always</string>
 							<key>pfm_subkeys</key>
 							<array>
 								<dict>
 									<key>pfm_description</key>
-									<string>The bundle ID or installation path of the binary.</string>
+									<string>The bundle ID or installation path of the binary.
+Note: This value is case-sensitive.</string>
+									<key>pfm_macos_min</key>
+									<string>11.0</string>
 									<key>pfm_name</key>
 									<string>Identifier</string>
 									<key>pfm_require</key>
@@ -455,7 +469,9 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>The type of Identifier value.</string>
+									<string>The type of identifier value. Application bundles must be identified by bundle ID. Nonbundled binaries must be identified by installation path. Helper tools embedded within an application bundle automatically inherit the permissions of their enclosing app bundle.</string>
+									<key>pfm_macos_min</key>
+									<string>11.0</string>
 									<key>pfm_name</key>
 									<string>IdentifierType</string>
 									<key>pfm_range_list</key>
@@ -477,7 +493,9 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>The designated requirement describing the code signature of this executable.</string>
+									<string>Obtained via the command 'codesign -display -r -'.</string>
+									<key>pfm_macos_min</key>
+									<string>11.0</string>
 									<key>pfm_name</key>
 									<string>CodeRequirement</string>
 									<key>pfm_require</key>
@@ -488,8 +506,12 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<string>string</string>
 								</dict>
 								<dict>
+									<key>pfm_default</key>
+									<false/>
 									<key>pfm_description</key>
-									<string>If set to true, statically validate the code requirement. Used only if the process invalidates its dynamic code signature.</string>
+									<string>If 'true', statically validate the code requirement. Used only if the process invalidates its dynamic code signature.</string>
+									<key>pfm_macos_min</key>
+									<string>11.0</string>
 									<key>pfm_name</key>
 									<string>StaticCode</string>
 									<key>pfm_title</key>
@@ -499,9 +521,11 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>The 'Authorization' key is an optional replacement for the 'Allowed' key. Every payload must specify either 'Authorization' or 'Allowed', but not both.
-'Allow': Equivalent to a 'true' value for the 'Allowed' key.
-'Deny': Equivalent to a 'false' value for the 'Allowed' key.</string>
+									<string>The 'Authorization' has one of the following possible values:
+'Allow': Access is granted.
+'Deny': Access is denied.</string>
+									<key>pfm_macos_min</key>
+									<string>11.0</string>
 									<key>pfm_name</key>
 									<string>Authorization</string>
 									<key>pfm_range_list</key>
@@ -514,9 +538,11 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>Not Used</string>
+									<string>Not used.</string>
 									<key>pfm_hidden</key>
 									<string>all</string>
+									<key>pfm_macos_min</key>
+									<string>11.0</string>
 									<key>pfm_name</key>
 									<string>Comment</string>
 									<key>pfm_title</key>
@@ -525,8 +551,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<string>string</string>
 								</dict>
 							</array>
-							<key>pfm_title</key>
-							<string>Services</string>
 							<key>pfm_type</key>
 							<string>dictionary</string>
 						</dict>
@@ -537,6 +561,8 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<string>array</string>
 				</dict>
 				<dict>
+					<key>pfm_description</key>
+					<string>Specifies the policies for calendar information managed by the Calendar.app.</string>
 					<key>pfm_description_reference</key>
 					<string>Specifies the policies for calendar information managed by the Calendar.app.</string>
 					<key>pfm_macos_min</key>
@@ -547,16 +573,17 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Keys are limited to the privacy service names listed below. Each key is an array of dictionaries describing the app or process to which access is given. In the case of conflicting specifications, the most restrictive setting (deny) will be used.</string>
+							<string>A dictionary listing apps and the privacy policy to apply to them.</string>
 							<key>pfm_name</key>
-							<string>Services</string>
+							<string>IdentityDict</string>
 							<key>pfm_require</key>
 							<string>always</string>
 							<key>pfm_subkeys</key>
 							<array>
 								<dict>
 									<key>pfm_description</key>
-									<string>The bundle ID or installation path of the binary.</string>
+									<string>The bundle ID or installation path of the binary.
+Note: This value is case-sensitive.</string>
 									<key>pfm_name</key>
 									<string>Identifier</string>
 									<key>pfm_require</key>
@@ -570,7 +597,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>The type of Identifier value.</string>
+									<string>The type of identifier value. Application bundles must be identified by bundle ID. Nonbundled binaries must be identified by installation path. Helper tools embedded within an application bundle automatically inherit the permissions of their enclosing app bundle.</string>
 									<key>pfm_name</key>
 									<string>IdentifierType</string>
 									<key>pfm_range_list</key>
@@ -592,7 +619,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>The designated requirement describing the code signature of this executable.</string>
+									<string>Obtained via the command 'codesign -display -r -'.</string>
 									<key>pfm_name</key>
 									<string>CodeRequirement</string>
 									<key>pfm_require</key>
@@ -603,8 +630,10 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<string>string</string>
 								</dict>
 								<dict>
+									<key>pfm_default</key>
+									<false/>
 									<key>pfm_description</key>
-									<string>If set to true, statically validate the code requirement. Used only if the process invalidates its dynamic code signature.</string>
+									<string>If 'true', statically validate the code requirement. Used only if the process invalidates its dynamic code signature.</string>
 									<key>pfm_name</key>
 									<string>StaticCode</string>
 									<key>pfm_title</key>
@@ -614,27 +643,26 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>If set to true, access is granted. Otherwise the process does not have access. The user is not prompted and cannot change this value.</string>
+									<string>The 'Authorization' has one of the following possible values:
+'Allow': Access is granted.
+'Deny': Access is denied.</string>
+									<key>pfm_macos_min</key>
+									<string>11.0</string>
 									<key>pfm_name</key>
-									<string>Allowed</string>
+									<string>Authorization</string>
 									<key>pfm_range_list</key>
 									<array>
-										<false/>
-										<true/>
-									</array>
-									<key>pfm_range_list_titles</key>
-									<array>
-										<string>Deny</string>
 										<string>Allow</string>
+										<string>Deny</string>
 									</array>
 									<key>pfm_title</key>
-									<string>Allowed</string>
+									<string>Authorization</string>
 									<key>pfm_type</key>
-									<string>boolean</string>
+									<string>string</string>
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>Not Used</string>
+									<string>Not used.</string>
 									<key>pfm_hidden</key>
 									<string>all</string>
 									<key>pfm_name</key>
@@ -645,8 +673,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<string>string</string>
 								</dict>
 							</array>
-							<key>pfm_title</key>
-							<string>Services</string>
 							<key>pfm_type</key>
 							<string>dictionary</string>
 						</dict>
@@ -659,6 +685,8 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<string>com.apple.TCC.configuration-profile-policy.services</string>
 				</dict>
 				<dict>
+					<key>pfm_description</key>
+					<string>A system camera. Access to the camera can't be given in a profile; it can only be denied.</string>
 					<key>pfm_description_reference</key>
 					<string>A system camera. Access to the camera cannot be given in a profile; it can only be denied.</string>
 					<key>pfm_macos_min</key>
@@ -669,16 +697,17 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Keys are limited to the privacy service names listed below. Each key is an array of dictionaries describing the app or process to which access is given. In the case of conflicting specifications, the most restrictive setting (deny) will be used.</string>
+							<string>A dictionary listing apps and the privacy policy to apply to them.</string>
 							<key>pfm_name</key>
-							<string>Services</string>
+							<string>IdentityDict</string>
 							<key>pfm_require</key>
 							<string>always</string>
 							<key>pfm_subkeys</key>
 							<array>
 								<dict>
 									<key>pfm_description</key>
-									<string>The bundle ID or installation path of the binary.</string>
+									<string>The bundle ID or installation path of the binary.
+Note: This value is case-sensitive.</string>
 									<key>pfm_name</key>
 									<string>Identifier</string>
 									<key>pfm_require</key>
@@ -692,7 +721,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>The type of Identifier value.</string>
+									<string>The type of identifier value. Application bundles must be identified by bundle ID. Nonbundled binaries must be identified by installation path. Helper tools embedded within an application bundle automatically inherit the permissions of their enclosing app bundle.</string>
 									<key>pfm_name</key>
 									<string>IdentifierType</string>
 									<key>pfm_range_list</key>
@@ -714,7 +743,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>The designated requirement describing the code signature of this executable.</string>
+									<string>Obtained via the command 'codesign -display -r -'.</string>
 									<key>pfm_name</key>
 									<string>CodeRequirement</string>
 									<key>pfm_require</key>
@@ -725,8 +754,10 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<string>string</string>
 								</dict>
 								<dict>
+									<key>pfm_default</key>
+									<false/>
 									<key>pfm_description</key>
-									<string>If set to true, statically validate the code requirement. Used only if the process invalidates its dynamic code signature.</string>
+									<string>If 'true', statically validate the code requirement. Used only if the process invalidates its dynamic code signature.</string>
 									<key>pfm_name</key>
 									<string>StaticCode</string>
 									<key>pfm_title</key>
@@ -736,25 +767,25 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>If set to true, access is granted. Otherwise the process does not have access. The user is not prompted and cannot change this value.</string>
+									<string>The 'Authorization' has one of the following possible values:
+'Allow': Access is granted.
+'Deny': Access is denied.</string>
+									<key>pfm_macos_min</key>
+									<string>11.0</string>
 									<key>pfm_name</key>
-									<string>Allowed</string>
+									<string>Authorization</string>
 									<key>pfm_range_list</key>
-									<array>
-										<false/>
-									</array>
-									<key>pfm_range_list_titles</key>
 									<array>
 										<string>Deny</string>
 									</array>
 									<key>pfm_title</key>
-									<string>Allowed</string>
+									<string>Authorization</string>
 									<key>pfm_type</key>
-									<string>boolean</string>
+									<string>string</string>
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>Not Used</string>
+									<string>Not used.</string>
 									<key>pfm_hidden</key>
 									<string>all</string>
 									<key>pfm_name</key>
@@ -765,8 +796,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<string>string</string>
 								</dict>
 							</array>
-							<key>pfm_title</key>
-							<string>Services</string>
 							<key>pfm_type</key>
 							<string>dictionary</string>
 						</dict>
@@ -779,6 +808,8 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<string>com.apple.TCC.configuration-profile-policy.services</string>
 				</dict>
 				<dict>
+					<key>pfm_description</key>
+					<string>Specifies the policies for contact information managed by the Contacts.app.</string>
 					<key>pfm_description_reference</key>
 					<string>Specifies the policies for contact information managed by the Contacts.app.</string>
 					<key>pfm_macos_min</key>
@@ -789,16 +820,17 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Keys are limited to the privacy service names listed below. Each key is an array of dictionaries describing the app or process to which access is given. In the case of conflicting specifications, the most restrictive setting (deny) will be used.</string>
+							<string>A dictionary listing apps and the privacy policy to apply to them.</string>
 							<key>pfm_name</key>
-							<string>Services</string>
+							<string>IdentityDict</string>
 							<key>pfm_require</key>
 							<string>always</string>
 							<key>pfm_subkeys</key>
 							<array>
 								<dict>
 									<key>pfm_description</key>
-									<string>The bundle ID or installation path of the binary.</string>
+									<string>The bundle ID or installation path of the binary.
+Note: This value is case-sensitive.</string>
 									<key>pfm_name</key>
 									<string>Identifier</string>
 									<key>pfm_require</key>
@@ -812,7 +844,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>The type of Identifier value.</string>
+									<string>The type of identifier value. Application bundles must be identified by bundle ID. Nonbundled binaries must be identified by installation path. Helper tools embedded within an application bundle automatically inherit the permissions of their enclosing app bundle.</string>
 									<key>pfm_name</key>
 									<string>IdentifierType</string>
 									<key>pfm_range_list</key>
@@ -834,7 +866,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>The designated requirement describing the code signature of this executable.</string>
+									<string>Obtained via the command 'codesign -display -r -'.</string>
 									<key>pfm_name</key>
 									<string>CodeRequirement</string>
 									<key>pfm_require</key>
@@ -845,8 +877,10 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<string>string</string>
 								</dict>
 								<dict>
+									<key>pfm_default</key>
+									<false/>
 									<key>pfm_description</key>
-									<string>If set to true, statically validate the code requirement. Used only if the process invalidates its dynamic code signature.</string>
+									<string>If 'true', statically validate the code requirement. Used only if the process invalidates its dynamic code signature.</string>
 									<key>pfm_name</key>
 									<string>StaticCode</string>
 									<key>pfm_title</key>
@@ -856,27 +890,26 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>If set to true, access is granted. Otherwise the process does not have access. The user is not prompted and cannot change this value.</string>
+									<string>The 'Authorization' has one of the following possible values:
+'Allow': Access is granted.
+'Deny': Access is denied.</string>
+									<key>pfm_macos_min</key>
+									<string>11.0</string>
 									<key>pfm_name</key>
-									<string>Allowed</string>
+									<string>Authorization</string>
 									<key>pfm_range_list</key>
 									<array>
-										<false/>
-										<true/>
-									</array>
-									<key>pfm_range_list_titles</key>
-									<array>
-										<string>Deny</string>
 										<string>Allow</string>
+										<string>Deny</string>
 									</array>
 									<key>pfm_title</key>
-									<string>Allowed</string>
+									<string>Authorization</string>
 									<key>pfm_type</key>
-									<string>boolean</string>
+									<string>string</string>
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>Not Used</string>
+									<string>Not used.</string>
 									<key>pfm_hidden</key>
 									<string>all</string>
 									<key>pfm_name</key>
@@ -887,8 +920,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<string>string</string>
 								</dict>
 							</array>
-							<key>pfm_title</key>
-							<string>Services</string>
 							<key>pfm_type</key>
 							<string>dictionary</string>
 						</dict>
@@ -901,6 +932,8 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<string>com.apple.TCC.configuration-profile-policy.services</string>
 				</dict>
 				<dict>
+					<key>pfm_description</key>
+					<string>Allows a File Provider application to know when the user is using files managed by the File Provider.</string>
 					<key>pfm_description_reference</key>
 					<string>Allows a File Provider application to know when the user is using files managed by the File Provider.</string>
 					<key>pfm_macos_min</key>
@@ -911,16 +944,21 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Keys are limited to the privacy service names listed below. Each key is an array of dictionaries describing the app or process to which access is given. In the case of conflicting specifications, the most restrictive setting (deny) will be used.</string>
+							<string>A dictionary listing apps and the privacy policy to apply to them.</string>
+							<key>pfm_macos_min</key>
+							<string>10.15</string>
 							<key>pfm_name</key>
-							<string>Services</string>
+							<string>IdentityDict</string>
 							<key>pfm_require</key>
 							<string>always</string>
 							<key>pfm_subkeys</key>
 							<array>
 								<dict>
 									<key>pfm_description</key>
-									<string>The bundle ID or installation path of the binary.</string>
+									<string>The bundle ID or installation path of the binary.
+Note: This value is case-sensitive.</string>
+									<key>pfm_macos_min</key>
+									<string>10.15</string>
 									<key>pfm_name</key>
 									<string>Identifier</string>
 									<key>pfm_require</key>
@@ -934,7 +972,9 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>The type of Identifier value.</string>
+									<string>The type of identifier value. Application bundles must be identified by bundle ID. Nonbundled binaries must be identified by installation path. Helper tools embedded within an application bundle automatically inherit the permissions of their enclosing app bundle.</string>
+									<key>pfm_macos_min</key>
+									<string>10.15</string>
 									<key>pfm_name</key>
 									<string>IdentifierType</string>
 									<key>pfm_range_list</key>
@@ -956,7 +996,9 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>The designated requirement describing the code signature of this executable.</string>
+									<string>Obtained via the command 'codesign -display -r -'.</string>
+									<key>pfm_macos_min</key>
+									<string>10.15</string>
 									<key>pfm_name</key>
 									<string>CodeRequirement</string>
 									<key>pfm_require</key>
@@ -967,8 +1009,12 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<string>string</string>
 								</dict>
 								<dict>
+									<key>pfm_default</key>
+									<false/>
 									<key>pfm_description</key>
-									<string>If set to true, statically validate the code requirement. Used only if the process invalidates its dynamic code signature.</string>
+									<string>If 'true', statically validate the code requirement. Used only if the process invalidates its dynamic code signature.</string>
+									<key>pfm_macos_min</key>
+									<string>10.15</string>
 									<key>pfm_name</key>
 									<string>StaticCode</string>
 									<key>pfm_title</key>
@@ -978,29 +1024,30 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>If set to true, access is granted. Otherwise the process does not have access. The user is not prompted and cannot change this value.</string>
+									<string>The 'Authorization' has one of the following possible values:
+'Allow': Access is granted.
+'Deny': Access is denied.</string>
+									<key>pfm_macos_min</key>
+									<string>11.0</string>
 									<key>pfm_name</key>
-									<string>Allowed</string>
+									<string>Authorization</string>
 									<key>pfm_range_list</key>
 									<array>
-										<false/>
-										<true/>
-									</array>
-									<key>pfm_range_list_titles</key>
-									<array>
-										<string>Deny</string>
 										<string>Allow</string>
+										<string>Deny</string>
 									</array>
 									<key>pfm_title</key>
-									<string>Allowed</string>
+									<string>Authorization</string>
 									<key>pfm_type</key>
-									<string>boolean</string>
+									<string>string</string>
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>Not Used</string>
+									<string>Not used.</string>
 									<key>pfm_hidden</key>
 									<string>all</string>
+									<key>pfm_macos_min</key>
+									<string>10.15</string>
 									<key>pfm_name</key>
 									<string>Comment</string>
 									<key>pfm_title</key>
@@ -1009,8 +1056,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<string>string</string>
 								</dict>
 							</array>
-							<key>pfm_title</key>
-							<string>Services</string>
 							<key>pfm_type</key>
 							<string>dictionary</string>
 						</dict>
@@ -1021,8 +1066,15 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<string>com.apple.TCC.configuration-profile-policy.services</string>
 				</dict>
 				<dict>
+					<key>pfm_description</key>
+					<string>Allows the application to use CoreGraphics and HID APIs to listen to (receive) CGEvents and HID events from all processes. Access to these events can't be given in a profile; it can only be denied.</string>
 					<key>pfm_description_reference</key>
-					<string>Allows the application to use CoreGraphics and HID APIs to listen to (receive) CGEvents and HID events from all processes. Access to these events cannot be given in a profile; it can only be denied.</string>
+					<string>Allows the application to use CoreGraphics and HID APIs to listen to (receive) CGEvents and HID events from all processes.
+Approval cannot be applied in a profile; the only option is to enable standard (non-admin) users to change the setting, or deny.
+'AllowStandardUserToSetSystemService' allows a standard (non-admin) user to configure the permissions for the specified app.
+'Deny' will disable access for the specified app, and the setting is not changeable by either a standard or administrator account, and the user will not be prompted.</string>
+					<key>pfm_documentation_url</key>
+					<string>https://developer.apple.com/documentation/devicemanagement/privacypreferencespolicycontrol/services-data.dictionary/identity</string>
 					<key>pfm_macos_min</key>
 					<string>10.15</string>
 					<key>pfm_name</key>
@@ -1031,16 +1083,21 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Keys are limited to the privacy service names listed below. Each key is an array of dictionaries describing the app or process to which access is given. In the case of conflicting specifications, the most restrictive setting (deny) will be used.</string>
+							<string>A dictionary listing apps and the privacy policy to apply to them.</string>
+							<key>pfm_macos_min</key>
+							<string>10.15</string>
 							<key>pfm_name</key>
-							<string>Services</string>
+							<string>IdentityDict</string>
 							<key>pfm_require</key>
 							<string>always</string>
 							<key>pfm_subkeys</key>
 							<array>
 								<dict>
 									<key>pfm_description</key>
-									<string>The bundle ID or installation path of the binary.</string>
+									<string>The bundle ID or installation path of the binary.
+Note: This value is case-sensitive.</string>
+									<key>pfm_macos_min</key>
+									<string>10.15</string>
 									<key>pfm_name</key>
 									<string>Identifier</string>
 									<key>pfm_require</key>
@@ -1054,7 +1111,9 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>The type of Identifier value.</string>
+									<string>The type of identifier value. Application bundles must be identified by bundle ID. Nonbundled binaries must be identified by installation path. Helper tools embedded within an application bundle automatically inherit the permissions of their enclosing app bundle.</string>
+									<key>pfm_macos_min</key>
+									<string>10.15</string>
 									<key>pfm_name</key>
 									<string>IdentifierType</string>
 									<key>pfm_range_list</key>
@@ -1076,7 +1135,9 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>The designated requirement describing the code signature of this executable.</string>
+									<string>Obtained via the command 'codesign -display -r -'.</string>
+									<key>pfm_macos_min</key>
+									<string>10.15</string>
 									<key>pfm_name</key>
 									<string>CodeRequirement</string>
 									<key>pfm_require</key>
@@ -1087,8 +1148,12 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<string>string</string>
 								</dict>
 								<dict>
+									<key>pfm_default</key>
+									<false/>
 									<key>pfm_description</key>
-									<string>If set to true, statically validate the code requirement. Used only if the process invalidates its dynamic code signature.</string>
+									<string>If 'true', statically validate the code requirement. Used only if the process invalidates its dynamic code signature.</string>
+									<key>pfm_macos_min</key>
+									<string>10.15</string>
 									<key>pfm_name</key>
 									<string>StaticCode</string>
 									<key>pfm_title</key>
@@ -1098,27 +1163,28 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>If set to true, access is granted. Otherwise the process does not have access. The user is not prompted and cannot change this value.</string>
+									<string>The 'Authorization' has one of the following possible values:
+'Deny': Access is denied.
+'AllowStandardUserToSetSystemService': Allows a standard (non-admin) user to configure the permissions for the specified app in the Privacy preferences for services that otherwise require admin authorization.</string>
+									<key>pfm_macos_min</key>
+									<string>11.0</string>
 									<key>pfm_name</key>
-									<string>Allowed</string>
+									<string>Authorization</string>
 									<key>pfm_range_list</key>
 									<array>
-										<false/>
-									</array>
-									<key>pfm_range_list_titles</key>
-									<array>
 										<string>Deny</string>
+										<string>AllowStandardUserToSetSystemService</string>
 									</array>
-									<key>pfm_title</key>
-									<string>Allowed</string>
 									<key>pfm_type</key>
-									<string>boolean</string>
+									<string>string</string>
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>Not Used</string>
+									<string>Not used.</string>
 									<key>pfm_hidden</key>
 									<string>all</string>
+									<key>pfm_macos_min</key>
+									<string>10.15</string>
 									<key>pfm_name</key>
 									<string>Comment</string>
 									<key>pfm_title</key>
@@ -1127,8 +1193,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<string>string</string>
 								</dict>
 							</array>
-							<key>pfm_title</key>
-							<string>Services</string>
 							<key>pfm_type</key>
 							<string>dictionary</string>
 						</dict>
@@ -1139,6 +1203,8 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<string>com.apple.TCC.configuration-profile-policy.services</string>
 				</dict>
 				<dict>
+					<key>pfm_description</key>
+					<string>Allows the application to access Apple Music, music and video activity, and the media library.</string>
 					<key>pfm_description_reference</key>
 					<string>Allows the application to access Apple Music, music and video activity, and the media library.</string>
 					<key>pfm_macos_min</key>
@@ -1149,16 +1215,21 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Keys are limited to the privacy service names listed below. Each key is an array of dictionaries describing the app or process to which access is given. In the case of conflicting specifications, the most restrictive setting (deny) will be used.</string>
+							<string>A dictionary listing apps and the privacy policy to apply to them.</string>
+							<key>pfm_macos_min</key>
+							<string>10.15</string>
 							<key>pfm_name</key>
-							<string>Services</string>
+							<string>IdentityDict</string>
 							<key>pfm_require</key>
 							<string>always</string>
 							<key>pfm_subkeys</key>
 							<array>
 								<dict>
 									<key>pfm_description</key>
-									<string>The bundle ID or installation path of the binary.</string>
+									<string>The bundle ID or installation path of the binary.
+Note: This value is case-sensitive.</string>
+									<key>pfm_macos_min</key>
+									<string>10.15</string>
 									<key>pfm_name</key>
 									<string>Identifier</string>
 									<key>pfm_require</key>
@@ -1172,7 +1243,9 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>The type of Identifier value.</string>
+									<string>The type of identifier value. Application bundles must be identified by bundle ID. Nonbundled binaries must be identified by installation path. Helper tools embedded within an application bundle automatically inherit the permissions of their enclosing app bundle.</string>
+									<key>pfm_macos_min</key>
+									<string>10.15</string>
 									<key>pfm_name</key>
 									<string>IdentifierType</string>
 									<key>pfm_range_list</key>
@@ -1194,7 +1267,9 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>The designated requirement describing the code signature of this executable.</string>
+									<string>Obtained via the command 'codesign -display -r -'.</string>
+									<key>pfm_macos_min</key>
+									<string>10.15</string>
 									<key>pfm_name</key>
 									<string>CodeRequirement</string>
 									<key>pfm_require</key>
@@ -1205,8 +1280,12 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<string>string</string>
 								</dict>
 								<dict>
+									<key>pfm_default</key>
+									<false/>
 									<key>pfm_description</key>
-									<string>If set to true, statically validate the code requirement. Used only if the process invalidates its dynamic code signature.</string>
+									<string>If 'true', statically validate the code requirement. Used only if the process invalidates its dynamic code signature.</string>
+									<key>pfm_macos_min</key>
+									<string>10.15</string>
 									<key>pfm_name</key>
 									<string>StaticCode</string>
 									<key>pfm_title</key>
@@ -1216,29 +1295,30 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>If set to true, access is granted. Otherwise the process does not have access. The user is not prompted and cannot change this value.</string>
+									<string>The 'Authorization' has one of the following possible values:
+'Allow': Access is granted.
+'Deny': Access is denied.</string>
+									<key>pfm_macos_min</key>
+									<string>11.0</string>
 									<key>pfm_name</key>
-									<string>Allowed</string>
+									<string>Authorization</string>
 									<key>pfm_range_list</key>
 									<array>
-										<false/>
-										<true/>
-									</array>
-									<key>pfm_range_list_titles</key>
-									<array>
-										<string>Deny</string>
 										<string>Allow</string>
+										<string>Deny</string>
 									</array>
 									<key>pfm_title</key>
-									<string>Allowed</string>
+									<string>Authorization</string>
 									<key>pfm_type</key>
-									<string>boolean</string>
+									<string>string</string>
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>Not Used</string>
+									<string>Not used.</string>
 									<key>pfm_hidden</key>
 									<string>all</string>
+									<key>pfm_macos_min</key>
+									<string>10.15</string>
 									<key>pfm_name</key>
 									<string>Comment</string>
 									<key>pfm_title</key>
@@ -1247,8 +1327,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<string>string</string>
 								</dict>
 							</array>
-							<key>pfm_title</key>
-							<string>Services</string>
 							<key>pfm_type</key>
 							<string>dictionary</string>
 						</dict>
@@ -1259,6 +1337,8 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<string>com.apple.TCC.configuration-profile-policy.services</string>
 				</dict>
 				<dict>
+					<key>pfm_description</key>
+					<string>A system microphone. Access to the microphone can't be given in a profile; it can only be denied.</string>
 					<key>pfm_description_reference</key>
 					<string>A system microphone. Access to the microphone cannot be given in a profile; it can only be denied.</string>
 					<key>pfm_macos_min</key>
@@ -1269,16 +1349,17 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Keys are limited to the privacy service names listed below. Each key is an array of dictionaries describing the app or process to which access is given. In the case of conflicting specifications, the most restrictive setting (deny) will be used.</string>
+							<string>A dictionary listing apps and the privacy policy to apply to them.</string>
 							<key>pfm_name</key>
-							<string>Services</string>
+							<string>IdentityDict</string>
 							<key>pfm_require</key>
 							<string>always</string>
 							<key>pfm_subkeys</key>
 							<array>
 								<dict>
 									<key>pfm_description</key>
-									<string>The bundle ID or installation path of the binary.</string>
+									<string>The bundle ID or installation path of the binary.
+Note: This value is case-sensitive.</string>
 									<key>pfm_name</key>
 									<string>Identifier</string>
 									<key>pfm_require</key>
@@ -1292,7 +1373,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>The type of Identifier value.</string>
+									<string>The type of identifier value. Application bundles must be identified by bundle ID. Nonbundled binaries must be identified by installation path. Helper tools embedded within an application bundle automatically inherit the permissions of their enclosing app bundle.</string>
 									<key>pfm_name</key>
 									<string>IdentifierType</string>
 									<key>pfm_range_list</key>
@@ -1314,7 +1395,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>The designated requirement describing the code signature of this executable.</string>
+									<string>Obtained via the command 'codesign -display -r -'.</string>
 									<key>pfm_name</key>
 									<string>CodeRequirement</string>
 									<key>pfm_require</key>
@@ -1325,8 +1406,10 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<string>string</string>
 								</dict>
 								<dict>
+									<key>pfm_default</key>
+									<false/>
 									<key>pfm_description</key>
-									<string>If set to true, statically validate the code requirement. Used only if the process invalidates its dynamic code signature.</string>
+									<string>If 'true', statically validate the code requirement. Used only if the process invalidates its dynamic code signature.</string>
 									<key>pfm_name</key>
 									<string>StaticCode</string>
 									<key>pfm_title</key>
@@ -1336,25 +1419,25 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>If set to true, access is granted. Otherwise the process does not have access. The user is not prompted and cannot change this value.</string>
+									<string>The 'Authorization' has one of the following possible values:
+'Allow': Access is granted.
+'Deny': Access is denied.</string>
+									<key>pfm_macos_min</key>
+									<string>11.0</string>
 									<key>pfm_name</key>
-									<string>Allowed</string>
+									<string>Authorization</string>
 									<key>pfm_range_list</key>
-									<array>
-										<false/>
-									</array>
-									<key>pfm_range_list_titles</key>
 									<array>
 										<string>Deny</string>
 									</array>
 									<key>pfm_title</key>
-									<string>Allowed</string>
+									<string>Authorization</string>
 									<key>pfm_type</key>
-									<string>boolean</string>
+									<string>string</string>
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>Not Used</string>
+									<string>Not used.</string>
 									<key>pfm_hidden</key>
 									<string>all</string>
 									<key>pfm_name</key>
@@ -1365,8 +1448,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<string>string</string>
 								</dict>
 							</array>
-							<key>pfm_title</key>
-							<string>Services</string>
 							<key>pfm_type</key>
 							<string>dictionary</string>
 						</dict>
@@ -1379,6 +1460,8 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<string>com.apple.TCC.configuration-profile-policy.services</string>
 				</dict>
 				<dict>
+					<key>pfm_description</key>
+					<string>The pictures managed by the Photos app in '~/Pictures/.photoslibrary'.</string>
 					<key>pfm_description_reference</key>
 					<string>Pictures managed by Photos.app in ~/Pictures/.photoslibrary.</string>
 					<key>pfm_macos_min</key>
@@ -1389,16 +1472,17 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Keys are limited to the privacy service names listed below. Each key is an array of dictionaries describing the app or process to which access is given. In the case of conflicting specifications, the most restrictive setting (deny) will be used.</string>
+							<string>A dictionary listing apps and the privacy policy to apply to them.</string>
 							<key>pfm_name</key>
-							<string>Services</string>
+							<string>IdentityDict</string>
 							<key>pfm_require</key>
 							<string>always</string>
 							<key>pfm_subkeys</key>
 							<array>
 								<dict>
 									<key>pfm_description</key>
-									<string>The bundle ID or installation path of the binary.</string>
+									<string>The bundle ID or installation path of the binary.
+Note: This value is case-sensitive.</string>
 									<key>pfm_name</key>
 									<string>Identifier</string>
 									<key>pfm_require</key>
@@ -1412,7 +1496,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>The type of Identifier value.</string>
+									<string>The type of identifier value. Application bundles must be identified by bundle ID. Nonbundled binaries must be identified by installation path. Helper tools embedded within an application bundle automatically inherit the permissions of their enclosing app bundle.</string>
 									<key>pfm_name</key>
 									<string>IdentifierType</string>
 									<key>pfm_range_list</key>
@@ -1434,7 +1518,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>The designated requirement describing the code signature of this executable.</string>
+									<string>Obtained via the command 'codesign -display -r -'.</string>
 									<key>pfm_name</key>
 									<string>CodeRequirement</string>
 									<key>pfm_require</key>
@@ -1445,8 +1529,10 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<string>string</string>
 								</dict>
 								<dict>
+									<key>pfm_default</key>
+									<false/>
 									<key>pfm_description</key>
-									<string>If set to true, statically validate the code requirement. Used only if the process invalidates its dynamic code signature.</string>
+									<string>If 'true', statically validate the code requirement. Used only if the process invalidates its dynamic code signature.</string>
 									<key>pfm_name</key>
 									<string>StaticCode</string>
 									<key>pfm_title</key>
@@ -1456,27 +1542,26 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>If set to true, access is granted. Otherwise the process does not have access. The user is not prompted and cannot change this value.</string>
+									<string>The 'Authorization' has one of the following possible values:
+'Allow': Access is granted.
+'Deny': Access is denied.</string>
+									<key>pfm_macos_min</key>
+									<string>11.0</string>
 									<key>pfm_name</key>
-									<string>Allowed</string>
+									<string>Authorization</string>
 									<key>pfm_range_list</key>
 									<array>
-										<false/>
-										<true/>
-									</array>
-									<key>pfm_range_list_titles</key>
-									<array>
-										<string>Deny</string>
 										<string>Allow</string>
+										<string>Deny</string>
 									</array>
 									<key>pfm_title</key>
-									<string>Allowed</string>
+									<string>Authorization</string>
 									<key>pfm_type</key>
-									<string>boolean</string>
+									<string>string</string>
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>Not Used</string>
+									<string>Not used.</string>
 									<key>pfm_hidden</key>
 									<string>all</string>
 									<key>pfm_name</key>
@@ -1487,8 +1572,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<string>string</string>
 								</dict>
 							</array>
-							<key>pfm_title</key>
-							<string>Services</string>
 							<key>pfm_type</key>
 							<string>dictionary</string>
 						</dict>
@@ -1511,16 +1594,17 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Keys are limited to the privacy service names listed below. Each key is an array of dictionaries describing the app or process to which access is given. In the case of conflicting specifications, the most restrictive setting (deny) will be used.</string>
+							<string>A dictionary listing apps and the privacy policy to apply to them.</string>
 							<key>pfm_name</key>
-							<string>Services</string>
+							<string>IdentityDict</string>
 							<key>pfm_require</key>
 							<string>always</string>
 							<key>pfm_subkeys</key>
 							<array>
 								<dict>
 									<key>pfm_description</key>
-									<string>The bundle ID or installation path of the binary.</string>
+									<string>The bundle ID or installation path of the binary.
+Note: This value is case-sensitive.</string>
 									<key>pfm_name</key>
 									<string>Identifier</string>
 									<key>pfm_require</key>
@@ -1534,7 +1618,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>The type of Identifier value.</string>
+									<string>The type of identifier value. Application bundles must be identified by bundle ID. Nonbundled binaries must be identified by installation path. Helper tools embedded within an application bundle automatically inherit the permissions of their enclosing app bundle.</string>
 									<key>pfm_name</key>
 									<string>IdentifierType</string>
 									<key>pfm_range_list</key>
@@ -1556,7 +1640,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>The designated requirement describing the code signature of this executable.</string>
+									<string>Obtained via the command 'codesign -display -r -'.</string>
 									<key>pfm_name</key>
 									<string>CodeRequirement</string>
 									<key>pfm_require</key>
@@ -1567,8 +1651,10 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<string>string</string>
 								</dict>
 								<dict>
+									<key>pfm_default</key>
+									<false/>
 									<key>pfm_description</key>
-									<string>If set to true, statically validate the code requirement. Used only if the process invalidates its dynamic code signature.</string>
+									<string>If 'true', statically validate the code requirement. Used only if the process invalidates its dynamic code signature.</string>
 									<key>pfm_name</key>
 									<string>StaticCode</string>
 									<key>pfm_title</key>
@@ -1578,27 +1664,26 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>If set to true, access is granted. Otherwise the process does not have access. The user is not prompted and cannot change this value.</string>
+									<string>The 'Authorization' has one of the following possible values:
+'Allow': Access is granted.
+'Deny': Access is denied.</string>
+									<key>pfm_macos_min</key>
+									<string>11.0</string>
 									<key>pfm_name</key>
-									<string>Allowed</string>
+									<string>Authorization</string>
 									<key>pfm_range_list</key>
 									<array>
-										<false/>
-										<true/>
-									</array>
-									<key>pfm_range_list_titles</key>
-									<array>
-										<string>Deny</string>
 										<string>Allow</string>
+										<string>Deny</string>
 									</array>
 									<key>pfm_title</key>
-									<string>Allowed</string>
+									<string>Authorization</string>
 									<key>pfm_type</key>
-									<string>boolean</string>
+									<string>string</string>
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>Not Used</string>
+									<string>Not used.</string>
 									<key>pfm_hidden</key>
 									<string>all</string>
 									<key>pfm_name</key>
@@ -1609,8 +1694,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<string>string</string>
 								</dict>
 							</array>
-							<key>pfm_title</key>
-							<string>Services</string>
 							<key>pfm_type</key>
 							<string>dictionary</string>
 						</dict>
@@ -1623,6 +1706,8 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<string>com.apple.TCC.configuration-profile-policy.services</string>
 				</dict>
 				<dict>
+					<key>pfm_description</key>
+					<string>Specifies the policies for reminders information managed by the Reminders app.</string>
 					<key>pfm_description_reference</key>
 					<string>Specifies the policies for reminders information managed by the Reminders app.</string>
 					<key>pfm_macos_min</key>
@@ -1633,16 +1718,17 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Keys are limited to the privacy service names listed below. Each key is an array of dictionaries describing the app or process to which access is given. In the case of conflicting specifications, the most restrictive setting (deny) will be used.</string>
+							<string>A dictionary listing apps and the privacy policy to apply to them.</string>
 							<key>pfm_name</key>
-							<string>Services</string>
+							<string>IdentityDict</string>
 							<key>pfm_require</key>
 							<string>always</string>
 							<key>pfm_subkeys</key>
 							<array>
 								<dict>
 									<key>pfm_description</key>
-									<string>The bundle ID or installation path of the binary.</string>
+									<string>The bundle ID or installation path of the binary.
+Note: This value is case-sensitive.</string>
 									<key>pfm_name</key>
 									<string>Identifier</string>
 									<key>pfm_require</key>
@@ -1656,7 +1742,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>The type of Identifier value.</string>
+									<string>The type of identifier value. Application bundles must be identified by bundle ID. Nonbundled binaries must be identified by installation path. Helper tools embedded within an application bundle automatically inherit the permissions of their enclosing app bundle.</string>
 									<key>pfm_name</key>
 									<string>IdentifierType</string>
 									<key>pfm_range_list</key>
@@ -1678,7 +1764,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>The designated requirement describing the code signature of this executable.</string>
+									<string>Obtained via the command 'codesign -display -r -'.</string>
 									<key>pfm_name</key>
 									<string>CodeRequirement</string>
 									<key>pfm_require</key>
@@ -1689,8 +1775,10 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<string>string</string>
 								</dict>
 								<dict>
+									<key>pfm_default</key>
+									<false/>
 									<key>pfm_description</key>
-									<string>If set to true, statically validate the code requirement. Used only if the process invalidates its dynamic code signature.</string>
+									<string>If 'true', statically validate the code requirement. Used only if the process invalidates its dynamic code signature.</string>
 									<key>pfm_name</key>
 									<string>StaticCode</string>
 									<key>pfm_title</key>
@@ -1700,27 +1788,26 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>If set to true, access is granted. Otherwise the process does not have access. The user is not prompted and cannot change this value.</string>
+									<string>The 'Authorization' has one of the following possible values:
+'Allow': Access is granted.
+'Deny': Access is denied.</string>
+									<key>pfm_macos_min</key>
+									<string>11.0</string>
 									<key>pfm_name</key>
-									<string>Allowed</string>
+									<string>Authorization</string>
 									<key>pfm_range_list</key>
 									<array>
-										<false/>
-										<true/>
-									</array>
-									<key>pfm_range_list_titles</key>
-									<array>
-										<string>Deny</string>
 										<string>Allow</string>
+										<string>Deny</string>
 									</array>
 									<key>pfm_title</key>
-									<string>Allowed</string>
+									<string>Authorization</string>
 									<key>pfm_type</key>
-									<string>boolean</string>
+									<string>string</string>
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>Not Used</string>
+									<string>Not used.</string>
 									<key>pfm_hidden</key>
 									<string>all</string>
 									<key>pfm_name</key>
@@ -1731,8 +1818,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<string>string</string>
 								</dict>
 							</array>
-							<key>pfm_title</key>
-							<string>Services</string>
 							<key>pfm_type</key>
 							<string>dictionary</string>
 						</dict>
@@ -1745,6 +1830,8 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<string>com.apple.TCC.configuration-profile-policy.services</string>
 				</dict>
 				<dict>
+					<key>pfm_description</key>
+					<string>Allows the application access to all protected files, including system administration files.</string>
 					<key>pfm_description_reference</key>
 					<string>Allows the application access to all protected files.</string>
 					<key>pfm_macos_min</key>
@@ -1755,16 +1842,17 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Keys are limited to the privacy service names listed below. Each key is an array of dictionaries describing the app or process to which access is given. In the case of conflicting specifications, the most restrictive setting (deny) will be used.</string>
+							<string>A dictionary listing apps and the privacy policy to apply to them.</string>
 							<key>pfm_name</key>
-							<string>Services</string>
+							<string>IdentityDict</string>
 							<key>pfm_require</key>
 							<string>always</string>
 							<key>pfm_subkeys</key>
 							<array>
 								<dict>
 									<key>pfm_description</key>
-									<string>The bundle ID or installation path of the binary.</string>
+									<string>The bundle ID or installation path of the binary.
+Note: This value is case-sensitive.</string>
 									<key>pfm_name</key>
 									<string>Identifier</string>
 									<key>pfm_require</key>
@@ -1778,7 +1866,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>The type of Identifier value.</string>
+									<string>The type of identifier value. Application bundles must be identified by bundle ID. Nonbundled binaries must be identified by installation path. Helper tools embedded within an application bundle automatically inherit the permissions of their enclosing app bundle.</string>
 									<key>pfm_name</key>
 									<string>IdentifierType</string>
 									<key>pfm_range_list</key>
@@ -1800,7 +1888,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>The designated requirement describing the code signature of this executable.</string>
+									<string>Obtained via the command 'codesign -display -r -'.</string>
 									<key>pfm_name</key>
 									<string>CodeRequirement</string>
 									<key>pfm_require</key>
@@ -1811,8 +1899,10 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<string>string</string>
 								</dict>
 								<dict>
+									<key>pfm_default</key>
+									<false/>
 									<key>pfm_description</key>
-									<string>If set to true, statically validate the code requirement. Used only if the process invalidates its dynamic code signature.</string>
+									<string>If 'true', statically validate the code requirement. Used only if the process invalidates its dynamic code signature.</string>
 									<key>pfm_name</key>
 									<string>StaticCode</string>
 									<key>pfm_title</key>
@@ -1822,27 +1912,26 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>If set to true, access is granted. Otherwise the process does not have access. The user is not prompted and cannot change this value.</string>
+									<string>The 'Authorization' has one of the following possible values:
+'Allow': Access is granted.
+'Deny': Access is denied.</string>
+									<key>pfm_macos_min</key>
+									<string>11.0</string>
 									<key>pfm_name</key>
-									<string>Allowed</string>
+									<string>Authorization</string>
 									<key>pfm_range_list</key>
 									<array>
-										<false/>
-										<true/>
-									</array>
-									<key>pfm_range_list_titles</key>
-									<array>
-										<string>Deny</string>
 										<string>Allow</string>
+										<string>Deny</string>
 									</array>
 									<key>pfm_title</key>
-									<string>Allowed</string>
+									<string>Authorization</string>
 									<key>pfm_type</key>
-									<string>boolean</string>
+									<string>string</string>
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>Not Used</string>
+									<string>Not used.</string>
 									<key>pfm_hidden</key>
 									<string>all</string>
 									<key>pfm_name</key>
@@ -1853,8 +1942,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<string>string</string>
 								</dict>
 							</array>
-							<key>pfm_title</key>
-							<string>Services</string>
 							<key>pfm_type</key>
 							<string>dictionary</string>
 						</dict>
@@ -1867,8 +1954,12 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<string>com.apple.TCC.configuration-profile-policy.services</string>
 				</dict>
 				<dict>
+					<key>pfm_description</key>
+					<string>Allows the application to capture (read) the contents of the system display. Access to the contents can't be given in a profile; it can only be denied.</string>
 					<key>pfm_description_reference</key>
-					<string>Allows the application to capture (read) the contents of the system display. Access to the contents cannot be given in a profile; it can only be denied.</string>
+					<string>The 'Authorization' has one of the following possible values:
+'Deny': Access is denied.
+'AllowStandardUserToSetSystemService': Allows a standard (non-admin) user to configure the permissions for the specified app in the Privacy preferences for services that otherwise require admin authorization.</string>
 					<key>pfm_macos_min</key>
 					<string>10.15</string>
 					<key>pfm_name</key>
@@ -1877,16 +1968,21 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Keys are limited to the privacy service names listed below. Each key is an array of dictionaries describing the app or process to which access is given. In the case of conflicting specifications, the most restrictive setting (deny) will be used.</string>
+							<string>A dictionary listing apps and the privacy policy to apply to them.</string>
+							<key>pfm_macos_min</key>
+							<string>10.15</string>
 							<key>pfm_name</key>
-							<string>Services</string>
+							<string>IdentityDict</string>
 							<key>pfm_require</key>
 							<string>always</string>
 							<key>pfm_subkeys</key>
 							<array>
 								<dict>
 									<key>pfm_description</key>
-									<string>The bundle ID or installation path of the binary.</string>
+									<string>The bundle ID or installation path of the binary.
+Note: This value is case-sensitive.</string>
+									<key>pfm_macos_min</key>
+									<string>10.15</string>
 									<key>pfm_name</key>
 									<string>Identifier</string>
 									<key>pfm_require</key>
@@ -1900,7 +1996,9 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>The type of Identifier value.</string>
+									<string>The type of identifier value. Application bundles must be identified by bundle ID. Nonbundled binaries must be identified by installation path. Helper tools embedded within an application bundle automatically inherit the permissions of their enclosing app bundle.</string>
+									<key>pfm_macos_min</key>
+									<string>10.15</string>
 									<key>pfm_name</key>
 									<string>IdentifierType</string>
 									<key>pfm_range_list</key>
@@ -1922,7 +2020,9 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>The designated requirement describing the code signature of this executable.</string>
+									<string>Obtained via the command 'codesign -display -r -'.</string>
+									<key>pfm_macos_min</key>
+									<string>10.15</string>
 									<key>pfm_name</key>
 									<string>CodeRequirement</string>
 									<key>pfm_require</key>
@@ -1933,8 +2033,12 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<string>string</string>
 								</dict>
 								<dict>
+									<key>pfm_default</key>
+									<false/>
 									<key>pfm_description</key>
-									<string>If set to true, statically validate the code requirement. Used only if the process invalidates its dynamic code signature.</string>
+									<string>If 'true', statically validate the code requirement. Used only if the process invalidates its dynamic code signature.</string>
+									<key>pfm_macos_min</key>
+									<string>10.15</string>
 									<key>pfm_name</key>
 									<string>StaticCode</string>
 									<key>pfm_title</key>
@@ -1944,27 +2048,28 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>If set to true, access is granted. Otherwise the process does not have access. The user is not prompted and cannot change this value.</string>
+									<string>The 'Authorization' has one of the following possible values:
+'Deny': Access is denied.
+'AllowStandardUserToSetSystemService': Allows a standard (non-admin) user to configure the permissions for the specified app in the Privacy preferences for services that otherwise require admin authorization.</string>
+									<key>pfm_macos_min</key>
+									<string>11.0</string>
 									<key>pfm_name</key>
-									<string>Allowed</string>
+									<string>Authorization</string>
 									<key>pfm_range_list</key>
 									<array>
-										<false/>
-									</array>
-									<key>pfm_range_list_titles</key>
-									<array>
 										<string>Deny</string>
+										<string>AllowStandardUserToSetSystemService</string>
 									</array>
-									<key>pfm_title</key>
-									<string>Allowed</string>
 									<key>pfm_type</key>
-									<string>boolean</string>
+									<string>string</string>
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>Not Used</string>
+									<string>Not used.</string>
 									<key>pfm_hidden</key>
 									<string>all</string>
+									<key>pfm_macos_min</key>
+									<string>10.15</string>
 									<key>pfm_name</key>
 									<string>Comment</string>
 									<key>pfm_title</key>
@@ -1973,18 +2078,20 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<string>string</string>
 								</dict>
 							</array>
-							<key>pfm_title</key>
-							<string>Services</string>
 							<key>pfm_type</key>
 							<string>dictionary</string>
 						</dict>
 					</array>
+					<key>pfm_title</key>
+					<string>Screen &amp; System Audio Recording</string>
 					<key>pfm_type</key>
 					<string>array</string>
 					<key>pfm_value_import_processor</key>
 					<string>com.apple.TCC.configuration-profile-policy.services</string>
 				</dict>
 				<dict>
+					<key>pfm_description</key>
+					<string>Allows the application to use the system Speech Recognition facility and to send speech data to Apple.</string>
 					<key>pfm_description_reference</key>
 					<string>Allows the application to use the system Speech Recognition facility and to send speech data to Apple.</string>
 					<key>pfm_macos_min</key>
@@ -1995,16 +2102,21 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Keys are limited to the privacy service names listed below. Each key is an array of dictionaries describing the app or process to which access is given. In the case of conflicting specifications, the most restrictive setting (deny) will be used.</string>
+							<string>A dictionary listing apps and the privacy policy to apply to them.</string>
+							<key>pfm_macos_min</key>
+							<string>10.15</string>
 							<key>pfm_name</key>
-							<string>Services</string>
+							<string>IdentityDict</string>
 							<key>pfm_require</key>
 							<string>always</string>
 							<key>pfm_subkeys</key>
 							<array>
 								<dict>
 									<key>pfm_description</key>
-									<string>The bundle ID or installation path of the binary.</string>
+									<string>The bundle ID or installation path of the binary.
+Note: This value is case-sensitive.</string>
+									<key>pfm_macos_min</key>
+									<string>10.15</string>
 									<key>pfm_name</key>
 									<string>Identifier</string>
 									<key>pfm_require</key>
@@ -2018,7 +2130,9 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>The type of Identifier value.</string>
+									<string>The type of identifier value. Application bundles must be identified by bundle ID. Nonbundled binaries must be identified by installation path. Helper tools embedded within an application bundle automatically inherit the permissions of their enclosing app bundle.</string>
+									<key>pfm_macos_min</key>
+									<string>10.15</string>
 									<key>pfm_name</key>
 									<string>IdentifierType</string>
 									<key>pfm_range_list</key>
@@ -2040,7 +2154,9 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>The designated requirement describing the code signature of this executable.</string>
+									<string>Obtained via the command 'codesign -display -r -'.</string>
+									<key>pfm_macos_min</key>
+									<string>10.15</string>
 									<key>pfm_name</key>
 									<string>CodeRequirement</string>
 									<key>pfm_require</key>
@@ -2051,8 +2167,12 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<string>string</string>
 								</dict>
 								<dict>
+									<key>pfm_default</key>
+									<false/>
 									<key>pfm_description</key>
-									<string>If set to true, statically validate the code requirement. Used only if the process invalidates its dynamic code signature.</string>
+									<string>If 'true', statically validate the code requirement. Used only if the process invalidates its dynamic code signature.</string>
+									<key>pfm_macos_min</key>
+									<string>10.15</string>
 									<key>pfm_name</key>
 									<string>StaticCode</string>
 									<key>pfm_title</key>
@@ -2062,29 +2182,30 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>If set to true, access is granted. Otherwise the process does not have access. The user is not prompted and cannot change this value.</string>
+									<string>The 'Authorization' has one of the following possible values:
+'Allow': Access is granted.
+'Deny': Access is denied.</string>
+									<key>pfm_macos_min</key>
+									<string>11.0</string>
 									<key>pfm_name</key>
-									<string>Allowed</string>
+									<string>Authorization</string>
 									<key>pfm_range_list</key>
 									<array>
-										<false/>
-										<true/>
-									</array>
-									<key>pfm_range_list_titles</key>
-									<array>
-										<string>Deny</string>
 										<string>Allow</string>
+										<string>Deny</string>
 									</array>
 									<key>pfm_title</key>
-									<string>Allowed</string>
+									<string>Authorization</string>
 									<key>pfm_type</key>
-									<string>boolean</string>
+									<string>string</string>
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>Not Used</string>
+									<string>Not used.</string>
 									<key>pfm_hidden</key>
 									<string>all</string>
+									<key>pfm_macos_min</key>
+									<string>10.15</string>
 									<key>pfm_name</key>
 									<string>Comment</string>
 									<key>pfm_title</key>
@@ -2093,18 +2214,20 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<string>string</string>
 								</dict>
 							</array>
-							<key>pfm_title</key>
-							<string>Services</string>
 							<key>pfm_type</key>
 							<string>dictionary</string>
 						</dict>
 					</array>
+					<key>pfm_title</key>
+					<string>Speech Recognition</string>
 					<key>pfm_type</key>
 					<string>array</string>
 					<key>pfm_value_import_processor</key>
 					<string>com.apple.TCC.configuration-profile-policy.services</string>
 				</dict>
 				<dict>
+					<key>pfm_description</key>
+					<string>Allows the application to access files in the user's Desktop folder.</string>
 					<key>pfm_description_reference</key>
 					<string>Allows the application to access files in the user's Desktop folder.</string>
 					<key>pfm_macos_min</key>
@@ -2115,16 +2238,21 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Keys are limited to the privacy service names listed below. Each key is an array of dictionaries describing the app or process to which access is given. In the case of conflicting specifications, the most restrictive setting (deny) will be used.</string>
+							<string>A dictionary listing apps and the privacy policy to apply to them.</string>
+							<key>pfm_macos_min</key>
+							<string>10.15</string>
 							<key>pfm_name</key>
-							<string>Services</string>
+							<string>IdentityDict</string>
 							<key>pfm_require</key>
 							<string>always</string>
 							<key>pfm_subkeys</key>
 							<array>
 								<dict>
 									<key>pfm_description</key>
-									<string>The bundle ID or installation path of the binary.</string>
+									<string>The bundle ID or installation path of the binary.
+Note: This value is case-sensitive.</string>
+									<key>pfm_macos_min</key>
+									<string>10.15</string>
 									<key>pfm_name</key>
 									<string>Identifier</string>
 									<key>pfm_require</key>
@@ -2138,7 +2266,9 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>The type of Identifier value.</string>
+									<string>The type of identifier value. Application bundles must be identified by bundle ID. Nonbundled binaries must be identified by installation path. Helper tools embedded within an application bundle automatically inherit the permissions of their enclosing app bundle.</string>
+									<key>pfm_macos_min</key>
+									<string>10.15</string>
 									<key>pfm_name</key>
 									<string>IdentifierType</string>
 									<key>pfm_range_list</key>
@@ -2160,7 +2290,9 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>The designated requirement describing the code signature of this executable.</string>
+									<string>Obtained via the command 'codesign -display -r -'.</string>
+									<key>pfm_macos_min</key>
+									<string>10.15</string>
 									<key>pfm_name</key>
 									<string>CodeRequirement</string>
 									<key>pfm_require</key>
@@ -2171,8 +2303,12 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<string>string</string>
 								</dict>
 								<dict>
+									<key>pfm_default</key>
+									<false/>
 									<key>pfm_description</key>
-									<string>If set to true, statically validate the code requirement. Used only if the process invalidates its dynamic code signature.</string>
+									<string>If 'true', statically validate the code requirement. Used only if the process invalidates its dynamic code signature.</string>
+									<key>pfm_macos_min</key>
+									<string>10.15</string>
 									<key>pfm_name</key>
 									<string>StaticCode</string>
 									<key>pfm_title</key>
@@ -2182,29 +2318,30 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>If set to true, access is granted. Otherwise the process does not have access. The user is not prompted and cannot change this value.</string>
+									<string>The 'Authorization' has one of the following possible values:
+'Allow': Access is granted.
+'Deny': Access is denied.</string>
+									<key>pfm_macos_min</key>
+									<string>11.0</string>
 									<key>pfm_name</key>
-									<string>Allowed</string>
+									<string>Authorization</string>
 									<key>pfm_range_list</key>
 									<array>
-										<false/>
-										<true/>
-									</array>
-									<key>pfm_range_list_titles</key>
-									<array>
-										<string>Deny</string>
 										<string>Allow</string>
+										<string>Deny</string>
 									</array>
 									<key>pfm_title</key>
-									<string>Allowed</string>
+									<string>Authorization</string>
 									<key>pfm_type</key>
-									<string>boolean</string>
+									<string>string</string>
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>Not Used</string>
+									<string>Not used.</string>
 									<key>pfm_hidden</key>
 									<string>all</string>
+									<key>pfm_macos_min</key>
+									<string>10.15</string>
 									<key>pfm_name</key>
 									<string>Comment</string>
 									<key>pfm_title</key>
@@ -2213,18 +2350,20 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<string>string</string>
 								</dict>
 							</array>
-							<key>pfm_title</key>
-							<string>Services</string>
 							<key>pfm_type</key>
 							<string>dictionary</string>
 						</dict>
 					</array>
+					<key>pfm_title</key>
+					<string>Files and Folders: Desktop Folder</string>
 					<key>pfm_type</key>
 					<string>array</string>
 					<key>pfm_value_import_processor</key>
 					<string>com.apple.TCC.configuration-profile-policy.services</string>
 				</dict>
 				<dict>
+					<key>pfm_description</key>
+					<string>Allows the application to access files in the user's Documents folder.</string>
 					<key>pfm_description_reference</key>
 					<string>Allows the application to access files in the user's Documents folder.</string>
 					<key>pfm_macos_min</key>
@@ -2235,16 +2374,21 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Keys are limited to the privacy service names listed below. Each key is an array of dictionaries describing the app or process to which access is given. In the case of conflicting specifications, the most restrictive setting (deny) will be used.</string>
+							<string>A dictionary listing apps and the privacy policy to apply to them.</string>
+							<key>pfm_macos_min</key>
+							<string>10.15</string>
 							<key>pfm_name</key>
-							<string>Services</string>
+							<string>IdentityDict</string>
 							<key>pfm_require</key>
 							<string>always</string>
 							<key>pfm_subkeys</key>
 							<array>
 								<dict>
 									<key>pfm_description</key>
-									<string>The bundle ID or installation path of the binary.</string>
+									<string>The bundle ID or installation path of the binary.
+Note: This value is case-sensitive.</string>
+									<key>pfm_macos_min</key>
+									<string>10.15</string>
 									<key>pfm_name</key>
 									<string>Identifier</string>
 									<key>pfm_require</key>
@@ -2258,7 +2402,9 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>The type of Identifier value.</string>
+									<string>The type of identifier value. Application bundles must be identified by bundle ID. Nonbundled binaries must be identified by installation path. Helper tools embedded within an application bundle automatically inherit the permissions of their enclosing app bundle.</string>
+									<key>pfm_macos_min</key>
+									<string>10.15</string>
 									<key>pfm_name</key>
 									<string>IdentifierType</string>
 									<key>pfm_range_list</key>
@@ -2280,7 +2426,9 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>The designated requirement describing the code signature of this executable.</string>
+									<string>Obtained via the command 'codesign -display -r -'.</string>
+									<key>pfm_macos_min</key>
+									<string>10.15</string>
 									<key>pfm_name</key>
 									<string>CodeRequirement</string>
 									<key>pfm_require</key>
@@ -2291,8 +2439,12 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<string>string</string>
 								</dict>
 								<dict>
+									<key>pfm_default</key>
+									<false/>
 									<key>pfm_description</key>
-									<string>If set to true, statically validate the code requirement. Used only if the process invalidates its dynamic code signature.</string>
+									<string>If 'true', statically validate the code requirement. Used only if the process invalidates its dynamic code signature.</string>
+									<key>pfm_macos_min</key>
+									<string>10.15</string>
 									<key>pfm_name</key>
 									<string>StaticCode</string>
 									<key>pfm_title</key>
@@ -2302,29 +2454,30 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>If set to true, access is granted. Otherwise the process does not have access. The user is not prompted and cannot change this value.</string>
+									<string>The 'Authorization' has one of the following possible values:
+'Allow': Access is granted.
+'Deny': Access is denied.</string>
+									<key>pfm_macos_min</key>
+									<string>11.0</string>
 									<key>pfm_name</key>
-									<string>Allowed</string>
+									<string>Authorization</string>
 									<key>pfm_range_list</key>
 									<array>
-										<false/>
-										<true/>
-									</array>
-									<key>pfm_range_list_titles</key>
-									<array>
-										<string>Deny</string>
 										<string>Allow</string>
+										<string>Deny</string>
 									</array>
 									<key>pfm_title</key>
-									<string>Allowed</string>
+									<string>Authorization</string>
 									<key>pfm_type</key>
-									<string>boolean</string>
+									<string>string</string>
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>Not Used</string>
+									<string>Not used.</string>
 									<key>pfm_hidden</key>
 									<string>all</string>
+									<key>pfm_macos_min</key>
+									<string>10.15</string>
 									<key>pfm_name</key>
 									<string>Comment</string>
 									<key>pfm_title</key>
@@ -2333,18 +2486,20 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<string>string</string>
 								</dict>
 							</array>
-							<key>pfm_title</key>
-							<string>Services</string>
 							<key>pfm_type</key>
 							<string>dictionary</string>
 						</dict>
 					</array>
+					<key>pfm_title</key>
+					<string>Files and Folders: Documents Folder</string>
 					<key>pfm_type</key>
 					<string>array</string>
 					<key>pfm_value_import_processor</key>
 					<string>com.apple.TCC.configuration-profile-policy.services</string>
 				</dict>
 				<dict>
+					<key>pfm_description</key>
+					<string>Allows the application to access files in the user's Downloads folder.</string>
 					<key>pfm_description_reference</key>
 					<string>Allows the application to access files in the user's Downloads folder.</string>
 					<key>pfm_macos_min</key>
@@ -2355,16 +2510,21 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Keys are limited to the privacy service names listed below. Each key is an array of dictionaries describing the app or process to which access is given. In the case of conflicting specifications, the most restrictive setting (deny) will be used.</string>
+							<string>A dictionary listing apps and the privacy policy to apply to them.</string>
+							<key>pfm_macos_min</key>
+							<string>10.15</string>
 							<key>pfm_name</key>
-							<string>Services</string>
+							<string>IdentityDict</string>
 							<key>pfm_require</key>
 							<string>always</string>
 							<key>pfm_subkeys</key>
 							<array>
 								<dict>
 									<key>pfm_description</key>
-									<string>The bundle ID or installation path of the binary.</string>
+									<string>The bundle ID or installation path of the binary.
+Note: This value is case-sensitive.</string>
+									<key>pfm_macos_min</key>
+									<string>10.15</string>
 									<key>pfm_name</key>
 									<string>Identifier</string>
 									<key>pfm_require</key>
@@ -2378,7 +2538,9 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>The type of Identifier value.</string>
+									<string>The type of identifier value. Application bundles must be identified by bundle ID. Nonbundled binaries must be identified by installation path. Helper tools embedded within an application bundle automatically inherit the permissions of their enclosing app bundle.</string>
+									<key>pfm_macos_min</key>
+									<string>10.15</string>
 									<key>pfm_name</key>
 									<string>IdentifierType</string>
 									<key>pfm_range_list</key>
@@ -2400,7 +2562,9 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>The designated requirement describing the code signature of this executable.</string>
+									<string>Obtained via the command 'codesign -display -r -'.</string>
+									<key>pfm_macos_min</key>
+									<string>10.15</string>
 									<key>pfm_name</key>
 									<string>CodeRequirement</string>
 									<key>pfm_require</key>
@@ -2411,8 +2575,12 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<string>string</string>
 								</dict>
 								<dict>
+									<key>pfm_default</key>
+									<false/>
 									<key>pfm_description</key>
-									<string>If set to true, statically validate the code requirement. Used only if the process invalidates its dynamic code signature.</string>
+									<string>If 'true', statically validate the code requirement. Used only if the process invalidates its dynamic code signature.</string>
+									<key>pfm_macos_min</key>
+									<string>10.15</string>
 									<key>pfm_name</key>
 									<string>StaticCode</string>
 									<key>pfm_title</key>
@@ -2422,29 +2590,30 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>If set to true, access is granted. Otherwise the process does not have access. The user is not prompted and cannot change this value.</string>
+									<string>The 'Authorization' has one of the following possible values:
+'Allow': Access is granted.
+'Deny': Access is denied.</string>
+									<key>pfm_macos_min</key>
+									<string>11.0</string>
 									<key>pfm_name</key>
-									<string>Allowed</string>
+									<string>Authorization</string>
 									<key>pfm_range_list</key>
 									<array>
-										<false/>
-										<true/>
-									</array>
-									<key>pfm_range_list_titles</key>
-									<array>
-										<string>Deny</string>
 										<string>Allow</string>
+										<string>Deny</string>
 									</array>
 									<key>pfm_title</key>
-									<string>Allowed</string>
+									<string>Authorization</string>
 									<key>pfm_type</key>
-									<string>boolean</string>
+									<string>string</string>
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>Not Used</string>
+									<string>Not used.</string>
 									<key>pfm_hidden</key>
 									<string>all</string>
+									<key>pfm_macos_min</key>
+									<string>10.15</string>
 									<key>pfm_name</key>
 									<string>Comment</string>
 									<key>pfm_title</key>
@@ -2453,18 +2622,20 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<string>string</string>
 								</dict>
 							</array>
-							<key>pfm_title</key>
-							<string>Services</string>
 							<key>pfm_type</key>
 							<string>dictionary</string>
 						</dict>
 					</array>
+					<key>pfm_title</key>
+					<string>Files and Folders: Downloads Folder</string>
 					<key>pfm_type</key>
 					<string>array</string>
 					<key>pfm_value_import_processor</key>
 					<string>com.apple.TCC.configuration-profile-policy.services</string>
 				</dict>
 				<dict>
+					<key>pfm_description</key>
+					<string>Allows the application to access files on network volumes.</string>
 					<key>pfm_description_reference</key>
 					<string>Allows the application to access files on network volumes.</string>
 					<key>pfm_macos_min</key>
@@ -2475,16 +2646,21 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Keys are limited to the privacy service names listed below. Each key is an array of dictionaries describing the app or process to which access is given. In the case of conflicting specifications, the most restrictive setting (deny) will be used.</string>
+							<string>A dictionary listing apps and the privacy policy to apply to them.</string>
+							<key>pfm_macos_min</key>
+							<string>10.15</string>
 							<key>pfm_name</key>
-							<string>Services</string>
+							<string>IdentityDict</string>
 							<key>pfm_require</key>
 							<string>always</string>
 							<key>pfm_subkeys</key>
 							<array>
 								<dict>
 									<key>pfm_description</key>
-									<string>The bundle ID or installation path of the binary.</string>
+									<string>The bundle ID or installation path of the binary.
+Note: This value is case-sensitive.</string>
+									<key>pfm_macos_min</key>
+									<string>10.15</string>
 									<key>pfm_name</key>
 									<string>Identifier</string>
 									<key>pfm_require</key>
@@ -2498,7 +2674,9 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>The type of Identifier value.</string>
+									<string>The type of identifier value. Application bundles must be identified by bundle ID. Nonbundled binaries must be identified by installation path. Helper tools embedded within an application bundle automatically inherit the permissions of their enclosing app bundle.</string>
+									<key>pfm_macos_min</key>
+									<string>10.15</string>
 									<key>pfm_name</key>
 									<string>IdentifierType</string>
 									<key>pfm_range_list</key>
@@ -2520,7 +2698,9 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>The designated requirement describing the code signature of this executable.</string>
+									<string>Obtained via the command 'codesign -display -r -'.</string>
+									<key>pfm_macos_min</key>
+									<string>10.15</string>
 									<key>pfm_name</key>
 									<string>CodeRequirement</string>
 									<key>pfm_require</key>
@@ -2531,8 +2711,12 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<string>string</string>
 								</dict>
 								<dict>
+									<key>pfm_default</key>
+									<false/>
 									<key>pfm_description</key>
-									<string>If set to true, statically validate the code requirement. Used only if the process invalidates its dynamic code signature.</string>
+									<string>If 'true', statically validate the code requirement. Used only if the process invalidates its dynamic code signature.</string>
+									<key>pfm_macos_min</key>
+									<string>10.15</string>
 									<key>pfm_name</key>
 									<string>StaticCode</string>
 									<key>pfm_title</key>
@@ -2542,29 +2726,30 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>If set to true, access is granted. Otherwise the process does not have access. The user is not prompted and cannot change this value.</string>
+									<string>The 'Authorization' has one of the following possible values:
+'Allow': Access is granted.
+'Deny': Access is denied.</string>
+									<key>pfm_macos_min</key>
+									<string>11.0</string>
 									<key>pfm_name</key>
-									<string>Allowed</string>
+									<string>Authorization</string>
 									<key>pfm_range_list</key>
 									<array>
-										<false/>
-										<true/>
-									</array>
-									<key>pfm_range_list_titles</key>
-									<array>
-										<string>Deny</string>
 										<string>Allow</string>
+										<string>Deny</string>
 									</array>
 									<key>pfm_title</key>
-									<string>Allowed</string>
+									<string>Authorization</string>
 									<key>pfm_type</key>
-									<string>boolean</string>
+									<string>string</string>
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>Not Used</string>
+									<string>Not used.</string>
 									<key>pfm_hidden</key>
 									<string>all</string>
+									<key>pfm_macos_min</key>
+									<string>10.15</string>
 									<key>pfm_name</key>
 									<string>Comment</string>
 									<key>pfm_title</key>
@@ -2573,18 +2758,20 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<string>string</string>
 								</dict>
 							</array>
-							<key>pfm_title</key>
-							<string>Services</string>
 							<key>pfm_type</key>
 							<string>dictionary</string>
 						</dict>
 					</array>
+					<key>pfm_title</key>
+					<string>Files and Folders: Network Volumes</string>
 					<key>pfm_type</key>
 					<string>array</string>
 					<key>pfm_value_import_processor</key>
 					<string>com.apple.TCC.configuration-profile-policy.services</string>
 				</dict>
 				<dict>
+					<key>pfm_description</key>
+					<string>Allows the application to access files on removable volumes.</string>
 					<key>pfm_description_reference</key>
 					<string>Allows the application to access files on removable volumes.</string>
 					<key>pfm_macos_min</key>
@@ -2595,16 +2782,21 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Keys are limited to the privacy service names listed below. Each key is an array of dictionaries describing the app or process to which access is given. In the case of conflicting specifications, the most restrictive setting (deny) will be used.</string>
+							<string>A dictionary listing apps and the privacy policy to apply to them.</string>
+							<key>pfm_macos_min</key>
+							<string>10.15</string>
 							<key>pfm_name</key>
-							<string>Services</string>
+							<string>IdentityDict</string>
 							<key>pfm_require</key>
 							<string>always</string>
 							<key>pfm_subkeys</key>
 							<array>
 								<dict>
 									<key>pfm_description</key>
-									<string>The bundle ID or installation path of the binary.</string>
+									<string>The bundle ID or installation path of the binary.
+Note: This value is case-sensitive.</string>
+									<key>pfm_macos_min</key>
+									<string>10.15</string>
 									<key>pfm_name</key>
 									<string>Identifier</string>
 									<key>pfm_require</key>
@@ -2618,7 +2810,9 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>The type of Identifier value.</string>
+									<string>The type of identifier value. Application bundles must be identified by bundle ID. Nonbundled binaries must be identified by installation path. Helper tools embedded within an application bundle automatically inherit the permissions of their enclosing app bundle.</string>
+									<key>pfm_macos_min</key>
+									<string>10.15</string>
 									<key>pfm_name</key>
 									<string>IdentifierType</string>
 									<key>pfm_range_list</key>
@@ -2640,7 +2834,9 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>The designated requirement describing the code signature of this executable.</string>
+									<string>Obtained via the command 'codesign -display -r -'.</string>
+									<key>pfm_macos_min</key>
+									<string>10.15</string>
 									<key>pfm_name</key>
 									<string>CodeRequirement</string>
 									<key>pfm_require</key>
@@ -2651,8 +2847,12 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<string>string</string>
 								</dict>
 								<dict>
+									<key>pfm_default</key>
+									<false/>
 									<key>pfm_description</key>
-									<string>If set to true, statically validate the code requirement. Used only if the process invalidates its dynamic code signature.</string>
+									<string>If 'true', statically validate the code requirement. Used only if the process invalidates its dynamic code signature.</string>
+									<key>pfm_macos_min</key>
+									<string>10.15</string>
 									<key>pfm_name</key>
 									<string>StaticCode</string>
 									<key>pfm_title</key>
@@ -2662,29 +2862,30 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>If set to true, access is granted. Otherwise the process does not have access. The user is not prompted and cannot change this value.</string>
+									<string>The 'Authorization' has one of the following possible values:
+'Allow': Access is granted.
+'Deny': Access is denied.</string>
+									<key>pfm_macos_min</key>
+									<string>11.0</string>
 									<key>pfm_name</key>
-									<string>Allowed</string>
+									<string>Authorization</string>
 									<key>pfm_range_list</key>
 									<array>
-										<false/>
-										<true/>
-									</array>
-									<key>pfm_range_list_titles</key>
-									<array>
-										<string>Deny</string>
 										<string>Allow</string>
+										<string>Deny</string>
 									</array>
 									<key>pfm_title</key>
-									<string>Allowed</string>
+									<string>Authorization</string>
 									<key>pfm_type</key>
-									<string>boolean</string>
+									<string>string</string>
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>Not Used</string>
+									<string>Not used.</string>
 									<key>pfm_hidden</key>
 									<string>all</string>
+									<key>pfm_macos_min</key>
+									<string>10.15</string>
 									<key>pfm_name</key>
 									<string>Comment</string>
 									<key>pfm_title</key>
@@ -2693,18 +2894,20 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<string>string</string>
 								</dict>
 							</array>
-							<key>pfm_title</key>
-							<string>Services</string>
 							<key>pfm_type</key>
 							<string>dictionary</string>
 						</dict>
 					</array>
+					<key>pfm_title</key>
+					<string>Files and Folders: Removable Volumes</string>
 					<key>pfm_type</key>
 					<string>array</string>
 					<key>pfm_value_import_processor</key>
 					<string>com.apple.TCC.configuration-profile-policy.services</string>
 				</dict>
 				<dict>
+					<key>pfm_description</key>
+					<string>Allows the application access to some files used in system administration.</string>
 					<key>pfm_description_reference</key>
 					<string>Allows the application access to some files used in system administration.</string>
 					<key>pfm_macos_min</key>
@@ -2715,16 +2918,17 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Keys are limited to the privacy service names listed below. Each key is an array of dictionaries describing the app or process to which access is given. In the case of conflicting specifications, the most restrictive setting (deny) will be used.</string>
+							<string>A dictionary listing apps and the privacy policy to apply to them.</string>
 							<key>pfm_name</key>
-							<string>Services</string>
+							<string>IdentityDict</string>
 							<key>pfm_require</key>
 							<string>always</string>
 							<key>pfm_subkeys</key>
 							<array>
 								<dict>
 									<key>pfm_description</key>
-									<string>The bundle ID or installation path of the binary.</string>
+									<string>The bundle ID or installation path of the binary.
+Note: This value is case-sensitive.</string>
 									<key>pfm_name</key>
 									<string>Identifier</string>
 									<key>pfm_require</key>
@@ -2738,7 +2942,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>The type of Identifier value.</string>
+									<string>The type of identifier value. Application bundles must be identified by bundle ID. Nonbundled binaries must be identified by installation path. Helper tools embedded within an application bundle automatically inherit the permissions of their enclosing app bundle.</string>
 									<key>pfm_name</key>
 									<string>IdentifierType</string>
 									<key>pfm_range_list</key>
@@ -2760,7 +2964,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>The designated requirement describing the code signature of this executable.</string>
+									<string>Obtained via the command 'codesign -display -r -'.</string>
 									<key>pfm_name</key>
 									<string>CodeRequirement</string>
 									<key>pfm_require</key>
@@ -2771,8 +2975,10 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<string>string</string>
 								</dict>
 								<dict>
+									<key>pfm_default</key>
+									<false/>
 									<key>pfm_description</key>
-									<string>If set to true, statically validate the code requirement. Used only if the process invalidates its dynamic code signature.</string>
+									<string>If 'true', statically validate the code requirement. Used only if the process invalidates its dynamic code signature.</string>
 									<key>pfm_name</key>
 									<string>StaticCode</string>
 									<key>pfm_title</key>
@@ -2782,27 +2988,26 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>If set to true, access is granted. Otherwise the process does not have access. The user is not prompted and cannot change this value.</string>
+									<string>The 'Authorization' has one of the following possible values:
+'Allow': Access is granted.
+'Deny': Access is denied.</string>
+									<key>pfm_macos_min</key>
+									<string>11.0</string>
 									<key>pfm_name</key>
-									<string>Allowed</string>
+									<string>Authorization</string>
 									<key>pfm_range_list</key>
 									<array>
-										<false/>
-										<true/>
-									</array>
-									<key>pfm_range_list_titles</key>
-									<array>
-										<string>Deny</string>
 										<string>Allow</string>
+										<string>Deny</string>
 									</array>
 									<key>pfm_title</key>
-									<string>Allowed</string>
+									<string>Authorization</string>
 									<key>pfm_type</key>
-									<string>boolean</string>
+									<string>string</string>
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>Not Used</string>
+									<string>Not used.</string>
 									<key>pfm_hidden</key>
 									<string>all</string>
 									<key>pfm_name</key>
@@ -2813,8 +3018,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<string>string</string>
 								</dict>
 							</array>
-							<key>pfm_title</key>
-							<string>Services</string>
 							<key>pfm_type</key>
 							<string>dictionary</string>
 						</dict>
@@ -2828,7 +3031,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				</dict>
 				<dict>
 					<key>pfm_description</key>
-					<string>Allows the application to access data of other apps.</string>
+					<string>Specifies the policies for the app to access the data of other apps.</string>
 					<key>pfm_macos_min</key>
 					<string>14.0</string>
 					<key>pfm_name</key>
@@ -2836,13 +3039,20 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<key>pfm_subkeys</key>
 					<array>
 						<dict>
+							<key>pfm_description</key>
+							<string>A dictionary listing apps and the privacy policy to apply to them.</string>
+							<key>pfm_macos_min</key>
+							<string>14.0</string>
 							<key>pfm_name</key>
 							<string>IdentityDict</string>
 							<key>pfm_subkeys</key>
 							<array>
 								<dict>
 									<key>pfm_description</key>
-									<string>The bundle ID or installation path of the binary.</string>
+									<string>The bundle ID or installation path of the binary.
+Note: This value is case-sensitive.</string>
+									<key>pfm_macos_min</key>
+									<string>14.0</string>
 									<key>pfm_name</key>
 									<string>Identifier</string>
 									<key>pfm_require</key>
@@ -2853,6 +3063,8 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								<dict>
 									<key>pfm_description</key>
 									<string>The type of identifier value. Application bundles must be identified by bundle ID. Nonbundled binaries must be identified by installation path. Helper tools embedded within an application bundle automatically inherit the permissions of their enclosing app bundle.</string>
+									<key>pfm_macos_min</key>
+									<string>14.0</string>
 									<key>pfm_name</key>
 									<string>IdentifierType</string>
 									<key>pfm_range_list</key>
@@ -2867,7 +3079,9 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>Obtained via the command ''codesign -display -r -''.</string>
+									<string>Obtained via the command 'codesign -display -r -'.</string>
+									<key>pfm_macos_min</key>
+									<string>14.0</string>
 									<key>pfm_name</key>
 									<string>CodeRequirement</string>
 									<key>pfm_require</key>
@@ -2876,8 +3090,12 @@ During a profile replacement, the system updates payloads with the same 'Payload
 									<string>string</string>
 								</dict>
 								<dict>
+									<key>pfm_default</key>
+									<false/>
 									<key>pfm_description</key>
 									<string>If 'true', statically validate the code requirement. Used only if the process invalidates its dynamic code signature.</string>
+									<key>pfm_macos_min</key>
+									<string>14.0</string>
 									<key>pfm_name</key>
 									<string>StaticCode</string>
 									<key>pfm_type</key>
@@ -2885,30 +3103,17 @@ During a profile replacement, the system updates payloads with the same 'Payload
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>If 'true', access is granted; otherwise, the process doesn't have access. The user isn't prompted and can't change this value.</string>
-									<key>pfm_name</key>
-									<string>Allowed</string>
-									<key>pfm_require</key>
-									<string>always</string>
-									<key>pfm_type</key>
-									<string>boolean</string>
-								</dict>
-								<dict>
-									<key>pfm_description</key>
-									<string>The 'Authorization' key is an optional replacement for the 'Allowed' key. Every payload must specify either 'Authorization' or 'Allowed', but not both.
-'Allow': Equivalent to a 'true' value for the 'Allowed' key.
-'Deny': Equivalent to a 'false' value for the 'Allowed' key.
-'AllowStandardUserToSetSystemService:' allows a standard (non-admin) user to configure the permissions for the specified app in the Privacy preferences for services that otherwise require admin authorization. 'AllowStandardUserToSetSystemService' is only valid for the 'ListenEvent' and 'ScreenCapture' services.
-Available in macOS 11 and later.</string>
+									<string>The 'Authorization' has one of the following possible values:
+'Allow': Access is granted.
+'Deny': Access is denied.</string>
 									<key>pfm_macos_min</key>
-									<string>11.0</string>
+									<string>14.0</string>
 									<key>pfm_name</key>
 									<string>Authorization</string>
 									<key>pfm_range_list</key>
 									<array>
 										<string>Allow</string>
 										<string>Deny</string>
-										<string>AllowStandardUserToSetSystemService</string>
 									</array>
 									<key>pfm_type</key>
 									<string>string</string>
@@ -2916,37 +3121,10 @@ Available in macOS 11 and later.</string>
 								<dict>
 									<key>pfm_description</key>
 									<string>Not used.</string>
+									<key>pfm_macos_min</key>
+									<string>14.0</string>
 									<key>pfm_name</key>
 									<string>Comment</string>
-									<key>pfm_type</key>
-									<string>string</string>
-								</dict>
-								<dict>
-									<key>pfm_description</key>
-									<string>The identifier of the process receiving an AppleEvent sent by the Identifier process. This identifier is required for AppleEvents service; not valid for other services.</string>
-									<key>pfm_name</key>
-									<string>AEReceiverIdentifier</string>
-									<key>pfm_type</key>
-									<string>string</string>
-								</dict>
-								<dict>
-									<key>pfm_description</key>
-									<string>The type of AEReceiverIdentifier value, either 'bundleID' or 'path'. This setting is required for AppleEvents service; not valid for other services.</string>
-									<key>pfm_name</key>
-									<string>AEReceiverIdentifierType</string>
-									<key>pfm_range_list</key>
-									<array>
-										<string>bundleID</string>
-										<string>path</string>
-									</array>
-									<key>pfm_type</key>
-									<string>string</string>
-								</dict>
-								<dict>
-									<key>pfm_description</key>
-									<string>The code requirement for the receiving binary. This code requirement is required for AppleEvents service; not valid for other services.</string>
-									<key>pfm_name</key>
-									<string>AEReceiverCodeRequirement</string>
 									<key>pfm_type</key>
 									<string>string</string>
 								</dict>
@@ -2955,10 +3133,16 @@ Available in macOS 11 and later.</string>
 							<string>dictionary</string>
 						</dict>
 					</array>
+					<key>pfm_title</key>
+					<string>System Policy App Data</string>
 					<key>pfm_type</key>
 					<string>array</string>
+					<key>pfm_value_import_processor</key>
+					<string>com.apple.TCC.configuration-profile-policy.services</string>
 				</dict>
 				<dict>
+					<key>pfm_description</key>
+					<string>Allows the application to update or delete other apps. Available in macOS 13 and later.</string>
 					<key>pfm_macos_min</key>
 					<string>13.0</string>
 					<key>pfm_name</key>
@@ -2967,16 +3151,21 @@ Available in macOS 11 and later.</string>
 					<array>
 						<dict>
 							<key>pfm_description</key>
-							<string>Keys are limited to the privacy service names listed below. Each key is an array of dictionaries describing the app or process to which access is given. In the case of conflicting specifications, the most restrictive setting (deny) will be used.</string>
+							<string>A dictionary listing apps and the privacy policy to apply to them.</string>
+							<key>pfm_macos_min</key>
+							<string>13.0</string>
 							<key>pfm_name</key>
-							<string>Services</string>
+							<string>IdentityDict</string>
 							<key>pfm_require</key>
 							<string>always</string>
 							<key>pfm_subkeys</key>
 							<array>
 								<dict>
 									<key>pfm_description</key>
-									<string>The bundle ID or installation path of the binary.</string>
+									<string>The bundle ID or installation path of the binary.
+Note: This value is case-sensitive.</string>
+									<key>pfm_macos_min</key>
+									<string>13.0</string>
 									<key>pfm_name</key>
 									<string>Identifier</string>
 									<key>pfm_require</key>
@@ -2990,7 +3179,9 @@ Available in macOS 11 and later.</string>
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>The type of Identifier value.</string>
+									<string>The type of identifier value. Application bundles must be identified by bundle ID. Nonbundled binaries must be identified by installation path. Helper tools embedded within an application bundle automatically inherit the permissions of their enclosing app bundle.</string>
+									<key>pfm_macos_min</key>
+									<string>13.0</string>
 									<key>pfm_name</key>
 									<string>IdentifierType</string>
 									<key>pfm_range_list</key>
@@ -3012,7 +3203,9 @@ Available in macOS 11 and later.</string>
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>The designated requirement describing the code signature of this executable.</string>
+									<string>Obtained via the command 'codesign -display -r -'.</string>
+									<key>pfm_macos_min</key>
+									<string>13.0</string>
 									<key>pfm_name</key>
 									<string>CodeRequirement</string>
 									<key>pfm_require</key>
@@ -3023,8 +3216,12 @@ Available in macOS 11 and later.</string>
 									<string>string</string>
 								</dict>
 								<dict>
+									<key>pfm_default</key>
+									<false/>
 									<key>pfm_description</key>
-									<string>If set to true, statically validate the code requirement. Used only if the process invalidates its dynamic code signature.</string>
+									<string>If 'true', statically validate the code requirement. Used only if the process invalidates its dynamic code signature.</string>
+									<key>pfm_macos_min</key>
+									<string>13.0</string>
 									<key>pfm_name</key>
 									<string>StaticCode</string>
 									<key>pfm_title</key>
@@ -3034,29 +3231,30 @@ Available in macOS 11 and later.</string>
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>If set to true, access is granted. Otherwise the process does not have access. The user is not prompted and cannot change this value.</string>
+									<string>The 'Authorization' has one of the following possible values:
+'Allow': Access is granted.
+'Deny': Access is denied.</string>
+									<key>pfm_macos_min</key>
+									<string>13.0</string>
 									<key>pfm_name</key>
-									<string>Allowed</string>
+									<string>Authorization</string>
 									<key>pfm_range_list</key>
 									<array>
-										<false/>
-										<true/>
-									</array>
-									<key>pfm_range_list_titles</key>
-									<array>
-										<string>Deny</string>
 										<string>Allow</string>
+										<string>Deny</string>
 									</array>
 									<key>pfm_title</key>
-									<string>Allowed</string>
+									<string>Authorization</string>
 									<key>pfm_type</key>
-									<string>boolean</string>
+									<string>string</string>
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>Not Used</string>
+									<string>Not used.</string>
 									<key>pfm_hidden</key>
 									<string>all</string>
+									<key>pfm_macos_min</key>
+									<string>13.0</string>
 									<key>pfm_name</key>
 									<string>Comment</string>
 									<key>pfm_title</key>
@@ -3065,14 +3263,147 @@ Available in macOS 11 and later.</string>
 									<string>string</string>
 								</dict>
 							</array>
-							<key>pfm_title</key>
-							<string>Services</string>
 							<key>pfm_type</key>
 							<string>dictionary</string>
 						</dict>
 					</array>
 					<key>pfm_title</key>
 					<string>App Management</string>
+					<key>pfm_type</key>
+					<string>array</string>
+					<key>pfm_value_import_processor</key>
+					<string>com.apple.TCC.configuration-profile-policy.services</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>Allows the application to control the computer remotely. Available in macOS 14.7 and later.</string>
+					<key>pfm_macos_min</key>
+					<string>14.7</string>
+					<key>pfm_name</key>
+					<string>RemoteDesktop</string>
+					<key>pfm_note</key>
+					<string>Undocumented property. Understood to only work for applications granted Persistent Content Capture entitlement from Apple.</string>
+					<key>pfm_subkeys</key>
+					<array>
+						<dict>
+							<key>pfm_description</key>
+							<string>A dictionary listing apps and the privacy policy to apply to them.</string>
+							<key>pfm_macos_min</key>
+							<string>14.7</string>
+							<key>pfm_name</key>
+							<string>IdentityDict</string>
+							<key>pfm_require</key>
+							<string>always</string>
+							<key>pfm_subkeys</key>
+							<array>
+								<dict>
+									<key>pfm_description</key>
+									<string>The bundle ID or installation path of the binary.</string>
+									<key>pfm_macos_min</key>
+									<string>14.7</string>
+									<key>pfm_name</key>
+									<string>Identifier</string>
+									<key>pfm_require</key>
+									<string>always</string>
+									<key>pfm_title</key>
+									<string>Identifier</string>
+									<key>pfm_type</key>
+									<string>string</string>
+									<key>pfm_value_placeholder</key>
+									<string>com.github.erikberglund.ProfileCreator</string>
+								</dict>
+								<dict>
+									<key>pfm_description</key>
+									<string>The type of identifier value. Application bundles must be identified by bundle ID. Nonbundled binaries must be identified by installation path. Helper tools embedded within an application bundle automatically inherit the permissions of their enclosing app bundle.</string>
+									<key>pfm_macos_min</key>
+									<string>14.7</string>
+									<key>pfm_name</key>
+									<string>IdentifierType</string>
+									<key>pfm_range_list</key>
+									<array>
+										<string>bundleID</string>
+										<string>path</string>
+									</array>
+									<key>pfm_range_list_titles</key>
+									<array>
+										<string>Bundle ID</string>
+										<string>Path</string>
+									</array>
+									<key>pfm_require</key>
+									<string>always</string>
+									<key>pfm_title</key>
+									<string>Identifier Type</string>
+									<key>pfm_type</key>
+									<string>string</string>
+								</dict>
+								<dict>
+									<key>pfm_description</key>
+									<string>Obtained via the command 'codesign -display -r -'.</string>
+									<key>pfm_macos_min</key>
+									<string>14.7</string>
+									<key>pfm_name</key>
+									<string>CodeRequirement</string>
+									<key>pfm_require</key>
+									<string>always</string>
+									<key>pfm_title</key>
+									<string>Code Requirement</string>
+									<key>pfm_type</key>
+									<string>string</string>
+								</dict>
+								<dict>
+									<key>pfm_default</key>
+									<false/>
+									<key>pfm_description</key>
+									<string>If 'true', statically validate the code requirement. Used only if the process invalidates its dynamic code signature.</string>
+									<key>pfm_macos_min</key>
+									<string>14.7</string>
+									<key>pfm_name</key>
+									<string>StaticCode</string>
+									<key>pfm_title</key>
+									<string>StaticCode</string>
+									<key>pfm_type</key>
+									<string>boolean</string>
+								</dict>
+								<dict>
+									<key>pfm_description</key>
+									<string>The 'Authorization' key is an optional replacement for the 'Allowed' key, which has one of the following possible values:
+'Allow': Equivalent to a 'true' value for the 'Allowed' key
+'Deny': Equivalent to a 'false' value for the 'Allowed' key
+Note: Every payload needs to include either 'Authorization' or 'Allowed', but not both.
+Available in macOS 14.7 and later.</string>
+									<key>pfm_macos_min</key>
+									<string>14.7</string>
+									<key>pfm_name</key>
+									<string>Authorization</string>
+									<key>pfm_range_list</key>
+									<array>
+										<string>Allow</string>
+										<string>Deny</string>
+									</array>
+									<key>pfm_type</key>
+									<string>string</string>
+								</dict>
+								<dict>
+									<key>pfm_description</key>
+									<string>Not used.</string>
+									<key>pfm_hidden</key>
+									<string>all</string>
+									<key>pfm_macos_min</key>
+									<string>14.7</string>
+									<key>pfm_name</key>
+									<string>Comment</string>
+									<key>pfm_title</key>
+									<string>Comment</string>
+									<key>pfm_type</key>
+									<string>string</string>
+								</dict>
+							</array>
+							<key>pfm_type</key>
+							<string>dictionary</string>
+						</dict>
+					</array>
+					<key>pfm_title</key>
+					<string>Remote Desktop</string>
 					<key>pfm_type</key>
 					<string>array</string>
 					<key>pfm_value_import_processor</key>
@@ -3096,6 +3427,6 @@ Available in macOS 11 and later.</string>
 	<key>pfm_user_approved</key>
 	<true/>
 	<key>pfm_version</key>
-	<integer>8</integer>
+	<integer>9</integer>
 </dict>
 </plist>

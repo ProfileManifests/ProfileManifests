@@ -13,7 +13,7 @@
 	<key>pfm_interaction</key>
 	<string>combined</string>
 	<key>pfm_last_modified</key>
-	<date>2026-06-23T15:59:45Z</date>
+	<date>2026-08-24T08:00:30Z</date>
 	<key>pfm_macos_min</key>
 	<string>10.7</string>
 	<key>pfm_platforms</key>
@@ -682,14 +682,13 @@ During a profile replacement, the system updates payloads with the same 'Payload
 							<integer>31</integer>
 							<key>pfm_description</key>
 							<string>One or more days of the week in an unsigned integer bitmap:
-
-- '1' = Mon
-- '2' = Tue
-- '4' = Wed
-- '8' = Thu
-- '16' = Fri
-- '32' = Sat
-- '64' = Sun</string>
+'1' = Mon
+'2' = Tue
+'4' = Wed
+'8' = Thu
+'16' = Fri
+'32' = Sat
+'64' = Sun</string>
 							<key>pfm_name</key>
 							<string>weekdays</string>
 							<key>pfm_require</key>
@@ -798,14 +797,13 @@ During a profile replacement, the system updates payloads with the same 'Payload
 							<integer>31</integer>
 							<key>pfm_description</key>
 							<string>One or more days of the week in an unsigned integer bitmap:
-
-- '1' = Mon
-- '2' = Tue
-- '4' = Wed
-- '8' = Thu
-- '16' = Fri
-- '32' = Sat
-- '64' = Sun</string>
+'1' = Mon
+'2' = Tue
+'4' = Wed
+'8' = Thu
+'16' = Fri
+'32' = Sat
+'64' = Sun</string>
 							<key>pfm_name</key>
 							<string>weekdays</string>
 							<key>pfm_require</key>
@@ -904,6 +902,8 @@ During a profile replacement, the system updates payloads with the same 'Payload
 	<key>pfm_title</key>
 	<string>Energy Saver</string>
 	<key>pfm_unique</key>
+	<false/>
+	<key>pfm_user_approved</key>
 	<false/>
 	<key>pfm_version</key>
 	<integer>2</integer>
