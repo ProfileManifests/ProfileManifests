@@ -1744,7 +1744,7 @@
 		<key>com.apple.applicationaccess.new</key>
 		<dict>
 			<key>modified</key>
-			<date>2026-08-20T16:39:06Z</date>
+			<date>2026-08-31T10:48:14Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.applicationaccess.new.plist</string>
 			<key>version</key>
@@ -2553,6 +2553,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2026-08-27T01:33:59Z</date>
+	<date>2026-08-31T10:50:47Z</date>
 </dict>
 </plist>
