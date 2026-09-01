@@ -13,7 +13,7 @@
 	<key>pfm_format_version</key>
 	<integer>1</integer>
 	<key>pfm_last_modified</key>
-	<date>2026-07-08T13:16:23Z</date>
+	<date>2026-09-01T00:00:00Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -150,6 +150,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<dict>
 				<key>Certificate</key>
 				<array>
+					<string>ClientCertificateAcceptableCAs</string>
 					<string>ClientCertificatePath</string>
 					<string>ClientKeyPath</string>
 					<string>SoftwareRepoCAPath</string>
@@ -159,6 +160,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				</array>
 				<key>General</key>
 				<array>
+					<string>AppleSoftwareUpdatesIncludeMajorOSUpdates</string>
 					<string>AppleSoftwareUpdatesOnly</string>
 					<string>ClientIdentifier</string>
 					<string>EmulateProfileSupport</string>
@@ -182,6 +184,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				<key>MSC</key>
 				<array>
 					<string>AggressiveUpdateNotificationDays</string>
+					<string>CustomSidebarItems</string>
 					<string>DaysBetweenNotifications</string>
 					<string>InstallRequiresLogout</string>
 					<string>MSCOfferToQuitBlockingApps</string>
@@ -293,7 +296,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>Install updates from an Apple Software Update server, in addition to "regular" Munki updates.</string>
+			<string>Install updates from an Apple Software Update server, in addition to "regular" Munki updates. Prior to Munki 7, this controlled whether Munki would notify about AND install Apple updates. With Munki 7+, only notification occurs; Apple updates must be installed manually with Apple's tools.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://github.com/munki/munki/wiki/Preferences#installapplesoftwareupdates</string>
 			<key>pfm_name</key>
@@ -304,10 +307,12 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>boolean</string>
 		</dict>
 		<dict>
+			<key>pfm_app_deprecated</key>
+			<string>7.0.0</string>
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>Only install updates from an Apple Software Update server. No Munki repository is needed or used.</string>
+			<string>Only install updates from an Apple Software Update server. No Munki repository is needed or used. No longer really useful in Munki 7+, since Munki 7 only notifies about Apple updates rather than installing them.</string>
 			<key>pfm_name</key>
 			<string>AppleSoftwareUpdatesOnly</string>
 			<key>pfm_title</key>
@@ -317,11 +322,27 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
+			<string>6.1.0</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>If true (and InstallAppleSoftwareUpdates is also true), include major OS updates when displaying/notifying about available Apple updates. If false (the default), major OS upgrades (for example, a Ventura upgrade offered while running Monterey) are filtered out.</string>
+			<key>pfm_name</key>
+			<string>AppleSoftwareUpdatesIncludeMajorOSUpdates</string>
+			<key>pfm_title</key>
+			<string>Include Major OS Updates in Apple Software Updates</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_deprecated</key>
+			<string>7.0.0</string>
+			<key>pfm_app_min</key>
 			<string>2.5</string>
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>Updates that declare no "must-close" applications, or have one or more "must-close" applications, none of which is running, and do not require a logout or restart will be installed as part of a normal periodic background run without notifying the user.</string>
+			<string>Updates that declare no "must-close" applications, or have one or more "must-close" applications, none of which is running, and do not require a logout or restart will be installed as part of a normal periodic background run without notifying the user. Does nothing useful in Munki 7+, since Apple updates are no longer installed by Munki.</string>
 			<key>pfm_macos_min</key>
 			<string>10.10</string>
 			<key>pfm_name</key>
@@ -358,10 +379,12 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>string</string>
 		</dict>
 		<dict>
+			<key>pfm_app_deprecated</key>
+			<string>7.0.0</string>
 			<key>pfm_app_min</key>
 			<string>5.2</string>
 			<key>pfm_description</key>
-			<string>A bit of hack and not supported by Apple, it is disabled by default. To emulate profile installs, configuration profiles are read, and if they contain managed preferences, they are converted to MCX data that is added to a ComputerGroup in the local Open Directory store. Configuration profile payloads that are not managed preferences are ignored/skipped.</string>
+			<string>A bit of hack and not supported by Apple, it is disabled by default. To emulate profile installs, configuration profiles are read, and if they contain managed preferences, they are converted to MCX data that is added to a ComputerGroup in the local Open Directory store. Configuration profile payloads that are not managed preferences are ignored/skipped. Munki 7 drops all support for installation of Configuration Profiles, including support for Configuration Profile Emulation, so this preference has no effect in Munki 7+.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://github.com/munki/munki/wiki/Configuration-Profile-Emulation</string>
 			<key>pfm_name</key>
@@ -375,7 +398,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>Managed Software Center will never notify the user of available updates.</string>
+			<string>Managed Software Center will never notify the user of available updates. Managed Software Center can still be manually invoked to discover and install updates.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://github.com/munki/munki/wiki/Preferences#suppressusernotification</string>
 			<key>pfm_name</key>
@@ -495,7 +518,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>If this (and MSCOfferToQuitBlockingApps) is true, if a "polite" attempt to quit an application fails, a button to force quit the application will be displayed.</string>
+			<string>If this (and MSCOfferToQuitBlockingApps) is true, if a "polite" attempt to quit an application fails, a button to force quit the application will be displayed. If false or undefined, a message telling the user to manually quit the app is displayed instead.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://github.com/munki/munki/wiki/Munki-7.1-Assisted-App-Quit</string>
 			<key>pfm_exclude</key>
@@ -554,8 +577,10 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>boolean</string>
 		</dict>
 		<dict>
+			<key>pfm_default</key>
+			<string>hash</string>
 			<key>pfm_description</key>
-			<string>Controls how Munki verifies the integrity of downloaded packages. (none = No integrity check is performed, hash = Integrity check is performed if package info contains checksum information, hash_strict = Integrity check is performed, and fails if package info does not contain checksum information.)</string>
+			<string>Controls how Munki verifies the integrity of downloaded packages. (none = No integrity check is performed, hash = Integrity check is performed if package info contains checksum information, hash_strict = Integrity check is performed, and fails if package info does not contain checksum information.) Defaults to hash.</string>
 			<key>pfm_name</key>
 			<string>PackageVerificationMode</string>
 			<key>pfm_range_list</key>
@@ -658,6 +683,8 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>integer</string>
 		</dict>
 		<dict>
+			<key>pfm_default</key>
+			<string>none</string>
 			<key>pfm_description</key>
 			<string>Defines whether Munki will follow all, some or no redirects from the web server. (none = The default behaviour. No redirects are followed. https = Only redirects to URLs using HTTPS are followed. all = Redirects to both HTTP and HTTPS URLs are followed.)</string>
 			<key>pfm_documentation_url</key>
@@ -686,7 +713,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<array>
 				<dict>
 					<key>pfm_description</key>
-					<string></string>
+					<string>An HTTP header in "Header: Value" format.</string>
 					<key>pfm_name</key>
 					<string>HTTPHeader</string>
 					<key>pfm_title</key>
@@ -893,6 +920,35 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>boolean</string>
 		</dict>
 		<dict>
+			<key>pfm_app_min</key>
+			<string>7.3.0</string>
+			<key>pfm_description</key>
+			<string>Acceptable client certificate issuing CA distinguished names. Meant to be used when a server does not advertise CA names. Values must use RFC 4514-style distinguished names like "CN=Munki Client CA,O=ExampleOrg". Requires UseClientCertificate to be true.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/munki/munki/wiki/Preferences#clientcertificateacceptablecas</string>
+			<key>pfm_name</key>
+			<string>ClientCertificateAcceptableCAs</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_description</key>
+					<string></string>
+					<key>pfm_name</key>
+					<string>DistinguishedName</string>
+					<key>pfm_title</key>
+					<string>Distinguished Name</string>
+					<key>pfm_type</key>
+					<string>string</string>
+					<key>pfm_value_placeholder</key>
+					<string>CN=Munki Client CA,O=ExampleOrg</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>Client Certificate Acceptable CAs</string>
+			<key>pfm_type</key>
+			<string>array</string>
+		</dict>
+		<dict>
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
@@ -930,7 +986,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_description</key>
-			<string>Path to the directory that stores your CA certificate(s).</string>
+			<string>Path to the directory that stores your CA certificate(s). See the curl man page for more details on this parameter.</string>
 			<key>pfm_name</key>
 			<string>SoftwareRepoCAPath</string>
 			<key>pfm_title</key>
@@ -1143,12 +1199,72 @@ S3 Endpoint for bucket.</string>
 			<key>pfm_value_placeholder</key>
 			<string>Days</string>
 		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>7.0.0</string>
+			<key>pfm_description</key>
+			<string>Custom sidebar configuration for Managed Software Center, overriding the default Software/Categories/My Items/Updates sidebar. Each array item is a dict with 'title', 'icon' (an SF Symbol name), and 'page' (a munki:// URL) key. Requires macOS 11 or later.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/munki/munki/pull/1214</string>
+			<key>pfm_name</key>
+			<string>CustomSidebarItems</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_description</key>
+					<string></string>
+					<key>pfm_subkeys</key>
+					<array>
+						<dict>
+							<key>pfm_description</key>
+							<string>The display title of this sidebar item.</string>
+							<key>pfm_name</key>
+							<string>title</string>
+							<key>pfm_title</key>
+							<string>Title</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+						<dict>
+							<key>pfm_description</key>
+							<string>The name of the SF Symbol to use as this sidebar item's icon.</string>
+							<key>pfm_name</key>
+							<string>icon</string>
+							<key>pfm_title</key>
+							<string>Icon</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+						<dict>
+							<key>pfm_description</key>
+							<string>The munki:// URL this sidebar item navigates to.</string>
+							<key>pfm_name</key>
+							<string>page</string>
+							<key>pfm_title</key>
+							<string>Page</string>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_value_placeholder</key>
+							<string>munki://category-all</string>
+						</dict>
+					</array>
+					<key>pfm_title</key>
+					<string></string>
+					<key>pfm_type</key>
+					<string>dictionary</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>Custom Sidebar Items</string>
+			<key>pfm_type</key>
+			<string>array</string>
+		</dict>
 	</array>
 	<key>pfm_title</key>
 	<string>Munki</string>
 	<key>pfm_unique</key>
 	<true/>
 	<key>pfm_version</key>
-	<integer>13</integer>
+	<integer>14</integer>
 </dict>
 </plist>
