@@ -269,9 +269,9 @@ This option is deprecated in macOS 11.</string>
 			<key>pfm_name</key>
 			<string>mouseDriverCursorSize</string>
 			<key>pfm_range_max</key>
-			<real>4</real>
+			<integer>4</integer>
 			<key>pfm_range_min</key>
-			<real>1</real>
+			<integer>1</integer>
 			<key>pfm_title</key>
 			<string>Cursor Size</string>
 			<key>pfm_type</key>

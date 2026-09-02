@@ -226,6 +226,8 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<array>
 				<string>apple</string>
 			</array>
+			<key>pfm_range_list_allow_custom_value</key>
+			<true/>
 			<key>pfm_require</key>
 			<string>always</string>
 			<key>pfm_title</key>
