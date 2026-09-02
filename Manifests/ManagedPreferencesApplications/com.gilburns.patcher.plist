@@ -280,7 +280,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.0</string>
+			<string>1.0.0</string>
 			<key>pfm_default</key>
 			<integer>300</integer>
 			<key>pfm_description</key>
@@ -298,7 +298,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.0</string>
+			<string>1.0.0</string>
 			<key>pfm_default</key>
 			<string>defer</string>
 			<key>pfm_description</key>
@@ -316,7 +316,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.0</string>
+			<string>1.0.0</string>
 			<key>pfm_default</key>
 			<integer>240</integer>
 			<key>pfm_description</key>
@@ -334,7 +334,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.0</string>
+			<string>1.0.0</string>
 			<key>pfm_default</key>
 			<string>5,30,60,120,240,480,1440</string>
 			<key>pfm_description</key>
@@ -353,7 +353,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.0</string>
+			<string>1.0.0</string>
 			<key>pfm_description</key>
 			<string>The number of minutes to defer the update restart dialog automatically if a process has prevented display sleep (for example, during an active meeting) or the user has Focus or Do Not Disturb enabled</string>
 			<key>pfm_documentation_url</key>
@@ -369,7 +369,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.4.0</string>
+			<string>1.0.0</string>
 			<key>pfm_description</key>
 			<string></string>
 			<key>pfm_documentation_url</key>
@@ -383,7 +383,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.4.0</string>
+			<string>1.0.0</string>
 			<key>pfm_default</key>
 			<integer>3</integer>
 			<key>pfm_description</key>
@@ -421,7 +421,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.4.0</string>
+			<string>1.0.0</string>
 			<key>pfm_default</key>
 			<integer>2</integer>
 			<key>pfm_description</key>
@@ -453,7 +453,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.4.0</string>
+			<string>1.0.0</string>
 			<key>pfm_description</key>
 			<string>Earliest time to begin applying on patch day (24-hour `HH:MM`). Empty = no lower bound.</string>
 			<key>pfm_documentation_url</key>
@@ -469,7 +469,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.4.0</string>
+			<string>1.0.0</string>
 			<key>pfm_description</key>
 			<string>Latest time to begin applying on patch day (24-hour `HH:MM`). Apply will not start a new run after this time.</string>
 			<key>pfm_documentation_url</key>
@@ -485,7 +485,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.0</string>
+			<string>1.0.0</string>
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
@@ -501,7 +501,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.0</string>
+			<string>1.0.0</string>
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
@@ -517,7 +517,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.0</string>
+			<string>1.0.0</string>
 			<key>pfm_description</key>
 			<string>Seconds before the apply completion dialog auto-closes when `UnattendedExit` is `true`.</string>
 			<key>pfm_documentation_url</key>
@@ -533,7 +533,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.4.0</string>
+			<string>1.0.0</string>
 			<key>pfm_default</key>
 			<string>prompt</string>
 			<key>pfm_description</key>
@@ -559,7 +559,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.0</string>
+			<string>1.0.0</string>
 			<key>pfm_default</key>
 			<integer>120</integer>
 			<key>pfm_description</key>
@@ -577,7 +577,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.4.0</string>
+			<string>1.0.0</string>
 			<key>pfm_description</key>
 			<string>Path to a custom icon for the apply dialog. Empty = use the system computer icon. Supports absolute paths, `SF=&lt;symbol&gt;` notation, or an SF Symbol name directly.</string>
 			<key>pfm_documentation_url</key>
@@ -593,7 +593,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.0</string>
+			<string>1.0.0</string>
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
@@ -609,7 +609,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.4.0</string>
+			<string>1.0.0</string>
 			<key>pfm_description</key>
 			<string>Path to the overlay icon image. Empty = auto-detect from known MDM agents (Jamf, Intune, etc.).</string>
 			<key>pfm_documentation_url</key>
@@ -625,7 +625,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.6.0</string>
+			<string>1.0.0</string>
 			<key>pfm_default</key>
 			<string>center</string>
 			<key>pfm_description</key>
@@ -655,7 +655,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.6.0</string>
+			<string>1.0.0</string>
 			<key>pfm_default</key>
 			<string>bottomright</string>
 			<key>pfm_description</key>
@@ -685,7 +685,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.6.0</string>
+			<string>1.0.0</string>
 			<key>pfm_default</key>
 			<string></string>
 			<key>pfm_description</key>
@@ -703,7 +703,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.6.0</string>
+			<string>1.0.0</string>
 			<key>pfm_default</key>
 			<integer>3</integer>
 			<key>pfm_description</key>
@@ -721,7 +721,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.6.0</string>
+			<string>1.0.0</string>
 			<key>pfm_default</key>
 			<integer>3</integer>
 			<key>pfm_description</key>
@@ -739,7 +739,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.0</string>
+			<string>1.0.0</string>
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
@@ -755,7 +755,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.6.0</string>
+			<string>1.0.0</string>
 			<key>pfm_default</key>
 			<integer>7</integer>
 			<key>pfm_description</key>
@@ -773,7 +773,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.6.0</string>
+			<string>1.0.0</string>
 			<key>pfm_default</key>
 			<integer>7</integer>
 			<key>pfm_description</key>
@@ -791,7 +791,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.6.0</string>
+			<string>1.0.0</string>
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
@@ -807,7 +807,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.6.0</string>
+			<string>1.0.0</string>
 			<key>pfm_default</key>
 			<integer>86400</integer>
 			<key>pfm_description</key>
@@ -825,7 +825,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.6.0</string>
+			<string>1.0.0</string>
 			<key>pfm_default</key>
 			<integer>30</integer>
 			<key>pfm_description</key>
@@ -843,7 +843,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.6.0</string>
+			<string>1.0.0</string>
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
@@ -859,7 +859,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.6.0</string>
+			<string>1.0.0</string>
 			<key>pfm_default</key>
 			<integer>24</integer>
 			<key>pfm_description</key>
@@ -877,7 +877,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.6.0</string>
+			<string>1.0.0</string>
 			<key>pfm_default</key>
 			<integer>12</integer>
 			<key>pfm_description</key>
@@ -895,7 +895,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.6.0</string>
+			<string>1.0.0</string>
 			<key>pfm_default</key>
 			<integer>12</integer>
 			<key>pfm_description</key>
@@ -913,7 +913,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.6.0</string>
+			<string>1.0.0</string>
 			<key>pfm_default</key>
 			<integer>4</integer>
 			<key>pfm_description</key>
@@ -931,7 +931,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.0</string>
+			<string>1.0.0</string>
 			<key>pfm_description</key>
 			<string>A space-separated list of Installomator labels to ignore for the TPP workflow. Supports wildcards, for example "microsoft*". A single "*" ignores every Installomator label except those listed in Required Labels and Optional Labels.</string>
 			<key>pfm_documentation_url</key>
@@ -947,7 +947,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.6.0</string>
+			<string>1.0.0</string>
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
@@ -963,7 +963,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.6.0</string>
+			<string>1.1.0</string>
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
@@ -979,7 +979,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.0</string>
+			<string>1.1.0</string>
 			<key>pfm_default</key>
 			<string>beta canary dev</string>
 			<key>pfm_description</key>
@@ -997,7 +997,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.6.0</string>
+			<string>1.0.0</string>
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
@@ -1013,7 +1013,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.0</string>
+			<string>1.1.0</string>
 			<key>pfm_description</key>
 			<string>a space-separated list of Installomator labels that are required, regardless if the app is installed or or the latest version. Supports wildcards.</string>
 			<key>pfm_documentation_url</key>
@@ -1029,7 +1029,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.0</string>
+			<string>1.0.0</string>
 			<key>pfm_description</key>
 			<string>Space-separated list of label names made available for user-initiated self-service installation via the Available Software catalog. Does not support wildcards. Labels are presented in the order listed here, allowing you to feature priority apps at the top. Example: `"microsoftword zoom slack"`.</string>
 			<key>pfm_documentation_url</key>
@@ -1045,7 +1045,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.6.0</string>
+			<string>1.0.0</string>
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
@@ -1061,7 +1061,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.0</string>
+			<string>1.0.0</string>
 			<key>pfm_default</key>
 			<string>Third Party Patcher</string>
 			<key>pfm_description</key>
@@ -1079,7 +1079,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.0</string>
+			<string>1.0.0</string>
 			<key>pfm_default</key>
 			<string>white</string>
 			<key>pfm_description</key>
@@ -1097,7 +1097,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.0</string>
+			<string>1.1.0</string>
 			<key>pfm_default</key>
 			<string>blue</string>
 			<key>pfm_description</key>
@@ -1115,7 +1115,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.0</string>
+			<string>1.1.0</string>
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
@@ -1131,7 +1131,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.0</string>
+			<string>1.0.0</string>
 			<key>pfm_default</key>
 			<integer>90</integer>
 			<key>pfm_description</key>
@@ -1149,7 +1149,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.0</string>
+			<string>1.0.0</string>
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
@@ -1165,7 +1165,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.0</string>
+			<string>1.0.0</string>
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
@@ -1181,7 +1181,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.0</string>
+			<string>1.0.0</string>
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
@@ -1197,7 +1197,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.0</string>
+			<string>1.0.0</string>
 			<key>pfm_default</key>
 			<string>Installomator</string>
 			<key>pfm_description</key>
@@ -1215,7 +1215,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.0</string>
+			<string>1.0.0</string>
 			<key>pfm_default</key>
 			<string>Installomator</string>
 			<key>pfm_description</key>
@@ -1233,7 +1233,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.0</string>
+			<string>1.0.0</string>
 			<key>pfm_default</key>
 			<string>main</string>
 			<key>pfm_description</key>
@@ -1251,7 +1251,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.2</string>
+			<string>1.0.0</string>
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
@@ -1267,7 +1267,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.2</string>
+			<string>1.0.0</string>
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
@@ -1283,7 +1283,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.0</string>
+			<string>1.0.0</string>
 			<key>pfm_default</key>
 			<string>Installomator</string>
 			<key>pfm_description</key>
@@ -1301,7 +1301,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.0</string>
+			<string>1.0.0</string>
 			<key>pfm_default</key>
 			<string>Installomator</string>
 			<key>pfm_description</key>
@@ -1319,7 +1319,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.0</string>
+			<string>1.0.0</string>
 			<key>pfm_default</key>
 			<string>main</string>
 			<key>pfm_description</key>
@@ -1337,7 +1337,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.2</string>
+			<string>1.0.0</string>
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
@@ -1353,7 +1353,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.2</string>
+			<string>1.0.0</string>
 			<key>pfm_default</key>
 			<integer>10</integer>
 			<key>pfm_description</key>
@@ -1371,7 +1371,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.0</string>
+			<string>1.0.0</string>
 			<key>pfm_default</key>
 			<string>IT Support Team</string>
 			<key>pfm_description</key>
@@ -1389,7 +1389,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.0</string>
+			<string>1.0.0</string>
 			<key>pfm_default</key>
 			<string>support@company.com</string>
 			<key>pfm_description</key>
@@ -1407,7 +1407,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.0</string>
+			<string>1.0.0</string>
 			<key>pfm_default</key>
 			<string>None</string>
 			<key>pfm_description</key>
@@ -1425,7 +1425,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.0</string>
+			<string>1.0.0</string>
 			<key>pfm_default</key>
 			<string>None</string>
 			<key>pfm_description</key>
@@ -1443,7 +1443,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.2</string>
+			<string>1.0.0</string>
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
@@ -1459,7 +1459,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.0</string>
+			<string>1.0.0</string>
 			<key>pfm_default</key>
 			<string></string>
 			<key>pfm_description</key>
@@ -1477,7 +1477,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.2</string>
+			<string>1.0.0</string>
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
@@ -1493,7 +1493,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.2</string>
+			<string>1.0.0</string>
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
@@ -1509,7 +1509,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.0</string>
+			<string>1.0.0</string>
 			<key>pfm_default</key>
 			<string>combined</string>
 			<key>pfm_description</key>
@@ -1533,7 +1533,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.2</string>
+			<string>1.2.0</string>
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
@@ -1549,7 +1549,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.2</string>
+			<string>1.0.0</string>
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
@@ -1565,7 +1565,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.2</string>
+			<string>1.0.0</string>
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
@@ -1581,7 +1581,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.2</string>
+			<string>1.0.0</string>
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
@@ -1597,7 +1597,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.2</string>
+			<string>1.0.0</string>
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
@@ -1613,7 +1613,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.0</string>
+			<string>1.0.0</string>
 			<key>pfm_default</key>
 			<string>Patcher Corp.</string>
 			<key>pfm_description</key>
@@ -1631,7 +1631,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.0</string>
+			<string>1.0.0</string>
 			<key>pfm_default</key>
 			<string></string>
 			<key>pfm_description</key>
@@ -1649,7 +1649,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.6.0</string>
+			<string>1.0.0</string>
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
@@ -1665,7 +1665,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.0</string>
+			<string>1.0.0</string>
 			<key>pfm_default</key>
 			<string>FAILURES</string>
 			<key>pfm_description</key>
@@ -1687,7 +1687,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.0</string>
+			<string>1.0.0</string>
 			<key>pfm_description</key>
 			<string>Microsoft Teams incoming webhook URL.</string>
 			<key>pfm_documentation_url</key>
@@ -1703,7 +1703,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.0</string>
+			<string>1.0.0</string>
 			<key>pfm_description</key>
 			<string>Slack incoming webhook URL.</string>
 			<key>pfm_documentation_url</key>
@@ -1719,7 +1719,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.0</string>
+			<string>1.0.0</string>
 			<key>pfm_default</key>
 			<string>deviceName,serial,osVersion,user</string>
 			<key>pfm_description</key>
@@ -1737,7 +1737,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.0</string>
+			<string>1.0.0</string>
 			<key>pfm_default</key>
 			<string>immediate</string>
 			<key>pfm_description</key>
@@ -1763,7 +1763,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.0</string>
+			<string>1.0.0</string>
 			<key>pfm_default</key>
 			<integer>1</integer>
 			<key>pfm_description</key>
@@ -1799,7 +1799,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.0</string>
+			<string>1.0.0</string>
 			<key>pfm_default</key>
 			<integer>1</integer>
 			<key>pfm_description</key>
@@ -1817,7 +1817,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.0</string>
+			<string>1.0.0</string>
 			<key>pfm_default</key>
 			<integer>8</integer>
 			<key>pfm_description</key>
@@ -1835,7 +1835,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.0</string>
+			<string>1.0.0</string>
 			<key>pfm_default</key>
 			<integer>2</integer>
 			<key>pfm_description</key>
@@ -1853,7 +1853,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.6.0</string>
+			<string>1.0.0</string>
 			<key>pfm_default</key>
 			<string>FALSE</string>
 			<key>pfm_description</key>
@@ -1877,7 +1877,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.6.0</string>
+			<string>1.0.0</string>
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
@@ -1893,7 +1893,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.0</string>
+			<string>1.0.0</string>
 			<key>pfm_default</key>
 			<integer>4</integer>
 			<key>pfm_description</key>
@@ -1911,7 +1911,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.0</string>
+			<string>1.0.0</string>
 			<key>pfm_default</key>
 			<integer>10</integer>
 			<key>pfm_description</key>
@@ -1929,7 +1929,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.6.0</string>
+			<string>1.0.0</string>
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
@@ -1945,7 +1945,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.6.0</string>
+			<string>1.0.0</string>
 			<key>pfm_description</key>
 			<string>Space-separated list of process names to ignore when checking for display-sleep assertions (`pmset -g assertions`). If the process holding the assertion resolves to a name that matches an entry here (case-insensitive), the assertion is not treated as a blocker and patching may proceed.</string>
 			<key>pfm_documentation_url</key>
@@ -1961,7 +1961,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>3.6.0</string>
+			<string>1.1.0</string>
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
