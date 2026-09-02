@@ -13,7 +13,7 @@
 	<key>pfm_interaction</key>
 	<string>combined</string>
 	<key>pfm_last_modified</key>
-	<date>2026-08-20T16:39:06Z</date>
+	<date>2026-09-02T08:07:59Z</date>
 	<key>pfm_macos_min</key>
 	<string>10.14</string>
 	<key>pfm_platforms</key>
@@ -246,8 +246,6 @@ Available in macOS 11 and later.</string>
 										<string>Allow (deprecated 26.2, removed 27.0)</string>
 										<string>Deny</string>
 									</array>
-									<key>pfm_title</key>
-									<string>Authorization</string>
 									<key>pfm_type</key>
 									<string>string</string>
 									<key>pfmx_supported_oses</key>
@@ -258,20 +256,6 @@ Available in macOS 11 and later.</string>
 											<string>11.0</string>
 										</dict>
 									</dict>
-								</dict>
-								<dict>
-									<key>pfm_description</key>
-									<string>Not used.</string>
-									<key>pfm_hidden</key>
-									<string>all</string>
-									<key>pfm_macos_deprecated</key>
-									<string>27.0</string>
-									<key>pfm_name</key>
-									<string>Comment</string>
-									<key>pfm_title</key>
-									<string>Comment</string>
-									<key>pfm_type</key>
-									<string>string</string>
 								</dict>
 								<dict>
 									<key>pfm_description</key>
@@ -295,6 +279,20 @@ Note: Every payload needs to include either 'Authorization' or 'Allowed', but no
 									<string>Allowed</string>
 									<key>pfm_type</key>
 									<string>boolean</string>
+								</dict>
+								<dict>
+									<key>pfm_description</key>
+									<string>Not used.</string>
+									<key>pfm_hidden</key>
+									<string>all</string>
+									<key>pfm_macos_deprecated</key>
+									<string>27.0</string>
+									<key>pfm_name</key>
+									<string>Comment</string>
+									<key>pfm_title</key>
+									<string>Comment</string>
+									<key>pfm_type</key>
+									<string>string</string>
 								</dict>
 							</array>
 							<key>pfm_title</key>
@@ -413,8 +411,6 @@ Available in macOS 11 and later.</string>
 										<string>Allow</string>
 										<string>Deny</string>
 									</array>
-									<key>pfm_title</key>
-									<string>Authorization</string>
 									<key>pfm_type</key>
 									<string>string</string>
 									<key>pfmx_supported_oses</key>
@@ -425,6 +421,27 @@ Available in macOS 11 and later.</string>
 											<string>11.0</string>
 										</dict>
 									</dict>
+								</dict>
+								<dict>
+									<key>pfm_description</key>
+									<string>If 'true', access is granted; otherwise, the process doesn't have access. The user isn't prompted and can't change this value.
+Note: Every payload needs to include either 'Authorization' or 'Allowed', but not both.</string>
+									<key>pfm_name</key>
+									<string>Allowed</string>
+									<key>pfm_range_list</key>
+									<array>
+										<false/>
+										<true/>
+									</array>
+									<key>pfm_range_list_titles</key>
+									<array>
+										<string>Deny</string>
+										<string>Allow</string>
+									</array>
+									<key>pfm_title</key>
+									<string>Allowed</string>
+									<key>pfm_type</key>
+									<string>boolean</string>
 								</dict>
 								<dict>
 									<key>pfm_description</key>
@@ -483,27 +500,6 @@ Available in macOS 11 and later.</string>
 									<string>Comment</string>
 									<key>pfm_type</key>
 									<string>string</string>
-								</dict>
-								<dict>
-									<key>pfm_description</key>
-									<string>If 'true', access is granted; otherwise, the process doesn't have access. The user isn't prompted and can't change this value.
-Note: Every payload needs to include either 'Authorization' or 'Allowed', but not both.</string>
-									<key>pfm_name</key>
-									<string>Allowed</string>
-									<key>pfm_range_list</key>
-									<array>
-										<false/>
-										<true/>
-									</array>
-									<key>pfm_range_list_titles</key>
-									<array>
-										<string>Deny</string>
-										<string>Allow</string>
-									</array>
-									<key>pfm_title</key>
-									<string>Allowed</string>
-									<key>pfm_type</key>
-									<string>boolean</string>
 								</dict>
 							</array>
 							<key>pfm_title</key>
@@ -644,22 +640,6 @@ Available in macOS 11 and later.</string>
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>Not used.</string>
-									<key>pfm_hidden</key>
-									<string>all</string>
-									<key>pfm_macos_deprecated</key>
-									<string>27.0</string>
-									<key>pfm_macos_min</key>
-									<string>11.0</string>
-									<key>pfm_name</key>
-									<string>Comment</string>
-									<key>pfm_title</key>
-									<string>Comment</string>
-									<key>pfm_type</key>
-									<string>string</string>
-								</dict>
-								<dict>
-									<key>pfm_description</key>
 									<string>If 'true', access is granted; otherwise, the process doesn't have access. The user isn't prompted and can't change this value.
 Note: Every payload needs to include either 'Authorization' or 'Allowed', but not both.</string>
 									<key>pfm_macos_deprecated</key>
@@ -680,6 +660,22 @@ Note: Every payload needs to include either 'Authorization' or 'Allowed', but no
 									</array>
 									<key>pfm_type</key>
 									<string>boolean</string>
+								</dict>
+								<dict>
+									<key>pfm_description</key>
+									<string>Not used.</string>
+									<key>pfm_hidden</key>
+									<string>all</string>
+									<key>pfm_macos_deprecated</key>
+									<string>27.0</string>
+									<key>pfm_macos_min</key>
+									<string>11.0</string>
+									<key>pfm_name</key>
+									<string>Comment</string>
+									<key>pfm_title</key>
+									<string>Comment</string>
+									<key>pfm_type</key>
+									<string>string</string>
 								</dict>
 							</array>
 							<key>pfm_title</key>
@@ -798,8 +794,6 @@ Available in macOS 11 and later.</string>
 										<string>Allow</string>
 										<string>Deny</string>
 									</array>
-									<key>pfm_title</key>
-									<string>Authorization</string>
 									<key>pfm_type</key>
 									<string>string</string>
 									<key>pfmx_supported_oses</key>
@@ -810,18 +804,6 @@ Available in macOS 11 and later.</string>
 											<string>11.0</string>
 										</dict>
 									</dict>
-								</dict>
-								<dict>
-									<key>pfm_description</key>
-									<string>Not used.</string>
-									<key>pfm_hidden</key>
-									<string>all</string>
-									<key>pfm_name</key>
-									<string>Comment</string>
-									<key>pfm_title</key>
-									<string>Comment</string>
-									<key>pfm_type</key>
-									<string>string</string>
 								</dict>
 								<dict>
 									<key>pfm_description</key>
@@ -843,6 +825,18 @@ Note: Every payload needs to include either 'Authorization' or 'Allowed', but no
 									<string>Allowed</string>
 									<key>pfm_type</key>
 									<string>boolean</string>
+								</dict>
+								<dict>
+									<key>pfm_description</key>
+									<string>Not used.</string>
+									<key>pfm_hidden</key>
+									<string>all</string>
+									<key>pfm_name</key>
+									<string>Comment</string>
+									<key>pfm_title</key>
+									<string>Comment</string>
+									<key>pfm_type</key>
+									<string>string</string>
 								</dict>
 							</array>
 							<key>pfm_title</key>
@@ -966,8 +960,6 @@ Available in macOS 11 and later.</string>
 									<array>
 										<string>Deny</string>
 									</array>
-									<key>pfm_title</key>
-									<string>Authorization</string>
 									<key>pfm_type</key>
 									<string>string</string>
 									<key>pfmx_supported_oses</key>
@@ -978,20 +970,6 @@ Available in macOS 11 and later.</string>
 											<string>11.0</string>
 										</dict>
 									</dict>
-								</dict>
-								<dict>
-									<key>pfm_description</key>
-									<string>Not used.</string>
-									<key>pfm_hidden</key>
-									<string>all</string>
-									<key>pfm_macos_deprecated</key>
-									<string>27.0</string>
-									<key>pfm_name</key>
-									<string>Comment</string>
-									<key>pfm_title</key>
-									<string>Comment</string>
-									<key>pfm_type</key>
-									<string>string</string>
 								</dict>
 								<dict>
 									<key>pfm_description</key>
@@ -1013,6 +991,20 @@ Note: Every payload needs to include either 'Authorization' or 'Allowed', but no
 									<string>Allowed</string>
 									<key>pfm_type</key>
 									<string>boolean</string>
+								</dict>
+								<dict>
+									<key>pfm_description</key>
+									<string>Not used.</string>
+									<key>pfm_hidden</key>
+									<string>all</string>
+									<key>pfm_macos_deprecated</key>
+									<string>27.0</string>
+									<key>pfm_name</key>
+									<string>Comment</string>
+									<key>pfm_title</key>
+									<string>Comment</string>
+									<key>pfm_type</key>
+									<string>string</string>
 								</dict>
 							</array>
 							<key>pfm_title</key>
@@ -1131,8 +1123,6 @@ Available in macOS 11 and later.</string>
 										<string>Allow</string>
 										<string>Deny</string>
 									</array>
-									<key>pfm_title</key>
-									<string>Authorization</string>
 									<key>pfm_type</key>
 									<string>string</string>
 									<key>pfmx_supported_oses</key>
@@ -1143,18 +1133,6 @@ Available in macOS 11 and later.</string>
 											<string>11.0</string>
 										</dict>
 									</dict>
-								</dict>
-								<dict>
-									<key>pfm_description</key>
-									<string>Not used.</string>
-									<key>pfm_hidden</key>
-									<string>all</string>
-									<key>pfm_name</key>
-									<string>Comment</string>
-									<key>pfm_title</key>
-									<string>Comment</string>
-									<key>pfm_type</key>
-									<string>string</string>
 								</dict>
 								<dict>
 									<key>pfm_description</key>
@@ -1176,6 +1154,18 @@ Note: Every payload needs to include either 'Authorization' or 'Allowed', but no
 									<string>Allowed</string>
 									<key>pfm_type</key>
 									<string>boolean</string>
+								</dict>
+								<dict>
+									<key>pfm_description</key>
+									<string>Not used.</string>
+									<key>pfm_hidden</key>
+									<string>all</string>
+									<key>pfm_name</key>
+									<string>Comment</string>
+									<key>pfm_title</key>
+									<string>Comment</string>
+									<key>pfm_type</key>
+									<string>string</string>
 								</dict>
 							</array>
 							<key>pfm_title</key>
@@ -1296,8 +1286,6 @@ Available in macOS 11 and later.</string>
 										<string>Allow</string>
 										<string>Deny</string>
 									</array>
-									<key>pfm_title</key>
-									<string>Authorization</string>
 									<key>pfm_type</key>
 									<string>string</string>
 									<key>pfmx_supported_oses</key>
@@ -1308,20 +1296,6 @@ Available in macOS 11 and later.</string>
 											<string>11.0</string>
 										</dict>
 									</dict>
-								</dict>
-								<dict>
-									<key>pfm_description</key>
-									<string>Not used.</string>
-									<key>pfm_hidden</key>
-									<string>all</string>
-									<key>pfm_macos_min</key>
-									<string>10.15</string>
-									<key>pfm_name</key>
-									<string>Comment</string>
-									<key>pfm_title</key>
-									<string>Comment</string>
-									<key>pfm_type</key>
-									<string>string</string>
 								</dict>
 								<dict>
 									<key>pfm_description</key>
@@ -1346,6 +1320,20 @@ Note: Every payload needs to include either 'Authorization' or 'Allowed', but no
 									<key>pfm_type</key>
 									<string>boolean</string>
 								</dict>
+								<dict>
+									<key>pfm_description</key>
+									<string>Not used.</string>
+									<key>pfm_hidden</key>
+									<string>all</string>
+									<key>pfm_macos_min</key>
+									<string>10.15</string>
+									<key>pfm_name</key>
+									<string>Comment</string>
+									<key>pfm_title</key>
+									<string>Comment</string>
+									<key>pfm_type</key>
+									<string>string</string>
+								</dict>
 							</array>
 							<key>pfm_title</key>
 							<string>Services</string>
@@ -1369,8 +1357,6 @@ Note: Every payload needs to include either 'Authorization' or 'Allowed', but no
 				<dict>
 					<key>pfm_description</key>
 					<string>Allows the application to use CoreGraphics and HID APIs to listen to (receive) CGEvents and HID events from all processes. A profile can't grant access to these events; it can only deny it.</string>
-					<key>pfm_documentation_url</key>
-					<string>https://developer.apple.com/documentation/devicemanagement/privacypreferencespolicycontrol/services-data.dictionary/identity</string>
 					<key>pfm_macos_min</key>
 					<string>10.15</string>
 					<key>pfm_name</key>
@@ -1491,20 +1477,6 @@ Note: Every payload needs to include either 'Authorization' or 'Allowed', but no
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>Not used.</string>
-									<key>pfm_hidden</key>
-									<string>all</string>
-									<key>pfm_macos_min</key>
-									<string>10.15</string>
-									<key>pfm_name</key>
-									<string>Comment</string>
-									<key>pfm_title</key>
-									<string>Comment</string>
-									<key>pfm_type</key>
-									<string>string</string>
-								</dict>
-								<dict>
-									<key>pfm_description</key>
 									<string>If 'true', access is granted; otherwise, the process doesn't have access. The user isn't prompted and can't change this value.
 Note: Every payload needs to include either 'Authorization' or 'Allowed', but not both.</string>
 									<key>pfm_macos_min</key>
@@ -1523,6 +1495,20 @@ Note: Every payload needs to include either 'Authorization' or 'Allowed', but no
 									<string>Allowed</string>
 									<key>pfm_type</key>
 									<string>boolean</string>
+								</dict>
+								<dict>
+									<key>pfm_description</key>
+									<string>Not used.</string>
+									<key>pfm_hidden</key>
+									<string>all</string>
+									<key>pfm_macos_min</key>
+									<string>10.15</string>
+									<key>pfm_name</key>
+									<string>Comment</string>
+									<key>pfm_title</key>
+									<string>Comment</string>
+									<key>pfm_type</key>
+									<string>string</string>
 								</dict>
 							</array>
 							<key>pfm_title</key>
@@ -1651,8 +1637,6 @@ Available in macOS 11 and later.</string>
 										<string>Allow</string>
 										<string>Deny</string>
 									</array>
-									<key>pfm_title</key>
-									<string>Authorization</string>
 									<key>pfm_type</key>
 									<string>string</string>
 									<key>pfmx_supported_oses</key>
@@ -1663,20 +1647,6 @@ Available in macOS 11 and later.</string>
 											<string>11.0</string>
 										</dict>
 									</dict>
-								</dict>
-								<dict>
-									<key>pfm_description</key>
-									<string>Not used.</string>
-									<key>pfm_hidden</key>
-									<string>all</string>
-									<key>pfm_macos_min</key>
-									<string>10.15</string>
-									<key>pfm_name</key>
-									<string>Comment</string>
-									<key>pfm_title</key>
-									<string>Comment</string>
-									<key>pfm_type</key>
-									<string>string</string>
 								</dict>
 								<dict>
 									<key>pfm_description</key>
@@ -1700,6 +1670,20 @@ Note: Every payload needs to include either 'Authorization' or 'Allowed', but no
 									<string>Allowed</string>
 									<key>pfm_type</key>
 									<string>boolean</string>
+								</dict>
+								<dict>
+									<key>pfm_description</key>
+									<string>Not used.</string>
+									<key>pfm_hidden</key>
+									<string>all</string>
+									<key>pfm_macos_min</key>
+									<string>10.15</string>
+									<key>pfm_name</key>
+									<string>Comment</string>
+									<key>pfm_title</key>
+									<string>Comment</string>
+									<key>pfm_type</key>
+									<string>string</string>
 								</dict>
 							</array>
 							<key>pfm_title</key>
@@ -1831,8 +1815,6 @@ Available in macOS 11 and later.</string>
 									<array>
 										<string>Deny</string>
 									</array>
-									<key>pfm_title</key>
-									<string>Authorization</string>
 									<key>pfm_type</key>
 									<string>string</string>
 									<key>pfmx_supported_oses</key>
@@ -1843,20 +1825,6 @@ Available in macOS 11 and later.</string>
 											<string>11.0</string>
 										</dict>
 									</dict>
-								</dict>
-								<dict>
-									<key>pfm_description</key>
-									<string>Not used.</string>
-									<key>pfm_hidden</key>
-									<string>all</string>
-									<key>pfm_macos_deprecated</key>
-									<string>27.0</string>
-									<key>pfm_name</key>
-									<string>Comment</string>
-									<key>pfm_title</key>
-									<string>Comment</string>
-									<key>pfm_type</key>
-									<string>string</string>
 								</dict>
 								<dict>
 									<key>pfm_description</key>
@@ -1878,6 +1846,20 @@ Note: Every payload needs to include either 'Authorization' or 'Allowed', but no
 									<string>Allowed</string>
 									<key>pfm_type</key>
 									<string>boolean</string>
+								</dict>
+								<dict>
+									<key>pfm_description</key>
+									<string>Not used.</string>
+									<key>pfm_hidden</key>
+									<string>all</string>
+									<key>pfm_macos_deprecated</key>
+									<string>27.0</string>
+									<key>pfm_name</key>
+									<string>Comment</string>
+									<key>pfm_title</key>
+									<string>Comment</string>
+									<key>pfm_type</key>
+									<string>string</string>
 								</dict>
 							</array>
 							<key>pfm_title</key>
@@ -1996,8 +1978,6 @@ Available in macOS 11 and later.</string>
 										<string>Allow</string>
 										<string>Deny</string>
 									</array>
-									<key>pfm_title</key>
-									<string>Authorization</string>
 									<key>pfm_type</key>
 									<string>string</string>
 									<key>pfmx_supported_oses</key>
@@ -2008,18 +1988,6 @@ Available in macOS 11 and later.</string>
 											<string>11.0</string>
 										</dict>
 									</dict>
-								</dict>
-								<dict>
-									<key>pfm_description</key>
-									<string>Not used.</string>
-									<key>pfm_hidden</key>
-									<string>all</string>
-									<key>pfm_name</key>
-									<string>Comment</string>
-									<key>pfm_title</key>
-									<string>Comment</string>
-									<key>pfm_type</key>
-									<string>string</string>
 								</dict>
 								<dict>
 									<key>pfm_description</key>
@@ -2041,6 +2009,18 @@ Note: Every payload needs to include either 'Authorization' or 'Allowed', but no
 									<string>Allowed</string>
 									<key>pfm_type</key>
 									<string>boolean</string>
+								</dict>
+								<dict>
+									<key>pfm_description</key>
+									<string>Not used.</string>
+									<key>pfm_hidden</key>
+									<string>all</string>
+									<key>pfm_name</key>
+									<string>Comment</string>
+									<key>pfm_title</key>
+									<string>Comment</string>
+									<key>pfm_type</key>
+									<string>string</string>
 								</dict>
 							</array>
 							<key>pfm_title</key>
@@ -2151,8 +2131,6 @@ Available in macOS 11 and later.</string>
 										<string>Allow</string>
 										<string>Deny</string>
 									</array>
-									<key>pfm_title</key>
-									<string>Authorization</string>
 									<key>pfm_type</key>
 									<string>string</string>
 									<key>pfmx_supported_oses</key>
@@ -2163,18 +2141,6 @@ Available in macOS 11 and later.</string>
 											<string>11.0</string>
 										</dict>
 									</dict>
-								</dict>
-								<dict>
-									<key>pfm_description</key>
-									<string>Not used.</string>
-									<key>pfm_hidden</key>
-									<string>all</string>
-									<key>pfm_name</key>
-									<string>Comment</string>
-									<key>pfm_title</key>
-									<string>Comment</string>
-									<key>pfm_type</key>
-									<string>string</string>
 								</dict>
 								<dict>
 									<key>pfm_description</key>
@@ -2196,6 +2162,18 @@ Note: Every payload needs to include either 'Authorization' or 'Allowed', but no
 									<string>Allowed</string>
 									<key>pfm_type</key>
 									<string>boolean</string>
+								</dict>
+								<dict>
+									<key>pfm_description</key>
+									<string>Not used.</string>
+									<key>pfm_hidden</key>
+									<string>all</string>
+									<key>pfm_name</key>
+									<string>Comment</string>
+									<key>pfm_title</key>
+									<string>Comment</string>
+									<key>pfm_type</key>
+									<string>string</string>
 								</dict>
 							</array>
 							<key>pfm_title</key>
@@ -2306,8 +2284,6 @@ Available in macOS 11 and later.</string>
 										<string>Allow</string>
 										<string>Deny</string>
 									</array>
-									<key>pfm_title</key>
-									<string>Authorization</string>
 									<key>pfm_type</key>
 									<string>string</string>
 									<key>pfmx_supported_oses</key>
@@ -2318,18 +2294,6 @@ Available in macOS 11 and later.</string>
 											<string>11.0</string>
 										</dict>
 									</dict>
-								</dict>
-								<dict>
-									<key>pfm_description</key>
-									<string>Not used.</string>
-									<key>pfm_hidden</key>
-									<string>all</string>
-									<key>pfm_name</key>
-									<string>Comment</string>
-									<key>pfm_title</key>
-									<string>Comment</string>
-									<key>pfm_type</key>
-									<string>string</string>
 								</dict>
 								<dict>
 									<key>pfm_description</key>
@@ -2351,6 +2315,18 @@ Note: Every payload needs to include either 'Authorization' or 'Allowed', but no
 									<string>Allowed</string>
 									<key>pfm_type</key>
 									<string>boolean</string>
+								</dict>
+								<dict>
+									<key>pfm_description</key>
+									<string>Not used.</string>
+									<key>pfm_hidden</key>
+									<string>all</string>
+									<key>pfm_name</key>
+									<string>Comment</string>
+									<key>pfm_title</key>
+									<string>Comment</string>
+									<key>pfm_type</key>
+									<string>string</string>
 								</dict>
 							</array>
 							<key>pfm_title</key>
@@ -2461,8 +2437,6 @@ Available in macOS 11 and later.</string>
 										<string>Allow</string>
 										<string>Deny</string>
 									</array>
-									<key>pfm_title</key>
-									<string>Authorization</string>
 									<key>pfm_type</key>
 									<string>string</string>
 									<key>pfmx_supported_oses</key>
@@ -2473,18 +2447,6 @@ Available in macOS 11 and later.</string>
 											<string>11.0</string>
 										</dict>
 									</dict>
-								</dict>
-								<dict>
-									<key>pfm_description</key>
-									<string>Not used.</string>
-									<key>pfm_hidden</key>
-									<string>all</string>
-									<key>pfm_name</key>
-									<string>Comment</string>
-									<key>pfm_title</key>
-									<string>Comment</string>
-									<key>pfm_type</key>
-									<string>string</string>
 								</dict>
 								<dict>
 									<key>pfm_description</key>
@@ -2506,6 +2468,18 @@ Note: Every payload needs to include either 'Authorization' or 'Allowed', but no
 									<string>Allowed</string>
 									<key>pfm_type</key>
 									<string>boolean</string>
+								</dict>
+								<dict>
+									<key>pfm_description</key>
+									<string>Not used.</string>
+									<key>pfm_hidden</key>
+									<string>all</string>
+									<key>pfm_name</key>
+									<string>Comment</string>
+									<key>pfm_title</key>
+									<string>Comment</string>
+									<key>pfm_type</key>
+									<string>string</string>
 								</dict>
 							</array>
 							<key>pfm_title</key>
@@ -2644,20 +2618,6 @@ Note: Every payload needs to include either 'Authorization' or 'Allowed', but no
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>Not used.</string>
-									<key>pfm_hidden</key>
-									<string>all</string>
-									<key>pfm_macos_min</key>
-									<string>10.15</string>
-									<key>pfm_name</key>
-									<string>Comment</string>
-									<key>pfm_title</key>
-									<string>Comment</string>
-									<key>pfm_type</key>
-									<string>string</string>
-								</dict>
-								<dict>
-									<key>pfm_description</key>
 									<string>If 'true', access is granted; otherwise, the process doesn't have access. The user isn't prompted and can't change this value.
 Note: Every payload needs to include either 'Authorization' or 'Allowed', but not both.</string>
 									<key>pfm_macos_min</key>
@@ -2676,6 +2636,20 @@ Note: Every payload needs to include either 'Authorization' or 'Allowed', but no
 									<string>Allowed</string>
 									<key>pfm_type</key>
 									<string>boolean</string>
+								</dict>
+								<dict>
+									<key>pfm_description</key>
+									<string>Not used.</string>
+									<key>pfm_hidden</key>
+									<string>all</string>
+									<key>pfm_macos_min</key>
+									<string>10.15</string>
+									<key>pfm_name</key>
+									<string>Comment</string>
+									<key>pfm_title</key>
+									<string>Comment</string>
+									<key>pfm_type</key>
+									<string>string</string>
 								</dict>
 							</array>
 							<key>pfm_title</key>
@@ -2819,8 +2793,6 @@ Available in macOS 11 and later.</string>
 										<string>Allow</string>
 										<string>Deny</string>
 									</array>
-									<key>pfm_title</key>
-									<string>Authorization</string>
 									<key>pfm_type</key>
 									<string>string</string>
 									<key>pfmx_supported_oses</key>
@@ -2831,22 +2803,6 @@ Available in macOS 11 and later.</string>
 											<string>11.0</string>
 										</dict>
 									</dict>
-								</dict>
-								<dict>
-									<key>pfm_description</key>
-									<string>Not used.</string>
-									<key>pfm_hidden</key>
-									<string>all</string>
-									<key>pfm_macos_deprecated</key>
-									<string>27.0</string>
-									<key>pfm_macos_min</key>
-									<string>10.15</string>
-									<key>pfm_name</key>
-									<string>Comment</string>
-									<key>pfm_title</key>
-									<string>Comment</string>
-									<key>pfm_type</key>
-									<string>string</string>
 								</dict>
 								<dict>
 									<key>pfm_description</key>
@@ -2872,6 +2828,22 @@ Note: Every payload needs to include either 'Authorization' or 'Allowed', but no
 									<string>Allowed</string>
 									<key>pfm_type</key>
 									<string>boolean</string>
+								</dict>
+								<dict>
+									<key>pfm_description</key>
+									<string>Not used.</string>
+									<key>pfm_hidden</key>
+									<string>all</string>
+									<key>pfm_macos_deprecated</key>
+									<string>27.0</string>
+									<key>pfm_macos_min</key>
+									<string>10.15</string>
+									<key>pfm_name</key>
+									<string>Comment</string>
+									<key>pfm_title</key>
+									<string>Comment</string>
+									<key>pfm_type</key>
+									<string>string</string>
 								</dict>
 							</array>
 							<key>pfm_title</key>
@@ -3002,8 +2974,6 @@ Available in macOS 11 and later.</string>
 										<string>Allow</string>
 										<string>Deny</string>
 									</array>
-									<key>pfm_title</key>
-									<string>Authorization</string>
 									<key>pfm_type</key>
 									<string>string</string>
 									<key>pfmx_supported_oses</key>
@@ -3014,20 +2984,6 @@ Available in macOS 11 and later.</string>
 											<string>11.0</string>
 										</dict>
 									</dict>
-								</dict>
-								<dict>
-									<key>pfm_description</key>
-									<string>Not used.</string>
-									<key>pfm_hidden</key>
-									<string>all</string>
-									<key>pfm_macos_min</key>
-									<string>10.15</string>
-									<key>pfm_name</key>
-									<string>Comment</string>
-									<key>pfm_title</key>
-									<string>Comment</string>
-									<key>pfm_type</key>
-									<string>string</string>
 								</dict>
 								<dict>
 									<key>pfm_description</key>
@@ -3051,6 +3007,20 @@ Note: Every payload needs to include either 'Authorization' or 'Allowed', but no
 									<string>Allowed</string>
 									<key>pfm_type</key>
 									<string>boolean</string>
+								</dict>
+								<dict>
+									<key>pfm_description</key>
+									<string>Not used.</string>
+									<key>pfm_hidden</key>
+									<string>all</string>
+									<key>pfm_macos_min</key>
+									<string>10.15</string>
+									<key>pfm_name</key>
+									<string>Comment</string>
+									<key>pfm_title</key>
+									<string>Comment</string>
+									<key>pfm_type</key>
+									<string>string</string>
 								</dict>
 							</array>
 							<key>pfm_title</key>
@@ -3179,8 +3149,6 @@ Available in macOS 11 and later.</string>
 										<string>Allow</string>
 										<string>Deny</string>
 									</array>
-									<key>pfm_title</key>
-									<string>Authorization</string>
 									<key>pfm_type</key>
 									<string>string</string>
 									<key>pfmx_supported_oses</key>
@@ -3191,20 +3159,6 @@ Available in macOS 11 and later.</string>
 											<string>11.0</string>
 										</dict>
 									</dict>
-								</dict>
-								<dict>
-									<key>pfm_description</key>
-									<string>Not used.</string>
-									<key>pfm_hidden</key>
-									<string>all</string>
-									<key>pfm_macos_min</key>
-									<string>10.15</string>
-									<key>pfm_name</key>
-									<string>Comment</string>
-									<key>pfm_title</key>
-									<string>Comment</string>
-									<key>pfm_type</key>
-									<string>string</string>
 								</dict>
 								<dict>
 									<key>pfm_description</key>
@@ -3228,6 +3182,20 @@ Note: Every payload needs to include either 'Authorization' or 'Allowed', but no
 									<string>Allowed</string>
 									<key>pfm_type</key>
 									<string>boolean</string>
+								</dict>
+								<dict>
+									<key>pfm_description</key>
+									<string>Not used.</string>
+									<key>pfm_hidden</key>
+									<string>all</string>
+									<key>pfm_macos_min</key>
+									<string>10.15</string>
+									<key>pfm_name</key>
+									<string>Comment</string>
+									<key>pfm_title</key>
+									<string>Comment</string>
+									<key>pfm_type</key>
+									<string>string</string>
 								</dict>
 							</array>
 							<key>pfm_title</key>
@@ -3356,8 +3324,6 @@ Available in macOS 11 and later.</string>
 										<string>Allow</string>
 										<string>Deny</string>
 									</array>
-									<key>pfm_title</key>
-									<string>Authorization</string>
 									<key>pfm_type</key>
 									<string>string</string>
 									<key>pfmx_supported_oses</key>
@@ -3368,20 +3334,6 @@ Available in macOS 11 and later.</string>
 											<string>11.0</string>
 										</dict>
 									</dict>
-								</dict>
-								<dict>
-									<key>pfm_description</key>
-									<string>Not used.</string>
-									<key>pfm_hidden</key>
-									<string>all</string>
-									<key>pfm_macos_min</key>
-									<string>10.15</string>
-									<key>pfm_name</key>
-									<string>Comment</string>
-									<key>pfm_title</key>
-									<string>Comment</string>
-									<key>pfm_type</key>
-									<string>string</string>
 								</dict>
 								<dict>
 									<key>pfm_description</key>
@@ -3405,6 +3357,20 @@ Note: Every payload needs to include either 'Authorization' or 'Allowed', but no
 									<string>Allowed</string>
 									<key>pfm_type</key>
 									<string>boolean</string>
+								</dict>
+								<dict>
+									<key>pfm_description</key>
+									<string>Not used.</string>
+									<key>pfm_hidden</key>
+									<string>all</string>
+									<key>pfm_macos_min</key>
+									<string>10.15</string>
+									<key>pfm_name</key>
+									<string>Comment</string>
+									<key>pfm_title</key>
+									<string>Comment</string>
+									<key>pfm_type</key>
+									<string>string</string>
 								</dict>
 							</array>
 							<key>pfm_title</key>
@@ -3533,8 +3499,6 @@ Available in macOS 11 and later.</string>
 										<string>Allow</string>
 										<string>Deny</string>
 									</array>
-									<key>pfm_title</key>
-									<string>Authorization</string>
 									<key>pfm_type</key>
 									<string>string</string>
 									<key>pfmx_supported_oses</key>
@@ -3545,20 +3509,6 @@ Available in macOS 11 and later.</string>
 											<string>11.0</string>
 										</dict>
 									</dict>
-								</dict>
-								<dict>
-									<key>pfm_description</key>
-									<string>Not used.</string>
-									<key>pfm_hidden</key>
-									<string>all</string>
-									<key>pfm_macos_min</key>
-									<string>10.15</string>
-									<key>pfm_name</key>
-									<string>Comment</string>
-									<key>pfm_title</key>
-									<string>Comment</string>
-									<key>pfm_type</key>
-									<string>string</string>
 								</dict>
 								<dict>
 									<key>pfm_description</key>
@@ -3582,6 +3532,20 @@ Note: Every payload needs to include either 'Authorization' or 'Allowed', but no
 									<string>Allowed</string>
 									<key>pfm_type</key>
 									<string>boolean</string>
+								</dict>
+								<dict>
+									<key>pfm_description</key>
+									<string>Not used.</string>
+									<key>pfm_hidden</key>
+									<string>all</string>
+									<key>pfm_macos_min</key>
+									<string>10.15</string>
+									<key>pfm_name</key>
+									<string>Comment</string>
+									<key>pfm_title</key>
+									<string>Comment</string>
+									<key>pfm_type</key>
+									<string>string</string>
 								</dict>
 							</array>
 							<key>pfm_title</key>
@@ -3710,8 +3674,6 @@ Available in macOS 11 and later.</string>
 										<string>Allow</string>
 										<string>Deny</string>
 									</array>
-									<key>pfm_title</key>
-									<string>Authorization</string>
 									<key>pfm_type</key>
 									<string>string</string>
 									<key>pfmx_supported_oses</key>
@@ -3722,20 +3684,6 @@ Available in macOS 11 and later.</string>
 											<string>11.0</string>
 										</dict>
 									</dict>
-								</dict>
-								<dict>
-									<key>pfm_description</key>
-									<string>Not used.</string>
-									<key>pfm_hidden</key>
-									<string>all</string>
-									<key>pfm_macos_min</key>
-									<string>10.15</string>
-									<key>pfm_name</key>
-									<string>Comment</string>
-									<key>pfm_title</key>
-									<string>Comment</string>
-									<key>pfm_type</key>
-									<string>string</string>
 								</dict>
 								<dict>
 									<key>pfm_description</key>
@@ -3759,6 +3707,20 @@ Note: Every payload needs to include either 'Authorization' or 'Allowed', but no
 									<string>Allowed</string>
 									<key>pfm_type</key>
 									<string>boolean</string>
+								</dict>
+								<dict>
+									<key>pfm_description</key>
+									<string>Not used.</string>
+									<key>pfm_hidden</key>
+									<string>all</string>
+									<key>pfm_macos_min</key>
+									<string>10.15</string>
+									<key>pfm_name</key>
+									<string>Comment</string>
+									<key>pfm_title</key>
+									<string>Comment</string>
+									<key>pfm_type</key>
+									<string>string</string>
 								</dict>
 							</array>
 							<key>pfm_title</key>
@@ -3877,8 +3839,6 @@ Available in macOS 11 and later.</string>
 										<string>Allow</string>
 										<string>Deny</string>
 									</array>
-									<key>pfm_title</key>
-									<string>Authorization</string>
 									<key>pfm_type</key>
 									<string>string</string>
 									<key>pfmx_supported_oses</key>
@@ -3889,18 +3849,6 @@ Available in macOS 11 and later.</string>
 											<string>11.0</string>
 										</dict>
 									</dict>
-								</dict>
-								<dict>
-									<key>pfm_description</key>
-									<string>Not used.</string>
-									<key>pfm_hidden</key>
-									<string>all</string>
-									<key>pfm_name</key>
-									<string>Comment</string>
-									<key>pfm_title</key>
-									<string>Comment</string>
-									<key>pfm_type</key>
-									<string>string</string>
 								</dict>
 								<dict>
 									<key>pfm_description</key>
@@ -3922,6 +3870,18 @@ Note: Every payload needs to include either 'Authorization' or 'Allowed', but no
 									<string>Allowed</string>
 									<key>pfm_type</key>
 									<string>boolean</string>
+								</dict>
+								<dict>
+									<key>pfm_description</key>
+									<string>Not used.</string>
+									<key>pfm_hidden</key>
+									<string>all</string>
+									<key>pfm_name</key>
+									<string>Comment</string>
+									<key>pfm_title</key>
+									<string>Comment</string>
+									<key>pfm_type</key>
+									<string>string</string>
 								</dict>
 							</array>
 							<key>pfm_title</key>
@@ -4030,16 +3990,6 @@ Available in macOS 11 and later.</string>
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>Not used.</string>
-									<key>pfm_macos_min</key>
-									<string>14.0</string>
-									<key>pfm_name</key>
-									<string>Comment</string>
-									<key>pfm_type</key>
-									<string>string</string>
-								</dict>
-								<dict>
-									<key>pfm_description</key>
 									<string>If 'true', access is granted; otherwise, the process doesn't have access. The user isn't prompted and can't change this value.
 Note: Every payload needs to include either 'Authorization' or 'Allowed', but not both.</string>
 									<key>pfm_macos_min</key>
@@ -4058,6 +4008,18 @@ Note: Every payload needs to include either 'Authorization' or 'Allowed', but no
 									</array>
 									<key>pfm_title</key>
 									<string>Allowed</string>
+									<key>pfm_type</key>
+									<string>boolean</string>
+								</dict>
+								<dict>
+									<key>pfm_description</key>
+									<string>Not used.</string>
+									<key>pfm_macos_min</key>
+									<string>14.0</string>
+									<key>pfm_name</key>
+									<string>Comment</string>
+									<key>pfm_type</key>
+									<string>string</string>
 								</dict>
 							</array>
 							<key>pfm_type</key>
@@ -4068,8 +4030,6 @@ Note: Every payload needs to include either 'Authorization' or 'Allowed', but no
 					<string>Files and Folders: Other App Containers</string>
 					<key>pfm_type</key>
 					<string>array</string>
-					<key>pfm_value_import_processor</key>
-					<string>com.apple.TCC.configuration-profile-policy.services</string>
 					<key>pfmx_supported_oses</key>
 					<dict>
 						<key>macOS</key>
@@ -4184,22 +4144,6 @@ Available in macOS 11 and later.</string>
 										<string>Allow</string>
 										<string>Deny</string>
 									</array>
-									<key>pfm_title</key>
-									<string>Authorization</string>
-									<key>pfm_type</key>
-									<string>string</string>
-								</dict>
-								<dict>
-									<key>pfm_description</key>
-									<string>Not used.</string>
-									<key>pfm_hidden</key>
-									<string>all</string>
-									<key>pfm_macos_min</key>
-									<string>13.0</string>
-									<key>pfm_name</key>
-									<string>Comment</string>
-									<key>pfm_title</key>
-									<string>Comment</string>
 									<key>pfm_type</key>
 									<string>string</string>
 								</dict>
@@ -4225,6 +4169,20 @@ Note: Every payload needs to include either 'Authorization' or 'Allowed', but no
 									<string>Allowed</string>
 									<key>pfm_type</key>
 									<string>boolean</string>
+								</dict>
+								<dict>
+									<key>pfm_description</key>
+									<string>Not used.</string>
+									<key>pfm_hidden</key>
+									<string>all</string>
+									<key>pfm_macos_min</key>
+									<string>13.0</string>
+									<key>pfm_name</key>
+									<string>Comment</string>
+									<key>pfm_title</key>
+									<string>Comment</string>
+									<key>pfm_type</key>
+									<string>string</string>
 								</dict>
 							</array>
 							<key>pfm_title</key>
@@ -4262,8 +4220,6 @@ Note: Every payload needs to include either 'Authorization' or 'Allowed', but no
 						<dict>
 							<key>pfm_description</key>
 							<string>A dictionary listing apps and the privacy policy to apply to them.</string>
-							<key>pfm_macos_min</key>
-							<string>14.7</string>
 							<key>pfm_name</key>
 							<string>IdentityDict</string>
 							<key>pfm_require</key>
@@ -4273,8 +4229,6 @@ Note: Every payload needs to include either 'Authorization' or 'Allowed', but no
 								<dict>
 									<key>pfm_description</key>
 									<string>The bundle ID or installation path of the binary.</string>
-									<key>pfm_macos_min</key>
-									<string>14.7</string>
 									<key>pfm_name</key>
 									<string>Identifier</string>
 									<key>pfm_require</key>
@@ -4289,8 +4243,6 @@ Note: Every payload needs to include either 'Authorization' or 'Allowed', but no
 								<dict>
 									<key>pfm_description</key>
 									<string>The type of identifier value. Application bundles must be identified by bundle ID. Nonbundled binaries must be identified by installation path. Helper tools embedded within an application bundle automatically inherit the permissions of their enclosing app bundle.</string>
-									<key>pfm_macos_min</key>
-									<string>14.7</string>
 									<key>pfm_name</key>
 									<string>IdentifierType</string>
 									<key>pfm_range_list</key>
@@ -4313,8 +4265,6 @@ Note: Every payload needs to include either 'Authorization' or 'Allowed', but no
 								<dict>
 									<key>pfm_description</key>
 									<string>Obtained via the command 'codesign -display -r -'.</string>
-									<key>pfm_macos_min</key>
-									<string>14.7</string>
 									<key>pfm_name</key>
 									<string>CodeRequirement</string>
 									<key>pfm_require</key>
@@ -4329,8 +4279,6 @@ Note: Every payload needs to include either 'Authorization' or 'Allowed', but no
 									<false/>
 									<key>pfm_description</key>
 									<string>If 'true', statically validate the code requirement. Used only if the process invalidates its dynamic code signature.</string>
-									<key>pfm_macos_min</key>
-									<string>14.7</string>
 									<key>pfm_name</key>
 									<string>StaticCode</string>
 									<key>pfm_title</key>
@@ -4363,20 +4311,6 @@ Available in macOS 11 and later.</string>
 								</dict>
 								<dict>
 									<key>pfm_description</key>
-									<string>Not used.</string>
-									<key>pfm_hidden</key>
-									<string>all</string>
-									<key>pfm_macos_min</key>
-									<string>14.7</string>
-									<key>pfm_name</key>
-									<string>Comment</string>
-									<key>pfm_title</key>
-									<string>Comment</string>
-									<key>pfm_type</key>
-									<string>string</string>
-								</dict>
-								<dict>
-									<key>pfm_description</key>
 									<string>If 'true', access is granted; otherwise, the process doesn't have access. The user isn't prompted and can't change this value.
 
 Note:
@@ -4397,6 +4331,18 @@ Every payload needs to include either 'Authorization' or 'Allowed', but not both
 									<string>Allowed</string>
 									<key>pfm_type</key>
 									<string>boolean</string>
+								</dict>
+								<dict>
+									<key>pfm_description</key>
+									<string>Not used.</string>
+									<key>pfm_hidden</key>
+									<string>all</string>
+									<key>pfm_name</key>
+									<string>Comment</string>
+									<key>pfm_title</key>
+									<string>Comment</string>
+									<key>pfm_type</key>
+									<string>string</string>
 								</dict>
 							</array>
 							<key>pfm_title</key>
