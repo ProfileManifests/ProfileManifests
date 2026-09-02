@@ -336,6 +336,13 @@
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.fxfactory.FxFactory.png</string>
 		</dict>
+		<key>com.gilburns.patcher</key>
+		<dict>
+			<key>hash</key>
+			<string>c7002459026c2cf15053e89b303c82ba</string>
+			<key>path</key>
+			<string>Icons/ManagedPreferencesApplications/com.gilburns.patcher.png</string>
+		</dict>
 		<key>com.gingerlabs.notability-macOS</key>
 		<dict>
 			<key>hash</key>
@@ -1720,6 +1727,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2026-09-01T18:34:38Z</date>
+	<date>2026-09-02T09:16:46Z</date>
 </dict>
 </plist>

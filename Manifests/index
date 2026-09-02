@@ -529,6 +529,15 @@
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
+		<key>com.gilburns.patcher</key>
+		<dict>
+			<key>modified</key>
+			<date>2026-09-01T03:26:00Z</date>
+			<key>path</key>
+			<string>Manifests/ManagedPreferencesApplications/com.gilburns.patcher.plist</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 		<key>com.gingerlabs.notability</key>
 		<dict>
 			<key>modified</key>
@@ -2544,6 +2553,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2026-09-01T18:34:38Z</date>
+	<date>2026-09-02T09:16:46Z</date>
 </dict>
 </plist>
