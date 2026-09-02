@@ -434,6 +434,13 @@
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.grammarly.ProjectLlama.png</string>
 		</dict>
+		<key>com.granola.app</key>
+		<dict>
+			<key>hash</key>
+			<string>c8c6a13d1ed063eaf09fafe86370fb93</string>
+			<key>path</key>
+			<string>Icons/ManagedPreferencesApplications/com.granola.app.png</string>
+		</dict>
 		<key>com.hjuutilainen.MunkiAdmin</key>
 		<dict>
 			<key>hash</key>
@@ -1727,6 +1734,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2026-09-02T13:34:40Z</date>
+	<date>2026-09-02T13:36:26Z</date>
 </dict>
 </plist>
