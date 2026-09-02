@@ -1,0 +1,1990 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>pfm_app_url</key>
+	<string>https://github.com/gilburns/Third-Party-Patcher/releases</string>
+	<key>pfm_description</key>
+	<string>Configuration settings for the Third Party Patcher tool</string>
+	<key>pfm_documentation_url</key>
+	<string>https://github.com/gilburns/Third-Party-Patcher/wiki/</string>
+	<key>pfm_domain</key>
+	<string>com.gilburns.patcher</string>
+	<key>pfm_format_version</key>
+	<integer>1</integer>
+	<key>pfm_last_modified</key>
+	<date>2026-09-01T03:26:00Z</date>
+	<key>pfm_platforms</key>
+	<array>
+		<string>macOS</string>
+	</array>
+	<key>pfm_subkeys</key>
+	<array>
+		<dict>
+			<key>pfm_default</key>
+			<string>Configures Third Party Patcher configuration preferences</string>
+			<key>pfm_description</key>
+			<string>The human-readable description of this payload. This description appears on the Detail screen.</string>
+			<key>pfm_description_reference</key>
+			<string>Optional. A human-readable description of this payload. This description is shown on the Detail screen.</string>
+			<key>pfm_name</key>
+			<string>PayloadDescription</string>
+			<key>pfm_title</key>
+			<string>Payload Description</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Third Party Patcher</string>
+			<key>pfm_description</key>
+			<string>The human-readable name for the profile payload. The name appears on the Detail screen and doesn't need to be unique.</string>
+			<key>pfm_description_reference</key>
+			<string>A human-readable name for the profile payload. This name is displayed on the Detail screen. It does not have to be unique.</string>
+			<key>pfm_name</key>
+			<string>PayloadDisplayName</string>
+			<key>pfm_require</key>
+			<string>always</string>
+			<key>pfm_title</key>
+			<string>Payload Display Name</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>com.gilburns.patcher</string>
+			<key>pfm_description</key>
+			<string>The reverse-DNS-style identifier for the payload. This identifier is usually the same as the 'TopLevel' value, with an additional appended component. This string must be unique within the profile.
+During a profile replacement, the system updates payloads with the same 'PayloadIdentifier' and 'PayloadUUID' in the old and new profiles.</string>
+			<key>pfm_description_reference</key>
+			<string>A reverse-DNS-style identifier for the specific payload. It is usually the same identifier as the root-level PayloadIdentifier value with an additional component appended.</string>
+			<key>pfm_name</key>
+			<string>PayloadIdentifier</string>
+			<key>pfm_require</key>
+			<string>always</string>
+			<key>pfm_title</key>
+			<string>Payload Identifier</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>com.gilburns.patcher</string>
+			<key>pfm_description</key>
+			<string>The payload type, which each payload domain's reference page specifies.</string>
+			<key>pfm_description_reference</key>
+			<string>The payload type.</string>
+			<key>pfm_name</key>
+			<string>PayloadType</string>
+			<key>pfm_require</key>
+			<string>always</string>
+			<key>pfm_title</key>
+			<string>Payload Type</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>The globally unique identifier for the payload. The actual content is unimportant, but must be globally unique. In macOS, use 'uuidgen' to generate UUIDs.
+During a profile replacement, the system updates payloads with the same 'PayloadIdentifier' and 'PayloadUUID' in the old and new profiles.</string>
+			<key>pfm_description_reference</key>
+			<string>A globally unique identifier for the payload. The actual content is unimportant, but it must be globally unique. In macOS, you can use uuidgen to generate reasonable UUIDs.</string>
+			<key>pfm_format</key>
+			<string>^[0-9A-Za-z]{8}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{12}$</string>
+			<key>pfm_name</key>
+			<string>PayloadUUID</string>
+			<key>pfm_require</key>
+			<string>always</string>
+			<key>pfm_title</key>
+			<string>Payload UUID</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<integer>1</integer>
+			<key>pfm_description</key>
+			<string>The version of this specific payload.</string>
+			<key>pfm_description_reference</key>
+			<string>The version number of the individual payload.</string>
+			<key>pfm_name</key>
+			<string>PayloadVersion</string>
+			<key>pfm_range_list</key>
+			<array>
+				<integer>1</integer>
+			</array>
+			<key>pfm_require</key>
+			<string>always</string>
+			<key>pfm_title</key>
+			<string>Payload Version</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>The human-readable string containing the name of the organization that provides the profile. This value doesn't need to match the organization payload value in the enclosing dictionary.</string>
+			<key>pfm_name</key>
+			<string>PayloadOrganization</string>
+			<key>pfm_title</key>
+			<string>Payload Organization</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_name</key>
+			<string>PFC_SegmentedControl_0</string>
+			<key>pfm_range_list_titles</key>
+			<array>
+				<string>UI</string>
+				<string>Labels</string>
+				<string>Deferrals &amp; Deadlines</string>
+				<string>Scheduling</string>
+				<string>Dialogs &amp; Notifications</string>
+				<string>Download</string>
+				<string>Workflow &amp; Options</string>
+			</array>
+			<key>pfm_require</key>
+			<string>always</string>
+			<key>pfm_segments</key>
+			<dict>
+				<key>Deferrals &amp; Deadlines</key>
+				<array>
+					<string>DeferralCountdownSeconds</string>
+					<string>DeferralAutomaticAction</string>
+					<string>DeferralTimerDefault</string>
+					<string>DeferralTimerMenu</string>
+					<string>DeferralTimerFocus</string>
+					<string>MonthlyPatchingCadenceEnabled</string>
+					<string>PatchingWeekday</string>
+					<string>PatchingWeekOfMonth</string>
+					<string>PatchingStartTime</string>
+					<string>PatchingEndTime</string>
+					<string>DeadlineDaysFocus</string>
+					<string>DeadlineDaysHard</string>
+					<string>FocusCheckEnabled</string>
+					<string>AggressivePatchDayDeferral</string>
+				</array>
+				<key>Dialogs &amp; Notifications</key>
+				<array>
+					<string>DialogOnTop</string>
+					<string>DialogIcon</string>
+					<string>UseOverlayIcon</string>
+					<string>OverlayIcon</string>
+					<string>DialogScreenPosition</string>
+					<string>DialogScreenProgressPosition</string>
+					<string>UnattendedExit</string>
+					<string>UnattendedExitSeconds</string>
+					<string>DialogQuitHandlingDiscoveryStaging</string>
+					<string>ShowNotificationsAll</string>
+					<string>ShowNotificationsSilentUpdated</string>
+					<string>ShowNotificationsAppsQueued</string>
+					<string>ShowNotificationsSilentAndQueued</string>
+					<string>DialogTimeoutDeferral</string>
+					<string>DialogTimeoutDeferralAction</string>
+					<string>DialogTimeoutConfirmInstall</string>
+					<string>BannerImage</string>
+					<string>BannerTitle</string>
+					<string>BannerHeight</string>
+				</array>
+				<key>Download</key>
+				<array>
+					<string>DownloadBandwidthLimit</string>
+					<string>StageDownloadFailThreshold</string>
+					<string>ApplyFailThreshold</string>
+					<string>IgnoreUnknownVersionLabels</string>
+					<string>UnknownVersionCheckIntervalDays</string>
+					<string>VersionMismatchThrottleDays</string>
+				</array>
+				<key>Labels</key>
+				<array>
+					<string>IgnoredLabels</string>
+					<string>RequiredLabels</string>
+					<string>OptionalLabels</string>
+				</array>
+				<key>Scheduling</key>
+				<array>
+					<string>InitialScanDelayEnabled</string>
+					<string>InitialScanDelayMaxSeconds</string>
+					<string>ScanIntervalDays</string>
+					<string>ScanOnLabelUpdate</string>
+					<string>LightScanIntervalHours</string>
+					<string>CheckIntervalHours</string>
+					<string>StageIntervalHours</string>
+					<string>ApplyIntervalHours</string>
+				</array>
+				<key>UI</key>
+				<array>
+					<string>SwiftDialogEnabled</string>
+					<string>AppTitle</string>
+					<string>BrandColorFont</string>
+					<string>BrandColorBackground</string>
+					<string>SupportTeamName</string>
+					<string>SupportTeamEmail</string>
+					<string>SupportTeamPhone</string>
+					<string>SupportTeamWebsite</string>
+					<string>ShowMenuBarApp</string>
+					<string>MenuBarIcon</string>
+					<string>ShowHelpButton</string>
+					<string>ShowActivitySection</string>
+					<string>MenuDeferralCountDisplay</string>
+					<string>ShowQuitButton</string>
+					<string>ShowMenuDownloadAction</string>
+					<string>ShowMenuCheckAction</string>
+					<string>ShowMenuScanAction</string>
+					<string>ShowScanCheckProgressDialog</string>
+					<string>CompanyName</string>
+					<string>CustomAppIconPath</string>
+				</array>
+				<key>Workflow &amp; Options</key>
+				<array>
+					<string>LogVerbose</string>
+					<string>LogRetentionDays</string>
+					<string>IgnoreAppsInHomeFolder</string>
+					<string>ConvertAppsInHomeFolder</string>
+					<string>IgnoreAppsOnExternalVolumes</string>
+					<string>IgnoreManagedApps</string>
+					<string>IgnoreNonProductionLabels</string>
+					<string>NonProductionLabelSuffixes</string>
+					<string>PreferPkgLabels</string>
+					<string>QuietApplyEnabled</string>
+					<string>FocusIgnoredProcesses</string>
+					<string>InstallomatorGitHubAccount</string>
+					<string>InstallomatorGitHubRepo</string>
+					<string>InstallomatorGitHubBranch</string>
+					<string>InstallomatorLabelsDisable</string>
+					<string>InstallomatorUpdateDisable</string>
+					<string>InstallomatorGitHubMetadataAccount</string>
+					<string>InstallomatorGitHubMetadataRepo</string>
+					<string>InstallomatorGitHubMetadataBranch</string>
+					<string>MetadataSyncEnabled</string>
+					<string>MetadataSyncIntervalDays</string>
+					<string>StaleProcessTimeoutSeconds</string>
+					<string>InteractiveMode</string>
+					<string>WebhookFeature</string>
+					<string>WebhookURLTeams</string>
+					<string>WebhookURLSlack</string>
+					<string>WebhookAttributes</string>
+					<string>WebhookSchedule</string>
+					<string>WebhookScheduleWeekday</string>
+					<string>WebhookScheduleMonthDay</string>
+					<string>WebhookScheduleHour</string>
+					<string>WebhookStageFailureThreshold</string>
+					<string>WebhookSelfServiceFeature</string>
+					<string>BlockingProcessAction</string>
+					<string>BlockingProcessCountdownSeconds</string>
+					<string>AddToDockOnSelfServiceInstall</string>
+				</array>
+			</dict>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_default</key>
+			<integer>300</integer>
+			<key>pfm_description</key>
+			<string>Seconds of countdown in the deferral prompt before the automatic action fires.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#deferral</string>
+			<key>pfm_name</key>
+			<string>DeferralCountdownSeconds</string>
+			<key>pfm_title</key>
+			<string>Deferral Countdown Seconds</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+			<key>pfm_value_placeholder</key>
+			<string>300</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_default</key>
+			<string>defer</string>
+			<key>pfm_description</key>
+			<string>Action when the deferral countdown expires with no user input: "defer" (postpone to next cycle) or "kill" (force-quit blocking app and apply).</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#deferral</string>
+			<key>pfm_name</key>
+			<string>DeferralAutomaticAction</string>
+			<key>pfm_title</key>
+			<string>Deferral Automatic Action</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>defer</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_default</key>
+			<integer>240</integer>
+			<key>pfm_description</key>
+			<string>Default deferral duration in minutes applied when the user accepts without choosing a custom time (4 hours).</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#deferral</string>
+			<key>pfm_name</key>
+			<string>DeferralTimerDefault</string>
+			<key>pfm_title</key>
+			<string>Deferral Timer Default</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+			<key>pfm_value_placeholder</key>
+			<string>240</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_default</key>
+			<string>5,30,60,120,240,480,1440</string>
+			<key>pfm_description</key>
+			<string>Comma-separated list of deferral durations in minutes shown in the pop-up menu.
+</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#deferral</string>
+			<key>pfm_name</key>
+			<string>DeferralTimerMenu</string>
+			<key>pfm_title</key>
+			<string>Deferral Timer Menu</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>5,30,60,120,240,480,1440</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_description</key>
+			<string>The number of minutes to defer the update restart dialog automatically if a process has prevented display sleep (for example, during an active meeting) or the user has Focus or Do Not Disturb enabled</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#deferral</string>
+			<key>pfm_name</key>
+			<string>DeferralTimerFocus</string>
+			<key>pfm_title</key>
+			<string>Deferral Timer Focus</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>60</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.4.0</string>
+			<key>pfm_description</key>
+			<string></string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#monthly-patching-cadence</string>
+			<key>pfm_name</key>
+			<string>MonthlyPatchingCadenceEnabled</string>
+			<key>pfm_title</key>
+			<string>Monthly Patching Cadence Enabled</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.4.0</string>
+			<key>pfm_default</key>
+			<integer>3</integer>
+			<key>pfm_description</key>
+			<string>Day of the week for the patch window: 1=Sunday, 2=Monday, 3=Tuesday … 7=Saturday.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#monthly-patching-cadence</string>
+			<key>pfm_name</key>
+			<string>PatchingWeekday</string>
+			<key>pfm_range_list</key>
+			<array>
+				<integer>1</integer>
+				<integer>2</integer>
+				<integer>3</integer>
+				<integer>4</integer>
+				<integer>5</integer>
+				<integer>6</integer>
+				<integer>7</integer>
+			</array>
+			<key>pfm_range_list_titles</key>
+			<array>
+				<string>Sunday</string>
+				<string>Monday</string>
+				<string>Tuesday</string>
+				<string>Wednesday</string>
+				<string>Thursday</string>
+				<string>Friday</string>
+				<string>Saturday</string>
+			</array>
+			<key>pfm_title</key>
+			<string>Patching Weekday</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+			<key>pfm_value_placeholder</key>
+			<string>3</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.4.0</string>
+			<key>pfm_default</key>
+			<integer>2</integer>
+			<key>pfm_description</key>
+			<string>Which occurrence of `PatchingWeekday` in the month: 1=first, 2=second, etc.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#monthly-patching-cadence</string>
+			<key>pfm_name</key>
+			<string>PatchingWeekOfMonth</string>
+			<key>pfm_range_list</key>
+			<array>
+				<integer>1</integer>
+				<integer>2</integer>
+				<integer>3</integer>
+				<integer>4</integer>
+			</array>
+			<key>pfm_range_list_titles</key>
+			<array>
+				<string>First</string>
+				<string>Second</string>
+				<string>Third</string>
+				<string>Fourth</string>
+			</array>
+			<key>pfm_title</key>
+			<string>Patching Week Of Month</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+			<key>pfm_value_placeholder</key>
+			<string>2</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.4.0</string>
+			<key>pfm_description</key>
+			<string>Earliest time to begin applying on patch day (24-hour `HH:MM`). Empty = no lower bound.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#monthly-patching-cadence</string>
+			<key>pfm_name</key>
+			<string>PatchingStartTime</string>
+			<key>pfm_title</key>
+			<string>Patching Start Time</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>24-hour `HH:MM`</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.4.0</string>
+			<key>pfm_description</key>
+			<string>Latest time to begin applying on patch day (24-hour `HH:MM`). Apply will not start a new run after this time.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#monthly-patching-cadence</string>
+			<key>pfm_name</key>
+			<string>PatchingEndTime</string>
+			<key>pfm_title</key>
+			<string>Patching End Time</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>24-hour `HH:MM`</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>When `true`, the swiftDialog window floats above all other windows.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#swiftdialog--user-prompts</string>
+			<key>pfm_name</key>
+			<string>DialogOnTop</string>
+			<key>pfm_title</key>
+			<string>Dialog On Top</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>When `true`, the apply completion dialog closes automatically after `UnattendedExitSeconds` if the user does not interact.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#swiftdialog--user-prompts</string>
+			<key>pfm_name</key>
+			<string>UnattendedExit</string>
+			<key>pfm_title</key>
+			<string>Unattended Exit</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_description</key>
+			<string>Seconds before the apply completion dialog auto-closes when `UnattendedExit` is `true`.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#swiftdialog--user-prompts</string>
+			<key>pfm_name</key>
+			<string>UnattendedExitSeconds</string>
+			<key>pfm_title</key>
+			<string>Unattended Exit Seconds</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+			<key>pfm_value_placeholder</key>
+			<string>60</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.4.0</string>
+			<key>pfm_default</key>
+			<string>prompt</string>
+			<key>pfm_description</key>
+			<string>Action when a blocking process is running during apply: `"ignore"` (skip the check entirely), `"kill"` (force-quit silently), `"notify"` (brief notification; skip label if still running), `"prompt"` (timed dialog; user can quit or skip), `"defer"` (skip silently; retry next cycle).</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#swiftdialog--user-prompts</string>
+			<key>pfm_name</key>
+			<string>BlockingProcessAction</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>ignore</string>
+				<string>kill</string>
+				<string>notify</string>
+				<string>prompt</string>
+				<string>defer</string>
+			</array>
+			<key>pfm_title</key>
+			<string>Blocking Process Action</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>ignore, kill, notify, prompt or defer</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_default</key>
+			<integer>120</integer>
+			<key>pfm_description</key>
+			<string>Seconds of countdown in the blocking process prompt before the automatic action fires.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#swiftdialog--user-prompts</string>
+			<key>pfm_name</key>
+			<string>BlockingProcessCountdownSeconds</string>
+			<key>pfm_title</key>
+			<string>Blocking Process Countdown Seconds</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+			<key>pfm_value_placeholder</key>
+			<string>120</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.4.0</string>
+			<key>pfm_description</key>
+			<string>Path to a custom icon for the apply dialog. Empty = use the system computer icon. Supports absolute paths, `SF=&lt;symbol&gt;` notation, or an SF Symbol name directly.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#swiftdialog--user-prompts</string>
+			<key>pfm_name</key>
+			<string>DialogIcon</string>
+			<key>pfm_title</key>
+			<string>Dialog Icon</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>Dialog Icon Path</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>When `true`, a small overlay icon is composited onto the dialog icon. Automatically disabled when swiftDialog is not installed.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#swiftdialog--user-prompts</string>
+			<key>pfm_name</key>
+			<string>UseOverlayIcon</string>
+			<key>pfm_title</key>
+			<string>Use Overlay Icon</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.4.0</string>
+			<key>pfm_description</key>
+			<string>Path to the overlay icon image. Empty = auto-detect from known MDM agents (Jamf, Intune, etc.).</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#swiftdialog--user-prompts</string>
+			<key>pfm_name</key>
+			<string>OverlayIcon</string>
+			<key>pfm_title</key>
+			<string>Overlay Icon</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>Overlay Icon Path</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.6.0</string>
+			<key>pfm_default</key>
+			<string>center</string>
+			<key>pfm_description</key>
+			<string>Position of the main apply dialog: `topleft`, `left`, `bottomleft`, `top`, `center`, `bottom`, `topright`, `right`, or `bottomright`.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#swiftdialog--user-prompts</string>
+			<key>pfm_name</key>
+			<string>DialogScreenPosition</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>topleft</string>
+				<string>left</string>
+				<string>bottomleft</string>
+				<string>top</string>
+				<string>center</string>
+				<string>bottom</string>
+				<string>topright</string>
+				<string>right</string>
+				<string>bottomright</string>
+			</array>
+			<key>pfm_title</key>
+			<string>Dialog Screen Position</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>center</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.6.0</string>
+			<key>pfm_default</key>
+			<string>bottomright</string>
+			<key>pfm_description</key>
+			<string>Position of the progress/status window during apply. Same position values as `DialogScreenPosition`.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#swiftdialog--user-prompts</string>
+			<key>pfm_name</key>
+			<string>DialogScreenProgressPosition</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>topleft</string>
+				<string>left</string>
+				<string>bottomleft</string>
+				<string>top</string>
+				<string>center</string>
+				<string>bottom</string>
+				<string>topright</string>
+				<string>right</string>
+				<string>bottomright</string>
+			</array>
+			<key>pfm_title</key>
+			<string>Dialog Screen Progress Position</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>bottomright</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.6.0</string>
+			<key>pfm_default</key>
+			<string></string>
+			<key>pfm_description</key>
+			<string>curl `--limit-rate` format bandwidth cap for staged downloads (e.g. `"500K"` for 500 KB/s, `"2M"` for 2 MB/s). Empty string = unlimited.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#download-behavior</string>
+			<key>pfm_name</key>
+			<string>DownloadBandwidthLimit</string>
+			<key>pfm_title</key>
+			<string>Download Bandwidth Limit</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>e.g. `"500K"` for 500 KB/s, `"2M"` for 2 MB/s</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.6.0</string>
+			<key>pfm_default</key>
+			<integer>3</integer>
+			<key>pfm_description</key>
+			<string>Consecutive download or verification failures before a label is marked broken and skipped by the stage phase.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#download-behavior</string>
+			<key>pfm_name</key>
+			<string>StageDownloadFailThreshold</string>
+			<key>pfm_title</key>
+			<string>Stage Download Fail Threshold</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+			<key>pfm_value_placeholder</key>
+			<string>3</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.6.0</string>
+			<key>pfm_default</key>
+			<integer>3</integer>
+			<key>pfm_description</key>
+			<string>Consecutive install failures before a staged update is abandoned and that version is blocked from re-staging. Staging resumes automatically when a newer version becomes available.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#download-behavior</string>
+			<key>pfm_name</key>
+			<string>ApplyFailThreshold</string>
+			<key>pfm_title</key>
+			<string>Apply Fail Threshold</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+			<key>pfm_value_placeholder</key>
+			<string>3</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>When `true`, labels that return no `appNewVersion` value are skipped entirely during staging.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#download-behavior</string>
+			<key>pfm_name</key>
+			<string>IgnoreUnknownVersionLabels</string>
+			<key>pfm_title</key>
+			<string>Ignore Unknown Version Labels</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.6.0</string>
+			<key>pfm_default</key>
+			<integer>7</integer>
+			<key>pfm_description</key>
+			<string>For labels with unknown versions, re-check this many days after the last attempt (instead of the normal `CheckIntervalHours` cadence).</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#download-behavior</string>
+			<key>pfm_name</key>
+			<string>UnknownVersionCheckIntervalDays</string>
+			<key>pfm_title</key>
+			<string>Unknown Version Check Interval Days</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+			<key>pfm_value_placeholder</key>
+			<string>7</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.6.0</string>
+			<key>pfm_default</key>
+			<integer>7</integer>
+			<key>pfm_description</key>
+			<string>When a label reports a version that does not match the file actually downloaded, suppress re-staging for this many days. Cleared automatically when the label reports a different `appNewVersion`.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#download-behavior</string>
+			<key>pfm_name</key>
+			<string>VersionMismatchThrottleDays</string>
+			<key>pfm_title</key>
+			<string>Version Mismatch Throttle Days</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+			<key>pfm_value_placeholder</key>
+			<string>7</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.6.0</string>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>When `true`, a one-time random delay is applied before the first scan after initial deployment. Spreads fleet-wide first-scan load across the `InitialScanDelayMaxSeconds` window.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#phase-schedule</string>
+			<key>pfm_name</key>
+			<string>InitialScanDelayEnabled</string>
+			<key>pfm_title</key>
+			<string>Initial Scan Delay Enabled</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.6.0</string>
+			<key>pfm_default</key>
+			<integer>86400</integer>
+			<key>pfm_description</key>
+			<string>Maximum jitter for the initial deployment delay in seconds (default: 24 hours). The actual delay is chosen randomly in `[0, max]` on first launch and persisted.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#phase-schedule</string>
+			<key>pfm_name</key>
+			<string>InitialScanDelayMaxSeconds</string>
+			<key>pfm_title</key>
+			<string>Initial Scan Delay Max Seconds</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+			<key>pfm_value_placeholder</key>
+			<string>86400</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.6.0</string>
+			<key>pfm_default</key>
+			<integer>30</integer>
+			<key>pfm_description</key>
+			<string>Days between full application scans. A full scan re-evaluates all Installomator labels to discover installed apps.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#phase-schedule</string>
+			<key>pfm_name</key>
+			<string>ScanIntervalDays</string>
+			<key>pfm_title</key>
+			<string>Scan Interval Days</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+			<key>pfm_value_placeholder</key>
+			<string>30</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.6.0</string>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>When `true`, a scan is triggered immediately if the Installomator or Managed Labels have been updated since the last scan, regardless of `ScanIntervalDays`.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#phase-schedule</string>
+			<key>pfm_name</key>
+			<string>ScanOnLabelUpdate</string>
+			<key>pfm_title</key>
+			<string>Scan On Label Update</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.6.0</string>
+			<key>pfm_default</key>
+			<integer>24</integer>
+			<key>pfm_description</key>
+			<string>Hours between light scan runs. A light scan checks uninstalled labels for apps that may have been installed by other means, without re-running label scripts or hitting the network for non-installed labels.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#phase-schedule</string>
+			<key>pfm_name</key>
+			<string>LightScanIntervalHours</string>
+			<key>pfm_title</key>
+			<string>Light Scan Interval Hours</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+			<key>pfm_value_placeholder</key>
+			<string>24</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.6.0</string>
+			<key>pfm_default</key>
+			<integer>12</integer>
+			<key>pfm_description</key>
+			<string>Hours between check runs. A check reads installed versions for already-discovered apps to detect whether an update is needed.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#phase-schedule</string>
+			<key>pfm_name</key>
+			<string>CheckIntervalHours</string>
+			<key>pfm_title</key>
+			<string>Check Interval Hours</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+			<key>pfm_value_placeholder</key>
+			<string>12</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.6.0</string>
+			<key>pfm_default</key>
+			<integer>12</integer>
+			<key>pfm_description</key>
+			<string>Hours between stage runs. The stage phase downloads pending updates.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#phase-schedule</string>
+			<key>pfm_name</key>
+			<string>StageIntervalHours</string>
+			<key>pfm_title</key>
+			<string>Stage Interval Hours</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+			<key>pfm_value_placeholder</key>
+			<string>12</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.6.0</string>
+			<key>pfm_default</key>
+			<integer>4</integer>
+			<key>pfm_description</key>
+			<string>Minimum hours between apply runs in deadline-based patching mode. Prevents apply from running every 10-minute cycle once updates are pending. Not used in monthly patching mode — the patch-day window controls timing.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#phase-schedule</string>
+			<key>pfm_name</key>
+			<string>ApplyIntervalHours</string>
+			<key>pfm_title</key>
+			<string>Apply Interval Hours</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+			<key>pfm_value_placeholder</key>
+			<string>4</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_description</key>
+			<string>A space-separated list of Installomator labels to ignore for the TPP workflow. Supports wildcards, for example "microsoft*". A single "*" ignores every Installomator label except those listed in Required Labels and Optional Labels.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#label-filtering</string>
+			<key>pfm_name</key>
+			<string>IgnoredLabels</string>
+			<key>pfm_title</key>
+			<string>Ignored Labels</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>adobe* microsoftteams</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.6.0</string>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>When `true`, automatically detects apps whose updates are already controlled by MDM policies and excludes their labels from patching. Currently detects Microsoft 365/Office (via MAU), Microsoft Edge, Google Chrome, and Google Drive. </string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#label-filtering</string>
+			<key>pfm_name</key>
+			<string>IgnoreManagedApps</string>
+			<key>pfm_title</key>
+			<string>Ignore Managed Apps</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.6.0</string>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>When `true`, automatically ignores non-production label variants — labels whose name ends with one of `NonProductionLabelSuffixes` — but only when a production label of the same base name also exists. E.g. with the default suffixes, `microsoftedgebeta` and `microsoftedgedev` are ignored because `microsoftedge` also exists as a label; a label like `figma` is untouched, and a hypothetical `somethingbeta` is left alone if `something` is not also a known label.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#label-filtering</string>
+			<key>pfm_name</key>
+			<string>IgnoreNonProductionLabels</string>
+			<key>pfm_title</key>
+			<string>Ignore Non Production Labels</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_default</key>
+			<string>beta canary dev</string>
+			<key>pfm_description</key>
+			<string>Space-separated list of suffixes that mark a label as a non-production variant of a base label. Only used when `IgnoreNonProductionLabels` is `true`. Does not support wildcards.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#label-filtering</string>
+			<key>pfm_name</key>
+			<string>NonProductionLabelSuffixes</string>
+			<key>pfm_title</key>
+			<string>Non Production Label Suffixes</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>beta canary dev</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.6.0</string>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>When a label and its `pkg`-suffixed counterpart both exist (e.g. `bbedit` and `bbeditpkg`), only one should ever be active — they deliver the same app via different installer mechanisms. When `true`, the pkg-suffixed label is preferred and the non-pkg label is ignored. When `false`, the non-pkg label is preferred and the pkg-suffixed label is ignored instead.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#label-filtering</string>
+			<key>pfm_name</key>
+			<string>PreferPkgLabels</string>
+			<key>pfm_title</key>
+			<string>Prefer Pkg Labels</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_description</key>
+			<string>a space-separated list of Installomator labels that are required, regardless if the app is installed or or the latest version. Supports wildcards.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#label-filtering</string>
+			<key>pfm_name</key>
+			<string>RequiredLabels</string>
+			<key>pfm_title</key>
+			<string>Required Labels</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>desktoppr dockutil dialog</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_description</key>
+			<string>Space-separated list of label names made available for user-initiated self-service installation via the Available Software catalog. Does not support wildcards. Labels are presented in the order listed here, allowing you to feature priority apps at the top. Example: `"microsoftword zoom slack"`.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#label-filtering</string>
+			<key>pfm_name</key>
+			<string>OptionalLabels</string>
+			<key>pfm_title</key>
+			<string>Optional Labels</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>firefoxpkg amazonchime filezilla</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.6.0</string>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>Show swiftDialog prompts during the apply phase. If `false` (or swiftDialog is not installed), blocking process handling falls back to the configured `BlockingProcessAction`.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#swiftdialog--user-prompts</string>
+			<key>pfm_name</key>
+			<string>SwiftDialogEnabled</string>
+			<key>pfm_title</key>
+			<string>Swift Dialog Enabled</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_default</key>
+			<string>Third Party Patcher</string>
+			<key>pfm_description</key>
+			<string>Allows you to customize the name of Third Party Patcher to something else</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#swiftdialog--user-prompts</string>
+			<key>pfm_name</key>
+			<string>AppTitle</string>
+			<key>pfm_title</key>
+			<string>App Title</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>Third Party Patcher</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_default</key>
+			<string>white</string>
+			<key>pfm_description</key>
+			<string>Font color used in dialogs and apps. These values set the accent colors used in swiftDialog prompts. Each accepts a standard Apple color name (`black`, `blue`, `gray`, `green`, `orange`, `pink`, `purple`, `red`, `white`, `yellow`) or a hex value (e.g. `#00A4C7`).</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#branding-color-palette</string>
+			<key>pfm_name</key>
+			<string>BrandColorFont</string>
+			<key>pfm_title</key>
+			<string>Brand Color Font</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>white</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_default</key>
+			<string>blue</string>
+			<key>pfm_description</key>
+			<string>Background color used in dialogs and apps. These values set the accent colors used in swiftDialog prompts. Each accepts a standard Apple color name (`black`, `blue`, `gray`, `green`, `orange`, `pink`, `purple`, `red`, `white`, `yellow`) or a hex value (e.g. `#00A4C7`).</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#branding-color-palette</string>
+			<key>pfm_name</key>
+			<string>BrandColorBackground</string>
+			<key>pfm_title</key>
+			<string>Brand Color Background</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>blue</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>Enable verbose debug logging. When `true`, per-label key dumps and other low-signal output are included in `/Library/Logs/Patcher/`.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#logging</string>
+			<key>pfm_name</key>
+			<string>LogVerbose</string>
+			<key>pfm_title</key>
+			<string>Log Verbose</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_default</key>
+			<integer>90</integer>
+			<key>pfm_description</key>
+			<string>Number of days to retain log files in `/Library/Logs/Patcher/`. Files older than this are deleted during the `cleanLogs` run. Set to `0` to disable automatic log cleanup.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#logging</string>
+			<key>pfm_name</key>
+			<string>LogRetentionDays</string>
+			<key>pfm_title</key>
+			<string>Log Retention Days</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+			<key>pfm_value_placeholder</key>
+			<string>90</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>Ignore apps found in '/Users/'. If an update is found in '/Users/' and variable is set to false, the app will be updated into the application's default path</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#application-discovery</string>
+			<key>pfm_name</key>
+			<string>IgnoreAppsInHomeFolder</string>
+			<key>pfm_title</key>
+			<string>Ignore Apps In Home Folder</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>This will convert any apps found in the users home folder to the /Applications folder</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#application-discovery</string>
+			<key>pfm_name</key>
+			<string>ConvertAppsInHomeFolder</string>
+			<key>pfm_title</key>
+			<string>Convert Apps In Home Folder</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>When `true`, apps found only on external volumes (`/Volumes/*`) are excluded from discovery and never updated. Useful in environments where external drives are transient and should not be managed.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#application-discovery</string>
+			<key>pfm_name</key>
+			<string>IgnoreAppsOnExternalVolumes</string>
+			<key>pfm_title</key>
+			<string>Ignore Apps On External Volumes</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_default</key>
+			<string>Installomator</string>
+			<key>pfm_description</key>
+			<string>GitHub account hosting the Installomator label repository.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#installomator-label-source</string>
+			<key>pfm_name</key>
+			<string>InstallomatorGitHubAccount</string>
+			<key>pfm_title</key>
+			<string>Installomator GitHub Account</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>Installomator</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_default</key>
+			<string>Installomator</string>
+			<key>pfm_description</key>
+			<string>GitHub repository name for Installomator labels.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#installomator-label-source</string>
+			<key>pfm_name</key>
+			<string>InstallomatorGitHubRepo</string>
+			<key>pfm_title</key>
+			<string>Installomator GitHub Repo</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>Installomator</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_default</key>
+			<string>main</string>
+			<key>pfm_description</key>
+			<string>The name of the branch you want to use in your custom repo, typically main.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#installomator-label-source</string>
+			<key>pfm_name</key>
+			<string>InstallomatorGitHubBranch</string>
+			<key>pfm_title</key>
+			<string>Installomator GitHub Branch</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>main</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.2</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>When `true`, disables all Installomator label management: no initial download, no update checks, and Installomator labels are never used. Only Managed-Labels are used.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#installomator-label-source</string>
+			<key>pfm_name</key>
+			<string>InstallomatorLabelsDisable</string>
+			<key>pfm_title</key>
+			<string>Installomator Labels Disable</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.2</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>When `true`, skips routine label update checks while still using labels already on disk. Has no effect on the initial download when no labels are present. Ignored when `InstallomatorLabelsDisable` is `true`.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#installomator-label-source</string>
+			<key>pfm_name</key>
+			<string>InstallomatorUpdateDisable</string>
+			<key>pfm_title</key>
+			<string>Installomator Update Disable</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_default</key>
+			<string>Installomator</string>
+			<key>pfm_description</key>
+			<string>GitHub account hosting the Installomator Metadata repository.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#installomator-metadata-source</string>
+			<key>pfm_name</key>
+			<string>InstallomatorGitHubMetadataAccount</string>
+			<key>pfm_title</key>
+			<string>Installomator GitHub Metadata Account</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>gilburns</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_default</key>
+			<string>Installomator</string>
+			<key>pfm_description</key>
+			<string>GitHub repository name for Installomator Metadata.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#installomator-metadata-source</string>
+			<key>pfm_name</key>
+			<string>InstallomatorGitHubMetadataRepo</string>
+			<key>pfm_title</key>
+			<string>Installomator GitHub Metadata Repo</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>Installomator-Metadata</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_default</key>
+			<string>main</string>
+			<key>pfm_description</key>
+			<string>Branch to pull metadata from.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#installomator-metadata-source</string>
+			<key>pfm_name</key>
+			<string>InstallomatorGitHubMetadataBranch</string>
+			<key>pfm_title</key>
+			<string>Installomator GitHub Metadata Branch</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>main</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.2</string>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>When `true`, the scheduler periodically checks the metadata repository for updates and syncs icons and metadata to a local cache.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#installomator-metadata-source</string>
+			<key>pfm_name</key>
+			<string>MetadataSyncEnabled</string>
+			<key>pfm_title</key>
+			<string>Metadata Sync Enabled</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.2</string>
+			<key>pfm_default</key>
+			<integer>10</integer>
+			<key>pfm_description</key>
+			<string>Days between metadata repository sync checks.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#installomator-metadata-source</string>
+			<key>pfm_name</key>
+			<string>MetadataSyncIntervalDays</string>
+			<key>pfm_title</key>
+			<string>Metadata Sync Interval Days</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+			<key>pfm_value_placeholder</key>
+			<string>10</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_default</key>
+			<string>IT Support Team</string>
+			<key>pfm_description</key>
+			<string>Display name for your IT team in the Help Message</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#support-team-branding</string>
+			<key>pfm_name</key>
+			<string>SupportTeamName</string>
+			<key>pfm_title</key>
+			<string>Support Team Name</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>IT Support Team</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_default</key>
+			<string>support@company.com</string>
+			<key>pfm_description</key>
+			<string>Support email address. Shown as a clickable `mailto:` link in the Help Message</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#support-team-branding</string>
+			<key>pfm_name</key>
+			<string>SupportTeamEmail</string>
+			<key>pfm_title</key>
+			<string>Support Team Email</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>support@company.com</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_default</key>
+			<string>None</string>
+			<key>pfm_description</key>
+			<string>Support phone number in the Help Message. Set to `"None"` to hide the field.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#support-team-branding</string>
+			<key>pfm_name</key>
+			<string>SupportTeamPhone</string>
+			<key>pfm_title</key>
+			<string>Support Team Phone</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>None</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_default</key>
+			<string>None</string>
+			<key>pfm_description</key>
+			<string>Support portal URL in the Help Message. Set to `"None"` to hide the field.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#support-team-branding</string>
+			<key>pfm_name</key>
+			<string>SupportTeamWebsite</string>
+			<key>pfm_title</key>
+			<string>Support Team Website</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>None</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.2</string>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>When `true`, the scheduler installs and loads the PatcherMenu LaunchAgent for the current console user. When `false`, the LaunchAgent is unloaded and the plist removed. Managed automatically at each scheduler run.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#patchermenu</string>
+			<key>pfm_name</key>
+			<string>ShowMenuBarApp</string>
+			<key>pfm_title</key>
+			<string>Show Menu Bar App</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_default</key>
+			<string></string>
+			<key>pfm_description</key>
+			<string>Icon displayed in the menu bar status item. Accepts an SF Symbol name (e.g. `"gear"`) or an absolute path to a template-mode PNG. A template PNG adapts automatically to light/dark menu bar appearance. Empty = built-in default.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#patchermenu</string>
+			<key>pfm_name</key>
+			<string>MenuBarIcon</string>
+			<key>pfm_title</key>
+			<string>Menu Bar Icon</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>path to png or SF Symbol</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.2</string>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>When `true`, a Help (?) button is shown in the menu bar popover header. Tapping it displays the support contact information.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#patchermenu</string>
+			<key>pfm_name</key>
+			<string>ShowHelpButton</string>
+			<key>pfm_title</key>
+			<string>Show Help Button</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.2</string>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>When `true`, the Last Activity section (scan / check / stage / apply dates) is shown in the menu bar popover.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#patchermenu</string>
+			<key>pfm_name</key>
+			<string>ShowActivitySection</string>
+			<key>pfm_title</key>
+			<string>Show Activity Section</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_default</key>
+			<string>combined</string>
+			<key>pfm_description</key>
+			<string>Controls how the deferral count line is shown in the popover. `combined` — one total covering every deferral, including auto-deferrals (timer time-outs and blocking-process skips). `split` — two figures: deferrals the user actively chose, and auto-deferrals combined. `userOnly` — only the count of deferrals the user actively chose.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#patchermenu</string>
+			<key>pfm_name</key>
+			<string>MenuDeferralCountDisplay</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>combined</string>
+				<string>split</string>
+				<string>userOnly</string>
+			</array>
+			<key>pfm_title</key>
+			<string>Menu Deferral Count Display</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>combined, split or userOnly</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.2</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>When `true`, a Quit button is shown in the menu bar popover footer.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#patchermenu</string>
+			<key>pfm_name</key>
+			<string>ShowQuitButton</string>
+			<key>pfm_title</key>
+			<string>Show Quit Button</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.2</string>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>When `true`, the "Download New Updates" option appears in the Run Now menu.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#patchermenu</string>
+			<key>pfm_name</key>
+			<string>ShowMenuDownloadAction</string>
+			<key>pfm_title</key>
+			<string>Show Menu Download Action</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.2</string>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>When `true`, the "Check for Updates" option appears in the Run Now menu.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#patchermenu</string>
+			<key>pfm_name</key>
+			<string>ShowMenuCheckAction</string>
+			<key>pfm_title</key>
+			<string>Show Menu Check Action</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.2</string>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>When `true`, the "Full Discovery Scan" option appears in the Run Now menu.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#patchermenu</string>
+			<key>pfm_name</key>
+			<string>ShowMenuScanAction</string>
+			<key>pfm_title</key>
+			<string>Show Menu Scan Action</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.2</string>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>When `true`, scan and check operations triggered from PatcherMenu display a swiftDialog progress window.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#patchermenu</string>
+			<key>pfm_name</key>
+			<string>ShowScanCheckProgressDialog</string>
+			<key>pfm_title</key>
+			<string>Show Scan Check Progress Dialog</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_default</key>
+			<string>Patcher Corp.</string>
+			<key>pfm_description</key>
+			<string>Organization name shown in the Available Software sidebar header above the app title.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#available-software</string>
+			<key>pfm_name</key>
+			<string>CompanyName</string>
+			<key>pfm_title</key>
+			<string>Company Name</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>Patcher Corp.</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_default</key>
+			<string></string>
+			<key>pfm_description</key>
+			<string>Absolute path to a PNG or ICNS file used as the Available Software app icon, overriding the built-in icon in the Dock, Finder, and app switcher. Empty = use the default built-in icon.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#available-software</string>
+			<key>pfm_name</key>
+			<string>CustomAppIconPath</string>
+			<key>pfm_title</key>
+			<string>Custom App Icon Path</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>path to png or icns</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.6.0</string>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>When `true`, apps successfully installed via self-service are automatically added to the current user's Dock if not already present.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#available-software</string>
+			<key>pfm_name</key>
+			<string>AddToDockOnSelfServiceInstall</string>
+			<key>pfm_title</key>
+			<string>Add To Dock On Self Service Install</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_default</key>
+			<string>FAILURES</string>
+			<key>pfm_description</key>
+			<string>Controls when scheduled webhook reports are sent: `"FALSE"` (never), `"FAILURES"` (failures only), `"ALL"` (successes and failures).</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#webhooks</string>
+			<key>pfm_name</key>
+			<string>WebhookFeature</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>FALSE</string>
+				<string>FAILURES</string>
+				<string>ALL</string>
+			</array>
+			<key>pfm_title</key>
+			<string>Webhook Feature</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_description</key>
+			<string>Microsoft Teams incoming webhook URL.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#webhooks</string>
+			<key>pfm_name</key>
+			<string>WebhookURLTeams</string>
+			<key>pfm_title</key>
+			<string>Teams Webhook URL</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>https://webhook.microsoft.com</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_description</key>
+			<string>Slack incoming webhook URL.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#webhooks</string>
+			<key>pfm_name</key>
+			<string>WebhookURLSlack</string>
+			<key>pfm_title</key>
+			<string>Slack Webhook URL</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>https://webhook.slack.com</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_default</key>
+			<string>deviceName,serial,osVersion,user</string>
+			<key>pfm_description</key>
+			<string>Comma-separated list of device attributes included in webhook payloads, in display order. MDM info is always appended if detected. Supported values: `deviceName`, `hostname`, `serial`, `osVersion`, `osBuild`, `osName`, `model`, `hardwareModel`, `user`, `patcherVersion`, `installomatorVersion`.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#webhooks</string>
+			<key>pfm_name</key>
+			<string>WebhookAttributes</string>
+			<key>pfm_title</key>
+			<string>Webhook Attributes</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>deviceName,serial,osVersion,user</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_default</key>
+			<string>immediate</string>
+			<key>pfm_description</key>
+			<string>When to send accumulated webhook reports: `"immediate"`, `"daily"`, `"weekly"`, `"monthly"`, or `"patchDay"`.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#webhooks</string>
+			<key>pfm_name</key>
+			<string>WebhookSchedule</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>immediate</string>
+				<string>daily</string>
+				<string>weekly</string>
+				<string>monthly</string>
+				<string>patchDay</string>
+			</array>
+			<key>pfm_title</key>
+			<string>Webhook Schedule</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>"immediate", "daily", "weekly", "monthly", or "patchDay"</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_default</key>
+			<integer>1</integer>
+			<key>pfm_description</key>
+			<string>For `weekly` schedule: day of week to send (0=Sunday … 6=Saturday).</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#webhooks</string>
+			<key>pfm_name</key>
+			<string>WebhookScheduleWeekday</string>
+			<key>pfm_range_list</key>
+			<array>
+				<integer>0</integer>
+				<integer>1</integer>
+				<integer>2</integer>
+				<integer>3</integer>
+				<integer>4</integer>
+				<integer>5</integer>
+				<integer>6</integer>
+			</array>
+			<key>pfm_range_list_titles</key>
+			<array>
+				<string>Sunday</string>
+				<string>Monday</string>
+				<string>Tuesday</string>
+				<string>Wednesday</string>
+				<string>Thursday</string>
+				<string>Friday</string>
+				<string>Saturday</string>
+			</array>
+			<key>pfm_title</key>
+			<string>Webhook Schedule Weekday</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_default</key>
+			<integer>1</integer>
+			<key>pfm_description</key>
+			<string>For `monthly` schedule: day of month to send (1–31).</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#webhooks</string>
+			<key>pfm_name</key>
+			<string>WebhookScheduleMonthDay</string>
+			<key>pfm_title</key>
+			<string>Webhook Schedule Month Day</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+			<key>pfm_value_placeholder</key>
+			<string>1</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_default</key>
+			<integer>8</integer>
+			<key>pfm_description</key>
+			<string>For `daily`, `weekly`, and `monthly` schedules: hour of day (0–23) at which to send.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#webhooks</string>
+			<key>pfm_name</key>
+			<string>WebhookScheduleHour</string>
+			<key>pfm_title</key>
+			<string>Webhook Schedule Hour</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+			<key>pfm_value_placeholder</key>
+			<string>8</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_default</key>
+			<integer>2</integer>
+			<key>pfm_description</key>
+			<string>Minimum consecutive stage failures for a label before it is included in webhook notifications.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#webhooks</string>
+			<key>pfm_name</key>
+			<string>WebhookStageFailureThreshold</string>
+			<key>pfm_title</key>
+			<string>Webhook Stage Failure Threshold</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+			<key>pfm_value_placeholder</key>
+			<string>2</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.6.0</string>
+			<key>pfm_default</key>
+			<string>FALSE</string>
+			<key>pfm_description</key>
+			<string>Controls whether an immediate webhook is sent after a user-initiated self-service install, regardless of `WebhookSchedule`. Options: `"FALSE"` (never), `"FAILURES"` (failed installs only), `"ALL"` (success and failure).</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#webhooks</string>
+			<key>pfm_name</key>
+			<string>WebhookSelfServiceFeature</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>FALSE</string>
+				<string>FAILURES</string>
+				<string>ALL</string>
+			</array>
+			<key>pfm_title</key>
+			<string>Webhook Self Service Feature</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>FALSE</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.6.0</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>When `true`, the scheduler runs a silent apply pass before the interactive apply phase. Apps whose blocking process is not running are installed without prompting. Items skipped in the silent pass are shown in the interactive dialog as usual.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#swiftdialog--user-prompts</string>
+			<key>pfm_name</key>
+			<string>QuietApplyEnabled</string>
+			<key>pfm_title</key>
+			<string>Quiet Apply Enabled</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_default</key>
+			<integer>4</integer>
+			<key>pfm_description</key>
+			<string>Days a pending update must be present before Focus/DND auto-deferral is disabled and the user must be prompted regardless of Focus state. `0` means Focus is always respected.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#deadlines</string>
+			<key>pfm_name</key>
+			<string>DeadlineDaysFocus</string>
+			<key>pfm_title</key>
+			<string>Deadline Days Focus</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+			<key>pfm_value_placeholder</key>
+			<string>4</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_default</key>
+			<integer>10</integer>
+			<key>pfm_description</key>
+			<string>Days a pending update must be present before no further deferrals are offered and the update is applied at the next opportunity. `0` disables hard deadlines.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#deadlines</string>
+			<key>pfm_name</key>
+			<string>DeadlineDaysHard</string>
+			<key>pfm_title</key>
+			<string>Deadline Days Hard</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+			<key>pfm_value_placeholder</key>
+			<string>10</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.6.0</string>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>When `false`, Focus/DND and display assertions (e.g. active screen sharing) are never checked. The prompt is shown regardless of the user's Focus state.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#deadlines</string>
+			<key>pfm_name</key>
+			<string>FocusCheckEnabled</string>
+			<key>pfm_title</key>
+			<string>Focus Check Enabled</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.6.0</string>
+			<key>pfm_description</key>
+			<string>Space-separated list of process names to ignore when checking for display-sleep assertions (`pmset -g assertions`). If the process holding the assertion resolves to a name that matches an entry here (case-insensitive), the assertion is not treated as a blocker and patching may proceed.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#deadlines</string>
+			<key>pfm_name</key>
+			<string>FocusIgnoredProcesses</string>
+			<key>pfm_title</key>
+			<string>Focus Ignored Processes</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>Spotify Deezer Music</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.6.0</string>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>When `true`, deferral options are progressively capped as the patching window closes. Options shrink from 2 hours early in the day to 5 minutes near window end, then deferral is removed entirely once the window closes. When `false`, the full `DeferralTimerMenu` list is always shown. Applies to both monthly and deadline mode on the final patch day.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#deadlines</string>
+			<key>pfm_name</key>
+			<string>AggressivePatchDayDeferral</string>
+			<key>pfm_title</key>
+			<string>Aggressive Patch Day Deferral</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+	</array>
+	<key>pfm_targets</key>
+	<array>
+		<string>system</string>
+	</array>
+	<key>pfm_title</key>
+	<string>Third Party Patcher</string>
+	<key>pfm_unique</key>
+	<true/>
+	<key>pfm_version</key>
+	<integer>1</integer>
+</dict>
+</plist>
