@@ -13,7 +13,7 @@
 	<key>pfm_format_version</key>
 	<integer>1</integer>
 	<key>pfm_last_modified</key>
-	<date>2026-08-07T15:59:45Z</date>
+	<date>2026-09-04T13:20:00Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -174,10 +174,15 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<string>DisableKeepSignedInWithGoogle</string>
 					<string>DisableKeepSignedInWithSSO</string>
 					<string>DisableLoginWithEmail</string>
+					<string>DisableLoginWithMagicCode</string>
+					<string>DisableLoginWithMicrosoft</string>
+					<string>DisableMultipleAccountsSwitch</string>
+					<string>DisableUserSignUp</string>
 					<string>EnableAlipayLogin</string>
 					<string>EnableAppleLogin</string>
 					<string>EnableCloudSwitch</string>
 					<string>EnableEmbedBrowserForSSO</string>
+					<string>EnableNewSigninUI</string>
 					<string>EnableQQLogin</string>
 					<string>EnablePhoneLogin</string>
 					<string>EnableWeChatLogin</string>
@@ -497,6 +502,66 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>DisableLoginWithEmail</string>
 			<key>pfm_title</key>
 			<string>Disable Email Login</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>Users are prevented from signing in to their Zoom account with the one-time magic code option.</string>
+			<key>pfm_name</key>
+			<string>DisableLoginWithMagicCode</string>
+			<key>pfm_title</key>
+			<string>Disable Magic Code Login</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>Disable login with Microsoft.</string>
+			<key>pfm_name</key>
+			<string>DisableLoginWithMicrosoft</string>
+			<key>pfm_title</key>
+			<string>Disable Microsoft Login</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>Disable the ability for users to be signed-in to multiple accounts and easily switch between them. If disabled, users must manually sign out and then sign in to another account.</string>
+			<key>pfm_name</key>
+			<string>DisableMultipleAccountsSwitch</string>
+			<key>pfm_title</key>
+			<string>Disable Multiple Accounts Switch</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>Disable the Sign Up option on the Zoom app, which would otherwise be displayed with Join a Meeting and Sign In options upon opening the Zoom app.</string>
+			<key>pfm_name</key>
+			<string>DisableUserSignUp</string>
+			<key>pfm_title</key>
+			<string>Disable User SignUp</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>When a signed-out user opens the Zoom Workplace app, they will see the enhanced workplace interface with tabs that reflect Zoom products. Upon signing in, users will only see the products available to them.</string>
+			<key>pfm_name</key>
+			<string>EnableNewSigninUI</string>
+			<key>pfm_title</key>
+			<string>Enable New Signin UI</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 		</dict>
@@ -2879,6 +2944,6 @@ Audio: 8803</string>
 	<key>pfm_unique</key>
 	<true/>
 	<key>pfm_version</key>
-	<integer>6</integer>
+	<integer>7</integer>
 </dict>
 </plist>
