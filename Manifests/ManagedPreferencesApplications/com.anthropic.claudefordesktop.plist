@@ -13,7 +13,7 @@
 	<key>pfm_format_version</key>
 	<integer>1</integer>
 	<key>pfm_last_modified</key>
-	<date>2026-07-08T08:16:06Z</date>
+	<date>2026-09-04T12:50:00Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -189,6 +189,56 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
+			<string>1.26832.0</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>Read the update feed from releases.claude.com so api.anthropic.com can stay blocked. Defaults to false.</string>
+			<key>pfm_name</key>
+			<string>updateViaUpdatesHost</string>
+			<key>pfm_title</key>
+			<string>Check for updates on releases.claude.com</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.46388.1</string>
+			<key>pfm_default</key>
+			<integer>24</integer>
+			<key>pfm_description</key>
+			<string>Hours a user may keep working on the old configuration after a managed-configuration change is detected. 0 = restart required at once. Blank = 24 hours. Defaults to 24. Range: 0-336.</string>
+			<key>pfm_name</key>
+			<string>relaunchEnforcementHours</string>
+			<key>pfm_range_max</key>
+			<integer>336</integer>
+			<key>pfm_range_min</key>
+			<integer>0</integer>
+			<key>pfm_title</key>
+			<string>Configuration relaunch window</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.46388.1</string>
+			<key>pfm_default</key>
+			<integer>10</integer>
+			<key>pfm_description</key>
+			<string>Minutes between the running app's checks for a changed managed configuration. Blank = 10 minutes. Defaults to 10. Range: 2-30.</string>
+			<key>pfm_name</key>
+			<string>configRecheckIntervalMinutes</string>
+			<key>pfm_range_max</key>
+			<integer>30</integer>
+			<key>pfm_range_min</key>
+			<integer>2</integer>
+			<key>pfm_title</key>
+			<string>Configuration re-check interval</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
 			<string>0.14.1</string>
 			<key>pfm_default</key>
 			<true/>
@@ -250,6 +300,20 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>secureVmFeaturesEnabled</string>
 			<key>pfm_title</key>
 			<string>Enable Secure VM Features</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.9659.0</string>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>Enable Cowork. Claude works on longer tasks like research, analysis, and documents. Defaults to true.</string>
+			<key>pfm_name</key>
+			<string>coworkTabEnabled</string>
+			<key>pfm_title</key>
+			<string>Allow Cowork</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 		</dict>
@@ -452,12 +516,336 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_type</key>
 			<string>array</string>
 		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.25927.0</string>
+			<key>pfm_description</key>
+			<string>Sets the default effort level for Claude Code sessions in Claude Desktop.</string>
+			<key>pfm_name</key>
+			<string>effortLevel</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>low</string>
+				<string>medium</string>
+				<string>high</string>
+				<string>xhigh</string>
+				<string>max</string>
+			</array>
+			<key>pfm_range_list_titles</key>
+			<array>
+				<string>the least reasoning, for short, scoped, latency-sensitive tasks that aren't intelligence-sensitive</string>
+				<string>reduces token usage for cost-sensitive work that can trade off some intelligence</string>
+				<string>balances token usage and intelligence</string>
+				<string>deeper reasoning at higher token spend</string>
+				<string>the deepest reasoning level</string>
+			</array>
+			<key>pfm_title</key>
+			<string>Effort Level</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Folders where Claude may work. Applies to both Cowork and Code sessions. Leave unset for unrestricted access. Paths can reference ~ and these environment variables, expanded per user: %OneDrive%, %OneDriveCommercial%, %OneDriveConsumer%, %APPDATA%, %LOCALAPPDATA%, %USERNAME%, %XDG_DOCUMENTS_DIR%. The set is fixed; an entry that references any other %VAR%, or one that is unset on the device, is ignored.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#allowedworkspacefolders-details</string>
+			<key>pfm_name</key>
+			<string>allowedWorkspaceFolders</string>
+			<key>pfm_title</key>
+			<string>Allowed Workspace Folders</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_description</key>
+					<string>Absolute folder path. May start with ~ or one of the listed %VAR% tokens, expanded per user. Subfolders are included.</string>
+					<key>pfm_name</key>
+					<string>path</string>
+					<key>pfm_title</key>
+					<string>Path</string>
+					<key>pfm_type</key>
+					<string>string</string>
+					<key>pfm_value_placeholder</key>
+					<string>/Users</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>Shows as a folder chip on the new-task page and skips the trust prompt. Users can remove it.</string>
+					<key>pfm_name</key>
+					<string>isDefaultSelected</string>
+					<key>pfm_title</key>
+					<string>Select Default</string>
+					<key>pfm_type</key>
+					<string>boolean</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>Read-only folders can be viewed and searched but not modified in Cowork. In Code, applies to file tools only; Bash and SSH do not yet enforce read-only. One of: rw, ro.</string>
+					<key>pfm_name</key>
+					<string>mode</string>
+					<key>pfm_title</key>
+					<string>Mode</string>
+					<key>pfm_type</key>
+					<string>string</string>
+					<key>pfm_range_list</key>
+					<array>
+						<string>rw</string>
+						<string>ro</string>
+					</array>
+					<key>pfm_range_list_titles</key>
+					<array>
+						<string>Read/write</string>
+						<string>Read only</string>
+					</array>
+				</dict>
+			</array>
+			<key>pfm_type</key>
+			<string>dictionary</string>
+			<key>pfm_value_placeholder</key>
+			<string>["/Users", "~"]</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.46388.1</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>Remove the bypass permissions mode from Code sessions and Cowork tasks, so Claude always follows the permission policy. Off by default.</string>
+			<key>pfm_name</key>
+			<string>disableBypassPermissionsMode</string>
+			<key>pfm_title</key>
+			<string>Disable bypass permissions mode</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.46388.1</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>Keep Claude from reading files outside a Code session's working directories. File tools refuse such reads; sandboxed shell commands lose the home directory.</string>
+			<key>pfm_name</key>
+			<string>blockReadsOutsideWorkingDirectories</string>
+			<key>pfm_title</key>
+			<string>Block reads outside working directories</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.3834.0</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>Users see only this provider at the login screen. The option to sign in to Claude.ai is hidden. Defaults to false.</string>
+			<key>pfm_name</key>
+			<string>disableDeploymentModeChooser</string>
+			<key>pfm_title</key>
+			<string>Disable Claude.ai sign-in</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.6889.0</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>Stop external apps and websites from opening Claude Desktop via claude:// links. Defaults to false.</string>
+			<key>pfm_name</key>
+			<string>disableDeepLinkRegistration</string>
+			<key>pfm_title</key>
+			<string>Disable claude:// deep-link handling</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>v1.13576.0</string>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>Enable Chat. Quick questions and drafting.</string>
+			<key>pfm_name</key>
+			<string>chatTabEnabled</string>
+			<key>pfm_title</key>
+			<string>Allow Chat</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.21459.0</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>Allow Claude to run code in a local sandbox to analyze attached files it can't read natively — like Excel and PowerPoint. Off by default.</string>
+			<key>pfm_name</key>
+			<string>chatAdvancedFileAnalysisEnabled</string>
+			<key>pfm_title</key>
+			<string>Advanced file analysis</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>0.14.1</string>
+			<key>pfm_description</key>
+			<string>Per-user soft cap, counted client-side over the token cap window. Not a server-enforced quota. Requires inferenceTokenWindowHours to also be set — without a window length the cap is inert and no limit is enforced.</string>
+			<key>pfm_name</key>
+			<string>inferenceMaxTokensPerWindow</string>
+			<key>pfm_title</key>
+			<string>Max tokens per window</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>0.14.1</string>
+			<key>pfm_description</key>
+			<string>Tumbling window length for the token cap. Max 720 hours (30 days). Range: 1-720. Required when inferenceMaxTokensPerWindow is set — the cap only takes effect once both are configured.</string>
+			<key>pfm_name</key>
+			<string>inferenceTokenWindowHours</string>
+			<key>pfm_range_max</key>
+			<integer>720</integer>
+			<key>pfm_range_min</key>
+			<integer>1</integer>
+			<key>pfm_title</key>
+			<string>Token cap window</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.40609.0</string>
+			<key>pfm_description</key>
+			<string>Show the signed-in user's identity-provider identity in the sidebar and account menu, and emit it as the OpenTelemetry enduser.id resource attribute.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#appearance</string>
+			<key>pfm_name</key>
+			<string>endUserAttribution</string>
+			<key>pfm_title</key>
+			<string>End-user attribution</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.25927.0</string>
+			<key>pfm_description</key>
+			<string>Overrides the provider label shown in the sidebar footer, user-menu header, and connection-error banner.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#appearance</string>
+			<key>pfm_name</key>
+			<string>deploymentDisplayName</string>
+			<key>pfm_title</key>
+			<string>Deployment display name</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.25927.0</string>
+			<key>pfm_description</key>
+			<string>Optional detail shown after the deployment display name in the account-menu header.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#appearance</string>
+			<key>pfm_name</key>
+			<string>deploymentDisplaySubtitle</string>
+			<key>pfm_title</key>
+			<string>Deployment display subtitle</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.40609.0</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>Don't show users the in-app warning that this configuration uses a deprecated field. The final reminder in the 24 hours before the cut-off still appears.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#appearance</string>
+			<key>pfm_name</key>
+			<string>disableConfigDeprecationWarnings</string>
+			<key>pfm_title</key>
+			<string>Hide configuration deprecation warnings</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.7196.0</string>
+			<key>pfm_description</key>
+			<string>A persistent banner across the top of the app window after sign-in.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#banner-details</string>
+			<key>pfm_name</key>
+			<string>banner</string>
+			<key>pfm_title</key>
+			<string>Organization banner</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_description</key>
+					<string>Turns the banner on. When false or unset, the other banner fields are ignored.</string>
+					<key>pfm_name</key>
+					<string>enabled</string>
+					<key>pfm_title</key>
+					<string>Enabled</string>
+					<key>pfm_type</key>
+					<string>boolean</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>Single line, truncated on overflow. Maximum 200 characters.</string>
+					<key>pfm_name</key>
+					<string>text</string>
+					<key>pfm_title</key>
+					<string>Text</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>Six-digit hex (#RRGGBB). Applied exactly as configured; not theme-adapted.</string>
+					<key>pfm_name</key>
+					<string>backgroundColor</string>
+					<key>pfm_title</key>
+					<string>Background Color</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>Six-digit hex (#RRGGBB). Applied exactly as configured; not theme-adapted.</string>
+					<key>pfm_name</key>
+					<string>textColor</string>
+					<key>pfm_title</key>
+					<string>Text Color</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>Optional HTTPS URL. The banner text becomes a link when set.</string>
+					<key>pfm_name</key>
+					<string>linkUrl</string>
+					<key>pfm_title</key>
+					<string>Link URL</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+			</array>
+			<key>pfm_type</key>
+			<string>dictionary</string>
+		</dict>
 	</array>
 	<key>pfm_title</key>
 	<string>Claude Desktop</string>
 	<key>pfm_unique</key>
 	<true/>
 	<key>pfm_version</key>
-	<integer>5</integer>
+	<integer>6</integer>
 </dict>
 </plist>
