@@ -556,52 +556,59 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_subkeys</key>
 			<array>
 				<dict>
-					<key>pfm_description</key>
-					<string>Absolute folder path. May start with ~ or one of the listed %VAR% tokens, expanded per user. Subfolders are included.</string>
-					<key>pfm_name</key>
-					<string>path</string>
-					<key>pfm_title</key>
-					<string>Path</string>
-					<key>pfm_type</key>
-					<string>string</string>
-					<key>pfm_value_placeholder</key>
-					<string>/Users</string>
-				</dict>
-				<dict>
-					<key>pfm_description</key>
-					<string>Shows as a folder chip on the new-task page and skips the trust prompt. Users can remove it.</string>
-					<key>pfm_name</key>
-					<string>isDefaultSelected</string>
-					<key>pfm_title</key>
-					<string>Select Default</string>
-					<key>pfm_type</key>
-					<string>boolean</string>
-				</dict>
-				<dict>
-					<key>pfm_description</key>
-					<string>Read-only folders can be viewed and searched but not modified in Cowork. In Code, applies to file tools only; Bash and SSH do not yet enforce read-only. One of: rw, ro.</string>
-					<key>pfm_name</key>
-					<string>mode</string>
-					<key>pfm_title</key>
-					<string>Mode</string>
-					<key>pfm_type</key>
-					<string>string</string>
-					<key>pfm_range_list</key>
+					<key>pfm_subkeys</key>
 					<array>
-						<string>rw</string>
-						<string>ro</string>
+						<dict>
+							<key>pfm_description</key>
+							<string>Absolute folder path. May start with ~ or one of the listed %VAR% tokens, expanded per user. Subfolders are included.</string>
+							<key>pfm_name</key>
+							<string>path</string>
+							<key>pfm_title</key>
+							<string>Path</string>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_value_placeholder</key>
+							<string>/Users</string>
+						</dict>
+						<dict>
+							<key>pfm_description</key>
+							<string>Shows as a folder chip on the new-task page and skips the trust prompt. Users can remove it.</string>
+							<key>pfm_name</key>
+							<string>isDefaultSelected</string>
+							<key>pfm_title</key>
+							<string>Select Default</string>
+							<key>pfm_type</key>
+							<string>boolean</string>
+						</dict>
+						<dict>
+							<key>pfm_description</key>
+							<string>Read-only folders can be viewed and searched but not modified in Cowork. In Code, applies to file tools only; Bash and SSH do not yet enforce read-only. One of: rw, ro.</string>
+							<key>pfm_name</key>
+							<string>mode</string>
+							<key>pfm_title</key>
+							<string>Mode</string>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_range_list</key>
+							<array>
+								<string>rw</string>
+								<string>ro</string>
+							</array>
+							<key>pfm_range_list_titles</key>
+							<array>
+								<string>Read/write</string>
+								<string>Read only</string>
+							</array>
+						</dict>
 					</array>
-					<key>pfm_range_list_titles</key>
-					<array>
-						<string>Read/write</string>
-						<string>Read only</string>
-					</array>
+					<key>pfm_type</key>
+					<string>dictionary</string>
 				</dict>
 			</array>
 			<key>pfm_type</key>
-			<string>dictionary</string>
+			<string>array</string>
 			<key>pfm_value_placeholder</key>
-			<string>["/Users", "~"]</string>
+			<string>[{“path” : “/Users”, “isDefaultSelected” : false, “mode” : “rw”}, {“path” : “~”, “isDefaultSelected” : true, “mode” : “ro”}]</string>
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
@@ -661,7 +668,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>v1.13576.0</string>
+			<string>1.13576.0</string>
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
@@ -727,7 +734,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_title</key>
 			<string>End-user attribution</string>
 			<key>pfm_type</key>
-			<string>string</string>
+			<string>boolean</string>
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
