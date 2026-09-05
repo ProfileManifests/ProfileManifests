@@ -140,8 +140,9 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				<string>Enterprise policy options</string>
 				<string>3P - Workspace - Authentication</string>
 				<string>3P - Workspace - Chat surface</string>
-				<string>3P - Workspace - Code surface</string>
 				<string>3P - Workspace - Cowork surface</string>
+				<string>3P - Workspace - Workspace</string>
+				<string>3P - Connectors - Extensions</string>
 				<string>3P - Connectors - MCP</string>
 				<string>3P - Telemetry and updates - Auto update</string>
 				<string>3P - Telemetry and updates - Configuration updates</string>
@@ -175,13 +176,19 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<string>chatTabEnabled</string>
 					<string>chatAdvancedFileAnalysisEnabled</string>
 				</array>
-				<key>3P - Workspace - Code surface</key>
-				<array>
-					<string>isClaudeCodeForDesktopEnabled</string>
-				</array>
 				<key>3P - Workspace - Cowork surface</key>
 				<array>
 					<string>coworkTabEnabled</string>
+				</array>
+				<key>3P - Workspace - Workspace</key>
+				<array>
+					<string>disabledBuiltinTools</string>
+					<string>disableBypassPermissionsMode</string>
+					<string>blockReadsOutsideWorkingDirectories</string>
+				</array>
+				<key>3P - Connectors - Extensions</key>
+				<array>
+					<string>isDesktopExtensionSignatureRequired</string>
 				</array>
 				<key>3P - Connectors - MCP</key>
 				<array>
@@ -191,8 +198,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				</array>
 				<key>3P - Telemetry and updates  - Auto update</key>
 				<array>
-					<string>disableAutoUpdates</string>
-					<string>autoUpdaterEnforcementHours</string>
 					<string>updateViaUpdatesHost</string>
 				</array>
 				<key>3P - Telemetry and updates - Configuration updates</key>
