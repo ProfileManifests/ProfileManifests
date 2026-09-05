@@ -142,6 +142,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				<string>3P - Workspace - Chat surface</string>
 				<string>3P - Workspace - Code surface</string>
 				<string>3P - Workspace - Cowork surface</string>
+				<string>3P - Connectors - MCP</string>
 				<string>3P - Telemetry and updates - Auto update</string>
 				<string>3P - Telemetry and updates - Configuration updates</string>
 				<string>3P - Limits - Token limits</string>
@@ -181,6 +182,12 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				<key>3P - Workspace - Cowork surface</key>
 				<array>
 					<string>coworkTabEnabled</string>
+				</array>
+				<key>3P - Connectors - MCP</key>
+				<array>
+					<string>managedMcpServers</string>
+					<string>mcpPersistentAlwaysAllowEnabled</string>
+					<string>mcpToolTimeoutSec</string>
 				</array>
 				<key>3P - Telemetry and updates  - Auto update</key>
 				<array>
@@ -593,6 +600,38 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>Managed MCP Servers</string>
 			<key>pfm_type</key>
 			<string>array</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.24012.9</string>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>Offer the persistent “Always allow” approval options for MCP tools. Disable to keep tool approvals per-call or session-scoped only. Defaults to true.</string>
+			<key>pfm_name</key>
+			<string>mcpPersistentAlwaysAllowEnabled</string>
+			<key>pfm_title</key>
+			<string>Allow persistent tool approvals</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.37937.0</string>
+			<key>pfm_default</key>
+			<integer>180</integer>
+			<key>pfm_description</key>
+			<string>Per-call timeout for MCP tool calls, in seconds. Default 180 (3 minutes). Range: 60-3600.</string>
+			<key>pfm_name</key>
+			<string>mcpToolTimeoutSec</string>
+			<key>pfm_range_max</key>
+			<integer>3600</integer>
+			<key>pfm_range_min</key>
+			<integer>60</integer>
+			<key>pfm_title</key>
+			<string>MCP tool call timeout</string>
+			<key>pfm_type</key>
+			<string>integer</string>
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
