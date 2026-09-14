@@ -3,17 +3,17 @@
 <plist version="1.0">
 <dict>
 	<key>pfm_app_url</key>
-	<string>https://gitlab.rrze.uni-erlangen.de/faumac/networkShareMounter</string>
+	<string>https://gitlab.rrze.fau.de/faumac/networkShareMounter</string>
 	<key>pfm_description</key>
 	<string>Network Share Mounter settings</string>
 	<key>pfm_documentation_url</key>
-	<string>https://gitlab.rrze.uni-erlangen.de/faumac/networkShareMounter</string>
+	<string>https://nsm.faumac.rrze.de/docs/mdm-admin/</string>
 	<key>pfm_domain</key>
 	<string>de.fau.rrze.NetworkShareMounter</string>
 	<key>pfm_format_version</key>
 	<integer>1</integer>
 	<key>pfm_last_modified</key>
-	<date>2026-06-23T15:59:45Z</date>
+	<date>2026-09-14T10:00:00Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -50,8 +50,7 @@
 			<key>pfm_default</key>
 			<string>de.fau.rrze.NetworkShareMounter</string>
 			<key>pfm_description</key>
-			<string>The reverse-DNS-style identifier for the payload. This identifier is usually the same as the 'TopLevel' value, with an additional appended component. This string must be unique within the profile.
-During a profile replacement, the system updates payloads with the same 'PayloadIdentifier' and 'PayloadUUID' in the old and new profiles.</string>
+			<string>A unique identifier for the payload, dot-delimited. Usually root PayloadIdentifier+subidentifier</string>
 			<key>pfm_description_reference</key>
 			<string>A reverse-DNS-style identifier for the specific payload. It is usually the same identifier as the root-level PayloadIdentifier value with an additional component appended.</string>
 			<key>pfm_name</key>
@@ -67,7 +66,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<string>de.fau.rrze.NetworkShareMounter</string>
 			<key>pfm_description</key>
-			<string>The payload type, which each payload domain's reference page specifies.</string>
+			<string>The type of the payload, a reverse dns string</string>
 			<key>pfm_description_reference</key>
 			<string>The payload type.</string>
 			<key>pfm_name</key>
@@ -83,8 +82,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<string></string>
 			<key>pfm_description</key>
-			<string>The globally unique identifier for the payload. The actual content is unimportant, but must be globally unique. In macOS, use 'uuidgen' to generate UUIDs.
-During a profile replacement, the system updates payloads with the same 'PayloadIdentifier' and 'PayloadUUID' in the old and new profiles.</string>
+			<string>Unique identifier for the payload (format 01234567-89AB-CDEF-0123-456789ABCDEF)</string>
 			<key>pfm_description_reference</key>
 			<string>A globally unique identifier for the payload. The actual content is unimportant, but it must be globally unique. In macOS, you can use uuidgen to generate reasonable UUIDs.</string>
 			<key>pfm_format</key>
@@ -102,16 +100,12 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<integer>1</integer>
 			<key>pfm_description</key>
-			<string>The version of this specific payload.</string>
+			<string>The version of the whole configuration profile.</string>
 			<key>pfm_description_reference</key>
 			<string>The version number of the individual payload.
 A profile can consist of payloads with different version numbers. For example, changes to the VPN software in iOS might introduce a new payload version to support additional features, but Mail payload versions would not necessarily change in the same release.</string>
 			<key>pfm_name</key>
 			<string>PayloadVersion</string>
-			<key>pfm_range_list</key>
-			<array>
-				<integer>1</integer>
-			</array>
 			<key>pfm_require</key>
 			<string>always</string>
 			<key>pfm_title</key>
@@ -129,159 +123,14 @@ A profile can consist of payloads with different version numbers. For example, c
 			<key>pfm_type</key>
 			<string>string</string>
 		</dict>
+		<!-- 1. Managed Shares -->
 		<dict>
-			<key>pfm_app_min</key>
-			<string>2</string>
-			<key>pfm_default</key>
-			<false/>
-			<key>pfm_description</key>
-			<string>If set to true, the app will be launched on user-login.</string>
-			<key>pfm_name</key>
-			<string>autostart</string>
 			<key>pfm_title</key>
-			<string>Enable Autostart</string>
-			<key>pfm_type</key>
-			<string>boolean</string>
-		</dict>
-		<dict>
-			<key>pfm_app_min</key>
-			<string>2</string>
-			<key>pfm_default</key>
-			<true/>
+			<string>Managed network shares</string>
 			<key>pfm_description</key>
-			<string>Optional. If set to false, the user can not change the Autostart option.</string>
-			<key>pfm_name</key>
-			<string>canChangeAutostart</string>
-			<key>pfm_title</key>
-			<string>Can Change Autostart</string>
-			<key>pfm_type</key>
-			<string>boolean</string>
-		</dict>
-		<dict>
-			<key>pfm_app_min</key>
-			<string>3.0.4</string>
-			<key>pfm_default</key>
-			<true/>
-			<key>pfm_description</key>
-			<string>Turns the auto update framework on or off, so the App can update itself.</string>
-			<key>pfm_name</key>
-			<string>enableAutoUpdater</string>
-			<key>pfm_title</key>
-			<string>Enable AutoUpdater Framework</string>
-			<key>pfm_type</key>
-			<string>boolean</string>
-		</dict>
-		<dict>
-			<key>pfm_app_min</key>
-			<string>2</string>
-			<key>pfm_default</key>
-			<string>https://www.anleitungen.rrze.fau.de/betriebssysteme/apple-macos-und-ios/macos/#networksharemounter</string>
-			<key>pfm_description</key>
-			<string>Configure a help URL to help users interact with the application.</string>
-			<key>pfm_format</key>
-			<string>^http[s]?:\/\/\S*$</string>
-			<key>pfm_name</key>
-			<string>helpURL</string>
-			<key>pfm_title</key>
-			<string>Help URL</string>
-			<key>pfm_type</key>
-			<string>string</string>
-		</dict>
-		<dict>
-			<key>pfm_app_min</key>
-			<string>2</string>
-			<key>pfm_default</key>
-			<true/>
-			<key>pfm_description</key>
-			<string>Configure a help URL to help users interact with the application.</string>
-			<key>pfm_name</key>
-			<string>unmountOnExit</string>
-			<key>pfm_title</key>
-			<string>Unmount Shares on Exit</string>
-			<key>pfm_type</key>
-			<string>boolean</string>
-		</dict>
-		<dict>
-			<key>pfm_app_min</key>
-			<string>2</string>
-			<key>pfm_default</key>
-			<false/>
-			<key>pfm_description</key>
-			<string>With version 3 the old default mount path (~/Netzlaufwerke/) is deprecated. New default is (/Volumes). This key allows administrators to adopt this default value ahead of the official release. This option is provided to ease the transition for administrators.</string>
-			<key>pfm_name</key>
-			<string>useNewDefaultLocation</string>
-			<key>pfm_title</key>
-			<string>Use the new default mount location</string>
-			<key>pfm_type</key>
-			<string>boolean</string>
-		</dict>
-		<dict>
-			<key>pfm_app_min</key>
-			<string>2</string>
-			<key>pfm_default</key>
-			<string></string>
-			<key>pfm_description</key>
-			<string>Path where network shares will be mounted. Leave blank for the default value (highly recommended).</string>
+			<string>Array with managed network shares that are centrally deployed to users.</string>
 			<key>pfm_documentation_url</key>
-			<string>https://gitlab.rrze.fau.de/faumac/networkShareMounter#important-note-for-the-location-cleanuplocationdirectory-and-usenewdefaultlocation-values</string>
-			<key>pfm_name</key>
-			<string>location</string>
-			<key>pfm_title</key>
-			<string>Mount path</string>
-			<key>pfm_type</key>
-			<string>string</string>
-		</dict>
-		<dict>
-			<key>pfm_app_min</key>
-			<string>2</string>
-			<key>pfm_default</key>
-			<false/>
-			<key>pfm_description</key>
-			<string>If set to true, the mount location will be cleaned up from obstructing files and directories. Please read the wiki before enabling this option and use it with caution!</string>
-			<key>pfm_documentation_url</key>
-			<string>https://gitlab.rrze.fau.de/faumac/networkShareMounter#important-note-for-the-location-cleanuplocationdirectory-and-usenewdefaultlocation-values</string>
-			<key>pfm_name</key>
-			<string>cleanupLocationDirectory</string>
-			<key>pfm_title</key>
-			<string>Clean up obstructing files and directories</string>
-			<key>pfm_type</key>
-			<string>boolean</string>
-		</dict>
-		<dict>
-			<key>pfm_app_min</key>
-			<string>2</string>
-			<key>pfm_default</key>
-			<true/>
-			<key>pfm_description</key>
-			<string>Show exit button in the menu bar.</string>
-			<key>pfm_name</key>
-			<string>canQuit</string>
-			<key>pfm_title</key>
-			<string>Show Exit</string>
-			<key>pfm_type</key>
-			<string>boolean</string>
-		</dict>
-		<dict>
-			<key>pfm_app_min</key>
-			<string>3.0.0</string>
-			<key>pfm_default</key>
-			<string></string>
-			<key>pfm_description</key>
-			<string>Kerberos/AD Domain for user authentication. If set, automatic AD/Kerberos authentication and ticket renewal will be enabled.</string>
-			<key>pfm_name</key>
-			<string>kerberosRealm</string>
-			<key>pfm_title</key>
-			<string>Kerberos Realm</string>
-			<key>pfm_type</key>
-			<string>string</string>
-		</dict>
-		<dict>
-			<key>pfm_app_min</key>
-			<string>3</string>
-			<key>pfm_description</key>
-			<string>Array with managed network shares.</string>
-			<key>pfm_documentation_url</key>
-			<string>https://gitlab.rrze.fau.de/faumac/networkShareMounter#configuration-preferences</string>
+			<string>https://nsm.faumac.rrze.de/docs/mdm-admin/#1-managed-shares-managednetworkshares</string>
 			<key>pfm_name</key>
 			<string>managedNetworkShares</string>
 			<key>pfm_subkeys</key>
@@ -292,16 +141,16 @@ A profile can consist of payloads with different version numbers. For example, c
 					<key>pfm_subkeys</key>
 					<array>
 						<dict>
+							<key>pfm_title</key>
+							<string>Server and share</string>
 							<key>pfm_description</key>
-							<string>Example: smb://filer.your.domain.tld/share. Note: %USERNAME% will be replaced with the current user's login name.</string>
-							<key>pfm_format</key>
-							<string>^(smb|afp|https)://.*$</string>
+							<string>The share URL, e.g. smb://fileserver.example.com/share. Note: %USERNAME% is replaced at runtime with the user's macOS login name.</string>
 							<key>pfm_name</key>
 							<string>networkShare</string>
 							<key>pfm_require</key>
 							<string>always</string>
-							<key>pfm_title</key>
-							<string>Server and share</string>
+							<key>pfm_format</key>
+							<string>^(smb|afp|https)://.*$</string>
 							<key>pfm_type</key>
 							<string>string</string>
 							<key>pfm_value_placeholder</key>
@@ -310,14 +159,18 @@ A profile can consist of payloads with different version numbers. For example, c
 						<dict>
 							<key>pfm_default</key>
 							<string>krb</string>
+							<key>pfm_title</key>
+							<string>Authentication type</string>
 							<key>pfm_description</key>
-							<string>Authentication type for the share, it can be either through Kerberos (krb) or using a username/password (auth). Default: Kerberos.</string>
+							<string>Authentication method: krb (Kerberos/SSO), pwd (username + password), or guest. Default: krb.</string>
 							<key>pfm_name</key>
 							<string>authType</string>
+							<key>pfm_require</key>
+							<string>always</string>
 							<key>pfm_range_list</key>
 							<array>
 								<string>krb</string>
-								<string>password</string>
+								<string>pwd</string>
 								<string>guest</string>
 							</array>
 							<key>pfm_range_list_titles</key>
@@ -326,30 +179,92 @@ A profile can consist of payloads with different version numbers. For example, c
 								<string>Password</string>
 								<string>Guest</string>
 							</array>
-							<key>pfm_require</key>
-							<string>always</string>
-							<key>pfm_title</key>
-							<string>Authentication type</string>
 							<key>pfm_type</key>
 							<string>string</string>
 						</dict>
 						<dict>
+							<key>pfm_title</key>
+							<string>Display name (Optional)</string>
 							<key>pfm_description</key>
-							<string>Optional: Predefine a username for authentication using username/password</string>
+							<string>Display name shown for this share inside the app. Falls back to the share name if not set.</string>
 							<key>pfm_name</key>
-							<string>username</string>
+							<string>displayName</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+						<dict>
 							<key>pfm_title</key>
 							<string>Username (Optional)</string>
+							<key>pfm_description</key>
+							<string>Pre-defines a username for pwd-type shares. If omitted, the user is prompted.</string>
+							<key>pfm_name</key>
+							<string>username</string>
 							<key>pfm_type</key>
 							<string>string</string>
 						</dict>
 						<dict>
-							<key>pfm_description</key>
-							<string>Optional: Change the mount point name for the network share. Leave blank for the default value (recommended)</string>
-							<key>pfm_name</key>
-							<string>mountPoint</string>
 							<key>pfm_title</key>
 							<string>Mount point name (Optional)</string>
+							<key>pfm_description</key>
+							<string>Overrides the local directory name used as the mount point. Only relevant when the mount location is not /Volumes. Leave blank to use the share name (recommended).</string>
+							<key>pfm_name</key>
+							<string>mountPoint</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+						<dict>
+							<key>pfm_title</key>
+							<string>Externally managed Kerberos tickets</string>
+							<key>pfm_description</key>
+							<string>Set to true if Kerberos tickets for this share are managed externally (AD binding, Jamf Connect, Apple SSO Extension). NSM will mount the share without interfering with ticket management and will not prompt for a Kerberos profile. Only relevant for authType: krb.</string>
+							<key>pfm_name</key>
+							<string>externalKerberosManagement</string>
+							<key>pfm_default</key>
+							<string>false</string>
+							<key>pfm_range_list</key>
+							<array>
+								<string>true</string>
+								<string>false</string>
+							</array>
+							<key>pfm_range_list_titles</key>
+							<array>
+								<string>Yes</string>
+								<string>No</string>
+							</array>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+						<dict>
+							<key>pfm_title</key>
+							<string>Per-share Kerberos realm (Optional)</string>
+							<key>pfm_description</key>
+							<string>Per-share Kerberos realm override. Used together with externalKerberosManagement to identify which external profile to assign. Defaults to the global kerberosRealm setting.</string>
+							<key>pfm_name</key>
+							<string>kerberosRealm</string>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_value_placeholder</key>
+							<string>EXAMPLE.COM</string>
+						</dict>
+						<dict>
+							<key>pfm_title</key>
+							<string>Automatically mount</string>
+							<key>pfm_description</key>
+							<string>true (default): the share is mounted automatically at startup and on network changes. false: the share appears in the menu but is never mounted automatically - the user can mount it on demand.</string>
+							<key>pfm_name</key>
+							<string>autoMount</string>
+							<key>pfm_default</key>
+							<string>true</string>
+							<key>pfm_range_list</key>
+							<array>
+								<string>true</string>
+								<string>false</string>
+							</array>
+							<key>pfm_range_list_titles</key>
+							<array>
+								<string>Yes</string>
+								<string>No</string>
+							</array>
 							<key>pfm_type</key>
 							<string>string</string>
 						</dict>
@@ -358,18 +273,13 @@ A profile can consist of payloads with different version numbers. For example, c
 					<string>dictionary</string>
 				</dict>
 			</array>
-			<key>pfm_title</key>
-			<string>Managed network shares</string>
 			<key>pfm_type</key>
 			<string>array</string>
 		</dict>
+		<!-- disable legacy network share array. only for very old versions 
 		<dict>
-			<key>pfm_app_deprecated</key>
-			<string>3</string>
 			<key>pfm_description</key>
-			<string>Array with all network shares. Example: smb://filer.your.domain/share. Note: %USERNAME% will be replaced with the login name of the current user.</string>
-			<key>pfm_documentation_url</key>
-			<string>https://gitlab.rrze.fau.de/faumac/networkShareMounter</string>
+			<string>Legacy array with all network shares. Example: smb://filer.your.domain/share. Note: %USERNAME% will be replaced with the login name of the current user. Still accepted for backward compatibility but should not be used in new profiles - use managedNetworkShares instead.</string>
 			<key>pfm_name</key>
 			<string>networkShares</string>
 			<key>pfm_subkeys</key>
@@ -384,9 +294,404 @@ A profile can consist of payloads with different version numbers. For example, c
 				</dict>
 			</array>
 			<key>pfm_title</key>
-			<string>Network shares</string>
+			<string>Network shares (deprecated, legacy)</string>
+			<key>pfm_app_deprecated</key>
+			<string>3</string>
 			<key>pfm_type</key>
 			<string>array</string>
+		</dict> -->
+		<!-- 2. Authentication & Kerberos -->
+		<dict>
+			<key>pfm_default</key>
+			<string></string>
+			<key>pfm_description</key>
+			<string>Kerberos/AD domain for user authentication (e.g. EXAMPLE.COM). When set, NSM manages Kerberos ticket acquisition and renewal automatically. Required for app-managed Kerberos SSO.</string>
+			<key>pfm_name</key>
+			<string>kerberosRealm</string>
+			<key>pfm_title</key>
+			<string>Kerberos Realm</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>EXAMPLE.COM</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Friendly display name for the Kerberos authentication profile shown in the app's Settings. If not set, the realm name (e.g. EXAMPLE.COM) is used as-is.</string>
+			<key>pfm_name</key>
+			<string>kerberosProfileDisplayName</string>
+			<key>pfm_title</key>
+			<string>Kerberos Profile Display Name</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Overrides the %USERNAME% variable used in share paths. Use this when the local macOS login name differs from the AD or network username.</string>
+			<key>pfm_name</key>
+			<string>usernameOverride</string>
+			<key>pfm_title</key>
+			<string>Username Override</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<integer>14</integer>
+			<key>pfm_description</key>
+			<string>Passive warning. Days before password expiry when a silent countdown item first appears in the menu bar. The user only sees it when they open the menu. Set to 0 to disable all password expiration features entirely. Mirrors the Apple Kerberos SSO Extension key of the same name.</string>
+			<key>pfm_name</key>
+			<string>ExpirationCountdownStartDay</string>
+			<key>pfm_title</key>
+			<string>Password Expiration Countdown Start Day</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<integer>14</integer>
+			<key>pfm_description</key>
+			<string>Active warning. Days before password expiry when an alert dialog is shown automatically, once per calendar day. Set this lower than ExpirationCountdownStartDay so the dialog only interrupts when expiry is genuinely imminent. Mirrors the Jamf Connect / Apple Kerberos SSO Extension key of the same name.</string>
+			<key>pfm_name</key>
+			<string>ExpirationNotificationStartDay</string>
+			<key>pfm_title</key>
+			<string>Password Expiration Notification Start Day</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>URL of a web-based password self-service portal (SSPR). If set, a Change Password button in the expiration dialog opens this URL in the default browser. If not set, the user can change their password directly within NSM (requires kerberosRealm).</string>
+			<key>pfm_format</key>
+			<string>^http[s]?:\/\/\S*$</string>
+			<key>pfm_name</key>
+			<string>passwordChangeURL</string>
+			<key>pfm_title</key>
+			<string>Password Change URL</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>When true, a permanent Change Password... item is shown in the menu bar at all times, even before the expiry threshold is reached. It automatically transforms into the expiry countdown when the threshold is reached. If passwordChangeURL is also set, clicking the item opens that URL instead of the in-app dialog. Mirrors the Apple Kerberos SSO Extension key of the same name.</string>
+			<key>pfm_name</key>
+			<string>allowPasswordChange</string>
+			<key>pfm_title</key>
+			<string>Allow Password Change</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<!-- 3. Autostart & App Lifecycle -->
+		<dict>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>When deployed as a locked MDM key, the value is enforced on every app launch. When deployed as an unlocked default, it is applied once on the first launch only - after that, the user retains control.</string>
+			<key>pfm_name</key>
+			<string>autostart</string>
+			<key>pfm_title</key>
+			<string>Enable Autostart</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>Controls only the autostart toggle in the app's Settings UI. Set to false to grey it out. Does not affect MDM enforcement. To enforce the autostart state on every launch, deploy autostart as a locked key instead.</string>
+			<key>pfm_name</key>
+			<string>canChangeAutostart</string>
+			<key>pfm_title</key>
+			<string>Can Change Autostart</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>When true, the user can quit the app via the menu bar. Set to false to remove the Quit item entirely.</string>
+			<key>pfm_name</key>
+			<string>canQuit</string>
+			<key>pfm_title</key>
+			<string>Allow to Quit App</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>When true, all managed shares are automatically unmounted when the app quits.</string>
+			<key>pfm_name</key>
+			<string>unmountOnExit</string>
+			<key>pfm_title</key>
+			<string>Unmount Shares on Exit</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<!-- 4. User Interface -->
+		<dict>
+			<key>pfm_default</key>
+			<string></string>
+			<key>pfm_description</key>
+			<string>Path where network shares are mounted. The default is a localized folder in the user's home directory (e.g. ~/Network Shares). It is strongly recommended to leave this empty and use the default - changing it can break Finder integration.</string>
+			<key>pfm_name</key>
+			<string>location</string>
+			<key>pfm_title</key>
+			<string>Mount path</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>When true, NSM removes files and empty directories from the mount location that would prevent a share from mounting. Read the documentation carefully before enabling - this modifies the user's file system.</string>
+			<key>pfm_name</key>
+			<string>cleanupLocationDirectory</string>
+			<key>pfm_title</key>
+			<string>Clean up obstructing files and directories</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>When true, mounted and unmounted shares are listed individually in the menu bar for quick one-click access.</string>
+			<key>pfm_name</key>
+			<string>showMountsInMenu</string>
+			<key>pfm_title</key>
+			<string>Show Mounts in Menu</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>https://www.anleitungen.rrze.fau.de/betriebssysteme/apple-macos-und-ios/macos/#networksharemounter</string>
+			<key>pfm_description</key>
+			<string>URL to your organization's internal helpdesk or IT documentation. When set, an About Network Share Mounter item appears in the menu bar, opening this URL in the default browser.</string>
+			<key>pfm_format</key>
+			<string>^http[s]?:\/\/\S*$</string>
+			<key>pfm_name</key>
+			<string>helpURL</string>
+			<key>pfm_title</key>
+			<string>Help URL</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Controls the "Mount shares" action. Set to hidden to remove the item completely, or disabled to grey it out without removing it. Leave unconfigured to show it normally.</string>
+			<key>pfm_name</key>
+			<string>menuConnectShares</string>
+			<key>pfm_title</key>
+			<string>Menu Item: Connect Shares</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>hidden</string>
+				<string>disabled</string>
+			</array>
+			<key>pfm_range_list_titles</key>
+			<array>
+				<string>Hidden</string>
+				<string>Disabled</string>
+			</array>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Controls the "Unmount shares" action. Set to hidden to remove the item completely, or disabled to grey it out without removing it. Leave unconfigured to show it normally.</string>
+			<key>pfm_name</key>
+			<string>menuDisconnectShares</string>
+			<key>pfm_title</key>
+			<string>Menu Item: Disconnect Shares</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>hidden</string>
+				<string>disabled</string>
+			</array>
+			<key>pfm_range_list_titles</key>
+			<array>
+				<string>Hidden</string>
+				<string>Disabled</string>
+			</array>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Controls "Show mounted shares" (opens the mount folder in Finder). Set to hidden to remove the item completely, or disabled to grey it out without removing it. Leave unconfigured to show it normally.</string>
+			<key>pfm_name</key>
+			<string>menuShowSharesMountDir</string>
+			<key>pfm_title</key>
+			<string>Menu Item: Show Shares Mount Directory</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>hidden</string>
+				<string>disabled</string>
+			</array>
+			<key>pfm_range_list_titles</key>
+			<array>
+				<string>Hidden</string>
+				<string>Disabled</string>
+			</array>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Controls the individual share items listed in the menu. Set to hidden to remove them completely, or disabled to grey them out without removing them. Leave unconfigured to show them normally.</string>
+			<key>pfm_name</key>
+			<string>menuShowShares</string>
+			<key>pfm_title</key>
+			<string>Menu Item: Show Shares List</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>hidden</string>
+				<string>disabled</string>
+			</array>
+			<key>pfm_range_list_titles</key>
+			<array>
+				<string>Hidden</string>
+				<string>Disabled</string>
+			</array>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Controls the "Preferences..." item. Set to hidden to remove the item completely, or disabled to grey it out without removing it. Leave unconfigured to show it normally.</string>
+			<key>pfm_name</key>
+			<string>menuSettings</string>
+			<key>pfm_title</key>
+			<string>Menu Item: Settings</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>hidden</string>
+				<string>disabled</string>
+			</array>
+			<key>pfm_range_list_titles</key>
+			<array>
+				<string>Hidden</string>
+				<string>Disabled</string>
+			</array>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Controls the "Check for Updates..." item. Set to hidden to remove the item completely, or disabled to grey it out without removing it. Leave unconfigured to show it normally.</string>
+			<key>pfm_name</key>
+			<string>menuCheckUpdates</string>
+			<key>pfm_title</key>
+			<string>Menu Item: Check for Updates</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>hidden</string>
+				<string>disabled</string>
+			</array>
+			<key>pfm_range_list_titles</key>
+			<array>
+				<string>Hidden</string>
+				<string>Disabled</string>
+			</array>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Controls the "About Network Share Mounter" item (only visible when helpURL is set). Set to hidden to remove the item completely, or disabled to grey it out without removing it. Leave unconfigured to show it normally.</string>
+			<key>pfm_name</key>
+			<string>menuAbout</string>
+			<key>pfm_title</key>
+			<string>Menu Item: About</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>hidden</string>
+				<string>disabled</string>
+			</array>
+			<key>pfm_range_list_titles</key>
+			<array>
+				<string>Hidden</string>
+				<string>Disabled</string>
+			</array>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Controls the "Quit Network Share Mounter" item. Set to hidden to remove the item completely, or disabled to grey it out without removing it. Leave unconfigured to show it normally.</string>
+			<key>pfm_name</key>
+			<string>menuQuit</string>
+			<key>pfm_title</key>
+			<string>Menu Item: Quit</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>hidden</string>
+				<string>disabled</string>
+			</array>
+			<key>pfm_range_list_titles</key>
+			<array>
+				<string>Hidden</string>
+				<string>Disabled</string>
+			</array>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<!--  5. Software Update Management -->
+		<dict>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>Master switch. Set to true to completely disable the Sparkle update framework. When disabled, no update checks occur and the Check for Updates menu item is removed.</string>
+			<key>pfm_name</key>
+			<string>disableAutoUpdateFramework</string>
+			<key>pfm_title</key>
+			<string>Disable Auto Update Framework</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>When the framework is enabled, controls whether NSM actively checks for new versions in the background. Set to false to suppress checks while keeping the framework loaded.</string>
+			<key>pfm_name</key>
+			<string>SUEnableAutomaticChecks</string>
+			<key>pfm_title</key>
+			<string>Enable Automatic Update Checks</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>When true, updates are downloaded and installed automatically without asking the user for confirmation. Only takes effect when SUEnableAutomaticChecks is also true.</string>
+			<key>pfm_name</key>
+			<string>SUAutomaticallyUpdate</string>
+			<key>pfm_title</key>
+			<string>Automatically Install Updates</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<!--  6. Diagnostics -->
+		<dict>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>When true, hides the hidden "Diagnostics" trigger in Settings and General (five consecutive clicks) that lets users send NSM's unified-log activity to the developers for troubleshooting. Use this to prevent users from sending diagnostic data off-device, e.g. for data-privacy reasons.</string>
+			<key>pfm_name</key>
+			<string>disableDiagnostics</string>
+			<key>pfm_title</key>
+			<string>Disable Diagnostics</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
 		</dict>
 	</array>
 	<key>pfm_targets</key>
@@ -399,6 +704,6 @@ A profile can consist of payloads with different version numbers. For example, c
 	<key>pfm_unique</key>
 	<true/>
 	<key>pfm_version</key>
-	<integer>3</integer>
+	<integer>4</integer>
 </dict>
 </plist>
