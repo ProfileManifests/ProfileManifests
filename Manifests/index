@@ -223,11 +223,11 @@
 		<key>com.apple.screencapture</key>
 		<dict>
 			<key>modified</key>
-			<date>2026-06-23T15:59:45Z</date>
+			<date>2026-09-14T11:30:45Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApple/com.apple.screencapture.plist</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<key>com.apple.security</key>
 		<dict>
@@ -2571,6 +2571,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2026-09-09T23:09:42Z</date>
+	<date>2026-09-14T16:11:39Z</date>
 </dict>
 </plist>
