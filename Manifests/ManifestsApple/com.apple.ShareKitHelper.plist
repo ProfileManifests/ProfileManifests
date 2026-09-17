@@ -13,7 +13,7 @@
 	<key>pfm_interaction</key>
 	<string>exclusive</string>
 	<key>pfm_last_modified</key>
-	<date>2026-08-24T08:00:30Z</date>
+	<date>2026-09-17T18:53:46Z</date>
 	<key>pfm_macos_deprecated</key>
 	<string>10.12</string>
 	<key>pfm_macos_min</key>
@@ -191,7 +191,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_description</key>
-			<string>The list of plugin IDs that won't show up in the user's Share menu. This key is used only if there is no 'SHKAllowedShareServices' key.</string>
+			<string>The list of plugin IDs that won't show up in the user's Share menu. This key is used only if there's no 'SHKAllowedShareServices' key.</string>
 			<key>pfm_exclude</key>
 			<array>
 				<dict>
