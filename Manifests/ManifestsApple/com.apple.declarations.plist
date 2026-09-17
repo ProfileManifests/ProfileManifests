@@ -13,7 +13,7 @@
 	<key>pfm_ios_min</key>
 	<string>17.0</string>
 	<key>pfm_last_modified</key>
-	<date>2026-08-24T08:00:30Z</date>
+	<date>2026-09-17T18:53:46Z</date>
 	<key>pfm_macos_min</key>
 	<string>14.0</string>
 	<key>pfm_note</key>
@@ -142,7 +142,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<key>pfm_require</key>
 					<string>always</string>
 					<key>pfm_title</key>
-					<string>Declarations Content Item</string>
+					<string>Declarations content item</string>
 					<key>pfm_type</key>
 					<string>data</string>
 				</dict>
