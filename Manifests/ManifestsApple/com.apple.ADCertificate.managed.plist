@@ -17,7 +17,7 @@
 	<key>pfm_macos_min</key>
 	<string>10.7</string>
 	<key>pfm_note</key>
-	<string>To get a certificate from a Microsoft CA, follow the instructions at Request a certificate from a Microsoft Certificate Authority.</string>
+	<string>To get a certificate from a Microsoft CA, follow the instructions at Request a certificate from a Microsoft Certificate Authority (https://support.apple.com/en-us/HT204602).</string>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -180,7 +180,7 @@ CN=&lt;your base Domain Name&gt;</string>
 			<key>pfm_default</key>
 			<string>User</string>
 			<key>pfm_description</key>
-			<string>The certificate template for your environment. The default user certificate value is `User`. The default computer certificate value is `Machine`.</string>
+			<string>The certificate template for your environment. The default user certificate value is 'User'. The default computer certificate value is 'Machine'.</string>
 			<key>pfm_name</key>
 			<string>CertTemplate</string>
 			<key>pfm_require</key>

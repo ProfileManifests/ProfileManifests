@@ -258,7 +258,7 @@ Each string in the 'AppIdentifierMatches' array may either be an exact app ident
 							<string>The Wi-Fi Assist policy to apply to the SIM cards specified in the ICCIDs. Allowed values:
 '2': Use the default system policy for the specified SIM card(s).
 '3': Make Wi-Fi Assist switch more aggressively from a poor Wi-Fi connection to cellular data for the specified SIM card(s). This setting may increase cellular data use and may impact battery life.
-For more information, see About Wi-Fi Assist.</string>
+For more information, see About Wi-Fi Assist (https://support.apple.com/en-us/HT205296).</string>
 							<key>pfm_ios_min</key>
 							<string>13.0</string>
 							<key>pfm_name</key>
