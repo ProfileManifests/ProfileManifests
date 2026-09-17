@@ -2103,26 +2103,6 @@ If 'false', the system behaves as if Wi-Fi doesn't have an association with a Ci
 			<key>pfm_type</key>
 			<string>boolean</string>
 		</dict>
-		<dict>
-			<key>pfm_default</key>
-			<false/>
-			<key>pfm_description</key>
-			<string>If 'true', the device makes this network available for joining before the device is unlocked for the first time following a reboot, on a device configured for return to service. The device places any network credentials into Class D storage within the keychain and stores information about the network on disk in Class D.
-There are several restrictions on the use of this flag:
-This property is only available in the return to service mode.
-You can designate only one network as available before first unlock.
-'EAPClientConfiguration' must not be present.
-If 'IsHotspot' is present, it must be set to 'false'.
-'QoSMarkingPolicy' must not be present.
-If 'ProxyType' is present, it must be set to 'None'.
-The device fails to install the profile payload if any of these conditions aren't met.</string>
-			<key>pfm_name</key>
-			<string>AllowJoinBeforeFirstUnlock</string>
-			<key>pfm_title</key>
-			<string>Allow join before first unlock</string>
-			<key>pfm_type</key>
-			<string>boolean</string>
-		</dict>
 	</array>
 	<key>pfm_targets</key>
 	<array>
