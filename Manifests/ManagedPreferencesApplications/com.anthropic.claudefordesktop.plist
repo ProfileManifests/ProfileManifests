@@ -1169,12 +1169,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				<string>http/json</string>
 				<string>grpc</string>
 			</array>
-			<key>pfm_range_list_titles</key>
-			<array>
-				<string>http/protobuf</string>
-				<string>http/json</string>
-				<string>grpc</string>
-			</array>
 			<key>pfm_title</key>
 			<string>OpenTelemetry exporter protocol</string>
 			<key>pfm_type</key>
