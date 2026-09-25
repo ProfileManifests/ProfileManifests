@@ -13,7 +13,7 @@
 	<key>pfm_format_version</key>
 	<integer>1</integer>
 	<key>pfm_last_modified</key>
-	<date>2026-09-24T23:40:00Z</date>
+	<date>2026-09-25T03:25:00Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -738,9 +738,9 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
-			<string>1.3.0</string>
+			<string>1.3.1</string>
 			<key>pfm_default</key>
-			<false/>
+			<string></string>
 			<key>pfm_description</key>
 			<string>When 'true', the apply dialog shows the window close/minimize/maximize buttons.</string>
 			<key>pfm_documentation_url</key>
@@ -750,7 +750,9 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_title</key>
 			<string>Dialog Show Window Buttons</string>
 			<key>pfm_type</key>
-			<string>boolean</string>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>You can enable specific buttons by specifying combos of: close, min, max</string>
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
