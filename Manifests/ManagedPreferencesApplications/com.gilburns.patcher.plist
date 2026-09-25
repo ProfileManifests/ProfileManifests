@@ -13,7 +13,7 @@
 	<key>pfm_format_version</key>
 	<integer>1</integer>
 	<key>pfm_last_modified</key>
-	<date>2026-09-01T03:26:00Z</date>
+	<date>2026-09-25T03:25:00Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -166,6 +166,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				</array>
 				<key>Dialogs &amp; Notifications</key>
 				<array>
+					<string>ApplyDialogSize</string>
 					<string>DialogOnTop</string>
 					<string>DialogIcon</string>
 					<string>UseOverlayIcon</string>
@@ -179,6 +180,10 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<string>ShowNotificationsSilentUpdated</string>
 					<string>ShowNotificationsAppsQueued</string>
 					<string>ShowNotificationsSilentAndQueued</string>
+					<string>DialogBlurscreen</string>
+					<string>DialogHideotherapps</string>
+					<string>DialogMoveable</string>
+					<string>DialogShowWindowButtons</string>
 					<string>DialogTimeoutDeferral</string>
 					<string>DialogTimeoutDeferralAction</string>
 					<string>DialogTimeoutConfirmInstall</string>
@@ -425,7 +430,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<integer>2</integer>
 			<key>pfm_description</key>
-			<string>Which occurrence of `PatchingWeekday` in the month: 1=first, 2=second, etc.</string>
+			<string>Which occurrence of 'PatchingWeekday' in the month: 1=first, 2=second, etc.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#monthly-patching-cadence</string>
 			<key>pfm_name</key>
@@ -455,7 +460,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_app_min</key>
 			<string>1.0.0</string>
 			<key>pfm_description</key>
-			<string>Earliest time to begin applying on patch day (24-hour `HH:MM`). Empty = no lower bound.</string>
+			<string>Earliest time to begin applying on patch day (24-hour 'HH:MM'). Empty = no lower bound.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#monthly-patching-cadence</string>
 			<key>pfm_name</key>
@@ -465,13 +470,13 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_type</key>
 			<string>string</string>
 			<key>pfm_value_placeholder</key>
-			<string>24-hour `HH:MM`</string>
+			<string>24-hour 'HH:MM'</string>
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
 			<string>1.0.0</string>
 			<key>pfm_description</key>
-			<string>Latest time to begin applying on patch day (24-hour `HH:MM`). Apply will not start a new run after this time.</string>
+			<string>Latest time to begin applying on patch day (24-hour 'HH:MM'). Apply will not start a new run after this time.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#monthly-patching-cadence</string>
 			<key>pfm_name</key>
@@ -481,7 +486,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_type</key>
 			<string>string</string>
 			<key>pfm_value_placeholder</key>
-			<string>24-hour `HH:MM`</string>
+			<string>24-hour 'HH:MM'</string>
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
@@ -489,7 +494,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
-			<string>When `true`, the swiftDialog window floats above all other windows.</string>
+			<string>When 'true', the swiftDialog window floats above all other windows.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#swiftdialog--user-prompts</string>
 			<key>pfm_name</key>
@@ -505,7 +510,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
-			<string>When `true`, the apply completion dialog closes automatically after `UnattendedExitSeconds` if the user does not interact.</string>
+			<string>When 'true', the apply completion dialog closes automatically after 'UnattendedExitSeconds' if the user does not interact.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#swiftdialog--user-prompts</string>
 			<key>pfm_name</key>
@@ -519,7 +524,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_app_min</key>
 			<string>1.0.0</string>
 			<key>pfm_description</key>
-			<string>Seconds before the apply completion dialog auto-closes when `UnattendedExit` is `true`.</string>
+			<string>Seconds before the apply completion dialog auto-closes when 'UnattendedExit' is 'true'.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#swiftdialog--user-prompts</string>
 			<key>pfm_name</key>
@@ -537,7 +542,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<string>prompt</string>
 			<key>pfm_description</key>
-			<string>Action when a blocking process is running during apply: `"ignore"` (skip the check entirely), `"kill"` (force-quit silently), `"notify"` (brief notification; skip label if still running), `"prompt"` (timed dialog; user can quit or skip), `"defer"` (skip silently; retry next cycle).</string>
+			<string>Action when a blocking process is running during apply: 'ignore' (skip the check entirely), 'kill' (force-quit silently), 'notify' (brief notification; skip label if still running), 'prompt' (timed dialog; user can quit or skip), 'defer' (skip silently; retry next cycle).</string>
 			<key>pfm_documentation_url</key>
 			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#swiftdialog--user-prompts</string>
 			<key>pfm_name</key>
@@ -579,7 +584,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_app_min</key>
 			<string>1.0.0</string>
 			<key>pfm_description</key>
-			<string>Path to a custom icon for the apply dialog. Empty = use the system computer icon. Supports absolute paths, `SF=&lt;symbol&gt;` notation, or an SF Symbol name directly.</string>
+			<string>Path to a custom icon for the apply dialog. Empty = use the system computer icon. Supports absolute paths, 'SF=&lt;symbol&gt;' notation, or an SF Symbol name directly.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#swiftdialog--user-prompts</string>
 			<key>pfm_name</key>
@@ -597,7 +602,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
-			<string>When `true`, a small overlay icon is composited onto the dialog icon. Automatically disabled when swiftDialog is not installed.</string>
+			<string>When 'true', a small overlay icon is composited onto the dialog icon. Automatically disabled when swiftDialog is not installed.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#swiftdialog--user-prompts</string>
 			<key>pfm_name</key>
@@ -625,11 +630,59 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
+			<string>1.3.0</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>When 'true', all screen content behind the apply dialog is blurred.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#swiftdialog--user-prompts</string>
+			<key>pfm_name</key>
+			<string>DialogBlurscreen</string>
+			<key>pfm_title</key>
+			<string>Dialog Blur Screen</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.3.0</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>When 'true', all other running apps are hidden when the apply dialog launches.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#swiftdialog--user-prompts</string>
+			<key>pfm_name</key>
+			<string>DialogHideotherapps</string>
+			<key>pfm_title</key>
+			<string>Dialog Hide Other Apps</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.3.0</string>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>When 'true', the user can drag the swiftDialog windows (apply, progress, and prompt dialogs) around the screen. Set to 'false' to pin them in place.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#swiftdialog--user-prompts</string>
+			<key>pfm_name</key>
+			<string>DialogMoveable</string>
+			<key>pfm_title</key>
+			<string>Dialog Moveable</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
 			<string>1.0.0</string>
 			<key>pfm_default</key>
 			<string>center</string>
 			<key>pfm_description</key>
-			<string>Position of the main apply dialog: `topleft`, `left`, `bottomleft`, `top`, `center`, `bottom`, `topright`, `right`, or `bottomright`.</string>
+			<string>Position of the main apply dialog: 'topleft', 'left', 'bottomleft', 'top', 'center', 'bottom', 'topright', 'right', or 'bottomright'.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#swiftdialog--user-prompts</string>
 			<key>pfm_name</key>
@@ -659,7 +712,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<string>bottomright</string>
 			<key>pfm_description</key>
-			<string>Position of the progress/status window during apply. Same position values as `DialogScreenPosition`.</string>
+			<string>Position of the progress/status window during apply. Same position values as 'DialogScreenPosition'.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#swiftdialog--user-prompts</string>
 			<key>pfm_name</key>
@@ -685,11 +738,50 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
+			<string>1.3.1</string>
+			<key>pfm_default</key>
+			<string></string>
+			<key>pfm_description</key>
+			<string>When 'true', the apply dialog shows the window close/minimize/maximize buttons.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#swiftdialog--user-prompts</string>
+			<key>pfm_name</key>
+			<string>DialogShowWindowButtons</string>
+			<key>pfm_title</key>
+			<string>Dialog Show Window Buttons</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>You can enable specific buttons by specifying combos of: close, min, max</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.3.0</string>
+			<key>pfm_default</key>
+			<string>large</string>
+			<key>pfm_description</key>
+			<string>Size/style of the apply-phase progress dialog: 'large' (the full listitem-based progress window) or 'compact' (a smaller "mini" progress window, similar in size to the scan/check/download progress window).</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#swiftdialog--user-prompts</string>
+			<key>pfm_name</key>
+			<string>ApplyDialogSize</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>large</string>
+				<string>compact</string>
+			</array>
+			<key>pfm_title</key>
+			<string>Apply Dialog Size</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
 			<string>1.0.0</string>
 			<key>pfm_default</key>
 			<string></string>
 			<key>pfm_description</key>
-			<string>curl `--limit-rate` format bandwidth cap for staged downloads (e.g. `"500K"` for 500 KB/s, `"2M"` for 2 MB/s). Empty string = unlimited.</string>
+			<string>curl '--limit-rate' format bandwidth cap for staged downloads (e.g. '500K' for 500 KB/s, '2M' for 2 MB/s). Empty string = unlimited.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#download-behavior</string>
 			<key>pfm_name</key>
@@ -699,7 +791,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_type</key>
 			<string>string</string>
 			<key>pfm_value_placeholder</key>
-			<string>e.g. `"500K"` for 500 KB/s, `"2M"` for 2 MB/s</string>
+			<string>e.g. '500K' for 500 KB/s, '2M' for 2 MB/s</string>
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
@@ -743,7 +835,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>When `true`, labels that return no `appNewVersion` value are skipped entirely during staging.</string>
+			<string>When 'true', labels that return no 'appNewVersion' value are skipped entirely during staging.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#download-behavior</string>
 			<key>pfm_name</key>
@@ -759,7 +851,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<integer>7</integer>
 			<key>pfm_description</key>
-			<string>For labels with unknown versions, re-check this many days after the last attempt (instead of the normal `CheckIntervalHours` cadence).</string>
+			<string>For labels with unknown versions, re-check this many days after the last attempt (instead of the normal 'CheckIntervalHours' cadence).</string>
 			<key>pfm_documentation_url</key>
 			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#download-behavior</string>
 			<key>pfm_name</key>
@@ -777,7 +869,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<integer>7</integer>
 			<key>pfm_description</key>
-			<string>When a label reports a version that does not match the file actually downloaded, suppress re-staging for this many days. Cleared automatically when the label reports a different `appNewVersion`.</string>
+			<string>When a label reports a version that does not match the file actually downloaded, suppress re-staging for this many days. Cleared automatically when the label reports a different 'appNewVersion'.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#download-behavior</string>
 			<key>pfm_name</key>
@@ -795,7 +887,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
-			<string>When `true`, a one-time random delay is applied before the first scan after initial deployment. Spreads fleet-wide first-scan load across the `InitialScanDelayMaxSeconds` window.</string>
+			<string>When 'true', a one-time random delay is applied before the first scan after initial deployment. Spreads fleet-wide first-scan load across the 'InitialScanDelayMaxSeconds' window.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#phase-schedule</string>
 			<key>pfm_name</key>
@@ -811,7 +903,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<integer>86400</integer>
 			<key>pfm_description</key>
-			<string>Maximum jitter for the initial deployment delay in seconds (default: 24 hours). The actual delay is chosen randomly in `[0, max]` on first launch and persisted.</string>
+			<string>Maximum jitter for the initial deployment delay in seconds (default: 24 hours). The actual delay is chosen randomly in '[0, max]' on first launch and persisted.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#phase-schedule</string>
 			<key>pfm_name</key>
@@ -847,7 +939,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
-			<string>When `true`, a scan is triggered immediately if the Installomator or Managed Labels have been updated since the last scan, regardless of `ScanIntervalDays`.</string>
+			<string>When 'true', a scan is triggered immediately if the Installomator or Managed Labels have been updated since the last scan, regardless of 'ScanIntervalDays'.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#phase-schedule</string>
 			<key>pfm_name</key>
@@ -951,7 +1043,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
-			<string>When `true`, automatically detects apps whose updates are already controlled by MDM policies and excludes their labels from patching. Currently detects Microsoft 365/Office (via MAU), Microsoft Edge, Google Chrome, and Google Drive. </string>
+			<string>When 'true', automatically detects apps whose updates are already controlled by MDM policies and excludes their labels from patching. Currently detects Microsoft 365/Office (via MAU), Microsoft Edge, Google Chrome, and Google Drive. </string>
 			<key>pfm_documentation_url</key>
 			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#label-filtering</string>
 			<key>pfm_name</key>
@@ -967,7 +1059,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
-			<string>When `true`, automatically ignores non-production label variants — labels whose name ends with one of `NonProductionLabelSuffixes` — but only when a production label of the same base name also exists. E.g. with the default suffixes, `microsoftedgebeta` and `microsoftedgedev` are ignored because `microsoftedge` also exists as a label; a label like `figma` is untouched, and a hypothetical `somethingbeta` is left alone if `something` is not also a known label.</string>
+			<string>When 'true', automatically ignores non-production label variants — labels whose name ends with one of 'NonProductionLabelSuffixes' — but only when a production label of the same base name also exists. E.g. with the default suffixes, 'microsoftedgebeta' and 'microsoftedgedev' are ignored because 'microsoftedge' also exists as a label; a label like 'figma' is untouched, and a hypothetical 'somethingbeta' is left alone if 'something' is not also a known label.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#label-filtering</string>
 			<key>pfm_name</key>
@@ -983,7 +1075,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<string>beta canary dev</string>
 			<key>pfm_description</key>
-			<string>Space-separated list of suffixes that mark a label as a non-production variant of a base label. Only used when `IgnoreNonProductionLabels` is `true`. Does not support wildcards.</string>
+			<string>Space-separated list of suffixes that mark a label as a non-production variant of a base label. Only used when 'IgnoreNonProductionLabels' is 'true'. Does not support wildcards.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#label-filtering</string>
 			<key>pfm_name</key>
@@ -1001,7 +1093,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
-			<string>When a label and its `pkg`-suffixed counterpart both exist (e.g. `bbedit` and `bbeditpkg`), only one should ever be active — they deliver the same app via different installer mechanisms. When `true`, the pkg-suffixed label is preferred and the non-pkg label is ignored. When `false`, the non-pkg label is preferred and the pkg-suffixed label is ignored instead.</string>
+			<string>When a label and its 'pkg'-suffixed counterpart both exist (e.g. 'bbedit' and 'bbeditpkg'), only one should ever be active — they deliver the same app via different installer mechanisms. When 'true', the pkg-suffixed label is preferred and the non-pkg label is ignored. When 'false', the non-pkg label is preferred and the pkg-suffixed label is ignored instead.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#label-filtering</string>
 			<key>pfm_name</key>
@@ -1031,7 +1123,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_app_min</key>
 			<string>1.0.0</string>
 			<key>pfm_description</key>
-			<string>Space-separated list of label names made available for user-initiated self-service installation via the Available Software catalog. Does not support wildcards. Labels are presented in the order listed here, allowing you to feature priority apps at the top. Example: `"microsoftword zoom slack"`.</string>
+			<string>Space-separated list of label names made available for user-initiated self-service installation via the Available Software catalog. Does not support wildcards. Labels are presented in the order listed here, allowing you to feature priority apps at the top. Example: 'microsoftword zoom slack'.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#label-filtering</string>
 			<key>pfm_name</key>
@@ -1049,7 +1141,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
-			<string>Show swiftDialog prompts during the apply phase. If `false` (or swiftDialog is not installed), blocking process handling falls back to the configured `BlockingProcessAction`.</string>
+			<string>Show swiftDialog prompts during the apply phase. If 'false' (or swiftDialog is not installed), blocking process handling falls back to the configured 'BlockingProcessAction'.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#swiftdialog--user-prompts</string>
 			<key>pfm_name</key>
@@ -1083,7 +1175,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<string>white</string>
 			<key>pfm_description</key>
-			<string>Font color used in dialogs and apps. These values set the accent colors used in swiftDialog prompts. Each accepts a standard Apple color name (`black`, `blue`, `gray`, `green`, `orange`, `pink`, `purple`, `red`, `white`, `yellow`) or a hex value (e.g. `#00A4C7`).</string>
+			<string>Font color used in dialogs and apps. These values set the accent colors used in swiftDialog prompts. Each accepts a standard Apple color name ('black', 'blue', 'gray', 'green', 'orange', 'pink', 'purple', 'red', 'white', 'yellow') or a hex value (e.g. '#00A4C7').</string>
 			<key>pfm_documentation_url</key>
 			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#branding-color-palette</string>
 			<key>pfm_name</key>
@@ -1101,7 +1193,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<string>blue</string>
 			<key>pfm_description</key>
-			<string>Background color used in dialogs and apps. These values set the accent colors used in swiftDialog prompts. Each accepts a standard Apple color name (`black`, `blue`, `gray`, `green`, `orange`, `pink`, `purple`, `red`, `white`, `yellow`) or a hex value (e.g. `#00A4C7`).</string>
+			<string>Background color used in dialogs and apps. These values set the accent colors used in swiftDialog prompts. Each accepts a standard Apple color name ('black', 'blue', 'gray', 'green', 'orange', 'pink', 'purple', 'red', 'white', 'yellow') or a hex value (e.g. '#00A4C7').</string>
 			<key>pfm_documentation_url</key>
 			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#branding-color-palette</string>
 			<key>pfm_name</key>
@@ -1119,7 +1211,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>Enable verbose debug logging. When `true`, per-label key dumps and other low-signal output are included in `/Library/Logs/Patcher/`.</string>
+			<string>Enable verbose debug logging. When 'true', per-label key dumps and other low-signal output are included in '/Library/Logs/Patcher/'.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#logging</string>
 			<key>pfm_name</key>
@@ -1135,7 +1227,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<integer>90</integer>
 			<key>pfm_description</key>
-			<string>Number of days to retain log files in `/Library/Logs/Patcher/`. Files older than this are deleted during the `cleanLogs` run. Set to `0` to disable automatic log cleanup.</string>
+			<string>Number of days to retain log files in '/Library/Logs/Patcher/'. Files older than this are deleted during the 'cleanLogs' run. Set to '0' to disable automatic log cleanup.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#logging</string>
 			<key>pfm_name</key>
@@ -1185,7 +1277,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>When `true`, apps found only on external volumes (`/Volumes/*`) are excluded from discovery and never updated. Useful in environments where external drives are transient and should not be managed.</string>
+			<string>When 'true', apps found only on external volumes ('/Volumes/*') are excluded from discovery and never updated. Useful in environments where external drives are transient and should not be managed.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#application-discovery</string>
 			<key>pfm_name</key>
@@ -1255,7 +1347,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>When `true`, disables all Installomator label management: no initial download, no update checks, and Installomator labels are never used. Only Managed-Labels are used.</string>
+			<string>When 'true', disables all Installomator label management: no initial download, no update checks, and Installomator labels are never used. Only Managed-Labels are used.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#installomator-label-source</string>
 			<key>pfm_name</key>
@@ -1271,7 +1363,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>When `true`, skips routine label update checks while still using labels already on disk. Has no effect on the initial download when no labels are present. Ignored when `InstallomatorLabelsDisable` is `true`.</string>
+			<string>When 'true', skips routine label update checks while still using labels already on disk. Has no effect on the initial download when no labels are present. Ignored when 'InstallomatorLabelsDisable' is 'true'.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#installomator-label-source</string>
 			<key>pfm_name</key>
@@ -1285,7 +1377,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_app_min</key>
 			<string>1.0.0</string>
 			<key>pfm_default</key>
-			<string>Installomator</string>
+			<string>gilburns</string>
 			<key>pfm_description</key>
 			<string>GitHub account hosting the Installomator Metadata repository.</string>
 			<key>pfm_documentation_url</key>
@@ -1303,7 +1395,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_app_min</key>
 			<string>1.0.0</string>
 			<key>pfm_default</key>
-			<string>Installomator</string>
+			<string>Installomator-Metadata</string>
 			<key>pfm_description</key>
 			<string>GitHub repository name for Installomator Metadata.</string>
 			<key>pfm_documentation_url</key>
@@ -1341,7 +1433,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
-			<string>When `true`, the scheduler periodically checks the metadata repository for updates and syncs icons and metadata to a local cache.</string>
+			<string>When 'true', the scheduler periodically checks the metadata repository for updates and syncs icons and metadata to a local cache.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#installomator-metadata-source</string>
 			<key>pfm_name</key>
@@ -1393,7 +1485,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<string>support@company.com</string>
 			<key>pfm_description</key>
-			<string>Support email address. Shown as a clickable `mailto:` link in the Help Message</string>
+			<string>Support email address. Shown as a clickable 'mailto:' link in the Help Message</string>
 			<key>pfm_documentation_url</key>
 			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#support-team-branding</string>
 			<key>pfm_name</key>
@@ -1411,7 +1503,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<string>None</string>
 			<key>pfm_description</key>
-			<string>Support phone number in the Help Message. Set to `"None"` to hide the field.</string>
+			<string>Support phone number in the Help Message. Set to 'None' to hide the field.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#support-team-branding</string>
 			<key>pfm_name</key>
@@ -1429,7 +1521,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<string>None</string>
 			<key>pfm_description</key>
-			<string>Support portal URL in the Help Message. Set to `"None"` to hide the field.</string>
+			<string>Support portal URL in the Help Message. Set to 'None' to hide the field.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#support-team-branding</string>
 			<key>pfm_name</key>
@@ -1447,7 +1539,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
-			<string>When `true`, the scheduler installs and loads the PatcherMenu LaunchAgent for the current console user. When `false`, the LaunchAgent is unloaded and the plist removed. Managed automatically at each scheduler run.</string>
+			<string>When 'true', the scheduler installs and loads the PatcherMenu LaunchAgent for the current console user. When 'false', the LaunchAgent is unloaded and the plist removed. Managed automatically at each scheduler run.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#patchermenu</string>
 			<key>pfm_name</key>
@@ -1463,7 +1555,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<string></string>
 			<key>pfm_description</key>
-			<string>Icon displayed in the menu bar status item. Accepts an SF Symbol name (e.g. `"gear"`) or an absolute path to a template-mode PNG. A template PNG adapts automatically to light/dark menu bar appearance. Empty = built-in default.</string>
+			<string>Icon displayed in the menu bar status item. Accepts an SF Symbol name (e.g. 'gear') or an absolute path to a template-mode PNG. A template PNG adapts automatically to light/dark menu bar appearance. Empty = built-in default.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#patchermenu</string>
 			<key>pfm_name</key>
@@ -1481,7 +1573,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
-			<string>When `true`, a Help (?) button is shown in the menu bar popover header. Tapping it displays the support contact information.</string>
+			<string>When 'true', a Help (?) button is shown in the menu bar popover header. Tapping it displays the support contact information.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#patchermenu</string>
 			<key>pfm_name</key>
@@ -1497,7 +1589,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
-			<string>When `true`, the Last Activity section (scan / check / stage / apply dates) is shown in the menu bar popover.</string>
+			<string>When 'true', the Last Activity section (scan / check / stage / apply dates) is shown in the menu bar popover.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#patchermenu</string>
 			<key>pfm_name</key>
@@ -1513,7 +1605,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<string>combined</string>
 			<key>pfm_description</key>
-			<string>Controls how the deferral count line is shown in the popover. `combined` — one total covering every deferral, including auto-deferrals (timer time-outs and blocking-process skips). `split` — two figures: deferrals the user actively chose, and auto-deferrals combined. `userOnly` — only the count of deferrals the user actively chose.</string>
+			<string>Controls how the deferral count line is shown in the popover. 'combined' — one total covering every deferral, including auto-deferrals (timer time-outs and blocking-process skips). 'split' — two figures: deferrals the user actively chose, and auto-deferrals combined. 'userOnly' — only the count of deferrals the user actively chose.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#patchermenu</string>
 			<key>pfm_name</key>
@@ -1537,7 +1629,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>When `true`, a Quit button is shown in the menu bar popover footer.</string>
+			<string>When 'true', a Quit button is shown in the menu bar popover footer.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#patchermenu</string>
 			<key>pfm_name</key>
@@ -1553,7 +1645,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
-			<string>When `true`, the "Download New Updates" option appears in the Run Now menu.</string>
+			<string>When 'true', the "Download New Updates" option appears in the Run Now menu.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#patchermenu</string>
 			<key>pfm_name</key>
@@ -1569,7 +1661,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
-			<string>When `true`, the "Check for Updates" option appears in the Run Now menu.</string>
+			<string>When 'true', the "Check for Updates" option appears in the Run Now menu.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#patchermenu</string>
 			<key>pfm_name</key>
@@ -1585,7 +1677,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
-			<string>When `true`, the "Full Discovery Scan" option appears in the Run Now menu.</string>
+			<string>When 'true', the "Full Discovery Scan" option appears in the Run Now menu.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#patchermenu</string>
 			<key>pfm_name</key>
@@ -1601,7 +1693,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
-			<string>When `true`, scan and check operations triggered from PatcherMenu display a swiftDialog progress window.</string>
+			<string>When 'true', scan and check operations triggered from PatcherMenu display a swiftDialog progress window.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#patchermenu</string>
 			<key>pfm_name</key>
@@ -1653,7 +1745,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
-			<string>When `true`, apps successfully installed via self-service are automatically added to the current user's Dock if not already present.</string>
+			<string>When 'true', apps successfully installed via self-service are automatically added to the current user's Dock if not already present.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#available-software</string>
 			<key>pfm_name</key>
@@ -1669,7 +1761,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<string>FAILURES</string>
 			<key>pfm_description</key>
-			<string>Controls when scheduled webhook reports are sent: `"FALSE"` (never), `"FAILURES"` (failures only), `"ALL"` (successes and failures).</string>
+			<string>Controls when scheduled webhook reports are sent: 'FALSE' (never), 'FAILURES' (failures only), 'ALL' (successes and failures).</string>
 			<key>pfm_documentation_url</key>
 			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#webhooks</string>
 			<key>pfm_name</key>
@@ -1723,7 +1815,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<string>deviceName,serial,osVersion,user</string>
 			<key>pfm_description</key>
-			<string>Comma-separated list of device attributes included in webhook payloads, in display order. MDM info is always appended if detected. Supported values: `deviceName`, `hostname`, `serial`, `osVersion`, `osBuild`, `osName`, `model`, `hardwareModel`, `user`, `patcherVersion`, `installomatorVersion`.</string>
+			<string>Comma-separated list of device attributes included in webhook payloads, in display order. MDM info is always appended if detected. Supported values: 'deviceName', 'hostname', 'serial', 'osVersion', 'osBuild', 'osName', 'model', 'hardwareModel', 'user', 'patcherVersion', 'installomatorVersion'.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#webhooks</string>
 			<key>pfm_name</key>
@@ -1741,7 +1833,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<string>immediate</string>
 			<key>pfm_description</key>
-			<string>When to send accumulated webhook reports: `"immediate"`, `"daily"`, `"weekly"`, `"monthly"`, or `"patchDay"`.</string>
+			<string>When to send accumulated webhook reports: 'immediate', 'daily', 'weekly', 'monthly', or 'patchDay'.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#webhooks</string>
 			<key>pfm_name</key>
@@ -1767,7 +1859,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<integer>1</integer>
 			<key>pfm_description</key>
-			<string>For `weekly` schedule: day of week to send (0=Sunday … 6=Saturday).</string>
+			<string>For 'weekly' schedule: day of week to send (0=Sunday … 6=Saturday).</string>
 			<key>pfm_documentation_url</key>
 			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#webhooks</string>
 			<key>pfm_name</key>
@@ -1803,7 +1895,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<integer>1</integer>
 			<key>pfm_description</key>
-			<string>For `monthly` schedule: day of month to send (1–31).</string>
+			<string>For 'monthly' schedule: day of month to send (1–31).</string>
 			<key>pfm_documentation_url</key>
 			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#webhooks</string>
 			<key>pfm_name</key>
@@ -1821,7 +1913,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<integer>8</integer>
 			<key>pfm_description</key>
-			<string>For `daily`, `weekly`, and `monthly` schedules: hour of day (0–23) at which to send.</string>
+			<string>For 'daily', 'weekly', and 'monthly' schedules: hour of day (0–23) at which to send.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#webhooks</string>
 			<key>pfm_name</key>
@@ -1857,7 +1949,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<string>FALSE</string>
 			<key>pfm_description</key>
-			<string>Controls whether an immediate webhook is sent after a user-initiated self-service install, regardless of `WebhookSchedule`. Options: `"FALSE"` (never), `"FAILURES"` (failed installs only), `"ALL"` (success and failure).</string>
+			<string>Controls whether an immediate webhook is sent after a user-initiated self-service install, regardless of 'WebhookSchedule'. Options: 'FALSE' (never), 'FAILURES' (failed installs only), 'ALL' (success and failure).</string>
 			<key>pfm_documentation_url</key>
 			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#webhooks</string>
 			<key>pfm_name</key>
@@ -1881,7 +1973,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>When `true`, the scheduler runs a silent apply pass before the interactive apply phase. Apps whose blocking process is not running are installed without prompting. Items skipped in the silent pass are shown in the interactive dialog as usual.</string>
+			<string>When 'true', the scheduler runs a silent apply pass before the interactive apply phase. Apps whose blocking process is not running are installed without prompting. Items skipped in the silent pass are shown in the interactive dialog as usual.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#swiftdialog--user-prompts</string>
 			<key>pfm_name</key>
@@ -1897,7 +1989,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<integer>4</integer>
 			<key>pfm_description</key>
-			<string>Days a pending update must be present before Focus/DND auto-deferral is disabled and the user must be prompted regardless of Focus state. `0` means Focus is always respected.</string>
+			<string>Days a pending update must be present before Focus/DND auto-deferral is disabled and the user must be prompted regardless of Focus state. '0' means Focus is always respected.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#deadlines</string>
 			<key>pfm_name</key>
@@ -1915,7 +2007,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<integer>10</integer>
 			<key>pfm_description</key>
-			<string>Days a pending update must be present before no further deferrals are offered and the update is applied at the next opportunity. `0` disables hard deadlines.</string>
+			<string>Days a pending update must be present before no further deferrals are offered and the update is applied at the next opportunity. '0' disables hard deadlines.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#deadlines</string>
 			<key>pfm_name</key>
@@ -1933,7 +2025,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
-			<string>When `false`, Focus/DND and display assertions (e.g. active screen sharing) are never checked. The prompt is shown regardless of the user's Focus state.</string>
+			<string>When 'false', Focus/DND and display assertions (e.g. active screen sharing) are never checked. The prompt is shown regardless of the user's Focus state.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#deadlines</string>
 			<key>pfm_name</key>
@@ -1947,7 +2039,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_app_min</key>
 			<string>1.0.0</string>
 			<key>pfm_description</key>
-			<string>Space-separated list of process names to ignore when checking for display-sleep assertions (`pmset -g assertions`). If the process holding the assertion resolves to a name that matches an entry here (case-insensitive), the assertion is not treated as a blocker and patching may proceed.</string>
+			<string>Space-separated list of process names to ignore when checking for display-sleep assertions ('pmset -g assertions'). If the process holding the assertion resolves to a name that matches an entry here (case-insensitive), the assertion is not treated as a blocker and patching may proceed.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#deadlines</string>
 			<key>pfm_name</key>
@@ -1965,7 +2057,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
-			<string>When `true`, deferral options are progressively capped as the patching window closes. Options shrink from 2 hours early in the day to 5 minutes near window end, then deferral is removed entirely once the window closes. When `false`, the full `DeferralTimerMenu` list is always shown. Applies to both monthly and deadline mode on the final patch day.</string>
+			<string>When 'true', deferral options are progressively capped as the patching window closes. Options shrink from 2 hours early in the day to 5 minutes near window end, then deferral is removed entirely once the window closes. When 'false', the full 'DeferralTimerMenu' list is always shown. Applies to both monthly and deadline mode on the final patch day.</string>
 			<key>pfm_documentation_url</key>
 			<string>https://github.com/gilburns/Third-Party-Patcher/wiki/Preference-Keys#deadlines</string>
 			<key>pfm_name</key>
@@ -1985,6 +2077,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 	<key>pfm_unique</key>
 	<true/>
 	<key>pfm_version</key>
-	<integer>1</integer>
+	<integer>2</integer>
 </dict>
 </plist>
