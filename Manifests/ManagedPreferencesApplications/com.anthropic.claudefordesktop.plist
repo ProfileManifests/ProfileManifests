@@ -13,7 +13,7 @@
 	<key>pfm_format_version</key>
 	<integer>1</integer>
 	<key>pfm_last_modified</key>
-	<date>2026-09-05T00:07:00Z</date>
+	<date>2026-09-28T00:00:00Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -316,6 +316,102 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>Allow Cowork</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2.2553.0</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>Claude Desktop on third-party inference deployments. Enable the built-in browser in Cowork and Code sessions. False disables the browser pane; Code retains its localhost-only dev-server preview. Defaults to false. When bootstrapUrl is set, configure this key in the served configuration.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#built-in-browser</string>
+			<key>pfm_name</key>
+			<string>builtinBrowserEnabled</string>
+			<key>pfm_title</key>
+			<string>Enable Built-in Browser</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2.2553.0</string>
+			<key>pfm_default</key>
+			<string>allow</string>
+			<key>pfm_description</key>
+			<string>Claude Desktop on third-party inference deployments. Default policy for sites Claude may open, read, or act on when the built-in browser is enabled. Allowed domains are exceptions under block; blocked domains are exceptions under allow. Users can still view sites denied to Claude. Defaults to allow.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#built-in-browser</string>
+			<key>pfm_name</key>
+			<string>builtinBrowserDefaultDomainPolicy</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>allow</string>
+				<string>block</string>
+			</array>
+			<key>pfm_range_list_titles</key>
+			<array>
+				<string>Allow Sites by Default</string>
+				<string>Block Sites by Default</string>
+			</array>
+			<key>pfm_title</key>
+			<string>Built-in Browser Default Site Policy</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2.2553.0</string>
+			<key>pfm_description</key>
+			<string>Claude Desktop on third-party inference deployments. Sites Claude may open, read, or act on when builtinBrowserDefaultDomainPolicy is block; ignored under allow. Empty or unset allows no external sites for Claude. Users can still view other sites. Bare * and public-suffix wildcards are ignored.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#built-in-browser</string>
+			<key>pfm_name</key>
+			<string>builtinBrowserAllowedDomains</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_description</key>
+					<string>A hostname or supported hostname wildcard. A plain hostname also matches its www form, but no other subdomain.</string>
+					<key>pfm_title</key>
+					<string>Domain</string>
+					<key>pfm_type</key>
+					<string>string</string>
+					<key>pfm_value_placeholder</key>
+					<string>example.com</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>Built-in Browser Allowed Domains</string>
+			<key>pfm_type</key>
+			<string>array</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2.2553.0</string>
+			<key>pfm_description</key>
+			<string>Claude Desktop on third-party inference deployments. Sites Claude may not open, read, or act on when builtinBrowserDefaultDomainPolicy is allow; ignored under block. Empty or unset adds no blocked sites. Users can still view blocked sites. * blocks every external site for Claude; localhost dev servers are unaffected.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#built-in-browser</string>
+			<key>pfm_name</key>
+			<string>builtinBrowserBlockedDomains</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_description</key>
+					<string>A hostname or supported hostname wildcard. A plain hostname also matches its www form, but no other subdomain.</string>
+					<key>pfm_title</key>
+					<string>Domain</string>
+					<key>pfm_type</key>
+					<string>string</string>
+					<key>pfm_value_placeholder</key>
+					<string>example.com</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>Built-in Browser Blocked Domains</string>
+			<key>pfm_type</key>
+			<string>array</string>
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
@@ -1261,6 +1357,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 	<key>pfm_unique</key>
 	<true/>
 	<key>pfm_version</key>
-	<integer>6</integer>
+	<integer>7</integer>
 </dict>
 </plist>
