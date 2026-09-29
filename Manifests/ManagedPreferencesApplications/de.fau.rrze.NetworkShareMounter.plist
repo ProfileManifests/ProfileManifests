@@ -13,7 +13,7 @@
 	<key>pfm_format_version</key>
 	<integer>1</integer>
 	<key>pfm_last_modified</key>
-	<date>2026-09-14T10:00:00Z</date>
+	<date>2026-09-28T14:46:29Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -50,7 +50,8 @@
 			<key>pfm_default</key>
 			<string>de.fau.rrze.NetworkShareMounter</string>
 			<key>pfm_description</key>
-			<string>A unique identifier for the payload, dot-delimited. Usually root PayloadIdentifier+subidentifier</string>
+			<string>The reverse-DNS-style identifier for the payload. This identifier is usually the same as the 'TopLevel' value, with an additional appended component. This string must be unique within the profile.
+During a profile replacement, the system updates payloads with the same 'PayloadIdentifier' and 'PayloadUUID' in the old and new profiles.</string>
 			<key>pfm_description_reference</key>
 			<string>A reverse-DNS-style identifier for the specific payload. It is usually the same identifier as the root-level PayloadIdentifier value with an additional component appended.</string>
 			<key>pfm_name</key>
@@ -66,7 +67,7 @@
 			<key>pfm_default</key>
 			<string>de.fau.rrze.NetworkShareMounter</string>
 			<key>pfm_description</key>
-			<string>The type of the payload, a reverse dns string</string>
+			<string>The payload type, which each payload domain's reference page specifies.</string>
 			<key>pfm_description_reference</key>
 			<string>The payload type.</string>
 			<key>pfm_name</key>
@@ -82,7 +83,8 @@
 			<key>pfm_default</key>
 			<string></string>
 			<key>pfm_description</key>
-			<string>Unique identifier for the payload (format 01234567-89AB-CDEF-0123-456789ABCDEF)</string>
+			<string>The globally unique identifier for the payload. The actual content is unimportant, but must be globally unique. In macOS, use 'uuidgen' to generate UUIDs.
+During a profile replacement, the system updates payloads with the same 'PayloadIdentifier' and 'PayloadUUID' in the old and new profiles.</string>
 			<key>pfm_description_reference</key>
 			<string>A globally unique identifier for the payload. The actual content is unimportant, but it must be globally unique. In macOS, you can use uuidgen to generate reasonable UUIDs.</string>
 			<key>pfm_format</key>
@@ -100,12 +102,16 @@
 			<key>pfm_default</key>
 			<integer>1</integer>
 			<key>pfm_description</key>
-			<string>The version of the whole configuration profile.</string>
+			<string>The version of this specific payload.</string>
 			<key>pfm_description_reference</key>
 			<string>The version number of the individual payload.
 A profile can consist of payloads with different version numbers. For example, changes to the VPN software in iOS might introduce a new payload version to support additional features, but Mail payload versions would not necessarily change in the same release.</string>
 			<key>pfm_name</key>
 			<string>PayloadVersion</string>
+			<key>pfm_range_list</key>
+			<array>
+				<integer>1</integer>
+			</array>
 			<key>pfm_require</key>
 			<string>always</string>
 			<key>pfm_title</key>
@@ -123,10 +129,7 @@ A profile can consist of payloads with different version numbers. For example, c
 			<key>pfm_type</key>
 			<string>string</string>
 		</dict>
-		<!-- 1. Managed Shares -->
 		<dict>
-			<key>pfm_title</key>
-			<string>Managed network shares</string>
 			<key>pfm_description</key>
 			<string>Array with managed network shares that are centrally deployed to users.</string>
 			<key>pfm_documentation_url</key>
@@ -141,16 +144,16 @@ A profile can consist of payloads with different version numbers. For example, c
 					<key>pfm_subkeys</key>
 					<array>
 						<dict>
-							<key>pfm_title</key>
-							<string>Server and share</string>
 							<key>pfm_description</key>
 							<string>The share URL, e.g. smb://fileserver.example.com/share. Note: %USERNAME% is replaced at runtime with the user's macOS login name.</string>
+							<key>pfm_format</key>
+							<string>^(smb|afp|https)://.*$</string>
 							<key>pfm_name</key>
 							<string>networkShare</string>
 							<key>pfm_require</key>
 							<string>always</string>
-							<key>pfm_format</key>
-							<string>^(smb|afp|https)://.*$</string>
+							<key>pfm_title</key>
+							<string>Server and share</string>
 							<key>pfm_type</key>
 							<string>string</string>
 							<key>pfm_value_placeholder</key>
@@ -159,14 +162,10 @@ A profile can consist of payloads with different version numbers. For example, c
 						<dict>
 							<key>pfm_default</key>
 							<string>krb</string>
-							<key>pfm_title</key>
-							<string>Authentication type</string>
 							<key>pfm_description</key>
 							<string>Authentication method: krb (Kerberos/SSO), pwd (username + password), or guest. Default: krb.</string>
 							<key>pfm_name</key>
 							<string>authType</string>
-							<key>pfm_require</key>
-							<string>always</string>
 							<key>pfm_range_list</key>
 							<array>
 								<string>krb</string>
@@ -179,48 +178,40 @@ A profile can consist of payloads with different version numbers. For example, c
 								<string>Password</string>
 								<string>Guest</string>
 							</array>
+							<key>pfm_require</key>
+							<string>always</string>
+							<key>pfm_title</key>
+							<string>Authentication type</string>
 							<key>pfm_type</key>
 							<string>string</string>
 						</dict>
 						<dict>
-							<key>pfm_title</key>
-							<string>Display name (Optional)</string>
-							<key>pfm_description</key>
-							<string>Display name shown for this share inside the app. Falls back to the share name if not set.</string>
-							<key>pfm_name</key>
-							<string>displayName</string>
-							<key>pfm_type</key>
-							<string>string</string>
-						</dict>
-						<dict>
-							<key>pfm_title</key>
-							<string>Username (Optional)</string>
 							<key>pfm_description</key>
 							<string>Pre-defines a username for pwd-type shares. If omitted, the user is prompted.</string>
 							<key>pfm_name</key>
 							<string>username</string>
+							<key>pfm_title</key>
+							<string>Username (Optional)</string>
 							<key>pfm_type</key>
 							<string>string</string>
 						</dict>
 						<dict>
-							<key>pfm_title</key>
-							<string>Mount point name (Optional)</string>
 							<key>pfm_description</key>
 							<string>Overrides the local directory name used as the mount point. Only relevant when the mount location is not /Volumes. Leave blank to use the share name (recommended).</string>
 							<key>pfm_name</key>
 							<string>mountPoint</string>
+							<key>pfm_title</key>
+							<string>Mount point name (Optional)</string>
 							<key>pfm_type</key>
 							<string>string</string>
 						</dict>
 						<dict>
-							<key>pfm_title</key>
-							<string>Externally managed Kerberos tickets</string>
+							<key>pfm_default</key>
+							<string>false</string>
 							<key>pfm_description</key>
 							<string>Set to true if Kerberos tickets for this share are managed externally (AD binding, Jamf Connect, Apple SSO Extension). NSM will mount the share without interfering with ticket management and will not prompt for a Kerberos profile. Only relevant for authType: krb.</string>
 							<key>pfm_name</key>
 							<string>externalKerberosManagement</string>
-							<key>pfm_default</key>
-							<string>false</string>
 							<key>pfm_range_list</key>
 							<array>
 								<string>true</string>
@@ -231,30 +222,30 @@ A profile can consist of payloads with different version numbers. For example, c
 								<string>Yes</string>
 								<string>No</string>
 							</array>
+							<key>pfm_title</key>
+							<string>Externally managed Kerberos tickets</string>
 							<key>pfm_type</key>
 							<string>string</string>
 						</dict>
 						<dict>
-							<key>pfm_title</key>
-							<string>Per-share Kerberos realm (Optional)</string>
 							<key>pfm_description</key>
 							<string>Per-share Kerberos realm override. Used together with externalKerberosManagement to identify which external profile to assign. Defaults to the global kerberosRealm setting.</string>
 							<key>pfm_name</key>
 							<string>kerberosRealm</string>
+							<key>pfm_title</key>
+							<string>Per-share Kerberos realm (Optional)</string>
 							<key>pfm_type</key>
 							<string>string</string>
 							<key>pfm_value_placeholder</key>
 							<string>EXAMPLE.COM</string>
 						</dict>
 						<dict>
-							<key>pfm_title</key>
-							<string>Automatically mount</string>
+							<key>pfm_default</key>
+							<string>true</string>
 							<key>pfm_description</key>
 							<string>true (default): the share is mounted automatically at startup and on network changes. false: the share appears in the menu but is never mounted automatically - the user can mount it on demand.</string>
 							<key>pfm_name</key>
 							<string>autoMount</string>
-							<key>pfm_default</key>
-							<string>true</string>
 							<key>pfm_range_list</key>
 							<array>
 								<string>true</string>
@@ -265,6 +256,8 @@ A profile can consist of payloads with different version numbers. For example, c
 								<string>Yes</string>
 								<string>No</string>
 							</array>
+							<key>pfm_title</key>
+							<string>Automatically mount</string>
 							<key>pfm_type</key>
 							<string>string</string>
 						</dict>
@@ -273,34 +266,11 @@ A profile can consist of payloads with different version numbers. For example, c
 					<string>dictionary</string>
 				</dict>
 			</array>
+			<key>pfm_title</key>
+			<string>Managed network shares</string>
 			<key>pfm_type</key>
 			<string>array</string>
 		</dict>
-		<!-- disable legacy network share array. only for very old versions 
-		<dict>
-			<key>pfm_description</key>
-			<string>Legacy array with all network shares. Example: smb://filer.your.domain/share. Note: %USERNAME% will be replaced with the login name of the current user. Still accepted for backward compatibility but should not be used in new profiles - use managedNetworkShares instead.</string>
-			<key>pfm_name</key>
-			<string>networkShares</string>
-			<key>pfm_subkeys</key>
-			<array>
-				<dict>
-					<key>pfm_format</key>
-					<string>^smb://\S*/.+$</string>
-					<key>pfm_type</key>
-					<string>string</string>
-					<key>pfm_value_placeholder</key>
-					<string>smb://filer.your.domain/share</string>
-				</dict>
-			</array>
-			<key>pfm_title</key>
-			<string>Network shares (deprecated, legacy)</string>
-			<key>pfm_app_deprecated</key>
-			<string>3</string>
-			<key>pfm_type</key>
-			<string>array</string>
-		</dict> -->
-		<!-- 2. Authentication & Kerberos -->
 		<dict>
 			<key>pfm_default</key>
 			<string></string>
@@ -334,6 +304,18 @@ A profile can consist of payloads with different version numbers. For example, c
 			<string>Username Override</string>
 			<key>pfm_type</key>
 			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>If true, automatic Kerberos sign-in and ticket renewal only process the default account. If false, all configured accounts are processed.</string>
+			<key>pfm_name</key>
+			<string>singleUserMode</string>
+			<key>pfm_title</key>
+			<string>Single User Mode</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
 		</dict>
 		<dict>
 			<key>pfm_default</key>
@@ -383,7 +365,6 @@ A profile can consist of payloads with different version numbers. For example, c
 			<key>pfm_type</key>
 			<string>boolean</string>
 		</dict>
-		<!-- 3. Autostart & App Lifecycle -->
 		<dict>
 			<key>pfm_default</key>
 			<false/>
@@ -432,7 +413,6 @@ A profile can consist of payloads with different version numbers. For example, c
 			<key>pfm_type</key>
 			<string>boolean</string>
 		</dict>
-		<!-- 4. User Interface -->
 		<dict>
 			<key>pfm_default</key>
 			<string></string>
@@ -444,6 +424,32 @@ A profile can consist of payloads with different version numbers. For example, c
 			<string>Mount path</string>
 			<key>pfm_type</key>
 			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>If true, shares are mounted under /Volumes by default instead of the legacy per-user location. Ignored if 'location' is set.</string>
+			<key>pfm_name</key>
+			<string>useNewDefaultLocation</string>
+			<key>pfm_title</key>
+			<string>Use the new default mount location</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>If false, always uses the English folder name 'Networkshares' for the legacy default mount path instead of a name localized to the user's language. Only relevant when 'useNewDefaultLocation' is false.</string>
+			<key>pfm_name</key>
+			<string>useLocalizedMountDirectories</string>
+			<key>pfm_title</key>
+			<string>Use Localized Mount Folder Name</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
 		</dict>
 		<dict>
 			<key>pfm_default</key>
@@ -459,19 +465,7 @@ A profile can consist of payloads with different version numbers. For example, c
 		</dict>
 		<dict>
 			<key>pfm_default</key>
-			<true/>
-			<key>pfm_description</key>
-			<string>When true, mounted and unmounted shares are listed individually in the menu bar for quick one-click access.</string>
-			<key>pfm_name</key>
-			<string>showMountsInMenu</string>
-			<key>pfm_title</key>
-			<string>Show Mounts in Menu</string>
-			<key>pfm_type</key>
-			<string>boolean</string>
-		</dict>
-		<dict>
-			<key>pfm_default</key>
-			<string>https://www.anleitungen.rrze.fau.de/betriebssysteme/apple-macos-und-ios/macos/#networksharemounter</string>
+			<string></string>
 			<key>pfm_description</key>
 			<string>URL to your organization's internal helpdesk or IT documentation. When set, an About Network Share Mounter item appears in the menu bar, opening this URL in the default browser.</string>
 			<key>pfm_format</key>
@@ -482,14 +476,14 @@ A profile can consist of payloads with different version numbers. For example, c
 			<string>Help URL</string>
 			<key>pfm_type</key>
 			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>https://www.anleitungen.rrze.fau.de/betriebssysteme/apple-macos-und-ios/macos/#networksharemounter</string>
 		</dict>
 		<dict>
 			<key>pfm_description</key>
 			<string>Controls the "Mount shares" action. Set to hidden to remove the item completely, or disabled to grey it out without removing it. Leave unconfigured to show it normally.</string>
 			<key>pfm_name</key>
 			<string>menuConnectShares</string>
-			<key>pfm_title</key>
-			<string>Menu Item: Connect Shares</string>
 			<key>pfm_range_list</key>
 			<array>
 				<string>hidden</string>
@@ -500,6 +494,8 @@ A profile can consist of payloads with different version numbers. For example, c
 				<string>Hidden</string>
 				<string>Disabled</string>
 			</array>
+			<key>pfm_title</key>
+			<string>Menu Item: Connect Shares</string>
 			<key>pfm_type</key>
 			<string>string</string>
 		</dict>
@@ -508,8 +504,6 @@ A profile can consist of payloads with different version numbers. For example, c
 			<string>Controls the "Unmount shares" action. Set to hidden to remove the item completely, or disabled to grey it out without removing it. Leave unconfigured to show it normally.</string>
 			<key>pfm_name</key>
 			<string>menuDisconnectShares</string>
-			<key>pfm_title</key>
-			<string>Menu Item: Disconnect Shares</string>
 			<key>pfm_range_list</key>
 			<array>
 				<string>hidden</string>
@@ -520,6 +514,8 @@ A profile can consist of payloads with different version numbers. For example, c
 				<string>Hidden</string>
 				<string>Disabled</string>
 			</array>
+			<key>pfm_title</key>
+			<string>Menu Item: Disconnect Shares</string>
 			<key>pfm_type</key>
 			<string>string</string>
 		</dict>
@@ -528,8 +524,6 @@ A profile can consist of payloads with different version numbers. For example, c
 			<string>Controls "Show mounted shares" (opens the mount folder in Finder). Set to hidden to remove the item completely, or disabled to grey it out without removing it. Leave unconfigured to show it normally.</string>
 			<key>pfm_name</key>
 			<string>menuShowSharesMountDir</string>
-			<key>pfm_title</key>
-			<string>Menu Item: Show Shares Mount Directory</string>
 			<key>pfm_range_list</key>
 			<array>
 				<string>hidden</string>
@@ -540,6 +534,8 @@ A profile can consist of payloads with different version numbers. For example, c
 				<string>Hidden</string>
 				<string>Disabled</string>
 			</array>
+			<key>pfm_title</key>
+			<string>Menu Item: Show Shares Mount Directory</string>
 			<key>pfm_type</key>
 			<string>string</string>
 		</dict>
@@ -548,8 +544,6 @@ A profile can consist of payloads with different version numbers. For example, c
 			<string>Controls the individual share items listed in the menu. Set to hidden to remove them completely, or disabled to grey them out without removing them. Leave unconfigured to show them normally.</string>
 			<key>pfm_name</key>
 			<string>menuShowShares</string>
-			<key>pfm_title</key>
-			<string>Menu Item: Show Shares List</string>
 			<key>pfm_range_list</key>
 			<array>
 				<string>hidden</string>
@@ -560,6 +554,8 @@ A profile can consist of payloads with different version numbers. For example, c
 				<string>Hidden</string>
 				<string>Disabled</string>
 			</array>
+			<key>pfm_title</key>
+			<string>Menu Item: Show Shares List</string>
 			<key>pfm_type</key>
 			<string>string</string>
 		</dict>
@@ -568,8 +564,6 @@ A profile can consist of payloads with different version numbers. For example, c
 			<string>Controls the "Preferences..." item. Set to hidden to remove the item completely, or disabled to grey it out without removing it. Leave unconfigured to show it normally.</string>
 			<key>pfm_name</key>
 			<string>menuSettings</string>
-			<key>pfm_title</key>
-			<string>Menu Item: Settings</string>
 			<key>pfm_range_list</key>
 			<array>
 				<string>hidden</string>
@@ -580,6 +574,8 @@ A profile can consist of payloads with different version numbers. For example, c
 				<string>Hidden</string>
 				<string>Disabled</string>
 			</array>
+			<key>pfm_title</key>
+			<string>Menu Item: Settings</string>
 			<key>pfm_type</key>
 			<string>string</string>
 		</dict>
@@ -588,8 +584,6 @@ A profile can consist of payloads with different version numbers. For example, c
 			<string>Controls the "Check for Updates..." item. Set to hidden to remove the item completely, or disabled to grey it out without removing it. Leave unconfigured to show it normally.</string>
 			<key>pfm_name</key>
 			<string>menuCheckUpdates</string>
-			<key>pfm_title</key>
-			<string>Menu Item: Check for Updates</string>
 			<key>pfm_range_list</key>
 			<array>
 				<string>hidden</string>
@@ -600,6 +594,8 @@ A profile can consist of payloads with different version numbers. For example, c
 				<string>Hidden</string>
 				<string>Disabled</string>
 			</array>
+			<key>pfm_title</key>
+			<string>Menu Item: Check for Updates</string>
 			<key>pfm_type</key>
 			<string>string</string>
 		</dict>
@@ -608,8 +604,6 @@ A profile can consist of payloads with different version numbers. For example, c
 			<string>Controls the "About Network Share Mounter" item (only visible when helpURL is set). Set to hidden to remove the item completely, or disabled to grey it out without removing it. Leave unconfigured to show it normally.</string>
 			<key>pfm_name</key>
 			<string>menuAbout</string>
-			<key>pfm_title</key>
-			<string>Menu Item: About</string>
 			<key>pfm_range_list</key>
 			<array>
 				<string>hidden</string>
@@ -620,6 +614,8 @@ A profile can consist of payloads with different version numbers. For example, c
 				<string>Hidden</string>
 				<string>Disabled</string>
 			</array>
+			<key>pfm_title</key>
+			<string>Menu Item: About</string>
 			<key>pfm_type</key>
 			<string>string</string>
 		</dict>
@@ -628,8 +624,6 @@ A profile can consist of payloads with different version numbers. For example, c
 			<string>Controls the "Quit Network Share Mounter" item. Set to hidden to remove the item completely, or disabled to grey it out without removing it. Leave unconfigured to show it normally.</string>
 			<key>pfm_name</key>
 			<string>menuQuit</string>
-			<key>pfm_title</key>
-			<string>Menu Item: Quit</string>
 			<key>pfm_range_list</key>
 			<array>
 				<string>hidden</string>
@@ -640,10 +634,11 @@ A profile can consist of payloads with different version numbers. For example, c
 				<string>Hidden</string>
 				<string>Disabled</string>
 			</array>
+			<key>pfm_title</key>
+			<string>Menu Item: Quit</string>
 			<key>pfm_type</key>
 			<string>string</string>
 		</dict>
-		<!--  5. Software Update Management -->
 		<dict>
 			<key>pfm_default</key>
 			<false/>
@@ -680,7 +675,18 @@ A profile can consist of payloads with different version numbers. For example, c
 			<key>pfm_type</key>
 			<string>boolean</string>
 		</dict>
-		<!--  6. Diagnostics -->
+		<dict>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>If true, diagnostic and crash data is sent to help improve the app. Independent of 'disableDiagnostics', which only hides the section in Settings.</string>
+			<key>pfm_name</key>
+			<string>sendDiagnostics</string>
+			<key>pfm_title</key>
+			<string>Send Diagnostic Data</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
 		<dict>
 			<key>pfm_default</key>
 			<false/>
@@ -692,6 +698,45 @@ A profile can consist of payloads with different version numbers. For example, c
 			<string>Disable Diagnostics</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_deprecated</key>
+			<string>4</string>
+			<key>pfm_app_min</key>
+			<string>3.0.4</string>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>Deprecated since version 4. Use 'disableAutoUpdateFramework' instead (inverted logic: enableAutoUpdater = true equals disableAutoUpdateFramework = false).</string>
+			<key>pfm_name</key>
+			<string>enableAutoUpdater</string>
+			<key>pfm_title</key>
+			<string>Enable AutoUpdater Framework</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_deprecated</key>
+			<string>3</string>
+			<key>pfm_description</key>
+			<string>Legacy array with all network shares. Example: smb://filer.your.domain/share. Note: %USERNAME% will be replaced with the login name of the current user. Still accepted for backward compatibility but should not be used in new profiles - use managedNetworkShares instead.</string>
+			<key>pfm_name</key>
+			<string>networkShares</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_format</key>
+					<string>^smb://\S*/.+$</string>
+					<key>pfm_type</key>
+					<string>string</string>
+					<key>pfm_value_placeholder</key>
+					<string>smb://filer.your.domain/share</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>Network shares (deprecated, legacy)</string>
+			<key>pfm_type</key>
+			<string>array</string>
 		</dict>
 	</array>
 	<key>pfm_targets</key>
