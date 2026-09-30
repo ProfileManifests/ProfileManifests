@@ -13,7 +13,7 @@
 	<key>pfm_format_version</key>
 	<integer>1</integer>
 	<key>pfm_last_modified</key>
-	<date>2026-07-02T08:42:40Z</date>
+	<date>2026-09-30T12:23:03Z</date>
 	<key>pfm_macos_min</key>
 	<string>14.0</string>
 	<key>pfm_platforms</key>
@@ -134,6 +134,8 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				<string>Desktop Info</string>
 				<string>User Elevation</string>
 				<string>CLI</string>
+				<string>User Installs</string>
+				<string>Fleet</string>
 			</array>
 			<key>pfm_require</key>
 			<string>always</string>
@@ -160,6 +162,15 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<string>DesktopInfoFontSize</string>
 					<string>DesktopInfoBackgroundFrosted</string>
 				</array>
+				<key>Fleet</key>
+				<array>
+					<string>FleetUrl</string>
+					<string>FleetRecommendedApps</string>
+					<string>FleetRecommendedTitle</string>
+					<string>FleetIconsFromGitHub</string>
+					<string>FleetButtonLabels</string>
+					<string>FleetAppOpenMessages</string>
+				</array>
 				<key>Home</key>
 				<array>
 					<string>HiddenCards</string>
@@ -170,7 +181,10 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<string>ChangePasswordUrl</string>
 					<string>ChangePasswordMode</string>
 					<string>LogFolders</string>
+					<string>ExcludedLogFolders</string>
 					<string>CustomCardPath</string>
+					<string>DebugLogging</string>
+					<string>FileDebugLogging</string>
 				</array>
 				<key>Menu</key>
 				<array>
@@ -185,10 +199,13 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<string>MenuShowSelfService</string>
 					<string>MenuShowCompanyPortal</string>
 					<string>MenuShowKnowledgeBase</string>
+					<string>CompanyPortalUrl</string>
 				</array>
 				<key>Mode</key>
 				<array>
 					<string>Mode</string>
+					<string>RefreshSelfService</string>
+					<string>JamfLogPollHours</string>
 				</array>
 				<key>Notifications</key>
 				<array>
@@ -199,10 +216,20 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<string>SoftwareUpdateNotificationButtonText</string>
 					<string>AppUpdateNotificationMessage</string>
 					<string>AppUpdateNotificationButtonText</string>
+					<string>RebootReminderDays</string>
+					<string>SoftwareUpdateNotificationCommand</string>
+					<string>AppUpdateNotificationCommand</string>
+					<string>FleetNotifyUpdates</string>
+					<string>FleetNotifyInstallResults</string>
+					<string>FleetNotifyPolicies</string>
+					<string>FleetNotifySignIn</string>
 				</array>
 				<key>Tray menu</key>
 				<array>
 					<string>Actions</string>
+					<string>ShowLogoInTrayMenu</string>
+					<string>TrayMenuBrandingIcon</string>
+					<string>TrayMenuShowIcon</string>
 				</array>
 				<key>User Elevation</key>
 				<array>
@@ -213,6 +240,18 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<string>ElevationWebhookUrl</string>
 					<string>ShowElevateTrayCard</string>
 					<string>ElevationSeverity</string>
+					<string>EnforceAdminAllowlist</string>
+					<string>PermanentAdmins</string>
+					<string>ElevationAllowedAdmins</string>
+				</array>
+				<key>User Installs</key>
+				<array>
+					<string>EnableUserInstalls</string>
+					<string>AllowedInstallers</string>
+					<string>RequireAuthenticationForInstalls</string>
+					<string>UserInstallFallback</string>
+					<string>ShowInstallerServiceMenuItem</string>
+					<string>SkipHelperInstall</string>
 				</array>
 			</dict>
 			<key>pfm_type</key>
@@ -410,12 +449,40 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_description</key>
-			<string>Configures which cards to hide, available cards are: DeviceInformation, Evergreen, Battery, Actions, ApplicationInstallProgress, Storage, DeviceManagement, PendingAppUpdates.</string>
+			<string>Configures which cards to hide, available cards are: DeviceInformation, Evergreen, Battery, Actions, ApplicationInstallProgress, Storage, DeviceManagement, PendingAppUpdates, Jamf, Fleet, FleetPolicies.</string>
 			<key>pfm_name</key>
 			<string>HiddenCards</string>
 			<key>pfm_subkeys</key>
 			<array>
 				<dict>
+					<key>pfm_range_list</key>
+					<array>
+						<string>DeviceInformation</string>
+						<string>Evergreen</string>
+						<string>Battery</string>
+						<string>Actions</string>
+						<string>ApplicationInstallProgress</string>
+						<string>Storage</string>
+						<string>DeviceManagement</string>
+						<string>PendingAppUpdates</string>
+						<string>Jamf</string>
+						<string>Fleet</string>
+						<string>FleetPolicies</string>
+					</array>
+					<key>pfm_range_list_titles</key>
+					<array>
+						<string>Device Information</string>
+						<string>Evergreen</string>
+						<string>Battery</string>
+						<string>Actions</string>
+						<string>Application Install Progress</string>
+						<string>Storage</string>
+						<string>Device Management</string>
+						<string>Pending App Updates</string>
+						<string>Jamf</string>
+						<string>Fleet</string>
+						<string>Fleet Policies</string>
+					</array>
 					<key>pfm_type</key>
 					<string>string</string>
 				</dict>
@@ -433,6 +500,26 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_subkeys</key>
 			<array>
 				<dict>
+					<key>pfm_range_list</key>
+					<array>
+						<string>ChangePassword</string>
+						<string>Reboot</string>
+						<string>OpenManagementApp</string>
+						<string>GetSupport</string>
+						<string>GatherLogs</string>
+						<string>SoftwareUpdates</string>
+						<string>RestartIntuneAgent</string>
+					</array>
+					<key>pfm_range_list_titles</key>
+					<array>
+						<string>Change Password</string>
+						<string>Reboot</string>
+						<string>Open Management App</string>
+						<string>Get Support</string>
+						<string>Gather Logs</string>
+						<string>Software Updates</string>
+						<string>Restart Intune Agent</string>
+					</array>
 					<key>pfm_type</key>
 					<string>string</string>
 				</dict>
@@ -527,20 +614,64 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>string</string>
 		</dict>
 		<dict>
+			<key>pfm_default</key>
+			<integer>0</integer>
 			<key>pfm_description</key>
-			<string>Configures the app to show application info for either Munki, Intune or to use System profiler for app info. The app tries to dynamically detect which mode to use.</string>
+			<string>Configures the number of days after which the user will be reminded to reboot. Defaults to 0 days if not configured (no reminder).</string>
+			<key>pfm_name</key>
+			<string>RebootReminderDays</string>
+			<key>pfm_title</key>
+			<string>Reboot Reminder Days</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Configures which source the app reads application information from. Detection runs only when this is empty: Fleet is chosen on Macs running Fleet's agent (orbit) when no other mode matches.</string>
 			<key>pfm_name</key>
 			<string>Mode</string>
 			<key>pfm_range_list</key>
 			<array>
 				<string>Munki</string>
 				<string>Intune</string>
+				<string>Jamf</string>
+				<string>Fleet</string>
 				<string>SystemProfiler</string>
 			</array>
 			<key>pfm_title</key>
 			<string>Mode</string>
 			<key>pfm_type</key>
 			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2.4</string>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>Configures whether to refresh the Self Service+ app data in the background when in Jamf mode. Defaults to true</string>
+			<key>pfm_name</key>
+			<string>RefreshSelfService</string>
+			<key>pfm_title</key>
+			<string>Refresh Self Service</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2.4</string>
+			<key>pfm_default</key>
+			<integer>36</integer>
+			<key>pfm_description</key>
+			<string>Configures how often to poll Jamf logs in hours. Only used when in Jamf mode. Defaults to 36 if not configured.</string>
+			<key>pfm_name</key>
+			<string>JamfLogPollHours</string>
+			<key>pfm_range_min</key>
+			<integer>0</integer>
+			<key>pfm_title</key>
+			<string>Jamf Log Poll Hours</string>
+			<key>pfm_type</key>
+			<string>integer</string>
 		</dict>
 		<dict>
 			<key>pfm_description</key>
@@ -563,7 +694,26 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_description</key>
-			<string>Configures custom actions to add to the tray menu. See example below.</string>
+			<string>Configures the log folders to exclude when gathering logs. Only used when gathering logs.</string>
+			<key>pfm_name</key>
+			<string>ExcludedLogFolders</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_type</key>
+					<string>string</string>
+					<key>pfm_value_placeholder</key>
+					<string>/Library/Managed Installs/Logs/ExcludeThisLog</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>Excluded Log Folders</string>
+			<key>pfm_type</key>
+			<string>array</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Configures custom actions to add to the tray menu. Actions defined in the user's own preferences still run, but IsPrivileged is honored only when the action comes from a configuration profile. From 3.0 the app sends only the action's name and the helper looks the command up itself, so a privileged action must be defined in a profile to run at all.</string>
 			<key>pfm_name</key>
 			<string>Actions</string>
 			<key>pfm_subkeys</key>
@@ -652,6 +802,42 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>Actions</string>
 			<key>pfm_type</key>
 			<string>array</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>Configures whether to show the branding logo in the tray menu. Defaults to true.</string>
+			<key>pfm_name</key>
+			<string>ShowLogoInTrayMenu</string>
+			<key>pfm_title</key>
+			<string>Show Logo In Tray Menu</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Configures the icon to show in the tray menu. Specify a Base64 string.</string>
+			<key>pfm_name</key>
+			<string>TrayMenuBrandingIcon</string>
+			<key>pfm_title</key>
+			<string>Tray Menu Branding Icon</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>Base64 String</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>Configures whether to show the tray menu icon. Useful if you only want to show desktop information for example. Defaults to true.</string>
+			<key>pfm_name</key>
+			<string>TrayMenuShowIcon</string>
+			<key>pfm_title</key>
+			<string>Show Tray Menu Icon</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
 		</dict>
 		<dict>
 			<key>pfm_default</key>
@@ -852,11 +1038,25 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
+			<string>2.4</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>Configures whether debug logging is enabled. Defaults to false.</string>
+			<key>pfm_name</key>
+			<string>DebugLogging</string>
+			<key>pfm_title</key>
+			<string>Debug Logging</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
 			<string>2.2</string>
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>When set to true allows the user to elevate to admin during a set time frame. Defaults to false.</string>
+			<string>When set to true allows the user to elevate to admin during a set time frame. Defaults to false. From 3.0 this is only honored when it comes from a configuration profile.</string>
 			<key>pfm_name</key>
 			<string>EnableElevation</string>
 			<key>pfm_title</key>
@@ -870,7 +1070,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<false/>
 			<key>pfm_description</key>
-			<string>Requires the user to enter a reason for the elevation. Defaults to false.</string>
+			<string>Requires the user to enter a reason for the elevation. Defaults to false. From 3.0 this is only honored when it comes from a configuration profile.</string>
 			<key>pfm_name</key>
 			<string>RequireResonForElevation</string>
 			<key>pfm_title</key>
@@ -884,7 +1084,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<integer>10</integer>
 			<key>pfm_description</key>
-			<string>Set a minimum amount of characters the user must enter as the reason. Defaults to 10.</string>
+			<string>Set a minimum amount of characters the user must enter as the reason. Defaults to 10. From 3.0 this is only honored when it comes from a configuration profile.</string>
 			<key>pfm_name</key>
 			<string>ReasonMinLength</string>
 			<key>pfm_title</key>
@@ -898,7 +1098,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<integer>5</integer>
 			<key>pfm_description</key>
-			<string>The amount of time (in minutes) the user is elevated. Defaults to 5.</string>
+			<string>The amount of time (in minutes) the user is elevated. Defaults to 5. From 3.0 this is only honored when it comes from a configuration profile.</string>
 			<key>pfm_name</key>
 			<string>MaxElevationTime</string>
 			<key>pfm_title</key>
@@ -910,7 +1110,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_app_min</key>
 			<string>2.2</string>
 			<key>pfm_description</key>
-			<string>When configured, sends the entered elevation reason to a webhook instead of saving to disk.</string>
+			<string>When configured, sends the entered elevation reason to a webhook instead of saving to disk. From 3.0 this is only honored when it comes from a configuration profile.</string>
 			<key>pfm_name</key>
 			<string>ElevationWebhookUrl</string>
 			<key>pfm_title</key>
@@ -938,7 +1138,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<integer>6</integer>
 			<key>pfm_description</key>
-			<string>Configure the elevation severity. Defaults to 6 (Informational).</string>
+			<string>Configure the elevation severity. Defaults to 6 (Informational). From 3.0 this is only honored when it comes from a configuration profile.</string>
 			<key>pfm_name</key>
 			<string>ElevationSeverity</string>
 			<key>pfm_title</key>
@@ -1012,13 +1212,535 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_default</key>
 			<true/>
 			<key>pfm_description</key>
-			<string>Disables the requirement for the user to enter their credentials when running privileged actions via the CLI.</string>
+			<string>Requires the user to authenticate before a privileged action runs. From 3.0 this defaults to true unless an administrator sets it, and is honored only from a configuration profile.</string>
 			<key>pfm_name</key>
 			<string>RequirePrivilegedActionAuthentication</string>
 			<key>pfm_title</key>
 			<string>Require Privileged Action Authentication</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>When true, the helper reconciles the admin group at startup and every five minutes: any account holding administrator rights that is neither listed in PermanentAdmins nor inside a live elevation window is demoted. Set PermanentAdmins before enabling this, or those accounts are demoted within five minutes. Defaults to false. Must be delivered in a device-scoped configuration profile; it is ignored anywhere else.</string>
+			<key>pfm_name</key>
+			<string>EnforceAdminAllowlist</string>
+			<key>pfm_title</key>
+			<string>Enforce Admin Allowlist</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_description</key>
+			<string>Accounts that may hold administrator rights permanently when EnforceAdminAllowlist is enabled. List every such account: management accounts, break-glass accounts, permanently administrative staff, and anything granted rights by another system such as Platform SSO's AdministratorGroups. An explicitly empty array is honored and means no account is a permanent administrator; a missing list is refused with an error rather than acted on. root is always permitted. Must be delivered in a device-scoped configuration profile; it is ignored anywhere else.</string>
+			<key>pfm_name</key>
+			<string>PermanentAdmins</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>Permanent Admins</string>
+			<key>pfm_type</key>
+			<string>array</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_default</key>
+			<array/>
+			<key>pfm_description</key>
+			<string>Accounts the elevation watchdog ignores, for management accounts an MDM may legitimately add while somebody is elevated. Defaults to an empty list. Must be delivered in a device-scoped configuration profile; it is ignored anywhere else.</string>
+			<key>pfm_name</key>
+			<string>ElevationAllowedAdmins</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>Elevation Allowed Admins</string>
+			<key>pfm_type</key>
+			<string>array</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>When true, a standard user can install a .pkg or .dmg listed in AllowedInstallers without holding administrator rights. Both the app and the helper read this: the app decides whether to stage a file at all, the helper decides whether to install it. Defaults to false. Read only from a configuration profile, device-scoped or scoped to the user being served.</string>
+			<key>pfm_name</key>
+			<string>EnableUserInstalls</string>
+			<key>pfm_title</key>
+			<string>Enable User Installs</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_description</key>
+			<string>Whether Finder's context menu offers "Install with Support Companion". Follows EnableUserInstalls unless set explicitly; set it to false to keep user installs but route everyone through the in-app catalog. Applied on every launch.</string>
+			<key>pfm_name</key>
+			<string>ShowInstallerServiceMenuItem</string>
+			<key>pfm_title</key>
+			<string>Show Installer Service Menu Item</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>Whether the user authenticates before a user install proceeds. They authenticate as themselves, not as an administrator. Turning this off means an unlocked unattended Mac is enough to install an allowlisted item. Defaults to true.</string>
+			<key>pfm_name</key>
+			<string>RequireAuthenticationForInstalls</string>
+			<key>pfm_title</key>
+			<string>Require Authentication For Installs</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_default</key>
+			<string>installer</string>
+			<key>pfm_description</key>
+			<string>What to offer when an installer is not on the allowlist. "installer" opens it in Apple's Installer, "elevate" offers the normal time-limited elevation instead, "none" offers nothing. Defaults to "installer".</string>
+			<key>pfm_name</key>
+			<string>UserInstallFallback</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>installer</string>
+				<string>elevate</string>
+				<string>none</string>
+			</array>
+			<key>pfm_range_list_titles</key>
+			<array>
+				<string>Open in Installer</string>
+				<string>Offer Elevation</string>
+				<string>None</string>
+			</array>
+			<key>pfm_title</key>
+			<string>User Install Fallback</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>When true, the package does not install or load its own copy of the privileged helper, and removes any it finds. Set this only where the helper is deployed declaratively with com.apple.configuration.services.background-tasks, otherwise two daemons claim the same Mach service. Defaults to false. Must be delivered in a device-scoped configuration profile; it is ignored anywhere else.</string>
+			<key>pfm_name</key>
+			<string>SkipHelperInstall</string>
+			<key>pfm_title</key>
+			<string>Skip Helper Install</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_description</key>
+			<string>Overrides the Fleet server URL otherwise discovered from fleetd or orbit. Read only from a configuration profile, because the device's token is sent to whatever server this names.</string>
+			<key>pfm_name</key>
+			<string>FleetUrl</string>
+			<key>pfm_title</key>
+			<string>Fleet URL</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>https://fleet.example.com</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_description</key>
+			<string>Fleet software keys pinned to the top of the self-service catalog, whether or not they are already installed.</string>
+			<key>pfm_name</key>
+			<string>FleetRecommendedApps</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>Fleet Recommended Apps</string>
+			<key>pfm_type</key>
+			<string>array</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_description</key>
+			<string>Renames the recommended section of the Fleet catalog.</string>
+			<key>pfm_name</key>
+			<string>FleetRecommendedTitle</string>
+			<key>pfm_title</key>
+			<string>Fleet Recommended Title</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>Picked for you</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>Whether to fetch application icons from Fleet's public catalog on GitHub. Defaults to true.</string>
+			<key>pfm_name</key>
+			<string>FleetIconsFromGitHub</string>
+			<key>pfm_title</key>
+			<string>Fleet Icons From GitHub</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_description</key>
+			<string>Replaces the built-in wording shown when an install is waiting for the user to quit the application first.</string>
+			<key>pfm_name</key>
+			<string>FleetAppOpenMessages</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>Fleet App Open Messages</string>
+			<key>pfm_type</key>
+			<string>array</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_description</key>
+			<string>Custom button text in the Fleet catalog, keyed by software title and optionally nested by action.</string>
+			<key>pfm_name</key>
+			<string>FleetButtonLabels</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_description</key>
+					<string>Software title, or an action name nested under one.</string>
+					<key>pfm_name</key>
+					<string>Title</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>Fleet Button Labels</string>
+			<key>pfm_type</key>
+			<string>dictionary</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>Notify when Fleet reports available application updates. Defaults to true.</string>
+			<key>pfm_name</key>
+			<string>FleetNotifyUpdates</string>
+			<key>pfm_title</key>
+			<string>Fleet Notify Updates</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>Notify when a Fleet install, update or uninstall finishes. Defaults to true.</string>
+			<key>pfm_name</key>
+			<string>FleetNotifyInstallResults</string>
+			<key>pfm_title</key>
+			<string>Fleet Notify Install Results</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>Notify when Fleet policies are failing on the Mac. Defaults to true.</string>
+			<key>pfm_name</key>
+			<string>FleetNotifyPolicies</string>
+			<key>pfm_title</key>
+			<string>Fleet Notify Policies</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>Remind the user to sign in to Fleet Desktop SSO while signed out, at most once a day. Defaults to false, unlike the other Fleet notifications.</string>
+			<key>pfm_name</key>
+			<string>FleetNotifySignIn</string>
+			<key>pfm_title</key>
+			<string>Fleet Notify Sign In</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2.4</string>
+			<key>pfm_description</key>
+			<string>Overrides the Company Portal URL, for sovereign cloud endpoints such as GCC High.</string>
+			<key>pfm_name</key>
+			<string>CompanyPortalUrl</string>
+			<key>pfm_title</key>
+			<string>Company Portal URL</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>companyportal://</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2.4</string>
+			<key>pfm_description</key>
+			<string>Command run when the software update notification's button is clicked. Defaults to opening the Software Update pane.</string>
+			<key>pfm_name</key>
+			<string>SoftwareUpdateNotificationCommand</string>
+			<key>pfm_title</key>
+			<string>Software Update Notification Command</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2.4</string>
+			<key>pfm_description</key>
+			<string>Command run when the application update notification's button is clicked. Set at every launch to open the management application for the detected mode; a value forced by profile still wins.</string>
+			<key>pfm_name</key>
+			<string>AppUpdateNotificationCommand</string>
+			<key>pfm_title</key>
+			<string>App Update Notification Command</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2.4</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>Write debug logging to disk as well as to the unified log. Defaults to false.</string>
+			<key>pfm_name</key>
+			<string>FileDebugLogging</string>
+			<key>pfm_title</key>
+			<string>File Debug Logging</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.0</string>
+			<key>pfm_description</key>
+			<string>Installers a standard user may install without administrator rights when EnableUserInstalls is true. The helper re-reads this and re-derives the installer's facts before it acts, so the confirmation sheet the user sees is presentation only. Entries that cannot decide anything are dropped and logged. Read only from a configuration profile, device-scoped or scoped to the user being served.</string>
+			<key>pfm_name</key>
+			<string>AllowedInstallers</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_name</key>
+					<string>Installer</string>
+					<key>pfm_subkeys</key>
+					<array>
+						<dict>
+							<key>pfm_description</key>
+							<string>Display name for this entry. Required.</string>
+							<key>pfm_name</key>
+							<string>Name</string>
+							<key>pfm_title</key>
+							<string>Name</string>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_value_placeholder</key>
+							<string>Google Chrome</string>
+						</dict>
+						<dict>
+							<key>pfm_description</key>
+							<string>64 hex characters. When present the entry is strict: it pins one exact build and stops matching as soon as the vendor ships an update.</string>
+							<key>pfm_name</key>
+							<string>SHA256</string>
+							<key>pfm_title</key>
+							<string>SHA256</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+						<dict>
+							<key>pfm_description</key>
+							<string>The signing team. Required whenever SHA256 is absent.</string>
+							<key>pfm_name</key>
+							<string>TeamID</string>
+							<key>pfm_title</key>
+							<string>Team ID</string>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_value_placeholder</key>
+							<string>EQHXZ8M8AV</string>
+						</dict>
+						<dict>
+							<key>pfm_description</key>
+							<string>Pins the signing certificate itself. Stricter than TeamID, and needs updating when the vendor renews.</string>
+							<key>pfm_name</key>
+							<string>LeafCertificateSHA256</string>
+							<key>pfm_title</key>
+							<string>Leaf Certificate SHA256</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+						<dict>
+							<key>pfm_description</key>
+							<string>Package identifiers this entry allows, for a .pkg. A distribution package needs every component listed. A single string is also accepted.</string>
+							<key>pfm_name</key>
+							<string>PackageIdentifier</string>
+							<key>pfm_subkeys</key>
+							<array>
+								<dict>
+									<key>pfm_type</key>
+									<string>string</string>
+								</dict>
+							</array>
+							<key>pfm_title</key>
+							<string>Package Identifier</string>
+							<key>pfm_type</key>
+							<string>array</string>
+						</dict>
+						<dict>
+							<key>pfm_description</key>
+							<string>Bundle identifiers this entry allows, for the application inside a .dmg. A single string is also accepted.</string>
+							<key>pfm_name</key>
+							<string>BundleIdentifier</string>
+							<key>pfm_subkeys</key>
+							<array>
+								<dict>
+									<key>pfm_type</key>
+									<string>string</string>
+								</dict>
+							</array>
+							<key>pfm_title</key>
+							<string>Bundle Identifier</string>
+							<key>pfm_type</key>
+							<string>array</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<false/>
+							<key>pfm_description</key>
+							<string>Accept anything the named team signs. This is a vendor allowlist rather than an application allowlist. Defaults to false.</string>
+							<key>pfm_name</key>
+							<string>AllowAnyIdentifier</string>
+							<key>pfm_title</key>
+							<string>Allow Any Identifier</string>
+							<key>pfm_type</key>
+							<string>boolean</string>
+						</dict>
+						<dict>
+							<key>pfm_description</key>
+							<string>Refuse builds older than this, so a signed but vulnerable version cannot be installed instead.</string>
+							<key>pfm_name</key>
+							<string>MinimumVersion</string>
+							<key>pfm_title</key>
+							<string>Minimum Version</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<true/>
+							<key>pfm_description</key>
+							<string>Require the installer to be notarized. Defaults to true.</string>
+							<key>pfm_name</key>
+							<string>RequireNotarized</string>
+							<key>pfm_title</key>
+							<string>Require Notarized</string>
+							<key>pfm_type</key>
+							<string>boolean</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<false/>
+							<key>pfm_description</key>
+							<string>Whether the package may carry install scripts. A scriptless package landing in /Applications is a file copy; one with a postinstall is arbitrary root code on every future build the vendor signs. Defaults to false.</string>
+							<key>pfm_name</key>
+							<string>AllowScripts</string>
+							<key>pfm_title</key>
+							<string>Allow Scripts</string>
+							<key>pfm_type</key>
+							<string>boolean</string>
+						</dict>
+						<dict>
+							<key>pfm_description</key>
+							<string>Absolute path prefixes this installer may write to. Unrestricted when unset, though some destinations always need naming explicitly.</string>
+							<key>pfm_name</key>
+							<string>AllowedPayloadPrefixes</string>
+							<key>pfm_subkeys</key>
+							<array>
+								<dict>
+									<key>pfm_type</key>
+									<string>string</string>
+								</dict>
+							</array>
+							<key>pfm_title</key>
+							<string>Allowed Payload Prefixes</string>
+							<key>pfm_type</key>
+							<string>array</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<false/>
+							<key>pfm_description</key>
+							<string>Lets this installer write anywhere, including the destinations that otherwise always need naming. Its own key, so the most dangerous setting has to be meant. Defaults to false.</string>
+							<key>pfm_name</key>
+							<string>AllowUnrestrictedPayload</string>
+							<key>pfm_title</key>
+							<string>Allow Unrestricted Payload</string>
+							<key>pfm_type</key>
+							<string>boolean</string>
+						</dict>
+					</array>
+					<key>pfm_type</key>
+					<string>dictionary</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>Allowed Installers</string>
+			<key>pfm_type</key>
+			<string>array</string>
 		</dict>
 	</array>
 	<key>pfm_targets</key>
@@ -1031,6 +1753,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 	<key>pfm_unique</key>
 	<false/>
 	<key>pfm_version</key>
-	<integer>2</integer>
+	<integer>3</integer>
 </dict>
 </plist>
