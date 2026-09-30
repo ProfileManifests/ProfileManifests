@@ -13,7 +13,7 @@
 	<key>pfm_format_version</key>
 	<integer>1</integer>
 	<key>pfm_last_modified</key>
-	<date>2026-09-28T12:00:00Z</date>
+	<date>2026-09-30T12:23:03Z</date>
 	<key>pfm_macos_min</key>
 	<string>14.0</string>
 	<key>pfm_platforms</key>
@@ -455,6 +455,34 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_subkeys</key>
 			<array>
 				<dict>
+					<key>pfm_range_list</key>
+					<array>
+						<string>DeviceInformation</string>
+						<string>Evergreen</string>
+						<string>Battery</string>
+						<string>Actions</string>
+						<string>ApplicationInstallProgress</string>
+						<string>Storage</string>
+						<string>DeviceManagement</string>
+						<string>PendingAppUpdates</string>
+						<string>Jamf</string>
+						<string>Fleet</string>
+						<string>FleetPolicies</string>
+					</array>
+					<key>pfm_range_list_titles</key>
+					<array>
+						<string>Device Information</string>
+						<string>Evergreen</string>
+						<string>Battery</string>
+						<string>Actions</string>
+						<string>Application Install Progress</string>
+						<string>Storage</string>
+						<string>Device Management</string>
+						<string>Pending App Updates</string>
+						<string>Jamf</string>
+						<string>Fleet</string>
+						<string>Fleet Policies</string>
+					</array>
 					<key>pfm_type</key>
 					<string>string</string>
 				</dict>
@@ -472,6 +500,26 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_subkeys</key>
 			<array>
 				<dict>
+					<key>pfm_range_list</key>
+					<array>
+						<string>ChangePassword</string>
+						<string>Reboot</string>
+						<string>OpenManagementApp</string>
+						<string>GetSupport</string>
+						<string>GatherLogs</string>
+						<string>SoftwareUpdates</string>
+						<string>RestartIntuneAgent</string>
+					</array>
+					<key>pfm_range_list_titles</key>
+					<array>
+						<string>Change Password</string>
+						<string>Reboot</string>
+						<string>Open Management App</string>
+						<string>Get Support</string>
+						<string>Gather Logs</string>
+						<string>Software Updates</string>
+						<string>Restart Intune Agent</string>
+					</array>
 					<key>pfm_type</key>
 					<string>string</string>
 				</dict>
@@ -1280,6 +1328,12 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				<string>installer</string>
 				<string>elevate</string>
 				<string>none</string>
+			</array>
+			<key>pfm_range_list_titles</key>
+			<array>
+				<string>Open in Installer</string>
+				<string>Offer Elevation</string>
+				<string>None</string>
 			</array>
 			<key>pfm_title</key>
 			<string>User Install Fallback</string>
