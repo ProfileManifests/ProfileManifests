@@ -979,6 +979,15 @@
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
+		<key>com.openai.codex</key>
+		<dict>
+			<key>modified</key>
+			<date>2026-09-12T00:00:00Z</date>
+			<key>path</key>
+			<string>Manifests/ManagedPreferencesApplications/com.openai.codex.plist</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 		<key>com.papercut.printdeploy.client</key>
 		<dict>
 			<key>modified</key>
@@ -2571,6 +2580,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2026-10-05T13:18:00Z</date>
+	<date>2026-10-05T15:12:33Z</date>
 </dict>
 </plist>
