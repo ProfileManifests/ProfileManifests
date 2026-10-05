@@ -700,6 +700,13 @@
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.okta.mobile.auth-service-extension.png</string>
 		</dict>
+		<key>com.openai.codex</key>
+		<dict>
+			<key>hash</key>
+			<string>f8409fb7444ada124b13151bcd9fc035</string>
+			<key>path</key>
+			<string>Icons/ManagedPreferencesApplications/com.openai.codex.png</string>
+		</dict>
 		<key>com.papercut.printdeploy.client</key>
 		<dict>
 			<key>hash</key>
@@ -1734,6 +1741,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2026-10-05T12:52:17Z</date>
+	<date>2026-10-05T14:51:55Z</date>
 </dict>
 </plist>
