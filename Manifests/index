@@ -1915,11 +1915,11 @@
 		<key>com.apple.dock</key>
 		<dict>
 			<key>modified</key>
-			<date>2026-09-17T18:53:46Z</date>
+			<date>2026-10-05T15:11:00Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.dock.plist</string>
 			<key>version</key>
-			<integer>8</integer>
+			<integer>9</integer>
 		</dict>
 		<key>com.apple.domains</key>
 		<dict>
@@ -2571,6 +2571,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2026-10-05T14:52:06Z</date>
+	<date>2026-10-06T22:14:54Z</date>
 </dict>
 </plist>
