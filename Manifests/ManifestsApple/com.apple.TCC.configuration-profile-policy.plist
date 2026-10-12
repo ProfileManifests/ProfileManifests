@@ -13,7 +13,7 @@
 	<key>pfm_interaction</key>
 	<string>combined</string>
 	<key>pfm_last_modified</key>
-	<date>2026-09-02T08:07:59Z</date>
+	<date>2026-10-12T09:00:00Z</date>
 	<key>pfm_macos_min</key>
 	<string>10.14</string>
 	<key>pfm_platforms</key>
@@ -241,11 +241,6 @@ Available in macOS 11 and later.</string>
 										<string>Allow</string>
 										<string>Deny</string>
 									</array>
-									<key>pfm_range_list_titles</key>
-									<array>
-										<string>Allow (deprecated 26.2, removed 27.0)</string>
-										<string>Deny</string>
-									</array>
 									<key>pfm_type</key>
 									<string>string</string>
 									<key>pfmx_supported_oses</key>
@@ -273,7 +268,7 @@ Note: Every payload needs to include either 'Authorization' or 'Allowed', but no
 									<key>pfm_range_list_titles</key>
 									<array>
 										<string>Deny</string>
-										<string>Allow (Deprecated 26.2, removed 27.0)</string>
+										<string>Allow</string>
 									</array>
 									<key>pfm_title</key>
 									<string>Allowed</string>
