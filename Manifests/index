@@ -2509,7 +2509,7 @@
 		<key>com.apple.vpn.managed</key>
 		<dict>
 			<key>modified</key>
-			<date>2026-08-20T16:39:06Z</date>
+			<date>2026-10-14T09:53:45Z</date>
 			<key>path</key>
 			<string>Manifests/ManifestsApple/com.apple.vpn.managed.plist</string>
 			<key>version</key>
@@ -2580,6 +2580,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2026-10-12T08:24:26Z</date>
+	<date>2026-10-14T10:04:04Z</date>
 </dict>
 </plist>
