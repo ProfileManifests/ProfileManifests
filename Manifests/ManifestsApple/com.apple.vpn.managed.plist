@@ -15,7 +15,7 @@
 	<key>pfm_ios_min</key>
 	<string>4.0</string>
 	<key>pfm_last_modified</key>
-	<date>2026-08-20T16:39:06Z</date>
+	<date>2026-10-14T09:53:45Z</date>
 	<key>pfm_macos_min</key>
 	<string>10.7</string>
 	<key>pfm_platforms</key>
@@ -4896,8 +4896,6 @@ NAT keepalive offload has an impact on the battery life due to the extra workloa
 		<dict>
 			<key>pfm_description</key>
 			<string>A dictionary to use for all VPN types.</string>
-			<key>pfm_ios_min</key>
-			<string>10</string>
 			<key>pfm_macos_min</key>
 			<string>10.12</string>
 			<key>pfm_name</key>
