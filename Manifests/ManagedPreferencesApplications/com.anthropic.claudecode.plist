@@ -1,0 +1,3837 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>pfm_app_url</key>
+	<string>https://code.claude.com/docs/en/overview</string>
+	<key>pfm_description</key>
+	<string>Claude Code managed settings</string>
+	<key>pfm_documentation_url</key>
+	<string>https://code.claude.com/docs/en/managed-settings</string>
+	<key>pfm_domain</key>
+	<string>com.anthropic.claudecode</string>
+	<key>pfm_format_version</key>
+	<integer>1</integer>
+	<key>pfm_last_modified</key>
+	<date>2026-10-14T00:00:00Z</date>
+	<key>pfm_platforms</key>
+	<array>
+		<string>macOS</string>
+	</array>
+	<key>pfm_subkeys</key>
+	<array>
+		<dict>
+			<key>pfm_default</key>
+			<string>Configures Claude Code managed settings</string>
+			<key>pfm_description</key>
+			<string>The human-readable description of this payload. This description appears on the Detail screen.</string>
+			<key>pfm_description_reference</key>
+			<string>Optional. A human-readable description of this payload. This description is shown on the Detail screen.</string>
+			<key>pfm_name</key>
+			<string>PayloadDescription</string>
+			<key>pfm_title</key>
+			<string>Payload Description</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>Claude Code</string>
+			<key>pfm_description</key>
+			<string>The human-readable name for the profile payload. The name appears on the Detail screen and doesn't need to be unique.</string>
+			<key>pfm_description_reference</key>
+			<string>A human-readable name for the profile payload. This name is displayed on the Detail screen. It does not have to be unique.</string>
+			<key>pfm_name</key>
+			<string>PayloadDisplayName</string>
+			<key>pfm_require</key>
+			<string>always</string>
+			<key>pfm_title</key>
+			<string>Payload Display Name</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>com.anthropic.claudecode</string>
+			<key>pfm_description</key>
+			<string>The reverse-DNS-style identifier for the payload. This identifier is usually the same as the 'TopLevel' value, with an additional appended component. This string must be unique within the profile.
+During a profile replacement, the system updates payloads with the same 'PayloadIdentifier' and 'PayloadUUID' in the old and new profiles.</string>
+			<key>pfm_description_reference</key>
+			<string>A reverse-DNS-style identifier for the specific payload. It is usually the same identifier as the root-level PayloadIdentifier value with an additional component appended.</string>
+			<key>pfm_name</key>
+			<string>PayloadIdentifier</string>
+			<key>pfm_require</key>
+			<string>always</string>
+			<key>pfm_title</key>
+			<string>Payload Identifier</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>com.anthropic.claudecode</string>
+			<key>pfm_description</key>
+			<string>The payload type, which each payload domain's reference page specifies.</string>
+			<key>pfm_description_reference</key>
+			<string>The payload type.</string>
+			<key>pfm_name</key>
+			<string>PayloadType</string>
+			<key>pfm_require</key>
+			<string>always</string>
+			<key>pfm_title</key>
+			<string>Payload Type</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>The globally unique identifier for the payload. The actual content is unimportant, but must be globally unique. In macOS, use 'uuidgen' to generate UUIDs.
+During a profile replacement, the system updates payloads with the same 'PayloadIdentifier' and 'PayloadUUID' in the old and new profiles.</string>
+			<key>pfm_description_reference</key>
+			<string>A globally unique identifier for the payload. The actual content is unimportant, but it must be globally unique. In macOS, you can use uuidgen to generate reasonable UUIDs.</string>
+			<key>pfm_format</key>
+			<string>^[0-9A-Za-z]{8}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{12}$</string>
+			<key>pfm_name</key>
+			<string>PayloadUUID</string>
+			<key>pfm_require</key>
+			<string>always</string>
+			<key>pfm_title</key>
+			<string>Payload UUID</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<integer>1</integer>
+			<key>pfm_description</key>
+			<string>The version of this specific payload.</string>
+			<key>pfm_description_reference</key>
+			<string>The version number of the individual payload. A profile can consist of payloads with different version numbers. For example, changes to the VPN software in iOS might introduce a new payload version to support additional features, but Mail payload versions would not necessarily change in the same release.</string>
+			<key>pfm_name</key>
+			<string>PayloadVersion</string>
+			<key>pfm_range_list</key>
+			<array>
+				<integer>1</integer>
+			</array>
+			<key>pfm_require</key>
+			<string>always</string>
+			<key>pfm_title</key>
+			<string>Payload Version</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>The human-readable string containing the name of the organization that provides the profile. This value doesn't need to match the organization payload value in the enclosing dictionary.</string>
+			<key>pfm_description_reference</key>
+			<string>Optional. A human-readable string containing the name of the organization that provided the profile. The payload organization for a payload need not match the payload organization in the enclosing profile.</string>
+			<key>pfm_name</key>
+			<string>PayloadOrganization</string>
+			<key>pfm_title</key>
+			<string>Payload Organization</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Pick which model answers when Claude calls the server-side advisor tool. Unset it to turn the advisor off. The advisor must be at least as capable as your main model. See Choose an advisor model for the accepted pairings and what happens when you pick one that isn't accepted.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#advisormodel</string>
+			<key>pfm_name</key>
+			<string>advisorModel</string>
+			<key>pfm_title</key>
+			<string>Advisor Model</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Turn extended thinking off for every session by setting this to false. Thinking is on by default, so true changes nothing. Most people set this through /config rather than by editing the file.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#alwaysthinkingenabled</string>
+			<key>pfm_name</key>
+			<string>alwaysThinkingEnabled</string>
+			<key>pfm_title</key>
+			<string>Always Thinking Enabled</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Restrict which models people can select for the main session, subagents, skills, and the advisor. A managed list constrains /model, --model, and the model key in a developer's own files; a model outside it can't be selected. With the default prefix matching, this doesn't touch the Default option on its own; pair it with enforceAvailableModels for that.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#availablemodels</string>
+			<key>pfm_name</key>
+			<string>availableModels</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_name</key>
+					<string>availableModelsItem</string>
+					<key>pfm_title</key>
+					<string>Value</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>Available Models</string>
+			<key>pfm_type</key>
+			<string>array</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>prefix</string>
+			<key>pfm_description</key>
+			<string>Choose how availableModels entries match model IDs. By default a model ID entry also permits later versions that extend it, so "claude-opus-5" permits Opus 5.5. With "exact", each model ID entry permits only the version it names, so a newer version of that model stays blocked until you list it. Requires Claude Code v2.1.283 or later. Managed settings only.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#availablemodelsmatch</string>
+			<key>pfm_name</key>
+			<string>availableModelsMatch</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>prefix</string>
+				<string>exact</string>
+			</array>
+			<key>pfm_title</key>
+			<string>Available Models Match</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Block specific models, with or without an availableModels allowlist and even when that list permits them. Claude Code hides a blocked model from the /model picker, and the model can't be selected anywhere availableModels is enforced. A session on the Default option doesn't run a blocked model either, as Block specific models or versions describes. Requires Claude Code v2.1.283 or later. Managed settings only.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#deniedmodels</string>
+			<key>pfm_name</key>
+			<string>deniedModels</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_name</key>
+					<string>deniedModelsItem</string>
+					<key>pfm_title</key>
+					<string>Value</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>Denied Models</string>
+			<key>pfm_type</key>
+			<string>array</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Set a default effort level for models you haven't saved a level for. Lower levels are faster and cheaper on straightforward tasks, and higher levels reason more deeply on complex problems.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#effortlevel</string>
+			<key>pfm_name</key>
+			<string>effortLevel</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>low</string>
+				<string>medium</string>
+				<string>high</string>
+				<string>xhigh</string>
+			</array>
+			<key>pfm_title</key>
+			<string>Effort Level</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>The /model picker has a Default option, and default model setting describes the model it resolves to. An availableModels allowlist limits the models you can name, but with the default prefix matching it doesn't remap your account type's default, so Default can still resolve to a model outside the list. This key closes that gap. Requires Claude Code v2.1.175 or later.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#enforceavailablemodels</string>
+			<key>pfm_name</key>
+			<string>enforceAvailableModels</string>
+			<key>pfm_title</key>
+			<string>Enforce Available Models</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Name backup models for Claude Code to try, in order, when your primary model is overloaded or unavailable. Claude Code switches to the next available model in the chain for the rest of the turn and shows a notice. Without a chain, Claude Code retries the same model and then surfaces the server's error, and you retry or switch models yourself.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#fallbackmodel</string>
+			<key>pfm_name</key>
+			<string>fallbackModel</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_name</key>
+					<string>fallbackModelItem</string>
+					<key>pfm_title</key>
+					<string>Value</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>Fallback Model</string>
+			<key>pfm_type</key>
+			<string>array</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Turn fast mode on for sessions where it's available, for interactive work like rapid iteration or live debugging where you want speed at a higher cost per token. You don't usually edit this key by hand: running /fast writes fastMode: true to ~/.claude/settings.json, and running it again to turn fast mode off removes the key. Fast mode runs only on Opus 5.5, Opus 5, and Opus 4.8: turning it on from another model switches you to Opus, and switching to an unsupported model turns it off. See Switch models while fast mode is on.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#fastmode</string>
+			<key>pfm_name</key>
+			<string>fastMode</string>
+			<key>pfm_title</key>
+			<string>Fast Mode</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>Normally, running /fast saves fastMode to a person's user settings, so fast mode is on at the start of every later session. Set this key to true to stop that: a saved fastMode: true no longer turns fast mode on at session start, and each person has to run /fast in each session they want it. Claude Code leaves the fastMode key in their file, so turning this key off restores the old behavior.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#fastmodepersessionoptin</string>
+			<key>pfm_name</key>
+			<string>fastModePerSessionOptIn</string>
+			<key>pfm_title</key>
+			<string>Fast Mode Per Session Opt In</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Have Claude respond in a language other than English by default. There is no fixed list for responses: Claude Code passes the value verbatim to Claude as an instruction to always respond in that language, so any language name Claude can read works. Claude Code doesn't check the value, so a misspelled name reaches Claude as written rather than producing an error. The same value sets the language for voice dictation, which does have a fixed list of supported dictation languages, and for auto-generated session titles.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#language</string>
+			<key>pfm_name</key>
+			<string>language</string>
+			<key>pfm_title</key>
+			<string>Language</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Cap the effort level a session can use, leaving lower levels available. Any higher level runs at the cap instead, including one from /effort, the /model picker, --effort, CLAUDE_CODE_EFFORT_LEVEL, a skill's or subagent's effort frontmatter, or the model's own default. Claude Code applies the cap itself before each request, so it holds on every provider, including Amazon Bedrock, Google Cloud's Agent Platform, and Microsoft Foundry. Requires Claude Code v2.1.267 or later.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#maxeffortlevel</string>
+			<key>pfm_name</key>
+			<string>maxEffortLevel</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>low</string>
+				<string>medium</string>
+				<string>high</string>
+				<string>xhigh</string>
+				<string>max</string>
+			</array>
+			<key>pfm_title</key>
+			<string>Max Effort Level</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Set the model every new session uses, so you don't have to pick one with /model each time. Setting it here doesn't stop you from switching mid-session. If your admin set an organization default model to override user selection, you get that model even when you set this key in user, project, or local settings.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#model</string>
+			<key>pfm_name</key>
+			<string>model</string>
+			<key>pfm_title</key>
+			<string>Model</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Map Anthropic model IDs to provider-specific model IDs, such as Amazon Bedrock inference profile ARNs. Each model picker entry then uses its mapped value when calling the provider API. Administrators use this on Amazon Bedrock, Google Cloud's Agent Platform, and Microsoft Foundry to route each model version to a specific inference profile, version name, or deployment for governance, cost allocation, or regional routing.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#modeloverrides</string>
+			<key>pfm_name</key>
+			<string>modelOverrides</string>
+			<key>pfm_title</key>
+			<string>Model Overrides</string>
+			<key>pfm_type</key>
+			<string>dictionary</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>List the models the /model picker offers, in the order you write them and under labels you choose, so the picker lists the models your organization runs, after the built-in lineup or instead of it. Each row's model is taken verbatim, so it accepts anything --model accepts: an alias such as opus, an Anthropic model ID, or a provider-format ID for Amazon Bedrock, Google Cloud's Agent Platform, Microsoft Foundry, or an LLM gateway. Requires Claude Code v2.1.242 or later.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#modelpicker</string>
+			<key>pfm_name</key>
+			<string>modelPicker</string>
+			<key>pfm_title</key>
+			<string>Model Picker</string>
+			<key>pfm_type</key>
+			<string>dictionary</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Report spend at the rates your organization pays instead of list price. Set it when your organization has contracted rates, so the dollar figures developers see match your bill. Claude Code applies the rates in /usage, the status line, the Agent SDK's total_cost_usd, the --max-budget-usd limit, and the OpenTelemetry cost metric and events. You supply the rates: Claude Code doesn't read them from your contract or the Claude Console. Requires Claude Code v2.1.242 or later. Managed settings only.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#modelpricing</string>
+			<key>pfm_name</key>
+			<string>modelPricing</string>
+			<key>pfm_title</key>
+			<string>Model Pricing</string>
+			<key>pfm_type</key>
+			<string>dictionary</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Save an effort level for each model you use. Requires Claude Code v2.1.251 or later.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#modelsettings</string>
+			<key>pfm_name</key>
+			<string>modelSettings</string>
+			<key>pfm_title</key>
+			<string>Model Settings</string>
+			<key>pfm_type</key>
+			<string>dictionary</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Select an output style by name. An output style is a saved set of instructions that changes Claude's role, tone, and output format, such as the built-in Explanatory and Learning styles or one you wrote yourself.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#outputstyle</string>
+			<key>pfm_name</key>
+			<string>outputStyle</string>
+			<key>pfm_title</key>
+			<string>Output Style</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Choose how long the prompt cache holds the main conversation. This key applies to your interactive, -p, and Agent SDK turns, together with the helpers Claude Code runs inline with them. The one-hour lifetime keeps the cache warm across longer breaks, and the API bills each cache write at a higher rate than at the five-minute lifetime. Requires Claude Code v2.1.242 or later.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#promptcachettl</string>
+			<key>pfm_name</key>
+			<string>promptCacheTtl</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>5m</string>
+				<string>1h</string>
+			</array>
+			<key>pfm_title</key>
+			<string>Prompt Cache TTL</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>See summaries of Claude's extended thinking in interactive sessions. Set it if you want the full summaries when you expand thinking with Ctrl+O. When unset or false, the Anthropic API redacts thinking blocks and Claude Code shows a collapsed stub; third-party providers don't redact.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#showthinkingsummaries</string>
+			<key>pfm_name</key>
+			<string>showThinkingSummaries</string>
+			<key>pfm_title</key>
+			<string>Show Thinking Summaries</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Choose how long the prompt cache holds the requests Claude Code makes outside the main conversation. This key applies to subagents, workflows, and Claude Code's own background and helper requests, such as compaction and session titles. The one-hour lifetime keeps the cache warm across longer breaks, and the API bills each cache write at a higher rate than at the five-minute lifetime. Requires Claude Code v2.1.242 or later.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#subagentpromptcachettl</string>
+			<key>pfm_name</key>
+			<string>subagentPromptCacheTtl</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>5m</string>
+				<string>1h</string>
+			</array>
+			<key>pfm_title</key>
+			<string>Subagent Prompt Cache TTL</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Choose what happens when a safety classifier flags a request: switch to the fallback model and continue, or pause so you can choose between switching and editing the prompt.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#switchmodelsonflag</string>
+			<key>pfm_name</key>
+			<string>switchModelsOnFlag</string>
+			<key>pfm_title</key>
+			<string>Switch Models On Flag</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Start sessions with ultracode on. With it on, Claude plans a workflow for each substantive task instead of waiting for you to ask. Claude plans workflows only when dynamic workflows are enabled for you and your model supports xhigh effort. The key doesn't change the session's effort level: ultracode runs at whichever level the session uses. Claude Code reads this key but never writes it: /effort ultracode turns ultracode on for the current session only.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#ultracode</string>
+			<key>pfm_name</key>
+			<string>ultracode</string>
+			<key>pfm_title</key>
+			<string>Ultracode</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Make managed settings the only settings source of permission rules. Claude Code then ignores allow, ask, and deny rules in user, project, local, and --settings files, ignores --allowedTools, hides the always-allow choices in permission prompts, and stops saving new rules. Managed settings only.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#allowmanagedpermissionrulesonly</string>
+			<key>pfm_name</key>
+			<string>allowManagedPermissionRulesOnly</string>
+			<key>pfm_title</key>
+			<string>Allow Managed Permission Rules Only</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Add your own rules to what the auto mode classifier blocks and allows. Use it to tell the classifier which repos, buckets, and domains your organization trusts, so it stops blocking routine internal operations. The classifier ships with built-in allow and deny rules. Include the literal string "$defaults" in an array to keep those built-in rules at that position and add yours around them; leave it out to replace them with yours.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#automode</string>
+			<key>pfm_name</key>
+			<string>autoMode</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_name</key>
+					<string>environment</string>
+					<key>pfm_subkeys</key>
+					<array>
+						<dict>
+							<key>pfm_description</key>
+							<string>A prose rule.</string>
+							<key>pfm_name</key>
+							<string>environmentItem</string>
+							<key>pfm_title</key>
+							<string>Value</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+					</array>
+					<key>pfm_title</key>
+					<string>Environment</string>
+					<key>pfm_type</key>
+					<string>array</string>
+				</dict>
+				<dict>
+					<key>pfm_name</key>
+					<string>allow</string>
+					<key>pfm_subkeys</key>
+					<array>
+						<dict>
+							<key>pfm_description</key>
+							<string>A prose rule.</string>
+							<key>pfm_name</key>
+							<string>allowItem</string>
+							<key>pfm_title</key>
+							<string>Value</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+					</array>
+					<key>pfm_title</key>
+					<string>Allow</string>
+					<key>pfm_type</key>
+					<string>array</string>
+				</dict>
+				<dict>
+					<key>pfm_name</key>
+					<string>soft_deny</string>
+					<key>pfm_subkeys</key>
+					<array>
+						<dict>
+							<key>pfm_description</key>
+							<string>A prose rule.</string>
+							<key>pfm_name</key>
+							<string>soft_denyItem</string>
+							<key>pfm_title</key>
+							<string>Value</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+					</array>
+					<key>pfm_title</key>
+					<string>Soft Deny</string>
+					<key>pfm_type</key>
+					<string>array</string>
+				</dict>
+				<dict>
+					<key>pfm_name</key>
+					<string>hard_deny</string>
+					<key>pfm_subkeys</key>
+					<array>
+						<dict>
+							<key>pfm_description</key>
+							<string>A prose rule.</string>
+							<key>pfm_name</key>
+							<string>hard_denyItem</string>
+							<key>pfm_title</key>
+							<string>Value</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+					</array>
+					<key>pfm_title</key>
+					<string>Hard Deny</string>
+					<key>pfm_type</key>
+					<string>array</string>
+				</dict>
+				<dict>
+					<key>pfm_default</key>
+					<false/>
+					<key>pfm_description</key>
+					<string>Send every Bash and PowerShell command through the auto mode classifier while auto mode is active. By default, auto mode suspends only allow rules that could run arbitrary code: tool-wide and wildcard rules such as Bash(*), and interpreter or shell-wrapper prefixes such as Bash(python *). A command that any other allow rule matches, such as Bash(npm test), skips the classifier unless it carries per-command allowed domains. When it skips, a destructive argument the rule's prefix didn't anticipate can get through unseen. Setting this key suspends every shell allow rule for the session so the classifier sees every command. Requires Claude Code v2.1.193 or later.</string>
+					<key>pfm_documentation_url</key>
+					<string>https://code.claude.com/docs/en/settings-reference#automode-classifyallshell</string>
+					<key>pfm_name</key>
+					<string>classifyAllShell</string>
+					<key>pfm_title</key>
+					<string>Classify All Shell</string>
+					<key>pfm_type</key>
+					<string>boolean</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>Auto Mode</string>
+			<key>pfm_type</key>
+			<string>dictionary</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Remove auto mode from the Shift+Tab cycle. Any session that would otherwise start in auto mode, whether from --permission-mode auto, a settings file, or the built-in default, starts in default instead. Administrators set it in managed settings to prevent developers in their organization from using auto mode.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#disableautomode</string>
+			<key>pfm_name</key>
+			<string>disableAutoMode</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>disable</string>
+			</array>
+			<key>pfm_title</key>
+			<string>Disable Auto Mode</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Control which tools Claude can use without asking, which ones always prompt, and which ones are blocked, and set the permission mode a session starts in. Every permissions.* key below nests under this object.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#permissions</string>
+			<key>pfm_name</key>
+			<string>permissions</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_description</key>
+					<string>List the tool uses Claude Code approves without asking you. In an MCP rule, * can appear only in the tool name after the mcp__&lt;server&gt;__ prefix, such as mcp__github__get_*; it can't appear in the server name.</string>
+					<key>pfm_documentation_url</key>
+					<string>https://code.claude.com/docs/en/settings-reference#permissions-allow</string>
+					<key>pfm_name</key>
+					<string>allow</string>
+					<key>pfm_subkeys</key>
+					<array>
+						<dict>
+							<key>pfm_name</key>
+							<string>allowItem</string>
+							<key>pfm_title</key>
+							<string>Value</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+					</array>
+					<key>pfm_title</key>
+					<string>Allow</string>
+					<key>pfm_type</key>
+					<string>array</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>List the tool uses that prompt you for confirmation even in a permission mode that would otherwise approve them, such as acceptEdits or bypassPermissions. In dontAsk mode Claude Code denies a matching tool use instead of prompting.</string>
+					<key>pfm_documentation_url</key>
+					<string>https://code.claude.com/docs/en/settings-reference#permissions-ask</string>
+					<key>pfm_name</key>
+					<string>ask</string>
+					<key>pfm_subkeys</key>
+					<array>
+						<dict>
+							<key>pfm_name</key>
+							<string>askItem</string>
+							<key>pfm_title</key>
+							<string>Value</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+					</array>
+					<key>pfm_title</key>
+					<string>Ask</string>
+					<key>pfm_type</key>
+					<string>array</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>List the tool uses Claude Code blocks. Use it for files that hold API keys, secrets, or environment values: Claude Code excludes matching files from file discovery and search results, denies reads of them, and blocks the Edit and Write tools on the matching paths.</string>
+					<key>pfm_documentation_url</key>
+					<string>https://code.claude.com/docs/en/settings-reference#permissions-deny</string>
+					<key>pfm_name</key>
+					<string>deny</string>
+					<key>pfm_subkeys</key>
+					<array>
+						<dict>
+							<key>pfm_name</key>
+							<string>denyItem</string>
+							<key>pfm_title</key>
+							<string>Value</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+					</array>
+					<key>pfm_title</key>
+					<string>Deny</string>
+					<key>pfm_type</key>
+					<string>array</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>Give Claude file access to directories outside the one you started in, as additional working directories. Most .claude/ configuration is not discovered from these directories.</string>
+					<key>pfm_documentation_url</key>
+					<string>https://code.claude.com/docs/en/settings-reference#permissions-additionaldirectories</string>
+					<key>pfm_name</key>
+					<string>additionalDirectories</string>
+					<key>pfm_subkeys</key>
+					<array>
+						<dict>
+							<key>pfm_name</key>
+							<string>additionalDirectoriesItem</string>
+							<key>pfm_title</key>
+							<string>Value</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+					</array>
+					<key>pfm_title</key>
+					<string>Additional Directories</string>
+					<key>pfm_type</key>
+					<string>array</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>Make Claude's file tools refuse reads outside your working directories in every permission mode, including bypassPermissions. Claude Code denies Read, Grep, Glob, and LSP calls on those paths and tells Claude to ask you to add the directory with /add-dir. Files Claude Code itself needs stay readable, such as your skills, plugins, rules, agents, commands, and the CLAUDE.md memory file under ~/.claude/. Requires Claude Code v2.1.257 or later.</string>
+					<key>pfm_documentation_url</key>
+					<string>https://code.claude.com/docs/en/settings-reference#permissions-blockreadsoutsideworkingdirectories</string>
+					<key>pfm_name</key>
+					<string>blockReadsOutsideWorkingDirectories</string>
+					<key>pfm_title</key>
+					<string>Block Reads Outside Working Directories</string>
+					<key>pfm_type</key>
+					<string>boolean</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>Set the permission mode new sessions start in. When you leave it unset, sessions start in the built-in default for your surface.</string>
+					<key>pfm_documentation_url</key>
+					<string>https://code.claude.com/docs/en/settings-reference#permissions-defaultmode</string>
+					<key>pfm_name</key>
+					<string>defaultMode</string>
+					<key>pfm_range_list</key>
+					<array>
+						<string>default</string>
+						<string>acceptEdits</string>
+						<string>plan</string>
+						<string>auto</string>
+						<string>dontAsk</string>
+						<string>bypassPermissions</string>
+						<string>manual</string>
+					</array>
+					<key>pfm_title</key>
+					<string>Default Mode</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>Prevent anyone from entering bypassPermissions mode. Claude Code then rejects the --dangerously-skip-permissions flag, and ignores an agent definition's permissionMode: bypassPermissions, so the subagent runs with the parent session's permission mode.</string>
+					<key>pfm_documentation_url</key>
+					<string>https://code.claude.com/docs/en/settings-reference#permissions-disablebypasspermissionsmode</string>
+					<key>pfm_name</key>
+					<string>disableBypassPermissionsMode</string>
+					<key>pfm_range_list</key>
+					<array>
+						<string>disable</string>
+					</array>
+					<key>pfm_title</key>
+					<string>Disable Bypass Permissions Mode</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>Permissions</string>
+			<key>pfm_type</key>
+			<string>dictionary</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>Choose whether Claude Code uses the auto mode classifier to review shell commands in plan mode. With the default true, the classifier reviews each command during planning when auto mode is available and you see no prompt, except for critical-path removals. Set false to get a permission prompt for every command outside the built-in read-only set. Appears in /config as Use auto mode during plan.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#useautomodeduringplan</string>
+			<key>pfm_name</key>
+			<string>useAutoModeDuringPlan</string>
+			<key>pfm_title</key>
+			<string>Use Auto Mode During Plan</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Skip the one-time notice describing auto mode that Claude Code shows when you first enter auto mode yourself, for example through your own settings or the mode selector, rather than when the built-in default starts a session in it. Claude Code shows that notice once and then records that it was shown, so this key only matters where the notice hasn't appeared yet.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#skipautopermissionprompt</string>
+			<key>pfm_name</key>
+			<string>skipAutoPermissionPrompt</string>
+			<key>pfm_title</key>
+			<string>Skip Auto Permission Prompt</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Skip the confirmation dialog Claude Code shows before a session enters bypassPermissions mode, whether from --dangerously-skip-permissions or from defaultMode: "bypassPermissions". Claude Code writes true here in your user settings when you accept that dialog once.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#skipdangerousmodepermissionprompt</string>
+			<key>pfm_name</key>
+			<string>skipDangerousModePermissionPrompt</string>
+			<key>pfm_title</key>
+			<string>Skip Dangerous Mode Permission Prompt</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Isolate the Bash commands Claude runs from your filesystem and network with sandboxing. Turn the sandbox on with enabled, then narrow or widen what sandboxed commands can touch with the filesystem, network, and credentials sub-objects. The sandbox runs on macOS, Linux, and WSL2.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#sandbox</string>
+			<key>pfm_name</key>
+			<string>sandbox</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_default</key>
+					<false/>
+					<key>pfm_description</key>
+					<string>Turn on sandboxing for Bash commands. When you pick a mode in the /sandbox panel, Claude Code writes this key to .claude/settings.local.json for the current project; set it in ~/.claude/settings.json to sandbox every project.</string>
+					<key>pfm_documentation_url</key>
+					<string>https://code.claude.com/docs/en/settings-reference#sandbox-enabled</string>
+					<key>pfm_name</key>
+					<string>enabled</string>
+					<key>pfm_title</key>
+					<string>Enabled</string>
+					<key>pfm_type</key>
+					<string>boolean</string>
+				</dict>
+				<dict>
+					<key>pfm_default</key>
+					<false/>
+					<key>pfm_description</key>
+					<string>Make Claude Code exit with an error at startup when sandbox.enabled is true but the sandbox can't start, because a dependency is missing or the platform is unsupported. Without this key, Claude Code runs commands unsandboxed. Managed deployments that require sandboxing as a security gate can use this setting.</string>
+					<key>pfm_documentation_url</key>
+					<string>https://code.claude.com/docs/en/settings-reference#sandbox-failifunavailable</string>
+					<key>pfm_name</key>
+					<string>failIfUnavailable</string>
+					<key>pfm_title</key>
+					<string>Fail If Unavailable</string>
+					<key>pfm_type</key>
+					<string>boolean</string>
+				</dict>
+				<dict>
+					<key>pfm_default</key>
+					<true/>
+					<key>pfm_description</key>
+					<string>Let Claude Code run sandboxed Bash commands without a permission prompt. Commands that can't run in the sandbox still go through the regular permission flow, and deny rules and content-scoped ask rules such as Bash(git push *) still apply; a bare Bash ask rule is skipped for sandboxed commands. Set it to false to send sandboxed commands through the regular permission flow too, which the /sandbox Mode tab calls regular permissions mode.</string>
+					<key>pfm_documentation_url</key>
+					<string>https://code.claude.com/docs/en/settings-reference#sandbox-autoallowbashifsandboxed</string>
+					<key>pfm_name</key>
+					<string>autoAllowBashIfSandboxed</string>
+					<key>pfm_title</key>
+					<string>Auto Allow Bash If Sandboxed</string>
+					<key>pfm_type</key>
+					<string>boolean</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>Name commands that Claude Code runs outside the sandbox, such as tools that don't work under it. Each entry uses the same syntax as the content of a Bash(...) permission rule: an exact command, a prefix such as docker *, or a wildcard pattern. A pattern with no wildcard is an exact match, so docker matches only docker with no arguments.</string>
+					<key>pfm_documentation_url</key>
+					<string>https://code.claude.com/docs/en/settings-reference#sandbox-excludedcommands</string>
+					<key>pfm_name</key>
+					<string>excludedCommands</string>
+					<key>pfm_subkeys</key>
+					<array>
+						<dict>
+							<key>pfm_name</key>
+							<string>excludedCommandsItem</string>
+							<key>pfm_title</key>
+							<string>Value</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+					</array>
+					<key>pfm_title</key>
+					<string>Excluded Commands</string>
+					<key>pfm_type</key>
+					<string>array</string>
+				</dict>
+				<dict>
+					<key>pfm_default</key>
+					<true/>
+					<key>pfm_description</key>
+					<string>Let Claude retry a command outside the sandbox with the dangerouslyDisableSandbox parameter after the sandbox blocks it. When it's false, Claude Code ignores that parameter. While the sandbox is running, commands Claude runs are then sandboxed unless they match an excludedCommands entry. The /sandbox Overrides tab shows that state as Strict sandbox mode. A false in managed settings turns on strict sandbox mode for the developers it covers.</string>
+					<key>pfm_documentation_url</key>
+					<string>https://code.claude.com/docs/en/settings-reference#sandbox-allowunsandboxedcommands</string>
+					<key>pfm_name</key>
+					<string>allowUnsandboxedCommands</string>
+					<key>pfm_title</key>
+					<string>Allow Unsandboxed Commands</string>
+					<key>pfm_type</key>
+					<string>boolean</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>Control which paths sandboxed commands can read and write. By default they can write to the working directory, the per-user temp directory, and directories you add with --add-dir, /add-dir, or permissions.additionalDirectories, and can read the rest of the filesystem, including credential files. Widen or narrow that with the four path lists, or switch the filesystem layer off with disabled. See Filesystem isolation for the default boundaries.</string>
+					<key>pfm_documentation_url</key>
+					<string>https://code.claude.com/docs/en/settings-reference#sandbox-filesystem</string>
+					<key>pfm_name</key>
+					<string>filesystem</string>
+					<key>pfm_subkeys</key>
+					<array>
+						<dict>
+							<key>pfm_description</key>
+							<string>Add paths where sandboxed commands can write, beyond the working directory, the per-user temp directory, and the directories you've added with --add-dir, /add-dir, or permissions.additionalDirectories. Use it when a subprocess such as kubectl or a build tool needs to write outside the project.</string>
+							<key>pfm_documentation_url</key>
+							<string>https://code.claude.com/docs/en/settings-reference#sandbox-filesystem-allowwrite</string>
+							<key>pfm_name</key>
+							<string>allowWrite</string>
+							<key>pfm_subkeys</key>
+							<array>
+								<dict>
+									<key>pfm_name</key>
+									<string>allowWriteItem</string>
+									<key>pfm_title</key>
+									<string>Value</string>
+									<key>pfm_type</key>
+									<string>string</string>
+								</dict>
+							</array>
+							<key>pfm_title</key>
+							<string>Allow Write</string>
+							<key>pfm_type</key>
+							<string>array</string>
+						</dict>
+						<dict>
+							<key>pfm_description</key>
+							<string>Block sandboxed commands from writing to specific paths, including paths inside a directory that is otherwise writable.</string>
+							<key>pfm_documentation_url</key>
+							<string>https://code.claude.com/docs/en/settings-reference#sandbox-filesystem-denywrite</string>
+							<key>pfm_name</key>
+							<string>denyWrite</string>
+							<key>pfm_subkeys</key>
+							<array>
+								<dict>
+									<key>pfm_name</key>
+									<string>denyWriteItem</string>
+									<key>pfm_title</key>
+									<string>Value</string>
+									<key>pfm_type</key>
+									<string>string</string>
+								</dict>
+							</array>
+							<key>pfm_title</key>
+							<string>Deny Write</string>
+							<key>pfm_type</key>
+							<string>array</string>
+						</dict>
+						<dict>
+							<key>pfm_description</key>
+							<string>Block sandboxed commands from reading specific paths, such as credential files that the default read policy would otherwise expose. To protect a credential file and keep it usable through the sandbox proxy, see sandbox.credentials instead.</string>
+							<key>pfm_documentation_url</key>
+							<string>https://code.claude.com/docs/en/settings-reference#sandbox-filesystem-denyread</string>
+							<key>pfm_name</key>
+							<string>denyRead</string>
+							<key>pfm_subkeys</key>
+							<array>
+								<dict>
+									<key>pfm_name</key>
+									<string>denyReadItem</string>
+									<key>pfm_title</key>
+									<string>Value</string>
+									<key>pfm_type</key>
+									<string>string</string>
+								</dict>
+							</array>
+							<key>pfm_title</key>
+							<string>Deny Read</string>
+							<key>pfm_type</key>
+							<string>array</string>
+						</dict>
+						<dict>
+							<key>pfm_description</key>
+							<string>Re-open reading for specific paths inside a region that denyRead blocks, to build workspace-only read access. An exact or wildcard denyRead entry stays blocked inside a broader allowRead, as the overlap table shows. When a wildcard denyRead entry such as ~//.env matches a directory, Claude Code blocks reads of its contents as well. Before v2.1.236 on macOS, Claude Code re-opened the paths a wildcard denyRead entry matched wherever a broader allowRead entry covered them, and left a matched directory's contents readable.</string>
+							<key>pfm_documentation_url</key>
+							<string>https://code.claude.com/docs/en/settings-reference#sandbox-filesystem-allowread</string>
+							<key>pfm_name</key>
+							<string>allowRead</string>
+							<key>pfm_subkeys</key>
+							<array>
+								<dict>
+									<key>pfm_name</key>
+									<string>allowReadItem</string>
+									<key>pfm_title</key>
+									<string>Value</string>
+									<key>pfm_type</key>
+									<string>string</string>
+								</dict>
+							</array>
+							<key>pfm_title</key>
+							<string>Allow Read</string>
+							<key>pfm_type</key>
+							<string>array</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<false/>
+							<key>pfm_description</key>
+							<string>Honor only the allowRead entries that come from managed settings, so developers can't re-open read access to paths your organization blocked. Claude Code still merges denyRead entries from every settings scope the session loads. Managed settings only.</string>
+							<key>pfm_documentation_url</key>
+							<string>https://code.claude.com/docs/en/settings-reference#sandbox-filesystem-allowmanagedreadpathsonly</string>
+							<key>pfm_name</key>
+							<string>allowManagedReadPathsOnly</string>
+							<key>pfm_title</key>
+							<string>Allow Managed Read Paths Only</string>
+							<key>pfm_type</key>
+							<string>boolean</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<false/>
+							<key>pfm_description</key>
+							<string>Skip filesystem isolation while keeping network isolation. Sandboxed commands get unrestricted read and write access to the host filesystem, and their network egress stays confined to network.allowedDomains. Use it when you sandbox to control where commands connect rather than what they write. Requires Claude Code v2.1.216 or later.</string>
+							<key>pfm_documentation_url</key>
+							<string>https://code.claude.com/docs/en/settings-reference#sandbox-filesystem-disabled</string>
+							<key>pfm_name</key>
+							<string>disabled</string>
+							<key>pfm_title</key>
+							<string>Disabled</string>
+							<key>pfm_type</key>
+							<string>boolean</string>
+						</dict>
+					</array>
+					<key>pfm_title</key>
+					<string>Filesystem</string>
+					<key>pfm_type</key>
+					<string>dictionary</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>Silence sandbox violation reports for paths you expect a command to probe and be refused, such as a tool that checks /etc/hosts on startup, so those denials don't show up as violations or in what Claude sees. The sandbox still blocks the access; only the report is suppressed. Keys are substrings to match against the command, with * matching every command, and values are substrings of the violation to ignore for that command, such as a filesystem path.</string>
+					<key>pfm_documentation_url</key>
+					<string>https://code.claude.com/docs/en/settings-reference#sandbox-ignoreviolations</string>
+					<key>pfm_name</key>
+					<string>ignoreViolations</string>
+					<key>pfm_title</key>
+					<string>Ignore Violations</string>
+					<key>pfm_type</key>
+					<string>dictionary</string>
+				</dict>
+				<dict>
+					<key>pfm_default</key>
+					<false/>
+					<key>pfm_description</key>
+					<string>Let sandboxed commands on macOS reach the system TLS trust service, com.apple.trustd.agent. Go-based tools such as gh, gcloud, and terraform need it to verify TLS certificates when you use network.httpProxyPort with a MITM proxy and a custom CA. This reduces security by opening a potential data exfiltration path through the trust service.</string>
+					<key>pfm_documentation_url</key>
+					<string>https://code.claude.com/docs/en/settings-reference#sandbox-enableweakernetworkisolation</string>
+					<key>pfm_name</key>
+					<string>enableWeakerNetworkIsolation</string>
+					<key>pfm_title</key>
+					<string>Enable Weaker Network Isolation</string>
+					<key>pfm_type</key>
+					<string>boolean</string>
+				</dict>
+				<dict>
+					<key>pfm_default</key>
+					<false/>
+					<key>pfm_description</key>
+					<string>Let sandboxed commands on macOS send Apple Events, which open, osascript, and tools that open URLs in a browser need; without it they fail with error -600. This removes code-execution isolation: sandboxed commands can launch other applications unsandboxed with no user prompt, and can send AppleScript commands to running applications such as Terminal, subject to the per-app macOS automation-consent prompt (TCC).</string>
+					<key>pfm_documentation_url</key>
+					<string>https://code.claude.com/docs/en/settings-reference#sandbox-allowappleevents</string>
+					<key>pfm_name</key>
+					<string>allowAppleEvents</string>
+					<key>pfm_title</key>
+					<string>Allow Apple Events</string>
+					<key>pfm_type</key>
+					<string>boolean</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>Point the sandbox at a ripgrep binary of your own instead of the one Claude Code uses, for example when your platform needs a differently built rg.</string>
+					<key>pfm_documentation_url</key>
+					<string>https://code.claude.com/docs/en/settings-reference#sandbox-ripgrep</string>
+					<key>pfm_name</key>
+					<string>ripgrep</string>
+					<key>pfm_title</key>
+					<string>Ripgrep</string>
+					<key>pfm_type</key>
+					<string>dictionary</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>Declare the credential files and environment variables to protect from sandboxed commands. Each entry names a file path or a variable name and a mode: deny hides the credential inside the sandbox, and mask shows sandboxed commands a placeholder while the sandbox proxy substitutes the real value on outbound requests. Claude Code protects only the entries you list; there is no built-in credential deny list.</string>
+					<key>pfm_documentation_url</key>
+					<string>https://code.claude.com/docs/en/settings-reference#sandbox-credentials</string>
+					<key>pfm_name</key>
+					<string>credentials</string>
+					<key>pfm_subkeys</key>
+					<array>
+						<dict>
+							<key>pfm_description</key>
+							<string>Protect credential files or directories from sandboxed commands. With "mode": "deny", Claude Code blocks reads of the path inside the sandbox, the same read block as sandbox.filesystem.denyRead. With "mode": "mask", sandboxed commands on Linux and WSL2 read a sentinel copy of the file, and the sandbox proxy substitutes the real value on outbound requests to that entry's injectHosts; on macOS the file is unreadable inside the sandbox instead. "mode": "mask" requires Claude Code v2.1.221 or later.</string>
+							<key>pfm_documentation_url</key>
+							<string>https://code.claude.com/docs/en/settings-reference#sandbox-credentials-files</string>
+							<key>pfm_name</key>
+							<string>files</string>
+							<key>pfm_subkeys</key>
+							<array>
+								<dict>
+									<key>pfm_name</key>
+									<string>filesItem</string>
+									<key>pfm_title</key>
+									<string>Entry</string>
+									<key>pfm_type</key>
+									<string>dictionary</string>
+								</dict>
+							</array>
+							<key>pfm_title</key>
+							<string>Files</string>
+							<key>pfm_type</key>
+							<string>array</string>
+						</dict>
+						<dict>
+							<key>pfm_description</key>
+							<string>Protect environment variables from sandboxed commands. With "mode": "deny", Claude Code removes the variable from the environment of sandboxed commands. With "mode": "mask", sandboxed commands see a per-session sentinel value, and the sandbox proxy substitutes the real value on outbound requests to that entry's injectHosts, so tools such as gh and npm keep authenticating without ever holding the real credential.</string>
+							<key>pfm_documentation_url</key>
+							<string>https://code.claude.com/docs/en/settings-reference#sandbox-credentials-envvars</string>
+							<key>pfm_name</key>
+							<string>envVars</string>
+							<key>pfm_subkeys</key>
+							<array>
+								<dict>
+									<key>pfm_name</key>
+									<string>envVarsItem</string>
+									<key>pfm_title</key>
+									<string>Entry</string>
+									<key>pfm_type</key>
+									<string>dictionary</string>
+								</dict>
+							</array>
+							<key>pfm_title</key>
+							<string>Env Vars</string>
+							<key>pfm_type</key>
+							<string>array</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<false/>
+							<key>pfm_description</key>
+							<string>Allow mask substitution on plain HTTP requests as well as TLS-terminated HTTPS. On plain HTTP the upstream identity is unverified and the credential travels in cleartext, so leave this off outside trusted test networks.</string>
+							<key>pfm_documentation_url</key>
+							<string>https://code.claude.com/docs/en/settings-reference#sandbox-credentials-allowplaintextinject</string>
+							<key>pfm_name</key>
+							<string>allowPlaintextInject</string>
+							<key>pfm_title</key>
+							<string>Allow Plaintext Inject</string>
+							<key>pfm_type</key>
+							<string>boolean</string>
+						</dict>
+						<dict>
+							<key>pfm_description</key>
+							<string>Group masked environment variables that form one AWS credential for SigV4 re-signing when your credential lives in variables with non-standard names. Claude Code links the conventional AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, and AWS_SESSION_TOKEN trio automatically when you mask their whole values, so you need this key only for other names. Requires Claude Code v2.1.224 or later.</string>
+							<key>pfm_documentation_url</key>
+							<string>https://code.claude.com/docs/en/settings-reference#sandbox-credentials-awspairs</string>
+							<key>pfm_name</key>
+							<string>awsPairs</string>
+							<key>pfm_subkeys</key>
+							<array>
+								<dict>
+									<key>pfm_name</key>
+									<string>awsPairsItem</string>
+									<key>pfm_title</key>
+									<string>Entry</string>
+									<key>pfm_type</key>
+									<string>dictionary</string>
+								</dict>
+							</array>
+							<key>pfm_title</key>
+							<string>AWS Pairs</string>
+							<key>pfm_type</key>
+							<string>array</string>
+						</dict>
+						<dict>
+							<key>pfm_description</key>
+							<string>Choose what the sandbox proxy does with AWS request forms it can't re-sign: streaming for aws-chunked streaming uploads, presigned for presigned URLs, and sigv4a for SigV4A asymmetric signatures. This applies only to requests signed with a masked pair's placeholder access key ID. Requires Claude Code v2.1.224 or later.</string>
+							<key>pfm_documentation_url</key>
+							<string>https://code.claude.com/docs/en/settings-reference#sandbox-credentials-sigv4</string>
+							<key>pfm_name</key>
+							<string>sigv4</string>
+							<key>pfm_title</key>
+							<string>SigV4</string>
+							<key>pfm_type</key>
+							<string>dictionary</string>
+						</dict>
+					</array>
+					<key>pfm_title</key>
+					<string>Credentials</string>
+					<key>pfm_type</key>
+					<string>dictionary</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>Control which hosts, ports, and sockets sandboxed commands can reach. The sandbox routes outbound traffic through a proxy that enforces these lists; see Network isolation for how the proxy decides and when it prompts.</string>
+					<key>pfm_documentation_url</key>
+					<string>https://code.claude.com/docs/en/settings-reference#sandbox-network</string>
+					<key>pfm_name</key>
+					<string>network</string>
+					<key>pfm_subkeys</key>
+					<array>
+						<dict>
+							<key>pfm_description</key>
+							<string>List the Unix socket paths sandboxed commands can connect to on macOS. Claude Code ignores this list on Linux and WSL2, where the seccomp filter can't inspect socket paths; use allowAllUnixSockets there instead.</string>
+							<key>pfm_documentation_url</key>
+							<string>https://code.claude.com/docs/en/settings-reference#sandbox-network-allowunixsockets</string>
+							<key>pfm_name</key>
+							<string>allowUnixSockets</string>
+							<key>pfm_subkeys</key>
+							<array>
+								<dict>
+									<key>pfm_name</key>
+									<string>allowUnixSocketsItem</string>
+									<key>pfm_title</key>
+									<string>Value</string>
+									<key>pfm_type</key>
+									<string>string</string>
+								</dict>
+							</array>
+							<key>pfm_title</key>
+							<string>Allow Unix Sockets</string>
+							<key>pfm_type</key>
+							<string>array</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<false/>
+							<key>pfm_description</key>
+							<string>Let sandboxed commands connect to every Unix socket. On Linux and WSL2, the sandbox's seccomp filter blocks socket(AF_UNIX, ...) calls, so this is the only way to permit Unix sockets there. When the filter is missing, which /sandbox reports on its Dependencies tab, the sandbox doesn't block Unix-socket calls. See Set up Linux and WSL2 for where the filter comes from.</string>
+							<key>pfm_documentation_url</key>
+							<string>https://code.claude.com/docs/en/settings-reference#sandbox-network-allowallunixsockets</string>
+							<key>pfm_name</key>
+							<string>allowAllUnixSockets</string>
+							<key>pfm_title</key>
+							<string>Allow All Unix Sockets</string>
+							<key>pfm_type</key>
+							<string>boolean</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<false/>
+							<key>pfm_description</key>
+							<string>Let sandboxed commands on macOS listen on network ports, for example to start a dev server, and connect to any port on localhost. A command that listens on a non-loopback address accepts connections from other machines. The key has no effect on Linux and WSL2, where each sandboxed command has its own loopback interface. To reach a server on the host from Linux or WSL2, see A command fails to reach a server on localhost.</string>
+							<key>pfm_documentation_url</key>
+							<string>https://code.claude.com/docs/en/settings-reference#sandbox-network-allowlocalbinding</string>
+							<key>pfm_name</key>
+							<string>allowLocalBinding</string>
+							<key>pfm_title</key>
+							<string>Allow Local Binding</string>
+							<key>pfm_type</key>
+							<string>boolean</string>
+						</dict>
+						<dict>
+							<key>pfm_description</key>
+							<string>List additional XPC and Mach service names the macOS sandbox may look up. Tools that communicate over XPC, such as the iOS Simulator or Playwright, need their services listed here.</string>
+							<key>pfm_documentation_url</key>
+							<string>https://code.claude.com/docs/en/settings-reference#sandbox-network-allowmachlookup</string>
+							<key>pfm_name</key>
+							<string>allowMachLookup</string>
+							<key>pfm_subkeys</key>
+							<array>
+								<dict>
+									<key>pfm_name</key>
+									<string>allowMachLookupItem</string>
+									<key>pfm_title</key>
+									<string>Value</string>
+									<key>pfm_type</key>
+									<string>string</string>
+								</dict>
+							</array>
+							<key>pfm_title</key>
+							<string>Allow Mach Lookup</string>
+							<key>pfm_type</key>
+							<string>array</string>
+						</dict>
+						<dict>
+							<key>pfm_description</key>
+							<string>Pre-allow domains for outbound traffic from sandboxed commands, so the sandbox doesn't prompt for them. Wildcards such as *.example.com match subdomains, and an optional :port suffix limits an entry to one port; an entry without a port matches every port.</string>
+							<key>pfm_documentation_url</key>
+							<string>https://code.claude.com/docs/en/settings-reference#sandbox-network-alloweddomains</string>
+							<key>pfm_name</key>
+							<string>allowedDomains</string>
+							<key>pfm_subkeys</key>
+							<array>
+								<dict>
+									<key>pfm_name</key>
+									<string>allowedDomainsItem</string>
+									<key>pfm_title</key>
+									<string>Value</string>
+									<key>pfm_type</key>
+									<string>string</string>
+								</dict>
+							</array>
+							<key>pfm_title</key>
+							<string>Allowed Domains</string>
+							<key>pfm_type</key>
+							<string>array</string>
+						</dict>
+						<dict>
+							<key>pfm_description</key>
+							<string>Block domains for outbound traffic from sandboxed commands, using the same wildcard, port, and IPv6 syntax as allowedDomains. A denied domain stays blocked even when an allowedDomains entry matches it too.</string>
+							<key>pfm_documentation_url</key>
+							<string>https://code.claude.com/docs/en/settings-reference#sandbox-network-denieddomains</string>
+							<key>pfm_name</key>
+							<string>deniedDomains</string>
+							<key>pfm_subkeys</key>
+							<array>
+								<dict>
+									<key>pfm_name</key>
+									<string>deniedDomainsItem</string>
+									<key>pfm_title</key>
+									<string>Value</string>
+									<key>pfm_type</key>
+									<string>string</string>
+								</dict>
+							</array>
+							<key>pfm_title</key>
+							<string>Denied Domains</string>
+							<key>pfm_type</key>
+							<string>array</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<false/>
+							<key>pfm_description</key>
+							<string>Deny sandboxed commands access to hosts outside the allowlist instead of prompting for approval. The allowlist is allowedDomains plus domains from WebFetch(domain:...) allow rules, or only the managed settings entries when allowManagedDomainsOnly is set. Locks that apply without an admin-required sandbox covers a repository's entries. Requires Claude Code v2.1.219 or later.</string>
+							<key>pfm_documentation_url</key>
+							<string>https://code.claude.com/docs/en/settings-reference#sandbox-network-strictallowlist</string>
+							<key>pfm_name</key>
+							<string>strictAllowlist</string>
+							<key>pfm_title</key>
+							<string>Strict Allowlist</string>
+							<key>pfm_type</key>
+							<string>boolean</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<false/>
+							<key>pfm_description</key>
+							<string>Lock the network allowlist to what managed settings define. Claude Code then honors only allowedDomains and WebFetch(domain:...) allow rules from managed settings, ignores domains from user, project, local, and --settings settings, and blocks a non-allowed domain automatically instead of prompting. Managed settings only.</string>
+							<key>pfm_documentation_url</key>
+							<string>https://code.claude.com/docs/en/settings-reference#sandbox-network-allowmanageddomainsonly</string>
+							<key>pfm_name</key>
+							<string>allowManagedDomainsOnly</string>
+							<key>pfm_title</key>
+							<string>Allow Managed Domains Only</string>
+							<key>pfm_type</key>
+							<string>boolean</string>
+						</dict>
+						<dict>
+							<key>pfm_description</key>
+							<string>Point the sandbox at your own HTTP proxy instead of the one Claude Code runs. Organizations do this to inspect HTTPS traffic, apply their own filtering rules, or log requests. Your proxy takes over filtering, and Claude Code stops applying its domain lists and network prompts to traffic sent there. When unset, Claude Code starts its own proxy for HTTP traffic.</string>
+							<key>pfm_documentation_url</key>
+							<string>https://code.claude.com/docs/en/settings-reference#sandbox-network-httpproxyport</string>
+							<key>pfm_name</key>
+							<string>httpProxyPort</string>
+							<key>pfm_title</key>
+							<string>HTTP Proxy Port</string>
+							<key>pfm_type</key>
+							<string>integer</string>
+						</dict>
+						<dict>
+							<key>pfm_description</key>
+							<string>Point the sandbox at your own SOCKS5 proxy instead of the one Claude Code runs. Your proxy takes over filtering, and Claude Code stops applying its domain lists and network prompts to traffic sent there. When unset, Claude Code starts its own proxy for SOCKS traffic.</string>
+							<key>pfm_documentation_url</key>
+							<string>https://code.claude.com/docs/en/settings-reference#sandbox-network-socksproxyport</string>
+							<key>pfm_name</key>
+							<string>socksProxyPort</string>
+							<key>pfm_title</key>
+							<string>Socks Proxy Port</string>
+							<key>pfm_type</key>
+							<string>integer</string>
+						</dict>
+						<dict>
+							<key>pfm_description</key>
+							<string>Make the sandbox proxy terminate TLS so it can read the contents of HTTPS requests. This is experimental, and mask credential substitution requires it. Set {} to generate an ephemeral certificate authority for the session, or set caCertPath and caKeyPath to use your own.</string>
+							<key>pfm_documentation_url</key>
+							<string>https://code.claude.com/docs/en/settings-reference#sandbox-network-tlsterminate</string>
+							<key>pfm_name</key>
+							<string>tlsTerminate</string>
+							<key>pfm_title</key>
+							<string>TLS Terminate</string>
+							<key>pfm_type</key>
+							<string>dictionary</string>
+						</dict>
+					</array>
+					<key>pfm_title</key>
+					<string>Network</string>
+					<key>pfm_type</key>
+					<string>dictionary</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>Sandbox</string>
+			<key>pfm_type</key>
+			<string>dictionary</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>Have Claude Code compact the conversation automatically when context approaches the limit. Appears in /config as Auto-compact, and toggling it there writes this key to your user settings.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#autocompactenabled</string>
+			<key>pfm_name</key>
+			<string>autoCompactEnabled</string>
+			<key>pfm_title</key>
+			<string>Auto Compact Enabled</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Set how full the context window gets before Claude Code compacts automatically.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#autocompactwindow</string>
+			<key>pfm_name</key>
+			<string>autoCompactWindow</string>
+			<key>pfm_title</key>
+			<string>Auto Compact Window</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Store auto memory in a directory of your choice instead of the per-project default.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#automemorydirectory</string>
+			<key>pfm_name</key>
+			<string>autoMemoryDirectory</string>
+			<key>pfm_title</key>
+			<string>Auto Memory Directory</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>Turn auto memory on or off. When false, Claude doesn't read from or write to the auto memory directory. You can also toggle it with /memory during a session, which writes this key to your user settings.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#automemoryenabled</string>
+			<key>pfm_name</key>
+			<string>autoMemoryEnabled</string>
+			<key>pfm_title</key>
+			<string>Auto Memory Enabled</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Set how many characters of a successful Bash or PowerShell command's output Claude receives inline. When output passes the limit, Claude Code saves it to a file and Claude receives a short preview plus the file's path. Raise the limit when command output, such as a verbose build or a full test-suite log, routinely overflows the default and you want Claude to read it without opening the file. Requires Claude Code v2.1.261 or later.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#bashoutputmaxchars</string>
+			<key>pfm_name</key>
+			<string>bashOutputMaxChars</string>
+			<key>pfm_title</key>
+			<string>Bash Output Max Characters</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Inject CLAUDE.md-style instructions as organization-managed memory without deploying a separate file. Claude Code loads the text as a managed memory entry ahead of user and project CLAUDE.md files. Managed settings only.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#claudemd</string>
+			<key>pfm_name</key>
+			<string>claudeMd</string>
+			<key>pfm_title</key>
+			<string>CLAUDE.md</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Skip specific CLAUDE.md files when Claude Code loads memory. In a large monorepo, use it to skip CLAUDE.md files from other teams that aren't relevant to your work; Exclude irrelevant CLAUDE.md files in the large-codebases guide walks through that case. Patterns match against absolute file paths.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#claudemdexcludes</string>
+			<key>pfm_name</key>
+			<string>claudeMdExcludes</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_name</key>
+					<string>claudeMdExcludesItem</string>
+					<key>pfm_title</key>
+					<string>Value</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>CLAUDE.md Excludes</string>
+			<key>pfm_type</key>
+			<string>array</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Set environment variables for every session and for the subprocesses Claude Code starts from it. Most variables in the environment variables reference can go here, which is how you apply one to every session or roll it out to your team. Project and local settings can't set some of them.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#env</string>
+			<key>pfm_name</key>
+			<string>env</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_name</key>
+					<string>{{key}}</string>
+					<key>pfm_title</key>
+					<string>Variable Name</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+				<dict>
+					<key>pfm_name</key>
+					<string>{{value}}</string>
+					<key>pfm_title</key>
+					<string>Value</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>Env</string>
+			<key>pfm_type</key>
+			<string>dictionary</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>Have Claude Code snapshot files before each edit so /rewind can restore them. Appears in /config as Rewind code (checkpoints), and toggling it there writes this key to your user settings.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#filecheckpointingenabled</string>
+			<key>pfm_name</key>
+			<string>fileCheckpointingEnabled</string>
+			<key>pfm_title</key>
+			<string>File Checkpointing Enabled</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>Idle compaction compacts a long conversation that you've stepped away from, shortly before its prompt cache expires. Your next message then sends a summary instead of the whole conversation. When you come back, the conversation shows Compacted while idle, before the prompt cache expired.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#idlecompaction</string>
+			<key>pfm_name</key>
+			<string>idleCompaction</string>
+			<key>pfm_title</key>
+			<string>Idle Compaction</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Choose where Claude Code stores the plan files it writes in plan mode. Claude Code resolves the path relative to the project root.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#plansdirectory</string>
+			<key>pfm_name</key>
+			<string>plansDirectory</string>
+			<key>pfm_title</key>
+			<string>Plans Directory</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<real>0.01</real>
+			<key>pfm_description</key>
+			<string>Each turn, Claude sees a listing of your skills with their descriptions, and Claude Code caps that listing at a share of the context window. When the listing is over the cap, Claude Code keeps every skill's name but drops the descriptions of the least-used skills, so Claude can still invoke those skills but is less likely to choose one on its own. Raise this key to keep more descriptions visible at the cost of more context per turn.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#skilllistingbudgetfraction</string>
+			<key>pfm_name</key>
+			<string>skillListingBudgetFraction</string>
+			<key>pfm_title</key>
+			<string>Skill Listing Budget Fraction</string>
+			<key>pfm_type</key>
+			<string>real</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<integer>1536</integer>
+			<key>pfm_description</key>
+			<string>Each turn, Claude sees a listing of your skills that shows each skill's description and when_to_use text. This key caps how many characters of that text Claude Code shows per skill; longer text is cut at the cap.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#skilllistingmaxdescchars</string>
+			<key>pfm_name</key>
+			<string>skillListingMaxDescChars</string>
+			<key>pfm_title</key>
+			<string>Skill Listing Max Description Characters</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>never</string>
+			<key>pfm_description</key>
+			<string>Let an unanswered AskUserQuestion dialog auto-continue after a period of idle time, submitting whatever options you had already selected. Set it when you step away and want Claude to continue without you. With the default, questions wait until you answer them. For when the timer pauses or never starts, see Question auto-continue timeout.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#askuserquestiontimeout</string>
+			<key>pfm_name</key>
+			<string>askUserQuestionTimeout</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>60s</string>
+				<string>5m</string>
+				<string>10m</string>
+				<string>never</string>
+			</array>
+			<key>pfm_title</key>
+			<string>Ask User Question Timeout</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>After a claude.ai usage limit stops your session, wait in the open session and continue the task automatically after the reset. See Turn automatic continue off. Requires Claude Code v2.1.234 or later.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#autocontinueatusagelimit</string>
+			<key>pfm_name</key>
+			<string>autoContinueAtUsageLimit</string>
+			<key>pfm_title</key>
+			<string>Auto Continue At Usage Limit</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>Follow new output to the bottom of the conversation in fullscreen rendering. Turn it off to stay where you scrolled while Claude keeps working; permission prompts still scroll into view.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#autoscrollenabled</string>
+			<key>pfm_name</key>
+			<string>autoScrollEnabled</string>
+			<key>pfm_title</key>
+			<string>Auto Scroll Enabled</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Render screen-reader friendly output: flat text without decorative borders or animations. Screen-reader mode uses the classic renderer, so the tui setting has no effect while it is active; attached background sessions still render fullscreen.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#axscreenreader</string>
+			<key>pfm_name</key>
+			<string>axScreenReader</string>
+			<key>pfm_title</key>
+			<string>AX Screen Reader</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Choose whether Claude Code records which files changed in a Git repository while a Bash command runs. When it records them, you see their diff in the terminal after the command, and your PostToolUse Bash hooks receive the changed-file list.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#basheditdiffenabled</string>
+			<key>pfm_name</key>
+			<string>bashEditDiffEnabled</string>
+			<key>pfm_title</key>
+			<string>Bash Edit Diff Enabled</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Show your organization's announcements to users at startup. When you list more than one, Claude Code picks one at random for each session; on a person's very first launch it shows the first entry.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#companyannouncements</string>
+			<key>pfm_name</key>
+			<string>companyAnnouncements</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_name</key>
+					<string>companyAnnouncementsItem</string>
+					<key>pfm_title</key>
+					<string>Value</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>Company Announcements</string>
+			<key>pfm_type</key>
+			<string>array</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>bash</string>
+			<key>pfm_description</key>
+			<string>Choose whether Bash or PowerShell runs the shell commands you type with the ! prefix in the input box, the ones Claude Code runs directly and adds to the session.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#defaultshell</string>
+			<key>pfm_name</key>
+			<string>defaultShell</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>bash</string>
+				<string>powershell</string>
+			</array>
+			<key>pfm_title</key>
+			<string>Default Shell</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>5m</string>
+			<key>pfm_description</key>
+			<string>Set the deadline for dialogs Claude Code forwards to a remote client, such as a Remote Control or SDK host, and for the approval dialog for a held cross-session message. On Claude Code v2.1.236 or later, the same deadline bounds the mid-session Fable usage-credits consent prompt in a session that may have nobody at the terminal. When no answer arrives before the deadline, Claude Code cancels the dialog and continues with its no-action default. Requires Claude Code v2.1.224 or later.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#dialogexpiry</string>
+			<key>pfm_name</key>
+			<string>dialogExpiry</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>60s</string>
+				<string>5m</string>
+				<string>10m</string>
+				<string>never</string>
+			</array>
+			<key>pfm_title</key>
+			<string>Dialog Expiry</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>normal</string>
+			<key>pfm_description</key>
+			<string>Choose the key binding mode for the input prompt.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#editormode</string>
+			<key>pfm_name</key>
+			<string>editorMode</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>normal</string>
+				<string>vim</string>
+			</array>
+			<key>pfm_title</key>
+			<string>Editor Mode</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>Show emoji suggestions when you type : plus a shortcode in the prompt input, and replace a completed shortcode such as :heart: with its emoji. Set it to false to turn off both.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#emojicompletionenabled</string>
+			<key>pfm_name</key>
+			<string>emojiCompletionEnabled</string>
+			<key>pfm_title</key>
+			<string>Emoji Completion Enabled</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Run your own command to supply @ file path autocomplete instead of the built-in file suggestion. The built-in suggestion uses fast filesystem traversal; a large monorepo may do better with project-specific indexing such as a pre-built file index.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#filesuggestion</string>
+			<key>pfm_name</key>
+			<string>fileSuggestion</string>
+			<key>pfm_title</key>
+			<string>File Suggestion</string>
+			<key>pfm_type</key>
+			<string>dictionary</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Render extra clickable badges in the footer below the input box when a regex matches turn output: tool results, including file contents and fetched pages, and Claude's own responses. Use it to turn IDs printed by project CLIs, such as review tools and issue trackers, into session links.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#footerlinksregexes</string>
+			<key>pfm_name</key>
+			<string>footerLinksRegexes</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_name</key>
+					<string>footerLinksRegexesItem</string>
+					<key>pfm_title</key>
+					<string>Entry</string>
+					<key>pfm_type</key>
+					<string>dictionary</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>Footer Links Regexes</string>
+			<key>pfm_type</key>
+			<string>array</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string></string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#keybindingflavor</string>
+			<key>pfm_name</key>
+			<string>keybindingFlavor</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>classic</string>
+				<string>readline</string>
+			</array>
+			<key>pfm_title</key>
+			<string>Keybinding Flavor</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Cap the width of the prose in Claude's responses so lines stay readable in a wide terminal. Paragraphs, headings, lists, and blockquotes wrap within this many columns, while tables and code blocks keep the full terminal width. Requires Claude Code v2.1.282 or later.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#maxprosewidth</string>
+			<key>pfm_name</key>
+			<string>maxProseWidth</string>
+			<key>pfm_title</key>
+			<string>Max Prose Width</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>Reduce or turn off interface animations such as the spinner, shimmer, and flash effects. Appears in /config as Reduce motion.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#prefersreducedmotion</string>
+			<key>pfm_name</key>
+			<string>prefersReducedMotion</string>
+			<key>pfm_title</key>
+			<string>Prefers Reduced Motion</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>Show or hide prompt suggestions, the grayed-out predictions that appear in your prompt input. Set it to false, or turn off Prompt suggestions in /config, to hide them.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#promptsuggestionenabled</string>
+			<key>pfm_name</key>
+			<string>promptSuggestionEnabled</string>
+			<key>pfm_title</key>
+			<string>Prompt Suggestion Enabled</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>Control whether the @ file picker leaves out files that match .gitignore patterns. Appears in /config as Respect .gitignore in file picker.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#respectgitignore</string>
+			<key>pfm_name</key>
+			<string>respectGitignore</string>
+			<key>pfm_title</key>
+			<string>Respect Gitignore</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>Choose whether Claude responds after you run a shell command with the ! prefix in the input box. By default, Claude Code adds the command's output to the conversation and Claude replies to it. Set this key to false to add the output to context without a reply, so you can run several commands and ask about them together.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#respondtobashcommands</string>
+			<key>pfm_name</key>
+			<string>respondToBashCommands</string>
+			<key>pfm_title</key>
+			<string>Respond To Bash Commands</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>When Claude finishes a plan in plan mode, it shows an approval menu. Planning can use a lot of context, so this key adds a first option to that menu, Yes, clear context and …, that approves the plan, clears the conversation context, and starts implementing from the plan alone. The rest of the label names the permission mode the session continues in, and shows how much of your context the planning used.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#showclearcontextonplanaccept</string>
+			<key>pfm_name</key>
+			<string>showClearContextOnPlanAccept</string>
+			<key>pfm_title</key>
+			<string>Show Clear Context On Plan Accept</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>Show or hide the turn duration message after each response, such as "Cooked for 1m 6s · done 6:05 PM". The clock after "done" shows when the turn finished; timeFormat and timeZone control its format and zone. Appears in /config as Show turn duration.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#showturnduration</string>
+			<key>pfm_name</key>
+			<string>showTurnDuration</string>
+			<key>pfm_title</key>
+			<string>Show Turn Duration</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Underline misspelled words in the prompt input as you type, using a spell checker you install. Claude Code checks only the text in the input box. Check spelling as you type covers installing aspell, hunspell, or ispell and what the checker covers. Requires Claude Code v2.1.235 or later.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#spellcheck</string>
+			<key>pfm_name</key>
+			<string>spellcheck</string>
+			<key>pfm_title</key>
+			<string>Spellcheck</string>
+			<key>pfm_type</key>
+			<string>dictionary</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>While Claude works, the spinner line rotates through short tips about Claude Code features, such as "Use Plan Mode to prepare for a complex request before making changes. Press Shift+Tab twice to enable." Set this key to false to hide them. Appears in /config as Show tips.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#spinnertipsenabled</string>
+			<key>pfm_name</key>
+			<string>spinnerTipsEnabled</string>
+			<key>pfm_title</key>
+			<string>Spinner Tips Enabled</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Add your own tips to the spinner tips that Claude Code shows while Claude works, or replace the built-in tips with yours. Claude Code puts your tips in the same rotation as the built-in ones.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#spinnertipsoverride</string>
+			<key>pfm_name</key>
+			<string>spinnerTipsOverride</string>
+			<key>pfm_title</key>
+			<string>Spinner Tips Override</string>
+			<key>pfm_type</key>
+			<string>dictionary</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>While a turn is in progress, the spinner shows a rotating verb such as "Accomplishing", "Architecting", or "Baking". Use this key to add your own verbs to that rotation or replace the built-in list with yours.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#spinnerverbs</string>
+			<key>pfm_name</key>
+			<string>spinnerVerbs</string>
+			<key>pfm_title</key>
+			<string>Spinner Verbs</string>
+			<key>pfm_type</key>
+			<string>dictionary</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Run your own command to render a status line below the prompt with context such as the model, cost, or git branch. Optional fields adjust spacing, add periodic re-runs, and hide the built-in vim mode indicator when your script renders vim.mode itself.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#statusline</string>
+			<key>pfm_name</key>
+			<string>statusLine</string>
+			<key>pfm_title</key>
+			<string>Status Line</string>
+			<key>pfm_type</key>
+			<string>dictionary</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>When Claude runs subagents, Claude Code lists them in a task display below the prompt, one row per subagent showing name · description · token count. This key lets you run your own command to rewrite those rows, for example to show each subagent's context usage as a percentage. On each refresh, Claude Code sends the visible rows as one JSON object on stdin, with a tasks array carrying each subagent's id, name, status, model, tokenCount, and more, and replaces the row for each id you write back as a {"id", "content"} line. Rows you don't write back keep the default rendering.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#subagentstatusline</string>
+			<key>pfm_name</key>
+			<string>subagentStatusLine</string>
+			<key>pfm_title</key>
+			<string>Subagent Status Line</string>
+			<key>pfm_type</key>
+			<string>dictionary</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>Claude Code colors code by language in the diffs, code blocks, and file previews it shows in the terminal, with its built-in highlighter; no plugin or language server is involved. Set this key to true to show them as plain text instead, for example if the colors clash with your terminal theme or slow a screen reader.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#syntaxhighlightingdisabled</string>
+			<key>pfm_name</key>
+			<string>syntaxHighlightingDisabled</string>
+			<key>pfm_title</key>
+			<string>Syntax Highlighting Disabled</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>Some terminals can show a progress indicator on the tab or in the taskbar for the program running in them. While Claude is working, Claude Code reports an in-progress state to the terminal, so you can see from another tab or window whether the session is still busy. The indicator stays visible after the turn ends while background subagents or dynamic workflows are still running, and clears once the session is idle.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#terminalprogressbarenabled</string>
+			<key>pfm_name</key>
+			<string>terminalProgressBarEnabled</string>
+			<key>pfm_title</key>
+			<string>Terminal Progress Bar Enabled</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>Claude Code sets your terminal tab's title. By default it uses a title it generates from the conversation, and once you give the session a name with /rename or --name, the tab shows that name instead. Set this key to false to keep the generated title on the tab even after you name the session. The name itself still applies, so /resume &lt;name&gt; and the session picker find it.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#terminaltitlefromrename</string>
+			<key>pfm_name</key>
+			<string>terminalTitleFromRename</string>
+			<key>pfm_title</key>
+			<string>Terminal Title From Rename</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>dark</string>
+			<key>pfm_description</key>
+			<string>Pick the color theme for the interface. Appears in /config as Theme.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#theme</string>
+			<key>pfm_name</key>
+			<string>theme</string>
+			<key>pfm_title</key>
+			<string>Theme</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>auto</string>
+			<key>pfm_description</key>
+			<string>Choose how Claude Code writes the times it shows in the interface, such as the done 6:05 PM at the end of each turn duration message and the timestamps in the transcript viewer. To pick a preset, run /config and set Time format. Requires Claude Code v2.1.257 or later.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#timeformat</string>
+			<key>pfm_name</key>
+			<string>timeFormat</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>auto</string>
+				<string>12-hour</string>
+				<string>24-hour</string>
+				<string>24-hour-utc</string>
+			</array>
+			<key>pfm_title</key>
+			<string>Time Format</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Show the times in the interface in a time zone other than your system's. Set it to an IANA time zone name, such as "UTC" or "Europe/Dublin". The times that timeFormat controls then show in this zone. If timeFormat is "24-hour-utc", times stay in UTC and Claude Code ignores this key. /config has no row for this key, so set it in a settings file. Requires Claude Code v2.1.257 or later.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#timezone</string>
+			<key>pfm_name</key>
+			<string>timeZone</string>
+			<key>pfm_title</key>
+			<string>Time Zone</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Choose the terminal UI renderer. Use "fullscreen" for the flicker-free alt-screen renderer with virtualized scrollback, or "default" for the classic main-screen renderer. Running /tui fullscreen or /tui default writes this key for you.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#tui</string>
+			<key>pfm_name</key>
+			<string>tui</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>default</string>
+				<string>fullscreen</string>
+			</array>
+			<key>pfm_title</key>
+			<string>TUI</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>By default, the transcript collapses each tool call to a short summary, such as the command Claude ran and a line count of its output, and you press Ctrl+O to switch the whole transcript to the expanded view when you want the details. Set this key to true to show every tool call's full input and output inline as it happens, which is useful when you're debugging a hook, an MCP server, or a long shell command. Appears in /config as Verbose output.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#verbose</string>
+			<key>pfm_name</key>
+			<string>verbose</string>
+			<key>pfm_title</key>
+			<string>Verbose</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Set the transcript view Claude Code starts in: "default", "verbose", or "focus". When set, it overrides both the sticky /focus selection and the verbose setting.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#viewmode</string>
+			<key>pfm_name</key>
+			<string>viewMode</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>default</string>
+				<string>verbose</string>
+				<string>focus</string>
+			</array>
+			<key>pfm_title</key>
+			<string>View Mode</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Map two-key INSERT-mode sequences to Escape in vim editor mode. Each key is exactly two printable characters typed in sequence, and "&lt;Esc&gt;" is the only supported target; Claude Code ignores other entries. Requires Claude Code v2.1.208 or later.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#viminsertmoderemaps</string>
+			<key>pfm_name</key>
+			<string>vimInsertModeRemaps</string>
+			<key>pfm_title</key>
+			<string>Vim Insert Mode Remaps</string>
+			<key>pfm_type</key>
+			<string>dictionary</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Turn on voice dictation and choose how the dictation key behaves. Claude Code writes this object for you when you run /voice.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#voice</string>
+			<key>pfm_name</key>
+			<string>voice</string>
+			<key>pfm_title</key>
+			<string>Voice</string>
+			<key>pfm_type</key>
+			<string>dictionary</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string></string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#voiceenabled</string>
+			<key>pfm_name</key>
+			<string>voiceEnabled</string>
+			<key>pfm_title</key>
+			<string>Voice Enabled</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>Accelerate mouse-wheel scroll speed during fast scrolls in fullscreen rendering. Set it to false for a constant scroll rate per wheel notch.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#wheelscrollaccelerationenabled</string>
+			<key>pfm_name</key>
+			<string>wheelScrollAccelerationEnabled</string>
+			<key>pfm_title</key>
+			<string>Wheel Scroll Acceleration Enabled</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Customize the attribution Claude Code adds to git commits and pull requests. Commits get a git trailer such as Co-Authored-By by default; pull request descriptions get plain text. Set each part separately with the sub-keys below. This manifest models the object form; the JSON value false, which hides all attribution, needs v2.1.281 or later.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#attribution</string>
+			<key>pfm_name</key>
+			<string>attribution</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_description</key>
+					<string>Set the attribution text Claude Code adds to git commits, including any trailers. Set it to an empty string to hide commit attribution.</string>
+					<key>pfm_documentation_url</key>
+					<string>https://code.claude.com/docs/en/settings-reference#attribution-commit</string>
+					<key>pfm_name</key>
+					<string>commit</string>
+					<key>pfm_title</key>
+					<string>Commit</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>Set the attribution text Claude Code adds to pull request descriptions. Set it to an empty string to hide pull request attribution.</string>
+					<key>pfm_documentation_url</key>
+					<string>https://code.claude.com/docs/en/settings-reference#attribution-pr</string>
+					<key>pfm_name</key>
+					<string>pr</string>
+					<key>pfm_title</key>
+					<string>PR</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+				<dict>
+					<key>pfm_default</key>
+					<true/>
+					<key>pfm_description</key>
+					<string>Choose whether Claude Code appends the claude.ai session link when it commits or opens a pull request from a cloud or Remote Control session. Claude Code adds the link as a Claude-Session trailer on commits and as a link in pull request descriptions. Set it to false to omit the link.</string>
+					<key>pfm_documentation_url</key>
+					<string>https://code.claude.com/docs/en/settings-reference#attribution-sessionurl</string>
+					<key>pfm_name</key>
+					<string>sessionUrl</string>
+					<key>pfm_title</key>
+					<string>Session URL</string>
+					<key>pfm_type</key>
+					<string>boolean</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>Attribution</string>
+			<key>pfm_type</key>
+			<string>dictionary</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string></string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#includecoauthoredby</string>
+			<key>pfm_name</key>
+			<string>includeCoAuthoredBy</string>
+			<key>pfm_title</key>
+			<string>Include Co-Authored-By</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>Claude Code gives Claude two git-related pieces of context: its built-in instructions for how to write commits and pull requests, in the Bash tool's description, and a git status snapshot of your repository. The snapshot holds the current branch, the main branch, git status output, and recent commits. Claude Code reads it when a conversation starts.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#includegitinstructions</string>
+			<key>pfm_name</key>
+			<string>includeGitInstructions</string>
+			<key>pfm_title</key>
+			<string>Include Git Instructions</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Point the PR links Claude Code renders, in the footer badge and in tool-result summaries, at an internal code-review tool instead of github.com. Claude Code substitutes {host}, {owner}, {repo}, {number}, and {url} from the PR URL. GitLab merge request links on both surfaces keep their GitLab URL.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#prurltemplate</string>
+			<key>pfm_name</key>
+			<string>prUrlTemplate</string>
+			<key>pfm_title</key>
+			<string>PR URL Template</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Limit which URLs HTTP hooks can target. When you define this key, Claude Code runs an HTTP hook only if its URL matches one of the patterns and blocks the rest without running them; an empty array blocks every HTTP hook.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#allowedhttphookurls</string>
+			<key>pfm_name</key>
+			<string>allowedHttpHookUrls</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_name</key>
+					<string>allowedHttpHookUrlsItem</string>
+					<key>pfm_title</key>
+					<string>Value</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>Allowed HTTP Hook URLs</string>
+			<key>pfm_type</key>
+			<string>array</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Restrict hook execution to hooks your organization deploys. Managed settings only.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#allowmanagedhooksonly</string>
+			<key>pfm_name</key>
+			<string>allowManagedHooksOnly</string>
+			<key>pfm_title</key>
+			<string>Allow Managed Hooks Only</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Turn off hooks, any custom status line, and any custom file suggestion command. Use it to turn all of these off temporarily without deleting them from your settings.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#disableallhooks</string>
+			<key>pfm_name</key>
+			<string>disableAllHooks</string>
+			<key>pfm_title</key>
+			<string>Disable All Hooks</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>Turn off dynamic workflows and the bundled workflow commands for everyone your settings reach, such as an organization through managed settings. To turn workflows on or off just for yourself, use enableWorkflows instead, which the Dynamic workflows toggle in /config writes to your user settings.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#disableworkflows</string>
+			<key>pfm_name</key>
+			<string>disableWorkflows</string>
+			<key>pfm_title</key>
+			<string>Disable Workflows</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Turn dynamic workflows on or off for yourself when your plan's default isn't what you want. Appears in /config as Dynamic workflows, which writes this key to your user settings and removes it again when you toggle back to your plan's default. To turn workflows off for everyone from managed settings, use disableWorkflows instead.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#enableworkflows</string>
+			<key>pfm_name</key>
+			<string>enableWorkflows</string>
+			<key>pfm_title</key>
+			<string>Enable Workflows</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Run your own commands, prompts, agents, HTTP requests, or MCP tools as hooks at points in Claude Code's lifecycle, such as before a tool call or when a session starts; the hooks reference lists every event, its payload, and its exit codes. Each event maps to a list of matcher groups, and each group lists the handlers to run when the matcher applies.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#hooks</string>
+			<key>pfm_name</key>
+			<string>hooks</string>
+			<key>pfm_title</key>
+			<string>Hooks</string>
+			<key>pfm_type</key>
+			<string>dictionary</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>An HTTP hook can put the value of an environment variable into a request header, for example an Authorization: Bearer $HOOK_TOKEN header, but only for variables the hook lists in its own allowedEnvVars. This key sets an outer limit on that list for every HTTP hook: a hook can use a variable only if both its own allowedEnvVars and this key name it. Use it to stop a hook from reading a secret it shouldn't, even when the hook's definition asks for it.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#httphookallowedenvvars</string>
+			<key>pfm_name</key>
+			<string>httpHookAllowedEnvVars</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_name</key>
+					<string>httpHookAllowedEnvVarsItem</string>
+					<key>pfm_title</key>
+					<string>Value</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>HTTP Hook Allowed Env Vars</string>
+			<key>pfm_type</key>
+			<string>array</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>Choose whether typing the keyword ultracode in a prompt triggers a dynamic workflow. Set it to false to type the word without triggering one.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#workflowkeywordtriggerenabled</string>
+			<key>pfm_name</key>
+			<string>workflowKeywordTriggerEnabled</string>
+			<key>pfm_title</key>
+			<string>Workflow Keyword Trigger Enabled</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>medium</string>
+			<key>pfm_description</key>
+			<string>Set the agent count Claude aims for in the dynamic workflows it writes. Claude Code sends the value to Claude as advice, not an enforced cap: "small" asks for fewer than 5 agents, "medium" fewer than 10, and "large" fewer than 50. Choose "small" when you want to bound what a workflow spends. Requires Claude Code v2.1.219 or later.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#workflowsizeguideline</string>
+			<key>pfm_name</key>
+			<string>workflowSizeGuideline</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>unrestricted</string>
+				<string>small</string>
+				<string>medium</string>
+				<string>large</string>
+			</array>
+			<key>pfm_title</key>
+			<string>Workflow Size Guideline</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Turn off the skills and workflows included with Claude Code. Claude Code removes bundled skills and workflows entirely, while built-in commands such as /init stay typable but are hidden from the model.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#disablebundledskills</string>
+			<key>pfm_name</key>
+			<string>disableBundledSkills</string>
+			<key>pfm_title</key>
+			<string>Disable Bundled Skills</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Turn off inline shell execution for !... and ! blocks in skills and custom commands from user, project, plugin, or additional-directory sources. Claude Code replaces each command with [shell command execution disabled by policy] instead of running it.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#disableskillshellexecution</string>
+			<key>pfm_name</key>
+			<string>disableSkillShellExecution</string>
+			<key>pfm_title</key>
+			<string>Disable Skill Shell Execution</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Hide or collapse a skill without editing its SKILL.md. Claude Code applies the value under each skill's name to the skill list Claude sees and to your / autocomplete.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#skilloverrides</string>
+			<key>pfm_name</key>
+			<string>skillOverrides</string>
+			<key>pfm_title</key>
+			<string>Skill Overrides</string>
+			<key>pfm_type</key>
+			<string>dictionary</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Turn off the download of the skills enabled for your claude.ai account. Claude Code downloads them into ~/.claude/skills/synced/ in terminal sessions where you sign in with your claude.ai account, interactive or non-interactive, and in Cowork and cloud sessions. Set false to stop that download and stop loading the skills it already synced. Claude Code honors only false: true is the same as unset and doesn't turn syncing on where it's otherwise off.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#syncclaudeaiskills</string>
+			<key>pfm_name</key>
+			<string>syncClaudeAiSkills</string>
+			<key>pfm_title</key>
+			<string>Sync Claude.ai Skills</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Turn off the download of the plugins enabled for your claude.ai account. Claude Code downloads them into ~/.claude/plugins/synced/ at the start of terminal sessions where you sign in with your claude.ai account and in Cowork sessions, and loads each one as &lt;name&gt;@synced. Set false to stop that download and stop loading the plugins it already synced. Claude Code honors only false: true is the same as unset and doesn't turn syncing on where it's otherwise off. Requires Claude Code v2.1.273 or later.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#syncclaudeaiplugins</string>
+			<key>pfm_name</key>
+			<string>syncClaudeAiPlugins</string>
+			<key>pfm_title</key>
+			<string>Sync Claude.ai Plugins</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Choose which channel plugins can push messages into sessions in your organization. When you set it, Claude Code uses your list in place of the default Anthropic allowlist; each entry names a plugin and the marketplace it comes from. Managed settings only.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#allowedchannelplugins</string>
+			<key>pfm_name</key>
+			<string>allowedChannelPlugins</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_name</key>
+					<string>allowedChannelPluginsItem</string>
+					<key>pfm_title</key>
+					<string>Entry</string>
+					<key>pfm_type</key>
+					<string>dictionary</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>Allowed Channel Plugins</string>
+			<key>pfm_type</key>
+			<string>array</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Block plugin marketplace sources for your organization. Claude Code checks the blocklist on marketplace add and on plugin install, update, refresh, and auto-update, so a marketplace someone added before you set the policy can't be used to fetch plugins either. Blocked sources are checked before download, so they never touch the filesystem. Managed settings only.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#blockedmarketplaces</string>
+			<key>pfm_name</key>
+			<string>blockedMarketplaces</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_name</key>
+					<string>blockedMarketplacesItem</string>
+					<key>pfm_title</key>
+					<string>Entry</string>
+					<key>pfm_type</key>
+					<string>dictionary</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>Blocked Marketplaces</string>
+			<key>pfm_type</key>
+			<string>array</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Allow channels for your organization. On claude.ai Team and Enterprise plans, Claude Code blocks channels until you set this to true. For Anthropic Console accounts that authenticate with an API key, channels are allowed by default. If your organization deploys managed settings, Claude Code blocks channels on those accounts too until you set this key to true. Managed settings only.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#channelsenabled</string>
+			<key>pfm_name</key>
+			<string>channelsEnabled</string>
+			<key>pfm_title</key>
+			<string>Channels Enabled</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Block the command plugin source, which installs a plugin by running a marketplace-declared command on the user's machine. When you set it to true, Claude Code never runs the command, doesn't install or update command-sourced plugins, and stops loading the ones already installed. Set it to false to allow them explicitly. Whenever it blocks command sources, whether you set it to true or leave it unset under allowManagedHooksOnly, it also blocks marketplace headersHelper commands, except for a marketplace that managed settings themselves declare. Requires Claude Code v2.1.229 or later, and the headersHelper block requires v2.1.238 or later. Managed settings only.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#disablecommandpluginsources</string>
+			<key>pfm_name</key>
+			<string>disableCommandPluginSources</string>
+			<key>pfm_title</key>
+			<string>Disable Command Plugin Sources</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Name the marketplaces whose plugins can appear as contextual install suggestions, in spinner tips and pinned at the top of the /plugin Discover tab. The built-in first-party frontend-design tip is unaffected. Suggestions come from each plugin's relevance declaration in its marketplace entry. Managed settings only.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#pluginsuggestionmarketplaces</string>
+			<key>pfm_name</key>
+			<string>pluginSuggestionMarketplaces</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_name</key>
+					<string>pluginSuggestionMarketplacesItem</string>
+					<key>pfm_title</key>
+					<string>Value</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>Plugin Suggestion Marketplaces</string>
+			<key>pfm_type</key>
+			<string>array</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Add your organization's own text to the plugin trust warning Claude Code shows before installation, for example to confirm that plugins from your internal marketplace are vetted. Managed settings only.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#plugintrustmessage</string>
+			<key>pfm_name</key>
+			<string>pluginTrustMessage</string>
+			<key>pfm_title</key>
+			<string>Plugin Trust Message</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Restrict which plugin marketplace sources people in your organization can add and install plugins from. Claude Code enforces the allowlist on marketplace add and on plugin install, update, refresh, and auto-update, before any network or filesystem operation, so a marketplace someone added before you set the policy can't be used to fetch plugins once its source no longer matches. Blocked users see an error naming the managed policy. Managed settings only.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#strictknownmarketplaces</string>
+			<key>pfm_name</key>
+			<string>strictKnownMarketplaces</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_name</key>
+					<string>strictKnownMarketplacesItem</string>
+					<key>pfm_title</key>
+					<string>Entry</string>
+					<key>pfm_type</key>
+					<string>dictionary</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>Strict Known Marketplaces</string>
+			<key>pfm_type</key>
+			<string>array</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Block skills, agents, hooks, and MCP servers from user and project sources, so they can come only from plugins or managed settings. Combine it with strictKnownMarketplaces to control the full customization supply chain: the marketplace allowlist controls which plugins users can install. Managed settings only. Lists the kinds to lock; the JSON value true, which locks all four, is equivalent to listing all four.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#strictpluginonlycustomization</string>
+			<key>pfm_name</key>
+			<string>strictPluginOnlyCustomization</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_name</key>
+					<string>strictPluginOnlyCustomizationItem</string>
+					<key>pfm_range_list</key>
+					<array>
+						<string>skills</string>
+						<string>agents</string>
+						<string>hooks</string>
+						<string>mcp</string>
+					</array>
+					<key>pfm_title</key>
+					<string>Value</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>Strict Plugin Only Customization</string>
+			<key>pfm_type</key>
+			<string>array</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Turn individual plugins on or off, keyed by plugin-name@marketplace-name. A plugin with no entry at any scope falls back to its defaultEnabled value. When you enable or disable a plugin with /plugin or claude plugin enable, Claude Code writes this key for you.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#enabledplugins</string>
+			<key>pfm_name</key>
+			<string>enabledPlugins</string>
+			<key>pfm_title</key>
+			<string>Enabled Plugins</string>
+			<key>pfm_type</key>
+			<string>dictionary</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Register additional plugin marketplaces by name, so that people who open the repository, or everyone your managed settings reach, get the marketplace without adding it themselves. Claude Code registers each marketplace it doesn't already know. Whether a plugin that enabledPlugins names from it installs depends on the plugin's source and which file enables it; that entry has the rules.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#extraknownmarketplaces</string>
+			<key>pfm_name</key>
+			<string>extraKnownMarketplaces</string>
+			<key>pfm_title</key>
+			<string>Extra Known Marketplaces</string>
+			<key>pfm_type</key>
+			<string>dictionary</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Store the non-sensitive answers you give a plugin's userConfig configuration dialog, keyed by plugin ID. Claude Code writes this key to your user settings when you fill in the dialog, so you don't need to edit it by hand. Claude Code stores sensitive options in the macOS Keychain instead, falling back to ~/.claude/.credentials.json when the Keychain rejects the write; on platforms without a supported keychain, it stores them in ~/.claude/.credentials.json.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#pluginconfigs</string>
+			<key>pfm_name</key>
+			<string>pluginConfigs</string>
+			<key>pfm_title</key>
+			<string>Plugin Configs</string>
+			<key>pfm_type</key>
+			<string>dictionary</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>List the managed plugins whose mods run before every mod a user installs, in the listed order. When you set this key in managed settings, name sec-default@builtin in the list to keep the built-in guard. In managed settings, Claude Code skips an id whose plugin doesn't count as your organization's. See Install your organization's mods and set the order for those conditions and for how the two ordering keys work together.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#prependplugins</string>
+			<key>pfm_name</key>
+			<string>prependPlugins</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_name</key>
+					<string>prependPluginsItem</string>
+					<key>pfm_title</key>
+					<string>Value</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>Prepend Plugins</string>
+			<key>pfm_type</key>
+			<string>array</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>List the managed plugins whose mods run after every mod a user installs, in the listed order. An id listed in both prependPlugins and appendPlugins is prepended. In managed settings, Claude Code skips an id whose plugin doesn't count as your organization's.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#appendplugins</string>
+			<key>pfm_name</key>
+			<string>appendPlugins</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_name</key>
+					<string>appendPluginsItem</string>
+					<key>pfm_title</key>
+					<string>Value</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>Append Plugins</string>
+			<key>pfm_type</key>
+			<string>array</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>Load the claude.ai connectors Claude Code fetches itself alongside a deployed managed-mcp.json. Without this key, managed-mcp.json takes exclusive control of MCP servers and suppresses those connectors. Managed settings only.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#allowallclaudeaimcps</string>
+			<key>pfm_name</key>
+			<string>allowAllClaudeAiMcps</string>
+			<key>pfm_title</key>
+			<string>Allow All Claude.ai MCPs</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>Let the built-in Claude in Chrome server run alongside a deployed managed-mcp.json. Without this key, a deployed managed-mcp.json blocks Claude in Chrome in terminal sessions. Requires Claude Code v2.1.282 or later. Managed settings only.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#allowclaudeinchromewithmanagedmcp</string>
+			<key>pfm_name</key>
+			<string>allowClaudeInChromeWithManagedMcp</string>
+			<key>pfm_title</key>
+			<string>Allow Claude In Chrome With Managed MCP</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Allowlist the MCP servers people can add. Claude Code blocks any server that doesn't match an entry wherever it's defined, including plugin servers, servers a user passes with --mcp-config, and servers from claude.ai.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#allowedmcpservers</string>
+			<key>pfm_name</key>
+			<string>allowedMcpServers</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_description</key>
+					<string>Set exactly one of serverName, serverCommand, or serverUrl.</string>
+					<key>pfm_name</key>
+					<string>allowedMcpServersItem</string>
+					<key>pfm_subkeys</key>
+					<array>
+						<dict>
+							<key>pfm_description</key>
+							<string>Server name to match.</string>
+							<key>pfm_name</key>
+							<string>serverName</string>
+							<key>pfm_title</key>
+							<string>Server Name</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+						<dict>
+							<key>pfm_description</key>
+							<string>Command and arguments, matched exactly.</string>
+							<key>pfm_name</key>
+							<string>serverCommand</string>
+							<key>pfm_subkeys</key>
+							<array>
+								<dict>
+									<key>pfm_name</key>
+									<string>serverCommandItem</string>
+									<key>pfm_title</key>
+									<string>Value</string>
+									<key>pfm_type</key>
+									<string>string</string>
+								</dict>
+							</array>
+							<key>pfm_title</key>
+							<string>Server Command</string>
+							<key>pfm_type</key>
+							<string>array</string>
+						</dict>
+						<dict>
+							<key>pfm_description</key>
+							<string>URL pattern; * is a wildcard.</string>
+							<key>pfm_name</key>
+							<string>serverUrl</string>
+							<key>pfm_title</key>
+							<string>Server URL</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+					</array>
+					<key>pfm_title</key>
+					<string>Entry</string>
+					<key>pfm_type</key>
+					<string>dictionary</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>Allowed MCP Servers</string>
+			<key>pfm_type</key>
+			<string>array</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>Make the managed allowlist the only one that applies. Claude Code then reads allowedMcpServers from managed settings alone and ignores allowlists in user, project, and local settings; deniedMcpServers still merges from every settings scope, so users can still block servers for themselves. Administrators set it so a user's own settings can't broaden what the managed allowlist permits. Managed settings only.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#allowmanagedmcpserversonly</string>
+			<key>pfm_name</key>
+			<string>allowManagedMcpServersOnly</string>
+			<key>pfm_title</key>
+			<string>Allow Managed MCP Servers Only</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Block specific MCP servers. Claude Code refuses to load a matching server wherever it's defined, including plugin servers, servers passed with --mcp-config, servers from managed-mcp.json, servers from managedMcpServers, and the claude.ai connectors it fetches itself. In-process type: "sdk" servers are exempt; the app that started the session registers them.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#deniedmcpservers</string>
+			<key>pfm_name</key>
+			<string>deniedMcpServers</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_description</key>
+					<string>Set exactly one of serverName, serverCommand, or serverUrl.</string>
+					<key>pfm_name</key>
+					<string>deniedMcpServersItem</string>
+					<key>pfm_subkeys</key>
+					<array>
+						<dict>
+							<key>pfm_description</key>
+							<string>Server name to match.</string>
+							<key>pfm_name</key>
+							<string>serverName</string>
+							<key>pfm_title</key>
+							<string>Server Name</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+						<dict>
+							<key>pfm_description</key>
+							<string>Command and arguments, matched exactly.</string>
+							<key>pfm_name</key>
+							<string>serverCommand</string>
+							<key>pfm_subkeys</key>
+							<array>
+								<dict>
+									<key>pfm_name</key>
+									<string>serverCommandItem</string>
+									<key>pfm_title</key>
+									<string>Value</string>
+									<key>pfm_type</key>
+									<string>string</string>
+								</dict>
+							</array>
+							<key>pfm_title</key>
+							<string>Server Command</string>
+							<key>pfm_type</key>
+							<string>array</string>
+						</dict>
+						<dict>
+							<key>pfm_description</key>
+							<string>URL pattern; * is a wildcard.</string>
+							<key>pfm_name</key>
+							<string>serverUrl</string>
+							<key>pfm_title</key>
+							<string>Server URL</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+					</array>
+					<key>pfm_title</key>
+					<string>Entry</string>
+					<key>pfm_type</key>
+					<string>dictionary</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>Denied MCP Servers</string>
+			<key>pfm_type</key>
+			<string>array</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>Turn off the claude.ai MCP connectors Claude Code fetches itself, so it neither fetches nor connects them. A true in any settings file applies: a checked-in project .claude/settings.json can opt a repository out of those connectors, but a project-level false can't override a user- or managed-level true.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#disableclaudeaiconnectors</string>
+			<key>pfm_name</key>
+			<string>disableClaudeAiConnectors</string>
+			<key>pfm_title</key>
+			<string>Disable Claude.ai Connectors</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Reject specific servers defined in a project's .mcp.json file so Claude Code never connects them or asks you to approve them. A rejection in any settings file applies, including a project .claude/settings.json checked into the repository.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#disabledmcpjsonservers</string>
+			<key>pfm_name</key>
+			<string>disabledMcpjsonServers</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_name</key>
+					<string>disabledMcpjsonServersItem</string>
+					<key>pfm_title</key>
+					<string>Value</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>Disabled .mcp.json Servers</string>
+			<key>pfm_type</key>
+			<string>array</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Approve every MCP server defined in project .mcp.json files without a prompt. Claude Code writes this key to .claude/settings.local.json when you choose to approve all servers in the approval dialog.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#enableallprojectmcpservers</string>
+			<key>pfm_name</key>
+			<string>enableAllProjectMcpServers</string>
+			<key>pfm_title</key>
+			<string>Enable All Project MCP Servers</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Approve specific servers defined in project .mcp.json files so Claude Code connects them without asking. Claude Code writes this key to .claude/settings.local.json when you approve a server in the approval dialog.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#enabledmcpjsonservers</string>
+			<key>pfm_name</key>
+			<string>enabledMcpjsonServers</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_name</key>
+					<string>enabledMcpjsonServersItem</string>
+					<key>pfm_title</key>
+					<string>Value</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>Enabled .mcp.json Servers</string>
+			<key>pfm_type</key>
+			<string>array</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Provide remote MCP servers to every user from managed settings. Users keep the servers they add themselves and can't edit or remove the ones you provide. Requires Claude Code v2.1.259 or later. Managed settings only.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#managedmcpservers</string>
+			<key>pfm_name</key>
+			<string>managedMcpServers</string>
+			<key>pfm_title</key>
+			<string>Managed MCP Servers</string>
+			<key>pfm_type</key>
+			<string>dictionary</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Run the main thread as a named subagent, so Claude Code applies that subagent's system prompt, tool restrictions, and model to your session. The same key sets the default agent for sessions you dispatch from claude agents.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#agent</string>
+			<key>pfm_name</key>
+			<string>agent</string>
+			<key>pfm_title</key>
+			<string>Agent</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Choose what this session does with messages arriving from your other Claude Code sessions. When no value applies, Claude Code decides per message from the two sessions' permission-mode classes. Requires Claude Code v2.1.224 or later.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#crosssessioninbound</string>
+			<key>pfm_name</key>
+			<string>crossSessionInbound</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>accept</string>
+				<string>hold</string>
+				<string>refuse</string>
+			</array>
+			<key>pfm_title</key>
+			<string>Cross Session Inbound</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Turn off background agents and agent view: claude agents, --bg, /background, and the on-demand supervisor. Set it in managed settings to enforce it for an organization.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#disableagentview</string>
+			<key>pfm_name</key>
+			<string>disableAgentView</string>
+			<key>pfm_title</key>
+			<string>Disable Agent View</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Require your explicit approval before Claude's SendMessage reaches one of your sessions beyond this machine; see Require approval for cross-machine messages. The approval prompt appears even in bypassPermissions mode.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#isolatepeermachines</string>
+			<key>pfm_name</key>
+			<string>isolatePeerMachines</string>
+			<key>pfm_title</key>
+			<string>Isolate Peer Machines</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>On macOS and Linux, place a corporate launcher command in front of the background processes Claude Code starts. Claude Code runs the launcher with its own command line appended, so the launcher must exec into Claude Code; see Run Claude Code behind a corporate launcher for the launcher contract. Requires Claude Code v2.1.210 or later.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#processwrapper</string>
+			<key>pfm_name</key>
+			<string>processWrapper</string>
+			<key>pfm_title</key>
+			<string>Process Wrapper</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>in-process</string>
+			<key>pfm_description</key>
+			<string>Choose where Claude Code shows agent team teammates: inside your main terminal pane, or in split panes when your terminal supports them. See Choose a display mode.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#teammatemode</string>
+			<key>pfm_name</key>
+			<string>teammateMode</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>in-process</string>
+				<string>auto</string>
+				<string>tmux</string>
+				<string>iterm2</string>
+			</array>
+			<key>pfm_title</key>
+			<string>Teammate Mode</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Configure how Claude Code creates and manages git worktrees for --worktree, the EnterWorktree tool, and isolated subagents and background sessions.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#worktree</string>
+			<key>pfm_name</key>
+			<string>worktree</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_default</key>
+					<string>fresh</string>
+					<key>pfm_description</key>
+					<string>Choose which ref new worktrees branch from. "fresh" branches from origin/&lt;default-branch&gt; for a clean tree matching the remote; "head" branches from your current local HEAD, so unpushed commits and feature-branch state are present in the worktree.</string>
+					<key>pfm_documentation_url</key>
+					<string>https://code.claude.com/docs/en/settings-reference#worktree-baseref</string>
+					<key>pfm_name</key>
+					<string>baseRef</string>
+					<key>pfm_range_list</key>
+					<array>
+						<string>fresh</string>
+						<string>head</string>
+					</array>
+					<key>pfm_title</key>
+					<string>Base Ref</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>Symlink directories from the main repository into each worktree so you don't duplicate large directories on disk.</string>
+					<key>pfm_documentation_url</key>
+					<string>https://code.claude.com/docs/en/settings-reference#worktree-symlinkdirectories</string>
+					<key>pfm_name</key>
+					<string>symlinkDirectories</string>
+					<key>pfm_subkeys</key>
+					<array>
+						<dict>
+							<key>pfm_name</key>
+							<string>symlinkDirectoriesItem</string>
+							<key>pfm_title</key>
+							<string>Value</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+					</array>
+					<key>pfm_title</key>
+					<string>Symlink Directories</string>
+					<key>pfm_type</key>
+					<string>array</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>Check out only the listed directories in each worktree through git sparse-checkout. Claude Code writes only those directories plus root-level files to disk, which is faster in large monorepos; see Check out only the directories you need.</string>
+					<key>pfm_documentation_url</key>
+					<string>https://code.claude.com/docs/en/settings-reference#worktree-sparsepaths</string>
+					<key>pfm_name</key>
+					<string>sparsePaths</string>
+					<key>pfm_subkeys</key>
+					<array>
+						<dict>
+							<key>pfm_name</key>
+							<string>sparsePathsItem</string>
+							<key>pfm_title</key>
+							<string>Value</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+					</array>
+					<key>pfm_title</key>
+					<string>Sparse Paths</string>
+					<key>pfm_type</key>
+					<string>array</string>
+				</dict>
+				<dict>
+					<key>pfm_default</key>
+					<string>worktree</string>
+					<key>pfm_description</key>
+					<string>Choose how background sessions isolate their file edits. If you moved a session to the background with ← or /background, that session edits files in place whatever this key says. With "worktree", Claude Code blocks Edit and Write in the main checkout until the session calls EnterWorktree; with "none", background jobs edit the working copy directly. Set "none" for a repository where git worktrees are impractical.</string>
+					<key>pfm_documentation_url</key>
+					<string>https://code.claude.com/docs/en/settings-reference#worktree-bgisolation</string>
+					<key>pfm_name</key>
+					<string>bgIsolation</string>
+					<key>pfm_range_list</key>
+					<array>
+						<string>worktree</string>
+						<string>none</string>
+					</array>
+					<key>pfm_title</key>
+					<string>Background Isolation</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>Worktree</string>
+			<key>pfm_type</key>
+			<string>dictionary</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>Allow Claude to send a push notification to your phone when it decides one is worth sending, for example when a long task finishes. Claude Code syncs this choice to your account, and pushes arrive while Remote Control is connected. Appears in /config as Push when Claude decides.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#agentpushnotifenabled</string>
+			<key>pfm_name</key>
+			<string>agentPushNotifEnabled</string>
+			<key>pfm_title</key>
+			<string>Agent Push Notification Enabled</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Show a one-line session recap when you return to the terminal after a few minutes away. Set it to false, or turn off Session recap in /config, to stop the recap.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#awaysummaryenabled</string>
+			<key>pfm_name</key>
+			<string>awaySummaryEnabled</string>
+			<key>pfm_title</key>
+			<string>Away Summary Enabled</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string></string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#disableartifact</string>
+			<key>pfm_name</key>
+			<string>disableArtifact</string>
+			<key>pfm_title</key>
+			<string>Disable Artifact</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Stop Claude Code from registering the claude-cli:// protocol handler with the operating system, which it otherwise does after you send the first prompt of an interactive session. Deep links let external tools open a Claude Code session with a pre-filled prompt. Set this in environments where protocol handler registration is restricted or managed separately.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#disabledeeplinkregistration</string>
+			<key>pfm_name</key>
+			<string>disableDeepLinkRegistration</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>disable</string>
+			</array>
+			<key>pfm_title</key>
+			<string>Disable Deep Link Registration</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Turn off Code sessions that run on the device in the desktop app, for deployments where developers should work on remote machines over SSH. In the Code tab, the Local environment stays in the environment dropdown but is grayed out and can't be selected, with a tooltip saying your organization turned it off; on Windows the WSL entry is grayed out the same way, though whether WSL sessions run on a managed device at all is governed separately. New sessions default to the first SSH connection if one is configured, and the app refuses to start or resume a session on the device, including an SSH connection back to the same machine. SSH sessions to other hosts and cloud sessions are unaffected. The desktop app reads this key; the terminal CLI ignores it. Requires Claude Desktop v1.37937.0 or later. Managed settings only.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#disabledesktoplocalsessions</string>
+			<key>pfm_name</key>
+			<string>disableDesktopLocalSessions</string>
+			<key>pfm_title</key>
+			<string>Disable Desktop Local Sessions</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>Turn off Remote Control: Claude Code then refuses claude remote-control, the --remote-control flag, auto-start, and the in-session toggle, and reports that your organization's policy disabled it. Place it in managed settings for per-device MDM enforcement.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#disableremotecontrol</string>
+			<key>pfm_name</key>
+			<string>disableRemoteControl</string>
+			<key>pfm_title</key>
+			<string>Disable Remote Control</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Turn off the Artifact tool, which publishes session output as a private web page on claude.ai. When you turn the Artifacts row off in /config, Claude Code writes this key to your user settings, so you don't usually edit it by hand.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#enableartifact</string>
+			<key>pfm_name</key>
+			<string>enableArtifact</string>
+			<key>pfm_title</key>
+			<string>Enable Artifact</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>Get a push notification on your phone when a permission prompt or question is waiting for your input. Claude Code sends these only while Remote Control is connected. Appears in /config as Push when actions required.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#inputneedednotifenabled</string>
+			<key>pfm_name</key>
+			<string>inputNeededNotifEnabled</string>
+			<key>pfm_title</key>
+			<string>Input Needed Notification Enabled</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>auto</string>
+			<key>pfm_description</key>
+			<string>Choose how Claude Code notifies you when a task completes or a permission prompt is waiting. Appears in /config as Local notifications.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#preferrednotifchannel</string>
+			<key>pfm_name</key>
+			<string>preferredNotifChannel</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>auto</string>
+				<string>terminal_bell</string>
+				<string>iterm2</string>
+				<string>iterm2_with_bell</string>
+				<string>kitty</string>
+				<string>ghostty</string>
+				<string>notifications_disabled</string>
+			</array>
+			<key>pfm_title</key>
+			<string>Preferred Notification Channel</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Connect Remote Control automatically when each interactive session starts, instead of waiting for /remote-control. Set it to true to turn auto-connect on, false to turn it off. Appears in /config as Enable Remote Control for all sessions.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#remotecontrolatstartup</string>
+			<key>pfm_name</key>
+			<string>remoteControlAtStartup</string>
+			<key>pfm_title</key>
+			<string>Remote Control At Startup</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Add SSH connections to the Desktop environment dropdown. Administrators use it to distribute shared connections to a team. Connections you define in managed settings show as managed. Users can select them and set their own Worktree folder for them, but can't edit anything else or delete them in the app.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#sshconfigs</string>
+			<key>pfm_name</key>
+			<string>sshConfigs</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_name</key>
+					<string>sshConfigsItem</string>
+					<key>pfm_title</key>
+					<string>Entry</string>
+					<key>pfm_type</key>
+					<string>dictionary</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>SSH Configs</string>
+			<key>pfm_type</key>
+			<string>array</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Limit the hosts a Desktop SSH session can connect to. Only the Desktop app reads this key; the CLI doesn't. Patterns are case-insensitive: * matches any host, *.example.com matches example.com and every subdomain, and anything else is an exact match against the hostname after ~/.ssh/config resolution. An empty array turns SSH sessions off. Managed settings only.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#sshhostallowlist</string>
+			<key>pfm_name</key>
+			<string>sshHostAllowlist</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_name</key>
+					<string>sshHostAllowlistItem</string>
+					<key>pfm_title</key>
+					<string>Value</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>SSH Host Allowlist</string>
+			<key>pfm_type</key>
+			<string>array</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>List the services a machine may reach Claude through, such as the Anthropic API, Amazon Bedrock, or an LLM gateway. A session on a provider that isn't listed is refused at startup, at login, and when it next contacts the API, so switching to an unlisted provider mid-session is refused too. The refusal message names what selected the provider and the steps to continue. Requires Claude Code v2.1.285 or later. Managed settings only.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#allowedproviders</string>
+			<key>pfm_name</key>
+			<string>allowedProviders</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_name</key>
+					<string>allowedProvidersItem</string>
+					<key>pfm_title</key>
+					<string>Value</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>Allowed Providers</string>
+			<key>pfm_type</key>
+			<string>array</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Run your own command to produce the credential Claude Code sends with model requests. Claude Code runs the command through the system shell, /bin/sh on macOS and Linux and cmd on Windows, and sends its output as both the X-Api-Key and Authorization: Bearer headers. Use it for dynamic or rotating credentials, such as short-lived tokens fetched from a vault.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#apikeyhelper</string>
+			<key>pfm_name</key>
+			<string>apiKeyHelper</string>
+			<key>pfm_title</key>
+			<string>API Key Helper</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Run your own command, such as aws sso login, to refresh the credentials in your .aws directory when the ones Claude Code has for Amazon Bedrock stop working. Claude Code checks the current credentials against STS first and runs the command only when that check fails, then reads the refreshed .aws directory.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#awsauthrefresh</string>
+			<key>pfm_name</key>
+			<string>awsAuthRefresh</string>
+			<key>pfm_title</key>
+			<string>AWS Auth Refresh</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Run your own command that prints AWS credentials as JSON, so Claude Code can call Amazon Bedrock with credentials that don't live in your .aws directory. Claude Code accepts the aws sts output shape and the flat aws configure export-credentials shape, and scopes the credentials to its own Bedrock client, so the shell commands Claude runs still see your ambient credentials.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#awscredentialexport</string>
+			<key>pfm_name</key>
+			<string>awsCredentialExport</string>
+			<key>pfm_title</key>
+			<string>AWS Credential Export</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Restrict which kind of account people can log in with. Set "claudeai" to allow only claude.ai accounts, "console" to allow only Claude Console accounts, or "gateway" to send people to a cloud gateway instead of a first-party login. Administrators set it in managed settings and pair it with forceLoginOrgUUID to keep developers' claude.ai logins inside one organization. If you set it to "claudeai" or "console" in any settings file, Claude Code also stops offering the keyless Console sign-in in the sessions that file applies to.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#forceloginmethod</string>
+			<key>pfm_name</key>
+			<string>forceLoginMethod</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>claudeai</string>
+				<string>console</string>
+				<string>gateway</string>
+			</array>
+			<key>pfm_title</key>
+			<string>Force Login Method</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Set the gateway URL the /login Cloud gateway screen connects to, so people reach your cloud gateway without typing its address. The screen has no URL field: with this key set, it shows your gateway URL and connects when the person presses Enter; without it, it tells them to contact their IT administrator.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#forcelogingatewayurl</string>
+			<key>pfm_name</key>
+			<string>forceLoginGatewayUrl</string>
+			<key>pfm_title</key>
+			<string>Force Login Gateway URL</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>From a managed source, require claude.ai account logins to belong to one Anthropic organization, given as a single UUID, or to any of several organizations, given as an array. From any settings file, Claude Code also uses a single UUID to pre-select that organization during a claude.ai or Claude Console login, and pre-selects nothing for an array. If you set the key in any settings file, Claude Code also stops offering the keyless Console sign-in in the sessions that file applies to and creates an API key instead.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#forceloginorguuid</string>
+			<key>pfm_name</key>
+			<string>forceLoginOrgUUID</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_description</key>
+					<string>Organization UUID.</string>
+					<key>pfm_name</key>
+					<string>forceLoginOrgUUIDItem</string>
+					<key>pfm_title</key>
+					<string>Value</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>Force Login Org UUID</string>
+			<key>pfm_type</key>
+			<string>array</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Declare the public IPv4 blocks that your organization numbers its internal network from, so /login accepts a cloud gateway there. Requires Claude Code v2.1.268 or later. Managed settings only.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#gatewayinternalnetworks</string>
+			<key>pfm_name</key>
+			<string>gatewayInternalNetworks</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_name</key>
+					<string>gatewayInternalNetworksItem</string>
+					<key>pfm_title</key>
+					<string>Value</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>Gateway Internal Networks</string>
+			<key>pfm_type</key>
+			<string>array</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Run your own command to refresh Google Cloud Application Default Credentials when Claude Code finds they've expired or can't be loaded, so Google Cloud's Agent Platform requests keep working without you re-authenticating by hand.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#gcpauthrefresh</string>
+			<key>pfm_name</key>
+			<string>gcpAuthRefresh</string>
+			<key>pfm_title</key>
+			<string>GCP Auth Refresh</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Run your own command to generate the headers Claude Code sends with OpenTelemetry exports, for backends whose tokens rotate. Claude Code runs it at startup and periodically after that, and expects a JSON object of string header values on stdout.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#otelheadershelper</string>
+			<key>pfm_name</key>
+			<string>otelHeadersHelper</string>
+			<key>pfm_title</key>
+			<string>OTel Headers Helper</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Choose which release channel background auto-updates and claude update follow. Set "stable" for a version that is typically about one week old and skips releases with major regressions, or "latest" for the most recent release.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#autoupdateschannel</string>
+			<key>pfm_name</key>
+			<string>autoUpdatesChannel</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>latest</string>
+				<string>stable</string>
+			</array>
+			<key>pfm_title</key>
+			<string>Auto Updates Channel</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Keep background auto-updates and claude update from installing any version below this one, so moving to the "stable" channel doesn't downgrade you from a newer "latest" build. Claude Code writes this key for you when you choose to stay on your current version while switching channels in /config, and clears it when you switch back to "latest".</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#minimumversion</string>
+			<key>pfm_name</key>
+			<string>minimumVersion</string>
+			<key>pfm_title</key>
+			<string>Minimum Version</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Set the newest Claude Code version your organization allows to start. When the running version is newer, Claude Code exits at startup and tells the user to install an approved version through your organization's approved method; claude install &lt;version&gt; may also work. Requires Claude Code v2.1.163 or later. Managed settings only.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#requiredmaximumversion</string>
+			<key>pfm_name</key>
+			<string>requiredMaximumVersion</string>
+			<key>pfm_title</key>
+			<string>Required Maximum Version</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Set the oldest Claude Code version your organization allows to start. When the running version is older, Claude Code exits at startup and tells the user to update through your organization's approved method. The check runs at startup only, so a session that's already running continues. Requires Claude Code v2.1.163 or later. Managed settings only.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#requiredminimumversion</string>
+			<key>pfm_name</key>
+			<string>requiredMinimumVersion</string>
+			<key>pfm_title</key>
+			<string>Required Minimum Version</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Stop Claude from using its tools to read or act on external pages in the desktop app's Browser pane. People in your organization can still open external sites themselves, and local dev server previews keep working with Claude's tools. The desktop app reads this key; the terminal CLI ignores it. Managed settings only.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#browserexternalpagetools</string>
+			<key>pfm_name</key>
+			<string>browserExternalPageTools</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>disabled</string>
+			</array>
+			<key>pfm_title</key>
+			<string>Browser External Page Tools</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Turn off external browsing in the desktop app's Browser pane for people and Claude alike. Localhost dev server previews keep working. The desktop app reads this key; the terminal CLI ignores it. Managed settings only.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#disablebrowserexternalnavigation</string>
+			<key>pfm_name</key>
+			<string>disableBrowserExternalNavigation</string>
+			<key>pfm_title</key>
+			<string>Disable Browser External Navigation</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Block Claude's tools for the desktop app's iOS Simulator pane. People keep manual use of the pane; only Claude's access is removed, and nobody can turn it back on from inside the app. The desktop app reads this key; the terminal CLI ignores it. Managed settings only.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#disablemobilesimulatortools</string>
+			<key>pfm_name</key>
+			<string>disableMobileSimulatorTools</string>
+			<key>pfm_title</key>
+			<string>Disable Mobile Simulator Tools</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<integer>30</integer>
+			<key>pfm_description</key>
+			<string>Set how many days Claude Code keeps session transcripts and other application data before deleting them. Claude Code runs the deletion as a background sweep after a session starts, as long as it can safely determine the retention period. The sweep deletes transcripts without showing a message, so a session you haven't used for longer than the retention period no longer appears in the /resume picker.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#cleanupperioddays</string>
+			<key>pfm_name</key>
+			<string>cleanupPeriodDays</string>
+			<key>pfm_title</key>
+			<string>Cleanup Period Days</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<integer>0</integer>
+			<key>pfm_description</key>
+			<string>Set an age limit in days for the transcripts of sessions you started or most recently continued in Claude Desktop or Cowork. Without this key, Claude Code keeps those transcripts at any age. Claude Code deletes each one once it's older than both this limit and cleanupPeriodDays, so with cleanupPeriodDays at its default of 30, a value of 7 still keeps them 30 days. Cleaned up automatically lists the cases where cleanupPeriodDays applies instead and Claude Code ignores this key. Requires Claude Code v2.1.248 or later.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#desktopsessioncleanupperioddays</string>
+			<key>pfm_name</key>
+			<string>desktopSessionCleanupPeriodDays</string>
+			<key>pfm_title</key>
+			<string>Desktop Session Cleanup Period Days</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>notify</string>
+			<key>pfm_description</key>
+			<string>Control Claude-drafted feedback: whether Claude can queue feedback drafts for you to review, and whether Claude Code shows a card when Claude queues one.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#feedbackdrafts</string>
+			<key>pfm_name</key>
+			<string>feedbackDrafts</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>notify</string>
+				<string>quiet</string>
+				<string>off</string>
+			</array>
+			<key>pfm_title</key>
+			<string>Feedback Drafts</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Set the probability that the session quality survey appears when a session is eligible for it. Set 0 to keep the survey from appearing.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#feedbacksurveyrate</string>
+			<key>pfm_name</key>
+			<string>feedbackSurveyRate</string>
+			<key>pfm_title</key>
+			<string>Feedback Survey Rate</string>
+			<key>pfm_type</key>
+			<string>real</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Skip the WebFetch domain safety check, which sends each requested hostname to api.anthropic.com before fetching. Set true in environments that block traffic to Anthropic, such as Amazon Bedrock, Google Cloud's Agent Platform, or Microsoft Foundry deployments with restrictive egress.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#skipwebfetchpreflight</string>
+			<key>pfm_name</key>
+			<string>skipWebFetchPreflight</string>
+			<key>pfm_title</key>
+			<string>Skip Web Fetch Preflight</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>Reject the --plugin-dir, --plugin-url, --agents, and --mcp-config CLI flags at startup, which users could otherwise pass to bypass strictKnownMarketplaces for a single run. Claude Code exits with an error naming the rejected flags. In cloud sessions, Claude Code instead starts the session and drops every server-delivered --mcp-config entry except in-process type: "sdk" entries and a Claude Tag session's Slack tools. Requires Claude Code v2.1.193 or later. Managed settings only.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#disablesideloadflags</string>
+			<key>pfm_name</key>
+			<string>disableSideloadFlags</string>
+			<key>pfm_title</key>
+			<string>Disable Sideload Flags</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>Block CLI startup until Claude Code has freshly fetched server-managed settings. If the fetch fails, Claude Code exits instead of continuing with cached or no settings. Set it when your environment can't accept even a brief window in which a session runs without its managed policy. Managed settings only.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#forceremotesettingsrefresh</string>
+			<key>pfm_name</key>
+			<string>forceRemoteSettingsRefresh</string>
+			<key>pfm_title</key>
+			<string>Force Remote Settings Refresh</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>first-wins</string>
+			<key>pfm_description</key>
+			<string>Choose whether Claude Code applies only the highest-priority managed source your organization delivers, or combines every admin source it delivers. By default Claude Code takes the highest-priority source that carries a policy key and ignores the rest. A policy key is any settings key other than this one and wslInheritsWindowsSettings. Under that default, once server-managed settings or an MDM policy deliver a policy key, a managed-settings.json file contributes only the keys Claude Code reads from every admin source. With "merge", every admin source you deliver contributes its keys to one combined policy. Requires Claude Code v2.1.242 or later. Managed settings only.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#managedsourcesbehavior</string>
+			<key>pfm_name</key>
+			<string>managedSourcesBehavior</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>first-wins</string>
+				<string>merge</string>
+			</array>
+			<key>pfm_title</key>
+			<string>Managed Sources Behavior</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>first-wins</string>
+			<key>pfm_description</key>
+			<string>Choose whether Claude Code applies managed settings supplied by an embedding host process, such as the Agent SDK or an IDE extension, when an admin-deployed managed tier is also present. With "first-wins", Claude Code drops the host-supplied settings; with "merge", it applies them under the admin tier through a restrictive-only filter. Set "merge" when a host needs to pass its own restrictions to the sessions it launches, for example Claude Desktop delivering a gateway's egress allowlist. Managed settings only.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#parentsettingsbehavior</string>
+			<key>pfm_name</key>
+			<string>parentSettingsBehavior</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>first-wins</string>
+				<string>merge</string>
+			</array>
+			<key>pfm_title</key>
+			<string>Parent Settings Behavior</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Run an executable you deploy that computes managed settings at startup, so you can derive policy from device posture, identity, or a remote service instead of a static file. Claude Code runs the helper before it accepts the first prompt and treats the settings it emits as the managed settings for the session. Managed settings only.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://code.claude.com/docs/en/settings-reference#policyhelper</string>
+			<key>pfm_name</key>
+			<string>policyHelper</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_description</key>
+					<string>Name the helper executable Claude Code runs. For what happens when the path breaks the rules below, see Helper failures. Managed settings only.</string>
+					<key>pfm_documentation_url</key>
+					<string>https://code.claude.com/docs/en/settings-reference#policyhelper-path</string>
+					<key>pfm_name</key>
+					<string>path</string>
+					<key>pfm_title</key>
+					<string>Path</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+				<dict>
+					<key>pfm_default</key>
+					<integer>10000</integer>
+					<key>pfm_description</key>
+					<string>Set how long Claude Code waits for the helper before treating the run as failed. A timed-out run fails the same way as a non-zero exit, so at startup Claude Code refuses to start. Managed settings only.</string>
+					<key>pfm_documentation_url</key>
+					<string>https://code.claude.com/docs/en/settings-reference#policyhelper-timeoutms</string>
+					<key>pfm_name</key>
+					<string>timeoutMs</string>
+					<key>pfm_title</key>
+					<string>Timeout (ms)</string>
+					<key>pfm_type</key>
+					<string>integer</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>Have Claude Code re-run the helper in the background on an interval so policy changes reach a running session. When a refresh succeeds, its output replaces the previous managed settings without a restart; when a refresh fails, Claude Code keeps the policy it already has. Managed settings only.</string>
+					<key>pfm_documentation_url</key>
+					<string>https://code.claude.com/docs/en/settings-reference#policyhelper-refreshintervalms</string>
+					<key>pfm_name</key>
+					<string>refreshIntervalMs</string>
+					<key>pfm_title</key>
+					<string>Refresh Interval (ms)</string>
+					<key>pfm_type</key>
+					<string>integer</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>Policy Helper</string>
+			<key>pfm_type</key>
+			<string>dictionary</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Settings for remote sessions.</string>
+			<key>pfm_name</key>
+			<string>remote</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_description</key>
+					<string>Pick the default cloud environment for cloud sessions you create from the CLI, such as with claude --cloud. Claude Code writes this key to your user settings when you pick an environment with /remote-env.</string>
+					<key>pfm_documentation_url</key>
+					<string>https://code.claude.com/docs/en/settings-reference#remote-defaultenvironmentid</string>
+					<key>pfm_name</key>
+					<string>defaultEnvironmentId</string>
+					<key>pfm_title</key>
+					<string>Default Environment ID</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>Remote</string>
+			<key>pfm_type</key>
+			<string>dictionary</string>
+		</dict>
+	</array>
+	<key>pfm_title</key>
+	<string>Claude Code</string>
+	<key>pfm_unique</key>
+	<true/>
+	<key>pfm_version</key>
+	<integer>1</integer>
+</dict>
+</plist>
