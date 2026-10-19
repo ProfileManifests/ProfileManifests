@@ -145,13 +145,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 					<string>menubarSuffix</string>
 					<string>showDockIcon</string>
 				</array>
-				<key>Localization</key>
-				<array>
-					<string>localizedDaySuffix</string>
-					<string>localizedPopoverTitle</string>
-					<string>localizedRestartWarning</string>
-					<string>localizedUpToDateMessage</string>
-				</array>
 				<key>Notification</key>
 				<array>
 					<string>notificationBody</string>
@@ -248,70 +241,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>Ignore Apple Update Channel</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
-		</dict>
-		<dict>
-			<key>pfm_default</key>
-			<false/>
-			<key>pfm_description</key>
-			<string>Localized Day Suffix</string>
-			<key>pfm_documentation_url</key>
-			<string>https://github.com/jeremy4971/sumb_public/blob/main/configuration_profile/SUMB_Settings.mobileconfig</string>
-			<key>pfm_name</key>
-			<string>localizedDaySuffix</string>
-			<key>pfm_title</key>
-			<string>Localized Day Suffix</string>
-			<key>pfm_type</key>
-			<string>string</string>
-			<key>pfm_value_placeholder</key>
-			<string>d</string>
-		</dict>
-		<dict>
-			<key>pfm_default</key>
-			<false/>
-			<key>pfm_description</key>
-			<string>Localized Pop Over Title</string>
-			<key>pfm_documentation_url</key>
-			<string>https://github.com/jeremy4971/sumb_public/blob/main/configuration_profile/SUMB_Settings.mobileconfig</string>
-			<key>pfm_name</key>
-			<string>localizedPopoverTitle</string>
-			<key>pfm_title</key>
-			<string>Localized Pop Over Title</string>
-			<key>pfm_type</key>
-			<string>string</string>
-			<key>pfm_value_placeholder</key>
-			<string>macOS Update</string>
-		</dict>
-		<dict>
-			<key>pfm_default</key>
-			<false/>
-			<key>pfm_description</key>
-			<string>Localized Restart Warning</string>
-			<key>pfm_documentation_url</key>
-			<string>https://github.com/jeremy4971/sumb_public/blob/main/configuration_profile/SUMB_Settings.mobileconfig</string>
-			<key>pfm_name</key>
-			<string>localizedRestartWarning</string>
-			<key>pfm_title</key>
-			<string>Localized Restart Warning</string>
-			<key>pfm_type</key>
-			<string>string</string>
-			<key>pfm_value_placeholder</key>
-			<string>Be aware that your Mac will automatically restart after the deadline. [Learn more...](https://support.apple.com/en-us/100100)</string>
-		</dict>
-		<dict>
-			<key>pfm_default</key>
-			<false/>
-			<key>pfm_description</key>
-			<string>Localized Up To Date Message</string>
-			<key>pfm_documentation_url</key>
-			<string>https://github.com/jeremy4971/sumb_public/blob/main/configuration_profile/SUMB_Settings.mobileconfig</string>
-			<key>pfm_name</key>
-			<string>localizedUpToDateMessage</string>
-			<key>pfm_title</key>
-			<string>Localized Up To Date Message</string>
-			<key>pfm_type</key>
-			<string>string</string>
-			<key>pfm_value_placeholder</key>
-			<string>Open Software Update</string>
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
@@ -621,7 +550,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_app_min</key>
 			<string>2.0.0</string>
 			<key>pfm_default</key>
-			<false/>
+			<string>Remind Me</string>
 			<key>pfm_description</key>
 			<string>Label of button that opens the Scheduler window.</string>
 			<key>pfm_documentation_url</key>
