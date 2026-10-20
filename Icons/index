@@ -882,6 +882,13 @@
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/fr.handbrake.HandBrake.png</string>
 		</dict>
+		<key>fr.jeremyb.sumb</key>
+		<dict>
+			<key>hash</key>
+			<string>28c3653f9950c7fad0a3c164d92b940c</string>
+			<key>path</key>
+			<string>Icons/ManagedPreferencesApplications/fr.jeremyb.sumb.png</string>
+		</dict>
 		<key>io.macadmins.Outset</key>
 		<dict>
 			<key>hash</key>
@@ -1741,6 +1748,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2026-10-07T12:57:11Z</date>
+	<date>2026-10-20T03:40:41Z</date>
 </dict>
 </plist>
