@@ -1,0 +1,743 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>pfm_app_url</key>
+	<string>https://github.com/jeremy4971/sumb_public</string>
+	<key>pfm_description</key>
+	<string>Use this section to define settings for SUMB (Software Update Menu Bar)</string>
+	<key>pfm_documentation_url</key>
+	<string>https://github.com/jeremy4971/sumb_public/wiki</string>
+	<key>pfm_domain</key>
+	<string>fr.jeremyb.sumb</string>
+	<key>pfm_format_version</key>
+	<integer>1</integer>
+	<key>pfm_last_modified</key>
+	<date>2026-10-19T03:51:36Z</date>
+	<key>pfm_platforms</key>
+	<array>
+		<string>macOS</string>
+	</array>
+	<key>pfm_subkeys</key>
+	<array>
+		<dict>
+			<key>pfm_default</key>
+			<string>Configure SUMB (Software Update Menu Bar) settings</string>
+			<key>pfm_description</key>
+			<string>The human-readable description of this payload. This description appears on the Detail screen.</string>
+			<key>pfm_name</key>
+			<string>PayloadDescription</string>
+			<key>pfm_title</key>
+			<string>Payload Description</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>SUMB (Software Update Menu Bar)</string>
+			<key>pfm_description</key>
+			<string>The human-readable name for the profile payload. The name appears on the Detail screen and doesn't need to be unique.</string>
+			<key>pfm_name</key>
+			<string>PayloadDisplayName</string>
+			<key>pfm_require</key>
+			<string>always</string>
+			<key>pfm_title</key>
+			<string>Payload Display Name</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>fr.jeremyb.sumb</string>
+			<key>pfm_description</key>
+			<string>The reverse-DNS-style identifier for the payload. This identifier is usually the same as the 'TopLevel' value, with an additional appended component. This string must be unique within the profile.
+During a profile replacement, the system updates payloads with the same 'PayloadIdentifier' and 'PayloadUUID' in the old and new profiles.</string>
+			<key>pfm_name</key>
+			<string>PayloadIdentifier</string>
+			<key>pfm_require</key>
+			<string>always</string>
+			<key>pfm_title</key>
+			<string>Payload Identifier</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>fr.jeremyb.sumb</string>
+			<key>pfm_description</key>
+			<string>The payload type, which each payload domain's reference page specifies.</string>
+			<key>pfm_name</key>
+			<string>PayloadType</string>
+			<key>pfm_require</key>
+			<string>always</string>
+			<key>pfm_title</key>
+			<string>Payload Type</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string></string>
+			<key>pfm_description</key>
+			<string>The globally unique identifier for the payload. The actual content is unimportant, but must be globally unique. In macOS, use 'uuidgen' to generate UUIDs.
+During a profile replacement, the system updates payloads with the same 'PayloadIdentifier' and 'PayloadUUID' in the old and new profiles.</string>
+			<key>pfm_format</key>
+			<string>^[0-9A-Za-z]{8}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{12}$</string>
+			<key>pfm_name</key>
+			<string>PayloadUUID</string>
+			<key>pfm_require</key>
+			<string>always</string>
+			<key>pfm_title</key>
+			<string>Payload UUID</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<integer>1</integer>
+			<key>pfm_description</key>
+			<string>The version of this specific payload.</string>
+			<key>pfm_name</key>
+			<string>PayloadVersion</string>
+			<key>pfm_range_list</key>
+			<array>
+				<integer>1</integer>
+			</array>
+			<key>pfm_require</key>
+			<string>always</string>
+			<key>pfm_title</key>
+			<string>Payload Version</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>The human-readable string containing the name of the organization that provides the profile. This value doesn't need to match the organization payload value in the enclosing dictionary.</string>
+			<key>pfm_name</key>
+			<string>PayloadOrganization</string>
+			<key>pfm_title</key>
+			<string>Payload Organization</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_name</key>
+			<string>PFC_SegmentedControl_0</string>
+			<key>pfm_range_list_titles</key>
+			<array>
+				<string>General</string>
+				<string>Menubar</string>
+				<string>Localization</string>
+				<string>Notification</string>
+				<string>Popup</string>
+			</array>
+			<key>pfm_require</key>
+			<string>always</string>
+			<key>pfm_segments</key>
+			<dict>
+				<key>General</key>
+				<array>
+					<string>hideIconWhenUpToDate</string>
+					<string>hideSettings</string>
+					<string>ignoreAppleUpdateChannel</string>
+					<string>showDockIcon</string>
+					<string>notificationSound</string>
+				</array>
+				<key>Menubar</key>
+				<array>
+					<string>popoverTitle</string>
+					<string>popoverUpdateButton</string>
+					<string>popoverFooter</string>
+					<string>popoverUpToDateMessage</string>
+					<string>menubarDotBlinkingThresholdDays</string>
+					<string>menubarPreparingMessage</string>
+					<string>menubarPrefix</string>
+					<string>menubarSuffix</string>
+				</array>
+				<key>Notification</key>
+				<array>
+					<string>notificationsEnabled</string>
+					<string>notificationThresholdDays</string>
+					<string>notificationIntervalMinutes</string>
+					<string>notificationTitle</string>
+					<string>notificationBody</string>
+				</array>
+				<key>Popup</key>
+				<array>
+					<string>popupEnabled</string>
+					<string>popupThresholdDays</string>
+					<string>popupTitle</string>
+					<string>popupBody</string>
+					<string>popupRescheduleButton</string>
+					<string>popupUpdateButton</string>
+					<string>popupSchedulerHelp</string>
+					<string>popupCal1MondayHours</string>
+					<string>popupCal2TuesdayHours</string>
+					<string>popupCal3WednesdayHours</string>
+					<string>popupCal4ThursdayHours</string>
+					<string>popupCal5FridayHours</string>
+					<string>popupCal6SaturdayHours</string>
+					<string>popupCal7SundayHours</string>
+				</array>
+			</dict>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.0.0</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>Hide SUMB Icon when MacOS is up to date</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/jeremy4971/sumb_public/wiki#preference-keys</string>
+			<key>pfm_name</key>
+			<string>hideIconWhenUpToDate</string>
+			<key>pfm_title</key>
+			<string>Hide Menubar Icon</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2.0.0</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>Hide the Settings menu. Holding Option while right-clicking the menu bar icon still reveals it, as does relaunching SUMB.app.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/jeremy4971/sumb_public/wiki#preference-keys</string>
+			<key>pfm_name</key>
+			<string>hideSettings</string>
+			<key>pfm_title</key>
+			<string>Hide Settings Menu</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.0.3</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>Ignore Apple Update Channel</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/jeremy4971/sumb_public/wiki#preference-keys</string>
+			<key>pfm_name</key>
+			<string>ignoreAppleUpdateChannel</string>
+			<key>pfm_title</key>
+			<string>Ignore Apple Update Channel</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.4.0</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>Show the SUMB icon in the Dock when an update is available, with the countdown in a red badge.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/jeremy4971/sumb_public/wiki#preference-keys</string>
+			<key>pfm_name</key>
+			<string>showDockIcon</string>
+			<key>pfm_title</key>
+			<string>Show Dock Icon</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.1.1</string>
+			<key>pfm_description</key>
+			<string>Sound played with the notification and popup. Only files located in /System/Library/Sounds are supported.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/jeremy4971/sumb_public/wiki#preference-keys</string>
+			<key>pfm_name</key>
+			<string>notificationSound</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>Basso.aiff</string>
+				<string>Blow.aiff</string>
+				<string>Bottle.aiff</string>
+				<string>Frog.aiff</string>
+				<string>Funk.aiff</string>
+				<string>Glass.aiff</string>
+				<string>Hero.aiff</string>
+				<string>Morse.aiff</string>
+				<string>Ping.aiff</string>
+				<string>Pop.aiff</string>
+				<string>Purr.aiff</string>
+				<string>Sosumi.aiff</string>
+				<string>Submarine.aiff</string>
+				<string>Tink.aiff</string>
+			</array>
+			<key>pfm_range_list_titles</key>
+			<array>
+				<string>Basso.aiff</string>
+				<string>Blow.aiff</string>
+				<string>Bottle.aiff</string>
+				<string>Frog.aiff</string>
+				<string>Funk.aiff</string>
+				<string>Glass.aiff</string>
+				<string>Hero.aiff</string>
+				<string>Morse.aiff</string>
+				<string>Ping.aiff</string>
+				<string>Pop.aiff</string>
+				<string>Purr.aiff</string>
+				<string>Sosumi.aiff</string>
+				<string>Submarine.aiff</string>
+				<string>Tink.aiff</string>
+			</array>
+			<key>pfm_title</key>
+			<string>Alert Sound</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2.0.0</string>
+			<key>pfm_default</key>
+			<string>macOS Update</string>
+			<key>pfm_description</key>
+			<string>Title shown at the top of the popover.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/jeremy4971/sumb_public/wiki#preference-keys</string>
+			<key>pfm_name</key>
+			<string>popoverTitle</string>
+			<key>pfm_title</key>
+			<string>Popover Title</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2.0.0</string>
+			<key>pfm_default</key>
+			<string>Open Software Update</string>
+			<key>pfm_description</key>
+			<string>Label of the button that takes the user to Software Update.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/jeremy4971/sumb_public/wiki#preference-keys</string>
+			<key>pfm_name</key>
+			<string>popoverUpdateButton</string>
+			<key>pfm_title</key>
+			<string>Popover Update Button</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2.0.0</string>
+			<key>pfm_default</key>
+			<string></string>
+			<key>pfm_description</key>
+			<string>Warning at the bottom of the popover. Supports Markdown links: [text](https://example.com)</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/jeremy4971/sumb_public/wiki#preference-keys</string>
+			<key>pfm_name</key>
+			<string>popoverFooter</string>
+			<key>pfm_title</key>
+			<string>Popover Footer</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2.0.0</string>
+			<key>pfm_default</key>
+			<string>Your Mac is up to date.</string>
+			<key>pfm_description</key>
+			<string>Message displayed in the popover when the Mac is up to date.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/jeremy4971/sumb_public/wiki#preference-keys</string>
+			<key>pfm_name</key>
+			<string>popoverUpToDateMessage</string>
+			<key>pfm_title</key>
+			<string>Popover Up To Date Message</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2.0.0</string>
+			<key>pfm_default</key>
+			<integer>2</integer>
+			<key>pfm_description</key>
+			<string>Number of days before the update deadline at which the red dot on the menu bar icon starts blinking.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/jeremy4971/sumb_public/wiki#preference-keys</string>
+			<key>pfm_name</key>
+			<string>menubarDotBlinkingThresholdDays</string>
+			<key>pfm_title</key>
+			<string>Menubar Dot Blinking Threshold</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2.0.0</string>
+			<key>pfm_default</key>
+			<string>Preparing update...</string>
+			<key>pfm_description</key>
+			<string>Text shown in the menu bar while the update is being prepared.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/jeremy4971/sumb_public/wiki#preference-keys</string>
+			<key>pfm_name</key>
+			<string>menubarPreparingMessage</string>
+			<key>pfm_title</key>
+			<string>Menubar Preparing Message</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2.0.0</string>
+			<key>pfm_default</key>
+			<string></string>
+			<key>pfm_description</key>
+			<string>Text placed before the number of days remaining in the menu bar countdown. (e.g. D-).</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/jeremy4971/sumb_public/wiki#preference-keys</string>
+			<key>pfm_name</key>
+			<string>menubarPrefix</string>
+			<key>pfm_title</key>
+			<string>Menubar Prefix</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2.0.0</string>
+			<key>pfm_default</key>
+			<string>d</string>
+			<key>pfm_description</key>
+			<string>Text placed after the number of days remaining (e.g. j in French, t in German).</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/jeremy4971/sumb_public/wiki#preference-keys</string>
+			<key>pfm_name</key>
+			<string>menubarSuffix</string>
+			<key>pfm_title</key>
+			<string>Menubar Suffix</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.0.0</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>Allow SUMB to post reminder notifications about the scheduled macOS update.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/jeremy4971/sumb_public/wiki#preference-keys</string>
+			<key>pfm_name</key>
+			<string>notificationsEnabled</string>
+			<key>pfm_title</key>
+			<string>Notifications Enabled</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2.0.0</string>
+			<key>pfm_default</key>
+			<integer>4</integer>
+			<key>pfm_description</key>
+			<string>Days remaining before the update deadline at which SUMB starts sending reminder notifications.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/jeremy4971/sumb_public/wiki#preference-keys</string>
+			<key>pfm_name</key>
+			<string>notificationThresholdDays</string>
+			<key>pfm_title</key>
+			<string>Notification Threshold</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2.0.0</string>
+			<key>pfm_default</key>
+			<integer>120</integer>
+			<key>pfm_description</key>
+			<string>Time in minutes between two reminder notifications.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/jeremy4971/sumb_public/wiki#preference-keys</string>
+			<key>pfm_name</key>
+			<string>notificationIntervalMinutes</string>
+			<key>pfm_title</key>
+			<string>Notification Interval</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2.0.0</string>
+			<key>pfm_default</key>
+			<string>macOS Update</string>
+			<key>pfm_description</key>
+			<string>Title displayed in the reminder notification. Supports $VERSION, $DATE and $COUNTDOWN variables.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/jeremy4971/sumb_public/wiki#preference-keys</string>
+			<key>pfm_name</key>
+			<string>notificationTitle</string>
+			<key>pfm_title</key>
+			<string>Notification Title</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2.0.0</string>
+			<key>pfm_default</key>
+			<string>An update to macOS $VERSION has been scheduled for $DATE.</string>
+			<key>pfm_description</key>
+			<string>Body text of the reminder notification. Supports $VERSION, $DATE and $COUNTDOWN variables.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/jeremy4971/sumb_public/wiki#preference-keys</string>
+			<key>pfm_name</key>
+			<string>notificationBody</string>
+			<key>pfm_title</key>
+			<string>Notification Body</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2.0.0</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>Show the popup reminder at the start of each allowed hour.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/jeremy4971/sumb_public/wiki#preference-keys</string>
+			<key>pfm_name</key>
+			<string>popupEnabled</string>
+			<key>pfm_title</key>
+			<string>Popup Enabled</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2.0.0</string>
+			<key>pfm_default</key>
+			<integer>2</integer>
+			<key>pfm_description</key>
+			<string>Days remaining before the update deadline at which the Scheduler popup starts showing.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/jeremy4971/sumb_public/wiki#preference-keys</string>
+			<key>pfm_name</key>
+			<string>popupThresholdDays</string>
+			<key>pfm_title</key>
+			<string>Popup Threshold</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2.0.0</string>
+			<key>pfm_default</key>
+			<string>macOS Update</string>
+			<key>pfm_description</key>
+			<string>Title of the popup reminder.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/jeremy4971/sumb_public/wiki#preference-keys</string>
+			<key>pfm_name</key>
+			<string>popupTitle</string>
+			<key>pfm_title</key>
+			<string>Popup Title</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2.0.0</string>
+			<key>pfm_default</key>
+			<string>An update to macOS $VERSION has been scheduled for $DATE.</string>
+			<key>pfm_description</key>
+			<string>Message of the Scheduler popup. Supports $VERSION, $DATE and $COUNTDOWN variables.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/jeremy4971/sumb_public/wiki#preference-keys</string>
+			<key>pfm_name</key>
+			<string>popupBody</string>
+			<key>pfm_title</key>
+			<string>Popup Body</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2.0.0</string>
+			<key>pfm_default</key>
+			<string>Remind Me</string>
+			<key>pfm_description</key>
+			<string>Label of button that opens the Scheduler window.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/jeremy4971/sumb_public/wiki#preference-keys</string>
+			<key>pfm_name</key>
+			<string>popupRescheduleButton</string>
+			<key>pfm_title</key>
+			<string>Popup Reschedule Button</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2.0.0</string>
+			<key>pfm_default</key>
+			<string>Update Now</string>
+			<key>pfm_description</key>
+			<string>Label of the popup update button, opens Software Update.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/jeremy4971/sumb_public/wiki#preference-keys</string>
+			<key>pfm_name</key>
+			<string>popupUpdateButton</string>
+			<key>pfm_title</key>
+			<string>Popup Update Button</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2.0.0</string>
+			<key>pfm_default</key>
+			<string>Please select the times you are available to update your Mac.
+You will get one popup reminder per selected hour.</string>
+			<key>pfm_description</key>
+			<string>Instructions shown above the grid in the Scheduler window.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/jeremy4971/sumb_public/wiki#preference-keys</string>
+			<key>pfm_name</key>
+			<string>popupSchedulerHelp</string>
+			<key>pfm_title</key>
+			<string>Popup Scheduler Help</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2.0.0</string>
+			<key>pfm_default</key>
+			<string>12,17</string>
+			<key>pfm_description</key>
+			<string>Hours suggested on Monday, comma-separated from 0 to 23. 12,17 suggests 12h00 and 17h00.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/jeremy4971/sumb_public/wiki#preference-keys</string>
+			<key>pfm_name</key>
+			<string>popupCal1MondayHours</string>
+			<key>pfm_title</key>
+			<string>Popup Calendar Monday</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2.0.0</string>
+			<key>pfm_default</key>
+			<string>12,17</string>
+			<key>pfm_description</key>
+			<string>Hours suggested on Tuesday, comma-separated from 0 to 23. 12,17 suggests 12h00 and 17h00.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/jeremy4971/sumb_public/wiki#preference-keys</string>
+			<key>pfm_name</key>
+			<string>popupCal2TuesdayHours</string>
+			<key>pfm_title</key>
+			<string>Popup Calendar Tuesday</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2.0.0</string>
+			<key>pfm_default</key>
+			<string>12,17</string>
+			<key>pfm_description</key>
+			<string>Hours suggested on Wednesday, comma-separated from 0 to 23. 12,17 suggests 12h00 and 17h00.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/jeremy4971/sumb_public/wiki#preference-keys</string>
+			<key>pfm_name</key>
+			<string>popupCal3WednesdayHours</string>
+			<key>pfm_title</key>
+			<string>Popup Calendar Wednesday</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2.0.0</string>
+			<key>pfm_default</key>
+			<string>12,17</string>
+			<key>pfm_description</key>
+			<string>Hours suggested on Thursday, comma-separated from 0 to 23. 12,17 suggests 12h00 and 17h00.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/jeremy4971/sumb_public/wiki#preference-keys</string>
+			<key>pfm_name</key>
+			<string>popupCal4ThursdayHours</string>
+			<key>pfm_title</key>
+			<string>Popup Calendar Thursday</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2.0.0</string>
+			<key>pfm_default</key>
+			<string>12,17</string>
+			<key>pfm_description</key>
+			<string>Hours suggested on Friday, comma-separated from 0 to 23. 12,17 suggests 12h00 and 17h00.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/jeremy4971/sumb_public/wiki#preference-keys</string>
+			<key>pfm_name</key>
+			<string>popupCal5FridayHours</string>
+			<key>pfm_title</key>
+			<string>Popup Calendar Friday</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2.0.0</string>
+			<key>pfm_default</key>
+			<string></string>
+			<key>pfm_description</key>
+			<string>Hours suggested on Saturday, comma-separated from 0 to 23. 12,17 suggests 12h00 and 17h00.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/jeremy4971/sumb_public/wiki#preference-keys</string>
+			<key>pfm_name</key>
+			<string>popupCal6SaturdayHours</string>
+			<key>pfm_title</key>
+			<string>Popup Calendar Saturday</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2.0.0</string>
+			<key>pfm_default</key>
+			<string></string>
+			<key>pfm_description</key>
+			<string>Hours suggested on Sunday, comma-separated from 0 to 23. 12,17 suggests 12h00 and 17h00.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://github.com/jeremy4971/sumb_public/wiki#preference-keys</string>
+			<key>pfm_name</key>
+			<string>popupCal7SundayHours</string>
+			<key>pfm_title</key>
+			<string>Popup Calendar Sunday</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+	</array>
+	<key>pfm_targets</key>
+	<array>
+		<string>system</string>
+	</array>
+	<key>pfm_title</key>
+	<string>SUMB (Software Update Menu Bar)</string>
+	<key>pfm_unique</key>
+	<true/>
+	<key>pfm_version</key>
+	<integer>1</integer>
+</dict>
+</plist>
