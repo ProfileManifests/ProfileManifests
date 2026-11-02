@@ -115,7 +115,7 @@
 	<key>pfm_interaction</key>
 	<string>exclusive</string>
 	<key>pfm_last_modified</key>
-	<date>2026-10-06T12:00:00Z</date>
+	<date>2026-10-30T15:21:31Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -692,14 +692,6 @@ Multiple arguments can be specified by seperating them with a comma.</string>
 							<string>signingID</string>
 							<key>pfm_title</key>
 							<string>Signing ID</string>
-							<key>pfm_type</key>
-							<string>string</string>
-						</dict>
-						<dict>
-							<key>pfm_name</key>
-							<string>sourceSigningID</string>
-							<key>pfm_title</key>
-							<string>Parent Signing ID</string>
 							<key>pfm_type</key>
 							<string>string</string>
 						</dict>
