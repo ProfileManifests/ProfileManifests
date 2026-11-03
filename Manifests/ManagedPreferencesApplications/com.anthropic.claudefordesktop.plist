@@ -7,13 +7,13 @@
 	<key>pfm_description</key>
 	<string>Claude Desktop enterprise configuration settings</string>
 	<key>pfm_documentation_url</key>
-	<string>https://support.claude.com/en/articles/12622667-enterprise-configuration-for-claude-desktop</string>
+	<string>https://claude.com/docs/third-party/claude-desktop/configuration</string>
 	<key>pfm_domain</key>
 	<string>com.anthropic.claudefordesktop</string>
 	<key>pfm_format_version</key>
 	<integer>1</integer>
 	<key>pfm_last_modified</key>
-	<date>2026-09-28T00:00:00Z</date>
+	<date>2026-11-03T12:45:28Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -133,27 +133,209 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>string</string>
 		</dict>
 		<dict>
-			<key>pfm_description</key>
-			<string>Require login to belong to a specific organization. Accepts a single UUID string, which also pre-selects that organization during login, or an array of UUIDs where any listed organization is accepted without pre-selection. Login fails if the authenticated account does not belong to a listed organization.</string>
 			<key>pfm_name</key>
-			<string>forceLoginOrgUUID</string>
-			<key>pfm_subkeys</key>
+			<string>PFC_SegmentedControl_0</string>
+			<key>pfm_range_list_titles</key>
 			<array>
-				<dict>
-					<key>pfm_format</key>
-					<string>^[0-9A-Za-z]{8}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{12}$</string>
-					<key>pfm_title</key>
-					<string>Organization UUID</string>
-					<key>pfm_type</key>
-					<string>string</string>
-					<key>pfm_value_placeholder</key>
-					<string>ef923b16-deb9-4c5c-a35c-3dfb21ab857b</string>
-				</dict>
+				<string>Updates</string>
+				<string>Organization</string>
+				<string>Connection</string>
+				<string>Models &amp; Usage</string>
+				<string>Features</string>
+				<string>Workspace &amp; Network</string>
+				<string>Connectors &amp; Plugins</string>
+				<string>Data &amp; Telemetry</string>
 			</array>
-			<key>pfm_title</key>
-			<string>Force Login Organization UUID(s)</string>
+			<key>pfm_require</key>
+			<string>always</string>
+			<key>pfm_segments</key>
+			<dict>
+				<key>Connection</key>
+				<array>
+					<string>inferenceProvider</string>
+					<string>inferenceCredentialKind</string>
+					<string>inferenceSessionLifetimeSec</string>
+					<string>userContentRendererUrl</string>
+					<string>inferenceCustomHeaders</string>
+					<string>inferenceCredentialHelper</string>
+					<string>inferenceCredentialHelperWindows</string>
+					<string>inferenceCredentialHelperArgs</string>
+					<string>inferenceCredentialHelperTtlSec</string>
+					<string>inferenceCredentialHelperTimeoutSec</string>
+					<string>inferenceCredentialHelperSilentRefreshEnabled</string>
+					<string>inferenceAnthropicApiKey</string>
+					<string>inferenceStreamIdleTimeoutSec</string>
+					<string>inferenceGatewayBaseUrl</string>
+					<string>inferenceGatewayApiKey</string>
+					<string>inferenceGatewayAuthScheme</string>
+					<string>inferenceIdpAuthFlow</string>
+					<string>inferenceIdpOidc</string>
+					<string>inferenceGatewayOidcAuthFlow</string>
+					<string>inferenceGatewayOidc</string>
+					<string>inferenceBedrockRegion</string>
+					<string>inferenceBedrockBaseUrl</string>
+					<string>inferenceBedrockServiceTier</string>
+					<string>inferenceBedrockBearerToken</string>
+					<string>inferenceBedrockSsoStartUrl</string>
+					<string>inferenceBedrockSsoRegion</string>
+					<string>inferenceBedrockSsoAccountId</string>
+					<string>inferenceBedrockSsoRoleName</string>
+					<string>inferenceBedrockProfile</string>
+					<string>inferenceBedrockAwsDir</string>
+					<string>inferenceBedrockAwsCliPath</string>
+					<string>inferenceVertexProjectId</string>
+					<string>inferenceVertexRegion</string>
+					<string>inferenceVertexBaseUrl</string>
+					<string>inferenceVertexOAuthClientId</string>
+					<string>inferenceVertexOAuthClientSecret</string>
+					<string>inferenceVertexOAuthScopes</string>
+					<string>inferenceVertexOAuthLoginHint</string>
+					<string>inferenceVertexWorkforceAudience</string>
+					<string>inferenceVertexWorkforceUserProject</string>
+					<string>inferenceVertexWorkforceAuthFlow</string>
+					<string>inferenceVertexWorkforceOidc</string>
+					<string>inferenceVertexCredentialsFile</string>
+					<string>inferenceFoundryResource</string>
+					<string>inferenceFoundryBaseUrl</string>
+					<string>inferenceFoundryApiKey</string>
+					<string>inferenceFoundryTenantId</string>
+					<string>inferenceFoundryClientId</string>
+					<string>inferenceFoundryAuthFlow</string>
+					<string>bootstrapEnabled</string>
+					<string>bootstrapUrl</string>
+					<string>bootstrapOidc</string>
+					<string>bootstrapHeaders</string>
+					<string>bootstrapHeadersHelper</string>
+					<string>trustBootstrapDelivery</string>
+				</array>
+				<key>Connectors &amp; Plugins</key>
+				<array>
+					<string>managedMcpServers</string>
+					<string>isLocalDevMcpEnabled</string>
+					<string>mcpPersistentAlwaysAllowEnabled</string>
+					<string>mcpScheduledTaskApprovalLifetimeDays</string>
+					<string>mcpToolTimeoutSec</string>
+					<string>allowedPluginMcpServers</string>
+					<string>deniedPluginMcpServers</string>
+					<string>microsoftAuthBroker</string>
+					<string>microsoftAuthDefaultAccount</string>
+					<string>isDesktopExtensionEnabled</string>
+					<string>isDesktopExtensionDirectoryEnabled</string>
+					<string>isDesktopExtensionSignatureRequired</string>
+					<string>allowedPluginMarketplaces</string>
+					<string>orgPluginSettings</string>
+					<string>userPluginMarketplacesEnabled</string>
+					<string>userPluginUploadsEnabled</string>
+				</array>
+				<key>Data &amp; Telemetry</key>
+				<array>
+					<string>disableEssentialTelemetry</string>
+					<string>disableNonessentialTelemetry</string>
+					<string>disableNonessentialServices</string>
+					<string>otlpEndpoint</string>
+					<string>otlpProtocol</string>
+					<string>otlpHeaders</string>
+					<string>otlpAuthMode</string>
+					<string>otlpHeadersHelper</string>
+					<string>otlpResourceAttributes</string>
+					<string>otlpDesktopLogLevel</string>
+					<string>otlpContentCapture</string>
+					<string>otlpTracesEnabled</string>
+					<string>otlpAttrMaxChars</string>
+					<string>chatSessionRetentionDays</string>
+					<string>coworkSessionRetentionDays</string>
+					<string>codeSessionRetentionDays</string>
+					<string>sessionRetentionHold</string>
+				</array>
+				<key>Features</key>
+				<array>
+					<string>desktopHome</string>
+					<string>chatTabEnabled</string>
+					<string>chatAdvancedFileAnalysisEnabled</string>
+					<string>coworkTabEnabled</string>
+					<string>secureVmFeaturesEnabled</string>
+					<string>isClaudeCodeForDesktopEnabled</string>
+					<string>autoModeEnabled</string>
+					<string>disableBypassPermissionsMode</string>
+					<string>sshHostAllowlist</string>
+					<string>sshClientPath</string>
+					<string>sshTransport</string>
+					<string>disableBundledSkills</string>
+					<string>skillCreationEnabled</string>
+					<string>skillScanningEnabled</string>
+					<string>scheduledTasksEnabled</string>
+					<string>keepAwakeEnabled</string>
+					<string>developerModeEnabled</string>
+					<string>quickEntryDefaultShortcut</string>
+					<string>quickEntryScreenshotsEnabled</string>
+					<string>quickEntryFileSharingEnabled</string>
+					<string>projectsEnabled</string>
+					<string>sessionStatusLine</string>
+					<string>builtinToolPolicy</string>
+					<string>disabledBuiltinTools</string>
+					<string>toolSearchEnabled</string>
+					<string>organizationInstructions</string>
+					<string>builtinBrowserEnabled</string>
+					<string>builtinBrowserDefaultDomainPolicy</string>
+					<string>builtinBrowserAllowedDomains</string>
+					<string>builtinBrowserBlockedDomains</string>
+					<string>requireCoworkFullVmSandbox</string>
+				</array>
+				<key>Models &amp; Usage</key>
+				<array>
+					<string>inferenceModels</string>
+					<string>modelDiscoveryEnabled</string>
+					<string>modelPrefer1mContext</string>
+					<string>defaultModelEffort</string>
+					<string>alwaysStartWithDefaultModel</string>
+					<string>effortLevel</string>
+					<string>modelCatalogEnabled</string>
+					<string>modelCatalogUrl</string>
+					<string>inferenceModelPricingEnabled</string>
+					<string>inferenceModelPricingMultiplier</string>
+					<string>inferenceModelPricing</string>
+					<string>inferenceMaxTokensPerWindow</string>
+					<string>inferenceTokenWindowHours</string>
+					<string>inferenceTokenWarningPercent</string>
+				</array>
+				<key>Organization</key>
+				<array>
+					<string>forceLoginOrgUUID</string>
+					<string>deploymentOrganizationUuid</string>
+					<string>disableDeploymentModeChooser</string>
+					<string>disableDeepLinkRegistration</string>
+					<string>endUserAttribution</string>
+					<string>deploymentDisplayName</string>
+					<string>deploymentDisplaySubtitle</string>
+					<string>disableConfigDeprecationWarnings</string>
+					<string>banner</string>
+					<string>disableFeatureDiscovery</string>
+					<string>claudeAiImport</string>
+				</array>
+				<key>Updates</key>
+				<array>
+					<string>disableAutoUpdates</string>
+					<string>autoUpdaterEnforcementHours</string>
+					<string>installedUpdateEnforcementEnabled</string>
+					<string>installedUpdateEnforcementHours</string>
+					<string>updateViaUpdatesHost</string>
+					<string>releaseChannel</string>
+					<string>relaunchEnforcementHours</string>
+					<string>configRecheckIntervalMinutes</string>
+				</array>
+				<key>Workspace &amp; Network</key>
+				<array>
+					<string>allowedWorkspaceFolders</string>
+					<string>blockReadsOutsideWorkingDirectories</string>
+					<string>coworkEgressAllowedHosts</string>
+					<string>skipWebFetchPreflight</string>
+					<string>egressProxyUrl</string>
+					<string>egressProxyPacUrl</string>
+					<string>coworkVmIpv6Enabled</string>
+				</array>
+			</dict>
 			<key>pfm_type</key>
-			<string>array</string>
+			<string>string</string>
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
@@ -165,7 +347,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_name</key>
 			<string>disableAutoUpdates</string>
 			<key>pfm_title</key>
-			<string>Disable Auto Updates</string>
+			<string>Block auto-updates</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 		</dict>
@@ -183,9 +365,43 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_range_min</key>
 			<integer>1</integer>
 			<key>pfm_title</key>
-			<string>Auto Update Enforcement Hours</string>
+			<string>Auto-update enforcement window</string>
 			<key>pfm_type</key>
 			<string>integer</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.6556.1</string>
+			<key>pfm_description</key>
+			<string>With auto-updates blocked, Claude restarts by itself for a newer version installed while it was open.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#installedupdateenforcementenabled</string>
+			<key>pfm_name</key>
+			<string>installedUpdateEnforcementEnabled</string>
+			<key>pfm_title</key>
+			<string>Restart to apply installed updates</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.6556.1</string>
+			<key>pfm_description</key>
+			<string>Hours before Claude restarts for a newer version installed while it was open. Unset: 72 hours, then when idle. A number skips the idle wait.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#installedupdateenforcementhours</string>
+			<key>pfm_name</key>
+			<string>installedUpdateEnforcementHours</string>
+			<key>pfm_range_max</key>
+			<integer>72</integer>
+			<key>pfm_range_min</key>
+			<integer>1</integer>
+			<key>pfm_title</key>
+			<string>Installed-update enforcement window</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+			<key>pfm_value_unit</key>
+			<string>hours</string>
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
@@ -200,6 +416,32 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>Check for updates on releases.claude.com</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.1623.0</string>
+			<key>pfm_default</key>
+			<string>stable</string>
+			<key>pfm_description</key>
+			<string>Stable: devices take each release as it rolls out. Staggered: devices update less often, usually a week or more behind.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#releasechannel</string>
+			<key>pfm_name</key>
+			<string>releaseChannel</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>stable</string>
+				<string>staggered</string>
+			</array>
+			<key>pfm_range_list_titles</key>
+			<array>
+				<string>Stable</string>
+				<string>Staggered</string>
+			</array>
+			<key>pfm_title</key>
+			<string>Release channel</string>
+			<key>pfm_type</key>
+			<string>string</string>
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
@@ -238,435 +480,27 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>integer</string>
 		</dict>
 		<dict>
-			<key>pfm_app_min</key>
-			<string>0.14.1</string>
-			<key>pfm_default</key>
-			<true/>
 			<key>pfm_description</key>
-			<string>Enable or disable Claude Desktop extensions.</string>
+			<string>Require login to belong to a specific organization. Accepts a single UUID string, which also pre-selects that organization during login, or an array of UUIDs where any listed organization is accepted without pre-selection. Login fails if the authenticated account does not belong to a listed organization. Also honored by Claude Desktop in third-party (3P) mode, where it limits which Enterprise Admin Console organization a user can move the device to.</string>
 			<key>pfm_name</key>
-			<string>isDesktopExtensionEnabled</string>
-			<key>pfm_title</key>
-			<string>Enable Desktop Extensions</string>
-			<key>pfm_type</key>
-			<string>boolean</string>
-		</dict>
-		<dict>
-			<key>pfm_app_min</key>
-			<string>0.14.1</string>
-			<key>pfm_default</key>
-			<true/>
-			<key>pfm_description</key>
-			<string>Enable or disable access to the extension directory.</string>
-			<key>pfm_name</key>
-			<string>isDesktopExtensionDirectoryEnabled</string>
-			<key>pfm_title</key>
-			<string>Enable Extension Directory</string>
-			<key>pfm_type</key>
-			<string>boolean</string>
-		</dict>
-		<dict>
-			<key>pfm_app_min</key>
-			<string>0.14.1</string>
-			<key>pfm_default</key>
-			<true/>
-			<key>pfm_description</key>
-			<string>Enable or disable local Model Context Protocol (MCP) servers.</string>
-			<key>pfm_name</key>
-			<string>isLocalDevMcpEnabled</string>
-			<key>pfm_title</key>
-			<string>Enable Local MCP Servers</string>
-			<key>pfm_type</key>
-			<string>boolean</string>
-		</dict>
-		<dict>
-			<key>pfm_default</key>
-			<true/>
-			<key>pfm_description</key>
-			<string>Enable Claude code access in desktop.</string>
-			<key>pfm_name</key>
-			<string>isClaudeCodeForDesktopEnabled</string>
-			<key>pfm_title</key>
-			<string>Enable Claude Code for Desktop</string>
-			<key>pfm_type</key>
-			<string>boolean</string>
-		</dict>
-		<dict>
-			<key>pfm_default</key>
-			<true/>
-			<key>pfm_description</key>
-			<string>Enable Cowork access in desktop</string>
-			<key>pfm_name</key>
-			<string>secureVmFeaturesEnabled</string>
-			<key>pfm_title</key>
-			<string>Enable Secure VM Features</string>
-			<key>pfm_type</key>
-			<string>boolean</string>
-		</dict>
-		<dict>
-			<key>pfm_app_min</key>
-			<string>1.9659.0</string>
-			<key>pfm_default</key>
-			<true/>
-			<key>pfm_description</key>
-			<string>Enable Cowork. Claude works on longer tasks like research, analysis, and documents. Defaults to true.</string>
-			<key>pfm_name</key>
-			<string>coworkTabEnabled</string>
-			<key>pfm_title</key>
-			<string>Allow Cowork</string>
-			<key>pfm_type</key>
-			<string>boolean</string>
-		</dict>
-		<dict>
-			<key>pfm_app_min</key>
-			<string>2.2553.0</string>
-			<key>pfm_default</key>
-			<false/>
-			<key>pfm_description</key>
-			<string>Claude Desktop on third-party inference deployments. Enable the built-in browser in Cowork and Code sessions. False disables the browser pane; Code retains its localhost-only dev-server preview. Defaults to false. When bootstrapUrl is set, configure this key in the served configuration.</string>
-			<key>pfm_documentation_url</key>
-			<string>https://claude.com/docs/third-party/claude-desktop/configuration#built-in-browser</string>
-			<key>pfm_name</key>
-			<string>builtinBrowserEnabled</string>
-			<key>pfm_title</key>
-			<string>Enable Built-in Browser</string>
-			<key>pfm_type</key>
-			<string>boolean</string>
-		</dict>
-		<dict>
-			<key>pfm_app_min</key>
-			<string>2.2553.0</string>
-			<key>pfm_default</key>
-			<string>allow</string>
-			<key>pfm_description</key>
-			<string>Claude Desktop on third-party inference deployments. Default policy for sites Claude may open, read, or act on when the built-in browser is enabled. Allowed domains are exceptions under block; blocked domains are exceptions under allow. Users can still view sites denied to Claude. Defaults to allow.</string>
-			<key>pfm_documentation_url</key>
-			<string>https://claude.com/docs/third-party/claude-desktop/configuration#built-in-browser</string>
-			<key>pfm_name</key>
-			<string>builtinBrowserDefaultDomainPolicy</string>
-			<key>pfm_range_list</key>
-			<array>
-				<string>allow</string>
-				<string>block</string>
-			</array>
-			<key>pfm_range_list_titles</key>
-			<array>
-				<string>Allow Sites by Default</string>
-				<string>Block Sites by Default</string>
-			</array>
-			<key>pfm_title</key>
-			<string>Built-in Browser Default Site Policy</string>
-			<key>pfm_type</key>
-			<string>string</string>
-		</dict>
-		<dict>
-			<key>pfm_app_min</key>
-			<string>2.2553.0</string>
-			<key>pfm_description</key>
-			<string>Claude Desktop on third-party inference deployments. Sites Claude may open, read, or act on when builtinBrowserDefaultDomainPolicy is block; ignored under allow. Empty or unset allows no external sites for Claude. Users can still view other sites. Bare * and public-suffix wildcards are ignored.</string>
-			<key>pfm_documentation_url</key>
-			<string>https://claude.com/docs/third-party/claude-desktop/configuration#built-in-browser</string>
-			<key>pfm_name</key>
-			<string>builtinBrowserAllowedDomains</string>
+			<string>forceLoginOrgUUID</string>
 			<key>pfm_subkeys</key>
 			<array>
 				<dict>
-					<key>pfm_description</key>
-					<string>A hostname or supported hostname wildcard. A plain hostname also matches its www form, but no other subdomain.</string>
+					<key>pfm_format</key>
+					<string>^[0-9A-Za-z]{8}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{12}$</string>
 					<key>pfm_title</key>
-					<string>Domain</string>
+					<string>Organization UUID</string>
 					<key>pfm_type</key>
 					<string>string</string>
 					<key>pfm_value_placeholder</key>
-					<string>example.com</string>
+					<string>ef923b16-deb9-4c5c-a35c-3dfb21ab857b</string>
 				</dict>
 			</array>
 			<key>pfm_title</key>
-			<string>Built-in Browser Allowed Domains</string>
+			<string>Force login organization UUIDs</string>
 			<key>pfm_type</key>
 			<string>array</string>
-		</dict>
-		<dict>
-			<key>pfm_app_min</key>
-			<string>2.2553.0</string>
-			<key>pfm_description</key>
-			<string>Claude Desktop on third-party inference deployments. Sites Claude may not open, read, or act on when builtinBrowserDefaultDomainPolicy is allow; ignored under block. Empty or unset adds no blocked sites. Users can still view blocked sites. * blocks every external site for Claude; localhost dev servers are unaffected.</string>
-			<key>pfm_documentation_url</key>
-			<string>https://claude.com/docs/third-party/claude-desktop/configuration#built-in-browser</string>
-			<key>pfm_name</key>
-			<string>builtinBrowserBlockedDomains</string>
-			<key>pfm_subkeys</key>
-			<array>
-				<dict>
-					<key>pfm_description</key>
-					<string>A hostname or supported hostname wildcard. A plain hostname also matches its www form, but no other subdomain.</string>
-					<key>pfm_title</key>
-					<string>Domain</string>
-					<key>pfm_type</key>
-					<string>string</string>
-					<key>pfm_value_placeholder</key>
-					<string>example.com</string>
-				</dict>
-			</array>
-			<key>pfm_title</key>
-			<string>Built-in Browser Blocked Domains</string>
-			<key>pfm_type</key>
-			<string>array</string>
-		</dict>
-		<dict>
-			<key>pfm_app_min</key>
-			<string>1.19367.0</string>
-			<key>pfm_default</key>
-			<string>auto</string>
-			<key>pfm_description</key>
-			<string>Set to “disabled” to force browser-based Microsoft 365 sign-in instead of the native Company Portal / Windows account broker. One of: auto, disabled. Defaults to auto.</string>
-			<key>pfm_name</key>
-			<string>microsoftAuthBroker</string>
-			<key>pfm_range_list</key>
-			<array>
-				<string>auto</string>
-				<string>disabled</string>
-			</array>
-			<key>pfm_range_list_titles</key>
-			<array>
-				<string>Auto</string>
-				<string>Disabled</string>
-			</array>
-			<key>pfm_title</key>
-			<string>Microsoft 365 native sign-in broker</string>
-			<key>pfm_type</key>
-			<string>string</string>
-		</dict>
-		<dict>
-			<key>pfm_default</key>
-			<false/>
-			<key>pfm_description</key>
-			<string>When true, Claude Desktop rejects extensions that aren't signed by a trusted publisher.</string>
-			<key>pfm_documentation_url</key>
-			<string>https://support.claude.com/en/articles/14680753-extend-claude-cowork-with-third-party-platforms</string>
-			<key>pfm_name</key>
-			<string>isDesktopExtensionSignatureRequired</string>
-			<key>pfm_title</key>
-			<string>Require Signed Desktop Extensions</string>
-			<key>pfm_type</key>
-			<string>boolean</string>
-		</dict>
-		<dict>
-			<key>pfm_description</key>
-			<string>Removes the listed built-in tools from the available set in Claude Desktop. Known tools: Task, Bash, Glob, Grep, Read, Edit, Write, NotebookEdit, WebFetch, TodoWrite, WebSearch, Skill, REPL, JavaScript, AskUserQuestion. ToolSearch and SendUserMessage are also available under specific conditions.</string>
-			<key>pfm_documentation_url</key>
-			<string>https://support.claude.com/en/articles/14680753-extend-claude-cowork-with-third-party-platforms</string>
-			<key>pfm_name</key>
-			<string>disabledBuiltinTools</string>
-			<key>pfm_subkeys</key>
-			<array>
-				<dict>
-					<key>pfm_description</key>
-					<string>Name of a built-in tool to disable.</string>
-					<key>pfm_name</key>
-					<string>disabledBuiltinToolsItem</string>
-					<key>pfm_title</key>
-					<string>Tool</string>
-					<key>pfm_type</key>
-					<string>string</string>
-					<key>pfm_value_placeholder</key>
-					<string>WebSearch</string>
-				</dict>
-			</array>
-			<key>pfm_title</key>
-			<string>Disabled Built-in Tools</string>
-			<key>pfm_type</key>
-			<string>array</string>
-		</dict>
-		<dict>
-			<key>pfm_description</key>
-			<string>Distributes remote MCP (Model Context Protocol) servers to users. Each entry requires a unique name and an HTTPS URL. Optional fields include transport, headers, OAuth, and tool-level policies. Used in Claude Cowork deployments on third-party platforms (Bedrock, Vertex AI, Azure AI Foundry, LLM gateways).</string>
-			<key>pfm_documentation_url</key>
-			<string>https://support.claude.com/en/articles/14680753-extend-claude-cowork-with-third-party-platforms</string>
-			<key>pfm_name</key>
-			<string>managedMcpServers</string>
-			<key>pfm_subkeys</key>
-			<array>
-				<dict>
-					<key>pfm_name</key>
-					<string>managedMcpServersItem</string>
-					<key>pfm_subkeys</key>
-					<array>
-						<dict>
-							<key>pfm_description</key>
-							<string>Unique name identifying this MCP server.</string>
-							<key>pfm_name</key>
-							<string>name</string>
-							<key>pfm_require</key>
-							<string>always</string>
-							<key>pfm_title</key>
-							<string>Name</string>
-							<key>pfm_type</key>
-							<string>string</string>
-							<key>pfm_value_placeholder</key>
-							<string>internal-tools</string>
-						</dict>
-						<dict>
-							<key>pfm_description</key>
-							<string>HTTPS URL of the remote MCP server.</string>
-							<key>pfm_name</key>
-							<string>url</string>
-							<key>pfm_require</key>
-							<string>always</string>
-							<key>pfm_title</key>
-							<string>URL</string>
-							<key>pfm_type</key>
-							<string>string</string>
-							<key>pfm_value_placeholder</key>
-							<string>https://mcp.example.corp/sse</string>
-						</dict>
-						<dict>
-							<key>pfm_default</key>
-							<string>http</string>
-							<key>pfm_description</key>
-							<string>Transport protocol used to reach the MCP server.</string>
-							<key>pfm_name</key>
-							<string>transport</string>
-							<key>pfm_range_list</key>
-							<array>
-								<string>http</string>
-								<string>sse</string>
-							</array>
-							<key>pfm_range_list_titles</key>
-							<array>
-								<string>HTTP</string>
-								<string>SSE</string>
-							</array>
-							<key>pfm_title</key>
-							<string>Transport</string>
-							<key>pfm_type</key>
-							<string>string</string>
-						</dict>
-						<dict>
-							<key>pfm_description</key>
-							<string>Static request headers used to authenticate to the MCP server (for example, Authorization). Mutually exclusive with the OAuth field.</string>
-							<key>pfm_name</key>
-							<string>headers</string>
-							<key>pfm_subkeys</key>
-							<array>
-								<dict>
-									<key>pfm_name</key>
-									<string>{{key}}</string>
-									<key>pfm_title</key>
-									<string>Header Name</string>
-									<key>pfm_type</key>
-									<string>string</string>
-								</dict>
-								<dict>
-									<key>pfm_name</key>
-									<string>{{value}}</string>
-									<key>pfm_title</key>
-									<string>Header Value</string>
-									<key>pfm_type</key>
-									<string>string</string>
-								</dict>
-							</array>
-							<key>pfm_title</key>
-							<string>Headers</string>
-							<key>pfm_type</key>
-							<string>dictionary</string>
-						</dict>
-						<dict>
-							<key>pfm_default</key>
-							<false/>
-							<key>pfm_description</key>
-							<string>When true, Claude Desktop runs a PKCE OAuth flow at first use to acquire user credentials. Mutually exclusive with the Headers field.</string>
-							<key>pfm_name</key>
-							<string>oauth</string>
-							<key>pfm_title</key>
-							<string>OAuth</string>
-							<key>pfm_type</key>
-							<string>boolean</string>
-						</dict>
-						<dict>
-							<key>pfm_description</key>
-							<string>Maps tool names exposed by the MCP server to a policy. Allowed values per tool: allow, ask, blocked. The "ask" policy prompts the user to confirm before the tool runs.</string>
-							<key>pfm_name</key>
-							<string>toolPolicy</string>
-							<key>pfm_subkeys</key>
-							<array>
-								<dict>
-									<key>pfm_name</key>
-									<string>{{key}}</string>
-									<key>pfm_title</key>
-									<string>Tool Name</string>
-									<key>pfm_type</key>
-									<string>string</string>
-								</dict>
-								<dict>
-									<key>pfm_name</key>
-									<string>{{value}}</string>
-									<key>pfm_range_list</key>
-									<array>
-										<string>allow</string>
-										<string>ask</string>
-										<string>blocked</string>
-									</array>
-									<key>pfm_range_list_titles</key>
-									<array>
-										<string>Allow</string>
-										<string>Ask</string>
-										<string>Block</string>
-									</array>
-									<key>pfm_title</key>
-									<string>Policy</string>
-									<key>pfm_type</key>
-									<string>string</string>
-								</dict>
-							</array>
-							<key>pfm_title</key>
-							<string>Tool Policy</string>
-							<key>pfm_type</key>
-							<string>dictionary</string>
-						</dict>
-					</array>
-					<key>pfm_title</key>
-					<string>Managed MCP Server</string>
-					<key>pfm_type</key>
-					<string>dictionary</string>
-				</dict>
-			</array>
-			<key>pfm_title</key>
-			<string>Managed MCP Servers</string>
-			<key>pfm_type</key>
-			<string>array</string>
-		</dict>
-		<dict>
-			<key>pfm_app_min</key>
-			<string>1.24012.9</string>
-			<key>pfm_default</key>
-			<true/>
-			<key>pfm_description</key>
-			<string>Offer the persistent “Always allow” approval options for MCP tools. Disable to keep tool approvals per-call or session-scoped only. Defaults to true.</string>
-			<key>pfm_name</key>
-			<string>mcpPersistentAlwaysAllowEnabled</string>
-			<key>pfm_title</key>
-			<string>Allow persistent tool approvals</string>
-			<key>pfm_type</key>
-			<string>boolean</string>
-		</dict>
-		<dict>
-			<key>pfm_app_min</key>
-			<string>1.37937.0</string>
-			<key>pfm_default</key>
-			<integer>180</integer>
-			<key>pfm_description</key>
-			<string>Per-call timeout for MCP tool calls, in seconds. Default 180 (3 minutes). Range: 60-3600.</string>
-			<key>pfm_name</key>
-			<string>mcpToolTimeoutSec</string>
-			<key>pfm_range_max</key>
-			<integer>3600</integer>
-			<key>pfm_range_min</key>
-			<integer>60</integer>
-			<key>pfm_title</key>
-			<string>MCP tool call timeout</string>
-			<key>pfm_type</key>
-			<string>integer</string>
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
@@ -679,178 +513,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>Organization UUID</string>
 			<key>pfm_type</key>
 			<string>string</string>
-		</dict>
-		<dict>
-			<key>pfm_app_min</key>
-			<string>0.14.1</string>
-			<key>pfm_default</key>
-			<false/>
-			<key>pfm_description</key>
-			<string>Crash and performance reports to Anthropic. Defaults to false.</string>
-			<key>pfm_name</key>
-			<string>disableEssentialTelemetry</string>
-			<key>pfm_title</key>
-			<string>Block essential telemetry</string>
-			<key>pfm_type</key>
-			<string>boolean</string>
-		</dict>
-		<dict>
-			<key>pfm_app_min</key>
-			<string>0.14.1</string>
-			<key>pfm_default</key>
-			<false/>
-			<key>pfm_description</key>
-			<string>Product-usage analytics and diagnostic-report uploads. No message content. Defaults to false.</string>
-			<key>pfm_name</key>
-			<string>disableNonessentialTelemetry</string>
-			<key>pfm_title</key>
-			<string>Block nonessential telemetry</string>
-			<key>pfm_type</key>
-			<string>boolean</string>
-		</dict>
-		<dict>
-			<key>pfm_app_min</key>
-			<string>0.14.1</string>
-			<key>pfm_default</key>
-			<false/>
-			<key>pfm_description</key>
-			<string>Connector favicons and the artifact-preview and MCP Apps widget iframe origins. Artifacts will not render. Defaults to false.</string>
-			<key>pfm_name</key>
-			<string>disableNonessentialServices</string>
-			<key>pfm_title</key>
-			<string>Block nonessential services</string>
-			<key>pfm_type</key>
-			<string>boolean</string>
-		</dict>
-		<dict>
-			<key>pfm_app_min</key>
-			<string>1.25927.0</string>
-			<key>pfm_default</key>
-			<string>high</string>
-			<key>pfm_description</key>
-			<string>Sets the default effort level for Claude Code sessions in Claude Desktop.</string>
-			<key>pfm_name</key>
-			<string>effortLevel</string>
-			<key>pfm_range_list</key>
-			<array>
-				<string>low</string>
-				<string>medium</string>
-				<string>high</string>
-				<string>xhigh</string>
-				<string>max</string>
-			</array>
-			<key>pfm_range_list_titles</key>
-			<array>
-				<string>Low</string>
-				<string>Medium</string>
-				<string>High</string>
-				<string>Extra High</string>
-				<string>Max</string>
-			</array>
-			<key>pfm_title</key>
-			<string>Effort Level</string>
-			<key>pfm_type</key>
-			<string>string</string>
-		</dict>
-		<dict>
-			<key>pfm_description</key>
-			<string>Folders where Claude may work. Applies to both Cowork and Code sessions. Leave unset for unrestricted access. Paths can reference ~ and these environment variables, expanded per user: %OneDrive%, %OneDriveCommercial%, %OneDriveConsumer%, %APPDATA%, %LOCALAPPDATA%, %USERNAME%, %XDG_DOCUMENTS_DIR%. The set is fixed; an entry that references any other %VAR%, or one that is unset on the device, is ignored.</string>
-			<key>pfm_documentation_url</key>
-			<string>https://claude.com/docs/third-party/claude-desktop/configuration#allowedworkspacefolders-details</string>
-			<key>pfm_name</key>
-			<string>allowedWorkspaceFolders</string>
-			<key>pfm_subkeys</key>
-			<array>
-				<dict>
-					<key>pfm_name</key>
-					<string>AllowedWorkspaceFolderItem</string>
-					<key>pfm_subkeys</key>
-					<array>
-						<dict>
-							<key>pfm_description</key>
-							<string>Absolute folder path. May start with ~ or one of the listed %VAR% tokens, expanded per user. Subfolders are included.</string>
-							<key>pfm_name</key>
-							<string>path</string>
-							<key>pfm_title</key>
-							<string>Path</string>
-							<key>pfm_type</key>
-							<string>string</string>
-							<key>pfm_value_placeholder</key>
-							<string>/Users</string>
-						</dict>
-						<dict>
-							<key>pfm_default</key>
-							<false/>
-							<key>pfm_description</key>
-							<string>Shows as a folder chip on the new-task page and skips the trust prompt. Users can remove it.</string>
-							<key>pfm_name</key>
-							<string>isDefaultSelected</string>
-							<key>pfm_title</key>
-							<string>Select Default</string>
-							<key>pfm_type</key>
-							<string>boolean</string>
-						</dict>
-						<dict>
-							<key>pfm_app_min</key>
-							<string>1.26832.0</string>
-							<key>pfm_description</key>
-							<string>Read-only folders can be viewed and searched but not modified in Cowork. In Code, applies to file tools only; Bash and SSH do not yet enforce read-only. One of: rw, ro.</string>
-							<key>pfm_name</key>
-							<string>mode</string>
-							<key>pfm_range_list</key>
-							<array>
-								<string>rw</string>
-								<string>ro</string>
-							</array>
-							<key>pfm_range_list_titles</key>
-							<array>
-								<string>Read/write</string>
-								<string>Read only</string>
-							</array>
-							<key>pfm_title</key>
-							<string>Mode</string>
-							<key>pfm_type</key>
-							<string>string</string>
-						</dict>
-					</array>
-					<key>pfm_type</key>
-					<string>dictionary</string>
-				</dict>
-			</array>
-			<key>pfm_title</key>
-			<string>Allowed Workspace Folders</string>
-			<key>pfm_type</key>
-			<string>array</string>
-			<key>pfm_value_placeholder</key>
-			<string>[{"path" : "/Users", "isDefaultSelected" : false, "mode" : "rw"}, {"path" : "~", "isDefaultSelected" : true, "mode" : "ro"}]</string>
-		</dict>
-		<dict>
-			<key>pfm_app_min</key>
-			<string>1.46388.1</string>
-			<key>pfm_default</key>
-			<false/>
-			<key>pfm_description</key>
-			<string>Remove the bypass permissions mode from Code sessions and Cowork tasks, so Claude always follows the permission policy. Off by default.</string>
-			<key>pfm_name</key>
-			<string>disableBypassPermissionsMode</string>
-			<key>pfm_title</key>
-			<string>Disable bypass permissions mode</string>
-			<key>pfm_type</key>
-			<string>boolean</string>
-		</dict>
-		<dict>
-			<key>pfm_app_min</key>
-			<string>1.46388.1</string>
-			<key>pfm_default</key>
-			<false/>
-			<key>pfm_description</key>
-			<string>Keep Claude from reading files outside a Code session's working directories. File tools refuse such reads; sandboxed shell commands lose the home directory.</string>
-			<key>pfm_name</key>
-			<string>blockReadsOutsideWorkingDirectories</string>
-			<key>pfm_title</key>
-			<string>Block reads outside working directories</string>
-			<key>pfm_type</key>
-			<string>boolean</string>
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
@@ -879,62 +541,6 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>Disable claude:// deep-link handling</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
-		</dict>
-		<dict>
-			<key>pfm_app_min</key>
-			<string>1.13576.0</string>
-			<key>pfm_default</key>
-			<true/>
-			<key>pfm_description</key>
-			<string>Enable Chat. Quick questions and drafting.</string>
-			<key>pfm_name</key>
-			<string>chatTabEnabled</string>
-			<key>pfm_title</key>
-			<string>Allow Chat</string>
-			<key>pfm_type</key>
-			<string>boolean</string>
-		</dict>
-		<dict>
-			<key>pfm_app_min</key>
-			<string>1.21459.0</string>
-			<key>pfm_default</key>
-			<false/>
-			<key>pfm_description</key>
-			<string>Allow Claude to run code in a local sandbox to analyze attached files it can't read natively — like Excel and PowerPoint. Off by default.</string>
-			<key>pfm_name</key>
-			<string>chatAdvancedFileAnalysisEnabled</string>
-			<key>pfm_title</key>
-			<string>Advanced file analysis</string>
-			<key>pfm_type</key>
-			<string>boolean</string>
-		</dict>
-		<dict>
-			<key>pfm_app_min</key>
-			<string>0.14.1</string>
-			<key>pfm_description</key>
-			<string>Per-user soft cap, counted client-side over the token cap window. Not a server-enforced quota. Requires inferenceTokenWindowHours to also be set — without a window length the cap is inert and no limit is enforced.</string>
-			<key>pfm_name</key>
-			<string>inferenceMaxTokensPerWindow</string>
-			<key>pfm_title</key>
-			<string>Max tokens per window</string>
-			<key>pfm_type</key>
-			<string>integer</string>
-		</dict>
-		<dict>
-			<key>pfm_app_min</key>
-			<string>0.14.1</string>
-			<key>pfm_description</key>
-			<string>Tumbling window length for the token cap. Max 720 hours (30 days). Range: 1-720. Required when inferenceMaxTokensPerWindow is set — the cap only takes effect once both are configured.</string>
-			<key>pfm_name</key>
-			<string>inferenceTokenWindowHours</string>
-			<key>pfm_range_max</key>
-			<integer>720</integer>
-			<key>pfm_range_min</key>
-			<integer>1</integer>
-			<key>pfm_title</key>
-			<string>Token cap window</string>
-			<key>pfm_type</key>
-			<string>integer</string>
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
@@ -1170,6 +776,4132 @@ During a profile replacement, the system updates payloads with the same 'Payload
 		</dict>
 		<dict>
 			<key>pfm_app_min</key>
+			<string>1.2581.0</string>
+			<key>pfm_description</key>
+			<string>Selects the inference backend. Setting this key switches Claude Desktop into third-party (3P) mode.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#inferenceprovider</string>
+			<key>pfm_name</key>
+			<string>inferenceProvider</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>gateway</string>
+				<string>anthropic</string>
+				<string>bedrock</string>
+				<string>mantle</string>
+				<string>vertex</string>
+				<string>foundry</string>
+			</array>
+			<key>pfm_range_list_titles</key>
+			<array>
+				<string>Gateway</string>
+				<string>Claude API (Anthropic)</string>
+				<string>Amazon Bedrock</string>
+				<string>Mantle</string>
+				<string>Google Vertex AI</string>
+				<string>Azure AI Foundry</string>
+			</array>
+			<key>pfm_title</key>
+			<string>Inference provider</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.8555.0</string>
+			<key>pfm_description</key>
+			<string>Selects the credential source. When set, only that source is used, with no fallback.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#inferencecredentialkind</string>
+			<key>pfm_name</key>
+			<string>inferenceCredentialKind</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>static</string>
+				<string>helper-script</string>
+				<string>interactive</string>
+				<string>vendor-profile</string>
+				<string>workforce</string>
+				<string>external-idp</string>
+			</array>
+			<key>pfm_range_list_titles</key>
+			<array>
+				<string>Static</string>
+				<string>Helper script</string>
+				<string>Interactive sign-in</string>
+				<string>Vendor profile</string>
+				<string>Workforce Identity</string>
+				<string>External identity provider</string>
+			</array>
+			<key>pfm_title</key>
+			<string>Credential kind</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.14271.0</string>
+			<key>pfm_description</key>
+			<string>How long a sign-in stays valid under your identity provider's session policy. A re-authenticate banner appears before it expires.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#inferencesessionlifetimesec</string>
+			<key>pfm_name</key>
+			<string>inferenceSessionLifetimeSec</string>
+			<key>pfm_range_min</key>
+			<integer>1</integer>
+			<key>pfm_title</key>
+			<string>Sign-in session lifetime</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+			<key>pfm_value_unit</key>
+			<string>seconds</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.24012.0</string>
+			<key>pfm_description</key>
+			<string>HTTPS origin of the user-content-renderer deployment used for artifact and file previews. Uses the commercial host when unset.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#usercontentrendererurl</string>
+			<key>pfm_name</key>
+			<string>userContentRendererUrl</string>
+			<key>pfm_title</key>
+			<string>Artifact preview iframe origin</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.8089.0</string>
+			<key>pfm_description</key>
+			<string>Extra headers sent on every inference and model-discovery request. Routing and tenant headers only; do not put credentials here (use the credential helper instead).</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#inferencecustomheaders</string>
+			<key>pfm_name</key>
+			<string>inferenceCustomHeaders</string>
+			<key>pfm_sensitive</key>
+			<true/>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_name</key>
+					<string>{{key}}</string>
+					<key>pfm_title</key>
+					<string>Header name</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+				<dict>
+					<key>pfm_name</key>
+					<string>{{value}}</string>
+					<key>pfm_title</key>
+					<string>Header value</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>Custom inference headers</string>
+			<key>pfm_type</key>
+			<string>dictionary</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.2581.0</string>
+			<key>pfm_description</key>
+			<string>Absolute path to an executable that prints the credential (a bare token, or JSON with token and headers). When set, static credential keys are ignored. When delivered by a bootstrap server, applies only after user consent unless trustBootstrapDelivery or machine-scoped MDM covers the bootstrap URL.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#inferencecredentialhelper</string>
+			<key>pfm_name</key>
+			<string>inferenceCredentialHelper</string>
+			<key>pfm_title</key>
+			<string>Helper script</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>/usr/local/bin/claude-credential-helper</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2.2553.0</string>
+			<key>pfm_description</key>
+			<string>Absolute path of the credential helper executable on Windows devices, used there instead of the credential helper script. macOS and Linux devices ignore it; set it when one configuration serves both Windows and Mac devices. When delivered by a bootstrap server, applies only after user consent unless trustBootstrapDelivery or machine-scoped MDM covers the bootstrap URL.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#inferencecredentialhelperwindows</string>
+			<key>pfm_name</key>
+			<string>inferenceCredentialHelperWindows</string>
+			<key>pfm_title</key>
+			<string>Helper script (Windows)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>C:\Program Files\Example\helper.exe</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2.110.0</string>
+			<key>pfm_description</key>
+			<string>Arguments passed to the credential helper script, one per entry, in order. Entries may not be empty or contain double quotes, percent signs or control characters. When delivered by a bootstrap server, applies only after user consent unless trustBootstrapDelivery or machine-scoped MDM covers the bootstrap URL.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#inferencecredentialhelperargs</string>
+			<key>pfm_name</key>
+			<string>inferenceCredentialHelperArgs</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_title</key>
+					<string>Argument</string>
+					<key>pfm_type</key>
+					<string>string</string>
+					<key>pfm_value_placeholder</key>
+					<string>--environment</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>Helper script arguments</string>
+			<key>pfm_type</key>
+			<string>array</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.2581.0</string>
+			<key>pfm_default</key>
+			<integer>3600</integer>
+			<key>pfm_description</key>
+			<string>How long the helper output is cached before the helper runs again, without a relaunch. When delivered by a bootstrap server, applies only after user consent unless trustBootstrapDelivery or machine-scoped MDM covers the bootstrap URL.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#inferencecredentialhelperttlsec</string>
+			<key>pfm_name</key>
+			<string>inferenceCredentialHelperTtlSec</string>
+			<key>pfm_range_min</key>
+			<integer>1</integer>
+			<key>pfm_title</key>
+			<string>Helper script TTL</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+			<key>pfm_value_unit</key>
+			<string>seconds</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.8089.0</string>
+			<key>pfm_default</key>
+			<integer>60</integer>
+			<key>pfm_description</key>
+			<string>Maximum wait for the helper executable to finish. Raise this if the helper opens a browser for interactive sign-in. When delivered by a bootstrap server, applies only after user consent unless trustBootstrapDelivery or machine-scoped MDM covers the bootstrap URL.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#inferencecredentialhelpertimeoutsec</string>
+			<key>pfm_name</key>
+			<string>inferenceCredentialHelperTimeoutSec</string>
+			<key>pfm_range_max</key>
+			<integer>600</integer>
+			<key>pfm_range_min</key>
+			<integer>1</integer>
+			<key>pfm_title</key>
+			<string>Credential helper timeout</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+			<key>pfm_value_unit</key>
+			<string>seconds</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.10628.0</string>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>When the credential expires mid-session, re-run the helper to recover silently. Turn off if the helper cannot run non-interactively. When delivered by a bootstrap server, applies only after user consent unless trustBootstrapDelivery or machine-scoped MDM covers the bootstrap URL.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#inferencecredentialhelpersilentrefreshenabled</string>
+			<key>pfm_name</key>
+			<string>inferenceCredentialHelperSilentRefreshEnabled</string>
+			<key>pfm_title</key>
+			<string>Re-run helper for silent refresh</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.8089.0</string>
+			<key>pfm_description</key>
+			<string>Claude API key. Leave blank to sign in with the browser or to supply the key through a credential helper.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#inferenceanthropicapikey</string>
+			<key>pfm_exclude</key>
+			<array>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_n_range_list</key>
+							<array>
+								<string>anthropic</string>
+							</array>
+							<key>pfm_target</key>
+							<string>inferenceProvider</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+			<key>pfm_name</key>
+			<string>inferenceAnthropicApiKey</string>
+			<key>pfm_sensitive</key>
+			<true/>
+			<key>pfm_title</key>
+			<string>Claude API key</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.44121.1</string>
+			<key>pfm_default</key>
+			<integer>300</integer>
+			<key>pfm_description</key>
+			<string>Extra time to wait for model output on a streaming response that is sending only keep-alive pings. Gateway provider only.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#inferencestreamidletimeoutsec</string>
+			<key>pfm_exclude</key>
+			<array>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_n_range_list</key>
+							<array>
+								<string>gateway</string>
+							</array>
+							<key>pfm_target</key>
+							<string>inferenceProvider</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+			<key>pfm_name</key>
+			<string>inferenceStreamIdleTimeoutSec</string>
+			<key>pfm_range_max</key>
+			<integer>1800</integer>
+			<key>pfm_range_min</key>
+			<integer>300</integer>
+			<key>pfm_title</key>
+			<string>Stream idle timeout</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+			<key>pfm_value_unit</key>
+			<string>seconds</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.2581.0</string>
+			<key>pfm_conditionals</key>
+			<array>
+				<dict>
+					<key>pfm_require</key>
+					<string>always</string>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_range_list</key>
+							<array>
+								<string>gateway</string>
+							</array>
+							<key>pfm_target</key>
+							<string>inferenceProvider</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+			<key>pfm_description</key>
+			<string>Full URL of the inference gateway endpoint. When delivered by a bootstrap server, applies only after user consent unless trustBootstrapDelivery or machine-scoped MDM covers the bootstrap URL.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#inferencegatewaybaseurl</string>
+			<key>pfm_name</key>
+			<string>inferenceGatewayBaseUrl</string>
+			<key>pfm_title</key>
+			<string>Gateway base URL</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>https://gateway.example.com/v1</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.2581.0</string>
+			<key>pfm_description</key>
+			<string>API key for the configured inference gateway.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#inferencegatewayapikey</string>
+			<key>pfm_exclude</key>
+			<array>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_n_range_list</key>
+							<array>
+								<string>gateway</string>
+							</array>
+							<key>pfm_target</key>
+							<string>inferenceProvider</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+			<key>pfm_name</key>
+			<string>inferenceGatewayApiKey</string>
+			<key>pfm_sensitive</key>
+			<true/>
+			<key>pfm_title</key>
+			<string>Gateway API key</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.3036.0</string>
+			<key>pfm_default</key>
+			<string>bearer</string>
+			<key>pfm_description</key>
+			<string>How the gateway credential is sent on the wire: Authorization: Bearer or an x-api-key header.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#inferencegatewayauthscheme</string>
+			<key>pfm_exclude</key>
+			<array>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_n_range_list</key>
+							<array>
+								<string>gateway</string>
+							</array>
+							<key>pfm_target</key>
+							<string>inferenceProvider</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+			<key>pfm_name</key>
+			<string>inferenceGatewayAuthScheme</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>bearer</string>
+				<string>x-api-key</string>
+			</array>
+			<key>pfm_range_list_titles</key>
+			<array>
+				<string>Authorization: Bearer</string>
+				<string>x-api-key header</string>
+			</array>
+			<key>pfm_title</key>
+			<string>Gateway auth scheme</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2.7032.0</string>
+			<key>pfm_description</key>
+			<string>How the identity-provider sign-in runs: system browser (default) or the OS Microsoft Entra broker (Company Portal on macOS).</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#inferenceidpauthflow</string>
+			<key>pfm_exclude</key>
+			<array>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_n_range_list</key>
+							<array>
+								<string>gateway</string>
+								<string>bedrock</string>
+							</array>
+							<key>pfm_target</key>
+							<string>inferenceProvider</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+			<key>pfm_name</key>
+			<string>inferenceIdpAuthFlow</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>browser</string>
+				<string>broker</string>
+			</array>
+			<key>pfm_range_list_titles</key>
+			<array>
+				<string>System browser</string>
+				<string>OS identity broker (Microsoft Entra)</string>
+			</array>
+			<key>pfm_title</key>
+			<string>Identity provider sign-in flow</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2.7032.0</string>
+			<key>pfm_description</key>
+			<string>Your organization's OpenID Connect identity provider, used with credential kind external-idp. The user's token is sent as the bearer credential to the gateway or the Bedrock proxy. When delivered by a bootstrap server, applies only after user consent unless trustBootstrapDelivery or machine-scoped MDM covers the bootstrap URL.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#inferenceidpoidc</string>
+			<key>pfm_exclude</key>
+			<array>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_n_range_list</key>
+							<array>
+								<string>gateway</string>
+								<string>bedrock</string>
+							</array>
+							<key>pfm_target</key>
+							<string>inferenceProvider</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+			<key>pfm_name</key>
+			<string>inferenceIdpOidc</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_description</key>
+					<string>OAuth client ID of the desktop app registration at your identity provider (public client, PKCE).</string>
+					<key>pfm_name</key>
+					<string>clientId</string>
+					<key>pfm_require</key>
+					<string>always</string>
+					<key>pfm_title</key>
+					<string>Client ID</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>HTTPS issuer that supports OIDC discovery. Set this, or set the authorization and token URLs instead.</string>
+					<key>pfm_name</key>
+					<string>issuer</string>
+					<key>pfm_title</key>
+					<string>Issuer URL</string>
+					<key>pfm_type</key>
+					<string>string</string>
+					<key>pfm_value_placeholder</key>
+					<string>https://login.microsoftonline.com/TENANT_ID/v2.0</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>HTTPS authorization endpoint. Used together with the token URL when no issuer is set.</string>
+					<key>pfm_name</key>
+					<string>authorizationUrl</string>
+					<key>pfm_title</key>
+					<string>Authorization URL</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>HTTPS token endpoint. Used together with the authorization URL when no issuer is set.</string>
+					<key>pfm_name</key>
+					<string>tokenUrl</string>
+					<key>pfm_title</key>
+					<string>Token URL</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+				<dict>
+					<key>pfm_default</key>
+					<string>id_token</string>
+					<key>pfm_description</key>
+					<string>Which token is sent as the bearer credential. Use access_token for a gateway or proxy that validates tokens as an OAuth resource server.</string>
+					<key>pfm_name</key>
+					<string>bearerTokenType</string>
+					<key>pfm_range_list</key>
+					<array>
+						<string>id_token</string>
+						<string>access_token</string>
+					</array>
+					<key>pfm_range_list_titles</key>
+					<array>
+						<string>ID token</string>
+						<string>Access token</string>
+					</array>
+					<key>pfm_title</key>
+					<string>Bearer token</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>Space-separated scopes. Required in access-token mode, where it must name the gateway or proxy API scope.</string>
+					<key>pfm_name</key>
+					<string>scopes</string>
+					<key>pfm_title</key>
+					<string>Scopes</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+				<dict>
+					<key>pfm_default</key>
+					<true/>
+					<key>pfm_description</key>
+					<string>Append offline_access to the scopes so the identity provider returns a refresh token for silent refresh.</string>
+					<key>pfm_name</key>
+					<string>appendOfflineAccess</string>
+					<key>pfm_title</key>
+					<string>Append offline_access</string>
+					<key>pfm_type</key>
+					<string>boolean</string>
+				</dict>
+				<dict>
+					<key>pfm_app_min</key>
+					<string>1.30096.1</string>
+					<key>pfm_description</key>
+					<string>Access-token audience of the gateway or proxy (an HTTPS URL or an AD FS relying-party identifier). Leave unset for Microsoft Entra ID.</string>
+					<key>pfm_name</key>
+					<string>resource</string>
+					<key>pfm_title</key>
+					<string>Resource indicator (RFC 8707)</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>Fixed loopback port for the sign-in redirect. Leave unset to use a free port each time.</string>
+					<key>pfm_name</key>
+					<string>redirectPort</string>
+					<key>pfm_range_max</key>
+					<integer>65535</integer>
+					<key>pfm_range_min</key>
+					<integer>1024</integer>
+					<key>pfm_title</key>
+					<string>Redirect port</string>
+					<key>pfm_type</key>
+					<string>integer</string>
+				</dict>
+				<dict>
+					<key>pfm_app_min</key>
+					<string>2.110.0</string>
+					<key>pfm_default</key>
+					<string>127.0.0.1</string>
+					<key>pfm_description</key>
+					<string>Host named in the sign-in redirect URI. Use localhost only if your identity provider's registered redirect URI requires it.</string>
+					<key>pfm_name</key>
+					<string>redirectHost</string>
+					<key>pfm_range_list</key>
+					<array>
+						<string>127.0.0.1</string>
+						<string>localhost</string>
+					</array>
+					<key>pfm_range_list_titles</key>
+					<array>
+						<string>127.0.0.1</string>
+						<string>localhost</string>
+					</array>
+					<key>pfm_title</key>
+					<string>Redirect host</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+				<dict>
+					<key>pfm_app_min</key>
+					<string>1.20186.0</string>
+					<key>pfm_description</key>
+					<string>Space-separated hostnames also accepted as the referrer of the sign-in callback. Only needed when the identity provider completes sign-in from a different host.</string>
+					<key>pfm_name</key>
+					<string>additionalRedirectReferrerHosts</string>
+					<key>pfm_title</key>
+					<string>Additional redirect referrer hosts</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>Identity provider (OIDC)</string>
+			<key>pfm_type</key>
+			<string>dictionary</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.25927.0</string>
+			<key>pfm_description</key>
+			<string>Deprecated by Anthropic; the original spelling keeps working with no end date set. Use Identity Provider Sign-in Flow (inferenceIdpAuthFlow) instead. How the gateway IdP sign-in runs: system browser (default) or the OS Microsoft Entra broker.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#inferencegatewayoidcauthflow</string>
+			<key>pfm_exclude</key>
+			<array>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_n_range_list</key>
+							<array>
+								<string>gateway</string>
+							</array>
+							<key>pfm_target</key>
+							<string>inferenceProvider</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+			<key>pfm_name</key>
+			<string>inferenceGatewayOidcAuthFlow</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>browser</string>
+				<string>broker</string>
+			</array>
+			<key>pfm_range_list_titles</key>
+			<array>
+				<string>System browser</string>
+				<string>OS identity broker (Microsoft Entra)</string>
+			</array>
+			<key>pfm_title</key>
+			<string>Gateway sign-in flow</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.6889.0</string>
+			<key>pfm_description</key>
+			<string>Deprecated by Anthropic; the original spelling keeps working with no end date set. Use Identity Provider (inferenceIdpOidc) with credential kind external-idp instead. External OIDC identity provider for gateway sign-in; the token is sent to the gateway as the bearer credential. When delivered by a bootstrap server, applies only after user consent unless trustBootstrapDelivery or machine-scoped MDM covers the bootstrap URL.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#inferencegatewayoidc</string>
+			<key>pfm_exclude</key>
+			<array>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_n_range_list</key>
+							<array>
+								<string>gateway</string>
+							</array>
+							<key>pfm_target</key>
+							<string>inferenceProvider</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+			<key>pfm_name</key>
+			<string>inferenceGatewayOidc</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_description</key>
+					<string>OAuth client ID of the desktop app registration at your identity provider (public client, PKCE).</string>
+					<key>pfm_name</key>
+					<string>clientId</string>
+					<key>pfm_require</key>
+					<string>always</string>
+					<key>pfm_title</key>
+					<string>Client ID</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>HTTPS issuer that supports OIDC discovery. Set this, or set the authorization and token URLs instead.</string>
+					<key>pfm_name</key>
+					<string>issuer</string>
+					<key>pfm_title</key>
+					<string>Issuer URL</string>
+					<key>pfm_type</key>
+					<string>string</string>
+					<key>pfm_value_placeholder</key>
+					<string>https://login.microsoftonline.com/TENANT_ID/v2.0</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>HTTPS authorization endpoint. Used together with the token URL when no issuer is set.</string>
+					<key>pfm_name</key>
+					<string>authorizationUrl</string>
+					<key>pfm_title</key>
+					<string>Authorization URL</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>HTTPS token endpoint. Used together with the authorization URL when no issuer is set.</string>
+					<key>pfm_name</key>
+					<string>tokenUrl</string>
+					<key>pfm_title</key>
+					<string>Token URL</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+				<dict>
+					<key>pfm_default</key>
+					<string>id_token</string>
+					<key>pfm_description</key>
+					<string>Which token is sent as the bearer credential. Use access_token for a gateway or proxy that validates tokens as an OAuth resource server.</string>
+					<key>pfm_name</key>
+					<string>bearerTokenType</string>
+					<key>pfm_range_list</key>
+					<array>
+						<string>id_token</string>
+						<string>access_token</string>
+					</array>
+					<key>pfm_range_list_titles</key>
+					<array>
+						<string>ID token</string>
+						<string>Access token</string>
+					</array>
+					<key>pfm_title</key>
+					<string>Bearer token</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>Space-separated scopes. Required in access-token mode, where it must name the gateway or proxy API scope.</string>
+					<key>pfm_name</key>
+					<string>scopes</string>
+					<key>pfm_title</key>
+					<string>Scopes</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+				<dict>
+					<key>pfm_default</key>
+					<true/>
+					<key>pfm_description</key>
+					<string>Append offline_access to the scopes so the identity provider returns a refresh token for silent refresh.</string>
+					<key>pfm_name</key>
+					<string>appendOfflineAccess</string>
+					<key>pfm_title</key>
+					<string>Append offline_access</string>
+					<key>pfm_type</key>
+					<string>boolean</string>
+				</dict>
+				<dict>
+					<key>pfm_app_min</key>
+					<string>1.30096.1</string>
+					<key>pfm_description</key>
+					<string>Access-token audience of the gateway or proxy (an HTTPS URL or an AD FS relying-party identifier). Leave unset for Microsoft Entra ID.</string>
+					<key>pfm_name</key>
+					<string>resource</string>
+					<key>pfm_title</key>
+					<string>Resource indicator (RFC 8707)</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>Fixed loopback port for the sign-in redirect. Leave unset to use a free port each time.</string>
+					<key>pfm_name</key>
+					<string>redirectPort</string>
+					<key>pfm_range_max</key>
+					<integer>65535</integer>
+					<key>pfm_range_min</key>
+					<integer>1024</integer>
+					<key>pfm_title</key>
+					<string>Redirect port</string>
+					<key>pfm_type</key>
+					<string>integer</string>
+				</dict>
+				<dict>
+					<key>pfm_app_min</key>
+					<string>2.110.0</string>
+					<key>pfm_default</key>
+					<string>127.0.0.1</string>
+					<key>pfm_description</key>
+					<string>Host named in the sign-in redirect URI. Use localhost only if your identity provider's registered redirect URI requires it.</string>
+					<key>pfm_name</key>
+					<string>redirectHost</string>
+					<key>pfm_range_list</key>
+					<array>
+						<string>127.0.0.1</string>
+						<string>localhost</string>
+					</array>
+					<key>pfm_range_list_titles</key>
+					<array>
+						<string>127.0.0.1</string>
+						<string>localhost</string>
+					</array>
+					<key>pfm_title</key>
+					<string>Redirect host</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+				<dict>
+					<key>pfm_app_min</key>
+					<string>1.20186.0</string>
+					<key>pfm_description</key>
+					<string>Space-separated hostnames also accepted as the referrer of the sign-in callback. Only needed when the identity provider completes sign-in from a different host.</string>
+					<key>pfm_name</key>
+					<string>additionalRedirectReferrerHosts</string>
+					<key>pfm_title</key>
+					<string>Additional redirect referrer hosts</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>Gateway SSO IdP (OIDC)</string>
+			<key>pfm_type</key>
+			<string>dictionary</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.2581.0</string>
+			<key>pfm_conditionals</key>
+			<array>
+				<dict>
+					<key>pfm_require</key>
+					<string>always</string>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_range_list</key>
+							<array>
+								<string>bedrock</string>
+								<string>mantle</string>
+							</array>
+							<key>pfm_target</key>
+							<string>inferenceProvider</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+			<key>pfm_description</key>
+			<string>AWS region for the Bedrock runtime endpoint.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#inferencebedrockregion</string>
+			<key>pfm_name</key>
+			<string>inferenceBedrockRegion</string>
+			<key>pfm_title</key>
+			<string>AWS region</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>us-east-1</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.2581.0</string>
+			<key>pfm_description</key>
+			<string>For VPC endpoints or gateway proxies. HTTPS scheme and host only, no path. When delivered by a bootstrap server, applies only after user consent unless trustBootstrapDelivery or machine-scoped MDM covers the bootstrap URL.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#inferencebedrockbaseurl</string>
+			<key>pfm_exclude</key>
+			<array>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_n_range_list</key>
+							<array>
+								<string>bedrock</string>
+								<string>mantle</string>
+							</array>
+							<key>pfm_target</key>
+							<string>inferenceProvider</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+			<key>pfm_name</key>
+			<string>inferenceBedrockBaseUrl</string>
+			<key>pfm_title</key>
+			<string>Bedrock base URL</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.5186.0</string>
+			<key>pfm_description</key>
+			<string>Sent as the X-Amzn-Bedrock-Service-Tier header. Leave unset for on-demand.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#inferencebedrockservicetier</string>
+			<key>pfm_exclude</key>
+			<array>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_n_range_list</key>
+							<array>
+								<string>bedrock</string>
+							</array>
+							<key>pfm_target</key>
+							<string>inferenceProvider</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+			<key>pfm_name</key>
+			<string>inferenceBedrockServiceTier</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>flex</string>
+				<string>priority</string>
+			</array>
+			<key>pfm_range_list_titles</key>
+			<array>
+				<string>Flex</string>
+				<string>Priority</string>
+			</array>
+			<key>pfm_title</key>
+			<string>Bedrock service tier</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.2581.0</string>
+			<key>pfm_description</key>
+			<string>Static bearer token for Bedrock inference. Prefer profile or helper-script credentials where possible.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#inferencebedrockbearertoken</string>
+			<key>pfm_exclude</key>
+			<array>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_n_range_list</key>
+							<array>
+								<string>bedrock</string>
+								<string>mantle</string>
+							</array>
+							<key>pfm_target</key>
+							<string>inferenceProvider</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+			<key>pfm_name</key>
+			<string>inferenceBedrockBearerToken</string>
+			<key>pfm_sensitive</key>
+			<true/>
+			<key>pfm_title</key>
+			<string>AWS bearer token</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.6259.0</string>
+			<key>pfm_description</key>
+			<string>Enables in-app AWS IAM Identity Center sign-in (no AWS CLI needed). Set together with the SSO region, account ID and role name. When delivered by a bootstrap server, applies only after user consent unless trustBootstrapDelivery or machine-scoped MDM covers the bootstrap URL.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#inferencebedrockssostarturl</string>
+			<key>pfm_exclude</key>
+			<array>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_n_range_list</key>
+							<array>
+								<string>bedrock</string>
+							</array>
+							<key>pfm_target</key>
+							<string>inferenceProvider</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+			<key>pfm_name</key>
+			<string>inferenceBedrockSsoStartUrl</string>
+			<key>pfm_title</key>
+			<string>AWS SSO start URL</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.6259.0</string>
+			<key>pfm_description</key>
+			<string>IAM Identity Center home region. When delivered by a bootstrap server, applies only after user consent unless trustBootstrapDelivery or machine-scoped MDM covers the bootstrap URL.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#inferencebedrockssoregion</string>
+			<key>pfm_exclude</key>
+			<array>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_n_range_list</key>
+							<array>
+								<string>bedrock</string>
+							</array>
+							<key>pfm_target</key>
+							<string>inferenceProvider</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+			<key>pfm_name</key>
+			<string>inferenceBedrockSsoRegion</string>
+			<key>pfm_title</key>
+			<string>AWS SSO region</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>us-east-1</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.6259.0</string>
+			<key>pfm_description</key>
+			<string>12-digit AWS account ID assigned to users in IAM Identity Center. When delivered by a bootstrap server, applies only after user consent unless trustBootstrapDelivery or machine-scoped MDM covers the bootstrap URL.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#inferencebedrockssoaccountid</string>
+			<key>pfm_exclude</key>
+			<array>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_n_range_list</key>
+							<array>
+								<string>bedrock</string>
+							</array>
+							<key>pfm_target</key>
+							<string>inferenceProvider</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+			<key>pfm_format</key>
+			<string>^[0-9]{12}$</string>
+			<key>pfm_name</key>
+			<string>inferenceBedrockSsoAccountId</string>
+			<key>pfm_title</key>
+			<string>AWS SSO account ID</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.6259.0</string>
+			<key>pfm_description</key>
+			<string>IAM Identity Center permission-set name granting bedrock:InvokeModel* on the account above. When delivered by a bootstrap server, applies only after user consent unless trustBootstrapDelivery or machine-scoped MDM covers the bootstrap URL.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#inferencebedrockssorolename</string>
+			<key>pfm_exclude</key>
+			<array>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_n_range_list</key>
+							<array>
+								<string>bedrock</string>
+							</array>
+							<key>pfm_target</key>
+							<string>inferenceProvider</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+			<key>pfm_name</key>
+			<string>inferenceBedrockSsoRoleName</string>
+			<key>pfm_title</key>
+			<string>AWS SSO role name</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.2581.0</string>
+			<key>pfm_description</key>
+			<string>AWS named profile to use for Bedrock inference credentials. When delivered by a bootstrap server, applies only after user consent unless trustBootstrapDelivery or machine-scoped MDM covers the bootstrap URL.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#inferencebedrockprofile</string>
+			<key>pfm_exclude</key>
+			<array>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_n_range_list</key>
+							<array>
+								<string>bedrock</string>
+							</array>
+							<key>pfm_target</key>
+							<string>inferenceProvider</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+			<key>pfm_name</key>
+			<string>inferenceBedrockProfile</string>
+			<key>pfm_title</key>
+			<string>AWS profile name</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.2581.0</string>
+			<key>pfm_description</key>
+			<string>Folder with AWS config and credentials files. Defaults to ~/.aws when no bearer token is set. When delivered by a bootstrap server, applies only after user consent unless trustBootstrapDelivery or machine-scoped MDM covers the bootstrap URL.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#inferencebedrockawsdir</string>
+			<key>pfm_exclude</key>
+			<array>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_n_range_list</key>
+							<array>
+								<string>bedrock</string>
+							</array>
+							<key>pfm_target</key>
+							<string>inferenceProvider</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+			<key>pfm_name</key>
+			<string>inferenceBedrockAwsDir</string>
+			<key>pfm_title</key>
+			<string>AWS config directory</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.13576.0</string>
+			<key>pfm_description</key>
+			<string>Absolute path to the aws executable. Leave unset to find it on PATH. When delivered by a bootstrap server, applies only after user consent unless trustBootstrapDelivery or machine-scoped MDM covers the bootstrap URL.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#inferencebedrockawsclipath</string>
+			<key>pfm_exclude</key>
+			<array>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_n_range_list</key>
+							<array>
+								<string>bedrock</string>
+							</array>
+							<key>pfm_target</key>
+							<string>inferenceProvider</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+			<key>pfm_name</key>
+			<string>inferenceBedrockAwsCliPath</string>
+			<key>pfm_title</key>
+			<string>AWS CLI path</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>/usr/local/bin/aws</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.2581.0</string>
+			<key>pfm_conditionals</key>
+			<array>
+				<dict>
+					<key>pfm_require</key>
+					<string>always</string>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_range_list</key>
+							<array>
+								<string>vertex</string>
+							</array>
+							<key>pfm_target</key>
+							<string>inferenceProvider</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+			<key>pfm_description</key>
+			<string>Google Cloud project ID for Vertex AI inference. When delivered by a bootstrap server, applies only after user consent unless trustBootstrapDelivery or machine-scoped MDM covers the bootstrap URL.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#inferencevertexprojectid</string>
+			<key>pfm_format</key>
+			<string>^[a-z0-9][a-z0-9.:-]*$</string>
+			<key>pfm_name</key>
+			<string>inferenceVertexProjectId</string>
+			<key>pfm_title</key>
+			<string>GCP project ID</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.2581.0</string>
+			<key>pfm_conditionals</key>
+			<array>
+				<dict>
+					<key>pfm_require</key>
+					<string>always</string>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_range_list</key>
+							<array>
+								<string>vertex</string>
+							</array>
+							<key>pfm_target</key>
+							<string>inferenceProvider</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+			<key>pfm_description</key>
+			<string>GCP region where your Vertex AI Claude models are deployed.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#inferencevertexregion</string>
+			<key>pfm_name</key>
+			<string>inferenceVertexRegion</string>
+			<key>pfm_title</key>
+			<string>GCP region</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>us-east5</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.2581.0</string>
+			<key>pfm_description</key>
+			<string>Private Service Connect endpoint, if you use one. When delivered by a bootstrap server, applies only after user consent unless trustBootstrapDelivery or machine-scoped MDM covers the bootstrap URL.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#inferencevertexbaseurl</string>
+			<key>pfm_exclude</key>
+			<array>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_n_range_list</key>
+							<array>
+								<string>vertex</string>
+							</array>
+							<key>pfm_target</key>
+							<string>inferenceProvider</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+			<key>pfm_name</key>
+			<string>inferenceVertexBaseUrl</string>
+			<key>pfm_title</key>
+			<string>Vertex AI base URL</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.2581.0</string>
+			<key>pfm_description</key>
+			<string>Desktop-app OAuth client ID. Enables Sign in with Google instead of a credentials file. When delivered by a bootstrap server, applies only after user consent unless trustBootstrapDelivery or machine-scoped MDM covers the bootstrap URL.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#inferencevertexoauthclientid</string>
+			<key>pfm_exclude</key>
+			<array>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_n_range_list</key>
+							<array>
+								<string>vertex</string>
+							</array>
+							<key>pfm_target</key>
+							<string>inferenceProvider</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+			<key>pfm_name</key>
+			<string>inferenceVertexOAuthClientId</string>
+			<key>pfm_title</key>
+			<string>Vertex OAuth client ID</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.2581.0</string>
+			<key>pfm_description</key>
+			<string>Secret for the desktop-app OAuth client above. Google treats installed-app client secrets as non-confidential.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#inferencevertexoauthclientsecret</string>
+			<key>pfm_exclude</key>
+			<array>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_n_range_list</key>
+							<array>
+								<string>vertex</string>
+							</array>
+							<key>pfm_target</key>
+							<string>inferenceProvider</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+			<key>pfm_name</key>
+			<string>inferenceVertexOAuthClientSecret</string>
+			<key>pfm_sensitive</key>
+			<true/>
+			<key>pfm_title</key>
+			<string>Vertex OAuth client secret</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.2581.0</string>
+			<key>pfm_description</key>
+			<string>Override the Google OAuth scopes (space-separated). Leave blank for the default.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#inferencevertexoauthscopes</string>
+			<key>pfm_exclude</key>
+			<array>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_n_range_list</key>
+							<array>
+								<string>vertex</string>
+							</array>
+							<key>pfm_target</key>
+							<string>inferenceProvider</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+			<key>pfm_name</key>
+			<string>inferenceVertexOAuthScopes</string>
+			<key>pfm_title</key>
+			<string>Vertex OAuth scopes</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.12603.0</string>
+			<key>pfm_description</key>
+			<string>Pre-fills Google's account chooser and is forwarded to your federated IdP. {username} expands to the OS login name.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#inferencevertexoauthloginhint</string>
+			<key>pfm_exclude</key>
+			<array>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_n_range_list</key>
+							<array>
+								<string>vertex</string>
+							</array>
+							<key>pfm_target</key>
+							<string>inferenceProvider</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+			<key>pfm_name</key>
+			<string>inferenceVertexOAuthLoginHint</string>
+			<key>pfm_sensitive</key>
+			<true/>
+			<key>pfm_title</key>
+			<string>Vertex OAuth login hint</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>{username}@example.com</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.10628.0</string>
+			<key>pfm_description</key>
+			<string>Workforce-pool provider audience. When set, sign-in uses your own IdP plus a GCP STS token exchange instead of a Google identity. When delivered by a bootstrap server, applies only after user consent unless trustBootstrapDelivery or machine-scoped MDM covers the bootstrap URL.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#inferencevertexworkforceaudience</string>
+			<key>pfm_exclude</key>
+			<array>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_n_range_list</key>
+							<array>
+								<string>vertex</string>
+							</array>
+							<key>pfm_target</key>
+							<string>inferenceProvider</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+			<key>pfm_name</key>
+			<string>inferenceVertexWorkforceAudience</string>
+			<key>pfm_title</key>
+			<string>Workforce Identity audience</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.10628.0</string>
+			<key>pfm_description</key>
+			<string>GCP project used for STS billing and quota. Defaults to the Vertex project ID. When delivered by a bootstrap server, applies only after user consent unless trustBootstrapDelivery or machine-scoped MDM covers the bootstrap URL.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#inferencevertexworkforceuserproject</string>
+			<key>pfm_exclude</key>
+			<array>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_n_range_list</key>
+							<array>
+								<string>vertex</string>
+							</array>
+							<key>pfm_target</key>
+							<string>inferenceProvider</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+			<key>pfm_format</key>
+			<string>^[a-z0-9][a-z0-9.:-]*$</string>
+			<key>pfm_name</key>
+			<string>inferenceVertexWorkforceUserProject</string>
+			<key>pfm_title</key>
+			<string>Workforce Identity billing project</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.25927.0</string>
+			<key>pfm_description</key>
+			<string>How the Workforce Identity IdP sign-in runs: system browser (default) or the OS Microsoft Entra broker.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#inferencevertexworkforceauthflow</string>
+			<key>pfm_exclude</key>
+			<array>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_n_range_list</key>
+							<array>
+								<string>vertex</string>
+							</array>
+							<key>pfm_target</key>
+							<string>inferenceProvider</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+			<key>pfm_name</key>
+			<string>inferenceVertexWorkforceAuthFlow</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>browser</string>
+				<string>broker</string>
+			</array>
+			<key>pfm_range_list_titles</key>
+			<array>
+				<string>System browser</string>
+				<string>OS identity broker (Microsoft Entra)</string>
+			</array>
+			<key>pfm_title</key>
+			<string>Workforce Identity sign-in flow</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.10628.0</string>
+			<key>pfm_description</key>
+			<string>Your organization's OIDC identity provider. The app runs an authorization-code-with-PKCE sign-in against it and exchanges the ID token at GCP STS. When delivered by a bootstrap server, applies only after user consent unless trustBootstrapDelivery or machine-scoped MDM covers the bootstrap URL.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#inferencevertexworkforceoidc</string>
+			<key>pfm_exclude</key>
+			<array>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_n_range_list</key>
+							<array>
+								<string>vertex</string>
+							</array>
+							<key>pfm_target</key>
+							<string>inferenceProvider</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+			<key>pfm_name</key>
+			<string>inferenceVertexWorkforceOidc</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_description</key>
+					<string>OAuth client ID of the desktop app registration at your identity provider (public client, PKCE).</string>
+					<key>pfm_name</key>
+					<string>clientId</string>
+					<key>pfm_require</key>
+					<string>always</string>
+					<key>pfm_title</key>
+					<string>Client ID</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>HTTPS issuer that supports OIDC discovery. Set this, or set the authorization and token URLs instead.</string>
+					<key>pfm_name</key>
+					<string>issuer</string>
+					<key>pfm_title</key>
+					<string>Issuer URL</string>
+					<key>pfm_type</key>
+					<string>string</string>
+					<key>pfm_value_placeholder</key>
+					<string>https://login.microsoftonline.com/TENANT_ID/v2.0</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>HTTPS authorization endpoint. Used together with the token URL when no issuer is set.</string>
+					<key>pfm_name</key>
+					<string>authorizationUrl</string>
+					<key>pfm_title</key>
+					<string>Authorization URL</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>HTTPS token endpoint. Used together with the authorization URL when no issuer is set.</string>
+					<key>pfm_name</key>
+					<string>tokenUrl</string>
+					<key>pfm_title</key>
+					<string>Token URL</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>Space-separated scopes. Defaults to openid profile email offline_access.</string>
+					<key>pfm_name</key>
+					<string>scopes</string>
+					<key>pfm_title</key>
+					<string>Scopes</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>Fixed loopback port for the sign-in redirect. Leave unset to use a free port each time.</string>
+					<key>pfm_name</key>
+					<string>redirectPort</string>
+					<key>pfm_range_max</key>
+					<integer>65535</integer>
+					<key>pfm_range_min</key>
+					<integer>1024</integer>
+					<key>pfm_title</key>
+					<string>Redirect port</string>
+					<key>pfm_type</key>
+					<string>integer</string>
+				</dict>
+				<dict>
+					<key>pfm_app_min</key>
+					<string>2.110.0</string>
+					<key>pfm_default</key>
+					<string>127.0.0.1</string>
+					<key>pfm_description</key>
+					<string>Host named in the sign-in redirect URI. Use localhost only if your identity provider's registered redirect URI requires it.</string>
+					<key>pfm_name</key>
+					<string>redirectHost</string>
+					<key>pfm_range_list</key>
+					<array>
+						<string>127.0.0.1</string>
+						<string>localhost</string>
+					</array>
+					<key>pfm_range_list_titles</key>
+					<array>
+						<string>127.0.0.1</string>
+						<string>localhost</string>
+					</array>
+					<key>pfm_title</key>
+					<string>Redirect host</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+				<dict>
+					<key>pfm_app_min</key>
+					<string>1.17377.1</string>
+					<key>pfm_default</key>
+					<false/>
+					<key>pfm_description</key>
+					<string>Enable only if your identity provider rejects offline_access on this client. Users then sign in again each time the token expires.</string>
+					<key>pfm_name</key>
+					<string>omitOfflineAccess</string>
+					<key>pfm_title</key>
+					<string>Omit offline_access</string>
+					<key>pfm_type</key>
+					<string>boolean</string>
+				</dict>
+				<dict>
+					<key>pfm_app_min</key>
+					<string>1.20186.0</string>
+					<key>pfm_description</key>
+					<string>Space-separated hostnames also accepted as the referrer of the sign-in callback. Only needed when the identity provider completes sign-in from a different host.</string>
+					<key>pfm_name</key>
+					<string>additionalRedirectReferrerHosts</string>
+					<key>pfm_title</key>
+					<string>Additional redirect referrer hosts</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>Workforce Identity IdP (OIDC)</string>
+			<key>pfm_type</key>
+			<string>dictionary</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.2581.0</string>
+			<key>pfm_description</key>
+			<string>Absolute path to a service-account JSON file. Leave blank to fall back to Application Default Credentials. When delivered by a bootstrap server, applies only after user consent unless trustBootstrapDelivery or machine-scoped MDM covers the bootstrap URL.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#inferencevertexcredentialsfile</string>
+			<key>pfm_exclude</key>
+			<array>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_n_range_list</key>
+							<array>
+								<string>vertex</string>
+							</array>
+							<key>pfm_target</key>
+							<string>inferenceProvider</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+			<key>pfm_name</key>
+			<string>inferenceVertexCredentialsFile</string>
+			<key>pfm_title</key>
+			<string>GCP credentials file path</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.2581.0</string>
+			<key>pfm_conditionals</key>
+			<array>
+				<dict>
+					<key>pfm_require</key>
+					<string>always</string>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_range_list</key>
+							<array>
+								<string>foundry</string>
+							</array>
+							<key>pfm_target</key>
+							<string>inferenceProvider</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+			<key>pfm_description</key>
+			<string>Azure AI Foundry resource name used to construct the endpoint URL. Still required when a Foundry base URL is set. When delivered by a bootstrap server, applies only after user consent unless trustBootstrapDelivery or machine-scoped MDM covers the bootstrap URL.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#inferencefoundryresource</string>
+			<key>pfm_format</key>
+			<string>^[a-z0-9][a-z0-9-]{0,62}[a-z0-9]$</string>
+			<key>pfm_name</key>
+			<string>inferenceFoundryResource</string>
+			<key>pfm_title</key>
+			<string>Azure AI Foundry resource name</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2.110.0</string>
+			<key>pfm_description</key>
+			<string>Full base URL, path included, for a gateway or proxy in front of Foundry (replaces https://RESOURCE.services.ai.azure.com/anthropic). When delivered by a bootstrap server, applies only after user consent unless trustBootstrapDelivery or machine-scoped MDM covers the bootstrap URL.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#inferencefoundrybaseurl</string>
+			<key>pfm_exclude</key>
+			<array>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_n_range_list</key>
+							<array>
+								<string>foundry</string>
+							</array>
+							<key>pfm_target</key>
+							<string>inferenceProvider</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+			<key>pfm_name</key>
+			<string>inferenceFoundryBaseUrl</string>
+			<key>pfm_title</key>
+			<string>Azure AI Foundry base URL</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.2581.0</string>
+			<key>pfm_description</key>
+			<string>API key for Azure AI Foundry inference.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#inferencefoundryapikey</string>
+			<key>pfm_exclude</key>
+			<array>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_n_range_list</key>
+							<array>
+								<string>foundry</string>
+							</array>
+							<key>pfm_target</key>
+							<string>inferenceProvider</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+			<key>pfm_name</key>
+			<string>inferenceFoundryApiKey</string>
+			<key>pfm_sensitive</key>
+			<true/>
+			<key>pfm_title</key>
+			<string>Azure AI Foundry API key</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.9255.0</string>
+			<key>pfm_description</key>
+			<string>Directory (tenant) ID of the Entra ID app registration that has the Cognitive Services scope. When delivered by a bootstrap server, applies only after user consent unless trustBootstrapDelivery or machine-scoped MDM covers the bootstrap URL.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#inferencefoundrytenantid</string>
+			<key>pfm_exclude</key>
+			<array>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_n_range_list</key>
+							<array>
+								<string>foundry</string>
+							</array>
+							<key>pfm_target</key>
+							<string>inferenceProvider</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+			<key>pfm_name</key>
+			<string>inferenceFoundryTenantId</string>
+			<key>pfm_title</key>
+			<string>Entra ID tenant ID</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.9255.0</string>
+			<key>pfm_description</key>
+			<string>Application (client) ID of the Entra ID app registration. Device-code sign-in requires the registration to allow public client flows. When delivered by a bootstrap server, applies only after user consent unless trustBootstrapDelivery or machine-scoped MDM covers the bootstrap URL.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#inferencefoundryclientid</string>
+			<key>pfm_exclude</key>
+			<array>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_n_range_list</key>
+							<array>
+								<string>foundry</string>
+							</array>
+							<key>pfm_target</key>
+							<string>inferenceProvider</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+			<key>pfm_name</key>
+			<string>inferenceFoundryClientId</string>
+			<key>pfm_title</key>
+			<string>Entra ID client ID</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.19367.0</string>
+			<key>pfm_default</key>
+			<string>device-code</string>
+			<key>pfm_description</key>
+			<string>How Entra sign-in runs: device code (default), system browser, or the OS identity broker (Company Portal on macOS).</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#inferencefoundryauthflow</string>
+			<key>pfm_exclude</key>
+			<array>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_n_range_list</key>
+							<array>
+								<string>foundry</string>
+							</array>
+							<key>pfm_target</key>
+							<string>inferenceProvider</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+			<key>pfm_name</key>
+			<string>inferenceFoundryAuthFlow</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>device-code</string>
+				<string>browser</string>
+				<string>broker</string>
+			</array>
+			<key>pfm_range_list_titles</key>
+			<array>
+				<string>Device code</string>
+				<string>System browser</string>
+				<string>OS identity broker</string>
+			</array>
+			<key>pfm_title</key>
+			<string>Entra ID sign-in flow</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.10628.0</string>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>Fetch and apply the bootstrap config URL at launch. Turn off to keep the URL saved but skip the fetch. MDM only: ignored in a bootstrap server response.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#bootstrapenabled</string>
+			<key>pfm_name</key>
+			<string>bootstrapEnabled</string>
+			<key>pfm_title</key>
+			<string>Use bootstrap config</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.10628.0</string>
+			<key>pfm_description</key>
+			<string>HTTPS endpoint that returns a per-user JSON configuration. Values from the response override local settings and become read-only. Embedded credentials are refused. MDM only: ignored in a bootstrap server response.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#bootstrapurl</string>
+			<key>pfm_name</key>
+			<string>bootstrapUrl</string>
+			<key>pfm_title</key>
+			<string>Bootstrap config URL</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>https://bootstrap.example.com/user/bootstrap</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.10628.0</string>
+			<key>pfm_description</key>
+			<string>When set, the bootstrap request sends a bearer token from a browser sign-in (authorization code with PKCE) at this identity provider. Omit to use device-code mode against the bootstrap server. MDM only: ignored in a bootstrap server response.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#bootstrapoidc</string>
+			<key>pfm_name</key>
+			<string>bootstrapOidc</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_description</key>
+					<string>OAuth client ID of the desktop app registration at your identity provider (public client, PKCE).</string>
+					<key>pfm_name</key>
+					<string>clientId</string>
+					<key>pfm_require</key>
+					<string>always</string>
+					<key>pfm_title</key>
+					<string>Client ID</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>HTTPS issuer that supports OIDC discovery. Set this, or set the authorization and token URLs instead.</string>
+					<key>pfm_name</key>
+					<string>issuer</string>
+					<key>pfm_title</key>
+					<string>Issuer URL</string>
+					<key>pfm_type</key>
+					<string>string</string>
+					<key>pfm_value_placeholder</key>
+					<string>https://login.microsoftonline.com/TENANT_ID/v2.0</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>HTTPS authorization endpoint. Used together with the token URL when no issuer is set.</string>
+					<key>pfm_name</key>
+					<string>authorizationUrl</string>
+					<key>pfm_title</key>
+					<string>Authorization URL</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>HTTPS token endpoint. Used together with the authorization URL when no issuer is set.</string>
+					<key>pfm_name</key>
+					<string>tokenUrl</string>
+					<key>pfm_title</key>
+					<string>Token URL</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>Space-separated scopes. The token's audience must match what your bootstrap server validates.</string>
+					<key>pfm_name</key>
+					<string>scopes</string>
+					<key>pfm_title</key>
+					<string>Scopes</string>
+					<key>pfm_type</key>
+					<string>string</string>
+					<key>pfm_value_placeholder</key>
+					<string>openid offline_access CLIENT_ID/.default</string>
+				</dict>
+				<dict>
+					<key>pfm_description</key>
+					<string>Fixed loopback port for the sign-in redirect. Leave unset to use a free port each time.</string>
+					<key>pfm_name</key>
+					<string>redirectPort</string>
+					<key>pfm_range_max</key>
+					<integer>65535</integer>
+					<key>pfm_range_min</key>
+					<integer>1024</integer>
+					<key>pfm_title</key>
+					<string>Redirect port</string>
+					<key>pfm_type</key>
+					<string>integer</string>
+				</dict>
+				<dict>
+					<key>pfm_app_min</key>
+					<string>2.110.0</string>
+					<key>pfm_default</key>
+					<string>127.0.0.1</string>
+					<key>pfm_description</key>
+					<string>Host named in the sign-in redirect URI. Use localhost only if your identity provider's registered redirect URI requires it.</string>
+					<key>pfm_name</key>
+					<string>redirectHost</string>
+					<key>pfm_range_list</key>
+					<array>
+						<string>127.0.0.1</string>
+						<string>localhost</string>
+					</array>
+					<key>pfm_range_list_titles</key>
+					<array>
+						<string>127.0.0.1</string>
+						<string>localhost</string>
+					</array>
+					<key>pfm_title</key>
+					<string>Redirect host</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+				<dict>
+					<key>pfm_app_min</key>
+					<string>1.20186.0</string>
+					<key>pfm_description</key>
+					<string>Space-separated hostnames also accepted as the referrer of the sign-in callback. Only needed when the identity provider completes sign-in from a different host.</string>
+					<key>pfm_name</key>
+					<string>additionalRedirectReferrerHosts</string>
+					<key>pfm_title</key>
+					<string>Additional redirect referrer hosts</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>Bootstrap OIDC parameters</string>
+			<key>pfm_type</key>
+			<string>dictionary</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.32885.1</string>
+			<key>pfm_description</key>
+			<string>HTTP headers sent on every bootstrap config fetch, for example a service-account credential or a tenant header. Use instead of embedding user:password in the URL. MDM only: ignored in a bootstrap server response.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#bootstrapheaders</string>
+			<key>pfm_name</key>
+			<string>bootstrapHeaders</string>
+			<key>pfm_sensitive</key>
+			<true/>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_name</key>
+					<string>{{key}}</string>
+					<key>pfm_title</key>
+					<string>Header name</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+				<dict>
+					<key>pfm_name</key>
+					<string>{{value}}</string>
+					<key>pfm_title</key>
+					<string>Header value</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>Bootstrap request headers</string>
+			<key>pfm_type</key>
+			<string>dictionary</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.32885.1</string>
+			<key>pfm_description</key>
+			<string>Absolute path to an executable that prints a JSON object of bootstrap request headers. Merged over the static headers; the helper wins on conflict. MDM only: ignored in a bootstrap server response.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#bootstrapheadershelper</string>
+			<key>pfm_name</key>
+			<string>bootstrapHeadersHelper</string>
+			<key>pfm_title</key>
+			<string>Bootstrap headers helper script</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.26832.0</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>Skip the per-user consent prompt for sign-in targets, inference endpoints, helper scripts and connectors that the bootstrap server delivers. MDM only: ignored in a bootstrap server response.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#trustbootstrapdelivery</string>
+			<key>pfm_name</key>
+			<string>trustBootstrapDelivery</string>
+			<key>pfm_title</key>
+			<string>Trust bootstrap-delivered settings</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.2581.0</string>
+			<key>pfm_description</key>
+			<string>Overrides the auto-discovered model list. Use the provider's exact model IDs. The first entry is the default model.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#inferencemodels</string>
+			<key>pfm_name</key>
+			<string>inferenceModels</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_name</key>
+					<string>inferenceModelsItem</string>
+					<key>pfm_subkeys</key>
+					<array>
+						<dict>
+							<key>pfm_description</key>
+							<string>Model ID exactly as the provider expects it.</string>
+							<key>pfm_name</key>
+							<string>name</string>
+							<key>pfm_require</key>
+							<string>always</string>
+							<key>pfm_title</key>
+							<string>Model ID</string>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_value_placeholder</key>
+							<string>claude-sonnet-5</string>
+						</dict>
+						<dict>
+							<key>pfm_description</key>
+							<string>Shown in the model picker. Leave blank to format the name from the ID.</string>
+							<key>pfm_name</key>
+							<string>labelOverride</string>
+							<key>pfm_title</key>
+							<string>Display name</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+						<dict>
+							<key>pfm_description</key>
+							<string>Adds a 1M-context variant of this model to the picker. Set only if your deployment accepts 1M-token context for it.</string>
+							<key>pfm_name</key>
+							<string>supports1m</string>
+							<key>pfm_title</key>
+							<string>Offer 1M-context variant</string>
+							<key>pfm_type</key>
+							<string>boolean</string>
+						</dict>
+						<dict>
+							<key>pfm_app_min</key>
+							<string>1.21459.0</string>
+							<key>pfm_description</key>
+							<string>Shows one option for this model and requests 1M from the provider. No effect unless the entry offers 1M.</string>
+							<key>pfm_name</key>
+							<string>prefer1m</string>
+							<key>pfm_title</key>
+							<string>Only show the 1M option</string>
+							<key>pfm_type</key>
+							<string>boolean</string>
+						</dict>
+						<dict>
+							<key>pfm_app_min</key>
+							<string>1.13576.0</string>
+							<key>pfm_description</key>
+							<string>The Claude tier this model stands in for, so a bare tier alias such as 'opus' resolves to it.</string>
+							<key>pfm_name</key>
+							<string>anthropicFamilyTier</string>
+							<key>pfm_range_list</key>
+							<array>
+								<string>sonnet</string>
+								<string>opus</string>
+								<string>haiku</string>
+								<string>fable</string>
+								<string>mythos</string>
+							</array>
+							<key>pfm_range_list_titles</key>
+							<array>
+								<string>Sonnet</string>
+								<string>Opus</string>
+								<string>Haiku</string>
+								<string>Fable</string>
+								<string>Mythos</string>
+							</array>
+							<key>pfm_title</key>
+							<string>Tier alias</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+						<dict>
+							<key>pfm_app_min</key>
+							<string>1.13576.0</string>
+							<key>pfm_description</key>
+							<string>When several models share a tier alias, marks this one as the model the alias resolves to. Otherwise the first listed wins.</string>
+							<key>pfm_name</key>
+							<string>isFamilyDefault</string>
+							<key>pfm_title</key>
+							<string>Default for tier</string>
+							<key>pfm_type</key>
+							<string>boolean</string>
+						</dict>
+						<dict>
+							<key>pfm_app_min</key>
+							<string>4.29.0</string>
+							<key>pfm_description</key>
+							<string>For IDs the app cannot identify (such as a gateway alias): the Claude model this ID routes to, so it gets that model's effort levels and limits.</string>
+							<key>pfm_name</key>
+							<string>behavesAs</string>
+							<key>pfm_title</key>
+							<string>Claude model behind this ID</string>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_value_placeholder</key>
+							<string>claude-sonnet-5</string>
+						</dict>
+						<dict>
+							<key>pfm_app_min</key>
+							<string>2.110.0</string>
+							<key>pfm_description</key>
+							<string>Highest effort level offered for this model; higher levels are hidden and never requested. An unrecognized value caps the model at low.</string>
+							<key>pfm_name</key>
+							<string>maxEffort</string>
+							<key>pfm_range_list</key>
+							<array>
+								<string>low</string>
+								<string>medium</string>
+								<string>high</string>
+								<string>xhigh</string>
+								<string>max</string>
+							</array>
+							<key>pfm_range_list_titles</key>
+							<array>
+								<string>Low</string>
+								<string>Medium</string>
+								<string>High</string>
+								<string>Extra high</string>
+								<string>Max</string>
+							</array>
+							<key>pfm_title</key>
+							<string>Max effort</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+					</array>
+					<key>pfm_title</key>
+					<string>Model</string>
+					<key>pfm_type</key>
+					<string>dictionary</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>Model list</string>
+			<key>pfm_type</key>
+			<string>array</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.8089.0</string>
+			<key>pfm_description</key>
+			<string>Populate the model picker from the provider's model-list endpoint at launch. When off, the model list is required and must use full model IDs.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#modeldiscoveryenabled</string>
+			<key>pfm_name</key>
+			<string>modelDiscoveryEnabled</string>
+			<key>pfm_title</key>
+			<string>Model discovery</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.28929.0</string>
+			<key>pfm_description</key>
+			<string>Every model that offers a 1M-token context window shows a single option in the picker and requests 1M from the provider.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#modelprefer1mcontext</string>
+			<key>pfm_name</key>
+			<string>modelPrefer1mContext</string>
+			<key>pfm_title</key>
+			<string>Use 1M wherever it’s available</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2.110.0</string>
+			<key>pfm_description</key>
+			<string>Effort level the default model (the first listed model) starts at, instead of Anthropic's recommended level.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#defaultmodeleffort</string>
+			<key>pfm_name</key>
+			<string>defaultModelEffort</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>low</string>
+				<string>medium</string>
+				<string>high</string>
+				<string>xhigh</string>
+				<string>max</string>
+			</array>
+			<key>pfm_range_list_titles</key>
+			<array>
+				<string>Low</string>
+				<string>Medium</string>
+				<string>High</string>
+				<string>Extra high</string>
+				<string>Max</string>
+			</array>
+			<key>pfm_title</key>
+			<string>Default model effort</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2.110.0</string>
+			<key>pfm_description</key>
+			<string>New conversations and tasks start on the default model and effort level, not each person's last choice. Users can still change both for the current one.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#alwaysstartwithdefaultmodel</string>
+			<key>pfm_name</key>
+			<string>alwaysStartWithDefaultModel</string>
+			<key>pfm_title</key>
+			<string>Always start with the default model</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.25927.0</string>
+			<key>pfm_description</key>
+			<string>Sets the default effort level for Claude Code sessions in Claude Desktop, applied fresh at the start of each session. Does not apply to Cowork sessions. Unset by default. Applies to standard deployments (users sign in with Claude.ai); Claude Desktop in third-party (3P) mode ignores this key. In 3P mode, use Default Model Effort (defaultModelEffort) instead.</string>
+			<key>pfm_name</key>
+			<string>effortLevel</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>low</string>
+				<string>medium</string>
+				<string>high</string>
+				<string>xhigh</string>
+				<string>max</string>
+			</array>
+			<key>pfm_range_list_titles</key>
+			<array>
+				<string>Low</string>
+				<string>Medium</string>
+				<string>High</string>
+				<string>Extra high</string>
+				<string>Max</string>
+			</array>
+			<key>pfm_title</key>
+			<string>Effort level</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2.110.0</string>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>Fetch Anthropic's signed model catalog for model picker names, descriptions and effort options. When off, the app uses only its bundled copy.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#modelcatalogenabled</string>
+			<key>pfm_name</key>
+			<string>modelCatalogEnabled</string>
+			<key>pfm_title</key>
+			<string>Model catalog metadata</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2.110.0</string>
+			<key>pfm_description</key>
+			<string>Fetch the model catalog and its signature file from this mirror inside your network instead of downloads.claude.ai. HTTPS required; redirects are not followed.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#modelcatalogurl</string>
+			<key>pfm_name</key>
+			<string>modelCatalogUrl</string>
+			<key>pfm_title</key>
+			<string>Model catalog URL</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.37937.0</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>Show an estimated cost on the Usage page, at Anthropic list price unless a multiplier or per-model rates are set. Required for the two pricing keys below to apply.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#inferencemodelpricingenabled</string>
+			<key>pfm_name</key>
+			<string>inferenceModelPricingEnabled</string>
+			<key>pfm_title</key>
+			<string>Show estimated cost</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.37937.0</string>
+			<key>pfm_description</key>
+			<string>Scales every estimated cost (0.85 = 85% of the price). Applies only while Show Estimated Cost is on.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#inferencemodelpricingmultiplier</string>
+			<key>pfm_name</key>
+			<string>inferenceModelPricingMultiplier</string>
+			<key>pfm_range_max</key>
+			<integer>1</integer>
+			<key>pfm_range_min</key>
+			<integer>0</integer>
+			<key>pfm_sensitive</key>
+			<true/>
+			<key>pfm_title</key>
+			<string>Price multiplier</string>
+			<key>pfm_type</key>
+			<string>real</string>
+			<key>pfm_value_placeholder</key>
+			<real>0.85</real>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.37937.0</string>
+			<key>pfm_description</key>
+			<string>Per-model rates (USD per million tokens) replacing Anthropic list price in the Usage page's estimate. Applies only while Show Estimated Cost is on.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#inferencemodelpricing</string>
+			<key>pfm_name</key>
+			<string>inferenceModelPricing</string>
+			<key>pfm_sensitive</key>
+			<true/>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_name</key>
+					<string>inferenceModelPricingItem</string>
+					<key>pfm_subkeys</key>
+					<array>
+						<dict>
+							<key>pfm_description</key>
+							<string>A model ID or provider alias. A built-in Claude ID also covers its dated and provider forms.</string>
+							<key>pfm_name</key>
+							<string>name</string>
+							<key>pfm_require</key>
+							<string>always</string>
+							<key>pfm_title</key>
+							<string>Model ID</string>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_value_placeholder</key>
+							<string>claude-sonnet-4-6</string>
+						</dict>
+						<dict>
+							<key>pfm_description</key>
+							<string>USD per million input tokens.</string>
+							<key>pfm_name</key>
+							<string>inputPerMtok</string>
+							<key>pfm_range_max</key>
+							<integer>10000</integer>
+							<key>pfm_range_min</key>
+							<integer>0</integer>
+							<key>pfm_require</key>
+							<string>always</string>
+							<key>pfm_title</key>
+							<string>Input</string>
+							<key>pfm_type</key>
+							<string>real</string>
+						</dict>
+						<dict>
+							<key>pfm_description</key>
+							<string>USD per million output tokens.</string>
+							<key>pfm_name</key>
+							<string>outputPerMtok</string>
+							<key>pfm_range_max</key>
+							<integer>10000</integer>
+							<key>pfm_range_min</key>
+							<integer>0</integer>
+							<key>pfm_require</key>
+							<string>always</string>
+							<key>pfm_title</key>
+							<string>Output</string>
+							<key>pfm_type</key>
+							<string>real</string>
+						</dict>
+						<dict>
+							<key>pfm_description</key>
+							<string>USD per million prompt-cache read tokens.</string>
+							<key>pfm_name</key>
+							<string>cacheReadPerMtok</string>
+							<key>pfm_range_max</key>
+							<integer>10000</integer>
+							<key>pfm_range_min</key>
+							<integer>0</integer>
+							<key>pfm_require</key>
+							<string>always</string>
+							<key>pfm_title</key>
+							<string>Cache read</string>
+							<key>pfm_type</key>
+							<string>real</string>
+						</dict>
+						<dict>
+							<key>pfm_description</key>
+							<string>USD per million prompt-cache write tokens (5-minute and 1-hour writes alike).</string>
+							<key>pfm_name</key>
+							<string>cacheWritePerMtok</string>
+							<key>pfm_range_max</key>
+							<integer>10000</integer>
+							<key>pfm_range_min</key>
+							<integer>0</integer>
+							<key>pfm_require</key>
+							<string>always</string>
+							<key>pfm_title</key>
+							<string>Cache write</string>
+							<key>pfm_type</key>
+							<string>real</string>
+						</dict>
+					</array>
+					<key>pfm_title</key>
+					<string>Model rate</string>
+					<key>pfm_type</key>
+					<string>dictionary</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>Model pricing</string>
+			<key>pfm_type</key>
+			<string>array</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>0.14.1</string>
+			<key>pfm_description</key>
+			<string>Per-user soft cap, counted client-side over the token cap window. Not a server-enforced quota. Requires inferenceTokenWindowHours to also be set — without a window length the cap is inert and no limit is enforced.</string>
+			<key>pfm_name</key>
+			<string>inferenceMaxTokensPerWindow</string>
+			<key>pfm_title</key>
+			<string>Max tokens per window</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>0.14.1</string>
+			<key>pfm_description</key>
+			<string>Tumbling window length for the token cap. Max 720 hours (30 days). Range: 1-720. Required when inferenceMaxTokensPerWindow is set — the cap only takes effect once both are configured.</string>
+			<key>pfm_name</key>
+			<string>inferenceTokenWindowHours</string>
+			<key>pfm_range_max</key>
+			<integer>720</integer>
+			<key>pfm_range_min</key>
+			<integer>1</integer>
+			<key>pfm_title</key>
+			<string>Token cap window</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>4.29.0</string>
+			<key>pfm_default</key>
+			<integer>75</integer>
+			<key>pfm_description</key>
+			<string>Warn users once they have used this percentage of their token limit. At 100, the only warning comes at the limit. Has no effect unless Max Tokens per Window and Token Cap Window are both set. Unset: 75.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#inferencetokenwarningpercent</string>
+			<key>pfm_name</key>
+			<string>inferenceTokenWarningPercent</string>
+			<key>pfm_range_max</key>
+			<integer>100</integer>
+			<key>pfm_range_min</key>
+			<integer>1</integer>
+			<key>pfm_title</key>
+			<string>Token limit warning</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+			<key>pfm_value_unit</key>
+			<string>percent</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.52386.0</string>
+			<key>pfm_description</key>
+			<string>standard turns on Unified Claude (Chat and Cowork in one view); off turns Chat and Cowork off. Replaces Allow Chat, Advanced File Analysis and Allow Cowork. Values are case-sensitive; an unrecognized value is read as off.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#desktophome</string>
+			<key>pfm_name</key>
+			<string>desktopHome</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>standard</string>
+				<string>off</string>
+			</array>
+			<key>pfm_range_list_allow_custom_value</key>
+			<true/>
+			<key>pfm_range_list_titles</key>
+			<array>
+				<string>Standard (Unified Claude)</string>
+				<string>Off</string>
+			</array>
+			<key>pfm_title</key>
+			<string>Desktop home</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.13576.0</string>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>Enable Chat. Quick questions and drafting.</string>
+			<key>pfm_name</key>
+			<string>chatTabEnabled</string>
+			<key>pfm_title</key>
+			<string>Allow Chat</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.21459.0</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>Allow Claude to run code in a local sandbox to analyze attached files it can't read natively — like Excel and PowerPoint. Off by default.</string>
+			<key>pfm_name</key>
+			<string>chatAdvancedFileAnalysisEnabled</string>
+			<key>pfm_title</key>
+			<string>Advanced file analysis</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.9659.0</string>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>Enable Cowork. Claude works on longer tasks like research, analysis, and documents. Defaults to true.</string>
+			<key>pfm_name</key>
+			<string>coworkTabEnabled</string>
+			<key>pfm_title</key>
+			<string>Allow Cowork</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>Enable Cowork access in Claude Desktop. Applies to standard deployments (users sign in with Claude.ai); Claude Desktop in third-party (3P) mode ignores this key. In 3P mode, use Allow Cowork (coworkTabEnabled) or Desktop Home (desktopHome) instead.</string>
+			<key>pfm_name</key>
+			<string>secureVmFeaturesEnabled</string>
+			<key>pfm_title</key>
+			<string>Enable secure VM features</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>Enable Claude code access in desktop.</string>
+			<key>pfm_name</key>
+			<string>isClaudeCodeForDesktopEnabled</string>
+			<key>pfm_title</key>
+			<string>Allow Code</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.10628.0</string>
+			<key>pfm_description</key>
+			<string>Controls Auto mode. Unset: offered in the Code tab. true: also offered in Cowork. false: removed from both tabs.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#automodeenabled</string>
+			<key>pfm_name</key>
+			<string>autoModeEnabled</string>
+			<key>pfm_title</key>
+			<string>Allow Auto mode</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.46388.1</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>Remove the bypass permissions mode from Code sessions and Cowork tasks, so Claude always follows the permission policy. Off by default.</string>
+			<key>pfm_name</key>
+			<string>disableBypassPermissionsMode</string>
+			<key>pfm_title</key>
+			<string>Disable bypass permissions mode</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.40609.0</string>
+			<key>pfm_description</key>
+			<string>SSH hosts allowed for Code sessions: exact hostnames, *. wildcards, or * for any host. Unset: off unless Claude Code managed settings on the device list hosts. An empty list: off.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#sshhostallowlist</string>
+			<key>pfm_name</key>
+			<string>sshHostAllowlist</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_title</key>
+					<string>Host</string>
+					<key>pfm_type</key>
+					<string>string</string>
+					<key>pfm_value_placeholder</key>
+					<string>*.corp.example.com</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>SSH host allowlist</string>
+			<key>pfm_type</key>
+			<string>array</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.46388.1</string>
+			<key>pfm_description</key>
+			<string>Absolute path to the OpenSSH ssh program (7.6 or newer) the app runs for SSH sessions. Unset: the first ssh on the user's PATH.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#sshclientpath</string>
+			<key>pfm_name</key>
+			<string>sshClientPath</string>
+			<key>pfm_title</key>
+			<string>SSH client program</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>/usr/bin/ssh</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.52386.0</string>
+			<key>pfm_description</key>
+			<string>Which SSH engine carries Code sessions: the OpenSSH ssh program on the device or the app's built-in SSH library. Unset or auto: the build's default.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#sshtransport</string>
+			<key>pfm_name</key>
+			<string>sshTransport</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>auto</string>
+				<string>system-openssh</string>
+				<string>builtin</string>
+			</array>
+			<key>pfm_range_list_titles</key>
+			<array>
+				<string>Auto</string>
+				<string>System OpenSSH</string>
+				<string>Built-in library</string>
+			</array>
+			<key>pfm_title</key>
+			<string>SSH connection engine</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.15962.0</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>Turns off the skills and workflows that ship with Claude Desktop.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#disablebundledskills</string>
+			<key>pfm_name</key>
+			<string>disableBundledSkills</string>
+			<key>pfm_title</key>
+			<string>Disable bundled skills and workflows</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.25927.0</string>
+			<key>pfm_description</key>
+			<string>When off, the options to create and upload skills are hidden and Claude does not offer to create or update skills.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#skillcreationenabled</string>
+			<key>pfm_name</key>
+			<string>skillCreationEnabled</string>
+			<key>pfm_title</key>
+			<string>Allow user-created skills</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Scan skills that users create.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#skillscanningenabled</string>
+			<key>pfm_name</key>
+			<string>skillScanningEnabled</string>
+			<key>pfm_title</key>
+			<string>Scan user-created skills</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2.110.0</string>
+			<key>pfm_description</key>
+			<string>Allow users to create and run scheduled tasks.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#scheduledtasksenabled</string>
+			<key>pfm_name</key>
+			<string>scheduledTasksEnabled</string>
+			<key>pfm_title</key>
+			<string>Allow scheduled tasks</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2.7032.0</string>
+			<key>pfm_description</key>
+			<string>Allow Claude Desktop to keep the computer awake while it works.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#keepawakeenabled</string>
+			<key>pfm_name</key>
+			<string>keepAwakeEnabled</string>
+			<key>pfm_title</key>
+			<string>Allow keep awake</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2.37337.1</string>
+			<key>pfm_description</key>
+			<string>When false, the Enable Developer Mode menu item and the Developer menu do not appear.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#developermodeenabled</string>
+			<key>pfm_name</key>
+			<string>developerModeEnabled</string>
+			<key>pfm_title</key>
+			<string>Allow Developer Mode</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.1623.0</string>
+			<key>pfm_description</key>
+			<string>Default keyboard shortcut for Quick Entry.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#quickentrydefaultshortcut</string>
+			<key>pfm_name</key>
+			<string>quickEntryDefaultShortcut</string>
+			<key>pfm_title</key>
+			<string>Default Quick Entry shortcut</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.6556.1</string>
+			<key>pfm_description</key>
+			<string>Allow Quick Entry to capture screenshots of the screen and other apps.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#quickentryscreenshotsenabled</string>
+			<key>pfm_name</key>
+			<string>quickEntryScreenshotsEnabled</string>
+			<key>pfm_title</key>
+			<string>Allow screenshots of the screen and other apps</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>3.6556.1</string>
+			<key>pfm_description</key>
+			<string>Allow Quick Entry to share files that are open in other apps.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#quickentryfilesharingenabled</string>
+			<key>pfm_name</key>
+			<string>quickEntryFileSharingEnabled</string>
+			<key>pfm_title</key>
+			<string>Allow sharing files open in other apps</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>4.4212.0</string>
+			<key>pfm_description</key>
+			<string>Set to false to hide projects in Chat and Cowork. Projects are not deleted and reappear when the setting is turned back on.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#projectsenabled</string>
+			<key>pfm_name</key>
+			<string>projectsEnabled</string>
+			<key>pfm_title</key>
+			<string>Allow projects</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>4.4212.0</string>
+			<key>pfm_description</key>
+			<string>Absolute path to a program whose output Claude Desktop shows as one line of text above the message box in Cowork, Chat and Code. On macOS, the program and every folder above it must be writable only by root.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#sessionstatusline</string>
+			<key>pfm_name</key>
+			<string>sessionStatusLine</string>
+			<key>pfm_title</key>
+			<string>Status line</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>/usr/local/bin/claude-status-line</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.8089.0</string>
+			<key>pfm_description</key>
+			<string>Maps built-in tool names (or argument-scoped permission rules such as Bash(curl *)) to allow or ask. Applies to Cowork, Chat and Code. To block a tool, use Disabled Built-in Tools.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#builtintoolpolicy</string>
+			<key>pfm_name</key>
+			<string>builtinToolPolicy</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_name</key>
+					<string>{{key}}</string>
+					<key>pfm_title</key>
+					<string>Tool or rule</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+				<dict>
+					<key>pfm_name</key>
+					<string>{{value}}</string>
+					<key>pfm_range_list</key>
+					<array>
+						<string>allow</string>
+						<string>ask</string>
+					</array>
+					<key>pfm_range_list_titles</key>
+					<array>
+						<string>Allow</string>
+						<string>Ask</string>
+					</array>
+					<key>pfm_title</key>
+					<string>Policy</string>
+					<key>pfm_type</key>
+					<string>string</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>Built-in tool policy</string>
+			<key>pfm_type</key>
+			<string>dictionary</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Removes the listed built-in tools from the available set in Claude Desktop. Known tools: Task, Bash, Glob, Grep, Read, Edit, Write, NotebookEdit, WebFetch, TodoWrite, WebSearch, Skill, REPL, JavaScript, AskUserQuestion. ToolSearch and SendUserMessage are also available under specific conditions.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://support.claude.com/en/articles/14680753-extend-claude-cowork-with-third-party-platforms</string>
+			<key>pfm_name</key>
+			<string>disabledBuiltinTools</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_description</key>
+					<string>Name of a built-in tool to disable.</string>
+					<key>pfm_name</key>
+					<string>disabledBuiltinToolsItem</string>
+					<key>pfm_title</key>
+					<string>Tool</string>
+					<key>pfm_type</key>
+					<string>string</string>
+					<key>pfm_value_placeholder</key>
+					<string>WebSearch</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>Disabled built-in tools</string>
+			<key>pfm_type</key>
+			<string>array</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.21459.0</string>
+			<key>pfm_description</key>
+			<string>Load tool definitions on demand through tool search instead of all at once.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#toolsearchenabled</string>
+			<key>pfm_name</key>
+			<string>toolSearchEnabled</string>
+			<key>pfm_title</key>
+			<string>Enable tool search</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.37937.0</string>
+			<key>pfm_description</key>
+			<string>Instructions from your organization that are added to Claude's context.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#organizationinstructions</string>
+			<key>pfm_name</key>
+			<string>organizationInstructions</string>
+			<key>pfm_title</key>
+			<string>Organization instructions</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2.2553.0</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>Claude Desktop on third-party inference deployments. Enable the built-in browser in Cowork and Code sessions. False disables the browser pane; Code retains its localhost-only dev-server preview. Defaults to false. When bootstrapUrl is set, configure this key in the served configuration.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#built-in-browser</string>
+			<key>pfm_name</key>
+			<string>builtinBrowserEnabled</string>
+			<key>pfm_title</key>
+			<string>Allow the built-in browser</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2.2553.0</string>
+			<key>pfm_default</key>
+			<string>allow</string>
+			<key>pfm_description</key>
+			<string>Claude Desktop on third-party inference deployments. Default policy for sites Claude may open, read, or act on when the built-in browser is enabled. Allowed domains are exceptions under block; blocked domains are exceptions under allow. Users can still view sites denied to Claude. Defaults to allow.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#built-in-browser</string>
+			<key>pfm_name</key>
+			<string>builtinBrowserDefaultDomainPolicy</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>allow</string>
+				<string>block</string>
+			</array>
+			<key>pfm_range_list_titles</key>
+			<array>
+				<string>Allow sites by default</string>
+				<string>Block sites by default</string>
+			</array>
+			<key>pfm_title</key>
+			<string>Default site policy in the built-in browser</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2.2553.0</string>
+			<key>pfm_description</key>
+			<string>Claude Desktop on third-party inference deployments. Sites Claude may open, read, or act on when builtinBrowserDefaultDomainPolicy is block; ignored under allow. Empty or unset allows no external sites for Claude. Users can still view other sites. Bare * and public-suffix wildcards are ignored.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#built-in-browser</string>
+			<key>pfm_name</key>
+			<string>builtinBrowserAllowedDomains</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_description</key>
+					<string>A hostname or supported hostname wildcard. A plain hostname also matches its www form, but no other subdomain.</string>
+					<key>pfm_title</key>
+					<string>Domain</string>
+					<key>pfm_type</key>
+					<string>string</string>
+					<key>pfm_value_placeholder</key>
+					<string>example.com</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>Allowed sites in the built-in browser</string>
+			<key>pfm_type</key>
+			<string>array</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2.2553.0</string>
+			<key>pfm_description</key>
+			<string>Claude Desktop on third-party inference deployments. Sites Claude may not open, read, or act on when builtinBrowserDefaultDomainPolicy is allow; ignored under block. Empty or unset adds no blocked sites. Users can still view blocked sites. * blocks every external site for Claude; localhost dev servers are unaffected.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#built-in-browser</string>
+			<key>pfm_name</key>
+			<string>builtinBrowserBlockedDomains</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_description</key>
+					<string>A hostname or supported hostname wildcard. A plain hostname also matches its www form, but no other subdomain.</string>
+					<key>pfm_title</key>
+					<string>Domain</string>
+					<key>pfm_type</key>
+					<string>string</string>
+					<key>pfm_value_placeholder</key>
+					<string>example.com</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>Blocked sites in the built-in browser</string>
+			<key>pfm_type</key>
+			<string>array</string>
+		</dict>
+		<dict>
+			<key>pfm_app_deprecated</key>
+			<string>1.2581.0</string>
+			<key>pfm_description</key>
+			<string>Required the full VM sandbox for Cowork. Deprecated by Anthropic.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#requirecoworkfullvmsandbox</string>
+			<key>pfm_name</key>
+			<string>requireCoworkFullVmSandbox</string>
+			<key>pfm_title</key>
+			<string>Require full VM sandbox</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Folders where Claude may work. Applies to both Cowork and Code sessions. Leave unset for unrestricted access. Paths can reference ~ and these environment variables, expanded per user: %OneDrive%, %OneDriveCommercial%, %OneDriveConsumer%, %APPDATA%, %LOCALAPPDATA%, %USERNAME%, %XDG_DOCUMENTS_DIR%. The set is fixed; an entry that references any other %VAR%, or one that is unset on the device, is ignored.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#allowedworkspacefolders-details</string>
+			<key>pfm_name</key>
+			<string>allowedWorkspaceFolders</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_name</key>
+					<string>AllowedWorkspaceFolderItem</string>
+					<key>pfm_subkeys</key>
+					<array>
+						<dict>
+							<key>pfm_description</key>
+							<string>Absolute folder path. May start with ~ or one of the listed %VAR% tokens, expanded per user. Subfolders are included.</string>
+							<key>pfm_name</key>
+							<string>path</string>
+							<key>pfm_title</key>
+							<string>Path</string>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_value_placeholder</key>
+							<string>/Users</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<false/>
+							<key>pfm_description</key>
+							<string>Shows as a folder chip on the new-task page and skips the trust prompt. Users can remove it.</string>
+							<key>pfm_name</key>
+							<string>isDefaultSelected</string>
+							<key>pfm_title</key>
+							<string>Select default</string>
+							<key>pfm_type</key>
+							<string>boolean</string>
+						</dict>
+						<dict>
+							<key>pfm_app_min</key>
+							<string>1.26832.0</string>
+							<key>pfm_description</key>
+							<string>Read-only folders can be viewed and searched but not modified in Cowork. In local Code sessions, read-only applies to file tools only; over SSH it also applies to Bash in its sandbox. One of: rw, ro.</string>
+							<key>pfm_name</key>
+							<string>mode</string>
+							<key>pfm_range_list</key>
+							<array>
+								<string>rw</string>
+								<string>ro</string>
+							</array>
+							<key>pfm_range_list_titles</key>
+							<array>
+								<string>Read/write</string>
+								<string>Read only</string>
+							</array>
+							<key>pfm_title</key>
+							<string>Mode</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+					</array>
+					<key>pfm_type</key>
+					<string>dictionary</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>Allowed workspace folders</string>
+			<key>pfm_type</key>
+			<string>array</string>
+			<key>pfm_value_placeholder</key>
+			<string>[{"path" : "/Users", "isDefaultSelected" : false, "mode" : "rw"}, {"path" : "~", "isDefaultSelected" : true, "mode" : "ro"}]</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.46388.1</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>Keep Claude from reading files outside a Code session's working directories. File tools refuse such reads; sandboxed shell commands lose the home directory.</string>
+			<key>pfm_name</key>
+			<string>blockReadsOutsideWorkingDirectories</string>
+			<key>pfm_title</key>
+			<string>Block reads outside working directories</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.2581.0</string>
+			<key>pfm_description</key>
+			<string>Hosts agent tools may reach in Cowork and Chat (and, in part, Code): exact hostnames, *. wildcards, optional :port, or * for all. Does not cover web search, inference or MCP traffic. Unset: web fetch is refused.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#coworkegressallowedhosts</string>
+			<key>pfm_name</key>
+			<string>coworkEgressAllowedHosts</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_title</key>
+					<string>Host</string>
+					<key>pfm_type</key>
+					<string>string</string>
+					<key>pfm_value_placeholder</key>
+					<string>api.github.com</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>Allowed egress hosts</string>
+			<key>pfm_type</key>
+			<string>array</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.37937.0</string>
+			<key>pfm_description</key>
+			<string>Skip the domain safety check that runs before WebFetch requests.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#skipwebfetchpreflight</string>
+			<key>pfm_name</key>
+			<string>skipWebFetchPreflight</string>
+			<key>pfm_title</key>
+			<string>Skip WebFetch domain check</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.44121.1</string>
+			<key>pfm_description</key>
+			<string>Sends the app's and the agent's traffic through this HTTP(S) proxy instead of the operating system's proxy settings. SOCKS proxies and embedded credentials are rejected. Read at launch. MDM only: ignored in a bootstrap server response.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#egressproxyurl</string>
+			<key>pfm_name</key>
+			<string>egressProxyUrl</string>
+			<key>pfm_title</key>
+			<string>Proxy server URL</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>http://proxy.example.com:8080</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.44121.1</string>
+			<key>pfm_description</key>
+			<string>URL of a PAC file that decides the proxy per request. Wins over the proxy server URL when both are set. MDM only: ignored in a bootstrap server response.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#egressproxypacurl</string>
+			<key>pfm_name</key>
+			<string>egressProxyPacUrl</string>
+			<key>pfm_title</key>
+			<string>Proxy auto-config (PAC) URL</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_value_placeholder</key>
+			<string>https://proxy.example.com/proxy.pac</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.52386.0</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>Gives the Cowork workspace VM an IPv6 address and route so the agent's tools can reach IPv6-only hosts through the device. Reachability only; the egress allowlist still applies.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#coworkvmipv6enabled</string>
+			<key>pfm_name</key>
+			<string>coworkVmIpv6Enabled</string>
+			<key>pfm_title</key>
+			<string>Enable IPv6 in the workspace VM</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Distributes remote MCP (Model Context Protocol) servers to users. Each entry requires a unique name and an HTTPS URL. Optional fields include transport, headers, OAuth, and tool-level policies. Used in Claude Cowork deployments on third-party platforms (Bedrock, Vertex AI, Azure AI Foundry, LLM gateways).</string>
+			<key>pfm_documentation_url</key>
+			<string>https://support.claude.com/en/articles/14680753-extend-claude-cowork-with-third-party-platforms</string>
+			<key>pfm_name</key>
+			<string>managedMcpServers</string>
+			<key>pfm_sensitive</key>
+			<true/>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_name</key>
+					<string>managedMcpServersItem</string>
+					<key>pfm_subkeys</key>
+					<array>
+						<dict>
+							<key>pfm_description</key>
+							<string>Unique name identifying this MCP server.</string>
+							<key>pfm_name</key>
+							<string>name</string>
+							<key>pfm_require</key>
+							<string>always</string>
+							<key>pfm_title</key>
+							<string>Name</string>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_value_placeholder</key>
+							<string>internal-tools</string>
+						</dict>
+						<dict>
+							<key>pfm_description</key>
+							<string>HTTPS URL of the remote MCP server.</string>
+							<key>pfm_name</key>
+							<string>url</string>
+							<key>pfm_require</key>
+							<string>always</string>
+							<key>pfm_title</key>
+							<string>URL</string>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_value_placeholder</key>
+							<string>https://mcp.example.corp/sse</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<string>http</string>
+							<key>pfm_description</key>
+							<string>Transport protocol used to reach the MCP server.</string>
+							<key>pfm_name</key>
+							<string>transport</string>
+							<key>pfm_range_list</key>
+							<array>
+								<string>http</string>
+								<string>sse</string>
+							</array>
+							<key>pfm_range_list_titles</key>
+							<array>
+								<string>HTTP</string>
+								<string>SSE</string>
+							</array>
+							<key>pfm_title</key>
+							<string>Transport</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+						<dict>
+							<key>pfm_description</key>
+							<string>Static request headers used to authenticate to the MCP server (for example, Authorization). Mutually exclusive with the OAuth field.</string>
+							<key>pfm_name</key>
+							<string>headers</string>
+							<key>pfm_subkeys</key>
+							<array>
+								<dict>
+									<key>pfm_name</key>
+									<string>{{key}}</string>
+									<key>pfm_title</key>
+									<string>Header name</string>
+									<key>pfm_type</key>
+									<string>string</string>
+								</dict>
+								<dict>
+									<key>pfm_name</key>
+									<string>{{value}}</string>
+									<key>pfm_title</key>
+									<string>Header value</string>
+									<key>pfm_type</key>
+									<string>string</string>
+								</dict>
+							</array>
+							<key>pfm_title</key>
+							<string>Headers</string>
+							<key>pfm_type</key>
+							<string>dictionary</string>
+						</dict>
+						<dict>
+							<key>pfm_default</key>
+							<false/>
+							<key>pfm_description</key>
+							<string>When true, Claude Desktop runs a PKCE OAuth flow at first use to acquire user credentials. Mutually exclusive with the Headers field.</string>
+							<key>pfm_name</key>
+							<string>oauth</string>
+							<key>pfm_title</key>
+							<string>OAuth</string>
+							<key>pfm_type</key>
+							<string>boolean</string>
+						</dict>
+						<dict>
+							<key>pfm_description</key>
+							<string>Maps tool names exposed by the MCP server to a policy. Allowed values per tool: allow, ask, blocked. The "ask" policy prompts the user to confirm before the tool runs.</string>
+							<key>pfm_name</key>
+							<string>toolPolicy</string>
+							<key>pfm_subkeys</key>
+							<array>
+								<dict>
+									<key>pfm_name</key>
+									<string>{{key}}</string>
+									<key>pfm_title</key>
+									<string>Tool name</string>
+									<key>pfm_type</key>
+									<string>string</string>
+								</dict>
+								<dict>
+									<key>pfm_name</key>
+									<string>{{value}}</string>
+									<key>pfm_range_list</key>
+									<array>
+										<string>allow</string>
+										<string>ask</string>
+										<string>blocked</string>
+									</array>
+									<key>pfm_range_list_titles</key>
+									<array>
+										<string>Allow</string>
+										<string>Ask</string>
+										<string>Block</string>
+									</array>
+									<key>pfm_title</key>
+									<string>Policy</string>
+									<key>pfm_type</key>
+									<string>string</string>
+								</dict>
+							</array>
+							<key>pfm_title</key>
+							<string>Tool policy</string>
+							<key>pfm_type</key>
+							<string>dictionary</string>
+						</dict>
+						<dict>
+							<key>pfm_app_min</key>
+							<string>4.29.0</string>
+							<key>pfm_description</key>
+							<string>How long a tool call to this server may run, in place of the MCP Tool Call Timeout (mcpToolTimeoutSec) for this server.</string>
+							<key>pfm_name</key>
+							<string>toolTimeoutSec</string>
+							<key>pfm_range_max</key>
+							<integer>3600</integer>
+							<key>pfm_range_min</key>
+							<integer>5</integer>
+							<key>pfm_title</key>
+							<string>Tool call timeout</string>
+							<key>pfm_type</key>
+							<string>integer</string>
+							<key>pfm_value_unit</key>
+							<string>seconds</string>
+						</dict>
+					</array>
+					<key>pfm_title</key>
+					<string>Managed MCP server</string>
+					<key>pfm_type</key>
+					<string>dictionary</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>Managed MCP servers</string>
+			<key>pfm_type</key>
+			<string>array</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>0.14.1</string>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>Enable or disable local Model Context Protocol (MCP) servers.</string>
+			<key>pfm_name</key>
+			<string>isLocalDevMcpEnabled</string>
+			<key>pfm_title</key>
+			<string>Allow local MCP servers</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.24012.9</string>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>Offer the persistent “Always allow” approval options for MCP tools. Disable to keep tool approvals per-call or session-scoped only. Defaults to true.</string>
+			<key>pfm_name</key>
+			<string>mcpPersistentAlwaysAllowEnabled</string>
+			<key>pfm_title</key>
+			<string>Allow persistent tool approvals</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2.7032.0</string>
+			<key>pfm_description</key>
+			<string>How long tool approvals granted for scheduled tasks stay valid.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#mcpscheduledtaskapprovallifetimedays</string>
+			<key>pfm_name</key>
+			<string>mcpScheduledTaskApprovalLifetimeDays</string>
+			<key>pfm_title</key>
+			<string>Scheduled-task tool approval lifetime</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+			<key>pfm_value_unit</key>
+			<string>days</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.37937.0</string>
+			<key>pfm_default</key>
+			<integer>180</integer>
+			<key>pfm_description</key>
+			<string>Per-call timeout for MCP tool calls, in seconds. Default 180 (3 minutes). Range: 60-3600.</string>
+			<key>pfm_name</key>
+			<string>mcpToolTimeoutSec</string>
+			<key>pfm_range_max</key>
+			<integer>3600</integer>
+			<key>pfm_range_min</key>
+			<integer>60</integer>
+			<key>pfm_title</key>
+			<string>MCP tool call timeout</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2.2553.0</string>
+			<key>pfm_description</key>
+			<string>MCP servers that plugins may provide, matched by server URL.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#allowedpluginmcpservers</string>
+			<key>pfm_name</key>
+			<string>allowedPluginMcpServers</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_name</key>
+					<string>allowedPluginMcpServersItem</string>
+					<key>pfm_subkeys</key>
+					<array>
+						<dict>
+							<key>pfm_description</key>
+							<string>URL of the plugin-provided MCP server.</string>
+							<key>pfm_name</key>
+							<string>serverUrl</string>
+							<key>pfm_require</key>
+							<string>always</string>
+							<key>pfm_title</key>
+							<string>Server URL</string>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_value_placeholder</key>
+							<string>https://mcp.example.com/mcp</string>
+						</dict>
+					</array>
+					<key>pfm_title</key>
+					<string>Server</string>
+					<key>pfm_type</key>
+					<string>dictionary</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>Allowed plugin MCP servers</string>
+			<key>pfm_type</key>
+			<string>array</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2.16120.0</string>
+			<key>pfm_description</key>
+			<string>MCP servers that plugins may not provide, matched by server URL.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#deniedpluginmcpservers</string>
+			<key>pfm_name</key>
+			<string>deniedPluginMcpServers</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_name</key>
+					<string>deniedPluginMcpServersItem</string>
+					<key>pfm_subkeys</key>
+					<array>
+						<dict>
+							<key>pfm_description</key>
+							<string>URL of the plugin-provided MCP server.</string>
+							<key>pfm_name</key>
+							<string>serverUrl</string>
+							<key>pfm_require</key>
+							<string>always</string>
+							<key>pfm_title</key>
+							<string>Server URL</string>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_value_placeholder</key>
+							<string>https://mcp.example.com/mcp</string>
+						</dict>
+					</array>
+					<key>pfm_title</key>
+					<string>Server</string>
+					<key>pfm_type</key>
+					<string>dictionary</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>Blocked plugin MCP servers</string>
+			<key>pfm_type</key>
+			<string>array</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.19367.0</string>
+			<key>pfm_default</key>
+			<string>auto</string>
+			<key>pfm_description</key>
+			<string>How Microsoft 365 sign-in runs. auto: use the native OS broker (Company Portal SSO extension on macOS) when available, otherwise the browser. disabled: always use browser sign-in. required (1.49585.0 or later): sign-in fails when the broker is unavailable instead of falling back to the browser; earlier releases treat required as disabled. Defaults to auto.</string>
+			<key>pfm_name</key>
+			<string>microsoftAuthBroker</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>auto</string>
+				<string>disabled</string>
+				<string>required</string>
+			</array>
+			<key>pfm_range_list_titles</key>
+			<array>
+				<string>Auto</string>
+				<string>Disabled</string>
+				<string>Required</string>
+			</array>
+			<key>pfm_title</key>
+			<string>Microsoft 365 native sign-in broker</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2.26454.0</string>
+			<key>pfm_default</key>
+			<string>disabled</string>
+			<key>pfm_description</key>
+			<string>Whether Microsoft 365 sign-in uses the Windows account by default. One of: enabled, disabled. Defaults to disabled.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#microsoftauthdefaultaccount</string>
+			<key>pfm_name</key>
+			<string>microsoftAuthDefaultAccount</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>enabled</string>
+				<string>disabled</string>
+			</array>
+			<key>pfm_range_list_titles</key>
+			<array>
+				<string>Enabled</string>
+				<string>Disabled</string>
+			</array>
+			<key>pfm_title</key>
+			<string>Microsoft 365 sign-in with the Windows account</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>0.14.1</string>
+			<key>pfm_description</key>
+			<string>Allow Claude Desktop to load desktop extensions (.dxt and .mcpb files). When unset, the default depends on the deployment: on for standard deployments where users sign in with Claude.ai, off in third-party (3P) mode (since 1.19367.0).</string>
+			<key>pfm_name</key>
+			<string>isDesktopExtensionEnabled</string>
+			<key>pfm_title</key>
+			<string>Allow desktop extensions</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>0.14.1</string>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>Enable or disable access to the extension directory. Applies to standard deployments (users sign in with Claude.ai); Claude Desktop in third-party (3P) mode ignores this key.</string>
+			<key>pfm_name</key>
+			<string>isDesktopExtensionDirectoryEnabled</string>
+			<key>pfm_title</key>
+			<string>Allow extension directory</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>When true, Claude Desktop rejects extensions that aren't signed by a trusted publisher.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://support.claude.com/en/articles/14680753-extend-claude-cowork-with-third-party-platforms</string>
+			<key>pfm_name</key>
+			<string>isDesktopExtensionSignatureRequired</string>
+			<key>pfm_title</key>
+			<string>Require signed extensions</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.17377.1</string>
+			<key>pfm_description</key>
+			<string>Git repositories or hosted marketplace.json files shown as plugin marketplaces in the Directory's Organization tab.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#allowedpluginmarketplaces</string>
+			<key>pfm_name</key>
+			<string>allowedPluginMarketplaces</string>
+			<key>pfm_sensitive</key>
+			<true/>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_name</key>
+					<string>allowedPluginMarketplacesItem</string>
+					<key>pfm_subkeys</key>
+					<array>
+						<dict>
+							<key>pfm_description</key>
+							<string>github: a GitHub repository (set Repository). git: a Git remote (set URL). url: a hosted marketplace.json file (set URL).</string>
+							<key>pfm_name</key>
+							<string>source</string>
+							<key>pfm_range_list</key>
+							<array>
+								<string>github</string>
+								<string>git</string>
+								<string>url</string>
+							</array>
+							<key>pfm_range_list_titles</key>
+							<array>
+								<string>GitHub repository</string>
+								<string>Git remote</string>
+								<string>Hosted marketplace.json</string>
+							</array>
+							<key>pfm_require</key>
+							<string>always</string>
+							<key>pfm_title</key>
+							<string>Source</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+						<dict>
+							<key>pfm_description</key>
+							<string>GitHub repository in owner/repo form (github source).</string>
+							<key>pfm_name</key>
+							<string>repo</string>
+							<key>pfm_title</key>
+							<string>Repository</string>
+							<key>pfm_type</key>
+							<string>string</string>
+							<key>pfm_value_placeholder</key>
+							<string>example-org/claude-plugins</string>
+						</dict>
+						<dict>
+							<key>pfm_description</key>
+							<string>HTTPS Git remote (git source) or direct HTTPS URL of a hosted marketplace.json (url source).</string>
+							<key>pfm_name</key>
+							<string>url</string>
+							<key>pfm_title</key>
+							<string>URL</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+						<dict>
+							<key>pfm_description</key>
+							<string>Commit SHA, branch or tag (github and git sources). Leave empty to track the default branch; auto_install and required need a full 40-character commit SHA.</string>
+							<key>pfm_name</key>
+							<string>ref</string>
+							<key>pfm_title</key>
+							<string>Ref</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+						<dict>
+							<key>pfm_description</key>
+							<string>Folder within the repository that contains the marketplace, when it isn't at the root (github and git sources).</string>
+							<key>pfm_name</key>
+							<string>path</string>
+							<key>pfm_title</key>
+							<string>Subpath</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+						<dict>
+							<key>pfm_app_min</key>
+							<string>1.32352.0</string>
+							<key>pfm_description</key>
+							<string>SHA-256 of the exact marketplace.json to accept (url source). Without it, auto_install and required act as available.</string>
+							<key>pfm_format</key>
+							<string>^[0-9a-fA-F]{64}$</string>
+							<key>pfm_name</key>
+							<string>manifestSha256</string>
+							<key>pfm_title</key>
+							<string>Manifest SHA-256</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+						<dict>
+							<key>pfm_description</key>
+							<string>Rejects the marketplace if its manifest name differs.</string>
+							<key>pfm_name</key>
+							<string>expectedName</string>
+							<key>pfm_title</key>
+							<string>Expected name</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+						<dict>
+							<key>pfm_description</key>
+							<string>Whether users install plugins themselves or get them automatically.</string>
+							<key>pfm_name</key>
+							<string>installationPreference</string>
+							<key>pfm_range_list</key>
+							<array>
+								<string>available</string>
+								<string>auto_install</string>
+								<string>required</string>
+							</array>
+							<key>pfm_range_list_titles</key>
+							<array>
+								<string>Available</string>
+								<string>Auto-install</string>
+								<string>Required</string>
+							</array>
+							<key>pfm_title</key>
+							<string>Installation</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+						<dict>
+							<key>pfm_description</key>
+							<string>Credential sent with a fetch: nothing, the user's Git credential, a helper script's output, or the gateway or bootstrap credential (url source only).</string>
+							<key>pfm_name</key>
+							<string>credentialKind</string>
+							<key>pfm_range_list</key>
+							<array>
+								<string>anonymous</string>
+								<string>userGit</string>
+								<string>credentialHelper</string>
+								<string>inferenceCredential</string>
+							</array>
+							<key>pfm_range_list_titles</key>
+							<array>
+								<string>Anonymous</string>
+								<string>User Git credential</string>
+								<string>Credential helper</string>
+								<string>Inference credential</string>
+							</array>
+							<key>pfm_title</key>
+							<string>Auth</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+						<dict>
+							<key>pfm_description</key>
+							<string>Executable that prints the access token to send.</string>
+							<key>pfm_name</key>
+							<string>credentialHelper</string>
+							<key>pfm_title</key>
+							<string>Credential helper</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+					</array>
+					<key>pfm_title</key>
+					<string>Marketplace</string>
+					<key>pfm_type</key>
+					<string>dictionary</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>Plugin marketplaces</string>
+			<key>pfm_type</key>
+			<string>array</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.8089.0</string>
+			<key>pfm_description</key>
+			<string>Locks tool permissions on the MCP servers that plugins provide. Unlisted tools stay user-controlled.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#orgpluginsettings</string>
+			<key>pfm_name</key>
+			<string>orgPluginSettings</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_name</key>
+					<string>orgPluginSettingsItem</string>
+					<key>pfm_subkeys</key>
+					<array>
+						<dict>
+							<key>pfm_app_min</key>
+							<string>1.15200.0</string>
+							<key>pfm_description</key>
+							<string>Name of the plugin-delivered MCP server this policy applies to.</string>
+							<key>pfm_name</key>
+							<string>serverName</string>
+							<key>pfm_require</key>
+							<string>always</string>
+							<key>pfm_title</key>
+							<string>Server name</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+						<dict>
+							<key>pfm_app_min</key>
+							<string>1.15200.0</string>
+							<key>pfm_description</key>
+							<string>Per-tool approval locks for this server.</string>
+							<key>pfm_name</key>
+							<string>tools</string>
+							<key>pfm_subkeys</key>
+							<array>
+								<dict>
+									<key>pfm_name</key>
+									<string>toolsItem</string>
+									<key>pfm_subkeys</key>
+									<array>
+										<dict>
+											<key>pfm_description</key>
+											<string>MCP tool name as the server reports it.</string>
+											<key>pfm_name</key>
+											<string>toolName</string>
+											<key>pfm_require</key>
+											<string>always</string>
+											<key>pfm_title</key>
+											<string>Tool</string>
+											<key>pfm_type</key>
+											<string>string</string>
+										</dict>
+										<dict>
+											<key>pfm_description</key>
+											<string>Approval state locked for this tool.</string>
+											<key>pfm_name</key>
+											<string>permission</string>
+											<key>pfm_range_list</key>
+											<array>
+												<string>allow</string>
+												<string>ask</string>
+												<string>blocked</string>
+											</array>
+											<key>pfm_range_list_titles</key>
+											<array>
+												<string>Allow</string>
+												<string>Ask</string>
+												<string>Block</string>
+											</array>
+											<key>pfm_require</key>
+											<string>always</string>
+											<key>pfm_title</key>
+											<string>Permission</string>
+											<key>pfm_type</key>
+											<string>string</string>
+										</dict>
+									</array>
+									<key>pfm_title</key>
+									<string>Tool</string>
+									<key>pfm_type</key>
+									<string>dictionary</string>
+								</dict>
+							</array>
+							<key>pfm_title</key>
+							<string>Tool policy</string>
+							<key>pfm_type</key>
+							<string>array</string>
+						</dict>
+					</array>
+					<key>pfm_title</key>
+					<string>Server</string>
+					<key>pfm_type</key>
+					<string>dictionary</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>Organization plugin settings</string>
+			<key>pfm_type</key>
+			<string>array</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.37937.0</string>
+			<key>pfm_description</key>
+			<string>Let users add plugin marketplaces. When off, marketplaces your organization did not provision are hidden and their plugins are not loaded.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#userpluginmarketplacesenabled</string>
+			<key>pfm_name</key>
+			<string>userPluginMarketplacesEnabled</string>
+			<key>pfm_title</key>
+			<string>Allow user-added plugin marketplaces</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.37937.0</string>
+			<key>pfm_description</key>
+			<string>Allow users to add their own plugins. When off, every option for adding one is hidden and uploads are refused.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#userpluginuploadsenabled</string>
+			<key>pfm_name</key>
+			<string>userPluginUploadsEnabled</string>
+			<key>pfm_title</key>
+			<string>Allow user-added plugins</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>0.14.1</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>Crash and performance reports to Anthropic. Defaults to false.</string>
+			<key>pfm_name</key>
+			<string>disableEssentialTelemetry</string>
+			<key>pfm_title</key>
+			<string>Block essential telemetry</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>0.14.1</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>Product-usage analytics and diagnostic-report uploads. No message content. Defaults to false.</string>
+			<key>pfm_name</key>
+			<string>disableNonessentialTelemetry</string>
+			<key>pfm_title</key>
+			<string>Block nonessential telemetry</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>0.14.1</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>Connector favicons and the artifact-preview and MCP Apps widget iframe origins. Artifacts will not render. Defaults to false.</string>
+			<key>pfm_name</key>
+			<string>disableNonessentialServices</string>
+			<key>pfm_title</key>
+			<string>Block nonessential services</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
 			<string>0.14.1</string>
 			<key>pfm_description</key>
 			<string>Where OpenTelemetry logs and metrics are sent. Leave blank to disable.</string>
@@ -1178,7 +4910,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_name</key>
 			<string>otlpEndpoint</string>
 			<key>pfm_title</key>
-			<string>OpenTelemetry collector endpoint</string>
+			<string>OTLP endpoint</string>
 			<key>pfm_type</key>
 			<string>string</string>
 		</dict>
@@ -1200,7 +4932,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				<string>grpc</string>
 			</array>
 			<key>pfm_title</key>
-			<string>OpenTelemetry exporter protocol</string>
+			<string>OTLP protocol</string>
 			<key>pfm_type</key>
 			<string>string</string>
 		</dict>
@@ -1213,8 +4945,10 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>https://claude.com/docs/third-party/claude-desktop/configuration#otlp</string>
 			<key>pfm_name</key>
 			<string>otlpHeaders</string>
+			<key>pfm_sensitive</key>
+			<true/>
 			<key>pfm_title</key>
-			<string>OpenTelemetry exporter headers</string>
+			<string>OTLP headers</string>
 			<key>pfm_type</key>
 			<string>string</string>
 			<key>pfm_value_placeholder</key>
@@ -1237,7 +4971,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_range_list_titles</key>
 			<array>
 				<string>None</string>
-				<string>Inference Credential</string>
+				<string>Inference credential</string>
 			</array>
 			<key>pfm_title</key>
 			<string>Collector authentication</string>
@@ -1254,7 +4988,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_name</key>
 			<string>otlpHeadersHelper</string>
 			<key>pfm_title</key>
-			<string>OpenTelemetry headers helper script</string>
+			<string>OTLP headers helper script</string>
 			<key>pfm_type</key>
 			<string>string</string>
 		</dict>
@@ -1267,8 +5001,10 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<string>https://claude.com/docs/third-party/claude-desktop/configuration#otlp</string>
 			<key>pfm_name</key>
 			<string>otlpResourceAttributes</string>
+			<key>pfm_sensitive</key>
+			<true/>
 			<key>pfm_title</key>
-			<string>OpenTelemetry resource attributes</string>
+			<string>Resource attributes</string>
 			<key>pfm_type</key>
 			<string>string</string>
 			<key>pfm_value_placeholder</key>
@@ -1331,7 +5067,7 @@ During a profile replacement, the system updates payloads with the same 'Payload
 				</dict>
 			</array>
 			<key>pfm_title</key>
-			<string>Content capture categories</string>
+			<string>Content capture</string>
 			<key>pfm_type</key>
 			<string>array</string>
 		</dict>
@@ -1351,12 +5087,106 @@ During a profile replacement, the system updates payloads with the same 'Payload
 			<key>pfm_type</key>
 			<string>boolean</string>
 		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2.31226.0</string>
+			<key>pfm_description</key>
+			<string>Maximum length, in characters, of captured content such as a raw API body. Unset: 61,440 in Cowork tasks and Code sessions.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#otlpattrmaxchars</string>
+			<key>pfm_name</key>
+			<string>otlpAttrMaxChars</string>
+			<key>pfm_range_max</key>
+			<integer>15000000</integer>
+			<key>pfm_range_min</key>
+			<integer>256</integer>
+			<key>pfm_title</key>
+			<string>Telemetry attribute length limit</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+			<key>pfm_value_unit</key>
+			<string>characters</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.52386.0</string>
+			<key>pfm_description</key>
+			<string>Delete chats, with their files, after this many days without activity. Unset: no deletion. Projects and memory are kept.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#chatsessionretentiondays</string>
+			<key>pfm_name</key>
+			<string>chatSessionRetentionDays</string>
+			<key>pfm_range_max</key>
+			<integer>3650</integer>
+			<key>pfm_range_min</key>
+			<integer>1</integer>
+			<key>pfm_title</key>
+			<string>Chat retention period</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+			<key>pfm_value_unit</key>
+			<string>days</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.52386.0</string>
+			<key>pfm_description</key>
+			<string>Delete Cowork tasks, with their uploads and outputs, after this many days without activity. Unset: no deletion.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#coworksessionretentiondays</string>
+			<key>pfm_name</key>
+			<string>coworkSessionRetentionDays</string>
+			<key>pfm_range_max</key>
+			<integer>3650</integer>
+			<key>pfm_range_min</key>
+			<integer>1</integer>
+			<key>pfm_title</key>
+			<string>Cowork retention period</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+			<key>pfm_value_unit</key>
+			<string>days</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.52386.0</string>
+			<key>pfm_description</key>
+			<string>Delete Code sessions, conversation included, after this many days without activity. Unset: no deletion. Uncommitted work stays on disk.</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#codesessionretentiondays</string>
+			<key>pfm_name</key>
+			<string>codeSessionRetentionDays</string>
+			<key>pfm_range_max</key>
+			<integer>3650</integer>
+			<key>pfm_range_min</key>
+			<integer>1</integer>
+			<key>pfm_title</key>
+			<string>Code retention period</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+			<key>pfm_value_unit</key>
+			<string>days</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>1.52386.0</string>
+			<key>pfm_description</key>
+			<string>Suspends the Chat, Cowork and Code retention periods (legal hold).</string>
+			<key>pfm_documentation_url</key>
+			<string>https://claude.com/docs/third-party/claude-desktop/configuration#sessionretentionhold</string>
+			<key>pfm_name</key>
+			<string>sessionRetentionHold</string>
+			<key>pfm_title</key>
+			<string>Suspend session deletion</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
 	</array>
 	<key>pfm_title</key>
 	<string>Claude Desktop</string>
 	<key>pfm_unique</key>
 	<true/>
 	<key>pfm_version</key>
-	<integer>7</integer>
+	<integer>8</integer>
 </dict>
 </plist>
