@@ -798,6 +798,13 @@
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.twingate.macos.png</string>
 		</dict>
+		<key>com.twocanoes.dfu-blaster-pro</key>
+		<dict>
+			<key>hash</key>
+			<string>21963db42730a6744093fa618cc4728d</string>
+			<key>path</key>
+			<string>Icons/ManagedPreferencesApplications/com.twocanoes.dfu-blaster-pro.png</string>
+		</dict>
 		<key>com.twocanoes.xcreds</key>
 		<dict>
 			<key>hash</key>
@@ -1748,6 +1755,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2026-11-03T15:14:52Z</date>
+	<date>2026-11-04T09:02:42Z</date>
 </dict>
 </plist>
