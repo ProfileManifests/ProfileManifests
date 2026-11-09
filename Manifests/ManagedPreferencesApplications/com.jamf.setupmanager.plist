@@ -212,6 +212,8 @@ A profile can consist of payloads with different version numbers. For example, c
 			<string>string</string>
 		</dict>
 		<dict>
+			<key>pfm_default</key>
+			<false/>
 			<key>pfm_description</key>
 			<string>Enables debug mode. See documentation for behavior changes.</string>
 			<key>pfm_documentation_url</key>
@@ -390,6 +392,8 @@ A profile can consist of payloads with different version numbers. For example, c
 		<dict>
 			<key>pfm_app_min</key>
 			<string>1.4</string>
+			<key>pfm_default</key>
+			<false/>
 			<key>pfm_description</key>
 			<string>When this key is set to true, holding the Option key when clicking the finalAction button will show alternative final actions.</string>
 			<key>pfm_name</key>
@@ -516,6 +520,8 @@ A profile can consist of payloads with different version numbers. For example, c
 			<string>string</string>
 		</dict>
 		<dict>
+			<key>pfm_default</key>
+			<false/>
 			<key>pfm_description</key>
 			<string>Hides the individual labels under each action's icon.</string>
 			<key>pfm_documentation_url</key>
@@ -602,6 +608,8 @@ A profile can consist of payloads with different version numbers. For example, c
 			<string>boolean</string>
 		</dict>
 		<dict>
+			<key>pfm_default</key>
+			<false/>
 			<key>pfm_description</key>
 			<string>Suppresses display of the red 'DEBUG' label in debug mode.</string>
 			<key>pfm_documentation_url</key>
@@ -1904,6 +1912,8 @@ A profile can consist of payloads with different version numbers. For example, c
 							<string>string</string>
 						</dict>
 						<dict>
+							<key>pfm_default</key>
+							<false/>
 							<key>pfm_name</key>
 							<string>requiresRoot</string>
 							<key>pfm_range_list</key>
@@ -2196,6 +2206,8 @@ A profile can consist of payloads with different version numbers. For example, c
 					<string>array</string>
 				</dict>
 				<dict>
+					<key>pfm_default</key>
+					<false/>
 					<key>pfm_description</key>
 					<string>Enables webhook debug mode.</string>
 					<key>pfm_documentation_url</key>
@@ -2294,6 +2306,8 @@ A profile can consist of payloads with different version numbers. For example, c
 			<string>array</string>
 		</dict>
 		<dict>
+			<key>pfm_default</key>
+			<false/>
 			<key>pfm_description</key>
 			<string>Suppress launch tracking by enabling this setting.</string>
 			<key>pfm_documentation_url</key>
