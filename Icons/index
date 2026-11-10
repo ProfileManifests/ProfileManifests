@@ -168,6 +168,13 @@
 			<key>path</key>
 			<string>Icons/ManagedPreferencesApplications/com.1password.1password.png</string>
 		</dict>
+		<key>com.DigiDNA.iMazingProfileEditorMac</key>
+		<dict>
+			<key>hash</key>
+			<string>d97120685a25ec9757dcc0b2036eb5a6</string>
+			<key>path</key>
+			<string>Icons/ManagedPreferencesApplications/com.DigiDNA.iMazingProfileEditorMac.png</string>
+		</dict>
 		<key>com.ThomsonResearchSoft.EndNote</key>
 		<dict>
 			<key>hash</key>
@@ -1755,6 +1762,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2026-11-10T14:14:53Z</date>
+	<date>2026-11-10T17:06:06Z</date>
 </dict>
 </plist>

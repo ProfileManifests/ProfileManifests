@@ -313,6 +313,15 @@
 			<key>version</key>
 			<integer>4</integer>
 		</dict>
+		<key>com.DigiDNA.iMazingProfileEditorMac</key>
+		<dict>
+			<key>modified</key>
+			<date>2026-02-28T11:39:00Z</date>
+			<key>path</key>
+			<string>Manifests/ManagedPreferencesApplications/com.DigiDNA.iMazingProfileEditorMac.plist</string>
+			<key>version</key>
+			<real>1.0</real>
+		</dict>
 		<key>com.ThomsonResearchSoft.EndNote</key>
 		<dict>
 			<key>modified</key>
@@ -2589,6 +2598,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2026-11-10T14:14:53Z</date>
+	<date>2026-11-10T17:06:06Z</date>
 </dict>
 </plist>
