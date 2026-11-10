@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>pfm_app_min</key>
+	<string>2.1.0</string>
+	<key>pfm_app_url</key>
+	<string>https://imazing.com/profile-editor</string>
+	<key>pfm_description</key>
+	<string>Managed settings for users creating and editing Apple configuration profiles with iMazing Profile Editor.</string>
+	<key>pfm_domain</key>
+	<string>com.DigiDNA.iMazingProfileEditorMac</string>
+	<key>pfm_format_version</key>
+	<integer>1</integer>
+	<key>pfm_last_modified</key>
+	<date>2026-02-28T11:39:00Z</date>
+	<key>pfm_platforms</key>
+	<array>
+		<string>macOS</string>
+	</array>
+	<key>pfm_subkeys</key>
+	<array>
+		<dict>
+			<key>pfm_description</key>
+			<string>The name of the organization that will be pre-filled by default in the Payload Organization property of the General settings section on newly created profiles.</string>
+			<key>pfm_name</key>
+			<string>preferencesDefaultsOrganizationName</string>
+			<key>pfm_title</key>
+			<string>Default organization name</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>iMazing-Profile-Editor</string>
+			<key>pfm_description</key>
+			<string>The prefix of the UUID-style identifier that will be pre-filled by default in the Payload Identifier property of the General settings section on newly created profiles.</string>
+			<key>pfm_name</key>
+			<string>identifierPrefix</string>
+			<key>pfm_title</key>
+			<string>Default identifier prefix</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>The consent text that will be pre-filled by default in the Consent Message property of the General settings section on newly created profiles.</string>
+			<key>pfm_name</key>
+			<string>preferencesDefaultsConsentText</string>
+			<key>pfm_title</key>
+			<string>Default consent message</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_deprecated</key>
+			<string>2.2.0</string>
+			<key>pfm_app_max</key>
+			<string>2.1.2</string>
+			<key>pfm_description</key>
+			<string>The signing identity that will be used by default to sign the profile on save. Identity must be installed in the device Keychain. Leave empty to disable profile signing by default.</string>
+			<key>pfm_name</key>
+			<string>preferencesDefaultsSigningIdentity</string>
+			<key>pfm_title</key>
+			<string>Default signing identity</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_app_min</key>
+			<string>2.2.0</string>
+			<key>pfm_description</key>
+			<string>The signing identity that will be used by default to sign the profile on save. Identity must be installed in the device Keychain. Leave empty to disable profile signing by default.</string>
+			<key>pfm_name</key>
+			<string>defaultSigningIdentity</string>
+			<key>pfm_title</key>
+			<string>Default signing identity</string>
+			<key>pfm_type</key>
+			<string>dict</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_require</key>
+					<string>always</string>
+					<key>pfm_app_min</key>
+					<string>2.2.0</string>
+					<key>pfm_description</key>
+					<string>The normalized DER-encoded issuer distinguished name of the signing certificate.</string>
+					<key>pfm_name</key>
+					<string>issuerDistinguishedNameNormalized</string>
+					<key>pfm_title</key>
+					<string>Normalized Issuer Distinguished Name</string>
+					<key>pfm_type</key>
+					<string>data</string>
+                    <key>pfm_type_input</key>
+                    <string>string</string>
+                    <key>pfm_value_processor</key>
+                    <string>hex2data</string>
+				</dict>
+				<dict>
+					<key>pfm_require</key>
+					<string>always</string>
+					<key>pfm_app_min</key>
+					<string>2.2.0</string>
+					<key>pfm_description</key>
+                    <string>The serial number of the signing certificate.</string>
+					<key>pfm_name</key>
+					<string>serialNumber</string>
+					<key>pfm_title</key>
+					<string>Serial Number</string>
+					<key>pfm_type</key>
+					<string>data</string>
+					<key>pfm_type_input</key>
+					<string>string</string>
+					<key>pfm_value_processor</key>
+					<string>hex2data</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>If 'false', the editor disables updating the default organization name, identifier prefix, consent message, and signing identity for newly created profiles from saved profiles. By default, when saving a profile, its values are used to update the defaults for all profiles.</string>
+			<key>pfm_name</key>
+			<string>preferencesDefaultsAutomaticallyUpdate</string>
+			<key>pfm_title</key>
+			<string>Set last used values as defaults on profile save</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>If 'false', the editor will keep values of boolean properties regardless of if they are toggled to the property's known default. By default, the editor unsets such values on toggle to reduce clutter in saved profiles.</string>
+			<key>pfm_name</key>
+			<string>preferencesDefaultsUnsetDefaultBooleans</string>
+			<key>pfm_title</key>
+			<string>Unset boolean properties when toggled to their known default value</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>online</string>
+			<key>pfm_description</key>
+			<string>The type of the manifest repository that will be used to display the configuration options in the editor. Set to Online to retrieve the latest online manifests, or to local to use the manifests bundled with the app.</string>
+			<key>pfm_name</key>
+			<string>manifestRepositoryType</string>
+			<key>pfm_range_list</key>
+			<array>
+				<string>online</string>
+				<string>local</string>
+			</array>
+			<key>pfm_range_list_titles</key>
+			<array>
+				<string>Online</string>
+				<string>Local</string>
+			</array>
+			<key>pfm_title</key>
+			<string>Manifest repository type</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>https://github.com/DigiDNA/ProfileManifests</string>
+			<key>pfm_description</key>
+			<string>The URL of the GitHub repository from which the editor will retrieve and periodically update preference manifests. The repository must be structured similarly to ProfileManifests but does not have to have been forked from it.</string>
+			<key>pfm_exclude</key>
+			<array>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_range_list</key>
+							<array>
+								<string>local</string>
+							</array>
+							<key>pfm_target</key>
+							<string>manifestRepositoryType</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+			<key>pfm_name</key>
+			<string>onlineManifestRepositoryAddress</string>
+			<key>pfm_title</key>
+			<string>Online GitHub repository address</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>imazing_standard</string>
+			<key>pfm_description</key>
+			<string>The name of the branch in the repository defined in Online GitHub repository address that will be used for retrieving manifests.</string>
+			<key>pfm_exclude</key>
+			<array>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_range_list</key>
+							<array>
+								<string>local</string>
+							</array>
+							<key>pfm_target</key>
+							<string>manifestRepositoryType</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+			<key>pfm_name</key>
+			<string>onlineManifestRepositoryBranchName</string>
+			<key>pfm_title</key>
+			<string>Online GitHub repository branch name</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_description</key>
+			<string>If 'false', the editor will not make any changes to online or custom local manifests to optimize their display.</string>
+			<key>pfm_name</key>
+			<string>maximizeNonStandardManifestCompatibility</string>
+			<key>pfm_title</key>
+			<string>Process custom manifests for optimal display in iMazing Profile Editor</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>If 'true' the editor will periodically check for its own updates.</string>
+			<key>pfm_name</key>
+			<string>DevKitAutoUpdate</string>
+			<key>pfm_title</key>
+			<string>Automatically check for application updates</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>If 'true', the editor may collect anonymous analytics data.</string>
+			<key>pfm_name</key>
+			<string>DevKitAllowTracking</string>
+			<key>pfm_title</key>
+			<string>Participate in the Customer Experience Program</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>If 'true', the editor will not show users notices when preference manifest are updated.</string>
+			<key>pfm_name</key>
+			<string>noticeSuppressOnlineManifestsUpdated</string>
+			<key>pfm_title</key>
+			<string>Suppress online manifest update notices</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>If 'true', the editor will not show users notices when profiles that have an iOS 15 silent-installation incompatibility are loaded. </string>
+			<key>pfm_name</key>
+			<string>noticeSuppressIOS15SilentInstallationIncompatibility</string>
+			<key>pfm_title</key>
+			<string>Suppress iOS 15 silent installation incompatibility notices</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>If 'true', the editor will not show users notices on profile save when the profile has validation issues.</string>
+			<key>pfm_name</key>
+			<string>noticeSuppressProfileInvalid</string>
+			<key>pfm_title</key>
+			<string>Suppress profile-invalid notices</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>If 'true' the editor will not show users notices when saving a profile to the iMazing profile library.</string>
+			<key>pfm_name</key>
+			<string>noticeSuppressSavedToIMazingLibrary</string>
+			<key>pfm_title</key>
+			<string>Suppress the saved to iMazing library notice</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_description</key>
+			<string>If 'true' the sidebar shortcut to Total App Setup is not displayed.</string>
+			<key>pfm_name</key>
+			<string>hideSidebarTASShortcut</string>
+			<key>pfm_title</key>
+			<string>Hide Total App Setup shortcut in the sidebar</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+        <dict>
+            <key>pfm_app_min</key>
+            <string>2.2.0</string>
+            <key>pfm_default</key>
+            <false/>
+            <key>pfm_description</key>
+            <string>If 'true' the editor will attempt to quickly dismiss the "Profile Downloaded" notice shown by the system when installing a profile.</string>
+            <key>pfm_name</key>
+            <string>attemptDismissingProfileInstallationNotice</string>
+            <key>pfm_title</key>
+            <string>Attempt to Dismiss the Profile Downloaded Notice</string>
+            <key>pfm_type</key>
+            <string>boolean</string>
+        </dict>
+        <dict>
+            <key>pfm_app_min</key>
+            <string>2.3.0</string>
+            <key>pfm_default</key>
+            <string>MCXForced</string>
+            <key>pfm_description</key>
+            <string>Sets the default payload container type for newly added non-official and third-party domains. For official system domains the default container is always a general payload.</string>
+            <key>pfm_name</key>
+            <string>defaultPayloadContainer</string>
+            <key>pfm_range_list</key>
+            <array>
+                <string>General</string>
+                <string>MCXForced</string>
+                <string>MCXSetOnce</string>
+            </array>
+            <key>pfm_range_list_titles</key>
+            <array>
+                <string>General</string>
+                <string>Managed Client: Forced</string>
+                <string>Managed Client: Set-Once</string>
+            </array>
+            <key>pfm_title</key>
+            <string>Default Payload Container</string>
+            <key>pfm_type</key>
+            <string>string</string>
+        </dict>
+	</array>
+	<key>pfm_targets</key>
+	<array>
+		<string>system</string>
+		<string>user</string>
+	</array>
+	<key>pfm_title</key>
+	<string>iMazing Profile Editor</string>
+	<key>pfm_unique</key>
+	<true/>
+	<key>pfm_version</key>
+	<real>1</real>
+</dict>
+</plist>
