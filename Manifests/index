@@ -316,7 +316,7 @@
 		<key>com.DigiDNA.iMazingProfileEditorMac</key>
 		<dict>
 			<key>modified</key>
-			<date>2026-02-28T11:39:00Z</date>
+			<date>2026-11-13T08:52:00Z</date>
 			<key>path</key>
 			<string>Manifests/ManagedPreferencesApplications/com.DigiDNA.iMazingProfileEditorMac.plist</string>
 			<key>version</key>
@@ -2616,6 +2616,6 @@
 		</dict>
 	</dict>
 	<key>date</key>
-	<date>2026-11-10T18:07:47Z</date>
+	<date>2026-11-13T09:27:21Z</date>
 </dict>
 </plist>
