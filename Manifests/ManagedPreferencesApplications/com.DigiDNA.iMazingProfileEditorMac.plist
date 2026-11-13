@@ -13,7 +13,7 @@
 	<key>pfm_format_version</key>
 	<integer>1</integer>
 	<key>pfm_last_modified</key>
-	<date>2026-02-28T11:39:00Z</date>
+	<date>2026-11-13T08:52:00Z</date>
 	<key>pfm_platforms</key>
 	<array>
 		<string>macOS</string>
@@ -76,7 +76,7 @@
 			<key>pfm_title</key>
 			<string>Default signing identity</string>
 			<key>pfm_type</key>
-			<string>dict</string>
+			<string>dictionary</string>
 			<key>pfm_subkeys</key>
 			<array>
 				<dict>
